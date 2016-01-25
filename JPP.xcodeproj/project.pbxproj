@@ -14,6 +14,9 @@
 		36F9C16A1C55EDBF003D02AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36F9C1681C55EDBF003D02AB /* LaunchScreen.storyboard */; };
 		36F9C1731C55F948003D02AB /* SlideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F9C1721C55F948003D02AB /* SlideMenuController.swift */; };
 		36F9C1811C5605B9003D02AB /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F9C1801C5605B9003D02AB /* UIViewControllerExtension.swift */; };
+		36F9C1831C5616B1003D02AB /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F9C1821C5616B1003D02AB /* Layout.swift */; };
+		36F9C1891C561722003D02AB /* schedule.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36F9C1881C561722003D02AB /* schedule.xib */; };
+		36F9C18C1C561759003D02AB /* schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F9C18B1C561759003D02AB /* schedule.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		36F9C16B1C55EDBF003D02AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		36F9C1721C55F948003D02AB /* SlideMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideMenuController.swift; sourceTree = "<group>"; };
 		36F9C1801C5605B9003D02AB /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		36F9C1821C5616B1003D02AB /* Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
+		36F9C1881C561722003D02AB /* schedule.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = schedule.xib; sourceTree = "<group>"; };
+		36F9C18B1C561759003D02AB /* schedule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = schedule.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +66,9 @@
 			children = (
 				36F9C15F1C55EDBF003D02AB /* AppDelegate.swift */,
 				36F9C1711C55F935003D02AB /* Helper */,
-				36F9C1611C55EDBF003D02AB /* ViewController.swift */,
-				36F9C1631C55EDBF003D02AB /* Main.storyboard */,
+				36F9C1861C5616E4003D02AB /* Controller */,
+				36F9C1841C5616C6003D02AB /* Views */,
+				36F9C1871C5616FC003D02AB /* StoryBoards */,
 				36F9C1661C55EDBF003D02AB /* Assets.xcassets */,
 				36F9C1681C55EDBF003D02AB /* LaunchScreen.storyboard */,
 				36F9C16B1C55EDBF003D02AB /* Info.plist */,
@@ -73,9 +80,43 @@
 			isa = PBXGroup;
 			children = (
 				36F9C1801C5605B9003D02AB /* UIViewControllerExtension.swift */,
+				36F9C1821C5616B1003D02AB /* Layout.swift */,
 				36F9C1721C55F948003D02AB /* SlideMenuController.swift */,
 			);
 			name = Helper;
+			sourceTree = "<group>";
+		};
+		36F9C1841C5616C6003D02AB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				36F9C18A1C561740003D02AB /* schedule */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		36F9C1861C5616E4003D02AB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				36F9C1611C55EDBF003D02AB /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		36F9C1871C5616FC003D02AB /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				36F9C1631C55EDBF003D02AB /* Main.storyboard */,
+			);
+			name = StoryBoards;
+			sourceTree = "<group>";
+		};
+		36F9C18A1C561740003D02AB /* schedule */ = {
+			isa = PBXGroup;
+			children = (
+				36F9C1881C561722003D02AB /* schedule.xib */,
+				36F9C18B1C561759003D02AB /* schedule.swift */,
+			);
+			name = schedule;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +179,7 @@
 			files = (
 				36F9C16A1C55EDBF003D02AB /* LaunchScreen.storyboard in Resources */,
 				36F9C1671C55EDBF003D02AB /* Assets.xcassets in Resources */,
+				36F9C1891C561722003D02AB /* schedule.xib in Resources */,
 				36F9C1651C55EDBF003D02AB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -151,6 +193,8 @@
 			files = (
 				36F9C1811C5605B9003D02AB /* UIViewControllerExtension.swift in Sources */,
 				36F9C1621C55EDBF003D02AB /* ViewController.swift in Sources */,
+				36F9C18C1C561759003D02AB /* schedule.swift in Sources */,
+				36F9C1831C5616B1003D02AB /* Layout.swift in Sources */,
 				36F9C1731C55F948003D02AB /* SlideMenuController.swift in Sources */,
 				36F9C1601C55EDBF003D02AB /* AppDelegate.swift in Sources */,
 			);

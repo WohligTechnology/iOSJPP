@@ -18,6 +18,7 @@ extension UIViewController {
         self.addLeftBarButtonWithImage(UIImage(named: "ic_menu_black_24dp")!)
         self.navigationController?.toolbar.barTintColor = BlueColor
         self.navigationController?.navigationBar.barTintColor = BlueColor
+
         
         //self.addRightBarButtonWithImage(UIImage(named: "ic_notifications_black_24dp")!)
         self.slideMenuController()?.removeLeftGestures()
@@ -35,6 +36,26 @@ extension UIViewController {
         imageView.contentMode = UIViewContentMode.ScaleAspectFit;
         imageView.center.x  = screenSize.width/2
         self.navigationController?.view.addSubview(imageView)
+    }
+    
+    func setNavigationBarItemText(text:String) {
+        
+        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        self.navigationController?.navigationBar.titleTextAttributes = [ NSForegroundColorAttributeName : UIColor.whiteColor() ]
+        self.navigationController?.navigationBar.translucent = false
+        self.addLeftBarButtonWithImage(UIImage(named: "ic_menu_black_24dp")!)
+        self.navigationController?.toolbar.barTintColor = BlueColor
+        self.navigationController?.navigationBar.barTintColor = BlueColor
+        
+        
+        //self.addRightBarButtonWithImage(UIImage(named: "ic_notifications_black_24dp")!)
+        self.slideMenuController()?.removeLeftGestures()
+        self.slideMenuController()?.removeRightGestures()
+        self.slideMenuController()?.addLeftGestures()
+        self.slideMenuController()?.addRightGestures()
+        
+        self.navigationController?.navigationBar.topItem!.title = text;
+        
     }
     
     func removeNavigationBarItem() {
