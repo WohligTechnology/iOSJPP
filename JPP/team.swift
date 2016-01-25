@@ -8,7 +8,7 @@
 
 import UIKit
 
-@IBDesignable class news: UIView {
+@IBDesignable class team: UIView {
     
     
     override init(frame: CGRect) {
@@ -23,7 +23,7 @@ import UIKit
     }
     func loadViewFromNib() {
         let bundle = NSBundle(forClass: self.dynamicType)
-        let nib = UINib(nibName: "news", bundle: bundle)
+        let nib = UINib(nibName: "team", bundle: bundle)
         let sortnewview = nib.instantiateWithOwner(self, options: nil)[0] as! UIView
         sortnewview.frame = bounds
         sortnewview.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
