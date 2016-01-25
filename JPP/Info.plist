@@ -8,6 +8,28 @@
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>Fonts provided by the application</key>
+	<array>
+		<string>Oswald-Bold.ttf</string>
+		<string>Oswald-Light.ttf</string>
+		<string>Oswald-Regular.ttf</string>
+		<string>voyagefant_0.ttf</string>
+		<string>voyagefant3d.ttf</string>
+		<string>voyagefantacad.ttf</string>
+		<string>voyagefantcond.ttf</string>
+		<string>voyagefantexpand.ttf</string>
+		<string>voyagefantgchrome.ttf</string>
+		<string>voyagefantgrad.ttf</string>
+		<string>voyagefanthalf.ttf</string>
+		<string>voyagefanthplat.ttf</string>
+		<string>voyagefantlaser.ttf</string>
+		<string>voyagefantstraight.ttf</string>
+		<string>voyagefantstraightleft.ttf</string>
+	</array>
+	<key>CFBundleDisplayName</key>
+	<string></string>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>

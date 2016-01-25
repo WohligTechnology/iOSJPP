@@ -17,6 +17,23 @@
 		36F9C1831C5616B1003D02AB /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F9C1821C5616B1003D02AB /* Layout.swift */; };
 		36F9C1891C561722003D02AB /* schedule.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36F9C1881C561722003D02AB /* schedule.xib */; };
 		36F9C18C1C561759003D02AB /* schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F9C18B1C561759003D02AB /* schedule.swift */; };
+		36F9C19D1C5641BB003D02AB /* Oswald-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 36F9C18E1C562837003D02AB /* Oswald-Bold.ttf */; };
+		36F9C19E1C5641BB003D02AB /* Oswald-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 36F9C18F1C562837003D02AB /* Oswald-Light.ttf */; };
+		36F9C19F1C5641BB003D02AB /* Oswald-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 36F9C1901C562837003D02AB /* Oswald-Regular.ttf */; };
+		36F9C1A01C5641BB003D02AB /* voyagefant_0.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 36F9C1911C562837003D02AB /* voyagefant_0.ttf */; };
+		36F9C1A11C5641BB003D02AB /* voyagefant3d.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 36F9C1921C562837003D02AB /* voyagefant3d.ttf */; };
+		36F9C1A21C5641BB003D02AB /* voyagefantacad.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 36F9C1931C562837003D02AB /* voyagefantacad.ttf */; };
+		36F9C1A31C5641BB003D02AB /* voyagefantcond.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 36F9C1941C562837003D02AB /* voyagefantcond.ttf */; };
+		36F9C1A41C5641BB003D02AB /* voyagefantexpand.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 36F9C1951C562837003D02AB /* voyagefantexpand.ttf */; };
+		36F9C1A51C5641BB003D02AB /* voyagefantgchrome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 36F9C1961C562837003D02AB /* voyagefantgchrome.ttf */; };
+		36F9C1A61C5641BB003D02AB /* voyagefantgrad.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 36F9C1971C562837003D02AB /* voyagefantgrad.ttf */; };
+		36F9C1A71C5641BB003D02AB /* voyagefanthalf.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 36F9C1981C562837003D02AB /* voyagefanthalf.ttf */; };
+		36F9C1A81C5641BB003D02AB /* voyagefanthplat.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 36F9C1991C562837003D02AB /* voyagefanthplat.ttf */; };
+		36F9C1A91C5641BB003D02AB /* voyagefantlaser.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 36F9C19A1C562837003D02AB /* voyagefantlaser.ttf */; };
+		36F9C1AA1C5641BB003D02AB /* voyagefantstraight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 36F9C19B1C562837003D02AB /* voyagefantstraight.ttf */; };
+		36F9C1AB1C5641BB003D02AB /* voyagefantstraightleft.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 36F9C19C1C562837003D02AB /* voyagefantstraightleft.ttf */; };
+		36F9C1AE1C5643DF003D02AB /* news.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F9C1AD1C5643DF003D02AB /* news.swift */; };
+		36F9C1B01C5643E8003D02AB /* news.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36F9C1AF1C5643E8003D02AB /* news.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +49,23 @@
 		36F9C1821C5616B1003D02AB /* Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
 		36F9C1881C561722003D02AB /* schedule.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = schedule.xib; sourceTree = "<group>"; };
 		36F9C18B1C561759003D02AB /* schedule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = schedule.swift; sourceTree = "<group>"; };
+		36F9C18E1C562837003D02AB /* Oswald-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Bold.ttf"; sourceTree = "<group>"; };
+		36F9C18F1C562837003D02AB /* Oswald-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Light.ttf"; sourceTree = "<group>"; };
+		36F9C1901C562837003D02AB /* Oswald-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Regular.ttf"; sourceTree = "<group>"; };
+		36F9C1911C562837003D02AB /* voyagefant_0.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = voyagefant_0.ttf; sourceTree = "<group>"; };
+		36F9C1921C562837003D02AB /* voyagefant3d.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = voyagefant3d.ttf; sourceTree = "<group>"; };
+		36F9C1931C562837003D02AB /* voyagefantacad.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = voyagefantacad.ttf; sourceTree = "<group>"; };
+		36F9C1941C562837003D02AB /* voyagefantcond.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = voyagefantcond.ttf; sourceTree = "<group>"; };
+		36F9C1951C562837003D02AB /* voyagefantexpand.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = voyagefantexpand.ttf; sourceTree = "<group>"; };
+		36F9C1961C562837003D02AB /* voyagefantgchrome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = voyagefantgchrome.ttf; sourceTree = "<group>"; };
+		36F9C1971C562837003D02AB /* voyagefantgrad.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = voyagefantgrad.ttf; sourceTree = "<group>"; };
+		36F9C1981C562837003D02AB /* voyagefanthalf.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = voyagefanthalf.ttf; sourceTree = "<group>"; };
+		36F9C1991C562837003D02AB /* voyagefanthplat.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = voyagefanthplat.ttf; sourceTree = "<group>"; };
+		36F9C19A1C562837003D02AB /* voyagefantlaser.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = voyagefantlaser.ttf; sourceTree = "<group>"; };
+		36F9C19B1C562837003D02AB /* voyagefantstraight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = voyagefantstraight.ttf; sourceTree = "<group>"; };
+		36F9C19C1C562837003D02AB /* voyagefantstraightleft.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = voyagefantstraightleft.ttf; sourceTree = "<group>"; };
+		36F9C1AD1C5643DF003D02AB /* news.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = news.swift; sourceTree = "<group>"; };
+		36F9C1AF1C5643E8003D02AB /* news.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = news.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +106,7 @@
 				36F9C1661C55EDBF003D02AB /* Assets.xcassets */,
 				36F9C1681C55EDBF003D02AB /* LaunchScreen.storyboard */,
 				36F9C16B1C55EDBF003D02AB /* Info.plist */,
+				36F9C18D1C56282B003D02AB /* Fonts */,
 			);
 			path = JPP;
 			sourceTree = "<group>";
@@ -89,6 +124,7 @@
 		36F9C1841C5616C6003D02AB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				36F9C1AC1C5643C6003D02AB /* news */,
 				36F9C18A1C561740003D02AB /* schedule */,
 			);
 			name = Views;
@@ -117,6 +153,37 @@
 				36F9C18B1C561759003D02AB /* schedule.swift */,
 			);
 			name = schedule;
+			sourceTree = "<group>";
+		};
+		36F9C18D1C56282B003D02AB /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				36F9C18E1C562837003D02AB /* Oswald-Bold.ttf */,
+				36F9C18F1C562837003D02AB /* Oswald-Light.ttf */,
+				36F9C1901C562837003D02AB /* Oswald-Regular.ttf */,
+				36F9C1911C562837003D02AB /* voyagefant_0.ttf */,
+				36F9C1921C562837003D02AB /* voyagefant3d.ttf */,
+				36F9C1931C562837003D02AB /* voyagefantacad.ttf */,
+				36F9C1941C562837003D02AB /* voyagefantcond.ttf */,
+				36F9C1951C562837003D02AB /* voyagefantexpand.ttf */,
+				36F9C1961C562837003D02AB /* voyagefantgchrome.ttf */,
+				36F9C1971C562837003D02AB /* voyagefantgrad.ttf */,
+				36F9C1981C562837003D02AB /* voyagefanthalf.ttf */,
+				36F9C1991C562837003D02AB /* voyagefanthplat.ttf */,
+				36F9C19A1C562837003D02AB /* voyagefantlaser.ttf */,
+				36F9C19B1C562837003D02AB /* voyagefantstraight.ttf */,
+				36F9C19C1C562837003D02AB /* voyagefantstraightleft.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		36F9C1AC1C5643C6003D02AB /* news */ = {
+			isa = PBXGroup;
+			children = (
+				36F9C1AD1C5643DF003D02AB /* news.swift */,
+				36F9C1AF1C5643E8003D02AB /* news.xib */,
+			);
+			name = news;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,6 +244,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36F9C19D1C5641BB003D02AB /* Oswald-Bold.ttf in Resources */,
+				36F9C19E1C5641BB003D02AB /* Oswald-Light.ttf in Resources */,
+				36F9C19F1C5641BB003D02AB /* Oswald-Regular.ttf in Resources */,
+				36F9C1A01C5641BB003D02AB /* voyagefant_0.ttf in Resources */,
+				36F9C1A11C5641BB003D02AB /* voyagefant3d.ttf in Resources */,
+				36F9C1A21C5641BB003D02AB /* voyagefantacad.ttf in Resources */,
+				36F9C1A31C5641BB003D02AB /* voyagefantcond.ttf in Resources */,
+				36F9C1A41C5641BB003D02AB /* voyagefantexpand.ttf in Resources */,
+				36F9C1A51C5641BB003D02AB /* voyagefantgchrome.ttf in Resources */,
+				36F9C1A61C5641BB003D02AB /* voyagefantgrad.ttf in Resources */,
+				36F9C1B01C5643E8003D02AB /* news.xib in Resources */,
+				36F9C1A71C5641BB003D02AB /* voyagefanthalf.ttf in Resources */,
+				36F9C1A81C5641BB003D02AB /* voyagefanthplat.ttf in Resources */,
+				36F9C1A91C5641BB003D02AB /* voyagefantlaser.ttf in Resources */,
+				36F9C1AA1C5641BB003D02AB /* voyagefantstraight.ttf in Resources */,
+				36F9C1AB1C5641BB003D02AB /* voyagefantstraightleft.ttf in Resources */,
 				36F9C16A1C55EDBF003D02AB /* LaunchScreen.storyboard in Resources */,
 				36F9C1671C55EDBF003D02AB /* Assets.xcassets in Resources */,
 				36F9C1891C561722003D02AB /* schedule.xib in Resources */,
@@ -193,6 +276,7 @@
 			files = (
 				36F9C1811C5605B9003D02AB /* UIViewControllerExtension.swift in Sources */,
 				36F9C1621C55EDBF003D02AB /* ViewController.swift in Sources */,
+				36F9C1AE1C5643DF003D02AB /* news.swift in Sources */,
 				36F9C18C1C561759003D02AB /* schedule.swift in Sources */,
 				36F9C1831C5616B1003D02AB /* Layout.swift in Sources */,
 				36F9C1731C55F948003D02AB /* SlideMenuController.swift in Sources */,
