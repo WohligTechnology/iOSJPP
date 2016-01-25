@@ -180,8 +180,8 @@
 		36F9C1AC1C5643C6003D02AB /* news */ = {
 			isa = PBXGroup;
 			children = (
-				36F9C1AD1C5643DF003D02AB /* news.swift */,
 				36F9C1AF1C5643E8003D02AB /* news.xib */,
+				36F9C1AD1C5643DF003D02AB /* news.swift */,
 			);
 			name = news;
 			sourceTree = "<group>";
