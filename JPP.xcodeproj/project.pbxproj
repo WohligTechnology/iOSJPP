@@ -64,6 +64,8 @@
 		36F9C1BB1C5653EF003D02AB /* matches.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36F9C1BA1C5653EF003D02AB /* matches.xib */; };
 		78238FE21C57A77E0067E7D5 /* about.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78238FE11C57A77E0067E7D5 /* about.swift */; };
 		78238FE41C57A7890067E7D5 /* about.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78238FE31C57A7890067E7D5 /* about.xib */; };
+		78238FE71C57AC170067E7D5 /* trapezium.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78238FE61C57AC170067E7D5 /* trapezium.xib */; };
+		78238FE91C57AC350067E7D5 /* trapezium.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78238FE81C57AC350067E7D5 /* trapezium.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -126,6 +128,8 @@
 		36F9C1BA1C5653EF003D02AB /* matches.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = matches.xib; sourceTree = "<group>"; };
 		78238FE11C57A77E0067E7D5 /* about.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = about.swift; sourceTree = "<group>"; };
 		78238FE31C57A7890067E7D5 /* about.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = about.xib; sourceTree = "<group>"; };
+		78238FE61C57AC170067E7D5 /* trapezium.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = trapezium.xib; sourceTree = "<group>"; };
+		78238FE81C57AC350067E7D5 /* trapezium.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = trapezium.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -235,6 +239,7 @@
 				36F2CE881C56560700D0D2D6 /* player */,
 				36F9C1B71C5653B0003D02AB /* matches */,
 				36F9C1B11C564CF3003D02AB /* table */,
+				78238FE51C57AB390067E7D5 /* trapezium */,
 				78238FE01C57A70B0067E7D5 /* about */,
 				36F9C1AC1C5643C6003D02AB /* news */,
 				36F9C18A1C561740003D02AB /* schedule */,
@@ -340,6 +345,15 @@
 			name = about;
 			sourceTree = "<group>";
 		};
+		78238FE51C57AB390067E7D5 /* trapezium */ = {
+			isa = PBXGroup;
+			children = (
+				78238FE61C57AC170067E7D5 /* trapezium.xib */,
+				78238FE81C57AC350067E7D5 /* trapezium.swift */,
+			);
+			name = trapezium;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -404,6 +418,7 @@
 				36F9C1A01C5641BB003D02AB /* voyagefant_0.ttf in Resources */,
 				36F9C1A11C5641BB003D02AB /* voyagefant3d.ttf in Resources */,
 				36F2CE941C565DD600D0D2D6 /* team.xib in Resources */,
+				78238FE71C57AC170067E7D5 /* trapezium.xib in Resources */,
 				36F9C1A21C5641BB003D02AB /* voyagefantacad.ttf in Resources */,
 				36F9C1A31C5641BB003D02AB /* voyagefantcond.ttf in Resources */,
 				36F9C1A41C5641BB003D02AB /* voyagefantexpand.ttf in Resources */,
@@ -443,6 +458,7 @@
 				36F2CEB51C57721800D0D2D6 /* PointTableController.swift in Sources */,
 				36F2CE9F1C5770B900D0D2D6 /* ScheduleController.swift in Sources */,
 				36F2CEA51C5770FE00D0D2D6 /* GalleryInside2Controller.swift in Sources */,
+				78238FE91C57AC350067E7D5 /* trapezium.swift in Sources */,
 				36F2CEAB1C57718B00D0D2D6 /* KnowTeamController.swift in Sources */,
 				36F2CE9D1C57708C00D0D2D6 /* HomeController.swift in Sources */,
 				36F9C1B91C5653E5003D02AB /* matches.swift in Sources */,
