@@ -51,7 +51,7 @@ class PointTableController: UIViewController,UITableViewDelegate,UITableViewData
         tableView.separatorStyle = UITableViewCellSeparatorStyle.SingleLine
         tableView.tableFooterView = UIView()
         let cell = tableView.dequeueReusableCellWithIdentifier("pointTableCell", forIndexPath: indexPath)
-        cell.addSubview(table(frame: CGRectMake(0,0,cell.frame.width,cell.frame.height)))
+        cell.addSubview(table(frame: CGRectMake(0,5,cell.frame.width,cell.frame.height)))
         return cell
     }
     
