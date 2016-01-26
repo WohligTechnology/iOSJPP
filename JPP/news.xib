@@ -22,69 +22,107 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="news" customModule="JPP" customModuleProvider="target"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="429" height="297"/>
+            <rect key="frame" x="0.0" y="0.0" width="429" height="324"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="trapezium" translatesAutoresizingMaskIntoConstraints="NO" id="CIo-YV-S4N">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trapezium" translatesAutoresizingMaskIntoConstraints="NO" id="CIo-YV-S4N">
                     <rect key="frame" x="0.0" y="0.0" width="429" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="34" id="Tcu-eu-KmO"/>
+                    </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="NEWS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tJe-RK-mxo">
-                    <rect key="frame" x="159" y="4" width="110" height="26"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NEWS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tJe-RK-mxo">
+                    <rect key="frame" x="0.0" y="0.0" width="429" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="34" id="6dX-hn-AI4"/>
+                    </constraints>
                     <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="15"/>
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uZH-xN-1dY">
-                    <rect key="frame" x="0.0" y="60" width="429" height="237"/>
-                    <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pro Kabaddi League 2015: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ax7-O7-xMp">
-                            <rect key="frame" x="198" y="0.0" width="223" height="21"/>
-                            <fontDescription key="fontDescription" name="Oswald-Bold" family="Oswald" pointSize="17"/>
-                            <color key="textColor" red="0.90588235294117647" green="0.17647058823529413" blue="0.54117647058823526" alpha="1" colorSpace="calibratedRGB"/>
-                            <color key="highlightedColor" red="0.90588235294117647" green="0.17647058823529413" blue="0.54117647058823526" alpha="1" colorSpace="calibratedRGB"/>
-                        </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Team sponsorship might go up by 100%" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XnZ-Hz-iSx">
-                            <rect key="frame" x="198" y="21" width="223" height="54"/>
-                            <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="17"/>
-                            <color key="textColor" red="0.30588235294117649" green="0.792156862745098" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
-                            <color key="highlightedColor" red="0.90588235289999997" green="0.1764705882" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
-                        </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wnc-jZ-7AY">
-                            <rect key="frame" x="198" y="65" width="223" height="108"/>
-                            <string key="text">For example, season 1's winners, Jaipur Pink Panthers, are looking at signing multi-year deals (between 2 and 3 years), at a significant
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wnc-jZ-7AY">
+                    <rect key="frame" x="140" y="117" width="281" height="70"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="70" id="xl6-30-1O6"/>
+                    </constraints>
+                    <string key="text">For example, season 1's winners, Jaipur Pink Panthers, are looking at signing multi-year deals (between 2 and 3 years), at a significant
 </string>
-                            <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="16"/>
-                            <color key="textColor" red="0.59607843137254901" green="0.59607843137254901" blue="0.59607843137254901" alpha="1" colorSpace="calibratedRGB"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="30 Jan, 2016" textAlignment="right" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pg9-Mp-9Cc">
-                            <rect key="frame" x="198" y="173" width="223" height="36"/>
-                            <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="16"/>
-                            <color key="textColor" red="0.59607843140000005" green="0.59607843140000005" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Read more news &gt;" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5TE-2r-Ixx">
-                            <rect key="frame" x="198" y="197" width="223" height="40"/>
-                            <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="16"/>
-                            <color key="textColor" red="0.30588235289999999" green="0.79215686269999996" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
-                            <color key="highlightedColor" red="0.90588235289999997" green="0.1764705882" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
-                        </label>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="prologo" translatesAutoresizingMaskIntoConstraints="NO" id="3ui-Ee-yRq">
-                            <rect key="frame" x="8" y="-8" width="155" height="111"/>
-                        </imageView>
-                    </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                </view>
+                    <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="15"/>
+                    <color key="textColor" red="0.59607843137254901" green="0.59607843137254901" blue="0.59607843137254901" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pro Kabaddi League 2015: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ax7-O7-xMp">
+                    <rect key="frame" x="140" y="64" width="281" height="24"/>
+                    <fontDescription key="fontDescription" name="Oswald-Bold" family="Oswald" pointSize="16"/>
+                    <color key="textColor" red="0.90588235294117647" green="0.17647058823529413" blue="0.54117647058823526" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="highlightedColor" red="0.90588235294117647" green="0.17647058823529413" blue="0.54117647058823526" alpha="1" colorSpace="calibratedRGB"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Read more news &gt;" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5TE-2r-Ixx">
+                    <rect key="frame" x="140" y="210" width="281" height="23"/>
+                    <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="15"/>
+                    <color key="textColor" red="0.30588235289999999" green="0.79215686269999996" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="highlightedColor" red="0.90588235289999997" green="0.1764705882" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30 Jan, 2016" textAlignment="right" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pg9-Mp-9Cc">
+                    <rect key="frame" x="140" y="187" width="281" height="23"/>
+                    <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="15"/>
+                    <color key="textColor" red="0.59607843140000005" green="0.59607843140000005" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="prologo" translatesAutoresizingMaskIntoConstraints="NO" id="3ui-Ee-yRq">
+                    <rect key="frame" x="8" y="64" width="110" height="190"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="190" id="BbO-m8-Y80"/>
+                        <constraint firstAttribute="width" constant="110" id="e0v-a6-jAn"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team sponsorship might go up by 100%" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XnZ-Hz-iSx">
+                    <rect key="frame" x="140" y="88" width="281" height="24"/>
+                    <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="16"/>
+                    <color key="textColor" red="0.30588235294117649" green="0.792156862745098" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="highlightedColor" red="0.90588235289999997" green="0.1764705882" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="uZH-xN-1dY" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="2PD-T9-YyX"/>
-                <constraint firstItem="uZH-xN-1dY" firstAttribute="top" secondItem="CIo-YV-S4N" secondAttribute="bottom" constant="25" id="d2V-yc-ONC"/>
-                <constraint firstItem="uZH-xN-1dY" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="gat-cO-R2q"/>
-                <constraint firstItem="uZH-xN-1dY" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="l1m-np-Dr7"/>
+                <constraint firstItem="3ui-Ee-yRq" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="06Z-tx-pR0"/>
+                <constraint firstItem="tJe-RK-mxo" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="09I-q6-Ncx"/>
+                <constraint firstItem="Pg9-Mp-9Cc" firstAttribute="top" secondItem="Wnc-jZ-7AY" secondAttribute="bottom" id="2BN-bC-nbL"/>
+                <constraint firstItem="Pg9-Mp-9Cc" firstAttribute="trailing" secondItem="Wnc-jZ-7AY" secondAttribute="trailing" id="2UN-kg-BKf"/>
+                <constraint firstAttribute="bottom" secondItem="Pg9-Mp-9Cc" secondAttribute="bottom" constant="56" id="4lV-50-4Bz"/>
+                <constraint firstItem="CIo-YV-S4N" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="7mM-jC-3Dp"/>
+                <constraint firstItem="5TE-2r-Ixx" firstAttribute="top" secondItem="Pg9-Mp-9Cc" secondAttribute="bottom" id="Anf-2u-cj7"/>
+                <constraint firstItem="ax7-O7-xMp" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="140" id="Bcl-rO-ngK"/>
+                <constraint firstItem="5TE-2r-Ixx" firstAttribute="trailing" secondItem="Pg9-Mp-9Cc" secondAttribute="trailing" id="CLI-52-Jju"/>
+                <constraint firstItem="Wnc-jZ-7AY" firstAttribute="leading" secondItem="Pg9-Mp-9Cc" secondAttribute="leading" id="Cxb-aA-VCR"/>
+                <constraint firstItem="ax7-O7-xMp" firstAttribute="top" secondItem="tJe-RK-mxo" secondAttribute="bottom" constant="30" id="FY7-JH-tO7"/>
+                <constraint firstItem="XnZ-Hz-iSx" firstAttribute="top" secondItem="ax7-O7-xMp" secondAttribute="bottom" id="Isw-3C-GSf"/>
+                <constraint firstItem="ax7-O7-xMp" firstAttribute="leading" secondItem="XnZ-Hz-iSx" secondAttribute="leading" id="JuC-4d-HAr"/>
+                <constraint firstAttribute="trailing" secondItem="CIo-YV-S4N" secondAttribute="trailing" id="M6Y-Vt-d4S"/>
+                <constraint firstAttribute="trailing" secondItem="tJe-RK-mxo" secondAttribute="trailing" id="PjU-p4-QhI"/>
+                <constraint firstItem="XnZ-Hz-iSx" firstAttribute="leading" secondItem="Wnc-jZ-7AY" secondAttribute="leading" id="RJ5-j4-RVU"/>
+                <constraint firstItem="tJe-RK-mxo" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="VbL-em-etb"/>
+                <constraint firstItem="Pg9-Mp-9Cc" firstAttribute="top" secondItem="Wnc-jZ-7AY" secondAttribute="bottom" constant="-2" id="YXD-VR-pLJ"/>
+                <constraint firstItem="CIo-YV-S4N" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="b7Q-M7-dQz"/>
+                <constraint firstItem="XnZ-Hz-iSx" firstAttribute="top" secondItem="ax7-O7-xMp" secondAttribute="bottom" constant="-3" id="dOS-e4-aW9"/>
+                <constraint firstItem="Wnc-jZ-7AY" firstAttribute="trailing" secondItem="XnZ-Hz-iSx" secondAttribute="trailing" id="f4h-a8-W31"/>
+                <constraint firstItem="3ui-Ee-yRq" firstAttribute="top" secondItem="tJe-RK-mxo" secondAttribute="bottom" constant="30" id="fy5-yX-0eQ"/>
+                <constraint firstAttribute="trailing" secondItem="ax7-O7-xMp" secondAttribute="trailing" constant="8" id="p62-FB-REB"/>
+                <constraint firstItem="Pg9-Mp-9Cc" firstAttribute="leading" secondItem="5TE-2r-Ixx" secondAttribute="leading" id="qRM-KJ-9vn"/>
+                <constraint firstItem="Wnc-jZ-7AY" firstAttribute="top" secondItem="XnZ-Hz-iSx" secondAttribute="bottom" constant="5" id="qid-XL-dge"/>
+                <constraint firstItem="XnZ-Hz-iSx" firstAttribute="trailing" secondItem="ax7-O7-xMp" secondAttribute="trailing" id="qlH-xq-9Qr"/>
+                <constraint firstItem="tJe-RK-mxo" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="xfs-dJ-CiI"/>
+                <constraint firstItem="CIo-YV-S4N" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="xta-Jy-L3e"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="108.5" y="-200.5"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="dOS-e4-aW9"/>
+                    <exclude reference="4lV-50-4Bz"/>
+                    <exclude reference="YXD-VR-pLJ"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="108.5" y="-187"/>
         </view>
     </objects>
     <resources>
