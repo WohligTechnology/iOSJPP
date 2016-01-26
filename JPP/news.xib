@@ -40,7 +40,7 @@
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wnc-jZ-7AY">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wnc-jZ-7AY">
                     <rect key="frame" x="140" y="117" width="281" height="70"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="70" id="xl6-30-1O6"/>
@@ -70,9 +70,9 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="prologo" translatesAutoresizingMaskIntoConstraints="NO" id="3ui-Ee-yRq">
-                    <rect key="frame" x="8" y="64" width="110" height="190"/>
+                    <rect key="frame" x="8" y="64" width="110" height="130"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="190" id="BbO-m8-Y80"/>
+                        <constraint firstAttribute="height" constant="130" id="BbO-m8-Y80"/>
                         <constraint firstAttribute="width" constant="110" id="e0v-a6-jAn"/>
                     </constraints>
                 </imageView>
