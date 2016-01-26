@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="Oswald-Bold.ttf">
@@ -16,23 +17,40 @@
             <rect key="frame" x="0.0" y="0.0" width="449" height="202"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="news" translatesAutoresizingMaskIntoConstraints="NO" id="bsR-tP-dNx">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="news" translatesAutoresizingMaskIntoConstraints="NO" id="bsR-tP-dNx">
                     <rect key="frame" x="0.0" y="0.0" width="449" height="202"/>
                 </imageView>
-                <view alpha="0.59999999999999998" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="roo-nC-enp">
-                    <rect key="frame" x="0.0" y="131" width="449" height="44"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="roo-nC-enp">
+                    <rect key="frame" x="0.0" y="138" width="449" height="44"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DABANG DELHI VS JAIPUR PINK PANTHER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wDS-wm-4kz">
-                            <rect key="frame" x="19" y="11" width="331" height="21"/>
-                            <fontDescription key="fontDescription" name="Oswald-Bold" family="Oswald" pointSize="20"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JAIPUR PINK PANTHER VS JAIPUR PINK PANTHER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wDS-wm-4kz">
+                            <rect key="frame" x="8" y="8" width="433" height="28"/>
+                            <fontDescription key="fontDescription" name="Oswald-Bold" family="Oswald" pointSize="15"/>
                             <color key="textColor" red="0.90588235855102539" green="0.17647059261798859" blue="0.54117649793624878" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.69981142241379313" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="wDS-wm-4kz" firstAttribute="centerY" secondItem="roo-nC-enp" secondAttribute="centerY" id="0CP-4l-Yec"/>
+                        <constraint firstItem="wDS-wm-4kz" firstAttribute="centerX" secondItem="roo-nC-enp" secondAttribute="centerX" id="4ns-Rb-CaQ"/>
+                        <constraint firstAttribute="trailing" secondItem="wDS-wm-4kz" secondAttribute="trailing" constant="8" id="8wd-cp-h6r"/>
+                        <constraint firstItem="wDS-wm-4kz" firstAttribute="top" secondItem="roo-nC-enp" secondAttribute="topMargin" id="Arg-V4-iDb"/>
+                        <constraint firstAttribute="height" constant="44" id="Den-Zb-a2q"/>
+                        <constraint firstItem="wDS-wm-4kz" firstAttribute="leading" secondItem="roo-nC-enp" secondAttribute="leading" constant="8" id="vCN-7G-7cQ"/>
+                    </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="roo-nC-enp" secondAttribute="trailing" id="6OY-Hv-xcq"/>
+                <constraint firstItem="bsR-tP-dNx" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Gud-Hr-94t"/>
+                <constraint firstItem="roo-nC-enp" firstAttribute="trailing" secondItem="bsR-tP-dNx" secondAttribute="trailing" id="IUZ-8D-7et"/>
+                <constraint firstItem="roo-nC-enp" firstAttribute="leading" secondItem="bsR-tP-dNx" secondAttribute="leading" id="Kgu-5j-G9u"/>
+                <constraint firstAttribute="bottom" secondItem="roo-nC-enp" secondAttribute="bottom" constant="20" id="ZrJ-fL-E2b"/>
+                <constraint firstItem="roo-nC-enp" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="l2k-Hz-cDj"/>
+                <constraint firstAttribute="bottom" secondItem="bsR-tP-dNx" secondAttribute="bottom" id="v7b-Rf-4JV"/>
+            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="204.5" y="132"/>
         </view>
