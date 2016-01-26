@@ -474,13 +474,27 @@
                     <view key="view" contentMode="scaleToFill" id="SOU-7B-Njr">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d7w-3b-9DC">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" red="0.76862746479999999" green="0.94117647410000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="d7w-3b-9DC" firstAttribute="top" secondItem="SOU-7B-Njr" secondAttribute="top" id="5ri-12-sXz"/>
+                            <constraint firstAttribute="trailing" secondItem="d7w-3b-9DC" secondAttribute="trailing" id="I8P-kZ-V8g"/>
+                            <constraint firstItem="d7w-3b-9DC" firstAttribute="leading" secondItem="SOU-7B-Njr" secondAttribute="leading" id="Uva-8H-4yz"/>
+                            <constraint firstItem="d7w-3b-9DC" firstAttribute="bottom" secondItem="iH1-wj-FUc" secondAttribute="top" id="VVg-WL-7AC"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="scrollView" destination="d7w-3b-9DC" id="F6k-bP-9C0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WMr-h3-mIM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2853" y="403"/>
+            <point key="canvasLocation" x="2867" y="403"/>
         </scene>
         <!--GALLERY INSIDE-->
         <scene sceneID="EQi-dl-Wvh">

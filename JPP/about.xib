@@ -14,28 +14,39 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="about" customModule="JPP" customModuleProvider="target"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="634"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nLM-Bn-hRo">
-                    <rect key="frame" x="8" y="8" width="304" height="374"/>
+                    <rect key="frame" x="8" y="-30" width="304" height="347"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="347" id="D5Z-se-zhm"/>
+                    </constraints>
                     <string key="text">The Champions of the inaugural season of Star Sports Pro Kabaddi, Jaipur Pink Panthers represent the Pink City of Jaipur, Rajasthan in the league. Led by Navneet Gautam and coached by Kasinathan Baskaran, the team is owned by renowned Indian actor, Abhishek Bachchan.
 
 An avid fan of all sports – cricket, basketball, football and Kabaddi being his favourite games, Abhishek is a proud owner of Jaipur Pink Panthers and co-owns the Indian Super League’s franchise – Chennaiyin FC. Additionally, he is the captain and one of the founders of the All Stars Football Club (ASFC). Abhishek believes in bringing sports to the forefront for the younger generation in India and is committed to actively promote all kinds of sports.
 
 One of the most popular teams in the inaugural season, Jaipur Pink Panthers had many leading film and entertainment personalities dawning</string>
-                    <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="14"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="13"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="nLM-Bn-hRo" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailingMargin" id="HpV-Xf-3Ft"/>
-                <constraint firstItem="nLM-Bn-hRo" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" id="mPf-3j-tZj"/>
-                <constraint firstItem="nLM-Bn-hRo" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="topMargin" id="uON-40-gJ7"/>
+                <constraint firstItem="nLM-Bn-hRo" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" id="6Xa-zr-Qfu"/>
+                <constraint firstItem="nLM-Bn-hRo" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="6r1-eE-8mD"/>
+                <constraint firstAttribute="trailing" secondItem="nLM-Bn-hRo" secondAttribute="trailing" constant="8" id="Cvq-32-pVL"/>
+                <constraint firstItem="nLM-Bn-hRo" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="-36" id="jJi-Gh-HrL"/>
+                <constraint firstItem="nLM-Bn-hRo" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="-30" id="mvj-Is-1sZ"/>
             </constraints>
-            <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="jJi-Gh-HrL"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="280" y="339"/>
         </view>
     </objects>
 </document>
