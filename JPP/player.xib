@@ -43,6 +43,13 @@
                         </mask>
                     </variation>
                 </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Efq-0U-KZU">
+                    <rect key="frame" x="72" y="218" width="150" height="2"/>
+                    <color key="backgroundColor" red="0.70588237047195435" green="0.11764705926179886" blue="0.44705882668495178" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="2" id="8hb-TM-goW"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
@@ -53,10 +60,13 @@
                 <constraint firstItem="H9f-eG-PLa" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="2" id="I8M-mn-Bdx"/>
                 <constraint firstItem="xDC-zU-NGO" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="K5z-G5-2Lx"/>
                 <constraint firstItem="a1S-YG-uAo" firstAttribute="trailing" secondItem="xDC-zU-NGO" secondAttribute="trailing" id="Lb6-lb-Sb1"/>
+                <constraint firstItem="Efq-0U-KZU" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="72" id="Lxn-8b-Gxe"/>
+                <constraint firstAttribute="trailing" secondItem="Efq-0U-KZU" secondAttribute="trailing" constant="72" id="OWg-Qf-MMi"/>
                 <constraint firstItem="H9f-eG-PLa" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="2" id="Yc2-aJ-gT5"/>
                 <constraint firstAttribute="bottom" secondItem="a1S-YG-uAo" secondAttribute="bottom" constant="26" id="Z2u-TI-uB3"/>
                 <constraint firstAttribute="trailing" secondItem="xDC-zU-NGO" secondAttribute="trailing" id="aCp-r7-Qky"/>
                 <constraint firstItem="a1S-YG-uAo" firstAttribute="top" secondItem="H9f-eG-PLa" secondAttribute="bottom" constant="5" id="aNI-ei-qPe"/>
+                <constraint firstItem="a1S-YG-uAo" firstAttribute="top" secondItem="Efq-0U-KZU" secondAttribute="bottom" constant="5" id="asV-pm-VRg"/>
                 <constraint firstAttribute="trailing" secondItem="H9f-eG-PLa" secondAttribute="trailing" constant="2" id="ie3-V5-B2Z"/>
                 <constraint firstItem="xDC-zU-NGO" firstAttribute="top" secondItem="a1S-YG-uAo" secondAttribute="bottom" constant="-1" id="nw7-ME-QbW"/>
                 <constraint firstItem="a1S-YG-uAo" firstAttribute="leading" secondItem="xDC-zU-NGO" secondAttribute="leading" id="tfE-1C-uQP"/>
@@ -70,7 +80,7 @@
                     <exclude reference="nw7-ME-QbW"/>
                 </mask>
             </variation>
-            <point key="canvasLocation" x="127" y="168"/>
+            <point key="canvasLocation" x="129" y="228"/>
         </view>
     </objects>
     <resources>
