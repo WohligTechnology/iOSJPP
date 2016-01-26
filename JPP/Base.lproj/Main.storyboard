@@ -5,11 +5,16 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Oswald-Regular.ttf">
+            <string>Oswald-Regular</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--HOME-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="mainStory" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="JPP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mainStory" title="HOME" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="JPP" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -19,18 +24,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ET7-2P-Fdv" customClass="schedule" customModule="JPP" customModuleProvider="target">
-                                <rect key="frame" x="9" y="38" width="302" height="191"/>
+                                <rect key="frame" x="9" y="38" width="302" height="308"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="191" id="ZS5-u5-PlD"/>
-                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ET7-2P-Fdv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-7" id="9rN-ch-HBi"/>
-                            <constraint firstItem="ET7-2P-Fdv" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="18" id="fHc-Aq-U0j"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ET7-2P-Fdv" secondAttribute="trailing" constant="-7" id="zva-0E-99u"/>
+                            <constraint firstItem="ET7-2P-Fdv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-7" id="2E3-kA-fIZ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ET7-2P-Fdv" secondAttribute="bottom" constant="222" id="W0S-4G-5DF"/>
+                            <constraint firstItem="ET7-2P-Fdv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mfl-ga-rrq"/>
+                            <constraint firstItem="ET7-2P-Fdv" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="18" id="vhc-7s-GzO"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
@@ -39,10 +42,29 @@
             </objects>
             <point key="canvasLocation" x="46" y="403"/>
         </scene>
-        <!--View Controller-->
+        <!--SCHEDULE-->
+        <scene sceneID="1Hx-gg-UUB">
+            <objects>
+                <viewController title="SCHEDULE" id="KAR-n7-XSF" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="N1F-cS-beH"/>
+                        <viewControllerLayoutGuide type="bottom" id="jSv-8r-9wK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Jhu-dp-c7j">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gNy-I3-ucM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="398" y="403"/>
+        </scene>
+        <!--SIDE MENU-->
         <scene sceneID="Z4W-u3-P5X">
             <objects>
-                <viewController storyboardIdentifier="sideMenu" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cca-bf-djx" customClass="ViewController" customModule="JPP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="sideMenu" title="SIDE MENU" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cca-bf-djx" customClass="ViewController" customModule="JPP" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xVP-64-wd9"/>
                         <viewControllerLayoutGuide type="bottom" id="dmU-Rq-vHl"/>
@@ -72,7 +94,255 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XZw-Fa-08j" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-300" y="1027"/>
+            <point key="canvasLocation" x="46" y="-236"/>
+        </scene>
+        <!--GALLERY-->
+        <scene sceneID="f7i-Qd-P9z">
+            <objects>
+                <viewController title="GALLERY" id="fNh-XM-Cbv" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZjW-Ur-DMn"/>
+                        <viewControllerLayoutGuide type="bottom" id="Y8n-ua-bfq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zmM-mV-jM2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7w5-aS-FLs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="760" y="403"/>
+        </scene>
+        <!--KVOW YOUR TEAM-->
+        <scene sceneID="EUA-Su-nZi">
+            <objects>
+                <viewController title="KVOW YOUR TEAM" id="68s-mp-GG3" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RIy-7M-kSo"/>
+                        <viewControllerLayoutGuide type="bottom" id="HfT-Dx-Yvh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ng4-ee-mZ7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vOW-v8-5aB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1450" y="403"/>
+        </scene>
+        <!--NEWS & MEDIA-->
+        <scene sceneID="hh8-kl-69u">
+            <objects>
+                <viewController title="NEWS &amp; MEDIA" id="5Ua-8r-qiT" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RDk-Gl-0ue"/>
+                        <viewControllerLayoutGuide type="bottom" id="AaF-WY-LBv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dX4-Mp-L7W">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Ty-rJ-o8m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1105" y="403"/>
+        </scene>
+        <!--MERCHANDISE-->
+        <scene sceneID="gSn-Im-QQ7">
+            <objects>
+                <viewController title="MERCHANDISE" id="w5q-5q-7oN" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="emz-Wc-TO8"/>
+                        <viewControllerLayoutGuide type="bottom" id="Xkq-e7-VNZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LYE-xe-qnE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="merchandise" translatesAutoresizingMaskIntoConstraints="NO" id="c2z-IS-g7f">
+                                <rect key="frame" x="6" y="214" width="307" height="213"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8om-dS-Y4w">
+                                <rect key="frame" x="6" y="435" width="307" height="37"/>
+                                <color key="backgroundColor" red="0.90588235855102539" green="0.17647059261798859" blue="0.54117649793624878" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="15"/>
+                                <state key="normal" title="BUY NOW">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="merchandise-1" translatesAutoresizingMaskIntoConstraints="NO" id="eDi-AE-sPY">
+                                <rect key="frame" x="6" y="5" width="307" height="201"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bA0-np-gqD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1798" y="403"/>
+        </scene>
+        <!--WALLPAPERS-->
+        <scene sceneID="LlI-mb-xWp">
+            <objects>
+                <viewController title="WALLPAPERS" id="3hL-ES-IRc" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="50e-5U-egb"/>
+                        <viewControllerLayoutGuide type="bottom" id="yeQ-eQ-z6Z"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3Dv-YN-AYE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CY8-JS-I8s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2151" y="403"/>
+        </scene>
+        <!--POINT TABLE-->
+        <scene sceneID="P4z-vm-5sU">
+            <objects>
+                <viewController title="POINT TABLE" id="xzZ-rB-b5g" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PXt-g0-WEo"/>
+                        <viewControllerLayoutGuide type="bottom" id="4g7-qf-tWx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zFZ-vp-y08">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7B1-Ob-eid" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2503" y="403"/>
+        </scene>
+        <!--ABOUT US-->
+        <scene sceneID="MA8-pi-yBY">
+            <objects>
+                <viewController title="ABOUT US" id="OLs-8j-9Vj" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SBf-VQ-asZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="iH1-wj-FUc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SOU-7B-Njr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WMr-h3-mIM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2853" y="403"/>
+        </scene>
+        <!--GALLERY INSIDE-->
+        <scene sceneID="EQi-dl-Wvh">
+            <objects>
+                <viewController title="GALLERY INSIDE" id="rBo-i2-X6q" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="s8g-M2-AKj"/>
+                        <viewControllerLayoutGuide type="bottom" id="39G-Z5-2bs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="znL-t6-dFq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kFQ-fy-nBG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="760" y="1034"/>
+        </scene>
+        <!--NEWS & MEDIA INSIDE-->
+        <scene sceneID="xxr-KN-zzV">
+            <objects>
+                <viewController title="NEWS &amp; MEDIA INSIDE" id="633-qu-Ovh" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="607-Vq-DVm"/>
+                        <viewControllerLayoutGuide type="bottom" id="MmS-Ks-ViS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FHg-cJ-z0d">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Btb-b8-NvV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1105" y="1034"/>
+        </scene>
+        <!--KVOW YOUR TEAM INSIDE-->
+        <scene sceneID="jHu-HA-akC">
+            <objects>
+                <viewController title="KVOW YOUR TEAM INSIDE" id="3Bo-nL-RZg" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nhq-Kh-76i"/>
+                        <viewControllerLayoutGuide type="bottom" id="IUM-6o-lId"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jJQ-ny-2bq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HIv-Zd-NtY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1450" y="1034"/>
+        </scene>
+        <!--WALLPAPERS INSIDE-->
+        <scene sceneID="kll-7x-guT">
+            <objects>
+                <viewController title="WALLPAPERS INSIDE" id="6p2-hl-rqw" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1c2-EY-XvH"/>
+                        <viewControllerLayoutGuide type="bottom" id="m38-1Z-CMV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JL0-e8-dEa">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O2H-x4-poh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2151" y="1034"/>
+        </scene>
+        <!--GALLERY INSIDE 2-->
+        <scene sceneID="WHa-No-R6C">
+            <objects>
+                <viewController title="GALLERY INSIDE 2" id="CrH-OF-I8r" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Jbc-sZ-MlW"/>
+                        <viewControllerLayoutGuide type="bottom" id="4t3-vr-tQo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7gU-KZ-RP4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W9V-OC-eun" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="760" y="1673"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="merchandise" width="600" height="466"/>
+        <image name="merchandise-1" width="1203" height="687"/>
+    </resources>
 </document>
