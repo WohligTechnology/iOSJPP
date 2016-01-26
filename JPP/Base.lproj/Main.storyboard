@@ -19,7 +19,7 @@
         <!--SideMenu-->
         <scene sceneID="PrO-K1-ZtT">
             <objects>
-                <viewController storyboardIdentifier="sideMenu" title="SideMenu" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bYQ-JT-oOa" customClass="SideMenuController" customModule="JPP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="sideMenu" title="SideMenu" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bYQ-JT-oOa" customClass="SideMenuController" customModule="Jaipur_Pink_Panther" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NLR-TK-eDe"/>
                         <viewControllerLayoutGuide type="bottom" id="SyE-eT-NX6"/>
@@ -84,7 +84,7 @@
         <!--HOME-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="home" title="HOME" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="HomeController" customModule="JPP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="home" title="HOME" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="HomeController" customModule="Jaipur_Pink_Panther" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -96,14 +96,14 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3bX-6R-Z9b">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="1000"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dQv-fs-6Gq" customClass="schedule" customModule="JPP" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dQv-fs-6Gq" customClass="schedule" customModule="Jaipur_Pink_Panther" customModuleProvider="target">
                                         <rect key="frame" x="8" y="8" width="304" height="294"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="294" id="I2V-sn-Y6L"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5kE-O3-GRe" customClass="news" customModule="JPP" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5kE-O3-GRe" customClass="news" customModule="Jaipur_Pink_Panther" customModuleProvider="target">
                                         <rect key="frame" x="8" y="310" width="304" height="260"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -133,6 +133,9 @@
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="1000"/>
+                    <connections>
+                        <outlet property="updates" destination="dQv-fs-6Gq" id="Kij-61-QG4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -141,7 +144,7 @@
         <!--SCHEDULE-->
         <scene sceneID="1Hx-gg-UUB">
             <objects>
-                <viewController storyboardIdentifier="schedule" title="SCHEDULE" useStoryboardIdentifierAsRestorationIdentifier="YES" id="KAR-n7-XSF" customClass="ScheduleController" customModule="JPP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="schedule" title="SCHEDULE" useStoryboardIdentifierAsRestorationIdentifier="YES" id="KAR-n7-XSF" customClass="ScheduleController" customModule="Jaipur_Pink_Panther" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="N1F-cS-beH"/>
                         <viewControllerLayoutGuide type="bottom" id="jSv-8r-9wK"/>
@@ -153,7 +156,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="51X-ln-bxP">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zw1-Bz-a4p" customClass="schedule" customModule="JPP" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zw1-Bz-a4p" customClass="schedule" customModule="Jaipur_Pink_Panther" customModuleProvider="target">
                                         <rect key="frame" x="8" y="8" width="304" height="349"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -179,6 +182,9 @@
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="upcoming" destination="Zw1-Bz-a4p" id="4Mu-bh-6dA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gNy-I3-ucM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -187,7 +193,7 @@
         <!--GALLERY-->
         <scene sceneID="f7i-Qd-P9z">
             <objects>
-                <viewController storyboardIdentifier="gallery" title="GALLERY" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fNh-XM-Cbv" customClass="GalleryController" customModule="JPP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="gallery" title="GALLERY" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fNh-XM-Cbv" customClass="GalleryController" customModule="Jaipur_Pink_Panther" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZjW-Ur-DMn"/>
                         <viewControllerLayoutGuide type="bottom" id="Y8n-ua-bfq"/>
@@ -242,7 +248,7 @@
         <!--KNOW YOUR TEAM-->
         <scene sceneID="EUA-Su-nZi">
             <objects>
-                <viewController storyboardIdentifier="knowteam" title="KNOW YOUR TEAM" useStoryboardIdentifierAsRestorationIdentifier="YES" id="68s-mp-GG3" customClass="KnowTeamController" customModule="JPP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="knowteam" title="KNOW YOUR TEAM" useStoryboardIdentifierAsRestorationIdentifier="YES" id="68s-mp-GG3" customClass="KnowTeamController" customModule="Jaipur_Pink_Panther" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RIy-7M-kSo"/>
                         <viewControllerLayoutGuide type="bottom" id="HfT-Dx-Yvh"/>
@@ -261,7 +267,7 @@
         <!--NEWS & MEDIA-->
         <scene sceneID="hh8-kl-69u">
             <objects>
-                <viewController storyboardIdentifier="news" title="NEWS &amp; MEDIA" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5Ua-8r-qiT" customClass="NewsController" customModule="JPP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="news" title="NEWS &amp; MEDIA" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5Ua-8r-qiT" customClass="NewsController" customModule="Jaipur_Pink_Panther" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RDk-Gl-0ue"/>
                         <viewControllerLayoutGuide type="bottom" id="AaF-WY-LBv"/>
@@ -273,7 +279,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JVO-ks-e1I">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Am-jH-Ihv" customClass="media" customModule="JPP" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Am-jH-Ihv" customClass="media" customModule="Jaipur_Pink_Panther" customModuleProvider="target">
                                         <rect key="frame" x="8" y="8" width="304" height="229"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -307,7 +313,7 @@
         <!--MERCHANDISE-->
         <scene sceneID="gSn-Im-QQ7">
             <objects>
-                <viewController storyboardIdentifier="merchandise" title="MERCHANDISE" useStoryboardIdentifierAsRestorationIdentifier="YES" id="w5q-5q-7oN" customClass="MerchandiseController" customModule="JPP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="merchandise" title="MERCHANDISE" useStoryboardIdentifierAsRestorationIdentifier="YES" id="w5q-5q-7oN" customClass="MerchandiseController" customModule="Jaipur_Pink_Panther" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="emz-Wc-TO8"/>
                         <viewControllerLayoutGuide type="bottom" id="Xkq-e7-VNZ"/>
@@ -375,7 +381,7 @@
         <!--WALLPAPERS-->
         <scene sceneID="LlI-mb-xWp">
             <objects>
-                <viewController storyboardIdentifier="wallpaper" title="WALLPAPERS" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3hL-ES-IRc" customClass="WallpaperController" customModule="JPP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="wallpaper" title="WALLPAPERS" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3hL-ES-IRc" customClass="WallpaperController" customModule="Jaipur_Pink_Panther" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="50e-5U-egb"/>
                         <viewControllerLayoutGuide type="bottom" id="yeQ-eQ-z6Z"/>
@@ -394,7 +400,7 @@
         <!--POINT TABLE-->
         <scene sceneID="P4z-vm-5sU">
             <objects>
-                <viewController storyboardIdentifier="point" title="POINT TABLE" useStoryboardIdentifierAsRestorationIdentifier="YES" id="xzZ-rB-b5g" customClass="PointTableController" customModule="JPP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="point" title="POINT TABLE" useStoryboardIdentifierAsRestorationIdentifier="YES" id="xzZ-rB-b5g" customClass="PointTableController" customModule="Jaipur_Pink_Panther" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PXt-g0-WEo"/>
                         <viewControllerLayoutGuide type="bottom" id="4g7-qf-tWx"/>
@@ -406,7 +412,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y8h-Rk-kI0">
                                 <rect key="frame" x="8" y="8" width="305" height="552"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kd3-fS-FOp" customClass="table" customModule="JPP" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kd3-fS-FOp" customClass="table" customModule="Jaipur_Pink_Panther" customModuleProvider="target">
                                         <rect key="frame" x="8" y="8" width="289" height="35"/>
                                         <color key="backgroundColor" red="0.92941176470588238" green="0.29019607843137252" blue="0.60784313725490191" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -466,7 +472,7 @@
         <!--ABOUT US-->
         <scene sceneID="MA8-pi-yBY">
             <objects>
-                <viewController storyboardIdentifier="about" title="ABOUT US" useStoryboardIdentifierAsRestorationIdentifier="YES" id="OLs-8j-9Vj" customClass="AboutController" customModule="JPP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="about" title="ABOUT US" useStoryboardIdentifierAsRestorationIdentifier="YES" id="OLs-8j-9Vj" customClass="AboutController" customModule="Jaipur_Pink_Panther" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SBf-VQ-asZ"/>
                         <viewControllerLayoutGuide type="bottom" id="iH1-wj-FUc"/>

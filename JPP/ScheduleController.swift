@@ -10,9 +10,12 @@ import UIKit
 
 class ScheduleController: UIViewController {
 
+    @IBOutlet weak var upcoming: schedule!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setNavigationBarItemText("SCHEDULE")
+        
+        upcoming.trapLabel.text="UPCOMING MATCH";
         // Do any additional setup after loading the view.
     }
 

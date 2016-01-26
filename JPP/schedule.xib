@@ -19,7 +19,7 @@
         </mutableArray>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="schedule" customModule="JPP" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="schedule" customModule="Jaipur_Pink_Panther" customModuleProvider="target">
             <connections>
                 <outlet property="matchDate" destination="HYy-N1-L39" id="fhM-Os-sz5"/>
                 <outlet property="matchStadium" destination="W9F-u7-XXP" id="Wy6-eX-NLf"/>
@@ -27,6 +27,7 @@
                 <outlet property="team1Score" destination="6SV-sQ-PgB" id="gbj-UY-kl8"/>
                 <outlet property="team2Image" destination="G85-z8-6EB" id="ttv-g3-1mL"/>
                 <outlet property="team2Score" destination="6SV-sQ-PgB" id="fYF-M2-v7p"/>
+                <outlet property="trapLabel" destination="Oaa-vd-nht" id="Qtq-W1-bP1"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -115,7 +116,7 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="yHG-YY-W9p"/>
                     </constraints>
-                    <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="17"/>
+                    <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="15"/>
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>

@@ -10,9 +10,12 @@ import UIKit
 
 class HomeController: UIViewController {
 
+    @IBOutlet weak var updates: schedule!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setNavigationBarItem()
+        updates.trapLabel.text = "LATEST UPDATE";
         // Do any additional setup after loading the view.
     }
 

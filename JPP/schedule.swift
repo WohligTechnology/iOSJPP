@@ -10,6 +10,7 @@ import UIKit
 
 @IBDesignable class schedule: UIView {
 
+    @IBOutlet weak var trapLabel: UILabel!
     @IBOutlet weak var team1Image: UIImageView!
     @IBOutlet weak var team1Score: UILabel!
     @IBOutlet weak var team2Image: UIImageView!
