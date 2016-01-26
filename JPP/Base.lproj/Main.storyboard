@@ -24,9 +24,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="side" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ktR-R8-IdC">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="side" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ktR-R8-IdC">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" red="0.30588236451148987" green="0.7921568751335144" blue="0.96078431606292725" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="menuCell" textLabel="mNM-Q6-aw7" style="IBUITableViewCellStyleDefault" id="Mgz-Mo-8sT">
                                         <rect key="frame" x="0.0" y="28" width="320" height="44"/>
@@ -48,6 +49,7 @@
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="bYQ-JT-oOa" id="XDB-9p-eDa"/>
+                                    <outlet property="delegate" destination="bYQ-JT-oOa" id="yRB-V7-Cxy"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -68,7 +70,7 @@
         <!--HOME-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="mainStory" title="HOME" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="HomeController" customModule="JPP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="home" title="HOME" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="HomeController" customModule="JPP" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -99,7 +101,7 @@
         <!--SCHEDULE-->
         <scene sceneID="1Hx-gg-UUB">
             <objects>
-                <viewController title="SCHEDULE" id="KAR-n7-XSF" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="schedule" title="SCHEDULE" useStoryboardIdentifierAsRestorationIdentifier="YES" id="KAR-n7-XSF" customClass="ScheduleController" customModule="JPP" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="N1F-cS-beH"/>
                         <viewControllerLayoutGuide type="bottom" id="jSv-8r-9wK"/>
@@ -118,7 +120,7 @@
         <!--GALLERY-->
         <scene sceneID="f7i-Qd-P9z">
             <objects>
-                <viewController title="GALLERY" id="fNh-XM-Cbv" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="gallery" title="GALLERY" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fNh-XM-Cbv" customClass="GalleryController" customModule="JPP" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZjW-Ur-DMn"/>
                         <viewControllerLayoutGuide type="bottom" id="Y8n-ua-bfq"/>
@@ -137,7 +139,7 @@
         <!--KVOW YOUR TEAM-->
         <scene sceneID="EUA-Su-nZi">
             <objects>
-                <viewController title="KVOW YOUR TEAM" id="68s-mp-GG3" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="knowteam" title="KVOW YOUR TEAM" useStoryboardIdentifierAsRestorationIdentifier="YES" id="68s-mp-GG3" customClass="KnowTeamController" customModule="JPP" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RIy-7M-kSo"/>
                         <viewControllerLayoutGuide type="bottom" id="HfT-Dx-Yvh"/>
@@ -156,7 +158,7 @@
         <!--NEWS & MEDIA-->
         <scene sceneID="hh8-kl-69u">
             <objects>
-                <viewController title="NEWS &amp; MEDIA" id="5Ua-8r-qiT" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="news" title="NEWS &amp; MEDIA" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5Ua-8r-qiT" customClass="NewsController" customModule="JPP" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RDk-Gl-0ue"/>
                         <viewControllerLayoutGuide type="bottom" id="AaF-WY-LBv"/>
@@ -175,7 +177,7 @@
         <!--MERCHANDISE-->
         <scene sceneID="gSn-Im-QQ7">
             <objects>
-                <viewController title="MERCHANDISE" id="w5q-5q-7oN" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="merchandise" title="MERCHANDISE" useStoryboardIdentifierAsRestorationIdentifier="YES" id="w5q-5q-7oN" customClass="MerchandiseController" customModule="JPP" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="emz-Wc-TO8"/>
                         <viewControllerLayoutGuide type="bottom" id="Xkq-e7-VNZ"/>
@@ -184,12 +186,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="merchandise-1" translatesAutoresizingMaskIntoConstraints="NO" id="eDi-AE-sPY">
-                                <rect key="frame" x="6" y="5" width="307" height="201"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="201" id="ggS-Nv-LC7"/>
-                                </constraints>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8om-dS-Y4w">
                                 <rect key="frame" x="7" y="435" width="307" height="37"/>
                                 <color key="backgroundColor" red="0.90588235855102539" green="0.17647059261798859" blue="0.54117649793624878" alpha="1" colorSpace="calibratedRGB"/>
@@ -205,6 +201,12 @@
                                 <rect key="frame" x="7" y="214" width="307" height="213"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="213" id="FPq-fy-LaW"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="merchandise-1" translatesAutoresizingMaskIntoConstraints="NO" id="eDi-AE-sPY">
+                                <rect key="frame" x="7" y="5" width="307" height="201"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="201" id="ggS-Nv-LC7"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -230,7 +232,7 @@
         <!--WALLPAPERS-->
         <scene sceneID="LlI-mb-xWp">
             <objects>
-                <viewController title="WALLPAPERS" id="3hL-ES-IRc" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="wallpaper" title="WALLPAPERS" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3hL-ES-IRc" customClass="WallpaperController" customModule="JPP" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="50e-5U-egb"/>
                         <viewControllerLayoutGuide type="bottom" id="yeQ-eQ-z6Z"/>
@@ -249,7 +251,7 @@
         <!--POINT TABLE-->
         <scene sceneID="P4z-vm-5sU">
             <objects>
-                <viewController title="POINT TABLE" id="xzZ-rB-b5g" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="point" title="POINT TABLE" useStoryboardIdentifierAsRestorationIdentifier="YES" id="xzZ-rB-b5g" customClass="PointTableController" customModule="JPP" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PXt-g0-WEo"/>
                         <viewControllerLayoutGuide type="bottom" id="4g7-qf-tWx"/>
@@ -268,7 +270,7 @@
         <!--ABOUT US-->
         <scene sceneID="MA8-pi-yBY">
             <objects>
-                <viewController title="ABOUT US" id="OLs-8j-9Vj" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="about" title="ABOUT US" useStoryboardIdentifierAsRestorationIdentifier="YES" id="OLs-8j-9Vj" customClass="AboutController" customModule="JPP" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SBf-VQ-asZ"/>
                         <viewControllerLayoutGuide type="bottom" id="iH1-wj-FUc"/>

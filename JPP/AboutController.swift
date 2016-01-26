@@ -12,7 +12,7 @@ class AboutController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setNavigationBarItemText("ABOUT")
+        self.setNavigationBarItemText("ABOUT US")
         // Do any additional setup after loading the view.
     }
 
