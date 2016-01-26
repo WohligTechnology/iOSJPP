@@ -10,6 +10,9 @@ import UIKit
 
 @IBDesignable class team: UIView {
     
+    @IBOutlet weak var teamImage: UIImageView!
+    @IBOutlet weak var teamDesc: UILabel!
+    @IBOutlet weak var teamTitle: UILabel!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
