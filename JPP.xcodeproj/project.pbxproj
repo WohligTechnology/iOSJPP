@@ -13,6 +13,8 @@
 		36F2CE911C56585100D0D2D6 /* galleryAlbum.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36F2CE901C56585100D0D2D6 /* galleryAlbum.xib */; };
 		36F2CE941C565DD600D0D2D6 /* team.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36F2CE931C565DD600D0D2D6 /* team.xib */; };
 		36F2CE961C565DE100D0D2D6 /* team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F2CE951C565DE100D0D2D6 /* team.swift */; };
+		36F2CE991C5739F400D0D2D6 /* media.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F2CE981C5739F400D0D2D6 /* media.swift */; };
+		36F2CE9B1C573A2300D0D2D6 /* media.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36F2CE9A1C573A2300D0D2D6 /* media.xib */; };
 		36F9C1601C55EDBF003D02AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F9C15F1C55EDBF003D02AB /* AppDelegate.swift */; };
 		36F9C1621C55EDBF003D02AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F9C1611C55EDBF003D02AB /* ViewController.swift */; };
 		36F9C1651C55EDBF003D02AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36F9C1631C55EDBF003D02AB /* Main.storyboard */; };
@@ -53,6 +55,8 @@
 		36F2CE901C56585100D0D2D6 /* galleryAlbum.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = galleryAlbum.xib; sourceTree = "<group>"; };
 		36F2CE931C565DD600D0D2D6 /* team.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = team.xib; sourceTree = "<group>"; };
 		36F2CE951C565DE100D0D2D6 /* team.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = team.swift; sourceTree = "<group>"; };
+		36F2CE981C5739F400D0D2D6 /* media.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = media.swift; sourceTree = "<group>"; };
+		36F2CE9A1C573A2300D0D2D6 /* media.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = media.xib; sourceTree = "<group>"; };
 		36F9C15C1C55EDBF003D02AB /* JPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36F9C15F1C55EDBF003D02AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		36F9C1611C55EDBF003D02AB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +130,15 @@
 			name = team;
 			sourceTree = "<group>";
 		};
+		36F2CE971C5739E400D0D2D6 /* media */ = {
+			isa = PBXGroup;
+			children = (
+				36F2CE981C5739F400D0D2D6 /* media.swift */,
+				36F2CE9A1C573A2300D0D2D6 /* media.xib */,
+			);
+			name = media;
+			sourceTree = "<group>";
+		};
 		36F9C1531C55EDBF003D02AB = {
 			isa = PBXGroup;
 			children = (
@@ -171,6 +184,7 @@
 		36F9C1841C5616C6003D02AB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				36F2CE971C5739E400D0D2D6 /* media */,
 				36F2CE921C565DCC00D0D2D6 /* team */,
 				36F2CE8D1C56582C00D0D2D6 /* galleryAlbum */,
 				36F2CE881C56560700D0D2D6 /* player */,
@@ -324,6 +338,7 @@
 				36F9C1A31C5641BB003D02AB /* voyagefantcond.ttf in Resources */,
 				36F9C1A41C5641BB003D02AB /* voyagefantexpand.ttf in Resources */,
 				36F9C1A51C5641BB003D02AB /* voyagefantgchrome.ttf in Resources */,
+				36F2CE9B1C573A2300D0D2D6 /* media.xib in Resources */,
 				36F2CE8A1C56561300D0D2D6 /* player.xib in Resources */,
 				36F9C1BB1C5653EF003D02AB /* matches.xib in Resources */,
 				36F9C1A61C5641BB003D02AB /* voyagefantgrad.ttf in Resources */,
@@ -357,6 +372,7 @@
 				36F9C18C1C561759003D02AB /* schedule.swift in Sources */,
 				36F9C1831C5616B1003D02AB /* Layout.swift in Sources */,
 				36F9C1731C55F948003D02AB /* SlideMenuController.swift in Sources */,
+				36F2CE991C5739F400D0D2D6 /* media.swift in Sources */,
 				36F2CE961C565DE100D0D2D6 /* team.swift in Sources */,
 				36F9C1B51C564EF4003D02AB /* table.swift in Sources */,
 				36F2CE8C1C56561F00D0D2D6 /* player.swift in Sources */,
