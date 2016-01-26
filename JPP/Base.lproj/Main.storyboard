@@ -24,8 +24,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView autoresizesSubviews="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_action_panther" translatesAutoresizingMaskIntoConstraints="NO" id="BSZ-Pu-EJZ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                                <color key="backgroundColor" red="0.039215686274509803" green="0.48627450980392156" blue="0.63137254901960782" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="Jc4-8F-2m8"/>
+                                </constraints>
+                            </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="side" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ktR-R8-IdC">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="524"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="separatorColor" red="0.30588236451148987" green="0.7921568751335144" blue="0.96078431606292725" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
@@ -55,10 +62,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ktR-R8-IdC" firstAttribute="top" secondItem="Zcw-UU-8wA" secondAttribute="top" id="2I2-fr-L8s"/>
-                            <constraint firstAttribute="trailing" secondItem="ktR-R8-IdC" secondAttribute="trailing" id="5xw-1H-NRP"/>
-                            <constraint firstItem="ktR-R8-IdC" firstAttribute="leading" secondItem="Zcw-UU-8wA" secondAttribute="leading" id="8FX-1D-ejw"/>
-                            <constraint firstItem="ktR-R8-IdC" firstAttribute="bottom" secondItem="SyE-eT-NX6" secondAttribute="top" id="aWy-40-8aj"/>
+                            <constraint firstItem="BSZ-Pu-EJZ" firstAttribute="top" secondItem="Zcw-UU-8wA" secondAttribute="top" id="ISi-lH-Jk5"/>
+                            <constraint firstAttribute="trailing" secondItem="BSZ-Pu-EJZ" secondAttribute="trailing" id="TO0-s4-Ahc"/>
+                            <constraint firstItem="BSZ-Pu-EJZ" firstAttribute="leading" secondItem="Zcw-UU-8wA" secondAttribute="leading" id="U5E-vP-2bf"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="ktR-R8-IdC" secondAttribute="bottom" constant="-20" id="UAz-M0-08R"/>
+                            <constraint firstItem="BSZ-Pu-EJZ" firstAttribute="trailing" secondItem="ktR-R8-IdC" secondAttribute="trailing" id="bTX-Tx-FoR"/>
+                            <constraint firstItem="BSZ-Pu-EJZ" firstAttribute="leading" secondItem="ktR-R8-IdC" secondAttribute="leading" id="cLy-pj-bMs"/>
+                            <constraint firstItem="ktR-R8-IdC" firstAttribute="top" secondItem="BSZ-Pu-EJZ" secondAttribute="bottom" id="g3O-88-YDt"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
@@ -203,24 +213,24 @@
                                     <constraint firstAttribute="height" constant="213" id="FPq-fy-LaW"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="merchandise-1" translatesAutoresizingMaskIntoConstraints="NO" id="eDi-AE-sPY">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="merchandise-1" translatesAutoresizingMaskIntoConstraints="NO" id="eDi-AE-sPY">
                                 <rect key="frame" x="7" y="5" width="307" height="201"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="201" id="ggS-Nv-LC7"/>
+                                    <constraint firstAttribute="height" constant="201" id="voA-po-aAg"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="c2z-IS-g7f" firstAttribute="top" secondItem="eDi-AE-sPY" secondAttribute="bottom" constant="8" symbolic="YES" id="1uh-49-EO7"/>
                             <constraint firstItem="c2z-IS-g7f" firstAttribute="centerX" secondItem="LYE-xe-qnE" secondAttribute="centerX" id="7Lk-Zl-O4P"/>
-                            <constraint firstItem="eDi-AE-sPY" firstAttribute="centerX" secondItem="LYE-xe-qnE" secondAttribute="centerX" id="8Z8-Kj-JOy"/>
                             <constraint firstItem="8om-dS-Y4w" firstAttribute="trailing" secondItem="c2z-IS-g7f" secondAttribute="trailing" id="AgT-uN-Dnl"/>
-                            <constraint firstItem="eDi-AE-sPY" firstAttribute="top" secondItem="LYE-xe-qnE" secondAttribute="topMargin" constant="5" id="Buz-t9-NaM"/>
-                            <constraint firstItem="c2z-IS-g7f" firstAttribute="top" secondItem="eDi-AE-sPY" secondAttribute="bottom" constant="8" symbolic="YES" id="YI9-OT-JxW"/>
                             <constraint firstItem="c2z-IS-g7f" firstAttribute="leading" secondItem="LYE-xe-qnE" secondAttribute="leadingMargin" constant="-9" id="ZVf-Y2-yb9"/>
+                            <constraint firstItem="eDi-AE-sPY" firstAttribute="leading" secondItem="c2z-IS-g7f" secondAttribute="leading" id="bpv-sW-sJL"/>
                             <constraint firstItem="8om-dS-Y4w" firstAttribute="leading" secondItem="c2z-IS-g7f" secondAttribute="leading" id="dMB-SV-J3Z"/>
-                            <constraint firstItem="eDi-AE-sPY" firstAttribute="leading" secondItem="LYE-xe-qnE" secondAttribute="leadingMargin" constant="-10" id="kfe-11-hrH"/>
                             <constraint firstItem="8om-dS-Y4w" firstAttribute="top" secondItem="c2z-IS-g7f" secondAttribute="bottom" constant="8" symbolic="YES" id="r8a-Bm-UHn"/>
+                            <constraint firstItem="eDi-AE-sPY" firstAttribute="trailing" secondItem="c2z-IS-g7f" secondAttribute="trailing" id="s9I-d2-lUk"/>
+                            <constraint firstItem="eDi-AE-sPY" firstAttribute="top" secondItem="LYE-xe-qnE" secondAttribute="topMargin" constant="5" id="vPe-uJ-zwa"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
@@ -383,6 +393,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="ic_action_panther" width="96" height="96"/>
         <image name="merchandise" width="600" height="466"/>
         <image name="merchandise-1" width="1203" height="687"/>
     </resources>
