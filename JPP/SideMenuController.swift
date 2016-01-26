@@ -129,7 +129,6 @@ class SideMenuController: UIViewController, UITableViewDataSource, UITableViewDe
             self.slideMenuController()?.changeMainViewController(self.homeController, close: true)
             
         }
-        print(indexPath.row);
     }
     
     

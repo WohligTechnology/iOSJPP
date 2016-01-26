@@ -19,6 +19,9 @@
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="GANGADHAR MALLESH" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a1S-YG-uAo">
                     <rect key="frame" x="0.0" y="225" width="294" height="23"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="23" id="gDc-rh-gE8"/>
+                    </constraints>
                     <fontDescription key="fontDescription" name="VoyageFantastique" family="Voyage Fantastique" pointSize="20"/>
                     <color key="textColor" red="0.70588235294117641" green="0.11764705882352941" blue="0.44705882352941173" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
@@ -43,19 +46,20 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="a1S-YG-uAo" secondAttribute="trailing" id="93Y-GH-BZv"/>
+                <constraint firstItem="xDC-zU-NGO" firstAttribute="top" secondItem="a1S-YG-uAo" secondAttribute="bottom" id="2Bj-NO-JtN"/>
                 <constraint firstItem="a1S-YG-uAo" firstAttribute="top" secondItem="H9f-eG-PLa" secondAttribute="bottom" constant="5" id="EDf-bR-Pdh"/>
                 <constraint firstItem="xDC-zU-NGO" firstAttribute="top" secondItem="a1S-YG-uAo" secondAttribute="bottom" constant="5" id="Erw-OP-oj7"/>
-                <constraint firstItem="a1S-YG-uAo" firstAttribute="top" secondItem="H9f-eG-PLa" secondAttribute="bottom" constant="5" id="FMe-ev-Ood"/>
                 <constraint firstItem="H9f-eG-PLa" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="GIe-R5-upa"/>
                 <constraint firstItem="H9f-eG-PLa" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="2" id="I8M-mn-Bdx"/>
                 <constraint firstItem="xDC-zU-NGO" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="K5z-G5-2Lx"/>
+                <constraint firstItem="a1S-YG-uAo" firstAttribute="trailing" secondItem="xDC-zU-NGO" secondAttribute="trailing" id="Lb6-lb-Sb1"/>
                 <constraint firstItem="H9f-eG-PLa" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="2" id="Yc2-aJ-gT5"/>
+                <constraint firstAttribute="bottom" secondItem="a1S-YG-uAo" secondAttribute="bottom" constant="26" id="Z2u-TI-uB3"/>
                 <constraint firstAttribute="trailing" secondItem="xDC-zU-NGO" secondAttribute="trailing" id="aCp-r7-Qky"/>
+                <constraint firstItem="a1S-YG-uAo" firstAttribute="top" secondItem="H9f-eG-PLa" secondAttribute="bottom" constant="5" id="aNI-ei-qPe"/>
                 <constraint firstAttribute="trailing" secondItem="H9f-eG-PLa" secondAttribute="trailing" constant="2" id="ie3-V5-B2Z"/>
-                <constraint firstItem="a1S-YG-uAo" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="l0h-ki-qaq"/>
                 <constraint firstItem="xDC-zU-NGO" firstAttribute="top" secondItem="a1S-YG-uAo" secondAttribute="bottom" constant="-1" id="nw7-ME-QbW"/>
-                <constraint firstItem="xDC-zU-NGO" firstAttribute="top" secondItem="a1S-YG-uAo" secondAttribute="bottom" id="w3f-3v-Bhe"/>
+                <constraint firstItem="a1S-YG-uAo" firstAttribute="leading" secondItem="xDC-zU-NGO" secondAttribute="leading" id="tfE-1C-uQP"/>
                 <constraint firstAttribute="bottom" secondItem="xDC-zU-NGO" secondAttribute="bottom" constant="5" id="zLt-6X-wEE"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

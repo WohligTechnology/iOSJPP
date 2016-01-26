@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Oswald-Light.ttf">
+            <string>Oswald-Light</string>
+            <string>Oswald-Light</string>
+            <string>Oswald-Light</string>
+            <string>Oswald-Light</string>
+        </mutableArray>
+        <mutableArray key="Oswald-Regular.ttf">
+            <string>Oswald-Regular</string>
+            <string>Oswald-Regular</string>
+            <string>Oswald-Regular</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="370" height="527"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aVV-Xq-dHV" customClass="player" customModule="JPP" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="17" width="370" height="305"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="305" id="Ai8-3V-JwB"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v04-JQ-oPI">
+                    <rect key="frame" x="8" y="330" width="354" height="40"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SWe-76-b9k">
+                            <rect key="frame" x="1" y="1" width="352" height="38"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" spacing="1" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4BK-u1-5JJ">
+                                    <rect key="frame" x="0.0" y="0.0" width="352" height="38"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yjE-uc-9YA">
+                                            <rect key="frame" x="0.0" y="0.0" width="117" height="38"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NATIONALITY:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xdm-O4-lpV">
+                                                    <rect key="frame" x="8" y="9" width="61" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="61" id="xmY-Wx-kd7"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="11"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INDIA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n8Y-HL-nxy">
+                                                    <rect key="frame" x="69" y="9" width="48" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="48" id="6U6-Cj-fmS"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="11"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="Xdm-O4-lpV" firstAttribute="top" secondItem="yjE-uc-9YA" secondAttribute="top" constant="9" id="H5g-0f-o9k"/>
+                                                <constraint firstItem="n8Y-HL-nxy" firstAttribute="leading" secondItem="Xdm-O4-lpV" secondAttribute="trailing" id="WqA-mE-F3h"/>
+                                                <constraint firstAttribute="bottom" secondItem="n8Y-HL-nxy" secondAttribute="bottom" constant="8" id="ddT-52-wr1"/>
+                                                <constraint firstItem="Xdm-O4-lpV" firstAttribute="leading" secondItem="yjE-uc-9YA" secondAttribute="leading" constant="8" id="eDg-13-NDE"/>
+                                                <constraint firstAttribute="bottom" secondItem="Xdm-O4-lpV" secondAttribute="bottom" constant="8" id="gsa-O2-LK8"/>
+                                                <constraint firstItem="n8Y-HL-nxy" firstAttribute="top" secondItem="yjE-uc-9YA" secondAttribute="top" constant="9" id="uoI-Cu-UTi"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G9k-ad-ceb">
+                                            <rect key="frame" x="118" y="0.0" width="117" height="38"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BORN:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zJz-Lr-FPD">
+                                                    <rect key="frame" x="0.0" y="0.0" width="35" height="38"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="61" id="dam-MP-YZT"/>
+                                                        <constraint firstAttribute="width" constant="35" id="uqF-pB-6bO"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="11"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="dam-MP-YZT"/>
+                                                        </mask>
+                                                    </variation>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JUN 08,1993" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mgL-Sl-8jm">
+                                                    <rect key="frame" x="33" y="0.0" width="84" height="38"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="48" id="8D9-gD-5bQ"/>
+                                                        <constraint firstAttribute="width" constant="84" id="USC-hC-UZb"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="11"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="zJz-Lr-FPD" secondAttribute="bottom" id="06l-cT-qz6"/>
+                                                <constraint firstItem="mgL-Sl-8jm" firstAttribute="leading" secondItem="G9k-ad-ceb" secondAttribute="leading" constant="33" id="6nC-gD-ijG"/>
+                                                <constraint firstItem="zJz-Lr-FPD" firstAttribute="leading" secondItem="G9k-ad-ceb" secondAttribute="leading" id="Ft2-t8-jew"/>
+                                                <constraint firstAttribute="bottom" secondItem="mgL-Sl-8jm" secondAttribute="bottom" id="Osz-zS-llE"/>
+                                                <constraint firstItem="mgL-Sl-8jm" firstAttribute="top" secondItem="G9k-ad-ceb" secondAttribute="top" id="WoK-SO-XXd"/>
+                                                <constraint firstItem="zJz-Lr-FPD" firstAttribute="top" secondItem="G9k-ad-ceb" secondAttribute="top" id="gnh-fX-jAW"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lf6-go-dAt">
+                                            <rect key="frame" x="236" y="0.0" width="117" height="38"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JERSEY NUMBER:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eX3-Mq-WJ1">
+                                                    <rect key="frame" x="0.0" y="9" width="73" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="73" id="6cb-iv-7W2"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="73" id="W2R-n0-BIM"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="11"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="W2R-n0-BIM"/>
+                                                        </mask>
+                                                    </variation>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F0s-uI-UbA">
+                                                    <rect key="frame" x="76" y="0.0" width="34" height="38"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="34" id="Pv6-pd-KWZ"/>
+                                                        <constraint firstAttribute="width" constant="34" id="iaX-0d-UTk"/>
+                                                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="34" id="wzR-dL-BFz"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="11"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="wzR-dL-BFz"/>
+                                                        </mask>
+                                                    </variation>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="eX3-Mq-WJ1" secondAttribute="bottom" constant="8" id="4PG-1u-mXF"/>
+                                                <constraint firstItem="eX3-Mq-WJ1" firstAttribute="leading" secondItem="Lf6-go-dAt" secondAttribute="leading" id="AYE-fq-UbG"/>
+                                                <constraint firstAttribute="bottom" secondItem="F0s-uI-UbA" secondAttribute="bottom" id="m8Y-D2-xs4"/>
+                                                <constraint firstItem="F0s-uI-UbA" firstAttribute="top" secondItem="Lf6-go-dAt" secondAttribute="top" id="p8a-Oc-3HA"/>
+                                                <constraint firstItem="eX3-Mq-WJ1" firstAttribute="top" secondItem="Lf6-go-dAt" secondAttribute="top" constant="9" id="pF2-aX-vqJ"/>
+                                                <constraint firstItem="F0s-uI-UbA" firstAttribute="leading" secondItem="eX3-Mq-WJ1" secondAttribute="trailing" constant="3" id="uxD-6n-PBt"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.90588235855102539" green="0.17647059261798859" blue="0.54117649793624878" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="tintColor" red="0.90588235859999999" green="0.1764705926" blue="0.5411764979" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstItem="G9k-ad-ceb" firstAttribute="width" secondItem="Lf6-go-dAt" secondAttribute="width" id="7Y8-LN-bhs"/>
+                                        <constraint firstItem="yjE-uc-9YA" firstAttribute="width" secondItem="G9k-ad-ceb" secondAttribute="width" id="xgT-bi-vTZ"/>
+                                    </constraints>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="4BK-u1-5JJ" firstAttribute="top" secondItem="SWe-76-b9k" secondAttribute="top" id="Ay5-Zt-8FM"/>
+                                <constraint firstAttribute="trailing" secondItem="4BK-u1-5JJ" secondAttribute="trailing" id="Cob-xQ-yyh"/>
+                                <constraint firstItem="4BK-u1-5JJ" firstAttribute="leading" secondItem="SWe-76-b9k" secondAttribute="leading" id="EXA-wR-wgB"/>
+                                <constraint firstAttribute="bottom" secondItem="4BK-u1-5JJ" secondAttribute="bottom" id="FhL-Ks-0VA"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.70588237050000002" green="0.1176470593" blue="0.44705882670000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="GCb-0i-OQv"/>
+                        <constraint firstItem="SWe-76-b9k" firstAttribute="top" secondItem="v04-JQ-oPI" secondAttribute="top" constant="1" id="Jkv-Xn-ilo"/>
+                        <constraint firstAttribute="bottom" secondItem="SWe-76-b9k" secondAttribute="bottom" constant="1" id="JoK-P3-U9O"/>
+                        <constraint firstItem="SWe-76-b9k" firstAttribute="leading" secondItem="v04-JQ-oPI" secondAttribute="leading" constant="1" id="UYs-MS-qFy"/>
+                        <constraint firstAttribute="trailing" secondItem="SWe-76-b9k" secondAttribute="trailing" constant="1" id="spZ-0v-Paq"/>
+                    </constraints>
+                </view>
+                <label autoresizesSubviews="NO" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zdc-dw-Dbc">
+                    <rect key="frame" x="8" y="378" width="354" height="86"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="86" id="ZhR-bb-NFQ"/>
+                    </constraints>
+                    <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pharetra mattis neque, in volutpat mauris. Nam nec neque lobortis, maximus turpis in, dapibus risus. Vivamus luctus sit amet odio non rutrum. Mauris tristique purus at lobortis pellentesque.</string>
+                    <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="13"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="zdc-dw-Dbc" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="7Q3-JX-fSm"/>
+                <constraint firstItem="aVV-Xq-dHV" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="GQk-Vd-dDE"/>
+                <constraint firstItem="zdc-dw-Dbc" firstAttribute="top" secondItem="v04-JQ-oPI" secondAttribute="bottom" constant="8" id="IN4-bn-PYc"/>
+                <constraint firstAttribute="trailing" secondItem="zdc-dw-Dbc" secondAttribute="trailing" constant="8" id="bmW-lK-Cda"/>
+                <constraint firstItem="aVV-Xq-dHV" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="17" id="cJt-yY-x3T"/>
+                <constraint firstAttribute="trailing" secondItem="v04-JQ-oPI" secondAttribute="trailing" constant="8" id="ftG-TX-pYQ"/>
+                <constraint firstItem="v04-JQ-oPI" firstAttribute="top" secondItem="aVV-Xq-dHV" secondAttribute="bottom" constant="8" id="gya-f8-uOU"/>
+                <constraint firstAttribute="trailing" secondItem="aVV-Xq-dHV" secondAttribute="trailing" id="lHH-AM-FeJ"/>
+                <constraint firstItem="v04-JQ-oPI" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="rUV-NK-T9U"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="218" y="79.5"/>
+        </view>
+    </objects>
+</document>

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		360A50FE1C577A05001F7E40 /* SideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360A50FD1C577A05001F7E40 /* SideMenuController.swift */; };
+		360A51011C579AAD001F7E40 /* playerInside.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360A51001C579AAD001F7E40 /* playerInside.swift */; };
+		360A51031C579ACB001F7E40 /* playerInside.xib in Resources */ = {isa = PBXBuildFile; fileRef = 360A51021C579ACB001F7E40 /* playerInside.xib */; };
 		36F2CE8A1C56561300D0D2D6 /* player.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36F2CE891C56561300D0D2D6 /* player.xib */; };
 		36F2CE8C1C56561F00D0D2D6 /* player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F2CE8B1C56561F00D0D2D6 /* player.swift */; };
 		36F2CE8F1C56584400D0D2D6 /* galleryAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F2CE8E1C56584400D0D2D6 /* galleryAlbum.swift */; };
@@ -64,6 +66,8 @@
 
 /* Begin PBXFileReference section */
 		360A50FD1C577A05001F7E40 /* SideMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuController.swift; sourceTree = "<group>"; };
+		360A51001C579AAD001F7E40 /* playerInside.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = playerInside.swift; sourceTree = "<group>"; };
+		360A51021C579ACB001F7E40 /* playerInside.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = playerInside.xib; sourceTree = "<group>"; };
 		36F2CE891C56561300D0D2D6 /* player.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = player.xib; sourceTree = "<group>"; };
 		36F2CE8B1C56561F00D0D2D6 /* player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = player.swift; sourceTree = "<group>"; };
 		36F2CE8E1C56584400D0D2D6 /* galleryAlbum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = galleryAlbum.swift; sourceTree = "<group>"; };
@@ -131,6 +135,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		360A50FF1C579A80001F7E40 /* playerInside */ = {
+			isa = PBXGroup;
+			children = (
+				360A51001C579AAD001F7E40 /* playerInside.swift */,
+				360A51021C579ACB001F7E40 /* playerInside.xib */,
+			);
+			name = playerInside;
+			sourceTree = "<group>";
+		};
 		36F2CE881C56560700D0D2D6 /* player */ = {
 			isa = PBXGroup;
 			children = (
@@ -211,6 +224,7 @@
 		36F9C1841C5616C6003D02AB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				360A50FF1C579A80001F7E40 /* playerInside */,
 				36F2CE971C5739E400D0D2D6 /* media */,
 				36F2CE921C565DCC00D0D2D6 /* team */,
 				36F2CE8D1C56582C00D0D2D6 /* galleryAlbum */,
@@ -382,6 +396,7 @@
 				36F9C1A51C5641BB003D02AB /* voyagefantgchrome.ttf in Resources */,
 				36F2CE9B1C573A2300D0D2D6 /* media.xib in Resources */,
 				36F2CE8A1C56561300D0D2D6 /* player.xib in Resources */,
+				360A51031C579ACB001F7E40 /* playerInside.xib in Resources */,
 				36F9C1BB1C5653EF003D02AB /* matches.xib in Resources */,
 				36F9C1A61C5641BB003D02AB /* voyagefantgrad.ttf in Resources */,
 				36F9C1B01C5643E8003D02AB /* news.xib in Resources */,
@@ -408,6 +423,7 @@
 			files = (
 				36F9C1811C5605B9003D02AB /* UIViewControllerExtension.swift in Sources */,
 				36F2CE8F1C56584400D0D2D6 /* galleryAlbum.swift in Sources */,
+				360A51011C579AAD001F7E40 /* playerInside.swift in Sources */,
 				36F2CEA91C57712A00D0D2D6 /* NewsInsideController.swift in Sources */,
 				36F2CEB51C57721800D0D2D6 /* PointTableController.swift in Sources */,
 				36F2CE9F1C5770B900D0D2D6 /* ScheduleController.swift in Sources */,
