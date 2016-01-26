@@ -62,6 +62,8 @@
 		36F9C1B51C564EF4003D02AB /* table.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F9C1B41C564EF4003D02AB /* table.swift */; };
 		36F9C1B91C5653E5003D02AB /* matches.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F9C1B81C5653E5003D02AB /* matches.swift */; };
 		36F9C1BB1C5653EF003D02AB /* matches.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36F9C1BA1C5653EF003D02AB /* matches.xib */; };
+		78238FE21C57A77E0067E7D5 /* about.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78238FE11C57A77E0067E7D5 /* about.swift */; };
+		78238FE41C57A7890067E7D5 /* about.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78238FE31C57A7890067E7D5 /* about.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -122,6 +124,8 @@
 		36F9C1B41C564EF4003D02AB /* table.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = table.swift; sourceTree = "<group>"; };
 		36F9C1B81C5653E5003D02AB /* matches.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = matches.swift; sourceTree = "<group>"; };
 		36F9C1BA1C5653EF003D02AB /* matches.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = matches.xib; sourceTree = "<group>"; };
+		78238FE11C57A77E0067E7D5 /* about.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = about.swift; sourceTree = "<group>"; };
+		78238FE31C57A7890067E7D5 /* about.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = about.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,6 +235,7 @@
 				36F2CE881C56560700D0D2D6 /* player */,
 				36F9C1B71C5653B0003D02AB /* matches */,
 				36F9C1B11C564CF3003D02AB /* table */,
+				78238FE01C57A70B0067E7D5 /* about */,
 				36F9C1AC1C5643C6003D02AB /* news */,
 				36F9C18A1C561740003D02AB /* schedule */,
 			);
@@ -326,6 +331,15 @@
 			name = matches;
 			sourceTree = "<group>";
 		};
+		78238FE01C57A70B0067E7D5 /* about */ = {
+			isa = PBXGroup;
+			children = (
+				78238FE11C57A77E0067E7D5 /* about.swift */,
+				78238FE31C57A7890067E7D5 /* about.xib */,
+			);
+			name = about;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -405,6 +419,7 @@
 				36F9C1A91C5641BB003D02AB /* voyagefantlaser.ttf in Resources */,
 				36F9C1AA1C5641BB003D02AB /* voyagefantstraight.ttf in Resources */,
 				36F9C1AB1C5641BB003D02AB /* voyagefantstraightleft.ttf in Resources */,
+				78238FE41C57A7890067E7D5 /* about.xib in Resources */,
 				36F2CE911C56585100D0D2D6 /* galleryAlbum.xib in Resources */,
 				36F9C16A1C55EDBF003D02AB /* LaunchScreen.storyboard in Resources */,
 				36F9C1B31C564D14003D02AB /* table.xib in Resources */,
@@ -443,6 +458,7 @@
 				36F2CE991C5739F400D0D2D6 /* media.swift in Sources */,
 				36F2CEB11C5771F200D0D2D6 /* WallpaperController.swift in Sources */,
 				36F2CEAD1C5771AE00D0D2D6 /* KvowTeamInsideController.swift in Sources */,
+				78238FE21C57A77E0067E7D5 /* about.swift in Sources */,
 				36F2CE961C565DE100D0D2D6 /* team.swift in Sources */,
 				36F9C1B51C564EF4003D02AB /* table.swift in Sources */,
 				36F2CEA31C5770E400D0D2D6 /* GalleryInsideController.swift in Sources */,
