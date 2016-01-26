@@ -8,37 +8,62 @@
     <customFonts key="customFonts">
         <mutableArray key="Oswald-Regular.ttf">
             <string>Oswald-Regular</string>
+            <string>Oswald-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
-        <!--Side Menu Controller-->
-        <scene sceneID="St7-dU-wDn">
+        <!--SideMenu-->
+        <scene sceneID="PrO-K1-ZtT">
             <objects>
-                <tableViewController storyboardIdentifier="sideMenu" useStoryboardIdentifierAsRestorationIdentifier="YES" id="lex-g9-1x9" customClass="SideMenuController" customModule="JPP" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Y1Y-5n-P61">
+                <viewController storyboardIdentifier="sideMenu" title="SideMenu" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bYQ-JT-oOa" customClass="SideMenuController" customModule="JPP" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NLR-TK-eDe"/>
+                        <viewControllerLayoutGuide type="bottom" id="SyE-eT-NX6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Zcw-UU-8wA">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="side" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ktR-R8-IdC">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="menuCell" textLabel="mNM-Q6-aw7" style="IBUITableViewCellStyleDefault" id="Mgz-Mo-8sT">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Mgz-Mo-8sT" id="ylK-aa-5kE">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mNM-Q6-aw7">
+                                                    <rect key="frame" x="15" y="0.0" width="290" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="16"/>
+                                                    <color key="textColor" red="0.90588235855102539" green="0.17647059261798859" blue="0.54117649793624878" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="bYQ-JT-oOa" id="XDB-9p-eDa"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="menuCell" id="y5W-zq-JxF">
-                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="y5W-zq-JxF" id="e6a-7v-lq6">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="lex-g9-1x9" id="xe4-fg-Jqt"/>
-                            <outlet property="delegate" destination="lex-g9-1x9" id="6Yn-FP-8LJ"/>
-                        </connections>
-                    </tableView>
+                        <constraints>
+                            <constraint firstItem="ktR-R8-IdC" firstAttribute="top" secondItem="Zcw-UU-8wA" secondAttribute="top" id="2I2-fr-L8s"/>
+                            <constraint firstAttribute="trailing" secondItem="ktR-R8-IdC" secondAttribute="trailing" id="5xw-1H-NRP"/>
+                            <constraint firstItem="ktR-R8-IdC" firstAttribute="leading" secondItem="Zcw-UU-8wA" secondAttribute="leading" id="8FX-1D-ejw"/>
+                            <constraint firstItem="ktR-R8-IdC" firstAttribute="bottom" secondItem="SyE-eT-NX6" secondAttribute="top" id="aWy-40-8aj"/>
+                        </constraints>
+                    </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="334-bs-7OS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dJS-3A-14M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="45" y="-439"/>
+            <point key="canvasLocation" x="13" y="-565"/>
         </scene>
         <!--HOME-->
         <scene sceneID="tne-QT-ifu">
