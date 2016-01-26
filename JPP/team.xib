@@ -6,6 +6,9 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <mutableArray key="Oswald-Light.ttf">
+            <string>Oswald-Light</string>
+        </mutableArray>
         <mutableArray key="Oswald-Regular.ttf">
             <string>Oswald-Regular</string>
         </mutableArray>
@@ -33,18 +36,11 @@
                     <color key="textColor" red="0.70588235294117641" green="0.11764705882352941" blue="0.44705882352941173" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1tR-dU-n89">
-                    <rect key="frame" x="116" y="40" width="204" height="116"/>
-                    <attributedString key="attributedText">
-                        <fragment>
-                            <string key="content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled.</string>
-                            <attributes>
-                                <color key="NSColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
-                                <font key="NSFont" size="13" name="Oswald-Light"/>
-                                <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                            </attributes>
-                        </fragment>
-                    </attributedString>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1tR-dU-n89">
+                    <rect key="frame" x="116" y="40" width="204" height="118"/>
+                    <string key="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled.</string>
+                    <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="13"/>
+                    <color key="textColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
@@ -55,6 +51,7 @@
                 <constraint firstItem="x13-Hu-KbC" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="MAh-5h-kV0"/>
                 <constraint firstItem="3LV-Od-YSJ" firstAttribute="top" secondItem="x13-Hu-KbC" secondAttribute="top" id="Sel-iU-bfM"/>
                 <constraint firstItem="3LV-Od-YSJ" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailingMargin" id="hbL-hX-AMQ"/>
+                <constraint firstAttribute="bottom" secondItem="1tR-dU-n89" secondAttribute="bottom" constant="20" id="jEM-DP-tMr"/>
                 <constraint firstItem="1tR-dU-n89" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="40" id="kjt-k2-mwW"/>
                 <constraint firstItem="3LV-Od-YSJ" firstAttribute="leading" secondItem="x13-Hu-KbC" secondAttribute="trailing" constant="12" id="nkm-wI-pQT"/>
                 <constraint firstItem="x13-Hu-KbC" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="oRO-Je-SW6"/>
