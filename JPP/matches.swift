@@ -10,6 +10,8 @@ import UIKit
 
 @IBDesignable class matches: UIView {
     
+    @IBOutlet weak var matchesTeams: UILabel!
+    @IBOutlet weak var matchesDate: UILabel!
     
     override init(frame: CGRect) {
         super.init(frame: frame)

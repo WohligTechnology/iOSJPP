@@ -10,6 +10,9 @@ import UIKit
 
 @IBDesignable class player: UIView {
     
+    @IBOutlet weak var playerImage: UIImageView!
+    @IBOutlet weak var playerTitle: UILabel!
+    @IBOutlet weak var playerPosition: UILabel!
     
     override init(frame: CGRect) {
         super.init(frame: frame)

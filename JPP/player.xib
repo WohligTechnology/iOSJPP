@@ -11,7 +11,13 @@
         </mutableArray>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="player" customModule="JPP" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="player" customModule="JPP" customModuleProvider="target">
+            <connections>
+                <outlet property="playerImage" destination="H9f-eG-PLa" id="bHJ-Bv-VtY"/>
+                <outlet property="playerPosition" destination="xDC-zU-NGO" id="3Mg-Uc-O4b"/>
+                <outlet property="playerTitle" destination="a1S-YG-uAo" id="Ucu-Rx-npL"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="294" height="274"/>

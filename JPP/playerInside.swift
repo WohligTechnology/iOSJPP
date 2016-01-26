@@ -9,6 +9,16 @@ import UIKit
 
 @IBDesignable class playerInside: UIView {
     
+    @IBOutlet weak var playerImage: player!
+    @IBOutlet weak var playerName: player!
+    @IBOutlet weak var playerPosition: player!
+    @IBOutlet weak var playerNationality: UILabel!
+    
+    @IBOutlet weak var playerBirth: UILabel!
+    @IBOutlet weak var playerJerseyno: UILabel!
+    @IBOutlet weak var playerDesc: UILabel!
+    
+    
     
     override init(frame: CGRect) {
         super.init(frame: frame)

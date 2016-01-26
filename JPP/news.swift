@@ -10,6 +10,11 @@ import UIKit
 
 @IBDesignable class news: UIView {
     
+    @IBOutlet weak var newsTitle: UILabel!
+    @IBOutlet weak var newsSubTitle: UILabel!
+    @IBOutlet weak var newsDesc: UILabel!
+    @IBOutlet weak var newsDate: UILabel!
+    @IBOutlet weak var newsImage: UIImageView!
     
     override init(frame: CGRect) {
         super.init(frame: frame)

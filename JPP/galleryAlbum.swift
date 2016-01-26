@@ -10,6 +10,8 @@ import UIKit
 
 @IBDesignable class galleryAlbum: UIView {
     
+    @IBOutlet weak var galleryTitle: UILabel!
+    @IBOutlet weak var galleryBanner: UIImageView!
     
     override init(frame: CGRect) {
         super.init(frame: frame)

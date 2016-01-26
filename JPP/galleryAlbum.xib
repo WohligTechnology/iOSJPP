@@ -11,7 +11,12 @@
         </mutableArray>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="galleryAlbum" customModule="JPP" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="galleryAlbum" customModule="JPP" customModuleProvider="target">
+            <connections>
+                <outlet property="galleryBanner" destination="bsR-tP-dNx" id="mEc-bD-cxt"/>
+                <outlet property="galleryTitle" destination="wDS-wm-4kz" id="Y9h-Wi-nRz"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="449" height="202"/>

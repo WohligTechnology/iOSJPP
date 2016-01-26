@@ -10,6 +10,12 @@ import UIKit
 
 @IBDesignable class table: UIView {
     
+    @IBOutlet weak var tableNo: UILabel!
+    @IBOutlet weak var tableTeam: UILabel!
+    @IBOutlet weak var tablePlayed: UILabel!
+    @IBOutlet weak var tableWon: UILabel!
+    @IBOutlet weak var tableLost: UILabel!
+    @IBOutlet weak var tablePoint: UILabel!
     
     override init(frame: CGRect) {
         super.init(frame: frame)

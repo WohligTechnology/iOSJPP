@@ -14,7 +14,12 @@
         </mutableArray>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="matches" customModule="JPP" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="matches" customModule="JPP" customModuleProvider="target">
+            <connections>
+                <outlet property="matchesDate" destination="74G-d4-Wx0" id="FVS-Vq-7P5"/>
+                <outlet property="matchesTeams" destination="8K5-0L-apj" id="kUB-5U-QHz"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="362" height="65"/>

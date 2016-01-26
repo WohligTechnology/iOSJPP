@@ -19,11 +19,11 @@
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nLM-Bn-hRo">
                     <rect key="frame" x="8" y="8" width="304" height="374"/>
-                    <mutableString key="text">The Champions of the inaugural season of Star Sports Pro Kabaddi, Jaipur Pink Panthers represent the Pink City of Jaipur, Rajasthan in the league. Led by Navneet Gautam and coached by Kasinathan Baskaran, the team is owned by renowned Indian actor, Abhishek Bachchan.
+                    <string key="text">The Champions of the inaugural season of Star Sports Pro Kabaddi, Jaipur Pink Panthers represent the Pink City of Jaipur, Rajasthan in the league. Led by Navneet Gautam and coached by Kasinathan Baskaran, the team is owned by renowned Indian actor, Abhishek Bachchan.
 
 An avid fan of all sports – cricket, basketball, football and Kabaddi being his favourite games, Abhishek is a proud owner of Jaipur Pink Panthers and co-owns the Indian Super League’s franchise – Chennaiyin FC. Additionally, he is the captain and one of the founders of the All Stars Football Club (ASFC). Abhishek believes in bringing sports to the forefront for the younger generation in India and is committed to actively promote all kinds of sports.
 
-One of the most popular teams in the inaugural season, Jaipur Pink Panthers had many leading film and entertainment personalities dawning</mutableString>
+One of the most popular teams in the inaugural season, Jaipur Pink Panthers had many leading film and entertainment personalities dawning</string>
                     <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="14"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>

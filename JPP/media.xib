@@ -14,7 +14,14 @@
         </mutableArray>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="media" customModule="JPP" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="media" customModule="JPP" customModuleProvider="target">
+            <connections>
+                <outlet property="mediaDate" destination="sMN-Dg-jzj" id="XET-aY-MBz"/>
+                <outlet property="mediaDesc" destination="PlO-dy-pip" id="WkF-qL-riv"/>
+                <outlet property="mediaImage" destination="0Es-M7-7LR" id="LKZ-DY-qa5"/>
+                <outlet property="mediaTitle" destination="GIe-MU-S4X" id="Hmh-uD-MwX"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="340" height="258"/>

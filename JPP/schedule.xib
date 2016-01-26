@@ -19,7 +19,16 @@
         </mutableArray>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="schedule" customModule="JPP" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="schedule" customModule="JPP" customModuleProvider="target">
+            <connections>
+                <outlet property="matchDate" destination="HYy-N1-L39" id="fhM-Os-sz5"/>
+                <outlet property="matchStadium" destination="W9F-u7-XXP" id="Wy6-eX-NLf"/>
+                <outlet property="team1Image" destination="gbv-md-THd" id="Cyo-2C-PpE"/>
+                <outlet property="team1Score" destination="6SV-sQ-PgB" id="gbj-UY-kl8"/>
+                <outlet property="team2Image" destination="G85-z8-6EB" id="ttv-g3-1mL"/>
+                <outlet property="team2Score" destination="6SV-sQ-PgB" id="fYF-M2-v7p"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="428" height="297"/>
