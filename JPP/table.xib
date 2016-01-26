@@ -20,7 +20,6 @@
                 <outlet property="tableLost" destination="F3r-DV-jLw" id="BSP-vC-rMd"/>
                 <outlet property="tableNo" destination="paX-RA-nnL" id="ywr-4v-vav"/>
                 <outlet property="tablePlayed" destination="bGT-CU-qne" id="yxN-AF-43I"/>
-                <outlet property="tablePlayer" destination="bGT-CU-qne" id="Pqw-IA-c5w"/>
                 <outlet property="tablePoint" destination="U4h-3l-veQ" id="bD7-K5-xcb"/>
                 <outlet property="tableTeam" destination="bCC-gT-Key" id="iIZ-Q4-OH3"/>
                 <outlet property="tableWon" destination="lC1-yR-cxY" id="diM-dq-etm"/>
