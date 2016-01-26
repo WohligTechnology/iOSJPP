@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		360A50FE1C577A05001F7E40 /* SideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360A50FD1C577A05001F7E40 /* SideMenuController.swift */; };
 		36F2CE8A1C56561300D0D2D6 /* player.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36F2CE891C56561300D0D2D6 /* player.xib */; };
 		36F2CE8C1C56561F00D0D2D6 /* player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F2CE8B1C56561F00D0D2D6 /* player.swift */; };
 		36F2CE8F1C56584400D0D2D6 /* galleryAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F2CE8E1C56584400D0D2D6 /* galleryAlbum.swift */; };
@@ -15,8 +16,21 @@
 		36F2CE961C565DE100D0D2D6 /* team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F2CE951C565DE100D0D2D6 /* team.swift */; };
 		36F2CE991C5739F400D0D2D6 /* media.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F2CE981C5739F400D0D2D6 /* media.swift */; };
 		36F2CE9B1C573A2300D0D2D6 /* media.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36F2CE9A1C573A2300D0D2D6 /* media.xib */; };
+		36F2CE9D1C57708C00D0D2D6 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F2CE9C1C57708C00D0D2D6 /* HomeController.swift */; };
+		36F2CE9F1C5770B900D0D2D6 /* ScheduleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F2CE9E1C5770B900D0D2D6 /* ScheduleController.swift */; };
+		36F2CEA11C5770D400D0D2D6 /* GalleryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F2CEA01C5770D400D0D2D6 /* GalleryController.swift */; };
+		36F2CEA31C5770E400D0D2D6 /* GalleryInsideController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F2CEA21C5770E400D0D2D6 /* GalleryInsideController.swift */; };
+		36F2CEA51C5770FE00D0D2D6 /* GalleryInside2Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F2CEA41C5770FE00D0D2D6 /* GalleryInside2Controller.swift */; };
+		36F2CEA71C57711E00D0D2D6 /* NewsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F2CEA61C57711E00D0D2D6 /* NewsController.swift */; };
+		36F2CEA91C57712A00D0D2D6 /* NewsInsideController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F2CEA81C57712A00D0D2D6 /* NewsInsideController.swift */; };
+		36F2CEAB1C57718B00D0D2D6 /* KnowTeamController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F2CEAA1C57718B00D0D2D6 /* KnowTeamController.swift */; };
+		36F2CEAD1C5771AE00D0D2D6 /* KvowTeamInsideController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F2CEAC1C5771AE00D0D2D6 /* KvowTeamInsideController.swift */; };
+		36F2CEAF1C5771D800D0D2D6 /* MerchandiseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F2CEAE1C5771D800D0D2D6 /* MerchandiseController.swift */; };
+		36F2CEB11C5771F200D0D2D6 /* WallpaperController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F2CEB01C5771F200D0D2D6 /* WallpaperController.swift */; };
+		36F2CEB31C57720600D0D2D6 /* WallpaperInsideController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F2CEB21C57720600D0D2D6 /* WallpaperInsideController.swift */; };
+		36F2CEB51C57721800D0D2D6 /* PointTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F2CEB41C57721800D0D2D6 /* PointTableController.swift */; };
+		36F2CEB71C57722B00D0D2D6 /* AboutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F2CEB61C57722B00D0D2D6 /* AboutController.swift */; };
 		36F9C1601C55EDBF003D02AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F9C15F1C55EDBF003D02AB /* AppDelegate.swift */; };
-		36F9C1621C55EDBF003D02AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F9C1611C55EDBF003D02AB /* ViewController.swift */; };
 		36F9C1651C55EDBF003D02AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36F9C1631C55EDBF003D02AB /* Main.storyboard */; };
 		36F9C1671C55EDBF003D02AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36F9C1661C55EDBF003D02AB /* Assets.xcassets */; };
 		36F9C16A1C55EDBF003D02AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36F9C1681C55EDBF003D02AB /* LaunchScreen.storyboard */; };
@@ -49,6 +63,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		360A50FD1C577A05001F7E40 /* SideMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuController.swift; sourceTree = "<group>"; };
 		36F2CE891C56561300D0D2D6 /* player.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = player.xib; sourceTree = "<group>"; };
 		36F2CE8B1C56561F00D0D2D6 /* player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = player.swift; sourceTree = "<group>"; };
 		36F2CE8E1C56584400D0D2D6 /* galleryAlbum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = galleryAlbum.swift; sourceTree = "<group>"; };
@@ -57,9 +72,22 @@
 		36F2CE951C565DE100D0D2D6 /* team.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = team.swift; sourceTree = "<group>"; };
 		36F2CE981C5739F400D0D2D6 /* media.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = media.swift; sourceTree = "<group>"; };
 		36F2CE9A1C573A2300D0D2D6 /* media.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = media.xib; sourceTree = "<group>"; };
+		36F2CE9C1C57708C00D0D2D6 /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		36F2CE9E1C5770B900D0D2D6 /* ScheduleController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleController.swift; sourceTree = "<group>"; };
+		36F2CEA01C5770D400D0D2D6 /* GalleryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryController.swift; sourceTree = "<group>"; };
+		36F2CEA21C5770E400D0D2D6 /* GalleryInsideController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryInsideController.swift; sourceTree = "<group>"; };
+		36F2CEA41C5770FE00D0D2D6 /* GalleryInside2Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryInside2Controller.swift; sourceTree = "<group>"; };
+		36F2CEA61C57711E00D0D2D6 /* NewsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsController.swift; sourceTree = "<group>"; };
+		36F2CEA81C57712A00D0D2D6 /* NewsInsideController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsInsideController.swift; sourceTree = "<group>"; };
+		36F2CEAA1C57718B00D0D2D6 /* KnowTeamController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KnowTeamController.swift; sourceTree = "<group>"; };
+		36F2CEAC1C5771AE00D0D2D6 /* KvowTeamInsideController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KvowTeamInsideController.swift; sourceTree = "<group>"; };
+		36F2CEAE1C5771D800D0D2D6 /* MerchandiseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MerchandiseController.swift; sourceTree = "<group>"; };
+		36F2CEB01C5771F200D0D2D6 /* WallpaperController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WallpaperController.swift; sourceTree = "<group>"; };
+		36F2CEB21C57720600D0D2D6 /* WallpaperInsideController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WallpaperInsideController.swift; sourceTree = "<group>"; };
+		36F2CEB41C57721800D0D2D6 /* PointTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointTableController.swift; sourceTree = "<group>"; };
+		36F2CEB61C57722B00D0D2D6 /* AboutController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutController.swift; sourceTree = "<group>"; };
 		36F9C15C1C55EDBF003D02AB /* JPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36F9C15F1C55EDBF003D02AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		36F9C1611C55EDBF003D02AB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		36F9C1641C55EDBF003D02AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		36F9C1661C55EDBF003D02AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		36F9C1691C55EDBF003D02AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -199,7 +227,21 @@
 		36F9C1861C5616E4003D02AB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				36F9C1611C55EDBF003D02AB /* ViewController.swift */,
+				36F2CE9C1C57708C00D0D2D6 /* HomeController.swift */,
+				360A50FD1C577A05001F7E40 /* SideMenuController.swift */,
+				36F2CE9E1C5770B900D0D2D6 /* ScheduleController.swift */,
+				36F2CEA01C5770D400D0D2D6 /* GalleryController.swift */,
+				36F2CEA21C5770E400D0D2D6 /* GalleryInsideController.swift */,
+				36F2CEA41C5770FE00D0D2D6 /* GalleryInside2Controller.swift */,
+				36F2CEA61C57711E00D0D2D6 /* NewsController.swift */,
+				36F2CEA81C57712A00D0D2D6 /* NewsInsideController.swift */,
+				36F2CEAA1C57718B00D0D2D6 /* KnowTeamController.swift */,
+				36F2CEAC1C5771AE00D0D2D6 /* KvowTeamInsideController.swift */,
+				36F2CEAE1C5771D800D0D2D6 /* MerchandiseController.swift */,
+				36F2CEB01C5771F200D0D2D6 /* WallpaperController.swift */,
+				36F2CEB21C57720600D0D2D6 /* WallpaperInsideController.swift */,
+				36F2CEB41C57721800D0D2D6 /* PointTableController.swift */,
+				36F2CEB61C57722B00D0D2D6 /* AboutController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -366,15 +408,29 @@
 			files = (
 				36F9C1811C5605B9003D02AB /* UIViewControllerExtension.swift in Sources */,
 				36F2CE8F1C56584400D0D2D6 /* galleryAlbum.swift in Sources */,
-				36F9C1621C55EDBF003D02AB /* ViewController.swift in Sources */,
+				36F2CEA91C57712A00D0D2D6 /* NewsInsideController.swift in Sources */,
+				36F2CEB51C57721800D0D2D6 /* PointTableController.swift in Sources */,
+				36F2CE9F1C5770B900D0D2D6 /* ScheduleController.swift in Sources */,
+				36F2CEA51C5770FE00D0D2D6 /* GalleryInside2Controller.swift in Sources */,
+				36F2CEAB1C57718B00D0D2D6 /* KnowTeamController.swift in Sources */,
+				36F2CE9D1C57708C00D0D2D6 /* HomeController.swift in Sources */,
 				36F9C1B91C5653E5003D02AB /* matches.swift in Sources */,
+				36F2CEAF1C5771D800D0D2D6 /* MerchandiseController.swift in Sources */,
+				36F2CEA11C5770D400D0D2D6 /* GalleryController.swift in Sources */,
 				36F9C1AE1C5643DF003D02AB /* news.swift in Sources */,
 				36F9C18C1C561759003D02AB /* schedule.swift in Sources */,
+				360A50FE1C577A05001F7E40 /* SideMenuController.swift in Sources */,
+				36F2CEB31C57720600D0D2D6 /* WallpaperInsideController.swift in Sources */,
 				36F9C1831C5616B1003D02AB /* Layout.swift in Sources */,
 				36F9C1731C55F948003D02AB /* SlideMenuController.swift in Sources */,
+				36F2CEB71C57722B00D0D2D6 /* AboutController.swift in Sources */,
 				36F2CE991C5739F400D0D2D6 /* media.swift in Sources */,
+				36F2CEB11C5771F200D0D2D6 /* WallpaperController.swift in Sources */,
+				36F2CEAD1C5771AE00D0D2D6 /* KvowTeamInsideController.swift in Sources */,
 				36F2CE961C565DE100D0D2D6 /* team.swift in Sources */,
 				36F9C1B51C564EF4003D02AB /* table.swift in Sources */,
+				36F2CEA31C5770E400D0D2D6 /* GalleryInsideController.swift in Sources */,
+				36F2CEA71C57711E00D0D2D6 /* NewsController.swift in Sources */,
 				36F2CE8C1C56561F00D0D2D6 /* player.swift in Sources */,
 				36F9C1601C55EDBF003D02AB /* AppDelegate.swift in Sources */,
 			);

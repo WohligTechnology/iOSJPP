@@ -11,10 +11,39 @@
         </mutableArray>
     </customFonts>
     <scenes>
+        <!--Side Menu Controller-->
+        <scene sceneID="St7-dU-wDn">
+            <objects>
+                <tableViewController storyboardIdentifier="sideMenu" useStoryboardIdentifierAsRestorationIdentifier="YES" id="lex-g9-1x9" customClass="SideMenuController" customModule="JPP" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Y1Y-5n-P61">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="menuCell" id="y5W-zq-JxF">
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="y5W-zq-JxF" id="e6a-7v-lq6">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="lex-g9-1x9" id="xe4-fg-Jqt"/>
+                            <outlet property="delegate" destination="lex-g9-1x9" id="6Yn-FP-8LJ"/>
+                        </connections>
+                    </tableView>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="334-bs-7OS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="45" y="-439"/>
+        </scene>
         <!--HOME-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="mainStory" title="HOME" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="JPP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mainStory" title="HOME" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="HomeController" customModule="JPP" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -60,41 +89,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gNy-I3-ucM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="398" y="403"/>
-        </scene>
-        <!--SIDE MENU-->
-        <scene sceneID="Z4W-u3-P5X">
-            <objects>
-                <viewController storyboardIdentifier="sideMenu" title="SIDE MENU" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cca-bf-djx" customClass="ViewController" customModule="JPP" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="xVP-64-wd9"/>
-                        <viewControllerLayoutGuide type="bottom" id="dmU-Rq-vHl"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="gMN-Bf-KLV">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SideMenu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J58-Mr-cjq">
-                                <rect key="frame" x="122" y="77" width="77" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2tO-sy-p4L" customClass="media" customModule="JPP" customModuleProvider="target">
-                                <rect key="frame" x="32" y="124" width="257" height="276"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UiO-55-Ze7" customClass="team" customModule="JPP" customModuleProvider="target">
-                                <rect key="frame" x="20" y="365" width="280" height="183"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="XZw-Fa-08j" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="46" y="-236"/>
         </scene>
         <!--GALLERY-->
         <scene sceneID="f7i-Qd-P9z">
@@ -165,22 +159,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="merchandise" translatesAutoresizingMaskIntoConstraints="NO" id="c2z-IS-g7f">
-                                <rect key="frame" x="6" y="214" width="307" height="213"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="merchandise-1" translatesAutoresizingMaskIntoConstraints="NO" id="eDi-AE-sPY">
+                                <rect key="frame" x="6" y="5" width="307" height="201"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="201" id="ggS-Nv-LC7"/>
+                                </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8om-dS-Y4w">
-                                <rect key="frame" x="6" y="435" width="307" height="37"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8om-dS-Y4w">
+                                <rect key="frame" x="7" y="435" width="307" height="37"/>
                                 <color key="backgroundColor" red="0.90588235855102539" green="0.17647059261798859" blue="0.54117649793624878" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="4Ua-kY-8jF"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="15"/>
                                 <state key="normal" title="BUY NOW">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="merchandise-1" translatesAutoresizingMaskIntoConstraints="NO" id="eDi-AE-sPY">
-                                <rect key="frame" x="6" y="5" width="307" height="201"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="merchandise" translatesAutoresizingMaskIntoConstraints="NO" id="c2z-IS-g7f">
+                                <rect key="frame" x="7" y="214" width="307" height="213"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="213" id="FPq-fy-LaW"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="c2z-IS-g7f" firstAttribute="centerX" secondItem="LYE-xe-qnE" secondAttribute="centerX" id="7Lk-Zl-O4P"/>
+                            <constraint firstItem="eDi-AE-sPY" firstAttribute="centerX" secondItem="LYE-xe-qnE" secondAttribute="centerX" id="8Z8-Kj-JOy"/>
+                            <constraint firstItem="8om-dS-Y4w" firstAttribute="trailing" secondItem="c2z-IS-g7f" secondAttribute="trailing" id="AgT-uN-Dnl"/>
+                            <constraint firstItem="eDi-AE-sPY" firstAttribute="top" secondItem="LYE-xe-qnE" secondAttribute="topMargin" constant="5" id="Buz-t9-NaM"/>
+                            <constraint firstItem="c2z-IS-g7f" firstAttribute="top" secondItem="eDi-AE-sPY" secondAttribute="bottom" constant="8" symbolic="YES" id="YI9-OT-JxW"/>
+                            <constraint firstItem="c2z-IS-g7f" firstAttribute="leading" secondItem="LYE-xe-qnE" secondAttribute="leadingMargin" constant="-9" id="ZVf-Y2-yb9"/>
+                            <constraint firstItem="8om-dS-Y4w" firstAttribute="leading" secondItem="c2z-IS-g7f" secondAttribute="leading" id="dMB-SV-J3Z"/>
+                            <constraint firstItem="eDi-AE-sPY" firstAttribute="leading" secondItem="LYE-xe-qnE" secondAttribute="leadingMargin" constant="-10" id="kfe-11-hrH"/>
+                            <constraint firstItem="8om-dS-Y4w" firstAttribute="top" secondItem="c2z-IS-g7f" secondAttribute="bottom" constant="8" symbolic="YES" id="r8a-Bm-UHn"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>

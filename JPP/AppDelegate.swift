@@ -21,9 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         var nvc: UINavigationController!
         
-        let leftViewController = storyboard.instantiateViewControllerWithIdentifier("sideMenu") as! ViewController
+        let leftViewController = storyboard.instantiateViewControllerWithIdentifier("sideMenu") as!SideMenuController
         
-        let mainViewController = storyboard.instantiateViewControllerWithIdentifier("mainStory") as! ViewController
+        let mainViewController = storyboard.instantiateViewControllerWithIdentifier("mainStory") as! HomeController
         
         nvc = UINavigationController(rootViewController: mainViewController)
         
