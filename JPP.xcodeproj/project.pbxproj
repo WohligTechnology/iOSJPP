@@ -94,7 +94,7 @@
 		36F2CEB21C57720600D0D2D6 /* WallpaperInsideController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WallpaperInsideController.swift; sourceTree = "<group>"; };
 		36F2CEB41C57721800D0D2D6 /* PointTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointTableController.swift; sourceTree = "<group>"; };
 		36F2CEB61C57722B00D0D2D6 /* AboutController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutController.swift; sourceTree = "<group>"; };
-		36F9C15C1C55EDBF003D02AB /* JPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		36F9C15C1C55EDBF003D02AB /* Jaipur Pink Panther.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Jaipur Pink Panther.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		36F9C15F1C55EDBF003D02AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		36F9C1641C55EDBF003D02AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		36F9C1661C55EDBF003D02AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -199,7 +199,7 @@
 		36F9C15D1C55EDBF003D02AB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				36F9C15C1C55EDBF003D02AB /* JPP.app */,
+				36F9C15C1C55EDBF003D02AB /* Jaipur Pink Panther.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -371,7 +371,7 @@
 			);
 			name = JPP;
 			productName = JPP;
-			productReference = 36F9C15C1C55EDBF003D02AB /* JPP.app */;
+			productReference = 36F9C15C1C55EDBF003D02AB /* Jaipur Pink Panther.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -596,7 +596,7 @@
 				INFOPLIST_FILE = JPP/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jpp.JPP;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Jaipur Pink Panther";
 			};
 			name = Debug;
 		};
@@ -607,7 +607,7 @@
 				INFOPLIST_FILE = JPP/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jpp.JPP;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Jaipur Pink Panther";
 			};
 			name = Release;
 		};
