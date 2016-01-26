@@ -13,7 +13,8 @@ extension UIViewController {
     func setNavigationBarItem() {
         
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
-        self.navigationController?.navigationBar.titleTextAttributes = [ NSForegroundColorAttributeName : UIColor.whiteColor() ]
+        self.navigationController?.navigationBar.titleTextAttributes = [ NSForegroundColorAttributeName : UIColor(red: 1, green: 1, blue: 1, alpha: 0) ]
+
         self.navigationController?.navigationBar.translucent = false
         self.addLeftBarButtonWithImage(UIImage(named: "ic_menu_black_24dp")!)
         self.navigationController?.toolbar.barTintColor = BlueColor
@@ -41,7 +42,8 @@ extension UIViewController {
     func setNavigationBarItemText(text:String) {
         
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
-        self.navigationController?.navigationBar.titleTextAttributes = [ NSForegroundColorAttributeName : UIColor.whiteColor() ]
+        let font = UIFont(name: "Oswald-Light", size: 22)
+        self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName : font!,NSForegroundColorAttributeName : UIColor(red: 1, green: 1, blue: 1, alpha: 1) ]
         self.navigationController?.navigationBar.translucent = false
         self.addLeftBarButtonWithImage(UIImage(named: "ic_menu_black_24dp")!)
         self.navigationController?.toolbar.barTintColor = BlueColor
