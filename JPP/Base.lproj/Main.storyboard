@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Segues with Peek and Pop" minToolsVersion="7.1"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="Oswald-Light.ttf">
@@ -163,7 +164,7 @@
                                 <rect key="frame" x="137" y="174" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <segue destination="rBo-i2-X6q" kind="show" identifier="galleryInside" id="WVc-si-hbd"/>
+                                    <segue destination="rBo-i2-X6q" kind="showDetail" identifier="galleryDetail" action="showViewController:sender:" id="WVc-si-hbd"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WIM-NZ-aHr">
@@ -320,7 +321,7 @@
                                 <rect key="frame" x="137" y="318" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <segue destination="633-qu-Ovh" kind="show" id="7lY-ic-6sx"/>
+                                    <segue destination="633-qu-Ovh" kind="showDetail" identifier="mediaDetail" action="showViewController:sender:" id="7lY-ic-6sx"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="230" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PIQ-Uy-S46">
@@ -564,7 +565,7 @@
         <!--GALLERY INSIDE-->
         <scene sceneID="EQi-dl-Wvh">
             <objects>
-                <viewController title="GALLERY INSIDE" id="rBo-i2-X6q" sceneMemberID="viewController">
+                <viewController title="GALLERY INSIDE" id="rBo-i2-X6q" customClass="GalleryInsideController" customModule="Jaipur_Pink_Panther" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="s8g-M2-AKj"/>
                         <viewControllerLayoutGuide type="bottom" id="39G-Z5-2bs"/>
@@ -572,7 +573,55 @@
                     <view key="view" contentMode="scaleToFill" id="znL-t6-dFq">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView autoresizesSubviews="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="JWg-kU-jnG">
+                                <rect key="frame" x="0.0" y="0.0" width="312" height="568"/>
+                                <color key="backgroundColor" red="0.76862746477127075" green="0.94117647409439087" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="YfF-Sa-HzM">
+                                    <size key="itemSize" width="143" height="241"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="thumbnail" id="K44-nr-egb">
+                                        <rect key="frame" x="0.0" y="0.0" width="143" height="241"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="143" height="241"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <size key="customSize" width="143" height="241"/>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="rBo-i2-X6q" id="Q1D-hA-Kyp"/>
+                                    <outlet property="delegate" destination="rBo-i2-X6q" id="YzR-aU-V0x"/>
+                                </connections>
+                            </collectionView>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lYh-GI-dFy">
+                                <rect key="frame" x="137" y="429" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fa9-8U-xqQ">
+                                <rect key="frame" x="128" y="354" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="CrH-OF-I8r" kind="presentation" identifier="galleryImageDetail" modalTransitionStyle="partialCurl" id="WTz-Cl-1DE">
+                                        <segue key="commit" inheritsFrom="parent" id="s90-Mn-bnJ"/>
+                                        <segue key="preview" inheritsFrom="commit" id="pgC-PT-AT9"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="0.76862746479999999" green="0.94117647410000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="JWg-kU-jnG" secondAttribute="trailing" constant="8" id="GBb-B4-xse"/>
+                            <constraint firstItem="JWg-kU-jnG" firstAttribute="leading" secondItem="znL-t6-dFq" secondAttribute="leading" id="Opx-wS-xBm"/>
+                            <constraint firstItem="JWg-kU-jnG" firstAttribute="bottom" secondItem="39G-Z5-2bs" secondAttribute="top" id="d1y-J8-SMv"/>
+                            <constraint firstItem="JWg-kU-jnG" firstAttribute="top" secondItem="znL-t6-dFq" secondAttribute="top" id="yl4-c6-uD8"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
@@ -652,7 +701,7 @@
         <!--GALLERY INSIDE 2-->
         <scene sceneID="WHa-No-R6C">
             <objects>
-                <viewController title="GALLERY INSIDE 2" id="CrH-OF-I8r" sceneMemberID="viewController">
+                <viewController title="GALLERY INSIDE 2" id="CrH-OF-I8r" customClass="GalleryInside2Controller" customModule="Jaipur_Pink_Panther" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Jbc-sZ-MlW"/>
                         <viewControllerLayoutGuide type="bottom" id="4t3-vr-tQo"/>
@@ -660,7 +709,19 @@
                     <view key="view" contentMode="scaleToFill" id="7gU-KZ-RP4">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="awf-MB-9J8" customClass="singleThumbnailImage" customModule="Jaipur_Pink_Panther" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="0.76862746479999999" green="0.94117647410000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="awf-MB-9J8" firstAttribute="top" secondItem="7gU-KZ-RP4" secondAttribute="top" id="6CB-P8-tx4"/>
+                            <constraint firstItem="awf-MB-9J8" firstAttribute="leading" secondItem="7gU-KZ-RP4" secondAttribute="leading" id="SkP-Pv-Tyw"/>
+                            <constraint firstItem="awf-MB-9J8" firstAttribute="bottom" secondItem="4t3-vr-tQo" secondAttribute="top" id="kCb-Ek-ASG"/>
+                            <constraint firstAttribute="trailing" secondItem="awf-MB-9J8" secondAttribute="trailing" id="mbg-40-J00"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
@@ -674,4 +735,7 @@
         <image name="merchandise" width="600" height="466"/>
         <image name="merchandise-1" width="1203" height="687"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="WTz-Cl-1DE"/>
+    </inferredMetricsTieBreakers>
 </document>

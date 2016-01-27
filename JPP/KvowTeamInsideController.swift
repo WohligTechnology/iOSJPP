@@ -12,7 +12,7 @@ class KvowTeamInsideController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setNavigationBarItemText("GANGADHAR MALLESH")
+//        self.setNavigationBarItemText("GANGADHAR MALLESH")
         
         
         

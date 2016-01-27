@@ -12,7 +12,7 @@ class GalleryInside2Controller: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setNavigationBarItemText("GALLERY INSIDE 2")
+//        self.setNavigationBarItemText("GALLERY INSIDE 2")
         // Do any additional setup after loading the view.
     }
 

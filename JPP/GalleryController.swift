@@ -65,7 +65,7 @@ class GalleryController: UIViewController,UITableViewDataSource,UITableViewDeleg
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
+         performSegueWithIdentifier("galleryDetail", sender: nil)
     }
 
     /*

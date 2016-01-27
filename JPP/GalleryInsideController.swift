@@ -8,11 +8,11 @@
 
 import UIKit
 
-class GalleryInsideController: UIViewController {
+class GalleryInsideController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setNavigationBarItemText("GALLERY INSIDE")
+//        self.setNavigationBarItemText("GALLERY INSIDE")
         // Do any additional setup after loading the view.
     }
 
@@ -20,6 +20,35 @@ class GalleryInsideController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    
+    
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 30;
+    }
+    
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("thumbnail", forIndexPath: indexPath) as UICollectionViewCell
+        cell.addSubview(thumbnailImage(frame: CGRectMake(8,8,cell.frame.width - 8,cell.frame.height - 8)));
+        
+        
+        return cell
+    }
+    
+    func collectionView(collectionView : UICollectionView,layout collectionViewLayout:UICollectionViewLayout,sizeForItemAtIndexPath indexPath:NSIndexPath) -> CGSize
+    {
+        
+        return CGSizeMake(self.view.frame.width/2 - 4 ,self.view.frame.width/2)
+    }
+    
+    func collectionView(collectionView: UICollectionView,
+        didSelectItemAtIndexPath indexPath: NSIndexPath) {
+            performSegueWithIdentifier("galleryImageDetail", sender: nil)
+    }
+    
+    
+
     
 
     /*
