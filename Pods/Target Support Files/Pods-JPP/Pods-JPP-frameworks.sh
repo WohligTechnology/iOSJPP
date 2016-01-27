@@ -84,14 +84,14 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "Pods-JPP/JSONJoy.framework"
   install_framework "Pods-JPP/RAMAnimatedTabBarController.framework"
   install_framework "Pods-JPP/SlideMenuControllerSwift.framework"
   install_framework "Pods-JPP/SwiftHTTP.framework"
+  install_framework "Pods-JPP/SwiftyJSON.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "Pods-JPP/JSONJoy.framework"
   install_framework "Pods-JPP/RAMAnimatedTabBarController.framework"
   install_framework "Pods-JPP/SlideMenuControllerSwift.framework"
   install_framework "Pods-JPP/SwiftHTTP.framework"
+  install_framework "Pods-JPP/SwiftyJSON.framework"
 fi

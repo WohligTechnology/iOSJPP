@@ -1,19 +1,28 @@
 PODS:
-  - JSONJoy-Swift (1.0.0)
   - RAMAnimatedTabBarController (1.0.7)
   - SlideMenuControllerSwift (2.0.5)
   - SwiftHTTP (1.0.3)
+  - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
-  - JSONJoy-Swift (~> 1.0.0)
   - RAMAnimatedTabBarController (~> 1.0.6)
   - SlideMenuControllerSwift
   - SwiftHTTP (~> 1.0.3)
+  - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`)
+
+EXTERNAL SOURCES:
+  SwiftyJSON:
+    :git: https://github.com/SwiftyJSON/SwiftyJSON.git
+
+CHECKOUT OPTIONS:
+  SwiftyJSON:
+    :commit: 929539eb6a3304eaa9153ca44041a78b85bf2ee5
+    :git: https://github.com/SwiftyJSON/SwiftyJSON.git
 
 SPEC CHECKSUMS:
-  JSONJoy-Swift: 3e8129c282470614da69759208e9c923732f6cb4
   RAMAnimatedTabBarController: f779af4c652e3b609e7f068b12ac8dab46909aa7
   SlideMenuControllerSwift: 9dcae36265e14c4f42e729f212463beb60d2cf96
   SwiftHTTP: fface018ab365bfb49fa3dca9fdfe77cafccde8b
+  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
 COCOAPODS: 0.39.0

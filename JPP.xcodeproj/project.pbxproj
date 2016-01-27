@@ -69,6 +69,7 @@
 		36F9C1B91C5653E5003D02AB /* matches.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F9C1B81C5653E5003D02AB /* matches.swift */; };
 		36F9C1BB1C5653EF003D02AB /* matches.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36F9C1BA1C5653EF003D02AB /* matches.xib */; };
 		36FF12771C59319900E0F990 /* RestApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FF12761C59319900E0F990 /* RestApi.swift */; };
+		3CD47F20EEDEDD9528BA0932 /* Pods_JPP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD4C274A56DABBBF9AF41245 /* Pods_JPP.framework */; };
 		78238FE21C57A77E0067E7D5 /* about.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78238FE11C57A77E0067E7D5 /* about.swift */; };
 		78238FE41C57A7890067E7D5 /* about.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78238FE31C57A7890067E7D5 /* about.xib */; };
 		78238FE71C57AC170067E7D5 /* trapezium.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78238FE61C57AC170067E7D5 /* trapezium.xib */; };
@@ -160,6 +161,7 @@
 		C28B79F21C58DF47001C4474 /* newsDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = newsDetail.swift; sourceTree = "<group>"; };
 		C2FF852A1C58D05000F2CFED /* singleThumbnailImage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = singleThumbnailImage.xib; sourceTree = "<group>"; };
 		C2FF852C1C58D17A00F2CFED /* singleThumbnailImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = singleThumbnailImage.swift; sourceTree = "<group>"; };
+		FD4C274A56DABBBF9AF41245 /* Pods_JPP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JPP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +170,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				96117823854BBFB45F51F300 /* Pods.framework in Frameworks */,
+				3CD47F20EEDEDD9528BA0932 /* Pods_JPP.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,6 +410,7 @@
 			isa = PBXGroup;
 			children = (
 				AADCA4CCFDB108A580EB8D69 /* Pods.framework */,
+				FD4C274A56DABBBF9AF41245 /* Pods_JPP.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -594,7 +598,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JPP/Pods-JPP-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DE2348DFBF3CE8843148FD14 /* Check Pods Manifest.lock */ = {

@@ -7,8 +7,9 @@ pod 'SlideMenuControllerSwift'
 pod 'RAMAnimatedTabBarController', '~> 1.0.6'
 
 pod 'SwiftHTTP', '~> 1.0.3'
-pod 'JSONJoy-Swift', '~> 1.0.0'
+pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
+
 target 'JPP' do
 
-end
 
+end
