@@ -159,6 +159,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MJQ-Og-fx5">
+                                <rect key="frame" x="137" y="174" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="rBo-i2-X6q" kind="show" identifier="galleryInside" id="WVc-si-hbd"/>
+                                </connections>
+                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WIM-NZ-aHr">
                                 <rect key="frame" x="-4" y="0.0" width="328" height="50"/>
                                 <subviews>
@@ -169,6 +176,9 @@
                                         <state key="normal" title="PHOTOS">
                                             <color key="titleColor" red="0.039215686270000001" green="0.48627450979999998" blue="0.63137254899999995" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="photoButtonTap:" destination="fNh-XM-Cbv" eventType="touchUpInside" id="ofw-up-eZq"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C2B-U6-a7e">
                                         <rect key="frame" x="164" y="0.0" width="164" height="50"/>
@@ -177,6 +187,9 @@
                                         <state key="normal" title="VIDEOS">
                                             <color key="titleColor" red="0.039215686274509803" green="0.48627450980392156" blue="0.63137254901960782" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="videoButtonTap:" destination="fNh-XM-Cbv" eventType="touchUpInside" id="Gmv-9Q-hTe"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -222,6 +235,10 @@
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="photosButton" destination="xfJ-8g-eJl" id="wdF-B7-hra"/>
+                        <outlet property="videosButton" destination="C2B-U6-a7e" id="B7V-2t-ECp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7w5-aS-FLs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -265,6 +282,13 @@
                                     <outlet property="delegate" destination="68s-mp-GG3" id="Sgx-Gb-epQ"/>
                                 </connections>
                             </collectionView>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tcp-52-mPf">
+                                <rect key="frame" x="137" y="264" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="3Bo-nL-RZg" kind="showDetail" identifier="playerDetail" action="showViewController:sender:" id="h9U-vf-KS7"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.76862746477127075" green="0.94117647409439087" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -292,6 +316,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U0s-RA-EFJ">
+                                <rect key="frame" x="137" y="318" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="633-qu-Ovh" kind="show" id="7lY-ic-6sx"/>
+                                </connections>
+                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="230" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PIQ-Uy-S46">
                                 <rect key="frame" x="8" y="8" width="303" height="552"/>
                                 <color key="backgroundColor" red="0.76862746479999999" green="0.94117647410000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -310,7 +341,7 @@
                                                     <rect key="frame" x="15" y="0.0" width="273" height="229.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -547,7 +578,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kFQ-fy-nBG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="760" y="1034"/>
+            <point key="canvasLocation" x="760" y="1126"/>
         </scene>
         <!--NEWS & MEDIA INSIDE-->
         <scene sceneID="xxr-KN-zzV">
@@ -566,7 +597,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Btb-b8-NvV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1105" y="1034"/>
+            <point key="canvasLocation" x="1105" y="1126"/>
         </scene>
         <!--KVOW YOUR TEAM INSIDE-->
         <scene sceneID="jHu-HA-akC">
@@ -580,17 +611,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gangadhari" translatesAutoresizingMaskIntoConstraints="NO" id="gQ7-5N-1Xb">
-                                <rect key="frame" x="0.0" y="28" width="320" height="211"/>
-                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Liw-XK-C8i" customClass="playerInside" customModule="Jaipur_Pink_Panther" customModuleProvider="target">
+                                <rect key="frame" x="8" y="8" width="304" height="552"/>
+                                <color key="backgroundColor" red="0.76862746479999999" green="0.94117647410000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.76862746479999999" green="0.94117647410000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Liw-XK-C8i" firstAttribute="top" secondItem="jJQ-ny-2bq" secondAttribute="top" constant="8" id="Wdm-cr-BDr"/>
+                            <constraint firstItem="Liw-XK-C8i" firstAttribute="bottom" secondItem="IUM-6o-lId" secondAttribute="top" constant="-8" id="XYO-EN-9HZ"/>
+                            <constraint firstItem="Liw-XK-C8i" firstAttribute="leading" secondItem="jJQ-ny-2bq" secondAttribute="leading" constant="8" id="auw-2M-bh0"/>
+                            <constraint firstAttribute="trailing" secondItem="Liw-XK-C8i" secondAttribute="trailing" constant="8" id="tVx-nf-dz7"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HIv-Zd-NtY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1450" y="1034"/>
+            <point key="canvasLocation" x="1450" y="1126"/>
         </scene>
         <!--WALLPAPERS INSIDE-->
         <scene sceneID="kll-7x-guT">
@@ -609,7 +647,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O2H-x4-poh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2151" y="1034"/>
+            <point key="canvasLocation" x="2151" y="1126"/>
         </scene>
         <!--GALLERY INSIDE 2-->
         <scene sceneID="WHa-No-R6C">
@@ -628,11 +666,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W9V-OC-eun" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="760" y="1673"/>
+            <point key="canvasLocation" x="760" y="1832"/>
         </scene>
     </scenes>
     <resources>
-        <image name="gangadhari" width="297" height="445"/>
         <image name="ic_action_panther" width="96" height="96"/>
         <image name="merchandise" width="600" height="466"/>
         <image name="merchandise-1" width="1203" height="687"/>

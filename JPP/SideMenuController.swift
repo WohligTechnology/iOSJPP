@@ -77,7 +77,7 @@ class SideMenuController: UIViewController, UITableViewDataSource, UITableViewDe
         return 1
     }
     
-    var data = ["HOME", "SCHEDULE", "GALLERY","KNOW YOUR TEAM","NEWS & MEDIA","MERCHANDISE","WALLPAPER","POINTS TABLE","ABOUT US"]
+    var data = ["HOME", "SCHEDULE", "GALLERY","KNOW YOUR TEAM","NEWS & MEDIA","MERCHANDISE","POINTS TABLE","ABOUT US"]
     
     // MARK: - UITableViewDataSource
     
@@ -114,13 +114,13 @@ class SideMenuController: UIViewController, UITableViewDataSource, UITableViewDe
         case 5:
             self.slideMenuController()?.changeMainViewController(self.merchandiseController, close: true)
             
-        case 6:
-            self.slideMenuController()?.changeMainViewController(self.wallpaperController, close: true)
+//        case 6:
+//            self.slideMenuController()?.changeMainViewController(self.wallpaperController, close: true)
             
-        case 7:
+        case 6:
             self.slideMenuController()?.changeMainViewController(self.pointController, close: true)
             
-        case 8:
+        case 7:
             self.slideMenuController()?.changeMainViewController(self.aboutsController, close: true)
             
             

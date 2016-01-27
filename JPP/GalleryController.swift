@@ -9,10 +9,33 @@
 import UIKit
 
 class GalleryController: UIViewController,UITableViewDataSource,UITableViewDelegate {
-
+    
+    var activeGal = 0;
+    
+    @IBOutlet weak var photosButton: UIButton!
+    @IBOutlet weak var videosButton: UIButton!
+    
+    var pinkBar:UIView!
+    
+    @IBAction func videoButtonTap(sender: AnyObject) {
+        
+        pinkBar.frame.origin.x = self.view.frame.width/2;
+        
+    }
+    @IBAction func photoButtonTap(sender: AnyObject) {
+        
+        pinkBar.frame.origin.x = 0;
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setNavigationBarItemText("GALLERY")
+        
+        pinkBar = UIView(frame: CGRectMake(0,photosButton.frame.height,self.view.frame.width/2,2));
+        pinkBar.backgroundColor = PinkColor;
+        
+        
+        self.view.addSubview(pinkBar)
+        
         // Do any additional setup after loading the view.
     }
 
