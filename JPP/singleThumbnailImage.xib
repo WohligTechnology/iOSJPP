@@ -14,22 +14,23 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="thumbnailImage" translatesAutoresizingMaskIntoConstraints="NO" id="MJ4-Ys-enW">
                     <rect key="frame" x="0.0" y="0.0" width="424" height="672"/>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shareIcon" translatesAutoresizingMaskIntoConstraints="NO" id="onE-hh-ehd">
-                    <rect key="frame" x="380" y="628" width="36" height="36"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ic8-cO-pV8">
+                    <rect key="frame" x="384" y="632" width="32" height="32"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="36" id="LJ2-il-HWz"/>
-                        <constraint firstAttribute="height" constant="36" id="Owq-SE-ROd"/>
+                        <constraint firstAttribute="height" constant="32" id="RSr-N4-7mf"/>
+                        <constraint firstAttribute="width" constant="32" id="js6-0t-Mac"/>
                     </constraints>
-                </imageView>
+                    <state key="normal" image="shareIcon"/>
+                </button>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="MJ4-Ys-enW" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="MUa-DL-zNu"/>
                 <constraint firstItem="MJ4-Ys-enW" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="NQY-lX-XDw"/>
-                <constraint firstAttribute="bottom" secondItem="onE-hh-ehd" secondAttribute="bottom" constant="8" id="Wp5-0f-vZT"/>
-                <constraint firstAttribute="trailing" secondItem="onE-hh-ehd" secondAttribute="trailing" constant="8" id="X0S-8S-bH8"/>
+                <constraint firstAttribute="bottom" secondItem="Ic8-cO-pV8" secondAttribute="bottom" constant="8" id="cRf-eL-FjQ"/>
                 <constraint firstAttribute="trailing" secondItem="MJ4-Ys-enW" secondAttribute="trailing" id="ghd-xY-q2z"/>
                 <constraint firstAttribute="bottom" secondItem="MJ4-Ys-enW" secondAttribute="bottom" id="jJW-At-eFZ"/>
+                <constraint firstAttribute="trailing" secondItem="Ic8-cO-pV8" secondAttribute="trailing" constant="8" id="nY1-1f-umg"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="313" y="89"/>
