@@ -1,4 +1,10 @@
 # RAMAnimatedTabBarController
+[![CocoaPods](https://img.shields.io/cocoapods/p/RAMAnimatedTabBarController.svg)]()
+[![Github Releases](https://img.shields.io/github/downloads/ramotion/animated-tab-bar/total.svg)]()
+[![Swift 2.2](https://img.shields.io/badge/Swift-2.2-orange.svg?style=flat)](https://developer.apple.com/swift/)
+[![GitHub license](https://img.shields.io/github/license/mashape/apistatus.svg)]()
+[![Twitter](https://img.shields.io/badge/Twitter-@Ramotion-blue.svg?style=flat)](http://twitter.com/Ramotion)
+
 
 RAMAnimatedTabBarController is a Swift module for adding animation to tabbar items. It has pre-set of animations which we prepare for you, and ability to use any custom animation you want. With this module you can make your tabbar alive like our [shot on dribbble](https://dribbble.com/shots/1766396-Animated-Tab-Bar-Icons?list=searches&tag=ramotion&offset=...):
 
@@ -19,6 +25,11 @@ Screencast from our Demo
 ## Installation
 
 Just add the RAMAnimatedTabBarController folder to your project.
+
+or use [CocoaPods](https://cocoapods.org) with Podfile:
+``` ruby
+pod 'RAMAnimatedTabBarController', '~> 1.0.6'
+```
 
 ## Usage
 
@@ -106,8 +117,11 @@ class RAMBounceAnimation : RAMItemAnimation {
     }
 }
 ```
-## [About Us](http://ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=animated-tab-bar)
 
-[Ramotion](http://ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=animated-tab-bar) is an iPhone app design and development company. We are ready for new interesting iOS app development projects.
+## Developer Information
+
+Designed & Developed in [Ramotion - Digital Design Agency](http://ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=animated-tab-bar)
+
 
 Follow us on [Twitter](http://twitter.com/ramotion).
+

@@ -1,0 +1,19 @@
+PODS:
+  - JSONJoy-Swift (1.0.0)
+  - RAMAnimatedTabBarController (1.0.7)
+  - SlideMenuControllerSwift (2.0.5)
+  - SwiftHTTP (1.0.3)
+
+DEPENDENCIES:
+  - JSONJoy-Swift (~> 1.0.0)
+  - RAMAnimatedTabBarController (~> 1.0.6)
+  - SlideMenuControllerSwift
+  - SwiftHTTP (~> 1.0.3)
+
+SPEC CHECKSUMS:
+  JSONJoy-Swift: 3e8129c282470614da69759208e9c923732f6cb4
+  RAMAnimatedTabBarController: f779af4c652e3b609e7f068b12ac8dab46909aa7
+  SlideMenuControllerSwift: 9dcae36265e14c4f42e729f212463beb60d2cf96
+  SwiftHTTP: fface018ab365bfb49fa3dca9fdfe77cafccde8b
+
+COCOAPODS: 0.39.0
