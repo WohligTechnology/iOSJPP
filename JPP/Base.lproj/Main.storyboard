@@ -127,21 +127,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="51X-ln-bxP">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Che-Bv-GxM">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="0.76862746479999999" green="0.94117647410000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="51X-ln-bxP" firstAttribute="leading" secondItem="Jhu-dp-c7j" secondAttribute="leading" id="8rh-km-hl6"/>
-                            <constraint firstAttribute="trailing" secondItem="51X-ln-bxP" secondAttribute="trailing" id="Q15-UP-xkI"/>
-                            <constraint firstItem="51X-ln-bxP" firstAttribute="bottom" secondItem="jSv-8r-9wK" secondAttribute="top" id="kr1-zE-fu6"/>
-                            <constraint firstItem="51X-ln-bxP" firstAttribute="top" secondItem="Jhu-dp-c7j" secondAttribute="top" id="zk5-ag-jAY"/>
+                            <constraint firstItem="Che-Bv-GxM" firstAttribute="leading" secondItem="Jhu-dp-c7j" secondAttribute="leading" id="3IN-ZV-UkI"/>
+                            <constraint firstItem="Che-Bv-GxM" firstAttribute="top" secondItem="Jhu-dp-c7j" secondAttribute="top" id="6Nr-jn-a4e"/>
+                            <constraint firstItem="Che-Bv-GxM" firstAttribute="bottom" secondItem="jSv-8r-9wK" secondAttribute="top" id="8M2-P3-v1I"/>
+                            <constraint firstAttribute="trailing" secondItem="Che-Bv-GxM" secondAttribute="trailing" id="GAd-cn-Z6v"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="scrollView" destination="51X-ln-bxP" id="4rr-Im-wlv"/>
+                        <outlet property="scrollView" destination="Che-Bv-GxM" id="Fo7-7i-bij"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gNy-I3-ucM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -783,7 +783,7 @@
         <!--Book Ticket-->
         <scene sceneID="8Yy-IR-r7H">
             <objects>
-                <viewController title="Book Ticket" id="S3R-VS-V10" customClass="BookTicketController" sceneMemberID="viewController">
+                <viewController title="Book Ticket" id="S3R-VS-V10" customClass="BookTicketController" customModule="Jaipur_Pink_Panther" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="OZr-WE-SRc"/>
                         <viewControllerLayoutGuide type="bottom" id="MO1-OA-CkS"/>

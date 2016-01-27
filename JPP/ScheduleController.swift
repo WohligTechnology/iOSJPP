@@ -7,13 +7,74 @@
 //
 
 import UIKit
+import EventKit
 
 class ScheduleController: UIViewController {
+    
+    
+    
+    func eventInit(sender: UIImage) {
+        
+        
+        let eventStore = EKEventStore()
+        
+        if(EKEventStore.authorizationStatusForEntityType(EKEntityType.Event) != EKAuthorizationStatus.Authorized)
+        {
+            eventStore.requestAccessToEntityType(.Event, completion: { granted,err -> Void in
+                print(granted);
+            })
+        }
+        // Create an Event Store instance
+        
+        
+//        // Use Event Store to create a new calendar instance
+//        // Configure its title
+//        let newCalendar = EKCalendar(forEntityType: EKEntityType.Event, eventStore: eventStore)
+//        newCalendar.title = "Some New Calendar Title"
+//        
+//        // Access list of available sources from the Event Store
+//        let sourcesInEventStore = eventStore.sources 
+//        
+//        // Filter the available sources and select the "Local" source to assign to the new calendar's
+//        // source property
+//        print("ALl is well2");
+//        print(sourcesInEventStore);
+//        newCalendar.source = sourcesInEventStore.filter {
+//            (source: EKSource) -> Bool in
+//            source.sourceType == EKSourceType.CalDAV
+//            }.first!
+//        
+//        print("ALl is well");
+//        
+//        try! eventStore.saveCalendar(newCalendar, commit: true)
+//            
+        
+    }
+    
+    
+    func createEvent(eventStore: EKEventStore, title: String, startDate: NSDate, endDate: NSDate) {
+        let event = EKEvent(eventStore: eventStore)
+        
+        event.title = title
+        event.startDate = startDate
+        event.endDate = endDate
+        event.calendar = eventStore.defaultCalendarForNewEvents
+        do {
+            try eventStore.saveEvent(event, span: .ThisEvent)
+            let savedEventId = event.eventIdentifier
+            print(savedEventId);
+        } catch {
+            print("Bad things happened")
+        }
+    }
+
 
     @IBOutlet weak var scrollView: UIScrollView!
     var verticalLayout : VerticalLayout!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         self.setNavigationBarItemText("SCHEDULE")
         
         self.verticalLayout = VerticalLayout(width: self.view.frame.width);
@@ -24,6 +85,8 @@ class ScheduleController: UIViewController {
 
         
         upcoming.trapLabel.text="UPCOMING MATCH";
+        
+        upcoming.addToCalendar.addTarget(self, action: "eventInit:", forControlEvents: UIControlEvents.TouchUpInside)
         
         
         let whiteView = UIView(frame:CGRectMake(0,8,verticalLayout.frame.width,1000));
@@ -61,11 +124,14 @@ class ScheduleController: UIViewController {
 
         resizeView(8);
         
-        myButton.addTarget(self, action: "click:", forControlEvents: UIControlEvents.TouchUpInside)
+        bookTic.bookButton.addTarget(self, action: "BookButtonTap:", forControlEvents: UIControlEvents.TouchUpInside)
+        
+        
         
     }
     
-    func click(sender: UIButton) {
+    func BookButtonTap(sender: UIButton) {
+        self.performSegueWithIdentifier("bookWeb", sender: nil)
         print("click")
     }
     

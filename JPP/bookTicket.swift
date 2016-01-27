@@ -9,6 +9,8 @@ import UIKit
 
 @IBDesignable class bookTicket: UIView {
     
+    @IBOutlet weak var bookButton: UIButton!
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         loadViewFromNib ()
