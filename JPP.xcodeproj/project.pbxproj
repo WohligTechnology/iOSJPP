@@ -68,6 +68,8 @@
 		78238FE41C57A7890067E7D5 /* about.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78238FE31C57A7890067E7D5 /* about.xib */; };
 		78238FE71C57AC170067E7D5 /* trapezium.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78238FE61C57AC170067E7D5 /* trapezium.xib */; };
 		78238FE91C57AC350067E7D5 /* trapezium.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78238FE81C57AC350067E7D5 /* trapezium.swift */; };
+		C23892D81C58C6EE00CA4DC1 /* thumbnailImage.xib in Resources */ = {isa = PBXBuildFile; fileRef = C23892D71C58C6EE00CA4DC1 /* thumbnailImage.xib */; };
+		C23892DA1C58C92700CA4DC1 /* thumbnailImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23892D91C58C92700CA4DC1 /* thumbnailImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -134,6 +136,8 @@
 		78238FE31C57A7890067E7D5 /* about.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = about.xib; sourceTree = "<group>"; };
 		78238FE61C57AC170067E7D5 /* trapezium.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = trapezium.xib; sourceTree = "<group>"; };
 		78238FE81C57AC350067E7D5 /* trapezium.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = trapezium.swift; sourceTree = "<group>"; };
+		C23892D71C58C6EE00CA4DC1 /* thumbnailImage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = thumbnailImage.xib; sourceTree = "<group>"; };
+		C23892D91C58C92700CA4DC1 /* thumbnailImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = thumbnailImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -245,6 +249,7 @@
 		36F9C1841C5616C6003D02AB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C23892D61C58C69200CA4DC1 /* thumbnailImage */,
 				360A50FF1C579A80001F7E40 /* playerInside */,
 				36F2CE971C5739E400D0D2D6 /* media */,
 				362A17591C58AA1400B11F22 /* tableTrap */,
@@ -368,6 +373,15 @@
 			name = trapezium;
 			sourceTree = "<group>";
 		};
+		C23892D61C58C69200CA4DC1 /* thumbnailImage */ = {
+			isa = PBXGroup;
+			children = (
+				C23892D71C58C6EE00CA4DC1 /* thumbnailImage.xib */,
+				C23892D91C58C92700CA4DC1 /* thumbnailImage.swift */,
+			);
+			name = thumbnailImage;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -430,6 +444,7 @@
 				36F9C19D1C5641BB003D02AB /* Oswald-Bold.ttf in Resources */,
 				36F9C19E1C5641BB003D02AB /* Oswald-Light.ttf in Resources */,
 				36F9C19F1C5641BB003D02AB /* Oswald-Regular.ttf in Resources */,
+				C23892D81C58C6EE00CA4DC1 /* thumbnailImage.xib in Resources */,
 				36F9C1A01C5641BB003D02AB /* voyagefant_0.ttf in Resources */,
 				36F9C1A11C5641BB003D02AB /* voyagefant3d.ttf in Resources */,
 				36F2CE941C565DD600D0D2D6 /* team.xib in Resources */,
@@ -489,6 +504,7 @@
 				36F9C1731C55F948003D02AB /* SlideMenuController.swift in Sources */,
 				36F2CEB71C57722B00D0D2D6 /* AboutController.swift in Sources */,
 				36F2CE991C5739F400D0D2D6 /* media.swift in Sources */,
+				C23892DA1C58C92700CA4DC1 /* thumbnailImage.swift in Sources */,
 				36F2CEB11C5771F200D0D2D6 /* WallpaperController.swift in Sources */,
 				36F2CEAD1C5771AE00D0D2D6 /* KvowTeamInsideController.swift in Sources */,
 				78238FE21C57A77E0067E7D5 /* about.swift in Sources */,
