@@ -10,11 +10,31 @@ import UIKit
 
 class NewsInsideController: UIViewController {
 
+    @IBOutlet weak var scrollView: UIScrollView!
+    
+    var verticalLayout : VerticalLayout!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setNavigationBarItemText("NEWS INSIDE")
-        // Do any additional setup after loading the view.
+        
+        self.verticalLayout = VerticalLayout(width: self.view.frame.width);
+        self.scrollView.insertSubview(self.verticalLayout, atIndex: 0)
+        
+        
+        let insideView = newsDetail(frame: CGRectMake(8,8,self.view.frame.width-16,700));
+        self.verticalLayout.addSubview(insideView)
+        
+        // Do any additional setup after
+        resizeView(8);
+        
     }
+    
+    func resizeView(offset:CGFloat)
+    {
+        self.verticalLayout.layoutSubviews()
+        self.scrollView.contentSize = CGSize(width: self.verticalLayout.frame.width, height: self.verticalLayout.frame.height + offset)
+    }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

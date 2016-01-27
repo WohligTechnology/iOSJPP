@@ -37,7 +37,8 @@ class NewsController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
+        performSegueWithIdentifier("mediaDetail", sender: nil)
+
     }
 
     

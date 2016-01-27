@@ -12,6 +12,10 @@ class GalleryInsideController: UIViewController,UICollectionViewDataSource,UICol
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationItem.leftBarButtonItem?.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "Oswald-Light", size: 20)!], forState: UIControlState.Normal)
+        
+        
 //        self.setNavigationBarItemText("GALLERY INSIDE")
         // Do any additional setup after loading the view.
     }

@@ -87,6 +87,7 @@ class SideMenuController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         tableView.separatorStyle = UITableViewCellSeparatorStyle.SingleLine
+        tableView.rowHeight = 56.0
         tableView.tableFooterView = UIView()
         let cell = tableView.dequeueReusableCellWithIdentifier("menuCell", forIndexPath: indexPath)
         cell.textLabel?.text = data[indexPath.row]

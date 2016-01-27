@@ -604,7 +604,7 @@
                                 <rect key="frame" x="137" y="429" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fa9-8U-xqQ">
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fa9-8U-xqQ">
                                 <rect key="frame" x="128" y="354" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
@@ -632,7 +632,7 @@
         <!--NEWS & MEDIA INSIDE-->
         <scene sceneID="xxr-KN-zzV">
             <objects>
-                <viewController title="NEWS &amp; MEDIA INSIDE" id="633-qu-Ovh" sceneMemberID="viewController">
+                <viewController title="NEWS &amp; MEDIA INSIDE" id="633-qu-Ovh" customClass="NewsInsideController" customModule="Jaipur_Pink_Panther" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="607-Vq-DVm"/>
                         <viewControllerLayoutGuide type="bottom" id="MmS-Ks-ViS"/>
@@ -640,9 +640,23 @@
                     <view key="view" contentMode="scaleToFill" id="FHg-cJ-z0d">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XBU-kZ-epj">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" red="0.76862746479999999" green="0.94117647410000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="XBU-kZ-epj" firstAttribute="top" secondItem="FHg-cJ-z0d" secondAttribute="top" id="1x8-LF-5wC"/>
+                            <constraint firstItem="XBU-kZ-epj" firstAttribute="leading" secondItem="FHg-cJ-z0d" secondAttribute="leading" id="Ixe-zu-jst"/>
+                            <constraint firstItem="XBU-kZ-epj" firstAttribute="bottom" secondItem="MmS-Ks-ViS" secondAttribute="top" id="Kbk-c7-G0p"/>
+                            <constraint firstAttribute="trailing" secondItem="XBU-kZ-epj" secondAttribute="trailing" id="doH-Zn-AVT"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="scrollView" destination="XBU-kZ-epj" id="ztr-mo-dLp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Btb-b8-NvV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

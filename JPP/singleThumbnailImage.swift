@@ -10,6 +10,7 @@ import UIKit
 
 @IBDesignable class singleThumbnailImage: UIView {
     
+    @IBOutlet weak var openImage: UIImageView!
     override init(frame: CGRect) {
         super.init(frame: frame)
         loadViewFromNib ()
@@ -27,15 +28,22 @@ import UIKit
         sortnewview.frame = bounds
         sortnewview.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
         self.addSubview(sortnewview);
+        
+        
+        
     }
     
-//    func shareImage() {
-//        var img: UIImage = UIImage(named: "")!
-//        var shareItems:Array = [img]
-//        let activityViewController:UIActivityViewController = UIActivityViewController(activityItems: shareItems, applicationActivities: nil)
-//        activityViewController.excludedActivityTypes = [UIActivityTypePrint, UIActivityTypePostToWeibo, UIActivityTypeCopyToPasteboard, UIActivityTypeAddToReadingList, UIActivityTypePostToVimeo]
-//        self.presentViewController(activityViewController, animated: true, completion: nil)
-//    }
+    
+    func shareImage() {
+        //var messageStr:String  = "Check out my awesome iPicSafe photo!"
+        var img: UIImage = currentPhoto!
+        //var shareItems:Array = [img, messageStr]
+        var shareItems:Array = [img]
+        let activityViewController:UIActivityViewController = UIActivityViewController(activityItems: shareItems, applicationActivities: nil)
+        activityViewController.excludedActivityTypes = [UIActivityTypePrint, UIActivityTypePostToWeibo, UIActivityTypeCopyToPasteboard, UIActivityTypeAddToReadingList, UIActivityTypePostToVimeo]
+        window!.rootViewController!.presentViewController(activityViewController, animated: true, completion: nil)
+    }
+    
     
     
 }
