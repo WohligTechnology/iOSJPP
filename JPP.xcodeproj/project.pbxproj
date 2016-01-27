@@ -10,6 +10,8 @@
 		360A50FE1C577A05001F7E40 /* SideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360A50FD1C577A05001F7E40 /* SideMenuController.swift */; };
 		360A51011C579AAD001F7E40 /* playerInside.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360A51001C579AAD001F7E40 /* playerInside.swift */; };
 		360A51031C579ACB001F7E40 /* playerInside.xib in Resources */ = {isa = PBXBuildFile; fileRef = 360A51021C579ACB001F7E40 /* playerInside.xib */; };
+		362A175B1C58AA3C00B11F22 /* team2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 362A175A1C58AA3C00B11F22 /* team2.xib */; };
+		362A175D1C58AA6500B11F22 /* team2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362A175C1C58AA6500B11F22 /* team2.swift */; };
 		36F2CE8A1C56561300D0D2D6 /* player.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36F2CE891C56561300D0D2D6 /* player.xib */; };
 		36F2CE8C1C56561F00D0D2D6 /* player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F2CE8B1C56561F00D0D2D6 /* player.swift */; };
 		36F2CE8F1C56584400D0D2D6 /* galleryAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F2CE8E1C56584400D0D2D6 /* galleryAlbum.swift */; };
@@ -72,6 +74,8 @@
 		360A50FD1C577A05001F7E40 /* SideMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuController.swift; sourceTree = "<group>"; };
 		360A51001C579AAD001F7E40 /* playerInside.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = playerInside.swift; sourceTree = "<group>"; };
 		360A51021C579ACB001F7E40 /* playerInside.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = playerInside.xib; sourceTree = "<group>"; };
+		362A175A1C58AA3C00B11F22 /* team2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = team2.xib; sourceTree = "<group>"; };
+		362A175C1C58AA6500B11F22 /* team2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = team2.swift; sourceTree = "<group>"; };
 		36F2CE891C56561300D0D2D6 /* player.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = player.xib; sourceTree = "<group>"; };
 		36F2CE8B1C56561F00D0D2D6 /* player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = player.swift; sourceTree = "<group>"; };
 		36F2CE8E1C56584400D0D2D6 /* galleryAlbum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = galleryAlbum.swift; sourceTree = "<group>"; };
@@ -150,6 +154,15 @@
 				360A51021C579ACB001F7E40 /* playerInside.xib */,
 			);
 			name = playerInside;
+			sourceTree = "<group>";
+		};
+		362A17591C58AA1400B11F22 /* tableTrap */ = {
+			isa = PBXGroup;
+			children = (
+				362A175A1C58AA3C00B11F22 /* team2.xib */,
+				362A175C1C58AA6500B11F22 /* team2.swift */,
+			);
+			name = tableTrap;
 			sourceTree = "<group>";
 		};
 		36F2CE881C56560700D0D2D6 /* player */ = {
@@ -234,6 +247,7 @@
 			children = (
 				360A50FF1C579A80001F7E40 /* playerInside */,
 				36F2CE971C5739E400D0D2D6 /* media */,
+				362A17591C58AA1400B11F22 /* tableTrap */,
 				36F2CE921C565DCC00D0D2D6 /* team */,
 				36F2CE8D1C56582C00D0D2D6 /* galleryAlbum */,
 				36F2CE881C56560700D0D2D6 /* player */,
@@ -386,6 +400,7 @@
 				TargetAttributes = {
 					36F9C15B1C55EDBF003D02AB = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = YVWVDTRG4B;
 					};
 				};
 			};
@@ -429,6 +444,7 @@
 				36F9C1BB1C5653EF003D02AB /* matches.xib in Resources */,
 				36F9C1A61C5641BB003D02AB /* voyagefantgrad.ttf in Resources */,
 				36F9C1B01C5643E8003D02AB /* news.xib in Resources */,
+				362A175B1C58AA3C00B11F22 /* team2.xib in Resources */,
 				36F9C1A71C5641BB003D02AB /* voyagefanthalf.ttf in Resources */,
 				36F9C1A81C5641BB003D02AB /* voyagefanthplat.ttf in Resources */,
 				36F9C1A91C5641BB003D02AB /* voyagefantlaser.ttf in Resources */,
@@ -468,6 +484,7 @@
 				36F9C18C1C561759003D02AB /* schedule.swift in Sources */,
 				360A50FE1C577A05001F7E40 /* SideMenuController.swift in Sources */,
 				36F2CEB31C57720600D0D2D6 /* WallpaperInsideController.swift in Sources */,
+				362A175D1C58AA6500B11F22 /* team2.swift in Sources */,
 				36F9C1831C5616B1003D02AB /* Layout.swift in Sources */,
 				36F9C1731C55F948003D02AB /* SlideMenuController.swift in Sources */,
 				36F2CEB71C57722B00D0D2D6 /* AboutController.swift in Sources */,
@@ -593,10 +610,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = JPP/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jpp.JPP;
 				PRODUCT_NAME = "Jaipur Pink Panther";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -605,10 +625,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = JPP/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jpp.JPP;
 				PRODUCT_NAME = "Jaipur Pink Panther";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

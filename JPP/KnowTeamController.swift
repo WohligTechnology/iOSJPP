@@ -12,7 +12,7 @@ class KnowTeamController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setNavigationBarItemText("KNOW YOUR TEAM")
+        self.setNavigationBarItemText("KNOW YOUR PANTHERS")
         // Do any additional setup after loading the view.
     }
 

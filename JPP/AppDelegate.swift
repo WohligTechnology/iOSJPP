@@ -10,6 +10,7 @@ import UIKit
 
 
 let BlueColor = UIColor(red: 10/255, green: 124/255, blue: 161/255, alpha: 1)
+let PinkColor = UIColor(red: 238/255, green: 74/255, blue: 155/255, alpha: 1)
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

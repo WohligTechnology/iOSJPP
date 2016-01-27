@@ -10,18 +10,86 @@ import UIKit
 
 class HomeController: UIViewController {
 
-    @IBOutlet weak var updates: schedule!
+    @IBOutlet weak var scrollView: UIScrollView!
+    var verticalLayout : VerticalLayout!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setNavigationBarItem()
-        updates.trapLabel.text = "LATEST UPDATE";
-        // Do any additional setup after loading the view.
+        self.verticalLayout = VerticalLayout(width: self.view.frame.width);
+        self.scrollView.insertSubview(self.verticalLayout, atIndex: 0)
+        
+        
+        let updates = schedule(frame: CGRectMake(8,8,verticalLayout.frame.width-16,300));
+        self.verticalLayout.addSubview(updates);
+        
+        updates.trapLabel.text = "LATEST UPDATE"
+        
+        let newsBox = news(frame: CGRectMake(8,8,verticalLayout.frame.width-16,280) );
+        self.verticalLayout.addSubview(newsBox);
+        
+        let teamTitle = team2(frame: CGRectMake(8,8,verticalLayout.frame.width-16,34) );
+        self.verticalLayout.addSubview(teamTitle);
+        
+        let PinkBox = UIView(frame:CGRectMake(8,0,verticalLayout.frame.width-16,300));
+        PinkBox.backgroundColor = PinkColor;
+        self.verticalLayout.addSubview(PinkBox);
+        
+        var tableHeader = table(frame: CGRectMake(8,8,PinkBox.frame.width-16,44));
+        
+        tableHeader.tableNo.font = UIFont(name:"Oswald-Bold", size: 14.0)
+        tableHeader.tableNo.text = "No."
+        
+        
+        tableHeader.tableTeam.font = UIFont(name:"Oswald-Bold", size: 14.0)
+        tableHeader.tableTeam.text = "Team"
+        
+        
+        tableHeader.tablePlayed.font = UIFont(name:"Oswald-Bold", size: 14.0)
+        tableHeader.tablePlayed.text = "P"
+        
+        tableHeader.tableWon.font = UIFont(name:"Oswald-Bold", size: 14.0)
+        tableHeader.tableWon.text = "W"
+        
+        tableHeader.tableLost.font = UIFont(name:"Oswald-Bold", size: 14.0)
+        tableHeader.tableLost.text = "L"
+        
+        tableHeader.tablePoint.font = UIFont(name:"Oswald-Bold", size: 14.0)
+        tableHeader.tablePoint.text = "PTS"
+        
+        
+        PinkBox.addSubview(tableHeader)
+        
+        let topSpaceinPink = 8;
+        let spacingPink = 3;
+        
+        
+        for(var i=0;i<5;i++)
+        {
+            
+            let topDistance = topSpaceinPink+spacingPink+((44+spacingPink)*(i+1));
+            let insideTable = table(frame: CGRectMake(8,CGFloat(topDistance),PinkBox.frame.width-16,44));
+            
+            PinkBox.addSubview(insideTable);
+        }
+        
+        
+        
+        
+        
+        
+        resizeView(8);
+        
+    }
+    
+    func resizeView(offset:CGFloat)
+    {
+        self.verticalLayout.layoutSubviews()
+        self.scrollView.contentSize = CGSize(width: self.verticalLayout.frame.width, height: self.verticalLayout.frame.height + offset)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
 

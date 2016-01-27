@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -90,37 +90,11 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="1000"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3bX-6R-Z9b">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="1000"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dQv-fs-6Gq" customClass="schedule" customModule="Jaipur_Pink_Panther" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="8" width="304" height="294"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="294" id="I2V-sn-Y6L"/>
-                                        </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5kE-O3-GRe" customClass="news" customModule="Jaipur_Pink_Panther" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="310" width="304" height="260"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="260" id="35q-Ci-WJZ"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="dQv-fs-6Gq" firstAttribute="top" secondItem="3bX-6R-Z9b" secondAttribute="top" constant="8" id="49X-aZ-uw6"/>
-                                    <constraint firstItem="5kE-O3-GRe" firstAttribute="leading" secondItem="3bX-6R-Z9b" secondAttribute="leading" constant="8" id="54N-y7-4Tk"/>
-                                    <constraint firstItem="dQv-fs-6Gq" firstAttribute="leading" secondItem="3bX-6R-Z9b" secondAttribute="leadingMargin" id="Aps-tC-M6u"/>
-                                    <constraint firstAttribute="trailing" secondItem="5kE-O3-GRe" secondAttribute="trailing" constant="8" id="Mmv-fU-CyM"/>
-                                    <constraint firstAttribute="bottom" secondItem="dQv-fs-6Gq" secondAttribute="bottom" constant="266" id="NqK-Uc-AxE"/>
-                                    <constraint firstItem="dQv-fs-6Gq" firstAttribute="centerX" secondItem="3bX-6R-Z9b" secondAttribute="centerX" id="RCg-Go-Ohw"/>
-                                    <constraint firstItem="5kE-O3-GRe" firstAttribute="top" secondItem="dQv-fs-6Gq" secondAttribute="bottom" constant="8" id="nO3-aB-7VW"/>
-                                    <constraint firstItem="dQv-fs-6Gq" firstAttribute="trailing" secondItem="3bX-6R-Z9b" secondAttribute="trailingMargin" id="uct-lx-B2x"/>
-                                </constraints>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="0.76862746477127075" green="0.94117647409439087" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -131,15 +105,14 @@
                             <constraint firstItem="3bX-6R-Z9b" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="uvk-gX-Yu6"/>
                         </constraints>
                     </view>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="1000"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="updates" destination="dQv-fs-6Gq" id="Kij-61-QG4"/>
+                        <outlet property="scrollView" destination="3bX-6R-Z9b" id="nEI-i6-hP1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="18" y="318"/>
+            <point key="canvasLocation" x="20" y="403"/>
         </scene>
         <!--SCHEDULE-->
         <scene sceneID="1Hx-gg-UUB">
@@ -155,22 +128,6 @@
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="51X-ln-bxP">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zw1-Bz-a4p" customClass="schedule" customModule="Jaipur_Pink_Panther" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="8" width="304" height="349"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="349" id="8j9-FJ-51k"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="Zw1-Bz-a4p" secondAttribute="bottom" constant="211" id="4iY-F3-e8w"/>
-                                    <constraint firstItem="Zw1-Bz-a4p" firstAttribute="leading" secondItem="51X-ln-bxP" secondAttribute="leadingMargin" id="9aT-G9-3ll"/>
-                                    <constraint firstItem="Zw1-Bz-a4p" firstAttribute="trailing" secondItem="51X-ln-bxP" secondAttribute="trailingMargin" id="aHT-gw-T3J"/>
-                                    <constraint firstItem="Zw1-Bz-a4p" firstAttribute="top" secondItem="51X-ln-bxP" secondAttribute="topMargin" id="cck-Wy-zwn"/>
-                                    <constraint firstItem="Zw1-Bz-a4p" firstAttribute="centerX" secondItem="51X-ln-bxP" secondAttribute="centerX" id="mwU-bn-qlu"/>
-                                </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="0.76862746479999999" green="0.94117647410000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -183,7 +140,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="upcoming" destination="Zw1-Bz-a4p" id="4Mu-bh-6dA"/>
+                        <outlet property="scrollView" destination="51X-ln-bxP" id="4rr-Im-wlv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gNy-I3-ucM" userLabel="First Responder" sceneMemberID="firstResponder"/>

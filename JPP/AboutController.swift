@@ -18,12 +18,17 @@ class AboutController: UIViewController {
         
         
         self.verticalLayout = VerticalLayout(width: self.view.frame.width);
+        self.scrollView.insertSubview(self.verticalLayout, atIndex: 0)
         
         self.verticalLayout.addSubview(about(frame: CGRectMake(8,8,verticalLayout.frame.width-16,300)));
         
         self.verticalLayout.addSubview(trapezium(frame: CGRectMake(8,8,verticalLayout.frame.width-16,34)))
         
         
+        
+        self.verticalLayout.addSubview(team(frame: CGRectMake(8,0,verticalLayout.frame.width-16,150)))
+        
+        self.verticalLayout.addSubview(team(frame: CGRectMake(8,0,verticalLayout.frame.width-16,150)))
         
         self.verticalLayout.addSubview(team(frame: CGRectMake(8,0,verticalLayout.frame.width-16,150)))
         
@@ -41,7 +46,7 @@ class AboutController: UIViewController {
     {
         self.verticalLayout.layoutSubviews()
         self.scrollView.contentSize = CGSize(width: self.verticalLayout.frame.width, height: self.verticalLayout.frame.height + offset)
-        self.scrollView.insertSubview(self.verticalLayout, atIndex: 0)
+        
     }
 
     override func didReceiveMemoryWarning() {
