@@ -8,14 +8,40 @@
 
 import UIKit
 
-class NewsController: UIViewController {
+class NewsController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setNavigationBarItemText("NEWS")
-        // Do any additional setup after loading the view.
+        
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        tableView.rowHeight = 230.0
+        tableView.separatorStyle = UITableViewCellSeparatorStyle.None
+        tableView.tableFooterView = UIView()
+        let cell = tableView.dequeueReusableCellWithIdentifier("mediaCell", forIndexPath: indexPath)
+        
+        let mediaBox = media(frame: CGRectMake(8,8,self.view.frame.width-16,230));
+        
+        cell.addSubview(mediaBox)
+        
+        
+        return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
     }
 
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
