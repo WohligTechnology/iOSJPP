@@ -70,6 +70,8 @@
 		78238FE91C57AC350067E7D5 /* trapezium.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78238FE81C57AC350067E7D5 /* trapezium.swift */; };
 		C23892D81C58C6EE00CA4DC1 /* thumbnailImage.xib in Resources */ = {isa = PBXBuildFile; fileRef = C23892D71C58C6EE00CA4DC1 /* thumbnailImage.xib */; };
 		C23892DA1C58C92700CA4DC1 /* thumbnailImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23892D91C58C92700CA4DC1 /* thumbnailImage.swift */; };
+		C28B79F11C58DAC2001C4474 /* newsDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = C28B79F01C58DAC2001C4474 /* newsDetail.xib */; };
+		C28B79F31C58DF47001C4474 /* newsDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28B79F21C58DF47001C4474 /* newsDetail.swift */; };
 		C2FF852B1C58D05000F2CFED /* singleThumbnailImage.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2FF852A1C58D05000F2CFED /* singleThumbnailImage.xib */; };
 		C2FF852D1C58D17A00F2CFED /* singleThumbnailImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FF852C1C58D17A00F2CFED /* singleThumbnailImage.swift */; };
 /* End PBXBuildFile section */
@@ -140,6 +142,8 @@
 		78238FE81C57AC350067E7D5 /* trapezium.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = trapezium.swift; sourceTree = "<group>"; };
 		C23892D71C58C6EE00CA4DC1 /* thumbnailImage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = thumbnailImage.xib; sourceTree = "<group>"; };
 		C23892D91C58C92700CA4DC1 /* thumbnailImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = thumbnailImage.swift; sourceTree = "<group>"; };
+		C28B79F01C58DAC2001C4474 /* newsDetail.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = newsDetail.xib; sourceTree = "<group>"; };
+		C28B79F21C58DF47001C4474 /* newsDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = newsDetail.swift; sourceTree = "<group>"; };
 		C2FF852A1C58D05000F2CFED /* singleThumbnailImage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = singleThumbnailImage.xib; sourceTree = "<group>"; };
 		C2FF852C1C58D17A00F2CFED /* singleThumbnailImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = singleThumbnailImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -253,6 +257,7 @@
 		36F9C1841C5616C6003D02AB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C28B79EF1C58DAB2001C4474 /* newsDetail */,
 				C2FF85291C58D03600F2CFED /* singleThumbnailImage */,
 				C23892D61C58C69200CA4DC1 /* thumbnailImage */,
 				360A50FF1C579A80001F7E40 /* playerInside */,
@@ -387,6 +392,15 @@
 			name = thumbnailImage;
 			sourceTree = "<group>";
 		};
+		C28B79EF1C58DAB2001C4474 /* newsDetail */ = {
+			isa = PBXGroup;
+			children = (
+				C28B79F01C58DAC2001C4474 /* newsDetail.xib */,
+				C28B79F21C58DF47001C4474 /* newsDetail.swift */,
+			);
+			name = newsDetail;
+			sourceTree = "<group>";
+		};
 		C2FF85291C58D03600F2CFED /* singleThumbnailImage */ = {
 			isa = PBXGroup;
 			children = (
@@ -474,6 +488,7 @@
 				36F9C1A61C5641BB003D02AB /* voyagefantgrad.ttf in Resources */,
 				36F9C1B01C5643E8003D02AB /* news.xib in Resources */,
 				C2FF852B1C58D05000F2CFED /* singleThumbnailImage.xib in Resources */,
+				C28B79F11C58DAC2001C4474 /* newsDetail.xib in Resources */,
 				362A175B1C58AA3C00B11F22 /* team2.xib in Resources */,
 				36F9C1A71C5641BB003D02AB /* voyagefanthalf.ttf in Resources */,
 				36F9C1A81C5641BB003D02AB /* voyagefanthplat.ttf in Resources */,
@@ -502,6 +517,7 @@
 				360A51011C579AAD001F7E40 /* playerInside.swift in Sources */,
 				36F2CEA91C57712A00D0D2D6 /* NewsInsideController.swift in Sources */,
 				36F2CEB51C57721800D0D2D6 /* PointTableController.swift in Sources */,
+				C28B79F31C58DF47001C4474 /* newsDetail.swift in Sources */,
 				36F2CE9F1C5770B900D0D2D6 /* ScheduleController.swift in Sources */,
 				36F2CEA51C5770FE00D0D2D6 /* GalleryInside2Controller.swift in Sources */,
 				78238FE91C57AC350067E7D5 /* trapezium.swift in Sources */,
