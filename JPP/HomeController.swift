@@ -36,7 +36,7 @@ class HomeController: UIViewController {
         PinkBox.backgroundColor = PinkColor;
         self.verticalLayout.addSubview(PinkBox);
         
-        var tableHeader = table(frame: CGRectMake(8,8,PinkBox.frame.width-16,44));
+        let tableHeader = table(frame: CGRectMake(8,8,PinkBox.frame.width-16,44));
         
         tableHeader.tableNo.font = UIFont(name:"Oswald-Bold", size: 14.0)
         tableHeader.tableNo.text = "No."

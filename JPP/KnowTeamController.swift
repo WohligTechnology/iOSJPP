@@ -8,13 +8,33 @@
 
 import UIKit
 
-class KnowTeamController: UIViewController {
+class KnowTeamController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setNavigationBarItemText("KNOW YOUR PANTHERS")
         // Do any additional setup after loading the view.
     }
+    
+    
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 5;
+    }
+    
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("playerCell", forIndexPath: indexPath) as UICollectionViewCell
+        cell.addSubview(player(frame: CGRectMake(8,8,cell.frame.width - 8,cell.frame.height - 8)));
+        
+        
+        return cell
+    }
+    
+    func collectionView(collectionView : UICollectionView,layout collectionViewLayout:UICollectionViewLayout,sizeForItemAtIndexPath indexPath:NSIndexPath) -> CGSize
+    {
+        
+        return CGSizeMake(self.view.frame.width/2 - 4 ,self.view.frame.width/2 + 30)
+    }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

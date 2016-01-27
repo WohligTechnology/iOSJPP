@@ -19,7 +19,7 @@ class ScheduleController: UIViewController {
         self.verticalLayout = VerticalLayout(width: self.view.frame.width);
         self.scrollView.insertSubview(self.verticalLayout, atIndex: 0)
         
-        let upcoming = schedule(frame: CGRectMake(8,8,verticalLayout.frame.width-16,370));
+        let upcoming = schedule(frame: CGRectMake(8,8,verticalLayout.frame.width-16,355));
         self.verticalLayout.addSubview(upcoming);
 
         

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -11,7 +11,7 @@
         </mutableArray>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="player" customModule="JPP" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="player" customModule="Jaipur_Pink_Panther" customModuleProvider="target">
             <connections>
                 <outlet property="playerImage" destination="H9f-eG-PLa" id="bHJ-Bv-VtY"/>
                 <outlet property="playerPosition" destination="xDC-zU-NGO" id="3Mg-Uc-O4b"/>
@@ -28,7 +28,7 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="23" id="gDc-rh-gE8"/>
                     </constraints>
-                    <fontDescription key="fontDescription" name="VoyageFantastique" family="Voyage Fantastique" pointSize="20"/>
+                    <fontDescription key="fontDescription" name="VoyageFantastique" family="Voyage Fantastique" pointSize="19"/>
                     <color key="textColor" red="0.70588235294117641" green="0.11764705882352941" blue="0.44705882352941173" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -40,7 +40,7 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="26" id="wfC-AB-fxY"/>
                     </constraints>
-                    <fontDescription key="fontDescription" name="VoyageFantastique" family="Voyage Fantastique" pointSize="18"/>
+                    <fontDescription key="fontDescription" name="VoyageFantastique" family="Voyage Fantastique" pointSize="17"/>
                     <color key="textColor" red="0.30588236451148987" green="0.7921568751335144" blue="0.96078431606292725" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                     <variation key="default">
@@ -49,30 +49,30 @@
                         </mask>
                     </variation>
                 </label>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Efq-0U-KZU">
-                    <rect key="frame" x="72" y="218" width="150" height="2"/>
-                    <color key="backgroundColor" red="0.70588237047195435" green="0.11764705926179886" blue="0.44705882668495178" alpha="1" colorSpace="calibratedRGB"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5rT-VU-GnP">
+                    <rect key="frame" x="20" y="220" width="254" height="2"/>
+                    <color key="backgroundColor" red="0.70588237050000002" green="0.1176470593" blue="0.44705882670000002" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="2" id="8hb-TM-goW"/>
+                        <constraint firstAttribute="height" constant="2" id="3QA-6Y-srp"/>
                     </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="xDC-zU-NGO" firstAttribute="top" secondItem="a1S-YG-uAo" secondAttribute="bottom" id="2Bj-NO-JtN"/>
+                <constraint firstAttribute="trailing" secondItem="5rT-VU-GnP" secondAttribute="trailing" constant="20" id="9QD-Zu-PDQ"/>
                 <constraint firstItem="a1S-YG-uAo" firstAttribute="top" secondItem="H9f-eG-PLa" secondAttribute="bottom" constant="5" id="EDf-bR-Pdh"/>
                 <constraint firstItem="xDC-zU-NGO" firstAttribute="top" secondItem="a1S-YG-uAo" secondAttribute="bottom" constant="5" id="Erw-OP-oj7"/>
                 <constraint firstItem="H9f-eG-PLa" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="GIe-R5-upa"/>
                 <constraint firstItem="H9f-eG-PLa" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="2" id="I8M-mn-Bdx"/>
                 <constraint firstItem="xDC-zU-NGO" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="K5z-G5-2Lx"/>
                 <constraint firstItem="a1S-YG-uAo" firstAttribute="trailing" secondItem="xDC-zU-NGO" secondAttribute="trailing" id="Lb6-lb-Sb1"/>
-                <constraint firstItem="Efq-0U-KZU" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="72" id="Lxn-8b-Gxe"/>
-                <constraint firstAttribute="trailing" secondItem="Efq-0U-KZU" secondAttribute="trailing" constant="72" id="OWg-Qf-MMi"/>
                 <constraint firstItem="H9f-eG-PLa" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="2" id="Yc2-aJ-gT5"/>
                 <constraint firstAttribute="bottom" secondItem="a1S-YG-uAo" secondAttribute="bottom" constant="26" id="Z2u-TI-uB3"/>
                 <constraint firstAttribute="trailing" secondItem="xDC-zU-NGO" secondAttribute="trailing" id="aCp-r7-Qky"/>
                 <constraint firstItem="a1S-YG-uAo" firstAttribute="top" secondItem="H9f-eG-PLa" secondAttribute="bottom" constant="5" id="aNI-ei-qPe"/>
-                <constraint firstItem="a1S-YG-uAo" firstAttribute="top" secondItem="Efq-0U-KZU" secondAttribute="bottom" constant="5" id="asV-pm-VRg"/>
+                <constraint firstItem="5rT-VU-GnP" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="ali-7D-V1h"/>
+                <constraint firstItem="5rT-VU-GnP" firstAttribute="top" secondItem="H9f-eG-PLa" secondAttribute="bottom" id="daw-gi-UOb"/>
                 <constraint firstAttribute="trailing" secondItem="H9f-eG-PLa" secondAttribute="trailing" constant="2" id="ie3-V5-B2Z"/>
                 <constraint firstItem="xDC-zU-NGO" firstAttribute="top" secondItem="a1S-YG-uAo" secondAttribute="bottom" constant="-1" id="nw7-ME-QbW"/>
                 <constraint firstItem="a1S-YG-uAo" firstAttribute="leading" secondItem="xDC-zU-NGO" secondAttribute="leading" id="tfE-1C-uQP"/>
