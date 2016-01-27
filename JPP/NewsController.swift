@@ -23,12 +23,12 @@ class NewsController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        tableView.rowHeight = 230.0
+        tableView.rowHeight = 240.0
         tableView.separatorStyle = UITableViewCellSeparatorStyle.None
         tableView.tableFooterView = UIView()
         let cell = tableView.dequeueReusableCellWithIdentifier("mediaCell", forIndexPath: indexPath)
         
-        let mediaBox = media(frame: CGRectMake(8,8,self.view.frame.width-16,230));
+        let mediaBox = media(frame: CGRectMake(0,8,self.view.frame.width-16,230));
         
         cell.addSubview(mediaBox)
         

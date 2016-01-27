@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GalleryController: UIViewController {
+class GalleryController: UIViewController,UITableViewDataSource,UITableViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +21,29 @@ class GalleryController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        tableView.rowHeight = 230.0
+        tableView.separatorStyle = UITableViewCellSeparatorStyle.None
+        tableView.tableFooterView = UIView()
+        let cell = tableView.dequeueReusableCellWithIdentifier("galCell", forIndexPath: indexPath)
+        
+        let mediaBox = galleryAlbum(frame: CGRectMake(8,16,self.view.frame.width-16,230));
+        
+        cell.addSubview(mediaBox)
+        
+        
+        return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+    }
 
     /*
     // MARK: - Navigation

@@ -22,6 +22,7 @@ class HomeController: UIViewController {
         
         let updates = schedule(frame: CGRectMake(8,8,verticalLayout.frame.width-16,300));
         self.verticalLayout.addSubview(updates);
+        updates.addToCalendar.hidden = true;
         
         updates.trapLabel.text = "LATEST UPDATE"
         

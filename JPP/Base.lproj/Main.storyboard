@@ -188,12 +188,34 @@
                                     <constraint firstItem="xfJ-8g-eJl" firstAttribute="top" secondItem="WIM-NZ-aHr" secondAttribute="top" id="rBN-Ye-gfo"/>
                                 </constraints>
                             </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XUh-lm-ghA">
+                                <rect key="frame" x="0.0" y="50" width="320" height="518"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="galCell" id="NHv-U5-o2t">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NHv-U5-o2t" id="Uap-9D-jVU">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="fNh-XM-Cbv" id="d8l-xh-ZvC"/>
+                                    <outlet property="delegate" destination="fNh-XM-Cbv" id="W1p-YR-EZ2"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.76862746477127075" green="0.94117647409439087" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="WIM-NZ-aHr" firstAttribute="leading" secondItem="zmM-mV-jM2" secondAttribute="leadingMargin" constant="-20" id="8H3-aM-192"/>
+                            <constraint firstItem="XUh-lm-ghA" firstAttribute="centerX" secondItem="WIM-NZ-aHr" secondAttribute="centerX" id="MCH-y2-1Mu"/>
                             <constraint firstItem="WIM-NZ-aHr" firstAttribute="top" secondItem="zmM-mV-jM2" secondAttribute="topMargin" id="WDt-w6-Wxu"/>
+                            <constraint firstItem="XUh-lm-ghA" firstAttribute="bottom" secondItem="Y8n-ua-bfq" secondAttribute="top" id="cXz-fZ-Ksh"/>
                             <constraint firstAttribute="trailingMargin" secondItem="WIM-NZ-aHr" secondAttribute="trailing" constant="-20" id="kp2-nA-fnJ"/>
+                            <constraint firstItem="XUh-lm-ghA" firstAttribute="leading" secondItem="zmM-mV-jM2" secondAttribute="leading" id="oIT-71-3Ci"/>
+                            <constraint firstItem="XUh-lm-ghA" firstAttribute="top" secondItem="WIM-NZ-aHr" secondAttribute="bottom" id="rCP-DB-ugP"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
@@ -240,10 +262,10 @@
                                 <color key="sectionIndexBackgroundColor" red="0.76862746477127075" green="0.94117647409439087" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="sectionIndexTrackingBackgroundColor" red="0.76862746479999999" green="0.94117647410000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="mediaCell" textLabel="GMb-1M-QVu" rowHeight="230" style="IBUITableViewCellStyleDefault" id="1TZ-rN-Rd2">
+                                    <tableViewCell autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="mediaCell" textLabel="GMb-1M-QVu" rowHeight="230" style="IBUITableViewCellStyleDefault" id="1TZ-rN-Rd2">
                                         <rect key="frame" x="0.0" y="28" width="303" height="230"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1TZ-rN-Rd2" id="z1S-Nd-ch3">
+                                        <tableViewCellContentView key="contentView" autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1TZ-rN-Rd2" id="z1S-Nd-ch3">
                                             <rect key="frame" x="0.0" y="0.0" width="303" height="229.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
