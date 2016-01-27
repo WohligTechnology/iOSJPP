@@ -22,6 +22,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="schedule" customModule="Jaipur_Pink_Panther" customModuleProvider="target">
             <connections>
+                <outlet property="addToCalendar" destination="aDd-bC-j03" id="whv-KC-KWg"/>
                 <outlet property="matchDate" destination="HYy-N1-L39" id="fhM-Os-sz5"/>
                 <outlet property="matchStadium" destination="W9F-u7-XXP" id="Wy6-eX-NLf"/>
                 <outlet property="team1Image" destination="gbv-md-THd" id="Cyo-2C-PpE"/>
