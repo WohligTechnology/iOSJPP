@@ -401,8 +401,11 @@
                                         <state key="normal" title="BUY NOW">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="hCu-jj-Ly5" kind="show" id="ylE-ai-sFP"/>
+                                        </connections>
                                     </button>
-                                    <imageView autoresizesSubviews="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="merchandise-1" translatesAutoresizingMaskIntoConstraints="NO" id="eDi-AE-sPY">
+                                    <imageView autoresizesSubviews="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mercimage" translatesAutoresizingMaskIntoConstraints="NO" id="eDi-AE-sPY">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="201"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="201" id="dd0-FE-OKm"/>
@@ -565,7 +568,7 @@
         <!--GALLERY INSIDE-->
         <scene sceneID="EQi-dl-Wvh">
             <objects>
-                <viewController title="GALLERY INSIDE" id="rBo-i2-X6q" customClass="GalleryInsideController" customModule="Jaipur_Pink_Panther" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="GALLERY INSIDE" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rBo-i2-X6q" customClass="GalleryInsideController" customModule="Jaipur_Pink_Panther" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="s8g-M2-AKj"/>
                         <viewControllerLayoutGuide type="bottom" id="39G-Z5-2bs"/>
@@ -712,10 +715,44 @@
             </objects>
             <point key="canvasLocation" x="2151" y="1126"/>
         </scene>
+        <!--Shop-->
+        <scene sceneID="Qe4-aS-SWq">
+            <objects>
+                <viewController title="Shop" id="hCu-jj-Ly5" customClass="WebController" customModule="Jaipur_Pink_Panther" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LSN-4u-xxo"/>
+                        <viewControllerLayoutGuide type="bottom" id="khH-UC-aWe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DBz-Eu-Bbg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xUs-im-Poj">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.76862746479999999" green="0.94117647410000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="xUs-im-Poj" firstAttribute="leading" secondItem="DBz-Eu-Bbg" secondAttribute="leading" id="82Q-mi-T0a"/>
+                            <constraint firstItem="xUs-im-Poj" firstAttribute="top" secondItem="DBz-Eu-Bbg" secondAttribute="top" id="R8E-Ff-IaJ"/>
+                            <constraint firstAttribute="trailing" secondItem="xUs-im-Poj" secondAttribute="trailing" id="XJI-Yz-JFm"/>
+                            <constraint firstItem="xUs-im-Poj" firstAttribute="bottom" secondItem="khH-UC-aWe" secondAttribute="top" id="rf5-A1-TcX"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="webView" destination="xUs-im-Poj" id="eXN-Fd-Ufu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hhj-vA-KCU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1798" y="1126"/>
+        </scene>
         <!--GALLERY INSIDE 2-->
         <scene sceneID="WHa-No-R6C">
             <objects>
-                <viewController title="GALLERY INSIDE 2" id="CrH-OF-I8r" customClass="GalleryInside2Controller" customModule="Jaipur_Pink_Panther" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GalleryImageDetail" title="GALLERY INSIDE 2" useStoryboardIdentifierAsRestorationIdentifier="YES" id="CrH-OF-I8r" customClass="GalleryInside2Controller" customModule="Jaipur_Pink_Panther" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Jbc-sZ-MlW"/>
                         <viewControllerLayoutGuide type="bottom" id="4t3-vr-tQo"/>
@@ -743,11 +780,45 @@
             </objects>
             <point key="canvasLocation" x="760" y="1832"/>
         </scene>
+        <!--Book Ticket-->
+        <scene sceneID="8Yy-IR-r7H">
+            <objects>
+                <viewController title="Book Ticket" id="S3R-VS-V10" customClass="BookTicketController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OZr-WE-SRc"/>
+                        <viewControllerLayoutGuide type="bottom" id="MO1-OA-CkS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Xr6-L9-Z0z">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ung-Sz-ich">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.76862746479999999" green="0.94117647410000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="ung-Sz-ich" firstAttribute="top" secondItem="Xr6-L9-Z0z" secondAttribute="top" id="2xF-aU-3YT"/>
+                            <constraint firstAttribute="trailing" secondItem="ung-Sz-ich" secondAttribute="trailing" id="FPO-gG-Osf"/>
+                            <constraint firstItem="ung-Sz-ich" firstAttribute="leading" secondItem="Xr6-L9-Z0z" secondAttribute="leading" id="T78-5S-esm"/>
+                            <constraint firstItem="ung-Sz-ich" firstAttribute="bottom" secondItem="MO1-OA-CkS" secondAttribute="top" id="tSB-UU-0aT"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="webView" destination="ung-Sz-ich" id="CPA-uQ-JuA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fgg-hZ-xJD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="398" y="1126"/>
+        </scene>
     </scenes>
     <resources>
         <image name="ic_action_panther" width="96" height="96"/>
         <image name="merchandise" width="600" height="466"/>
-        <image name="merchandise-1" width="1203" height="687"/>
+        <image name="mercimage" width="800" height="398"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="WTz-Cl-1DE"/>

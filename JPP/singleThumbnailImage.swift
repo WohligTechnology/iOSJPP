@@ -10,6 +10,9 @@ import UIKit
 
 @IBDesignable class singleThumbnailImage: UIView {
     
+    @IBAction func onShareClick(sender: AnyObject) {
+        shareImage()
+    }
     @IBOutlet weak var openImage: UIImageView!
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -29,19 +32,17 @@ import UIKit
         sortnewview.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
         self.addSubview(sortnewview);
         
-        
-        
     }
     
     
     func shareImage() {
         //var messageStr:String  = "Check out my awesome iPicSafe photo!"
-        var img: UIImage = currentPhoto!
+        let img: UIImage = openImage.image!
         //var shareItems:Array = [img, messageStr]
-        var shareItems:Array = [img]
+        let shareItems:Array = [img]
         let activityViewController:UIActivityViewController = UIActivityViewController(activityItems: shareItems, applicationActivities: nil)
         activityViewController.excludedActivityTypes = [UIActivityTypePrint, UIActivityTypePostToWeibo, UIActivityTypeCopyToPasteboard, UIActivityTypeAddToReadingList, UIActivityTypePostToVimeo]
-        window!.rootViewController!.presentViewController(activityViewController, animated: true, completion: nil)
+        gal2Global.presentViewController(activityViewController, animated: true, completion: nil)
     }
     
     

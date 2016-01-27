@@ -52,14 +52,21 @@ class ScheduleController: UIViewController {
         }
         
         
+        let bookTic = bookTicket(frame:CGRectMake(8,8,verticalLayout.frame.width-16,44));
+        
+        
+        self.verticalLayout.addSubview(bookTic);
+
         
 
         resizeView(8);
         
+        myButton.addTarget(self, action: "click:", forControlEvents: UIControlEvents.TouchUpInside)
         
-        
-       
-        
+    }
+    
+    func click(sender: UIButton) {
+        print("click")
     }
     
     func resizeView(offset:CGFloat)
@@ -68,6 +75,7 @@ class ScheduleController: UIViewController {
         self.scrollView.contentSize = CGSize(width: self.verticalLayout.frame.width, height: self.verticalLayout.frame.height + offset)
     }
 
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

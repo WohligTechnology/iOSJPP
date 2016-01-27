@@ -8,10 +8,13 @@
 
 import UIKit
 
+var gal2Global:GalleryInside2Controller!;
+
 class GalleryInside2Controller: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        gal2Global = self;
 //        self.setNavigationBarItemText("GALLERY INSIDE 2")
         // Do any additional setup after loading the view.
     }

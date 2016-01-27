@@ -1,25 +1,26 @@
-
 //
-//  MerchandiseController.swift
+//  WebController.swift
 //  JPP
 //
-//  Created by Chintan Shah on 26/01/16.
+//  Created by Chintan Shah on 27/01/16.
 //  Copyright © 2016 Wohlig Technology. All rights reserved.
 //
 
 import UIKit
 
-class MerchandiseController: UIViewController {
+class WebController: UIViewController {
 
+    @IBOutlet weak var webView: UIWebView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setNavigationBarItemText("MERCHANDISE")
         
-        
-        
+        let url = NSURL (string:  "http://www.google.com");
+        let requestObj = NSURLRequest(URL: url!);
+        webView.loadRequest(requestObj);
+
         // Do any additional setup after loading the view.
     }
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

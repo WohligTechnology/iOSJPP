@@ -47,11 +47,11 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="352" id="W7X-m3-1K5"/>
                     </constraints>
-                    <mutableString key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vel tristique dolor. Ut cursus erat quis magna facilisis cursus. Etiam diam ex, elementum vitae pharetra vel, vestibulum non enim. Maecenas nec pellentesque arcu. Sed id tempor metus. Maecenas gravida nunc non urna gravida, eget maximus ex tempor. Nam purus arcu, elementum at imperdiet mollis, viverra et magna. Ut laoreet nec augue vel vehicula.
+                    <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vel tristique dolor. Ut cursus erat quis magna facilisis cursus. Etiam diam ex, elementum vitae pharetra vel, vestibulum non enim. Maecenas nec pellentesque arcu. Sed id tempor metus. Maecenas gravida nunc non urna gravida, eget maximus ex tempor. Nam purus arcu, elementum at imperdiet mollis, viverra et magna. Ut laoreet nec augue vel vehicula.
 
 Cras vulputate facilisis velit, sed ullamcorper magna tristique ac. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed tristique ipsum non ullamcorper maximus. Quisque elit elit, hendrerit quis mollis a, posuere eu libero. Donec et nisl nulla. Donec eleifend porta nulla, porta mattis ex scelerisque sit amet. Morbi hendrerit urna pulvinar semper fringilla. Vestibulum a nulla et dui consectetur iaculis ut quis mauris. Duis accumsan scelerisque nulla sed lacinia. Morbi lacinia elementum velit, ac pretium nisl rutrum ut. Mauris sed felis lacinia, interdum est a, hendrerit urna.
 
-</mutableString>
+</string>
                     <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="14"/>
                     <color key="textColor" red="0.14901961386203766" green="0.14901961386203766" blue="0.14901961386203766" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>

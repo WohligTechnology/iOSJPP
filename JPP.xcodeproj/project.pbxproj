@@ -12,6 +12,10 @@
 		360A51031C579ACB001F7E40 /* playerInside.xib in Resources */ = {isa = PBXBuildFile; fileRef = 360A51021C579ACB001F7E40 /* playerInside.xib */; };
 		362A175B1C58AA3C00B11F22 /* team2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 362A175A1C58AA3C00B11F22 /* team2.xib */; };
 		362A175D1C58AA6500B11F22 /* team2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362A175C1C58AA6500B11F22 /* team2.swift */; };
+		366F19D71C58EFBD00321669 /* WebController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366F19D61C58EFBD00321669 /* WebController.swift */; };
+		366F19D91C58F32700321669 /* BookTicketController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366F19D81C58F32700321669 /* BookTicketController.swift */; };
+		366F19DC1C58F52600321669 /* bookTicket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366F19DB1C58F52600321669 /* bookTicket.swift */; };
+		366F19DE1C58F55800321669 /* bookTicket.xib in Resources */ = {isa = PBXBuildFile; fileRef = 366F19DD1C58F55800321669 /* bookTicket.xib */; };
 		36F2CE8A1C56561300D0D2D6 /* player.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36F2CE891C56561300D0D2D6 /* player.xib */; };
 		36F2CE8C1C56561F00D0D2D6 /* player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F2CE8B1C56561F00D0D2D6 /* player.swift */; };
 		36F2CE8F1C56584400D0D2D6 /* galleryAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F2CE8E1C56584400D0D2D6 /* galleryAlbum.swift */; };
@@ -82,6 +86,10 @@
 		360A51021C579ACB001F7E40 /* playerInside.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = playerInside.xib; sourceTree = "<group>"; };
 		362A175A1C58AA3C00B11F22 /* team2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = team2.xib; sourceTree = "<group>"; };
 		362A175C1C58AA6500B11F22 /* team2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = team2.swift; sourceTree = "<group>"; };
+		366F19D61C58EFBD00321669 /* WebController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebController.swift; sourceTree = "<group>"; };
+		366F19D81C58F32700321669 /* BookTicketController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookTicketController.swift; sourceTree = "<group>"; };
+		366F19DB1C58F52600321669 /* bookTicket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bookTicket.swift; sourceTree = "<group>"; };
+		366F19DD1C58F55800321669 /* bookTicket.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = bookTicket.xib; sourceTree = "<group>"; };
 		36F2CE891C56561300D0D2D6 /* player.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = player.xib; sourceTree = "<group>"; };
 		36F2CE8B1C56561F00D0D2D6 /* player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = player.swift; sourceTree = "<group>"; };
 		36F2CE8E1C56584400D0D2D6 /* galleryAlbum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = galleryAlbum.swift; sourceTree = "<group>"; };
@@ -177,6 +185,15 @@
 			name = tableTrap;
 			sourceTree = "<group>";
 		};
+		366F19DA1C58F4FB00321669 /* bookTicket */ = {
+			isa = PBXGroup;
+			children = (
+				366F19DB1C58F52600321669 /* bookTicket.swift */,
+				366F19DD1C58F55800321669 /* bookTicket.xib */,
+			);
+			name = bookTicket;
+			sourceTree = "<group>";
+		};
 		36F2CE881C56560700D0D2D6 /* player */ = {
 			isa = PBXGroup;
 			children = (
@@ -257,6 +274,7 @@
 		36F9C1841C5616C6003D02AB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				366F19DA1C58F4FB00321669 /* bookTicket */,
 				C28B79EF1C58DAB2001C4474 /* newsDetail */,
 				C2FF85291C58D03600F2CFED /* singleThumbnailImage */,
 				C23892D61C58C69200CA4DC1 /* thumbnailImage */,
@@ -291,6 +309,8 @@
 				36F2CEAC1C5771AE00D0D2D6 /* KvowTeamInsideController.swift */,
 				36F2CEAE1C5771D800D0D2D6 /* MerchandiseController.swift */,
 				36F2CEB01C5771F200D0D2D6 /* WallpaperController.swift */,
+				366F19D61C58EFBD00321669 /* WebController.swift */,
+				366F19D81C58F32700321669 /* BookTicketController.swift */,
 				36F2CEB21C57720600D0D2D6 /* WallpaperInsideController.swift */,
 				36F2CEB41C57721800D0D2D6 /* PointTableController.swift */,
 				36F2CEB61C57722B00D0D2D6 /* AboutController.swift */,
@@ -475,6 +495,7 @@
 				C23892D81C58C6EE00CA4DC1 /* thumbnailImage.xib in Resources */,
 				36F9C1A01C5641BB003D02AB /* voyagefant_0.ttf in Resources */,
 				36F9C1A11C5641BB003D02AB /* voyagefant3d.ttf in Resources */,
+				366F19DE1C58F55800321669 /* bookTicket.xib in Resources */,
 				36F2CE941C565DD600D0D2D6 /* team.xib in Resources */,
 				78238FE71C57AC170067E7D5 /* trapezium.xib in Resources */,
 				36F9C1A21C5641BB003D02AB /* voyagefantacad.ttf in Resources */,
@@ -516,6 +537,7 @@
 				36F2CE8F1C56584400D0D2D6 /* galleryAlbum.swift in Sources */,
 				360A51011C579AAD001F7E40 /* playerInside.swift in Sources */,
 				36F2CEA91C57712A00D0D2D6 /* NewsInsideController.swift in Sources */,
+				366F19D91C58F32700321669 /* BookTicketController.swift in Sources */,
 				36F2CEB51C57721800D0D2D6 /* PointTableController.swift in Sources */,
 				C28B79F31C58DF47001C4474 /* newsDetail.swift in Sources */,
 				36F2CE9F1C5770B900D0D2D6 /* ScheduleController.swift in Sources */,
@@ -529,6 +551,8 @@
 				36F9C1AE1C5643DF003D02AB /* news.swift in Sources */,
 				36F9C18C1C561759003D02AB /* schedule.swift in Sources */,
 				360A50FE1C577A05001F7E40 /* SideMenuController.swift in Sources */,
+				366F19DC1C58F52600321669 /* bookTicket.swift in Sources */,
+				366F19D71C58EFBD00321669 /* WebController.swift in Sources */,
 				36F2CEB31C57720600D0D2D6 /* WallpaperInsideController.swift in Sources */,
 				362A175D1C58AA6500B11F22 /* team2.swift in Sources */,
 				36F9C1831C5616B1003D02AB /* Layout.swift in Sources */,

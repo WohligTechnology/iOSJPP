@@ -25,6 +25,9 @@
                         <constraint firstAttribute="width" constant="32" id="js6-0t-Mac"/>
                     </constraints>
                     <state key="normal" image="shareIcon"/>
+                    <connections>
+                        <action selector="onShareClick:" destination="-1" eventType="touchUpInside" id="i1r-kh-Ocp"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
