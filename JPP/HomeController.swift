@@ -21,7 +21,7 @@ class HomeController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let rest = RestApi();
+        
         
         rest.callAPI(checkThis)
         
