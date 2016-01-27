@@ -70,6 +70,8 @@
 		78238FE91C57AC350067E7D5 /* trapezium.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78238FE81C57AC350067E7D5 /* trapezium.swift */; };
 		C23892D81C58C6EE00CA4DC1 /* thumbnailImage.xib in Resources */ = {isa = PBXBuildFile; fileRef = C23892D71C58C6EE00CA4DC1 /* thumbnailImage.xib */; };
 		C23892DA1C58C92700CA4DC1 /* thumbnailImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23892D91C58C92700CA4DC1 /* thumbnailImage.swift */; };
+		C2FF852B1C58D05000F2CFED /* singleThumbnailImage.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2FF852A1C58D05000F2CFED /* singleThumbnailImage.xib */; };
+		C2FF852D1C58D17A00F2CFED /* singleThumbnailImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FF852C1C58D17A00F2CFED /* singleThumbnailImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -138,6 +140,8 @@
 		78238FE81C57AC350067E7D5 /* trapezium.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = trapezium.swift; sourceTree = "<group>"; };
 		C23892D71C58C6EE00CA4DC1 /* thumbnailImage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = thumbnailImage.xib; sourceTree = "<group>"; };
 		C23892D91C58C92700CA4DC1 /* thumbnailImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = thumbnailImage.swift; sourceTree = "<group>"; };
+		C2FF852A1C58D05000F2CFED /* singleThumbnailImage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = singleThumbnailImage.xib; sourceTree = "<group>"; };
+		C2FF852C1C58D17A00F2CFED /* singleThumbnailImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = singleThumbnailImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -249,6 +253,7 @@
 		36F9C1841C5616C6003D02AB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C2FF85291C58D03600F2CFED /* singleThumbnailImage */,
 				C23892D61C58C69200CA4DC1 /* thumbnailImage */,
 				360A50FF1C579A80001F7E40 /* playerInside */,
 				36F2CE971C5739E400D0D2D6 /* media */,
@@ -382,6 +387,15 @@
 			name = thumbnailImage;
 			sourceTree = "<group>";
 		};
+		C2FF85291C58D03600F2CFED /* singleThumbnailImage */ = {
+			isa = PBXGroup;
+			children = (
+				C2FF852A1C58D05000F2CFED /* singleThumbnailImage.xib */,
+				C2FF852C1C58D17A00F2CFED /* singleThumbnailImage.swift */,
+			);
+			name = singleThumbnailImage;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -459,6 +473,7 @@
 				36F9C1BB1C5653EF003D02AB /* matches.xib in Resources */,
 				36F9C1A61C5641BB003D02AB /* voyagefantgrad.ttf in Resources */,
 				36F9C1B01C5643E8003D02AB /* news.xib in Resources */,
+				C2FF852B1C58D05000F2CFED /* singleThumbnailImage.xib in Resources */,
 				362A175B1C58AA3C00B11F22 /* team2.xib in Resources */,
 				36F9C1A71C5641BB003D02AB /* voyagefanthalf.ttf in Resources */,
 				36F9C1A81C5641BB003D02AB /* voyagefanthplat.ttf in Resources */,
@@ -511,6 +526,7 @@
 				36F2CE961C565DE100D0D2D6 /* team.swift in Sources */,
 				36F9C1B51C564EF4003D02AB /* table.swift in Sources */,
 				36F2CEA31C5770E400D0D2D6 /* GalleryInsideController.swift in Sources */,
+				C2FF852D1C58D17A00F2CFED /* singleThumbnailImage.swift in Sources */,
 				36F2CEA71C57711E00D0D2D6 /* NewsController.swift in Sources */,
 				36F2CE8C1C56561F00D0D2D6 /* player.swift in Sources */,
 				36F9C1601C55EDBF003D02AB /* AppDelegate.swift in Sources */,
