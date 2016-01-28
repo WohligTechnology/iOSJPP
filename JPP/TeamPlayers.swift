@@ -68,8 +68,8 @@ players[14] = Player(name: "Jagdeesha K.K", achieve: "Departmental National Camp
 
 players[15] = Player(name: "Satish kumar", achieve: "Senior National (2007,2008,2011)- 1st Positon, Senior National (2015)- 2nd Position,Senior Federation (2006) - 3rd Position, Beach Kabaddi National Campionship (2008) - 1st Position", tour: "Senior National -(2007,2008,2011,2015),Senior Federation Cup (2006), Beach Kabaddi National Campionship(2008)", age: "31", type: "Raider", nativePlace: "Rohera", jerseyNo: "06")
 
-players[16] = Player(name: "Mohammad Maghsoudlou", achieve: "", tour: "", age: "", type: "", nativePlace: "", jerseyNo: "23")
+players[16] = Player(name: "Mohammad Maghsoudlou", achieve: "Asian Indoor Kabaddi Games Incheon (2014)-2nd Position, Asian Beach Kabaddi Games China (2012)-1st Position, National Kabaddi Championship (2008,2009,2010,2011,2012)-1st Position, National Kabaddi Premier League (2006,2007)-1st Position", tour: "", age: "25", type: "All Rounder", nativePlace: "Gorgan", jerseyNo: "23")
 
-players[17] = Player(name: "Hwangi Ahn", achieve: "", tour: "", age: "", type: "", nativePlace: "", jerseyNo: "17")
+players[17] = Player(name: "Hwangi Ahn", achieve: "Incheon indoor game- Bronze Medal, National Championship (2011,2012,2013)-2nd Position, Asian Games (2014)- Bronze Medal", tour: "", age: "32", type: "", nativePlace: "Gyoung Ju", jerseyNo: "17")
 
 
