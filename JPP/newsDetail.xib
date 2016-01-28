@@ -14,7 +14,14 @@
         </mutableArray>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="newsDetail" customModule="Jaipur_Pink_Panther" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="newsDetail" customModule="Jaipur_Pink_Panther" customModuleProvider="target">
+            <connections>
+                <outlet property="newImgae" destination="pTB-UR-Boc" id="qWw-9y-YFS"/>
+                <outlet property="newsContent" destination="Ux0-jf-Kpm" id="ADU-I9-0cI"/>
+                <outlet property="newsDate" destination="0lM-JH-U5i" id="rkh-3O-MO7"/>
+                <outlet property="newsTitle" destination="9S3-WL-zCM" id="PoV-m5-fdN"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="374" height="679"/>
@@ -43,10 +50,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ux0-jf-Kpm">
-                    <rect key="frame" x="8" y="312" width="358" height="352"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="352" id="W7X-m3-1K5"/>
-                    </constraints>
+                    <rect key="frame" x="8" y="312" width="358" height="373.5"/>
                     <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vel tristique dolor. Ut cursus erat quis magna facilisis cursus. Etiam diam ex, elementum vitae pharetra vel, vestibulum non enim. Maecenas nec pellentesque arcu. Sed id tempor metus. Maecenas gravida nunc non urna gravida, eget maximus ex tempor. Nam purus arcu, elementum at imperdiet mollis, viverra et magna. Ut laoreet nec augue vel vehicula.
 
 Cras vulputate facilisis velit, sed ullamcorper magna tristique ac. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed tristique ipsum non ullamcorper maximus. Quisque elit elit, hendrerit quis mollis a, posuere eu libero. Donec et nisl nulla. Donec eleifend porta nulla, porta mattis ex scelerisque sit amet. Morbi hendrerit urna pulvinar semper fringilla. Vestibulum a nulla et dui consectetur iaculis ut quis mauris. Duis accumsan scelerisque nulla sed lacinia. Morbi lacinia elementum velit, ac pretium nisl rutrum ut. Mauris sed felis lacinia, interdum est a, hendrerit urna.
@@ -59,18 +63,17 @@ Cras vulputate facilisis velit, sed ullamcorper magna tristique ac. Vestibulum a
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="Ux0-jf-Kpm" firstAttribute="top" secondItem="0lM-JH-U5i" secondAttribute="bottom" constant="5" id="0v0-Gf-dau"/>
+                <constraint firstItem="Ux0-jf-Kpm" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="2J4-GF-DzH"/>
                 <constraint firstItem="pTB-UR-Boc" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="BT2-wY-S3u"/>
-                <constraint firstAttribute="trailing" secondItem="Ux0-jf-Kpm" secondAttribute="trailing" constant="8" id="EFe-XC-hd3"/>
                 <constraint firstItem="0lM-JH-U5i" firstAttribute="top" secondItem="9S3-WL-zCM" secondAttribute="top" constant="4" id="LTR-QY-3eP"/>
                 <constraint firstAttribute="trailing" secondItem="pTB-UR-Boc" secondAttribute="trailing" id="OBA-DP-rUN"/>
                 <constraint firstItem="9S3-WL-zCM" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="Pgt-w7-pFA"/>
                 <constraint firstItem="pTB-UR-Boc" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ZLf-tC-MQ8"/>
                 <constraint firstItem="0lM-JH-U5i" firstAttribute="trailing" secondItem="pTB-UR-Boc" secondAttribute="trailing" constant="-8" id="Zhe-gm-CX9"/>
                 <constraint firstItem="9S3-WL-zCM" firstAttribute="top" secondItem="pTB-UR-Boc" secondAttribute="bottom" constant="15" id="h9A-FL-V9Z"/>
-                <constraint firstItem="Ux0-jf-Kpm" firstAttribute="top" secondItem="9S3-WL-zCM" secondAttribute="bottom" id="jpA-pl-PTC"/>
-                <constraint firstItem="Ux0-jf-Kpm" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="qgH-TE-yO4"/>
+                <constraint firstAttribute="trailing" secondItem="Ux0-jf-Kpm" secondAttribute="trailing" constant="8" id="qDT-6t-rQm"/>
                 <constraint firstItem="0lM-JH-U5i" firstAttribute="leading" secondItem="9S3-WL-zCM" secondAttribute="trailing" constant="24" id="voJ-ki-1bX"/>
+                <constraint firstItem="Ux0-jf-Kpm" firstAttribute="top" secondItem="9S3-WL-zCM" secondAttribute="bottom" id="wo1-7m-l70"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="319" y="385.5"/>

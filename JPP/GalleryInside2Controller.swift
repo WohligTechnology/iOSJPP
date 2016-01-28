@@ -12,9 +12,13 @@ var gal2Global:GalleryInside2Controller!;
 
 class GalleryInside2Controller: UIViewController {
 
+    @IBOutlet weak var fullView: singleThumbnailImage!
     override func viewDidLoad() {
         super.viewDidLoad()
         gal2Global = self;
+        
+        fullView.openImage.image = rest.getImage(galleryImage);
+        
 //        self.setNavigationBarItemText("GALLERY INSIDE 2")
         // Do any additional setup after loading the view.
     }

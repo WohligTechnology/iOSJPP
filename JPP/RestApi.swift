@@ -11,6 +11,7 @@ import SwiftHTTP
 import SwiftyJSON
 
 let adminUrl = "http://192.168.0.124/jppbackend/";
+//let adminUrl = "http://wohlig.co.in/jppbackend/";
 let imageURL = adminUrl + "uploads/";
 let apiURL = adminUrl + "index.php/json/";
 
@@ -106,6 +107,28 @@ public class RestApi {
         } catch let error {
             print("got an error creating the request: \(error)")
         }
+    }
+    
+    func getGalleryById(id:String,completion: ( (JSON) -> Void)) {
+        var json = JSON(1);
+        
+        print(id);
+        let params = ["galleryid": id]
+        do {
+            let opt = try HTTP.GET(apiURL + "getGallerySlide", parameters: params)
+            opt.start { response in
+                if let err = response.error {
+                    print("error: \(err.localizedDescription)")
+                    return //also notify app of failure as needed
+                }
+                
+                json  = JSON(data: response.data)
+                completion(json);
+            }
+        } catch let error {
+            print("got an error creating the request: \(error)")
+        }
+        
     }
 
 }

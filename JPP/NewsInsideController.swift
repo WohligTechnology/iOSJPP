@@ -16,12 +16,18 @@ class NewsInsideController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.verticalLayout = VerticalLayout(width: self.view.frame.width);
         self.scrollView.insertSubview(self.verticalLayout, atIndex: 0)
         
         
         let insideView = newsDetail(frame: CGRectMake(8,8,self.view.frame.width-16,700));
+        
+        insideView.newsTitle.text = newsTitle;
+        insideView.newImgae.image = rest.getImage(newsImage);
+        insideView.newsDate.text = newsDate;
+        insideView.newsContent.text = newsContent;
+        insideView.frame.size.height = insideView.newsContent.frame.size.height + insideView.newImgae.frame.size.height - 100
+        
         self.verticalLayout.addSubview(insideView)
         
         // Do any additional setup after

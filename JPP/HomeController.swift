@@ -9,7 +9,7 @@
 import UIKit
 import SwiftyJSON
 
-class HomeController: UIViewController {
+class HomeController: UIViewController,UIGestureRecognizerDelegate {
 
     @IBOutlet weak var scrollView: UIScrollView!
     var verticalLayout : VerticalLayout!
@@ -18,28 +18,39 @@ class HomeController: UIViewController {
 //        print(json);
 //    }
     
+    var HomeJSON = JSON(1)
+    
+    func handleTap(sender: UITapGestureRecognizer? = nil) {
+        newsDate = HomeJSON["news"]["timestamp"].string!
+        newsContent = HomeJSON["news"]["content"].string!
+        newsTitle = HomeJSON["news"]["name"].string!
+        newsImage = HomeJSON["news"]["image"].string!
+        performSegueWithIdentifier("homeNews", sender: nil)
+        print("News Tap");
+    }
     
     func homeLoaded(json:JSON) {
-        print(json);
+        HomeJSON = json;
          dispatch_async(dispatch_get_main_queue(), {
-        self.setNavigationBarItem()
+        
         self.verticalLayout = VerticalLayout(width: self.view.frame.width);
         self.scrollView.insertSubview(self.verticalLayout, atIndex: 0)
-        
-        
-        let updates = schedule(frame: CGRectMake(8,8,self.verticalLayout.frame.width-16,300));
-        self.verticalLayout.addSubview(updates);
-        updates.addToCalendar.hidden = true;
             
-        updates.team1Image.image = UIImage(named: "t" + json["latestupdate"]["team1id"].string! + ".png")
-        updates.team2Image.image = UIImage(named: "t" + json["latestupdate"]["team2id"].string! + ".png")
-        updates.team1Score.text = json["latestupdate"]["score1"].string
-        updates.team2Score.text = json["latestupdate"]["score2"].string
-        updates.matchDate.text = json["latestupdate"]["starttimedate"].string
-        updates.matchStadium.text = json["latestupdate"]["stadium"].string
+            if((json["latestupdate"]["team1id"].string) != nil) {
             
-        updates.trapLabel.text = "LATEST UPDATE"
-        
+            let updates = schedule(frame: CGRectMake(8,8,self.verticalLayout.frame.width-16,300));
+            self.verticalLayout.addSubview(updates);
+            updates.addToCalendar.hidden = true;
+            
+            updates.team1Image.image = UIImage(named: "t" + json["latestupdate"]["team1id"].string! + ".png")
+            updates.team2Image.image = UIImage(named: "t" + json["latestupdate"]["team2id"].string! + ".png")
+            updates.team1Score.text = json["latestupdate"]["score1"].string
+            updates.team2Score.text = json["latestupdate"]["score2"].string
+            updates.matchDate.text = json["latestupdate"]["starttimedate"].string
+            updates.matchStadium.text = json["latestupdate"]["stadium"].string
+            
+            updates.trapLabel.text = "LATEST UPDATE"
+            
             if((json["news"]["id"].string) != nil) {
                 let newsBox = news(frame: CGRectMake(8,8,self.verticalLayout.frame.width-16,280) );
                 
@@ -47,8 +58,15 @@ class HomeController: UIViewController {
                 newsBox.newsDesc.text = json["news"]["content"].string
                 newsBox.newsTitle.text = json["news"]["name"].string
                 newsBox.newsImage.image = rest.getImage(json["news"]["image"].string!)
+                
+                let tap = UITapGestureRecognizer(target: self, action: Selector("handleTap:"))
+                tap.delegate = self
+                newsBox.addGestureRecognizer(tap)
+               
                 self.verticalLayout.addSubview(newsBox);
+                }
             }
+        
         
         
         let teamTitle = team2(frame: CGRectMake(8,8,self.verticalLayout.frame.width-16,34) );
@@ -114,10 +132,12 @@ class HomeController: UIViewController {
         })
     }
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        self.setNavigationBarItem()
         
         rest.getHome(homeLoaded)
         

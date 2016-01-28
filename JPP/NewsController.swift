@@ -58,7 +58,13 @@ class NewsController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        performSegueWithIdentifier("mediaDetail", sender: nil)
+        print("AAA");
+        newsImage = newsJSON[indexPath.row]["image"].string!
+        newsTitle = newsJSON[indexPath.row]["name"].string!
+        newsDate = newsJSON[indexPath.row]["timestamp"].string!
+        newsContent = newsJSON[indexPath.row]["content"].string!
+        
+       // performSegueWithIdentifier("mediaDetail", sender: nil)
 
     }
 

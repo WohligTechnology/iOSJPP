@@ -72,19 +72,23 @@ class ScheduleController: UIViewController {
         }
     }
     func scheduleComplete (json:JSON) {
-        
+        //        print(json);
         dispatch_async(dispatch_get_main_queue(), {
             
             self.verticalLayout = VerticalFitLayout(width: self.view.frame.width);
             self.scrollView.insertSubview(self.verticalLayout, atIndex: 0)
             
-            let upcoming = schedule(frame: CGRectMake(8,8,self.verticalLayout.frame.width-16,355));
-            self.verticalLayout.addSubview(upcoming);
+            let upcomingVar = upcoming(frame: CGRectMake(8,8,self.verticalLayout.frame.width-16,300));
+            self.verticalLayout.addSubview(upcomingVar);
             
+            upcomingVar.team1Image.image = UIImage(named: "t" + json[0]["team1id"].string! + ".png")
+            upcomingVar.team2Image.image = UIImage(named: "t" + json[0]["team2id"].string! + ".png")
             
-            upcoming.trapLabel.text="UPCOMING MATCH";
-           
-            upcoming.addToCalendar.addTarget(self, action: "eventInit:", forControlEvents: UIControlEvents.TouchUpInside)
+            upcomingVar.trapLabel.text="UPCOMING MATCH";
+            upcomingVar.matchStadium.text = json[0]["stadium"].string
+            upcomingVar.matchDate.text = json[0]["starttimedate"].string
+            
+            upcomingVar.addToCalendar.addTarget(self, action: "eventInit:", forControlEvents: UIControlEvents.TouchUpInside)
             
             var whiteView:UIView!
             whiteView = UIView(frame:CGRectMake(0,8,self.verticalLayout.frame.width,1000));
@@ -98,10 +102,10 @@ class ScheduleController: UIViewController {
             
             self.verticalLayout.addSubview(whiteView);
             
-            for(var i=0;i<json.count;i++)
+            for(var i=1;i<json.count;i++)
             {
                 
-                let topDistance = self.topSpacing+self.spacingPink+((65+self.spacingPink)*(i));
+                let topDistance = self.topSpacing+self.spacingPink+((65+self.spacingPink)*(i-1));
                 let insideTable = matches(frame: CGRectMake(8,CGFloat(topDistance),self.verticalLayout.frame.width-16,65));
                 insideTable.matchesTeams.text = json[i]["team1"].string! + " VS " + json[i]["team2"].string!
                 

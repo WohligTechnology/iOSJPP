@@ -8,6 +8,17 @@
 
 import UIKit
 
+var galleryID = "0";
+var galleryImage = "0";
+
+
+var newsImage = "";
+var newsTitle = "";
+var newsDate = "";
+var newsContent = "";
+
+
+
 
 let BlueColor = UIColor(red: 10/255, green: 124/255, blue: 161/255, alpha: 1)
 let PinkColor = UIColor(red: 238/255, green: 74/255, blue: 155/255, alpha: 1)

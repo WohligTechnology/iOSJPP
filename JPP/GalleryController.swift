@@ -64,15 +64,16 @@ class GalleryController: UIViewController,UITableViewDataSource,UITableViewDeleg
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        tableView.rowHeight = 230.0
+        tableView.rowHeight = 208.0
         tableView.separatorStyle = UITableViewCellSeparatorStyle.None
         tableView.tableFooterView = UIView()
         let cell = tableView.dequeueReusableCellWithIdentifier("galCell", forIndexPath: indexPath)
         
-        
+//        print(photosJson);
         if((photosJson[indexPath.row]["image"].string) != nil) {
-            let mediaBox = galleryAlbum(frame: CGRectMake(8,16,self.view.frame.width-16,230));
-            mediaBox.galleryTitle.text = photosJson[indexPath.row]["name"].string
+            let mediaBox = galleryAlbum(frame: CGRectMake(8,16,self.view.frame.width-16,200));
+            print(photosJson[indexPath.row]["name"].stringValue);
+//            mediaBox.galleryTitle.text = photosJson[indexPath.row]["name"].stringValue
             mediaBox.galleryBanner.image = rest.getImage(photosJson[indexPath.row]["image"].string!)
             cell.addSubview(mediaBox)
         }
@@ -80,7 +81,8 @@ class GalleryController: UIViewController,UITableViewDataSource,UITableViewDeleg
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-         performSegueWithIdentifier("galleryDetail", sender: nil)
+        galleryID = photosJson[indexPath.row]["id"].string!
+        performSegueWithIdentifier("galleryDetail", sender: nil)
     }
 
     /*

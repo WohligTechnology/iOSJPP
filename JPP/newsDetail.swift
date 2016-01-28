@@ -10,6 +10,12 @@ import UIKit
 
 @IBDesignable class newsDetail: UIView {
     
+    @IBOutlet weak var newImgae: UIImageView!
+    
+    @IBOutlet weak var newsTitle: UILabel!
+    @IBOutlet weak var newsDate: UILabel!
+    @IBOutlet weak var newsContent: UILabel!
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         loadViewFromNib ()

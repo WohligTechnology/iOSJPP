@@ -16,6 +16,8 @@
 		366F19D91C58F32700321669 /* BookTicketController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366F19D81C58F32700321669 /* BookTicketController.swift */; };
 		366F19DC1C58F52600321669 /* bookTicket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366F19DB1C58F52600321669 /* bookTicket.swift */; };
 		366F19DE1C58F55800321669 /* bookTicket.xib in Resources */ = {isa = PBXBuildFile; fileRef = 366F19DD1C58F55800321669 /* bookTicket.xib */; };
+		3685BD421C5A163000BC44D0 /* upcoming.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3685BD411C5A163000BC44D0 /* upcoming.xib */; };
+		3685BD441C5A164B00BC44D0 /* upcoming.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3685BD431C5A164B00BC44D0 /* upcoming.swift */; };
 		36F2CE8A1C56561300D0D2D6 /* player.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36F2CE891C56561300D0D2D6 /* player.xib */; };
 		36F2CE8C1C56561F00D0D2D6 /* player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F2CE8B1C56561F00D0D2D6 /* player.swift */; };
 		36F2CE8F1C56584400D0D2D6 /* galleryAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F2CE8E1C56584400D0D2D6 /* galleryAlbum.swift */; };
@@ -94,6 +96,8 @@
 		366F19D81C58F32700321669 /* BookTicketController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookTicketController.swift; sourceTree = "<group>"; };
 		366F19DB1C58F52600321669 /* bookTicket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bookTicket.swift; sourceTree = "<group>"; };
 		366F19DD1C58F55800321669 /* bookTicket.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = bookTicket.xib; sourceTree = "<group>"; };
+		3685BD411C5A163000BC44D0 /* upcoming.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = upcoming.xib; sourceTree = "<group>"; };
+		3685BD431C5A164B00BC44D0 /* upcoming.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = upcoming.swift; sourceTree = "<group>"; };
 		36F2CE891C56561300D0D2D6 /* player.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = player.xib; sourceTree = "<group>"; };
 		36F2CE8B1C56561F00D0D2D6 /* player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = player.swift; sourceTree = "<group>"; };
 		36F2CE8E1C56584400D0D2D6 /* galleryAlbum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = galleryAlbum.swift; sourceTree = "<group>"; };
@@ -204,6 +208,15 @@
 			name = bookTicket;
 			sourceTree = "<group>";
 		};
+		3685BD401C5A160700BC44D0 /* upcoming */ = {
+			isa = PBXGroup;
+			children = (
+				3685BD411C5A163000BC44D0 /* upcoming.xib */,
+				3685BD431C5A164B00BC44D0 /* upcoming.swift */,
+			);
+			name = upcoming;
+			sourceTree = "<group>";
+		};
 		36F2CE881C56560700D0D2D6 /* player */ = {
 			isa = PBXGroup;
 			children = (
@@ -287,6 +300,7 @@
 		36F9C1841C5616C6003D02AB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3685BD401C5A160700BC44D0 /* upcoming */,
 				366F19DA1C58F4FB00321669 /* bookTicket */,
 				C28B79EF1C58DAB2001C4474 /* newsDetail */,
 				C2FF85291C58D03600F2CFED /* singleThumbnailImage */,
@@ -554,6 +568,7 @@
 				C28B79F11C58DAC2001C4474 /* newsDetail.xib in Resources */,
 				362A175B1C58AA3C00B11F22 /* team2.xib in Resources */,
 				36F9C1A71C5641BB003D02AB /* voyagefanthalf.ttf in Resources */,
+				3685BD421C5A163000BC44D0 /* upcoming.xib in Resources */,
 				36F9C1A81C5641BB003D02AB /* voyagefanthplat.ttf in Resources */,
 				36F9C1A91C5641BB003D02AB /* voyagefantlaser.ttf in Resources */,
 				36F9C1AA1C5641BB003D02AB /* voyagefantstraight.ttf in Resources */,
@@ -639,6 +654,7 @@
 				36F2CEAF1C5771D800D0D2D6 /* MerchandiseController.swift in Sources */,
 				36F2CEA11C5770D400D0D2D6 /* GalleryController.swift in Sources */,
 				36F9C1AE1C5643DF003D02AB /* news.swift in Sources */,
+				3685BD441C5A164B00BC44D0 /* upcoming.swift in Sources */,
 				36F9C18C1C561759003D02AB /* schedule.swift in Sources */,
 				360A50FE1C577A05001F7E40 /* SideMenuController.swift in Sources */,
 				366F19DC1C58F52600321669 /* bookTicket.swift in Sources */,

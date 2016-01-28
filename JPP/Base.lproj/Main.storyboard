@@ -94,8 +94,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3bX-6R-Z9b">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3bX-6R-Z9b">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <button opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gov-pp-Dhf">
+                                        <rect key="frame" x="210" y="379" width="46" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <segue destination="633-qu-Ovh" kind="show" identifier="homeNews" id="ded-IQ-QY3"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="0.76862746477127075" green="0.94117647409439087" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -651,6 +660,9 @@
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="galleryTable" destination="JWg-kU-jnG" id="V2m-zs-vbT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kFQ-fy-nBG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -799,6 +811,9 @@
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="fullView" destination="awf-MB-9J8" id="epe-x1-lag"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W9V-OC-eun" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -845,8 +860,8 @@
         <image name="mercimage" width="800" height="398"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="phz-yE-XQu"/>
         <segue reference="DFT-vF-egz"/>
+        <segue reference="ded-IQ-QY3"/>
         <segue reference="ylE-ai-sFP"/>
     </inferredMetricsTieBreakers>
 </document>

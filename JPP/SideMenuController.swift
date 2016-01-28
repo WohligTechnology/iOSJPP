@@ -115,13 +115,13 @@ class SideMenuController: UIViewController, UITableViewDataSource, UITableViewDe
         case 5:
             self.slideMenuController()?.changeMainViewController(self.merchandiseController, close: true)
             
-//        case 6:
-//            self.slideMenuController()?.changeMainViewController(self.wallpaperController, close: true)
-            
         case 6:
-            self.slideMenuController()?.changeMainViewController(self.pointController, close: true)
+            self.slideMenuController()?.changeMainViewController(self.wallpaperController, close: true)
             
         case 7:
+            self.slideMenuController()?.changeMainViewController(self.pointController, close: true)
+            
+        case 8:
             self.slideMenuController()?.changeMainViewController(self.aboutsController, close: true)
             
             

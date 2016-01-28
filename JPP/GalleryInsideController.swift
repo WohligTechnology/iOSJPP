@@ -14,12 +14,28 @@ class GalleryInsideController: UIViewController,UICollectionViewDataSource,UICol
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        rest.getGalleryById(galleryID,completion: newsLoaded)
+        
+        
         navigationItem.leftBarButtonItem?.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "Oswald-Light", size: 20)!], forState: UIControlState.Normal)
         
         
 //        self.setNavigationBarItemText("GALLERY INSIDE")
         // Do any additional setup after loading the view.
     }
+    
+    @IBOutlet weak var galleryTable: UICollectionView!
+    
+    var jsonData = JSON([])
+    
+    func newsLoaded (json:JSON) {
+        jsonData = json;
+        print(json);
+        dispatch_async(dispatch_get_main_queue(),{
+           self.galleryTable.reloadData()
+        });
+    }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -30,13 +46,20 @@ class GalleryInsideController: UIViewController,UICollectionViewDataSource,UICol
     
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 30;
+        return jsonData.count;
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("thumbnail", forIndexPath: indexPath) as UICollectionViewCell
-        cell.addSubview(thumbnailImage(frame: CGRectMake(8,8,cell.frame.width - 8,cell.frame.height - 8)));
+//        cell.addSubview(thumbnailImage(frame: CGRectMake(8,8,cell.frame.width - 8,cell.frame.height - 8)));
         
+        
+        if((jsonData[indexPath.row]["name"].string) != nil) {
+            let mediaBox = thumbnailImage(frame: CGRectMake(8,8,cell.frame.width-8,230));
+            mediaBox.thumbImage.image = rest.getImage(jsonData[indexPath.row]["image"].string!)
+            
+            cell.addSubview(mediaBox)
+        }
         
         return cell
     }
@@ -49,6 +72,9 @@ class GalleryInsideController: UIViewController,UICollectionViewDataSource,UICol
     
     func collectionView(collectionView: UICollectionView,
         didSelectItemAtIndexPath indexPath: NSIndexPath) {
+            
+            galleryImage = jsonData[indexPath.row]["image"].string!
+            
             performSegueWithIdentifier("galleryImageDetail", sender: nil)
     }
     
