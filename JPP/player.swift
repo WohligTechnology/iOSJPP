@@ -13,11 +13,14 @@ import UIKit
     @IBOutlet weak var playerImage: UIImageView!
     @IBOutlet weak var playerTitle: UILabel!
     @IBOutlet weak var playerPosition: UILabel!
-    
+    var index:Int = 0
     override init(frame: CGRect) {
         super.init(frame: frame)
         loadViewFromNib ()
     }
+    
+    
+   
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)

@@ -27,6 +27,10 @@ class GalleryInsideController: UIViewController,UICollectionViewDataSource,UICol
         {
             self.title =  GalleryInsideTitle
             rest.getGalleryById(galleryID,completion: newsLoaded)
+            
+            
+            
+            
         }
         else
         {

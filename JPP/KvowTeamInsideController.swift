@@ -27,11 +27,6 @@ class KvowTeamInsideController: UIViewController {
 //
         self.title =  players[playerIndex].name
         
-//        self.setNavigationBarItemText("GANGADHAR MALLESH")
-        
-        
-        
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {

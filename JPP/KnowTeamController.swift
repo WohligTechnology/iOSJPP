@@ -31,10 +31,11 @@ class KnowTeamController: UIViewController,UICollectionViewDataSource,UICollecti
         mediaBox.playerTitle.text = players[indexPath.row].name
         mediaBox.playerImage.image = UIImage(named:players[indexPath.row].image)
         mediaBox.playerPosition.text = players[indexPath.row].type
-        
+        mediaBox.index = indexPath.row
         mediaBox.layer.borderWidth = 1
-        mediaBox.layer.borderColor = UIColor(red:5/255.0, green:118/255.0, blue:186/255.0, alpha: 1.0).CGColor
+        mediaBox.layer.borderColor = UIColor(red:18/255.0, green:126/255.0, blue:165/255.0, alpha: 1.0).CGColor
         cell.addSubview(mediaBox)
+        
         
         
         
@@ -50,9 +51,10 @@ class KnowTeamController: UIViewController,UICollectionViewDataSource,UICollecti
     func collectionView(collectionView: UICollectionView,
         didSelectItemAtIndexPath indexPath: NSIndexPath) {
             playerIndex = indexPath.row
-            
-            
-            //            performSegueWithIdentifier("playerDetail", sender: nil)
+    }
+    
+    func collectionView(collectionView: UICollectionView, didHighlightItemAtIndexPath indexPath: NSIndexPath) {
+       playerIndex = indexPath.row
     }
     
     override func didReceiveMemoryWarning() {
