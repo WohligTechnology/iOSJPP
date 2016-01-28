@@ -17,6 +17,7 @@ var newsTitle = "";
 var newsDate = "";
 var newsContent = "";
 
+var isGalWal = 0;
 
 
 

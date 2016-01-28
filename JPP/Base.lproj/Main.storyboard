@@ -604,7 +604,7 @@
         <!--GALLERY INSIDE-->
         <scene sceneID="EQi-dl-Wvh">
             <objects>
-                <viewController title="GALLERY INSIDE" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rBo-i2-X6q" customClass="GalleryInsideController" customModule="Jaipur_Pink_Panther" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GalleryInside" title="GALLERY INSIDE" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rBo-i2-X6q" customClass="GalleryInsideController" customModule="Jaipur_Pink_Panther" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="s8g-M2-AKj"/>
                         <viewControllerLayoutGuide type="bottom" id="39G-Z5-2bs"/>

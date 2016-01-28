@@ -32,7 +32,7 @@ class KnowTeamController: UIViewController,UICollectionViewDataSource,UICollecti
     func collectionView(collectionView : UICollectionView,layout collectionViewLayout:UICollectionViewLayout,sizeForItemAtIndexPath indexPath:NSIndexPath) -> CGSize
     {
         
-        return CGSizeMake(self.view.frame.width/2 - 4 ,self.view.frame.width/2 + 30)
+        return CGSizeMake(self.view.frame.width/2 - 4 ,self.view.frame.width/2)
     }
 
 //    func collectionView(collectionView: UICollectionView,

@@ -13,8 +13,16 @@ class GalleryInsideController: UIViewController,UICollectionViewDataSource,UICol
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        if(isGalWal == 0)
+        {
+            rest.getGalleryById(galleryID,completion: newsLoaded)
+        }
+        else
+        {
+            self.setNavigationBarItemText("WALLPAPER")
+            rest.getWallPaper(newsLoaded)
+        }
         
-        rest.getGalleryById(galleryID,completion: newsLoaded)
         
         
         navigationItem.leftBarButtonItem?.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "Oswald-Light", size: 20)!], forState: UIControlState.Normal)

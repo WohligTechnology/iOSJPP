@@ -48,7 +48,7 @@ class SideMenuController: UIViewController, UITableViewDataSource, UITableViewDe
         let merchandiseController = storyboard.instantiateViewControllerWithIdentifier("merchandise") as! MerchandiseController
         self.merchandiseController = UINavigationController(rootViewController: merchandiseController)
         
-        let wallpaperController = storyboard.instantiateViewControllerWithIdentifier("wallpaper") as! WallpaperController
+        let wallpaperController = storyboard.instantiateViewControllerWithIdentifier("GalleryInside") as! GalleryInsideController
         self.wallpaperController = UINavigationController(rootViewController: wallpaperController)
         
         let pointController = storyboard.instantiateViewControllerWithIdentifier("point") as! PointTableController
@@ -77,7 +77,7 @@ class SideMenuController: UIViewController, UITableViewDataSource, UITableViewDe
         return 1
     }
     
-    var data = ["HOME", "SCHEDULE", "GALLERY","KNOW YOUR TEAM","NEWS & MEDIA","MERCHANDISE","POINTS TABLE","ABOUT US"]
+    var data = ["HOME", "SCHEDULE", "GALLERY","KNOW YOUR TEAM","NEWS & MEDIA","MERCHANDISE","WALLPAPER","POINTS TABLE","ABOUT US"]
     
     // MARK: - UITableViewDataSource
     
@@ -104,7 +104,9 @@ class SideMenuController: UIViewController, UITableViewDataSource, UITableViewDe
             self.slideMenuController()?.changeMainViewController(self.scheduleController, close: true)
             
         case 2:
+            isGalWal = 0
             self.slideMenuController()?.changeMainViewController(self.galleryController, close: true)
+            
             
         case 3:
             self.slideMenuController()?.changeMainViewController(self.knowTeamController, close: true)
@@ -116,6 +118,7 @@ class SideMenuController: UIViewController, UITableViewDataSource, UITableViewDe
             self.slideMenuController()?.changeMainViewController(self.merchandiseController, close: true)
             
         case 6:
+            isGalWal = 1
             self.slideMenuController()?.changeMainViewController(self.wallpaperController, close: true)
             
         case 7:
