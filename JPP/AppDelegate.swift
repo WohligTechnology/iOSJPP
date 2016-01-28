@@ -9,6 +9,7 @@
 import UIKit
 
 var galleryID = "0";
+var videoIDGlo = "0";
 var galleryImage = "0";
 
 
@@ -23,7 +24,6 @@ var playerIndex = 0;
 var isGalWal = 0;
 
 var players:[Player] = []
-
 
 
 

@@ -162,6 +162,40 @@
             </objects>
             <point key="canvasLocation" x="398" y="403"/>
         </scene>
+        <!--Video Play Controller-->
+        <scene sceneID="QLM-7q-RRi">
+            <objects>
+                <viewController id="9VB-4e-Lpi" customClass="VideoPlayController" customModule="Jaipur_Pink_Panther" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="r5H-rN-rui"/>
+                        <viewControllerLayoutGuide type="bottom" id="TTd-ro-jJY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="onf-Wy-6ta">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d5i-4d-9KX">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="d5i-4d-9KX" firstAttribute="bottom" secondItem="TTd-ro-jJY" secondAttribute="top" id="Hi1-0f-GNa"/>
+                            <constraint firstItem="d5i-4d-9KX" firstAttribute="leading" secondItem="onf-Wy-6ta" secondAttribute="leading" id="Ibl-TV-gzH"/>
+                            <constraint firstAttribute="trailing" secondItem="d5i-4d-9KX" secondAttribute="trailing" id="edx-43-v2E"/>
+                            <constraint firstItem="d5i-4d-9KX" firstAttribute="top" secondItem="onf-Wy-6ta" secondAttribute="top" id="oM4-eF-IU6"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="webView" destination="d5i-4d-9KX" id="mOu-eA-Kbc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CrP-o3-tKA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="760" y="-225"/>
+        </scene>
         <!--GALLERY-->
         <scene sceneID="f7i-Qd-P9z">
             <objects>
@@ -179,6 +213,13 @@
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <segue destination="rBo-i2-X6q" kind="showDetail" identifier="galleryDetail" action="showViewController:sender:" id="WVc-si-hbd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZX-vC-ljM">
+                                <rect key="frame" x="0.0" y="262" width="320" height="44"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="9VB-4e-Lpi" kind="show" identifier="videoOpen" id="Szo-o4-5aT"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WIM-NZ-aHr">

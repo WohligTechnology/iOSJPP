@@ -18,6 +18,7 @@
 		366F19DE1C58F55800321669 /* bookTicket.xib in Resources */ = {isa = PBXBuildFile; fileRef = 366F19DD1C58F55800321669 /* bookTicket.xib */; };
 		3685BD421C5A163000BC44D0 /* upcoming.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3685BD411C5A163000BC44D0 /* upcoming.xib */; };
 		3685BD441C5A164B00BC44D0 /* upcoming.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3685BD431C5A164B00BC44D0 /* upcoming.swift */; };
+		36B789791C5A70380098C426 /* VideoPlayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B789781C5A70380098C426 /* VideoPlayController.swift */; };
 		36F2CE8A1C56561300D0D2D6 /* player.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36F2CE891C56561300D0D2D6 /* player.xib */; };
 		36F2CE8C1C56561F00D0D2D6 /* player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F2CE8B1C56561F00D0D2D6 /* player.swift */; };
 		36F2CE8F1C56584400D0D2D6 /* galleryAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F2CE8E1C56584400D0D2D6 /* galleryAlbum.swift */; };
@@ -99,6 +100,7 @@
 		366F19DD1C58F55800321669 /* bookTicket.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = bookTicket.xib; sourceTree = "<group>"; };
 		3685BD411C5A163000BC44D0 /* upcoming.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = upcoming.xib; sourceTree = "<group>"; };
 		3685BD431C5A164B00BC44D0 /* upcoming.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = upcoming.swift; sourceTree = "<group>"; };
+		36B789781C5A70380098C426 /* VideoPlayController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPlayController.swift; sourceTree = "<group>"; };
 		36F2CE891C56561300D0D2D6 /* player.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = player.xib; sourceTree = "<group>"; };
 		36F2CE8B1C56561F00D0D2D6 /* player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = player.swift; sourceTree = "<group>"; };
 		36F2CE8E1C56584400D0D2D6 /* galleryAlbum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = galleryAlbum.swift; sourceTree = "<group>"; };
@@ -339,6 +341,7 @@
 				36F2CEAE1C5771D800D0D2D6 /* MerchandiseController.swift */,
 				36F2CEB01C5771F200D0D2D6 /* WallpaperController.swift */,
 				366F19D61C58EFBD00321669 /* WebController.swift */,
+				36B789781C5A70380098C426 /* VideoPlayController.swift */,
 				366F19D81C58F32700321669 /* BookTicketController.swift */,
 				36F2CEB21C57720600D0D2D6 /* WallpaperInsideController.swift */,
 				36F2CEB41C57721800D0D2D6 /* PointTableController.swift */,
@@ -665,6 +668,7 @@
 				36F2CEB31C57720600D0D2D6 /* WallpaperInsideController.swift in Sources */,
 				362A175D1C58AA6500B11F22 /* team2.swift in Sources */,
 				36F9C1831C5616B1003D02AB /* Layout.swift in Sources */,
+				36B789791C5A70380098C426 /* VideoPlayController.swift in Sources */,
 				36F9C1731C55F948003D02AB /* SlideMenuController.swift in Sources */,
 				36F2CEB71C57722B00D0D2D6 /* AboutController.swift in Sources */,
 				36F2CE991C5739F400D0D2D6 /* media.swift in Sources */,

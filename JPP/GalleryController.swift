@@ -20,13 +20,19 @@ class GalleryController: UIViewController,UITableViewDataSource,UITableViewDeleg
     var pinkBar:UIView!
     
     @IBAction func videoButtonTap(sender: AnyObject) {
-        
-        pinkBar.frame.origin.x = self.view.frame.width/2;
-        
+        if(activeGal != 1) {
+            activeGal = 1;
+            pinkBar.frame.origin.x = self.view.frame.width/2;
+            rest.getVideo(GalleryLoaded)
+        }
     }
     @IBAction func photoButtonTap(sender: AnyObject) {
+        if(activeGal != 0) {
+            activeGal = 0;
+            pinkBar.frame.origin.x = 0;
+            rest.getGallery(GalleryLoaded)
+        }
         
-        pinkBar.frame.origin.x = 0;
     }
     
     var photosJson = JSON([])
@@ -51,7 +57,7 @@ class GalleryController: UIViewController,UITableViewDataSource,UITableViewDeleg
         
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -68,30 +74,49 @@ class GalleryController: UIViewController,UITableViewDataSource,UITableViewDeleg
         tableView.separatorStyle = UITableViewCellSeparatorStyle.None
         tableView.tableFooterView = UIView()
         let cell = tableView.dequeueReusableCellWithIdentifier("galCell", forIndexPath: indexPath)
-        
-//        print(photosJson);
-        if((photosJson[indexPath.row]["image"].string) != nil) {
-            let mediaBox = galleryAlbum(frame: CGRectMake(8,16,self.view.frame.width-16,200));
-            mediaBox.galleryTitle.text = photosJson[indexPath.row]["name"].stringValue
-            mediaBox.galleryBanner.image = rest.getThumb(photosJson[indexPath.row]["image"].string!)
-            cell.addSubview(mediaBox)
+        if(activeGal == 0 ) {
+            if((photosJson[indexPath.row]["image"].string) != nil) {
+                let mediaBox = galleryAlbum(frame: CGRectMake(8,16,self.view.frame.width-16,200));
+                mediaBox.galleryTitle.text = photosJson[indexPath.row]["name"].stringValue
+                mediaBox.galleryBanner.image = rest.getThumb(photosJson[indexPath.row]["image"].string!)
+                cell.addSubview(mediaBox)
+            }
         }
+        if(activeGal == 1 ) {
+            if((photosJson[indexPath.row]["image"].string) != nil) {
+                let mediaBox = galleryAlbum(frame: CGRectMake(8,16,self.view.frame.width-16,200));
+                mediaBox.galleryTitle.text = photosJson[indexPath.row]["name"].stringValue
+                let image = photosJson[indexPath.row]["url"].stringValue;
+                print(rest.getYoutubeImage(image));
+                mediaBox.galleryBanner.image = rest.getImageExternalURL(rest.getYoutubeImage(image))
+                cell.addSubview(mediaBox)
+            }
+        }
+        
         return cell
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        galleryID = photosJson[indexPath.row]["id"].string!
-        performSegueWithIdentifier("galleryDetail", sender: nil)
+        if(activeGal == 0)
+        {
+            galleryID = photosJson[indexPath.row]["id"].string!
+            performSegueWithIdentifier("galleryDetail", sender: nil)
+        }
+        if(activeGal == 1)
+        {
+            videoIDGlo = photosJson[indexPath.row]["url"].string!
+            performSegueWithIdentifier("videoOpen", sender: nil)
+        }
     }
-
+    
     /*
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // Get the new view controller using segue.destinationViewController.
+    // Pass the selected object to the new view controller.
     }
     */
-
+    
 }

@@ -10,16 +10,45 @@ import Foundation
 import SwiftHTTP
 import SwiftyJSON
 
-let adminUrl = "http://192.168.0.124/jppbackend/";
-//let adminUrl = "http://wohlig.co.in/jppbackend/";
+//let adminUrl = "http://192.168.0.124/jppbackend/";
+let adminUrl = "http://wohlig.co.in/jppbackend/";
 let imageURL = adminUrl + "uploads/";
 let apiURL = adminUrl + "index.php/json/";
 
 public class RestApi {
     
+    public func getYoutubeImage(videoID:String) -> String {
+        return "http://img.youtube.com/vi/" + videoID + "/hqdefault.jpg"
+    }
+    
+    public func getVideo( completion: ( (JSON) -> Void) )  {
+        var json = JSON(1);
+        do {
+            let opt = try HTTP.GET(apiURL + "getAllVideoGallery")
+            opt.start { response in
+                if let err = response.error {
+                    print("error: \(err.localizedDescription)")
+                    return //also notify app of failure as needed
+                }
+                json  = JSON(data: response.data)
+                completion(json);
+            }
+        } catch let error {
+            print("got an error creating the request: \(error)")
+        }
+    }
+
+
+    
     
     public func getImage(urlStr:String) -> UIImage {
         let url = NSURL(string: imageURL + urlStr)
+        let data = NSData(contentsOfURL: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check
+        return UIImage(data: data!)!
+    }
+    
+    public func getImageExternalURL(urlStr:String) -> UIImage {
+        let url = NSURL(string: urlStr)
         let data = NSData(contentsOfURL: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check
         return UIImage(data: data!)!
     }
