@@ -9,16 +9,17 @@ import UIKit
 
 @IBDesignable class playerInside: UIView {
     
-    @IBOutlet weak var playerImage: player!
-    @IBOutlet weak var playerName: player!
-    @IBOutlet weak var playerPosition: player!
-    @IBOutlet weak var playerNationality: UILabel!
+    @IBOutlet weak var playerPer: player!
     
-    @IBOutlet weak var playerBirth: UILabel!
-    @IBOutlet weak var playerJerseyno: UILabel!
-    @IBOutlet weak var playerDesc: UILabel!
+    @IBOutlet weak var playerNative: UILabel!
     
+    @IBOutlet weak var playerAge: UILabel!
     
+    @IBOutlet weak var playerJersey: UILabel!
+    
+    @IBOutlet weak var playerAchivements: UILabel!
+    
+    @IBOutlet weak var playerTournaments: UILabel!
     
     override init(frame: CGRect) {
         super.init(frame: frame)

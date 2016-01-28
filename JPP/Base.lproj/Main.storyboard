@@ -94,17 +94,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3bX-6R-Z9b">
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gov-pp-Dhf">
+                                <rect key="frame" x="137" y="269" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="633-qu-Ovh" kind="show" identifier="homeNews" id="ded-IQ-QY3"/>
+                                </connections>
+                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3bX-6R-Z9b">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <subviews>
-                                    <button opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gov-pp-Dhf">
-                                        <rect key="frame" x="210" y="379" width="46" height="30"/>
-                                        <state key="normal" title="Button"/>
-                                        <connections>
-                                            <segue destination="633-qu-Ovh" kind="show" identifier="homeNews" id="ded-IQ-QY3"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="0.76862746477127075" green="0.94117647409439087" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -701,10 +699,10 @@
             </objects>
             <point key="canvasLocation" x="1105" y="1126"/>
         </scene>
-        <!--KVOW YOUR TEAM INSIDE-->
+        <!--KNOW YOUR TEAM INSIDE-->
         <scene sceneID="jHu-HA-akC">
             <objects>
-                <viewController title="KVOW YOUR TEAM INSIDE" id="3Bo-nL-RZg" sceneMemberID="viewController">
+                <viewController title="KNOW YOUR TEAM INSIDE" id="3Bo-nL-RZg" customClass="KvowTeamInsideController" customModule="Jaipur_Pink_Panther" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nhq-Kh-76i"/>
                         <viewControllerLayoutGuide type="bottom" id="IUM-6o-lId"/>
@@ -727,6 +725,9 @@
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="playerIn" destination="Liw-XK-C8i" id="6Pm-5c-duh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HIv-Zd-NtY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

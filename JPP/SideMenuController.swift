@@ -77,7 +77,7 @@ class SideMenuController: UIViewController, UITableViewDataSource, UITableViewDe
         return 1
     }
     
-    var data = ["HOME", "SCHEDULE", "GALLERY","KNOW YOUR TEAM","NEWS & MEDIA","MERCHANDISE","WALLPAPER","POINTS TABLE","ABOUT US"]
+    var data = ["HOME", "SCHEDULE", "GALLERY","KNOW YOUR PANTHERS","NEWS & MEDIA","MERCHANDISE","WALLPAPER","POINTS TABLE","ABOUT"]
     
     // MARK: - UITableViewDataSource
     

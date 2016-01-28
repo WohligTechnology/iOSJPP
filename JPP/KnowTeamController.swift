@@ -13,17 +13,26 @@ class KnowTeamController: UIViewController,UICollectionViewDataSource,UICollecti
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setNavigationBarItemText("KNOW YOUR PANTHERS")
+    
         // Do any additional setup after loading the view.
     }
     
+
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5;
+        return players.count;
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("playerCell", forIndexPath: indexPath) as UICollectionViewCell
-        cell.addSubview(player(frame: CGRectMake(8,8,cell.frame.width - 8,cell.frame.height - 8)));
+        //cell.addSubview(player(frame: CGRectMake(8,8,cell.frame.width - 8,cell.frame.height - 8)));
+        
+            let mediaBox = player(frame: CGRectMake(8,8,cell.frame.width - 8,cell.frame.height - 8));
+            mediaBox.playerTitle.text = players[indexPath.row].name
+            mediaBox.playerImage.image = UIImage(named:players[indexPath.row].image) 
+            mediaBox.playerPosition.text = players[indexPath.row].type
+            cell.addSubview(mediaBox)
+        
         
         
         return cell
@@ -35,10 +44,13 @@ class KnowTeamController: UIViewController,UICollectionViewDataSource,UICollecti
         return CGSizeMake(self.view.frame.width/2 - 4 ,self.view.frame.width/2)
     }
 
-//    func collectionView(collectionView: UICollectionView,
-//        didSelectItemAtIndexPath indexPath: NSIndexPath) {
+    func collectionView(collectionView: UICollectionView,
+        didSelectItemAtIndexPath indexPath: NSIndexPath) {
+            playerIndex = indexPath.row
+            
+            
 //            performSegueWithIdentifier("playerDetail", sender: nil)
-//    }
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

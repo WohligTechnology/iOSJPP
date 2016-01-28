@@ -10,8 +10,8 @@ import Foundation
 import SwiftHTTP
 import SwiftyJSON
 
-//let adminUrl = "http://192.168.0.124/jppbackend/";
-let adminUrl = "http://wohlig.co.in/jppbackend/";
+let adminUrl = "http://192.168.0.124/jppbackend/";
+//let adminUrl = "http://wohlig.co.in/jppbackend/";
 let imageURL = adminUrl + "uploads/";
 let apiURL = adminUrl + "index.php/json/";
 
