@@ -81,6 +81,7 @@
 		C23892DA1C58C92700CA4DC1 /* thumbnailImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23892D91C58C92700CA4DC1 /* thumbnailImage.swift */; };
 		C28B79F11C58DAC2001C4474 /* newsDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = C28B79F01C58DAC2001C4474 /* newsDetail.xib */; };
 		C28B79F31C58DF47001C4474 /* newsDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28B79F21C58DF47001C4474 /* newsDetail.swift */; };
+		C29C75941C5A38BF0091FF6E /* TeamPlayers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29C75931C5A38BF0091FF6E /* TeamPlayers.swift */; };
 		C2FF852B1C58D05000F2CFED /* singleThumbnailImage.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2FF852A1C58D05000F2CFED /* singleThumbnailImage.xib */; };
 		C2FF852D1C58D17A00F2CFED /* singleThumbnailImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FF852C1C58D17A00F2CFED /* singleThumbnailImage.swift */; };
 /* End PBXBuildFile section */
@@ -163,6 +164,7 @@
 		C23892D91C58C92700CA4DC1 /* thumbnailImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = thumbnailImage.swift; sourceTree = "<group>"; };
 		C28B79F01C58DAC2001C4474 /* newsDetail.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = newsDetail.xib; sourceTree = "<group>"; };
 		C28B79F21C58DF47001C4474 /* newsDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = newsDetail.swift; sourceTree = "<group>"; };
+		C29C75931C5A38BF0091FF6E /* TeamPlayers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamPlayers.swift; sourceTree = "<group>"; };
 		C2FF852A1C58D05000F2CFED /* singleThumbnailImage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = singleThumbnailImage.xib; sourceTree = "<group>"; };
 		C2FF852C1C58D17A00F2CFED /* singleThumbnailImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = singleThumbnailImage.swift; sourceTree = "<group>"; };
 		FD4C274A56DABBBF9AF41245 /* Pods_JPP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JPP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -416,6 +418,7 @@
 			isa = PBXGroup;
 			children = (
 				36FF12761C59319900E0F990 /* RestApi.swift */,
+				C29C75931C5A38BF0091FF6E /* TeamPlayers.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -670,6 +673,7 @@
 				36F2CEB11C5771F200D0D2D6 /* WallpaperController.swift in Sources */,
 				36F2CEAD1C5771AE00D0D2D6 /* KvowTeamInsideController.swift in Sources */,
 				78238FE21C57A77E0067E7D5 /* about.swift in Sources */,
+				C29C75941C5A38BF0091FF6E /* TeamPlayers.swift in Sources */,
 				36F2CE961C565DE100D0D2D6 /* team.swift in Sources */,
 				36F9C1B51C564EF4003D02AB /* table.swift in Sources */,
 				36F2CEA31C5770E400D0D2D6 /* GalleryInsideController.swift in Sources */,
