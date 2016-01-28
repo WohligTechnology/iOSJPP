@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -34,7 +34,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="paX-RA-nnL">
-                            <rect key="frame" x="15" y="9" width="25" height="21"/>
+                            <rect key="frame" x="10" y="9" width="25" height="21"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="25" id="Vh5-47-JXJ"/>
                             </constraints>
@@ -43,7 +43,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JAIPUR PINK PANTHER" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bCC-gT-Key">
-                            <rect key="frame" x="45" y="9" width="135" height="21"/>
+                            <rect key="frame" x="40" y="9" width="135" height="21"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="135" id="ita-38-0xM"/>
                             </constraints>
@@ -51,7 +51,7 @@
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="90" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U4h-3l-veQ">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="90" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U4h-3l-veQ">
                             <rect key="frame" x="285" y="9" width="25" height="21"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="25" id="M0o-ge-cf8"/>
@@ -60,8 +60,8 @@
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bGT-CU-qne">
-                            <rect key="frame" x="185" y="9" width="25" height="21"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bGT-CU-qne">
+                            <rect key="frame" x="190" y="9" width="25" height="21"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="25" id="yit-xG-ixv"/>
                             </constraints>
@@ -69,8 +69,8 @@
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="28" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lC1-yR-cxY">
-                            <rect key="frame" x="215" y="9" width="25" height="21"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="28" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lC1-yR-cxY">
+                            <rect key="frame" x="220" y="9" width="25" height="21"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="25" id="qhF-T5-YBi"/>
                             </constraints>
@@ -78,8 +78,8 @@
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F3r-DV-jLw">
-                            <rect key="frame" x="245" y="9" width="25" height="21"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F3r-DV-jLw">
+                            <rect key="frame" x="250" y="9" width="25" height="21"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="25" id="4Hf-s3-R5n"/>
                             </constraints>
@@ -91,17 +91,17 @@
                     <color key="backgroundColor" white="1" alpha="0.34894935344827588" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstItem="F3r-DV-jLw" firstAttribute="leading" secondItem="lC1-yR-cxY" secondAttribute="trailing" constant="5" id="0f0-cF-PVm"/>
-                        <constraint firstItem="paX-RA-nnL" firstAttribute="baseline" secondItem="U4h-3l-veQ" secondAttribute="baseline" id="25u-hi-630"/>
                         <constraint firstItem="bCC-gT-Key" firstAttribute="leading" secondItem="paX-RA-nnL" secondAttribute="trailing" constant="5" id="7C5-tL-ukS"/>
-                        <constraint firstItem="paX-RA-nnL" firstAttribute="baseline" secondItem="F3r-DV-jLw" secondAttribute="baseline" id="CBv-Mr-8f1"/>
+                        <constraint firstItem="lC1-yR-cxY" firstAttribute="baseline" secondItem="bGT-CU-qne" secondAttribute="baseline" id="8D5-Yw-vDL"/>
+                        <constraint firstItem="U4h-3l-veQ" firstAttribute="baseline" secondItem="lC1-yR-cxY" secondAttribute="baseline" id="CXm-gh-FTv"/>
                         <constraint firstItem="lC1-yR-cxY" firstAttribute="leading" secondItem="bGT-CU-qne" secondAttribute="trailing" constant="5" id="D3B-a2-Yd9"/>
                         <constraint firstItem="paX-RA-nnL" firstAttribute="baseline" secondItem="bCC-gT-Key" secondAttribute="baseline" id="DIb-Ro-W0i"/>
+                        <constraint firstItem="U4h-3l-veQ" firstAttribute="baseline" secondItem="F3r-DV-jLw" secondAttribute="baseline" id="Ey0-qi-LQR"/>
                         <constraint firstItem="paX-RA-nnL" firstAttribute="top" secondItem="2Hu-pa-83X" secondAttribute="top" constant="9" id="IpL-bD-yTA"/>
-                        <constraint firstItem="paX-RA-nnL" firstAttribute="baseline" secondItem="lC1-yR-cxY" secondAttribute="baseline" id="Pzh-kT-Hxa"/>
-                        <constraint firstItem="paX-RA-nnL" firstAttribute="leading" secondItem="2Hu-pa-83X" secondAttribute="leading" constant="15" id="deF-st-xN0"/>
-                        <constraint firstItem="U4h-3l-veQ" firstAttribute="leading" secondItem="F3r-DV-jLw" secondAttribute="trailing" constant="15" id="kqD-7v-fo1"/>
-                        <constraint firstItem="bGT-CU-qne" firstAttribute="leading" secondItem="bCC-gT-Key" secondAttribute="trailing" constant="5" id="nn0-yc-Kni"/>
-                        <constraint firstItem="paX-RA-nnL" firstAttribute="baseline" secondItem="bGT-CU-qne" secondAttribute="baseline" id="wIT-wY-9eq"/>
+                        <constraint firstItem="paX-RA-nnL" firstAttribute="leading" secondItem="2Hu-pa-83X" secondAttribute="leading" constant="10" id="deF-st-xN0"/>
+                        <constraint firstItem="U4h-3l-veQ" firstAttribute="leading" secondItem="F3r-DV-jLw" secondAttribute="trailing" constant="10" id="kqD-7v-fo1"/>
+                        <constraint firstAttribute="trailing" secondItem="U4h-3l-veQ" secondAttribute="trailing" constant="10" id="oib-pA-LeO"/>
+                        <constraint firstItem="bGT-CU-qne" firstAttribute="baseline" secondItem="bCC-gT-Key" secondAttribute="baseline" id="wCH-e9-2kB"/>
                     </constraints>
                 </view>
             </subviews>
