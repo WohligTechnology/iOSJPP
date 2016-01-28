@@ -91,4 +91,21 @@ public class RestApi {
         }
     }
     
+    func getHome(completion: ( (JSON) -> Void)) {
+        var json = JSON(1);
+        do {
+            let opt = try HTTP.GET(apiURL + "getHomeContent")
+            opt.start { response in
+                if let err = response.error {
+                    print("error: \(err.localizedDescription)")
+                    return //also notify app of failure as needed
+                }
+                json  = JSON(data: response.data)
+                completion(json);
+            }
+        } catch let error {
+            print("got an error creating the request: \(error)")
+        }
+    }
+
 }

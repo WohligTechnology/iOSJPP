@@ -267,9 +267,9 @@
 				36F9C1841C5616C6003D02AB /* Views */,
 				36F9C1871C5616FC003D02AB /* StoryBoards */,
 				36FF12751C59317E00E0F990 /* Model */,
+				36F9C18D1C56282B003D02AB /* Fonts */,
 				36F9C1661C55EDBF003D02AB /* Assets.xcassets */,
 				36F9C16B1C55EDBF003D02AB /* Info.plist */,
-				36F9C18D1C56282B003D02AB /* Fonts */,
 			);
 			path = JPP;
 			sourceTree = "<group>";

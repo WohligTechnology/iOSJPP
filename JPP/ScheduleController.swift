@@ -8,8 +8,12 @@
 
 import UIKit
 import EventKit
+import SwiftyJSON
 
 class ScheduleController: UIViewController {
+    
+    let topSpacing = 32;
+    let spacingPink = 8;
     
     
     
@@ -67,66 +71,75 @@ class ScheduleController: UIViewController {
             print("Bad things happened")
         }
     }
+    func scheduleComplete (json:JSON) {
+        
+        dispatch_async(dispatch_get_main_queue(), {
+            
+            self.verticalLayout = VerticalFitLayout(width: self.view.frame.width);
+            self.scrollView.insertSubview(self.verticalLayout, atIndex: 0)
+            
+            let upcoming = schedule(frame: CGRectMake(8,8,self.verticalLayout.frame.width-16,355));
+            self.verticalLayout.addSubview(upcoming);
+            
+            
+            upcoming.trapLabel.text="UPCOMING MATCH";
+           
+            upcoming.addToCalendar.addTarget(self, action: "eventInit:", forControlEvents: UIControlEvents.TouchUpInside)
+            
+            var whiteView:UIView!
+            whiteView = UIView(frame:CGRectMake(0,8,self.verticalLayout.frame.width,1000));
+            
+            whiteView.backgroundColor = UIColor.whiteColor()
+            
+            let trap = trapezium(frame: CGRectMake(8,0,self.verticalLayout.frame.width-16,34));
+            self.resizeView(8);
+            whiteView.addSubview(trap);
+            trap.trapeziumTitle.text="OTHER MATCHES";
+            
+            self.verticalLayout.addSubview(whiteView);
+            
+            for(var i=0;i<json.count;i++)
+            {
+                
+                let topDistance = self.topSpacing+self.spacingPink+((65+self.spacingPink)*(i));
+                let insideTable = matches(frame: CGRectMake(8,CGFloat(topDistance),self.verticalLayout.frame.width-16,65));
+                insideTable.matchesTeams.text = json[i]["team1"].string! + " VS " + json[i]["team2"].string!
+                
+                insideTable.matchesDate.text = json[i]["starttimedate"].string
+                
+                
+                whiteView.frame.size.height = CGFloat(topDistance+65+8);
+                whiteView.addSubview(insideTable);
+            }
+            
+            
+            let bookTic = bookTicket(frame:CGRectMake(8,8,self.verticalLayout.frame.width-16,44));
+            
+            
+            self.verticalLayout.addSubview(bookTic);
+            
+            
+            
+            self.resizeView(8);
+            
+            bookTic.bookButton.addTarget(self, action: "BookButtonTap:", forControlEvents: UIControlEvents.TouchUpInside)
+            
+            
+        })
+        
+        
+        
+        
+    }
 
 
     @IBOutlet weak var scrollView: UIScrollView!
     var verticalLayout : VerticalLayout!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
         self.setNavigationBarItemText("SCHEDULE")
-        
-        self.verticalLayout = VerticalLayout(width: self.view.frame.width);
-        self.scrollView.insertSubview(self.verticalLayout, atIndex: 0)
-        
-        let upcoming = schedule(frame: CGRectMake(8,8,verticalLayout.frame.width-16,355));
-        self.verticalLayout.addSubview(upcoming);
-
-        
-        upcoming.trapLabel.text="UPCOMING MATCH";
-        
-        upcoming.addToCalendar.addTarget(self, action: "eventInit:", forControlEvents: UIControlEvents.TouchUpInside)
-        
-        
-        let whiteView = UIView(frame:CGRectMake(0,8,verticalLayout.frame.width,1000));
-        
-        whiteView.backgroundColor = UIColor.whiteColor()
-        
-        let trap = trapezium(frame: CGRectMake(8,0,verticalLayout.frame.width-16,34));
-        resizeView(8);
-        whiteView.addSubview(trap);
-        trap.trapeziumTitle.text="OTHER MATCHES";
-        
-        self.verticalLayout.addSubview(whiteView);
-        
-        
-        let topSpacing = 32;
-        let spacingPink = 8;
-        
-        
-        for(var i=0;i<3;i++)
-        {
-            
-            let topDistance = topSpacing+spacingPink+((65+spacingPink)*(i));
-            let insideTable = matches(frame: CGRectMake(8,CGFloat(topDistance),verticalLayout.frame.width-16,65));
-            whiteView.frame.size.height = CGFloat(topDistance+65+8);
-            whiteView.addSubview(insideTable);
-        }
-        
-        
-        let bookTic = bookTicket(frame:CGRectMake(8,8,verticalLayout.frame.width-16,44));
-        
-        
-        self.verticalLayout.addSubview(bookTic);
-
-        
-
-        resizeView(8);
-        
-        bookTic.bookButton.addTarget(self, action: "BookButtonTap:", forControlEvents: UIControlEvents.TouchUpInside)
-        
-        
+        rest.getSchedule(scheduleComplete)
         
     }
     

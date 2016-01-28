@@ -18,31 +18,43 @@ class HomeController: UIViewController {
 //        print(json);
 //    }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        
-        
-//        rest.callAPI(checkThis)
-        
+    
+    func homeLoaded(json:JSON) {
+        print(json);
+         dispatch_async(dispatch_get_main_queue(), {
         self.setNavigationBarItem()
         self.verticalLayout = VerticalLayout(width: self.view.frame.width);
         self.scrollView.insertSubview(self.verticalLayout, atIndex: 0)
         
         
-        let updates = schedule(frame: CGRectMake(8,8,verticalLayout.frame.width-16,300));
+        let updates = schedule(frame: CGRectMake(8,8,self.verticalLayout.frame.width-16,300));
         self.verticalLayout.addSubview(updates);
         updates.addToCalendar.hidden = true;
-        
+            
+        updates.team1Image.image = UIImage(named: "t" + json["latestupdate"]["team1id"].string! + ".png")
+        updates.team2Image.image = UIImage(named: "t" + json["latestupdate"]["team2id"].string! + ".png")
+        updates.team1Score.text = json["latestupdate"]["score1"].string
+        updates.team2Score.text = json["latestupdate"]["score2"].string
+        updates.matchDate.text = json["latestupdate"]["starttimedate"].string
+        updates.matchStadium.text = json["latestupdate"]["stadium"].string
+            
         updates.trapLabel.text = "LATEST UPDATE"
         
-        let newsBox = news(frame: CGRectMake(8,8,verticalLayout.frame.width-16,280) );
-        self.verticalLayout.addSubview(newsBox);
+            if((json["news"]["id"].string) != nil) {
+                let newsBox = news(frame: CGRectMake(8,8,self.verticalLayout.frame.width-16,280) );
+                
+                newsBox.newsDate.text = json["news"]["timestamp"].string
+                newsBox.newsDesc.text = json["news"]["content"].string
+                newsBox.newsTitle.text = json["news"]["name"].string
+                newsBox.newsImage.image = rest.getImage(json["news"]["image"].string!)
+                self.verticalLayout.addSubview(newsBox);
+            }
         
-        let teamTitle = team2(frame: CGRectMake(8,8,verticalLayout.frame.width-16,34) );
+        
+        let teamTitle = team2(frame: CGRectMake(8,8,self.verticalLayout.frame.width-16,34) );
         self.verticalLayout.addSubview(teamTitle);
         
-        let PinkBox = UIView(frame:CGRectMake(8,0,verticalLayout.frame.width-16,300));
+        let PinkBox = UIView(frame:CGRectMake(8,0,self.verticalLayout.frame.width-16,300));
         PinkBox.backgroundColor = PinkColor;
         self.verticalLayout.addSubview(PinkBox);
         
@@ -75,21 +87,40 @@ class HomeController: UIViewController {
         let spacingPink = 3;
         
         
-        for(var i=0;i<5;i++)
+        for(var i=0;i<json["points"].count;i++)
         {
             
             let topDistance = topSpaceinPink+spacingPink+((44+spacingPink)*(i+1));
+            
             let insideTable = table(frame: CGRectMake(8,CGFloat(topDistance),PinkBox.frame.width-16,44));
+            
+            insideTable.tableNo.text = json["points"][i]["id"].string
+            
+            insideTable.tableTeam.text = json["points"][i]["name"].string
+            
+            insideTable.tablePlayed.text = json["points"][i]["played"].string
+            
+            insideTable.tableWon.text = json["points"][i]["wins"].string
+            
+            insideTable.tableLost.text = json["points"][i]["lost"].string
+            
+            insideTable.tablePoint.text = json["points"][i]["point"].string
+            
+            PinkBox.frame.size.height = CGFloat(topDistance + 44 + 8)
             
             PinkBox.addSubview(insideTable);
         }
+        self.resizeView(8);
+        })
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
         
         
+        rest.getHome(homeLoaded)
         
-        
-        
-        resizeView(8);
         
     }
     

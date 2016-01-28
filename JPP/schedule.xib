@@ -26,9 +26,9 @@
                 <outlet property="matchDate" destination="HYy-N1-L39" id="fhM-Os-sz5"/>
                 <outlet property="matchStadium" destination="W9F-u7-XXP" id="Wy6-eX-NLf"/>
                 <outlet property="team1Image" destination="gbv-md-THd" id="Cyo-2C-PpE"/>
-                <outlet property="team1Score" destination="6SV-sQ-PgB" id="gbj-UY-kl8"/>
+                <outlet property="team1Score" destination="bP1-KF-Ecy" id="oF0-N7-q1j"/>
                 <outlet property="team2Image" destination="G85-z8-6EB" id="ttv-g3-1mL"/>
-                <outlet property="team2Score" destination="6SV-sQ-PgB" id="fYF-M2-v7p"/>
+                <outlet property="team2Score" destination="y1r-SF-2ww" id="x6q-87-gCg"/>
                 <outlet property="trapLabel" destination="Oaa-vd-nht" id="Qtq-W1-bP1"/>
             </connections>
         </placeholder>
@@ -82,9 +82,6 @@
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=":" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6SV-sQ-PgB">
                     <rect key="frame" x="8" y="128" width="412" height="107"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="107" id="Vj7-Yg-ad0"/>
-                    </constraints>
                     <fontDescription key="fontDescription" name="Oswald-Bold" family="Oswald" pointSize="72"/>
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
