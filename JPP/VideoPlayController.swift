@@ -18,6 +18,8 @@ class VideoPlayController: UIViewController {
         let requestObj = NSURLRequest(URL: url!);
         webView.loadRequest(requestObj);
         
+        self.title = "Video";
+        
         // Do any additional setup after loading the view.
     }
     

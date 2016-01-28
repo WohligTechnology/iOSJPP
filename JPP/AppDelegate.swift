@@ -10,6 +10,7 @@ import UIKit
 
 var galleryID = "0";
 var videoIDGlo = "0";
+
 var galleryImage = "0";
 
 

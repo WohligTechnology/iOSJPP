@@ -20,6 +20,7 @@ class GalleryInsideController: UIViewController,UICollectionViewDataSource,UICol
     override func viewDidLoad() {
         
         loadingInit()
+        
         self.view.addSubview(loaderGlo)
         super.viewDidLoad()
         if(isGalWal == 0)
