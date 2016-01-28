@@ -47,7 +47,7 @@ class NewsController: UIViewController, UITableViewDataSource, UITableViewDelega
             mediaBox.mediaTitle.text = newsJSON[indexPath.row]["name"].string
             mediaBox.mediaDesc.text = newsJSON[indexPath.row]["content"].string
             mediaBox.mediaDate.text = newsJSON[indexPath.row]["timestamp"].string
-            mediaBox.mediaImage.image = rest.getImage(newsJSON[indexPath.row]["image"].string!)
+            mediaBox.mediaImage.image = rest.getThumb(newsJSON[indexPath.row]["image"].string!)
             cell.addSubview(mediaBox)
         }
         

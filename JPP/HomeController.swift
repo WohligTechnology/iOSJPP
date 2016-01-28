@@ -57,7 +57,7 @@ class HomeController: UIViewController,UIGestureRecognizerDelegate {
                 newsBox.newsDate.text = json["news"]["timestamp"].string
                 newsBox.newsDesc.text = json["news"]["content"].string
                 newsBox.newsTitle.text = json["news"]["name"].string
-                newsBox.newsImage.image = rest.getImage(json["news"]["image"].string!)
+                newsBox.newsImage.image = rest.getThumb(json["news"]["image"].string!)
                 
                 let tap = UITapGestureRecognizer(target: self, action: Selector("handleTap:"))
                 tap.delegate = self

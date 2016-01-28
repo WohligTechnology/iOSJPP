@@ -72,9 +72,8 @@ class GalleryController: UIViewController,UITableViewDataSource,UITableViewDeleg
 //        print(photosJson);
         if((photosJson[indexPath.row]["image"].string) != nil) {
             let mediaBox = galleryAlbum(frame: CGRectMake(8,16,self.view.frame.width-16,200));
-            print(photosJson[indexPath.row]["name"].stringValue);
-//            mediaBox.galleryTitle.text = photosJson[indexPath.row]["name"].stringValue
-            mediaBox.galleryBanner.image = rest.getImage(photosJson[indexPath.row]["image"].string!)
+            mediaBox.galleryTitle.text = photosJson[indexPath.row]["name"].stringValue
+            mediaBox.galleryBanner.image = rest.getThumb(photosJson[indexPath.row]["image"].string!)
             cell.addSubview(mediaBox)
         }
         return cell
