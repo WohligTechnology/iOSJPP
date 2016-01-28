@@ -7,23 +7,23 @@
 //
 
 import UIKit
-import SwiftyJSON
+//import SwiftyJSON
 
 class HomeController: UIViewController {
 
     @IBOutlet weak var scrollView: UIScrollView!
     var verticalLayout : VerticalLayout!
     
-    func checkThis(json:JSON) {
-        print(json);
-    }
+//    func checkThis(json:JSON) {
+//        print(json);
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
         
-        rest.callAPI(checkThis)
+//        rest.callAPI(checkThis)
         
         self.setNavigationBarItem()
         self.verticalLayout = VerticalLayout(width: self.view.frame.width);
