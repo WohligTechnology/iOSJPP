@@ -48,7 +48,7 @@ class GalleryController: UIViewController,UITableViewDataSource,UITableViewDeleg
         super.viewDidLoad()
         self.setNavigationBarItemText("GALLERY")
         
-        pinkBar = UIView(frame: CGRectMake(0,photosButton.frame.height,self.view.frame.width/2,2));
+        pinkBar = UIView(frame: CGRectMake(0,photosButton.frame.height,self.view.frame.width/2,3));
         pinkBar.backgroundColor = PinkColor;
         
         

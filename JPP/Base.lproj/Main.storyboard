@@ -179,7 +179,7 @@
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
                             </webView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
                             <constraint firstItem="d5i-4d-9KX" firstAttribute="bottom" secondItem="TTd-ro-jJY" secondAttribute="top" id="Hi1-0f-GNa"/>
                             <constraint firstItem="d5i-4d-9KX" firstAttribute="leading" secondItem="onf-Wy-6ta" secondAttribute="leading" id="Ibl-TV-gzH"/>
