@@ -66,7 +66,7 @@ class PointTableController: UIViewController,UITableViewDelegate,UITableViewData
         
         
         if((pointJson[indexPath.row]["name"].string) != nil) {
-            let mediaBox = table(frame: CGRectMake(0,8,self.view.frame.width-16,230));
+            let mediaBox = table(frame: CGRectMake(0,8,self.view.frame.width-32,230));
             mediaBox.tableTeam.text = pointJson[indexPath.row]["name"].string
             mediaBox.tableNo.text = pointJson[indexPath.row]["id"].string
             mediaBox.tablePlayed.text = pointJson[indexPath.row]["played"].string

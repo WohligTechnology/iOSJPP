@@ -3,6 +3,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="Oswald-Light.ttf">
@@ -88,10 +90,10 @@
                                             <rect key="frame" x="118" y="0.0" width="117" height="38"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AGE:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zJz-Lr-FPD">
-                                                    <rect key="frame" x="0.0" y="0.0" width="35" height="38"/>
+                                                    <rect key="frame" x="8" y="0.0" width="35" height="38"/>
                                                     <constraints>
+                                                        <constraint firstAttribute="width" constant="35" id="cOA-nf-Vkz"/>
                                                         <constraint firstAttribute="width" constant="61" id="dam-MP-YZT"/>
-                                                        <constraint firstAttribute="width" constant="35" id="uqF-pB-6bO"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="11"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -115,12 +117,13 @@
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="zJz-Lr-FPD" secondAttribute="bottom" id="06l-cT-qz6"/>
+                                                <constraint firstItem="zJz-Lr-FPD" firstAttribute="firstBaseline" secondItem="mgL-Sl-8jm" secondAttribute="firstBaseline" id="10e-IQ-VGg"/>
                                                 <constraint firstItem="mgL-Sl-8jm" firstAttribute="leading" secondItem="G9k-ad-ceb" secondAttribute="leading" constant="33" id="6nC-gD-ijG"/>
-                                                <constraint firstItem="zJz-Lr-FPD" firstAttribute="leading" secondItem="G9k-ad-ceb" secondAttribute="leading" id="Ft2-t8-jew"/>
+                                                <constraint firstItem="zJz-Lr-FPD" firstAttribute="leading" secondItem="G9k-ad-ceb" secondAttribute="leadingMargin" id="7Nb-6F-6qn"/>
                                                 <constraint firstAttribute="bottom" secondItem="mgL-Sl-8jm" secondAttribute="bottom" id="Osz-zS-llE"/>
                                                 <constraint firstItem="mgL-Sl-8jm" firstAttribute="top" secondItem="G9k-ad-ceb" secondAttribute="top" id="WoK-SO-XXd"/>
-                                                <constraint firstItem="zJz-Lr-FPD" firstAttribute="top" secondItem="G9k-ad-ceb" secondAttribute="top" id="gnh-fX-jAW"/>
+                                                <constraint firstAttribute="trailing" secondItem="zJz-Lr-FPD" secondAttribute="trailing" constant="74" id="bGX-st-mJt"/>
+                                                <constraint firstItem="zJz-Lr-FPD" firstAttribute="baseline" secondItem="mgL-Sl-8jm" secondAttribute="baseline" id="fTu-0v-1fI"/>
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lf6-go-dAt">
