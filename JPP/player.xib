@@ -49,7 +49,7 @@
                         </mask>
                     </variation>
                 </label>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5rT-VU-GnP">
+                <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5rT-VU-GnP">
                     <rect key="frame" x="20" y="220" width="254" height="2"/>
                     <color key="backgroundColor" red="0.70588237050000002" green="0.1176470593" blue="0.44705882670000002" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
