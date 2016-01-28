@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>DKChainableAnimationKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-JPP.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,32 +42,37 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>096C0F4D1752BE193E032304BCDA4DDA</key>
+		<key>186526C95A6E6A368E316AEBD475C8CB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4A3B231717CCD794B4CB0CA42CF397ED</key>
+		<key>5241AB01CA6451E7E89BE0237119DDE5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4FE8B96AF1DA51692E958EEA13C0266A</key>
+		<key>8A2E909F10308CADD2ED41EB30C60D20</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9BBC72714F217C5292E26F4CE59E6016</key>
+		<key>C5161AFCE11CB63B4566D3BADA004EE4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D9D0DEAFE2F673519165BFE895A17E4B</key>
+		<key>D0B4FDDEB22FAB880FBBD561F7DF88F5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EF50FF39463BC0892E62830339F98F94</key>
+		<key>F4F2439EAF1B4DB624479789790812EB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FC0459AEDEC37868B32652FA58FA6746</key>
 		<dict>
 			<key>primary</key>
 			<true/>

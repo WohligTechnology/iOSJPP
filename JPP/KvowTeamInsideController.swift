@@ -25,7 +25,7 @@ class KvowTeamInsideController: UIViewController {
         playerIn.playerAge.text = players[playerIndex].age
         playerIn.playerJersey.text = players[playerIndex].jerseyNo
 //
-        
+        self.title =  players[playerIndex].name
         
 //        self.setNavigationBarItemText("GANGADHAR MALLESH")
         

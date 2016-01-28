@@ -72,7 +72,6 @@ class ScheduleController: UIViewController {
         }
     }
     func scheduleComplete (json:JSON) {
-        //        print(json);
         dispatch_async(dispatch_get_main_queue(), {
             
             self.verticalLayout = VerticalFitLayout(width: self.view.frame.width);
@@ -127,12 +126,7 @@ class ScheduleController: UIViewController {
             self.resizeView(8);
             
             bookTic.bookButton.addTarget(self, action: "BookButtonTap:", forControlEvents: UIControlEvents.TouchUpInside)
-            
-            
         })
-        
-        
-        
         
     }
 
@@ -143,19 +137,22 @@ class ScheduleController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setNavigationBarItemText("SCHEDULE")
-        rest.getSchedule(scheduleComplete)
         
+        loadingInit()
+        self.view.addSubview(loaderGlo)
+        
+        rest.getSchedule(scheduleComplete)
     }
     
     func BookButtonTap(sender: UIButton) {
         self.performSegueWithIdentifier("bookWeb", sender: nil)
-        print("click")
     }
     
     func resizeView(offset:CGFloat)
     {
         self.verticalLayout.layoutSubviews()
         self.scrollView.contentSize = CGSize(width: self.verticalLayout.frame.width, height: self.verticalLayout.frame.height + offset)
+        loadingStop()
     }
 
     

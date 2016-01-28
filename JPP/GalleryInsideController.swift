@@ -11,20 +11,28 @@ import SwiftyJSON
 
 class GalleryInsideController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate {
 
+    
+    override func viewDidAppear(animated: Bool) {
+        
+        self.view.addSubview(loaderGlo)
+    }
+    
     override func viewDidLoad() {
+        
+        loadingInit()
+        self.view.addSubview(loaderGlo)
         super.viewDidLoad()
         if(isGalWal == 0)
         {
+            self.title =  GalleryInsideTitle
             rest.getGalleryById(galleryID,completion: newsLoaded)
         }
         else
         {
-            self.setNavigationBarItemText("WALLPAPER")
+            self.view.addSubview(loaderGlo)
             rest.getWallPaper(newsLoaded)
+            self.setNavigationBarItemText("WALLPAPER")
         }
-        
-        
-        
         navigationItem.leftBarButtonItem?.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "Oswald-Light", size: 20)!], forState: UIControlState.Normal)
         
         
@@ -38,7 +46,6 @@ class GalleryInsideController: UIViewController,UICollectionViewDataSource,UICol
     
     func newsLoaded (json:JSON) {
         jsonData = json;
-        print(json);
         dispatch_async(dispatch_get_main_queue(),{
            self.galleryTable.reloadData()
         });
@@ -69,6 +76,11 @@ class GalleryInsideController: UIViewController,UICollectionViewDataSource,UICol
             cell.addSubview(mediaBox)
         }
         
+        if(indexPath.row == jsonData.count-1)
+        {
+            loadingStop()
+        }
+        
         return cell
     }
     
@@ -82,6 +94,7 @@ class GalleryInsideController: UIViewController,UICollectionViewDataSource,UICol
         didSelectItemAtIndexPath indexPath: NSIndexPath) {
             
             galleryImage = jsonData[indexPath.row]["image"].string!
+        
             
             performSegueWithIdentifier("galleryImageDetail", sender: nil)
     }

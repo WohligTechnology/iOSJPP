@@ -21,6 +21,7 @@ class GalleryController: UIViewController,UITableViewDataSource,UITableViewDeleg
     
     @IBAction func videoButtonTap(sender: AnyObject) {
         if(activeGal != 1) {
+            loadingStart()
             activeGal = 1;
             pinkBar.frame.origin.x = self.view.frame.width/2;
             rest.getVideo(GalleryLoaded)
@@ -28,6 +29,7 @@ class GalleryController: UIViewController,UITableViewDataSource,UITableViewDeleg
     }
     @IBAction func photoButtonTap(sender: AnyObject) {
         if(activeGal != 0) {
+            loadingStart()
             activeGal = 0;
             pinkBar.frame.origin.x = 0;
             rest.getGallery(GalleryLoaded)
@@ -43,6 +45,10 @@ class GalleryController: UIViewController,UITableViewDataSource,UITableViewDeleg
             self.photoTableView.reloadData()
         });
     }
+    override func viewDidAppear(animated: Bool) {
+        
+        self.view.addSubview(loaderGlo)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,6 +59,10 @@ class GalleryController: UIViewController,UITableViewDataSource,UITableViewDeleg
         
         
         self.view.addSubview(pinkBar)
+        
+        loadingInit()
+        self.view.addSubview(loaderGlo)
+        
         rest.getGallery(GalleryLoaded)
         
         // Do any additional setup after loading the view.
@@ -87,10 +97,14 @@ class GalleryController: UIViewController,UITableViewDataSource,UITableViewDeleg
                 let mediaBox = galleryAlbum(frame: CGRectMake(8,16,self.view.frame.width-16,200));
                 mediaBox.galleryTitle.text = photosJson[indexPath.row]["name"].stringValue
                 let image = photosJson[indexPath.row]["url"].stringValue;
-                print(rest.getYoutubeImage(image));
                 mediaBox.galleryBanner.image = rest.getImageExternalURL(rest.getYoutubeImage(image))
                 cell.addSubview(mediaBox)
             }
+        }
+        
+        if(indexPath.row == photosJson.count-1)
+        {
+            loadingStop()
         }
         
         return cell
@@ -99,6 +113,7 @@ class GalleryController: UIViewController,UITableViewDataSource,UITableViewDeleg
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if(activeGal == 0)
         {
+            GalleryInsideTitle = photosJson[indexPath.row]["name"].string!
             galleryID = photosJson[indexPath.row]["id"].string!
             performSegueWithIdentifier("galleryDetail", sender: nil)
         }

@@ -12,8 +12,16 @@ class PointTableController: UIViewController,UITableViewDelegate,UITableViewData
 
     @IBOutlet weak var pointTable: UITableView!
     @IBOutlet weak var tableHeader: table!
+    
+    override func viewDidAppear(animated: Bool) {
+        
+        self.view.addSubview(loaderGlo)
+    }
+     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+
         
         rest.getPointTable(pointLoaded)
         self.setNavigationBarItemText("POINT TABLE")
@@ -75,8 +83,12 @@ class PointTableController: UIViewController,UITableViewDelegate,UITableViewData
             mediaBox.tablePoint.text = pointJson[indexPath.row]["point"].string
             cell.addSubview(mediaBox)
         }
-        
+        if(indexPath.row == pointJson.count-1)
+        {
+            loadingStop()
+        }
 
+        
         
         return cell
     }

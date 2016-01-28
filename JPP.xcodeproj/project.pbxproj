@@ -19,6 +19,8 @@
 		3685BD421C5A163000BC44D0 /* upcoming.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3685BD411C5A163000BC44D0 /* upcoming.xib */; };
 		3685BD441C5A164B00BC44D0 /* upcoming.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3685BD431C5A164B00BC44D0 /* upcoming.swift */; };
 		36B789791C5A70380098C426 /* VideoPlayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B789781C5A70380098C426 /* VideoPlayController.swift */; };
+		36B957841C5A808B00AEC0D3 /* loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B957831C5A808B00AEC0D3 /* loading.swift */; };
+		36B957861C5A809500AEC0D3 /* loading.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36B957851C5A809500AEC0D3 /* loading.xib */; };
 		36F2CE8A1C56561300D0D2D6 /* player.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36F2CE891C56561300D0D2D6 /* player.xib */; };
 		36F2CE8C1C56561F00D0D2D6 /* player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F2CE8B1C56561F00D0D2D6 /* player.swift */; };
 		36F2CE8F1C56584400D0D2D6 /* galleryAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F2CE8E1C56584400D0D2D6 /* galleryAlbum.swift */; };
@@ -101,6 +103,8 @@
 		3685BD411C5A163000BC44D0 /* upcoming.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = upcoming.xib; sourceTree = "<group>"; };
 		3685BD431C5A164B00BC44D0 /* upcoming.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = upcoming.swift; sourceTree = "<group>"; };
 		36B789781C5A70380098C426 /* VideoPlayController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPlayController.swift; sourceTree = "<group>"; };
+		36B957831C5A808B00AEC0D3 /* loading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loading.swift; sourceTree = "<group>"; };
+		36B957851C5A809500AEC0D3 /* loading.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = loading.xib; sourceTree = "<group>"; };
 		36F2CE891C56561300D0D2D6 /* player.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = player.xib; sourceTree = "<group>"; };
 		36F2CE8B1C56561F00D0D2D6 /* player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = player.swift; sourceTree = "<group>"; };
 		36F2CE8E1C56584400D0D2D6 /* galleryAlbum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = galleryAlbum.swift; sourceTree = "<group>"; };
@@ -221,6 +225,15 @@
 			name = upcoming;
 			sourceTree = "<group>";
 		};
+		36B957821C5A807000AEC0D3 /* loading */ = {
+			isa = PBXGroup;
+			children = (
+				36B957831C5A808B00AEC0D3 /* loading.swift */,
+				36B957851C5A809500AEC0D3 /* loading.xib */,
+			);
+			name = loading;
+			sourceTree = "<group>";
+		};
 		36F2CE881C56560700D0D2D6 /* player */ = {
 			isa = PBXGroup;
 			children = (
@@ -304,6 +317,7 @@
 		36F9C1841C5616C6003D02AB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				36B957821C5A807000AEC0D3 /* loading */,
 				3685BD401C5A160700BC44D0 /* upcoming */,
 				366F19DA1C58F4FB00321669 /* bookTicket */,
 				C28B79EF1C58DAB2001C4474 /* newsDetail */,
@@ -581,6 +595,7 @@
 				36F9C1AB1C5641BB003D02AB /* voyagefantstraightleft.ttf in Resources */,
 				78238FE41C57A7890067E7D5 /* about.xib in Resources */,
 				36F2CE911C56585100D0D2D6 /* galleryAlbum.xib in Resources */,
+				36B957861C5A809500AEC0D3 /* loading.xib in Resources */,
 				36F9C16A1C55EDBF003D02AB /* LaunchScreen.storyboard in Resources */,
 				36F9C1B31C564D14003D02AB /* table.xib in Resources */,
 				36F9C1671C55EDBF003D02AB /* Assets.xcassets in Resources */,
@@ -682,6 +697,7 @@
 				36F9C1B51C564EF4003D02AB /* table.swift in Sources */,
 				36F2CEA31C5770E400D0D2D6 /* GalleryInsideController.swift in Sources */,
 				C2FF852D1C58D17A00F2CFED /* singleThumbnailImage.swift in Sources */,
+				36B957841C5A808B00AEC0D3 /* loading.swift in Sources */,
 				36F2CEA71C57711E00D0D2D6 /* NewsController.swift in Sources */,
 				36F2CE8C1C56561F00D0D2D6 /* player.swift in Sources */,
 				36F9C1601C55EDBF003D02AB /* AppDelegate.swift in Sources */,

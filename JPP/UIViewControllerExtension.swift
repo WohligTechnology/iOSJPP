@@ -14,12 +14,12 @@ extension UIViewController {
         
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         self.navigationController?.navigationBar.titleTextAttributes = [ NSForegroundColorAttributeName : UIColor(red: 1, green: 1, blue: 1, alpha: 0) ]
-
+        
         self.navigationController?.navigationBar.translucent = false
         self.addLeftBarButtonWithImage(UIImage(named: "ic_menu_black_24dp")!)
         self.navigationController?.toolbar.barTintColor = BlueColor
         self.navigationController?.navigationBar.barTintColor = BlueColor
-
+        
         
         //self.addRightBarButtonWithImage(UIImage(named: "ic_notifications_black_24dp")!)
         self.slideMenuController()?.removeLeftGestures()

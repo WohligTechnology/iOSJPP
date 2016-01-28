@@ -147,7 +147,6 @@ public class RestApi {
     func getGalleryById(id:String,completion: ( (JSON) -> Void)) {
         var json = JSON(1);
         
-        print(id);
         let params = ["galleryid": id]
         do {
             let opt = try HTTP.GET(apiURL + "getGallerySlide", parameters: params)

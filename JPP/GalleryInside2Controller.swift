@@ -14,13 +14,18 @@ class GalleryInside2Controller: UIViewController {
 
     @IBOutlet weak var fullView: singleThumbnailImage!
     override func viewDidLoad() {
+        
+        loadingInit()
+        self.view.addSubview(loaderGlo)
         super.viewDidLoad()
+        
         gal2Global = self;
         
         fullView.openImage.image = rest.getImage(galleryImage);
         
 //        self.setNavigationBarItemText("GALLERY INSIDE 2")
         // Do any additional setup after loading the view.
+        loadingStop()
     }
 
     override func didReceiveMemoryWarning() {

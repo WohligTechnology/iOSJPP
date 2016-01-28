@@ -15,6 +15,10 @@ class NewsController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setNavigationBarItemText("NEWS")
+        
+        loadingInit()
+        self.view.addSubview(loaderGlo)
+        
         rest.getNews(newsLoaded)
         
     }
@@ -51,21 +55,22 @@ class NewsController: UIViewController, UITableViewDataSource, UITableViewDelega
             cell.addSubview(mediaBox)
         }
         
-        
+        if(indexPath.row == newsJSON.count-1)
+        {
+            loadingStop()
+        }
+
         
         
         return cell
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        print("AAA");
         newsImage = newsJSON[indexPath.row]["image"].string!
         newsTitle = newsJSON[indexPath.row]["name"].string!
         newsDate = newsJSON[indexPath.row]["timestamp"].string!
         newsContent = newsJSON[indexPath.row]["content"].string!
-        
        // performSegueWithIdentifier("mediaDetail", sender: nil)
-
     }
 
     

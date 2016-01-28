@@ -18,18 +18,37 @@ var newsTitle = "";
 var newsDate = "";
 var newsContent = "";
 
-
+var GalleryInsideTitle = ""
 var playerIndex = 0;
 
 var isGalWal = 0;
 
 var players:[Player] = []
 
+var loaderGlo:loading!
 
+var bounds = UIScreen.mainScreen().bounds
+var widthGlo = bounds.size.width
+var heightGlo = bounds.size.height
 
+func loadingInit() {
+    loaderGlo = loading(frame: CGRectMake(0,heightGlo-44,widthGlo,heightGlo-44) )
+    loaderGlo.alpha = 0.0
+    loadingStart()
+}
 
-
-
+func loadingStart() {
+    loaderGlo.frame.origin = CGPoint(x: 0, y: heightGlo-44)
+    loaderGlo.animation.moveY(-heightGlo+44).makeOpacity(1.0).animateWithCompletion(0.5, {
+        loaderGlo.frame.origin = CGPoint(x: 0, y: 0)
+    })
+}
+func loadingStop() {
+    loaderGlo.frame.origin = CGPoint(x: 0, y: 0)
+    loaderGlo.animation.moveY(heightGlo-44).makeOpacity(0.3).animateWithCompletion(0.5, {
+        loaderGlo.frame.origin = CGPoint(x: 0, y: heightGlo-44)
+    })
+}
 
 
 let BlueColor = UIColor(red: 10/255, green: 124/255, blue: 161/255, alpha: 1)
@@ -104,7 +123,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         players.append(Player(name: "Hwangi Ahn", achieve: "Incheon indoor game- Bronze Medal, National Championship (2011,2012,2013)-2nd Position, Asian Games (2014)- Bronze Medal", tour: "", age: "32", type: "", nativePlace: "Gyoung Ju", jerseyNo: "17", image: "hwangi.jpg"))
         
         
-        print(players[4].name);
         
         return true
     }
