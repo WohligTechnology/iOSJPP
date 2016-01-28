@@ -35,10 +35,10 @@ class KnowTeamController: UIViewController,UICollectionViewDataSource,UICollecti
         return CGSizeMake(self.view.frame.width/2 - 4 ,self.view.frame.width/2 + 30)
     }
 
-    func collectionView(collectionView: UICollectionView,
-        didSelectItemAtIndexPath indexPath: NSIndexPath) {
-            performSegueWithIdentifier("playerDetail", sender: nil)
-    }
+//    func collectionView(collectionView: UICollectionView,
+//        didSelectItemAtIndexPath indexPath: NSIndexPath) {
+//            performSegueWithIdentifier("playerDetail", sender: nil)
+//    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
