@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class GalleryController: UIViewController,UITableViewDataSource,UITableViewDelegate {
     
     var activeGal = 0;
     
+    @IBOutlet weak var photoTableView: UITableView!
     @IBOutlet weak var photosButton: UIButton!
     @IBOutlet weak var videosButton: UIButton!
     
@@ -26,6 +28,16 @@ class GalleryController: UIViewController,UITableViewDataSource,UITableViewDeleg
         
         pinkBar.frame.origin.x = 0;
     }
+    
+    var photosJson = JSON([])
+    
+    func GalleryLoaded (json:JSON) {
+        photosJson = json;
+        dispatch_async(dispatch_get_main_queue(),{
+            self.photoTableView.reloadData()
+        });
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setNavigationBarItemText("GALLERY")
@@ -35,6 +47,7 @@ class GalleryController: UIViewController,UITableViewDataSource,UITableViewDeleg
         
         
         self.view.addSubview(pinkBar)
+        rest.getGallery(GalleryLoaded)
         
         // Do any additional setup after loading the view.
     }
@@ -46,7 +59,7 @@ class GalleryController: UIViewController,UITableViewDataSource,UITableViewDeleg
     
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return photosJson.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -56,11 +69,13 @@ class GalleryController: UIViewController,UITableViewDataSource,UITableViewDeleg
         tableView.tableFooterView = UIView()
         let cell = tableView.dequeueReusableCellWithIdentifier("galCell", forIndexPath: indexPath)
         
-        let mediaBox = galleryAlbum(frame: CGRectMake(8,16,self.view.frame.width-16,230));
         
-        cell.addSubview(mediaBox)
-        
-        
+        if((photosJson[indexPath.row]["image"].string) != nil) {
+            let mediaBox = galleryAlbum(frame: CGRectMake(8,16,self.view.frame.width-16,230));
+            mediaBox.galleryTitle.text = photosJson[indexPath.row]["name"].string
+            mediaBox.galleryBanner.image = rest.getImage(photosJson[indexPath.row]["image"].string!)
+            cell.addSubview(mediaBox)
+        }
         return cell
     }
     

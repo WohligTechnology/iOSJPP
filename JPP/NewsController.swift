@@ -7,18 +7,30 @@
 //
 
 import UIKit
-
+import SwiftyJSON
 class NewsController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    @IBOutlet weak var newsTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setNavigationBarItemText("NEWS")
+        rest.getNews(newsLoaded)
         
     }
     
+    var newsJSON = JSON([])
+    
+    func newsLoaded (json:JSON) {
+        newsJSON = json;
+        dispatch_async(dispatch_get_main_queue(),{
+            self.newsTableView.reloadData()
+        });
+    }
+
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return newsJSON.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -28,9 +40,18 @@ class NewsController: UIViewController, UITableViewDataSource, UITableViewDelega
         tableView.tableFooterView = UIView()
         let cell = tableView.dequeueReusableCellWithIdentifier("mediaCell", forIndexPath: indexPath)
         
-        let mediaBox = media(frame: CGRectMake(0,8,self.view.frame.width-16,230));
         
-        cell.addSubview(mediaBox)
+        
+        if((newsJSON[indexPath.row]["name"].string) != nil) {
+            let mediaBox = media(frame: CGRectMake(0,8,self.view.frame.width-16,230));
+            mediaBox.mediaTitle.text = newsJSON[indexPath.row]["name"].string
+            mediaBox.mediaDesc.text = newsJSON[indexPath.row]["content"].string
+            mediaBox.mediaDate.text = newsJSON[indexPath.row]["timestamp"].string
+            mediaBox.mediaImage.image = rest.getImage(newsJSON[indexPath.row]["image"].string!)
+            cell.addSubview(mediaBox)
+        }
+        
+        
         
         
         return cell

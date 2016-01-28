@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import SwiftyJSON
 class AboutController: UIViewController {
 
     @IBOutlet weak var scrollView: UIScrollView!

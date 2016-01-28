@@ -244,6 +244,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="photoTableView" destination="XUh-lm-ghA" id="SER-Sh-Qkx"/>
                         <outlet property="photosButton" destination="xfJ-8g-eJl" id="wdF-B7-hra"/>
                         <outlet property="videosButton" destination="C2B-U6-a7e" id="B7V-2t-ECp"/>
                     </connections>
@@ -384,6 +385,9 @@
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="newsTableView" destination="PIQ-Uy-S46" id="wVr-zc-adw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Ty-rJ-o8m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -547,6 +551,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="pointTable" destination="QGG-7c-eue" id="DqM-S5-FjW"/>
                         <outlet property="tableHeader" destination="Kd3-fS-FOp" id="VNa-7K-zWN"/>
                     </connections>
                 </viewController>

@@ -8,7 +8,7 @@
 //
 
 import UIKit
-
+import SwiftyJSON
 class MerchandiseController: UIViewController {
 
     override func viewDidLoad() {

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import SwiftyJSON
 class WallpaperInsideController: UIViewController {
 
     override func viewDidLoad() {

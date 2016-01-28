@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import SwiftyJSON
 class NewsInsideController: UIViewController {
 
     @IBOutlet weak var scrollView: UIScrollView!
