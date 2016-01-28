@@ -28,10 +28,6 @@
                 <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="roo-nC-enp">
                     <rect key="frame" x="0.0" y="138" width="449" height="44"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="black" translatesAutoresizingMaskIntoConstraints="NO" id="e0Y-2U-ljD">
-                            <rect key="frame" x="0.0" y="0.0" width="449" height="44"/>
-                            <color key="backgroundColor" red="0.14901961386203766" green="0.14901961386203766" blue="0.14901961386203766" alpha="1" colorSpace="calibratedRGB"/>
-                        </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JAIPUR PINK PANTHER VS JAIPUR PINK PANTHER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wDS-wm-4kz">
                             <rect key="frame" x="8" y="8" width="433" height="28"/>
                             <fontDescription key="fontDescription" name="Oswald-Bold" family="Oswald" pointSize="15"/>
@@ -39,16 +35,13 @@
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
+                    <color key="backgroundColor" red="0.019879981875419617" green="0.007578226737678051" blue="0.019948262721300125" alpha="0.7063100961538461" colorSpace="custom" customColorSpace="sRGB"/>
                     <color key="tintColor" red="0.14901961389999999" green="0.14901961389999999" blue="0.14901961389999999" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstItem="e0Y-2U-ljD" firstAttribute="top" secondItem="roo-nC-enp" secondAttribute="top" id="10k-59-aHZ"/>
-                        <constraint firstItem="e0Y-2U-ljD" firstAttribute="leading" secondItem="roo-nC-enp" secondAttribute="leading" id="JFv-4m-cse"/>
                         <constraint firstItem="wDS-wm-4kz" firstAttribute="leading" secondItem="roo-nC-enp" secondAttribute="leading" constant="8" id="OY4-cc-zO7"/>
                         <constraint firstAttribute="bottom" secondItem="wDS-wm-4kz" secondAttribute="bottom" constant="8" id="UrN-xV-GGF"/>
                         <constraint firstAttribute="trailing" secondItem="wDS-wm-4kz" secondAttribute="trailing" constant="8" id="YPJ-OC-SIe"/>
-                        <constraint firstAttribute="trailing" secondItem="e0Y-2U-ljD" secondAttribute="trailing" id="jcO-5X-Dxc"/>
                         <constraint firstItem="wDS-wm-4kz" firstAttribute="top" secondItem="roo-nC-enp" secondAttribute="top" constant="8" id="kJ9-D3-gqE"/>
-                        <constraint firstAttribute="bottom" secondItem="e0Y-2U-ljD" secondAttribute="bottom" id="vqa-yF-Avc"/>
                         <constraint firstAttribute="height" constant="44" id="vyW-fR-bNW"/>
                     </constraints>
                 </view>
@@ -68,18 +61,8 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="204.5" y="132"/>
         </view>
-        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="hRW-pH-nVz">
-            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-        </imageView>
-        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Yzm-Lw-rC5">
-            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <point key="canvasLocation" x="177" y="316"/>
-        </imageView>
     </objects>
     <resources>
-        <image name="black" width="96" height="96"/>
         <image name="news" width="1199" height="817"/>
     </resources>
 </document>
