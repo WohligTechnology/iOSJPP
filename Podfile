@@ -8,6 +8,7 @@ pod 'RAMAnimatedTabBarController', '~> 1.0.6'
 
 pod 'SwiftHTTP', '~> 1.0.3'
 pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
+pod 'DKChainableAnimationKit', '~> 1.6.0'
 
 target 'JPP' do
 
