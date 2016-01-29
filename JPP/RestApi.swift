@@ -26,19 +26,21 @@ public class RestApi {
         do {
             let opt = try HTTP.GET(apiURL + "getAllVideoGallery")
             opt.start { response in
-                if let err = response.error {
-                    print("error: \(err.localizedDescription)")
-                    return //also notify app of failure as needed
+                if let _ = response.error {
+                    completion(json);
                 }
-                json  = JSON(data: response.data)
-                completion(json);
+                else
+                {
+                    json  = JSON(data: response.data)
+                    completion(json);
+                }
             }
-        } catch let error {
-            print("got an error creating the request: \(error)")
+        } catch _ {
+            completion(json);
         }
     }
-
-
+    
+    
     
     
     public func getImage(urlStr:String) -> UIImage {
@@ -74,15 +76,17 @@ public class RestApi {
         do {
             let opt = try HTTP.GET(apiURL + "getallgallery")
             opt.start { response in
-                if let err = response.error {
-                    print("error: \(err.localizedDescription)")
-                    return //also notify app of failure as needed
+                if let _ = response.error {
+                    completion(json);
                 }
-                json  = JSON(data: response.data)
-                completion(json);
+                else
+                {
+                    json  = JSON(data: response.data)
+                    completion(json);
+                }
             }
-        } catch let error {
-            print("got an error creating the request: \(error)")
+        } catch _ {
+            completion(json);
         }
     }
     
@@ -91,15 +95,17 @@ public class RestApi {
         do {
             let opt = try HTTP.GET(apiURL + "getallnews")
             opt.start { response in
-                if let err = response.error {
-                    print("error: \(err.localizedDescription)")
-                    return //also notify app of failure as needed
+                if let _ = response.error {
+                    completion(json);
                 }
-                json  = JSON(data: response.data)
-                completion(json);
+                else
+                {
+                    json  = JSON(data: response.data)
+                    completion(json);
+                }
             }
-        } catch let error {
-            print("got an error creating the request: \(error)")
+        } catch _ {
+            completion(json);
         }
     }
     
@@ -108,15 +114,17 @@ public class RestApi {
         do {
             let opt = try HTTP.GET(apiURL + "getallpoint")
             opt.start { response in
-                if let err = response.error {
-                    print("error: \(err.localizedDescription)")
-                    return //also notify app of failure as needed
+                if let _ = response.error {
+                    completion(json);
                 }
-                json  = JSON(data: response.data)
-                completion(json);
+                else
+                {
+                    json  = JSON(data: response.data)
+                    completion(json);
+                }
             }
-        } catch let error {
-            print("got an error creating the request: \(error)")
+        } catch _ {
+            completion(json);
         }
     }
     
@@ -125,15 +133,17 @@ public class RestApi {
         do {
             let opt = try HTTP.GET(apiURL + "getSchedule")
             opt.start { response in
-                if let err = response.error {
-                    print("error: \(err.localizedDescription)")
-                    return //also notify app of failure as needed
+                if let _ = response.error {
+                    completion(json);
                 }
-                json  = JSON(data: response.data)
-                completion(json);
+                else
+                {
+                    json  = JSON(data: response.data)
+                    completion(json);
+                }
             }
-        } catch let error {
-            print("got an error creating the request: \(error)")
+        } catch _ {
+            completion(json);
         }
     }
     
@@ -142,15 +152,17 @@ public class RestApi {
         do {
             let opt = try HTTP.GET(apiURL + "getHomeContent")
             opt.start { response in
-                if let err = response.error {
-                    print("error: \(err.localizedDescription)")
-                    return //also notify app of failure as needed
+                if let _ = response.error {
+                    completion(json);
                 }
-                json  = JSON(data: response.data)
-                completion(json);
+                else
+                {
+                    json  = JSON(data: response.data)
+                    completion(json);
+                }
             }
-        } catch let error {
-            print("got an error creating the request: \(error)")
+        } catch _ {
+            completion(json);
         }
     }
     
@@ -161,16 +173,17 @@ public class RestApi {
         do {
             let opt = try HTTP.GET(apiURL + "getGallerySlide", parameters: params)
             opt.start { response in
-                if let err = response.error {
-                    print("error: \(err.localizedDescription)")
-                    return //also notify app of failure as needed
+                if let _ = response.error {
+                    completion(json);
                 }
-                
-                json  = JSON(data: response.data)
-                completion(json);
+                else
+                {
+                    json  = JSON(data: response.data)
+                    completion(json);
+                }
             }
-        } catch let error {
-            print("got an error creating the request: \(error)")
+        } catch _ {
+            completion(json);
         }
         
     }
@@ -182,18 +195,19 @@ public class RestApi {
         do {
             let opt = try HTTP.GET(apiURL + "getWallpaper", parameters: params)
             opt.start { response in
-                if let err = response.error {
-                    print("error: \(err.localizedDescription)")
-                    return //also notify app of failure as needed
+                if let _ = response.error {
+                    completion(json);
                 }
-                
-                json  = JSON(data: response.data)
-                completion(json);
+                else
+                {
+                    json  = JSON(data: response.data)
+                    completion(json);
+                }
             }
-        } catch let error {
-            print("got an error creating the request: \(error)")
+        } catch _ {
+            completion(json);
         }
         
     }
-
+    
 }
