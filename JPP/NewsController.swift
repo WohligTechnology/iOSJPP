@@ -26,6 +26,7 @@ class NewsController: UIViewController, UITableViewDataSource, UITableViewDelega
     var newsJSON = JSON([])
     
     func newsLoaded (json:JSON) {
+        print(json);
         if(json == 1)
         {
             let alertController = UIAlertController(title: "No Connection", message:
@@ -60,8 +61,8 @@ class NewsController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         if((newsJSON[indexPath.row]["name"].string) != nil) {
             let mediaBox = media(frame: CGRectMake(0,8,self.view.frame.width-16,230));
-            mediaBox.mediaTitle.text = newsJSON[indexPath.row]["name"].string
-            mediaBox.mediaDesc.text = newsJSON[indexPath.row]["content"].string
+//            mediaBox.mediaTitle.text = newsJSON[indexPath.row]["name"].string
+            mediaBox.mediaDesc.text = newsJSON[indexPath.row]["name"].string
             mediaBox.mediaDate.text = newsJSON[indexPath.row]["timestamp"].string
             mediaBox.mediaImage.hnk_setImageFromURL(rest.getImageCache(newsJSON[indexPath.row]["image"].string!))
             cell.addSubview(mediaBox)
@@ -75,7 +76,10 @@ class NewsController: UIViewController, UITableViewDataSource, UITableViewDelega
         newsTitle = newsJSON[indexPath.row]["name"].string!
         newsDate = newsJSON[indexPath.row]["timestamp"].string!
         newsContent = newsJSON[indexPath.row]["content"].string!
-        // performSegueWithIdentifier("mediaDetail", sender: nil)
+        
+        mediaUrl = newsJSON[indexPath.row]["content"].string!
+        
+         performSegueWithIdentifier("newsExternal", sender: nil)
     }
     
     

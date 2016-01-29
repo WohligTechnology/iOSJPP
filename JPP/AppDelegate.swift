@@ -11,6 +11,8 @@ import EventKitUI
 
 let eventStore = EKEventStore()
 
+var mediaUrl = "";
+
 func createEvent(EventName:String, EventTime:NSDate) {
     let event = EKEvent(eventStore: eventStore)
     event.title = EventName

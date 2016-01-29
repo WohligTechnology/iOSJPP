@@ -195,6 +195,40 @@
             </objects>
             <point key="canvasLocation" x="760" y="-225"/>
         </scene>
+        <!--All Web View Controller-->
+        <scene sceneID="PnI-Kd-Ekj">
+            <objects>
+                <viewController id="wvq-oX-Pd2" customClass="AllWebViewController" customModule="Jaipur_Pink_Panther" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1pG-nS-T4a"/>
+                        <viewControllerLayoutGuide type="bottom" id="Rmd-G2-JT4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bUi-JT-X1c">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2XT-ul-jty">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2XT-ul-jty" firstAttribute="bottom" secondItem="Rmd-G2-JT4" secondAttribute="top" id="4n2-Be-n3h"/>
+                            <constraint firstItem="2XT-ul-jty" firstAttribute="leading" secondItem="bUi-JT-X1c" secondAttribute="leading" id="9na-fE-ObQ"/>
+                            <constraint firstAttribute="trailing" secondItem="2XT-ul-jty" secondAttribute="trailing" id="G9H-vn-H2z"/>
+                            <constraint firstItem="2XT-ul-jty" firstAttribute="top" secondItem="bUi-JT-X1c" secondAttribute="top" id="q1l-Gv-Za0"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="webView" destination="2XT-ul-jty" id="CiQ-QP-TZ8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uZh-AG-GbS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1105" y="-225"/>
+        </scene>
         <!--GALLERY-->
         <scene sceneID="f7i-Qd-P9z">
             <objects>
@@ -378,12 +412,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cKF-Oe-xjK">
+                                <rect key="frame" x="8" y="262" width="303" height="44"/>
+                                <state key="normal" title="NewsButton"/>
+                                <connections>
+                                    <segue destination="wvq-oX-Pd2" kind="show" identifier="newsExternal" id="d8n-GQ-egr"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U0s-RA-EFJ">
                                 <rect key="frame" x="137" y="318" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="633-qu-Ovh" kind="showDetail" identifier="mediaDetail" action="showViewController:sender:" id="7lY-ic-6sx"/>
-                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="230" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PIQ-Uy-S46">
                                 <rect key="frame" x="8" y="8" width="303" height="552"/>
@@ -409,12 +447,6 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.76862746479999999" green="0.94117647410000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <connections>
-                                            <segue destination="633-qu-Ovh" kind="show" id="phz-yE-XQu">
-                                                <segue key="commit" inheritsFrom="parent" id="8nV-qF-uOz"/>
-                                                <segue key="preview" inheritsFrom="commit" id="vmv-tP-x65"/>
-                                            </segue>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -901,8 +933,7 @@
         <image name="mercimage" width="800" height="398"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="DFT-vF-egz"/>
-        <segue reference="ded-IQ-QY3"/>
         <segue reference="ylE-ai-sFP"/>
+        <segue reference="DFT-vF-egz"/>
     </inferredMetricsTieBreakers>
 </document>

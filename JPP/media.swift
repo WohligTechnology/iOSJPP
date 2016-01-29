@@ -10,7 +10,6 @@ import UIKit
 @IBDesignable class media: UIView {
     
     @IBOutlet weak var mediaImage: UIImageView!
-    @IBOutlet weak var mediaTitle: UILabel!
     @IBOutlet weak var mediaDate: UILabel!
     @IBOutlet weak var mediaDesc: UILabel!
     

@@ -18,6 +18,7 @@
 		366F19DE1C58F55800321669 /* bookTicket.xib in Resources */ = {isa = PBXBuildFile; fileRef = 366F19DD1C58F55800321669 /* bookTicket.xib */; };
 		3685BD421C5A163000BC44D0 /* upcoming.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3685BD411C5A163000BC44D0 /* upcoming.xib */; };
 		3685BD441C5A164B00BC44D0 /* upcoming.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3685BD431C5A164B00BC44D0 /* upcoming.swift */; };
+		36AD11BD1C5BA33F005DD9F1 /* AllWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AD11BC1C5BA33F005DD9F1 /* AllWebViewController.swift */; };
 		36B789791C5A70380098C426 /* VideoPlayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B789781C5A70380098C426 /* VideoPlayController.swift */; };
 		36B957841C5A808B00AEC0D3 /* loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B957831C5A808B00AEC0D3 /* loading.swift */; };
 		36B957861C5A809500AEC0D3 /* loading.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36B957851C5A809500AEC0D3 /* loading.xib */; };
@@ -102,6 +103,7 @@
 		366F19DD1C58F55800321669 /* bookTicket.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = bookTicket.xib; sourceTree = "<group>"; };
 		3685BD411C5A163000BC44D0 /* upcoming.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = upcoming.xib; sourceTree = "<group>"; };
 		3685BD431C5A164B00BC44D0 /* upcoming.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = upcoming.swift; sourceTree = "<group>"; };
+		36AD11BC1C5BA33F005DD9F1 /* AllWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllWebViewController.swift; sourceTree = "<group>"; };
 		36B789781C5A70380098C426 /* VideoPlayController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPlayController.swift; sourceTree = "<group>"; };
 		36B957831C5A808B00AEC0D3 /* loading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loading.swift; sourceTree = "<group>"; };
 		36B957851C5A809500AEC0D3 /* loading.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = loading.xib; sourceTree = "<group>"; };
@@ -356,6 +358,7 @@
 				36F2CEAE1C5771D800D0D2D6 /* MerchandiseController.swift */,
 				36F2CEB01C5771F200D0D2D6 /* WallpaperController.swift */,
 				366F19D61C58EFBD00321669 /* WebController.swift */,
+				36AD11BC1C5BA33F005DD9F1 /* AllWebViewController.swift */,
 				36B789781C5A70380098C426 /* VideoPlayController.swift */,
 				366F19D81C58F32700321669 /* BookTicketController.swift */,
 				36F2CEB21C57720600D0D2D6 /* WallpaperInsideController.swift */,
@@ -669,6 +672,7 @@
 			files = (
 				36F9C1811C5605B9003D02AB /* UIViewControllerExtension.swift in Sources */,
 				36F2CE8F1C56584400D0D2D6 /* galleryAlbum.swift in Sources */,
+				36AD11BD1C5BA33F005DD9F1 /* AllWebViewController.swift in Sources */,
 				360A51011C579AAD001F7E40 /* playerInside.swift in Sources */,
 				36F2CEA91C57712A00D0D2D6 /* NewsInsideController.swift in Sources */,
 				366F19D91C58F32700321669 /* BookTicketController.swift in Sources */,
