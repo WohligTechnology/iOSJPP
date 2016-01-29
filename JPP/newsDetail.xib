@@ -26,12 +26,6 @@
             <rect key="frame" x="0.0" y="0.0" width="374" height="679"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView autoresizesSubviews="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="abhishek" translatesAutoresizingMaskIntoConstraints="NO" id="pTB-UR-Boc">
-                    <rect key="frame" x="0.0" y="0.0" width="374" height="270"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="270" id="uwf-gz-9Di"/>
-                    </constraints>
-                </imageView>
                 <label autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="14 August 2015" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0lM-JH-U5i">
                     <rect key="frame" x="232" y="289" width="134" height="18"/>
                     <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="12"/>
@@ -59,6 +53,12 @@ Cras vulputate facilisis velit, sed ullamcorper magna tristique ac. Vestibulum a
                     <color key="textColor" red="0.14901961386203766" green="0.14901961386203766" blue="0.14901961386203766" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <imageView autoresizesSubviews="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loadingimages" translatesAutoresizingMaskIntoConstraints="NO" id="pTB-UR-Boc">
+                    <rect key="frame" x="0.0" y="0.0" width="374" height="270"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="270" id="uwf-gz-9Di"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
@@ -79,6 +79,6 @@ Cras vulputate facilisis velit, sed ullamcorper magna tristique ac. Vestibulum a
         </view>
     </objects>
     <resources>
-        <image name="abhishek" width="481" height="275"/>
+        <image name="loadingimages" width="1000" height="1000"/>
     </resources>
 </document>

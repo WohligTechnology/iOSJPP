@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -68,7 +67,7 @@
                     <color key="textColor" red="0.59607843140000005" green="0.59607843140000005" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView autoresizesSubviews="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="prologo" translatesAutoresizingMaskIntoConstraints="NO" id="3ui-Ee-yRq">
+                <imageView autoresizesSubviews="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loadingimages" translatesAutoresizingMaskIntoConstraints="NO" id="3ui-Ee-yRq">
                     <rect key="frame" x="8" y="64" width="110" height="130"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="130" id="BbO-m8-Y80"/>
@@ -134,7 +133,7 @@
         </view>
     </objects>
     <resources>
-        <image name="prologo" width="478" height="264"/>
+        <image name="loadingimages" width="1000" height="1000"/>
         <image name="trapezium" width="444" height="98"/>
     </resources>
 </document>

@@ -100,7 +100,6 @@
 		366F19D81C58F32700321669 /* BookTicketController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookTicketController.swift; sourceTree = "<group>"; };
 		366F19DB1C58F52600321669 /* bookTicket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bookTicket.swift; sourceTree = "<group>"; };
 		366F19DD1C58F55800321669 /* bookTicket.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = bookTicket.xib; sourceTree = "<group>"; };
-		367A03631C5B6263006D0D29 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 		3685BD411C5A163000BC44D0 /* upcoming.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = upcoming.xib; sourceTree = "<group>"; };
 		3685BD431C5A164B00BC44D0 /* upcoming.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = upcoming.swift; sourceTree = "<group>"; };
 		36B789781C5A70380098C426 /* VideoPlayController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPlayController.swift; sourceTree = "<group>"; };
@@ -428,7 +427,6 @@
 			isa = PBXGroup;
 			children = (
 				36F9C1B81C5653E5003D02AB /* matches.swift */,
-				367A03631C5B6263006D0D29 /* MyPlayground.playground */,
 				36F9C1BA1C5653EF003D02AB /* matches.xib */,
 			);
 			name = matches;
