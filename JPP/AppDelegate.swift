@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import EventKitUI
+
+var SaveCalender = 1;
 
 var galleryID = "0";
 var videoIDGlo = "0";
@@ -50,6 +53,7 @@ func loadingStop() {
         loaderGlo.frame.origin = CGPoint(x: 0, y: heightGlo-44)
     })
 }
+
 
 
 let BlueColor = UIColor(red: 10/255, green: 124/255, blue: 161/255, alpha: 1)
@@ -123,6 +127,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         players.append(Player(name: "Hwangi Ahn", achieve: "Incheon indoor game- Bronze Medal, National Championship (2011,2012,2013)-2nd Position, Asian Games (2014)- Bronze Medal", tour: "", age: "32", type: "", nativePlace: "Gyoung Ju", jerseyNo: "17", image: "hwangi.jpg"))
         
+       
         
         
         return true

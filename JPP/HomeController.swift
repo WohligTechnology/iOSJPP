@@ -9,12 +9,16 @@
 import UIKit
 import SwiftyJSON
 import DKChainableAnimationKit
+import EventKitUI
 
 class HomeController: UIViewController,UIGestureRecognizerDelegate {
     
     @IBOutlet weak var scrollView: UIScrollView!
     var verticalLayout : VerticalLayout!
     
+    
+    
+   
     
     var HomeJSON = JSON(1)
     

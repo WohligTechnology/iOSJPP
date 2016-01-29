@@ -13,77 +13,74 @@ import SwiftyJSON
 
 class ScheduleController: UIViewController {
     
+    
     let topSpacing = 32;
     let spacingPink = 8;
     
+    let eventStore = EKEventStore()
+    var EventName = "Jaipur Pink Panther Event";
+    var EventTime = NSDate()
     
     
-    func eventInit(sender: UIImage) {
+    
+    
+    
+    override func viewWillAppear(animated: Bool) {
+        checkCalendarAuthorizationStatus()
+    }
+    
+    func checkCalendarAuthorizationStatus() {
+        let status = EKEventStore.authorizationStatusForEntityType(EKEntityType.Event)
         
-         dispatch_async(dispatch_get_main_queue(), {
-        
-        print("Testing Event")
-        
-        let eventStore = EKEventStore()
-        
-        if(EKEventStore.authorizationStatusForEntityType(EKEntityType.Reminder) != EKAuthorizationStatus.Authorized)
-        {
-            eventStore.requestAccessToEntityType(.Reminder, completion: { granted,error -> Void in
-                if !granted
-                {
-                    print(granted)
-                    print(error)
-                }
-                else
-                {
-                    print("Access granted")
-                }
-            })
+        switch (status) {
+        case EKAuthorizationStatus.NotDetermined:
+            requestAccessToCalendar()
+        case EKAuthorizationStatus.Authorized:
+            print("Authorised");
+        case EKAuthorizationStatus.Restricted:
+            print("Restricted");
+        case EKAuthorizationStatus.Denied:
+            print("Denied");
         }
-         });
-        // Create an Event Store instance
-        
-        
-//        // Use Event Store to create a new calendar instance
-//        // Configure its title
-//        let newCalendar = EKCalendar(forEntityType: EKEntityType.Event, eventStore: eventStore)
-//        newCalendar.title = "Some New Calendar Title"
-//        
-//        // Access list of available sources from the Event Store
-//        let sourcesInEventStore = eventStore.sources 
-//        
-//        // Filter the available sources and select the "Local" source to assign to the new calendar's
-//        // source property
-//        print("ALl is well2");
-//        print(sourcesInEventStore);
-//        newCalendar.source = sourcesInEventStore.filter {
-//            (source: EKSource) -> Bool in
-//            source.sourceType == EKSourceType.CalDAV
-//            }.first!
-//        
-//        print("ALl is well");
-//        
-//        try! eventStore.saveCalendar(newCalendar, commit: true)
-//            
-        
+    }
+    
+    func requestAccessToCalendar() {
+        eventStore.requestAccessToEntityType(EKEntityType.Event, completion: {
+            (accessGranted: Bool, error: NSError?) in
+            
+            if accessGranted == true {
+                dispatch_async(dispatch_get_main_queue(), {
+                    print("Access Graned");
+                    SaveCalender = 1;
+                })
+            } else {
+                dispatch_async(dispatch_get_main_queue(), {
+                    SaveCalender = 0;
+                    print("Access not Graned");
+                })
+            }
+        })
     }
     
     
-    func createEvent(eventStore: EKEventStore, title: String, startDate: NSDate, endDate: NSDate) {
+    
+    func createEvent(sender:UIButton) {
         let event = EKEvent(eventStore: eventStore)
         
-        event.title = title
-        event.startDate = startDate
-        event.endDate = endDate
+        event.title = EventName
+        event.startDate = EventTime
+        event.endDate = EventTime.dateByAddingTimeInterval(60 * 60)
         event.calendar = eventStore.defaultCalendarForNewEvents
         do {
             try eventStore.saveEvent(event, span: .ThisEvent)
-            let savedEventId = event.eventIdentifier
-            print(savedEventId);
+            print("Working Fine Event Stored");
         } catch {
             print("Bad things happened")
         }
     }
+    
+
+    
     func scheduleComplete (json:JSON) {
         dispatch_async(dispatch_get_main_queue(), {
             
@@ -99,8 +96,8 @@ class ScheduleController: UIViewController {
             upcomingVar.trapLabel.text="UPCOMING MATCH";
             upcomingVar.matchStadium.text = json[0]["stadium"].string
             upcomingVar.matchDate.text = json[0]["starttimedate"].string
-            
-            upcomingVar.addToCalendar.addTarget(self, action: "eventInit:", forControlEvents: UIControlEvents.TouchUpInside)
+//            
+            upcomingVar.addToCalendar.addTarget(self, action: "createEvent:", forControlEvents: UIControlEvents.TouchUpInside)
             
             var whiteView:UIView!
             whiteView = UIView(frame:CGRectMake(0,8,self.verticalLayout.frame.width,1000));
@@ -128,13 +125,9 @@ class ScheduleController: UIViewController {
                 whiteView.addSubview(insideTable);
             }
             
-            
             let bookTic = bookTicket(frame:CGRectMake(8,8,self.verticalLayout.frame.width-16,44));
             
-            
             self.verticalLayout.addSubview(bookTic);
-            
-            
             
             self.resizeView(8);
             
