@@ -14,7 +14,6 @@ class AllWebViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(mediaUrl);
         let url = NSURL (string:  mediaUrl);
         let requestObj = NSURLRequest(URL: url!);
         webView.loadRequest(requestObj);

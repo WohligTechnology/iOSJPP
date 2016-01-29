@@ -81,7 +81,7 @@ class ScheduleController: UIViewController {
             
             
             dispatch_async(dispatch_get_main_queue(), {
-                print(json);
+
                 self.verticalLayout = VerticalFitLayout(width: self.view.frame.width);
                 self.scrollView.insertSubview(self.verticalLayout, atIndex: 0)
                 

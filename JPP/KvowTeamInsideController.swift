@@ -15,6 +15,8 @@ class KvowTeamInsideController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        
         playerIn.playerPer.playerTitle.text = players[playerIndex].name
         playerIn.playerPer.playerImage.image = UIImage(named: players[playerIndex].image)
         playerIn.playerPer.playerPosition.text = players[playerIndex].type
@@ -27,7 +29,10 @@ class KvowTeamInsideController: UIViewController {
 //
         self.title =  players[playerIndex].name
         
+        
     }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

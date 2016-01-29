@@ -21,9 +21,9 @@ func createEvent(EventName:String, EventTime:NSDate) {
     event.calendar = eventStore.defaultCalendarForNewEvents
     do {
         try eventStore.saveEvent(event, span: .ThisEvent)
-        print("Working Fine Event Stored");
+//        print("Working Fine Event Stored");
     } catch {
-        print("Bad things happened")
+//        print("Bad things happened")
     }
 }
 
