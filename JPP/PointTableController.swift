@@ -52,10 +52,26 @@ class PointTableController: UIViewController,UITableViewDelegate,UITableViewData
     var pointJson = JSON([])
     
     func pointLoaded (json:JSON) {
-        pointJson = json;
-        dispatch_async(dispatch_get_main_queue(),{
-            self.pointTable.reloadData()
-        });
+        
+        
+        if(json == 1)
+        {
+            let alertController = UIAlertController(title: "No Connection", message:
+                "Please check your internet connection", preferredStyle: UIAlertControllerStyle.Alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+            
+            self.presentViewController(alertController, animated: true, completion: nil)
+        }
+        else
+        {
+            pointJson = json;
+            dispatch_async(dispatch_get_main_queue(),{
+                self.pointTable.reloadData()
+                loadingStop()
+            });
+            
+        }
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -83,12 +99,6 @@ class PointTableController: UIViewController,UITableViewDelegate,UITableViewData
             mediaBox.tablePoint.text = pointJson[indexPath.row]["point"].string
             cell.addSubview(mediaBox)
         }
-        if(indexPath.row == pointJson.count-1)
-        {
-            loadingStop()
-        }
-
-        
         
         return cell
     }

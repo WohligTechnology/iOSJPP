@@ -41,10 +41,22 @@ class GalleryController: UIViewController,UITableViewDataSource,UITableViewDeleg
     var photosJson = JSON([])
     
     func GalleryLoaded (json:JSON) {
-        photosJson = json;
-        dispatch_async(dispatch_get_main_queue(),{
-            self.photoTableView.reloadData()
-        });
+        if(json == 1)
+        {
+            let alertController = UIAlertController(title: "No Connection", message:
+                "Please check your internet connection", preferredStyle: UIAlertControllerStyle.Alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+            
+            self.presentViewController(alertController, animated: true, completion: nil)
+        }
+        else
+        {
+            photosJson = json;
+            dispatch_async(dispatch_get_main_queue(),{
+                self.photoTableView.reloadData()
+            });
+            loadingStop()
+        }
     }
     override func viewDidAppear(animated: Bool) {
         
@@ -103,7 +115,7 @@ class GalleryController: UIViewController,UITableViewDataSource,UITableViewDeleg
             }
         }
         
-            loadingStop()
+        
         
         
         return cell

@@ -9,7 +9,7 @@
 import UIKit
 import SwiftyJSON
 class NewsController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
+    
     @IBOutlet weak var newsTableView: UITableView!
     
     override func viewDidLoad() {
@@ -26,12 +26,24 @@ class NewsController: UIViewController, UITableViewDataSource, UITableViewDelega
     var newsJSON = JSON([])
     
     func newsLoaded (json:JSON) {
-        newsJSON = json;
-        dispatch_async(dispatch_get_main_queue(),{
-            self.newsTableView.reloadData()
-        });
+        if(json == 1)
+        {
+            let alertController = UIAlertController(title: "No Connection", message:
+                "Please check your internet connection", preferredStyle: UIAlertControllerStyle.Alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+            
+            self.presentViewController(alertController, animated: true, completion: nil)
+        }
+        else
+        {
+            newsJSON = json;
+            dispatch_async(dispatch_get_main_queue(),{
+                self.newsTableView.reloadData()
+                loadingStop()
+            });
+        }
     }
-
+    
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return newsJSON.count
@@ -55,13 +67,6 @@ class NewsController: UIViewController, UITableViewDataSource, UITableViewDelega
             cell.addSubview(mediaBox)
         }
         
-        if(indexPath.row == newsJSON.count-1)
-        {
-            loadingStop()
-        }
-
-        
-        
         return cell
     }
     
@@ -70,9 +75,9 @@ class NewsController: UIViewController, UITableViewDataSource, UITableViewDelega
         newsTitle = newsJSON[indexPath.row]["name"].string!
         newsDate = newsJSON[indexPath.row]["timestamp"].string!
         newsContent = newsJSON[indexPath.row]["content"].string!
-       // performSegueWithIdentifier("mediaDetail", sender: nil)
+        // performSegueWithIdentifier("mediaDetail", sender: nil)
     }
-
+    
     
     
     override func didReceiveMemoryWarning() {
@@ -80,15 +85,15 @@ class NewsController: UIViewController, UITableViewDataSource, UITableViewDelega
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     /*
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // Get the new view controller using segue.destinationViewController.
+    // Pass the selected object to the new view controller.
     }
     */
-
+    
 }

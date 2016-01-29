@@ -45,10 +45,8 @@ class HomeController: UIViewController,UIGestureRecognizerDelegate {
         {
             HomeJSON = json;
             dispatch_async(dispatch_get_main_queue(), {
-                
                 self.verticalLayout = VerticalLayout(width: self.view.frame.width);
                 self.scrollView.insertSubview(self.verticalLayout, atIndex: 0)
-                
                 if((json["latestupdate"]["team1id"].string) != nil) {
                     
                     let updates = schedule(frame: CGRectMake(8,8,self.verticalLayout.frame.width-16,300));
@@ -142,6 +140,9 @@ class HomeController: UIViewController,UIGestureRecognizerDelegate {
                     PinkBox.addSubview(insideTable);
                 }
                 self.resizeView(8);
+                
+                loadingStop()
+                
             })
         }
     }
@@ -163,7 +164,6 @@ class HomeController: UIViewController,UIGestureRecognizerDelegate {
     {
         self.verticalLayout.layoutSubviews()
         self.scrollView.contentSize = CGSize(width: self.verticalLayout.frame.width, height: self.verticalLayout.frame.height + offset)
-        loadingStop()
     }
     
     override func didReceiveMemoryWarning() {

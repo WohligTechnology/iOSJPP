@@ -67,66 +67,82 @@ class ScheduleController: UIViewController {
     
     
     func scheduleComplete (json:JSON) {
-        dispatch_async(dispatch_get_main_queue(), {
-            print(json);
-            self.verticalLayout = VerticalFitLayout(width: self.view.frame.width);
-            self.scrollView.insertSubview(self.verticalLayout, atIndex: 0)
+        
+        if(json == 1)
+        {
+            let alertController = UIAlertController(title: "No Connection", message:
+                "Please check your internet connection", preferredStyle: UIAlertControllerStyle.Alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
             
-            let upcomingVar = upcoming(frame: CGRectMake(8,8,self.verticalLayout.frame.width-16,300));
-            self.verticalLayout.addSubview(upcomingVar);
+            self.presentViewController(alertController, animated: true, completion: nil)
+        }
+        else
+        {
             
-            upcomingVar.team1Image.image = UIImage(named: "t" + json[0]["team1id"].string! + ".png")
-            upcomingVar.team2Image.image = UIImage(named: "t" + json[0]["team2id"].string! + ".png")
             
-            upcomingVar.trapLabel.text="UPCOMING MATCH";
-            upcomingVar.matchStadium.text = json[0]["stadium"].string
-            upcomingVar.matchDate.text = json[0]["starttimedate"].string
-            upcomingVar.addToCalendar.addTarget(self, action: "createEventTop:", forControlEvents: UIControlEvents.TouchUpInside)
-            
-            var whiteView:UIView!
-            whiteView = UIView(frame:CGRectMake(0,8,self.verticalLayout.frame.width,1000));
-            whiteView.backgroundColor = UIColor.whiteColor()
-            
-            let dateFormatter = NSDateFormatter()
-            dateFormatter.dateFormat = "dd MMM yyyy, HH:mm"
-            self.EventTimeTop = dateFormatter.dateFromString(json[0]["starttimedate"].string!)!
-            self.EventNameTop = json[0]["team1"].string! + " VS " + json[0]["team2"].string!;
-            
-            let trap = trapezium(frame: CGRectMake(8,0,self.verticalLayout.frame.width-16,34));
-            self.resizeView(8);
-            whiteView.addSubview(trap);
-            trap.trapeziumTitle.text="OTHER MATCHES";
-            
-            self.verticalLayout.addSubview(whiteView);
-            
-            for(var i=1;i<json.count;i++)
-            {
+            dispatch_async(dispatch_get_main_queue(), {
+                print(json);
+                self.verticalLayout = VerticalFitLayout(width: self.view.frame.width);
+                self.scrollView.insertSubview(self.verticalLayout, atIndex: 0)
                 
-                let topDistance = self.topSpacing+self.spacingPink+((65+self.spacingPink)*(i-1));
-                let insideTable = matches(frame: CGRectMake(8,CGFloat(topDistance),self.verticalLayout.frame.width-16,65));
-                insideTable.matchesTeams.text = json[i]["team1"].string! + " VS " + json[i]["team2"].string!
+                let upcomingVar = upcoming(frame: CGRectMake(8,8,self.verticalLayout.frame.width-16,300));
+                self.verticalLayout.addSubview(upcomingVar);
                 
-                insideTable.matchesDate.text = json[i]["starttimedate"].string
+                upcomingVar.team1Image.image = UIImage(named: "t" + json[0]["team1id"].string! + ".png")
+                upcomingVar.team2Image.image = UIImage(named: "t" + json[0]["team2id"].string! + ".png")
                 
+                upcomingVar.trapLabel.text="UPCOMING MATCH";
+                upcomingVar.matchStadium.text = json[0]["stadium"].string
+                upcomingVar.matchDate.text = json[0]["starttimedate"].string
+                upcomingVar.addToCalendar.addTarget(self, action: "createEventTop:", forControlEvents: UIControlEvents.TouchUpInside)
                 
-                whiteView.frame.size.height = CGFloat(topDistance+65+8);
-                whiteView.addSubview(insideTable);
-            }
-            
-            let bookTic = bookTicket(frame:CGRectMake(8,8,self.verticalLayout.frame.width-16,44));
-            
-            self.verticalLayout.addSubview(bookTic);
-            
-            self.resizeView(8);
-            
-            bookTic.bookButton.addTarget(self, action: "BookButtonTap:", forControlEvents: UIControlEvents.TouchUpInside)
-            
-        })
+                var whiteView:UIView!
+                whiteView = UIView(frame:CGRectMake(0,8,self.verticalLayout.frame.width,1000));
+                whiteView.backgroundColor = UIColor.whiteColor()
+                
+                let dateFormatter = NSDateFormatter()
+                dateFormatter.dateFormat = "dd MMM yyyy, HH:mm"
+                self.EventTimeTop = dateFormatter.dateFromString(json[0]["starttimedate"].string!)!
+                self.EventNameTop = json[0]["team1"].string! + " VS " + json[0]["team2"].string!;
+                
+                let trap = trapezium(frame: CGRectMake(8,0,self.verticalLayout.frame.width-16,34));
+                self.resizeView(8);
+                whiteView.addSubview(trap);
+                trap.trapeziumTitle.text="OTHER MATCHES";
+                
+                self.verticalLayout.addSubview(whiteView);
+                
+                for(var i=1;i<json.count;i++)
+                {
+                    
+                    let topDistance = self.topSpacing+self.spacingPink+((65+self.spacingPink)*(i-1));
+                    let insideTable = matches(frame: CGRectMake(8,CGFloat(topDistance),self.verticalLayout.frame.width-16,65));
+                    insideTable.matchesTeams.text = json[i]["team1"].string! + " VS " + json[i]["team2"].string!
+                    
+                    insideTable.matchesDate.text = json[i]["starttimedate"].string
+                    
+                    
+                    whiteView.frame.size.height = CGFloat(topDistance+65+8);
+                    whiteView.addSubview(insideTable);
+                }
+                
+                let bookTic = bookTicket(frame:CGRectMake(8,8,self.verticalLayout.frame.width-16,44));
+                
+                self.verticalLayout.addSubview(bookTic);
+                
+                self.resizeView(8);
+                
+                bookTic.bookButton.addTarget(self, action: "BookButtonTap:", forControlEvents: UIControlEvents.TouchUpInside)
+                
+                loadingStop()
+                
+            })
+        }
         
     }
     
-
-
+    
+    
     @IBOutlet weak var scrollView: UIScrollView!
     var verticalLayout : VerticalLayout!
     
@@ -148,25 +164,24 @@ class ScheduleController: UIViewController {
     {
         self.verticalLayout.layoutSubviews()
         self.scrollView.contentSize = CGSize(width: self.verticalLayout.frame.width, height: self.verticalLayout.frame.height + offset)
-        loadingStop()
     }
-
     
-
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     /*
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // Get the new view controller using segue.destinationViewController.
+    // Pass the selected object to the new view controller.
     }
     */
-
+    
 }

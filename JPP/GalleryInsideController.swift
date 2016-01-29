@@ -10,7 +10,7 @@ import UIKit
 import SwiftyJSON
 
 class GalleryInsideController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate {
-
+    
     
     override func viewDidAppear(animated: Bool) {
         
@@ -27,10 +27,6 @@ class GalleryInsideController: UIViewController,UICollectionViewDataSource,UICol
         {
             self.title =  GalleryInsideTitle
             rest.getGalleryById(galleryID,completion: newsLoaded)
-            
-            
-            
-            
         }
         else
         {
@@ -41,7 +37,7 @@ class GalleryInsideController: UIViewController,UICollectionViewDataSource,UICol
         navigationItem.leftBarButtonItem?.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "Oswald-Light", size: 20)!], forState: UIControlState.Normal)
         
         
-//        self.setNavigationBarItemText("GALLERY INSIDE")
+        //        self.setNavigationBarItemText("GALLERY INSIDE")
         // Do any additional setup after loading the view.
     }
     
@@ -50,13 +46,28 @@ class GalleryInsideController: UIViewController,UICollectionViewDataSource,UICol
     var jsonData = JSON([])
     
     func newsLoaded (json:JSON) {
-        jsonData = json;
-        dispatch_async(dispatch_get_main_queue(),{
-           self.galleryTable.reloadData()
-        });
+        
+        if(json == 1)
+        {
+            let alertController = UIAlertController(title: "No Connection", message:
+                "Please check your internet connection", preferredStyle: UIAlertControllerStyle.Alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+            
+            self.presentViewController(alertController, animated: true, completion: nil)
+        }
+        else
+        {
+            
+            jsonData = json;
+            dispatch_async(dispatch_get_main_queue(),{
+                self.galleryTable.reloadData()
+                loadingStop()
+            });
+            
+        }
     }
-
-
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -71,7 +82,7 @@ class GalleryInsideController: UIViewController,UICollectionViewDataSource,UICol
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("thumbnail", forIndexPath: indexPath) as UICollectionViewCell
-//        cell.addSubview(thumbnailImage(frame: CGRectMake(8,8,cell.frame.width - 8,cell.frame.height - 8)));
+        //        cell.addSubview(thumbnailImage(frame: CGRectMake(8,8,cell.frame.width - 8,cell.frame.height - 8)));
         
         
         if((jsonData[indexPath.row]["name"].string) != nil) {
@@ -79,8 +90,6 @@ class GalleryInsideController: UIViewController,UICollectionViewDataSource,UICol
             mediaBox.thumbImage.hnk_setImageFromURL(rest.getImageCache(jsonData[indexPath.row]["image"].string!))
             cell.addSubview(mediaBox)
         }
-        loadingStop()
-        
         return cell
     }
     
@@ -94,23 +103,23 @@ class GalleryInsideController: UIViewController,UICollectionViewDataSource,UICol
         didSelectItemAtIndexPath indexPath: NSIndexPath) {
             
             galleryImage = jsonData[indexPath.row]["image"].string!
-        
+            
             
             performSegueWithIdentifier("galleryImageDetail", sender: nil)
     }
     
     
-
     
-
+    
+    
     /*
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // Get the new view controller using segue.destinationViewController.
+    // Pass the selected object to the new view controller.
     }
     */
-
+    
 }

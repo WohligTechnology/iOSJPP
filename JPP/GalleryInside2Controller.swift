@@ -21,9 +21,6 @@ class GalleryInside2Controller: UIViewController {
         
         fullView.openImage.hnk_setImageFromURL(rest.getImageCache(galleryImage))
         
-//        self.setNavigationBarItemText("GALLERY INSIDE 2")
-        // Do any additional setup after loading the view.
-        loadingStop()
     }
 
     override func didReceiveMemoryWarning() {
