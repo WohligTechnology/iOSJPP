@@ -27,7 +27,7 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="23" id="gDc-rh-gE8"/>
                     </constraints>
-                    <fontDescription key="fontDescription" name="VoyageFantastique" family="Voyage Fantastique" pointSize="17"/>
+                    <fontDescription key="fontDescription" name="VoyageFantastique" family="Voyage Fantastique" pointSize="16"/>
                     <color key="textColor" red="0.70588235294117641" green="0.11764705882352941" blue="0.44705882352941173" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -39,7 +39,7 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="26" id="wfC-AB-fxY"/>
                     </constraints>
-                    <fontDescription key="fontDescription" name="VoyageFantastique" family="Voyage Fantastique" pointSize="16"/>
+                    <fontDescription key="fontDescription" name="VoyageFantastique" family="Voyage Fantastique" pointSize="15"/>
                     <color key="textColor" red="0.30588236451148987" green="0.7921568751335144" blue="0.96078431606292725" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                     <variation key="default">
