@@ -43,22 +43,20 @@ var widthGlo = bounds.size.width
 var heightGlo = bounds.size.height
 
 func loadingInit() {
-    loaderGlo = loading(frame: CGRectMake(0,heightGlo-44,widthGlo,heightGlo-44) )
+    loaderGlo = loading(frame: CGRectMake(0,0,widthGlo,heightGlo-44) )
     loaderGlo.alpha = 0.0
     loadingStart()
 }
 
 func loadingStart() {
-    loaderGlo.frame.origin = CGPoint(x: 0, y: heightGlo-44)
-    loaderGlo.animation.moveY(-heightGlo+44).makeOpacity(1.0).animateWithCompletion(0.5, {
-        loaderGlo.frame.origin = CGPoint(x: 0, y: 0)
-    })
+    loaderGlo.frame.origin = CGPoint(x: 0, y: 0)
+   
 }
 func loadingStop() {
-    loaderGlo.frame.origin = CGPoint(x: 0, y: 0)
-    loaderGlo.animation.moveY(heightGlo-44).makeOpacity(0.3).animateWithCompletion(0.5, {
-        loaderGlo.frame.origin = CGPoint(x: 0, y: heightGlo-44)
-    })
+    loaderGlo.frame.origin = CGPoint(x: 0, y: heightGlo+44)
+//    loaderGlo.animation.moveY(heightGlo-44).makeOpacity(0.3).animateWithCompletion(0.5, {
+//        loaderGlo.frame.origin = CGPoint(x: 0, y: heightGlo-44)
+//    })
 }
 
 
