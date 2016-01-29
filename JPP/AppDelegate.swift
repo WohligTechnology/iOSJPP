@@ -114,7 +114,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         players.append(Player(name: "Samarjeet Singh", achieve: "Pro-kabaddi (2014)- 1st Position,Asian Games (2010) - 1st Position , Indoor Asian Games (2010) - 1st Postion, Safe Games (2010) -1st Position, Indoor Asian Games (2013)", tour: "Pro-Kabaddi (2015-2014),Asian Games (2010),Indoor Asian Games (2010), Safe Games (2010), Indoor Asian Games (2013)", age: "29", type: "All Rounder", nativePlace: "Khedi Daulatpur", jerseyNo: "77", image: "samarjeet.jpg"))
         
-        players.append(Player(name: "Sanjay Shrestha", achieve: "Pro-kabaddi (2014)- 1st Position", tour: "Pro-Kabaddi (2015-2014),World Cup ( , 9th Safe game, 10th Safe Game, 11th Safe Game ", age: "31", type: "All Rounder", nativePlace: "Dhanusha", jerseyNo: "04", image: ""))
+        players.append(Player(name: "Sanjay Shrestha", achieve: "Pro-kabaddi (2014)- 1st Position", tour: "Pro-Kabaddi (2015-2014),World Cup ( , 9th Safe game, 10th Safe Game, 11th Safe Game ", age: "31", type: "All Rounder", nativePlace: "Dhanusha", jerseyNo: "04", image: "jpp"))
         
         players.append(Player(name: "Sonu Narwal", achieve: "All India Police (2009) - 1st Position, Asian Championship (2005) - 1st Position , Asian Games (2010)- 1st Position, Beach Asian Games (2011) - 2nd Position.", tour: "Pro-Kabaddi (2015),Senior National Game (2008-09), Asian Championship(2005), Asian Game (2010), Beach Asian Game(2011), All India Police Kabaddi (2009-10-11)", age: "29", type: "Raider", nativePlace: "Sonipat", jerseyNo: "22", image: "sonu.jpg"))
         
