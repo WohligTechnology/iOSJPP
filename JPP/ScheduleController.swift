@@ -5,10 +5,11 @@
 //  Created by Chintan Shah on 26/01/16.
 //  Copyright © 2016 Wohlig Technology. All rights reserved.
 //
-
+import Foundation
 import UIKit
 import EventKit
 import SwiftyJSON
+
 
 class ScheduleController: UIViewController {
     
@@ -19,15 +20,27 @@ class ScheduleController: UIViewController {
     
     func eventInit(sender: UIImage) {
         
+         dispatch_async(dispatch_get_main_queue(), {
+        
+        print("Testing Event")
         
         let eventStore = EKEventStore()
         
-        if(EKEventStore.authorizationStatusForEntityType(EKEntityType.Event) != EKAuthorizationStatus.Authorized)
+        if(EKEventStore.authorizationStatusForEntityType(EKEntityType.Reminder) != EKAuthorizationStatus.Authorized)
         {
-            eventStore.requestAccessToEntityType(.Event, completion: { granted,err -> Void in
-                print(granted);
+            eventStore.requestAccessToEntityType(.Reminder, completion: { granted,error -> Void in
+                if !granted
+                {
+                    print(granted)
+                    print(error)
+                }
+                else
+                {
+                    print("Access granted")
+                }
             })
         }
+         });
         // Create an Event Store instance
         
         
@@ -126,6 +139,7 @@ class ScheduleController: UIViewController {
             self.resizeView(8);
             
             bookTic.bookButton.addTarget(self, action: "BookButtonTap:", forControlEvents: UIControlEvents.TouchUpInside)
+            
         })
         
     }

@@ -15,8 +15,6 @@ class GalleryInside2Controller: UIViewController {
     @IBOutlet weak var fullView: singleThumbnailImage!
     override func viewDidLoad() {
         
-        loadingInit()
-        self.view.addSubview(loaderGlo)
         super.viewDidLoad()
         
         gal2Global = self;
