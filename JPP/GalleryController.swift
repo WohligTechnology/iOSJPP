@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftyJSON
+import Haneke
 
 class GalleryController: UIViewController,UITableViewDataSource,UITableViewDelegate {
     
@@ -88,7 +89,7 @@ class GalleryController: UIViewController,UITableViewDataSource,UITableViewDeleg
             if((photosJson[indexPath.row]["image"].string) != nil) {
                 let mediaBox = galleryAlbum(frame: CGRectMake(8,16,self.view.frame.width-16,200));
                 mediaBox.galleryTitle.text = photosJson[indexPath.row]["name"].stringValue
-                mediaBox.galleryBanner.image = rest.getThumb(photosJson[indexPath.row]["image"].string!)
+                mediaBox.galleryBanner.hnk_setImageFromURL(rest.getImageCache(photosJson[indexPath.row]["image"].string!))
                 cell.addSubview(mediaBox)
             }
         }
@@ -97,15 +98,13 @@ class GalleryController: UIViewController,UITableViewDataSource,UITableViewDeleg
                 let mediaBox = galleryAlbum(frame: CGRectMake(8,16,self.view.frame.width-16,200));
                 mediaBox.galleryTitle.text = photosJson[indexPath.row]["name"].stringValue
                 let image = photosJson[indexPath.row]["url"].stringValue;
-                mediaBox.galleryBanner.image = rest.getImageExternalURL(rest.getYoutubeImage(image))
+                mediaBox.galleryBanner.hnk_setImageFromURL(rest.getImageExternalCacheURL(rest.getYoutubeImage(image)) )
                 cell.addSubview(mediaBox)
             }
         }
         
-        if(indexPath.row == photosJson.count-1)
-        {
             loadingStop()
-        }
+        
         
         return cell
     }

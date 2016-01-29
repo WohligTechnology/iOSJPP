@@ -23,7 +23,7 @@ class NewsInsideController: UIViewController {
         let insideView = newsDetail(frame: CGRectMake(8,8,self.view.frame.width-16,700));
         self.title = newsTitle
         insideView.newsTitle.text = newsTitle;
-        insideView.newImgae.image = rest.getImage(newsImage);
+        insideView.newImgae.hnk_setImageFromURL(rest.getImageCache(newsImage))
         insideView.newsDate.text = newsDate;
         insideView.newsContent.text = newsContent;
         insideView.frame.size.height = insideView.newsContent.frame.size.height + insideView.newImgae.frame.size.height - 100

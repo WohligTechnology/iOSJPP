@@ -47,6 +47,16 @@ public class RestApi {
         return UIImage(data: data!)!
     }
     
+    public func getImageCache(urlStr:String) -> NSURL {
+        let url = NSURL(string: imageURL + urlStr)
+        return url!
+    }
+    
+    public func getImageExternalCacheURL(urlStr:String) -> NSURL {
+        let url = NSURL(string:urlStr)
+        return url!
+    }
+    
     public func getImageExternalURL(urlStr:String) -> UIImage {
         let url = NSURL(string: urlStr)
         let data = NSData(contentsOfURL: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check

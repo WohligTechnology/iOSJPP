@@ -19,7 +19,7 @@ class GalleryInside2Controller: UIViewController {
         
         gal2Global = self;
         
-        fullView.openImage.image = rest.getImage(galleryImage);
+        fullView.openImage.hnk_setImageFromURL(rest.getImageCache(galleryImage))
         
 //        self.setNavigationBarItemText("GALLERY INSIDE 2")
         // Do any additional setup after loading the view.

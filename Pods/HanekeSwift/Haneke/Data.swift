@@ -73,55 +73,55 @@ extension NSData : DataConvertible, DataRepresentable {
     }
     
 }
-
-public enum JSON : DataConvertible, DataRepresentable {
-    public typealias Result = JSON
-    
-    case Dictionary([String:AnyObject])
-    case Array([AnyObject])
-    
-    public static func convertFromData(data: NSData) -> Result? {
-        do {
-            let object : AnyObject = try NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions())
-            switch (object) {
-            case let dictionary as [String:AnyObject]:
-                return JSON.Dictionary(dictionary)
-            case let array as [AnyObject]:
-                return JSON.Array(array)
-            default:
-                return nil
-            }
-        } catch {
-            Log.error("Invalid JSON data", error as NSError)
-            return nil
-        }
-    }
-    
-    public func asData() -> NSData! {
-        switch (self) {
-        case .Dictionary(let dictionary):
-            return try? NSJSONSerialization.dataWithJSONObject(dictionary, options: NSJSONWritingOptions())
-        case .Array(let array):
-            return try? NSJSONSerialization.dataWithJSONObject(array, options: NSJSONWritingOptions())
-        }
-    }
-    
-    public var array : [AnyObject]! {
-        switch (self) {
-        case .Dictionary(_):
-            return nil
-        case .Array(let array):
-            return array
-        }
-    }
-    
-    public var dictionary : [String:AnyObject]! {
-        switch (self) {
-        case .Dictionary(let dictionary):
-            return dictionary
-        case .Array(_):
-            return nil
-        }
-    }
-    
-}
+//
+//public enum JSON : DataConvertible, DataRepresentable {
+//    public typealias Result = JSON
+//    
+//    case Dictionary([String:AnyObject])
+//    case Array([AnyObject])
+//    
+//    public static func convertFromData(data: NSData) -> Result? {
+//        do {
+//            let object : AnyObject = try NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions())
+//            switch (object) {
+//            case let dictionary as [String:AnyObject]:
+//                return JSON.Dictionary(dictionary)
+//            case let array as [AnyObject]:
+//                return JSON.Array(array)
+//            default:
+//                return nil
+//            }
+//        } catch {
+//            Log.error("Invalid JSON data", error as NSError)
+//            return nil
+//        }
+//    }
+//    
+//    public func asData() -> NSData! {
+//        switch (self) {
+//        case .Dictionary(let dictionary):
+//            return try? NSJSONSerialization.dataWithJSONObject(dictionary, options: NSJSONWritingOptions())
+//        case .Array(let array):
+//            return try? NSJSONSerialization.dataWithJSONObject(array, options: NSJSONWritingOptions())
+//        }
+//    }
+//    
+//    public var array : [AnyObject]! {
+//        switch (self) {
+//        case .Dictionary(_):
+//            return nil
+//        case .Array(let array):
+//            return array
+//        }
+//    }
+//    
+//    public var dictionary : [String:AnyObject]! {
+//        switch (self) {
+//        case .Dictionary(let dictionary):
+//            return dictionary
+//        case .Array(_):
+//            return nil
+//        }
+//    }
+//    
+//}
