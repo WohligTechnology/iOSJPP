@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>HanekeSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-JPP.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -42,37 +47,42 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>1512E3411A7378077828357290520722</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>186526C95A6E6A368E316AEBD475C8CB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5241AB01CA6451E7E89BE0237119DDE5</key>
+		<key>1C2DF87D176E8F0AB5789F0D9FD39235</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8A2E909F10308CADD2ED41EB30C60D20</key>
+		<key>1D3782E6298F2E002745BECCF2B10617</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C5161AFCE11CB63B4566D3BADA004EE4</key>
+		<key>3C5F94FCCCB15B2AA30E60C0D4E049FA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D0B4FDDEB22FAB880FBBD561F7DF88F5</key>
+		<key>7925F3FD432AFDBE83D5C1C60F3AD71E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F4F2439EAF1B4DB624479789790812EB</key>
+		<key>7DDF79495F24B309AF089ACC99FC1151</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FC0459AEDEC37868B32652FA58FA6746</key>
+		<key>F882F61085400CBA03A1F9D556FC22FF</key>
 		<dict>
 			<key>primary</key>
 			<true/>

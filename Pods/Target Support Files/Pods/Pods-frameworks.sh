@@ -85,6 +85,7 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods/DKChainableAnimationKit.framework"
+  install_framework "Pods/Haneke.framework"
   install_framework "Pods/RAMAnimatedTabBarController.framework"
   install_framework "Pods/SlideMenuControllerSwift.framework"
   install_framework "Pods/SwiftHTTP.framework"
@@ -92,6 +93,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods/DKChainableAnimationKit.framework"
+  install_framework "Pods/Haneke.framework"
   install_framework "Pods/RAMAnimatedTabBarController.framework"
   install_framework "Pods/SlideMenuControllerSwift.framework"
   install_framework "Pods/SwiftHTTP.framework"

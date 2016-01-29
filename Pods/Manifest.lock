@@ -1,5 +1,6 @@
 PODS:
   - DKChainableAnimationKit (1.6.0)
+  - HanekeSwift (0.10.1)
   - RAMAnimatedTabBarController (1.0.7)
   - SlideMenuControllerSwift (2.0.5)
   - SwiftHTTP (1.0.3)
@@ -7,6 +8,7 @@ PODS:
 
 DEPENDENCIES:
   - DKChainableAnimationKit (~> 1.6.0)
+  - HanekeSwift
   - RAMAnimatedTabBarController (~> 1.0.6)
   - SlideMenuControllerSwift
   - SwiftHTTP (~> 1.0.3)
@@ -23,6 +25,7 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   DKChainableAnimationKit: fe28909402825a42cc632b211eadcc39ad2bee38
+  HanekeSwift: 08e47d3d0f2899ec58e5d257beba0de619aca9e8
   RAMAnimatedTabBarController: f779af4c652e3b609e7f068b12ac8dab46909aa7
   SlideMenuControllerSwift: 9dcae36265e14c4f42e729f212463beb60d2cf96
   SwiftHTTP: fface018ab365bfb49fa3dca9fdfe77cafccde8b
