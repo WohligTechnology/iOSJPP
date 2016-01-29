@@ -9,28 +9,35 @@
 import UIKit
 import EventKitUI
 
-var SaveCalender = 1;
+let eventStore = EKEventStore()
 
+func createEvent(EventName:String, EventTime:NSDate) {
+    let event = EKEvent(eventStore: eventStore)
+    event.title = EventName
+    event.startDate = EventTime
+    event.endDate = EventTime.dateByAddingTimeInterval(60 * 60)
+    event.calendar = eventStore.defaultCalendarForNewEvents
+    do {
+        try eventStore.saveEvent(event, span: .ThisEvent)
+        print("Working Fine Event Stored");
+    } catch {
+        print("Bad things happened")
+    }
+}
+
+var SaveCalender = 1;
 var galleryID = "0";
 var videoIDGlo = "0";
-
 var galleryImage = "0";
-
-
 var newsImage = "";
 var newsTitle = "";
 var newsDate = "";
 var newsContent = "";
-
 var GalleryInsideTitle = ""
 var playerIndex = 0;
-
 var isGalWal = 0;
-
 var players:[Player] = []
-
 var loaderGlo:loading!
-
 var bounds = UIScreen.mainScreen().bounds
 var widthGlo = bounds.size.width
 var heightGlo = bounds.size.height
@@ -126,9 +133,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         players.append(Player(name: "Mohammad Maghsoudlou", achieve: "Asian Indoor Kabaddi Games Incheon (2014)-2nd Position, Asian Beach Kabaddi Games China (2012)-1st Position, National Kabaddi Championship (2008,2009,2010,2011,2012)-1st Position, National Kabaddi Premier League (2006,2007)-1st Position", tour: "", age: "25", type: "All Rounder", nativePlace: "Gorgan", jerseyNo: "23", image: "mohammad.jpg"))
         
         players.append(Player(name: "Hwangi Ahn", achieve: "Incheon indoor game- Bronze Medal, National Championship (2011,2012,2013)-2nd Position, Asian Games (2014)- Bronze Medal", tour: "", age: "32", type: "", nativePlace: "Gyoung Ju", jerseyNo: "17", image: "hwangi.jpg"))
-        
-       
-        
         
         return true
     }

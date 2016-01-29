@@ -10,9 +10,7 @@ import UIKit
 
 class SideMenuController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    
     var mainViewController: UIViewController!
-    
     var homeController:UIViewController!
     var scheduleController:UIViewController!
     var galleryController:UIViewController!
@@ -22,8 +20,6 @@ class SideMenuController: UIViewController, UITableViewDataSource, UITableViewDe
     var wallpaperController:UIViewController!
     var pointController:UIViewController!
     var aboutsController:UIViewController!
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,13 +52,6 @@ class SideMenuController: UIViewController, UITableViewDataSource, UITableViewDe
         
         let aboutsController = storyboard.instantiateViewControllerWithIdentifier("about") as! AboutController
         self.aboutsController = UINavigationController(rootViewController: aboutsController)
-        
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-        
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
     
     override func didReceiveMemoryWarning() {
@@ -99,39 +88,26 @@ class SideMenuController: UIViewController, UITableViewDataSource, UITableViewDe
         {
         case 0:
             self.slideMenuController()?.changeMainViewController(self.homeController, close: true)
-            
         case 1:
             self.slideMenuController()?.changeMainViewController(self.scheduleController, close: true)
-            
         case 2:
             isGalWal = 0
             self.slideMenuController()?.changeMainViewController(self.galleryController, close: true)
-            
-            
         case 3:
             self.slideMenuController()?.changeMainViewController(self.knowTeamController, close: true)
-            
         case 4:
             self.slideMenuController()?.changeMainViewController(self.newsController, close: true)
-            
         case 5:
             self.slideMenuController()?.changeMainViewController(self.merchandiseController, close: true)
-            
         case 6:
             isGalWal = 1
             self.slideMenuController()?.changeMainViewController(self.wallpaperController, close: true)
-            
         case 7:
             self.slideMenuController()?.changeMainViewController(self.pointController, close: true)
-            
         case 8:
             self.slideMenuController()?.changeMainViewController(self.aboutsController, close: true)
-            
-            
-            
         default:
             self.slideMenuController()?.changeMainViewController(self.homeController, close: true)
-            
         }
     }
 }

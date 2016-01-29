@@ -17,11 +17,9 @@ class ScheduleController: UIViewController {
     let topSpacing = 32;
     let spacingPink = 8;
     
-    let eventStore = EKEventStore()
-    var EventName = "Jaipur Pink Panther Event";
-    var EventTime = NSDate()
     
-    
+    var EventNameTop = "Jaipur Pink Panther Event";
+    var EventTimeTop = NSDate()
     
     
     
@@ -63,27 +61,14 @@ class ScheduleController: UIViewController {
     }
     
     
-    
-    func createEvent(sender:UIButton) {
-        let event = EKEvent(eventStore: eventStore)
-        
-        event.title = EventName
-        event.startDate = EventTime
-        event.endDate = EventTime.dateByAddingTimeInterval(60 * 60)
-        event.calendar = eventStore.defaultCalendarForNewEvents
-        do {
-            try eventStore.saveEvent(event, span: .ThisEvent)
-            print("Working Fine Event Stored");
-        } catch {
-            print("Bad things happened")
-        }
+    func createEventTop(sender:UIButton) {
+        createEvent(EventNameTop,EventTime: EventTimeTop)
     }
     
-
     
     func scheduleComplete (json:JSON) {
         dispatch_async(dispatch_get_main_queue(), {
-            
+            print(json);
             self.verticalLayout = VerticalFitLayout(width: self.view.frame.width);
             self.scrollView.insertSubview(self.verticalLayout, atIndex: 0)
             
@@ -96,13 +81,16 @@ class ScheduleController: UIViewController {
             upcomingVar.trapLabel.text="UPCOMING MATCH";
             upcomingVar.matchStadium.text = json[0]["stadium"].string
             upcomingVar.matchDate.text = json[0]["starttimedate"].string
-//            
-            upcomingVar.addToCalendar.addTarget(self, action: "createEvent:", forControlEvents: UIControlEvents.TouchUpInside)
+            upcomingVar.addToCalendar.addTarget(self, action: "createEventTop:", forControlEvents: UIControlEvents.TouchUpInside)
             
             var whiteView:UIView!
             whiteView = UIView(frame:CGRectMake(0,8,self.verticalLayout.frame.width,1000));
-            
             whiteView.backgroundColor = UIColor.whiteColor()
+            
+            let dateFormatter = NSDateFormatter()
+            dateFormatter.dateFormat = "dd MMM yyyy, HH:mm"
+            self.EventTimeTop = dateFormatter.dateFromString(json[0]["starttimedate"].string!)!
+            self.EventNameTop = json[0]["team1"].string! + " VS " + json[0]["team2"].string!;
             
             let trap = trapezium(frame: CGRectMake(8,0,self.verticalLayout.frame.width-16,34));
             self.resizeView(8);
@@ -136,6 +124,7 @@ class ScheduleController: UIViewController {
         })
         
     }
+    
 
 
     @IBOutlet weak var scrollView: UIScrollView!
