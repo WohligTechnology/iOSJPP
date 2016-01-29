@@ -265,6 +265,7 @@
 		36F2CE971C5739E400D0D2D6 /* media */ = {
 			isa = PBXGroup;
 			children = (
+				78F3D7651C5B77E4001521F9 /* loader */,
 				36F2CE981C5739F400D0D2D6 /* media.swift */,
 				36F2CE9A1C573A2300D0D2D6 /* media.xib */,
 			);
@@ -476,6 +477,13 @@
 				78238FE81C57AC350067E7D5 /* trapezium.swift */,
 			);
 			name = trapezium;
+			sourceTree = "<group>";
+		};
+		78F3D7651C5B77E4001521F9 /* loader */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = loader;
 			sourceTree = "<group>";
 		};
 		C23892D61C58C69200CA4DC1 /* thumbnailImage */ = {
