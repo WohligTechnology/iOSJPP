@@ -10,14 +10,20 @@
         </mutableArray>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="about" customModule="Jaipur_Pink_Panther" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="about" customModule="Jaipur_Pink_Panthers" customModuleProvider="target"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="440"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="597"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="aboutus" translatesAutoresizingMaskIntoConstraints="NO" id="MoV-Eo-giM">
+                    <rect key="frame" x="8" y="0.0" width="304" height="183"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="183" id="UH3-4U-JDu"/>
+                    </constraints>
+                </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nLM-Bn-hRo">
-                    <rect key="frame" x="8" y="8" width="304" height="399"/>
+                    <rect key="frame" x="8" y="198" width="304" height="399"/>
                     <string key="text">Jaipur Pink Panthers is a professional kabaddi team based in Jaipur, Rajasthan that competes in the Pro Kabaddi League.
  
 Founded: 2014
@@ -42,13 +48,19 @@ Jaipur Pink Panthers are the champions of the inaugural season of the Pro Kabadd
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="nLM-Bn-hRo" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" id="VIk-q6-oUf"/>
-                <constraint firstAttribute="bottom" secondItem="nLM-Bn-hRo" secondAttribute="bottom" constant="33" id="q9d-06-ELR"/>
-                <constraint firstItem="nLM-Bn-hRo" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailingMargin" id="qg4-EE-mLo"/>
-                <constraint firstItem="nLM-Bn-hRo" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="topMargin" id="teT-TY-taN"/>
+                <constraint firstItem="MoV-Eo-giM" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="1S0-Nh-10o"/>
+                <constraint firstItem="nLM-Bn-hRo" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" id="1eq-x3-qDU"/>
+                <constraint firstItem="nLM-Bn-hRo" firstAttribute="top" secondItem="MoV-Eo-giM" secondAttribute="bottom" constant="15" id="3d4-W6-fuY"/>
+                <constraint firstItem="MoV-Eo-giM" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="9hd-An-fUa"/>
+                <constraint firstItem="nLM-Bn-hRo" firstAttribute="centerX" secondItem="MoV-Eo-giM" secondAttribute="centerX" id="Iy2-lp-tR6"/>
+                <constraint firstAttribute="bottom" secondItem="nLM-Bn-hRo" secondAttribute="bottom" id="KcJ-2K-cWV"/>
+                <constraint firstAttribute="trailing" secondItem="MoV-Eo-giM" secondAttribute="trailing" constant="8" id="mWk-lD-w6X"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="280" y="242"/>
+            <point key="canvasLocation" x="280" y="320.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="aboutus" width="900" height="326"/>
+    </resources>
 </document>

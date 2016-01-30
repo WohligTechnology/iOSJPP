@@ -6,11 +6,16 @@
         <capability name="Segues with Peek and Pop" minToolsVersion="7.1"/>
     </dependencies>
     <customFonts key="customFonts">
+        <mutableArray key="Oswald-Bold.ttf">
+            <string>Oswald-Bold</string>
+            <string>Oswald-Bold</string>
+        </mutableArray>
         <mutableArray key="Oswald-Light.ttf">
             <string>Oswald-Light</string>
             <string>Oswald-Light</string>
         </mutableArray>
         <mutableArray key="Oswald-Regular.ttf">
+            <string>Oswald-Regular</string>
             <string>Oswald-Regular</string>
             <string>Oswald-Regular</string>
         </mutableArray>
@@ -487,57 +492,106 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s9Z-e7-CSc">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
-                                    <imageView autoresizesSubviews="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="merchandise" translatesAutoresizingMaskIntoConstraints="NO" id="c2z-IS-g7f">
-                                        <rect key="frame" x="7" y="217" width="307" height="213"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xsO-gq-Wsc">
+                                        <rect key="frame" x="8" y="8" width="304" height="552"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8om-dS-Y4w">
+                                                <rect key="frame" x="8" y="210" width="288" height="37"/>
+                                                <color key="backgroundColor" red="0.70588237047195435" green="0.11764705926179886" blue="0.44705882668495178" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="37" id="ce2-YJ-GrG"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="15"/>
+                                                <state key="normal" title="BUY NOW">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="S3R-VS-V10" kind="show" id="kGR-72-TwO">
+                                                        <segue key="commit" inheritsFrom="parent" id="dhG-W4-Evu"/>
+                                                        <segue key="preview" inheritsFrom="commit" id="hgh-W3-tKD"/>
+                                                    </segue>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TICKETS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9He-nB-z2P">
+                                                <rect key="frame" x="0.0" y="33" width="304" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="WTJ-fc-9nl"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Oswald-Bold" family="Oswald" pointSize="17"/>
+                                                <color key="textColor" red="0.70588237047195435" green="0.11764705926179886" blue="0.44705882668495178" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MERCHANDISE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7kp-4D-NoO">
+                                                <rect key="frame" x="3" y="274" width="298" height="26"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="26" id="jVc-jm-YnS"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Oswald-Bold" family="Oswald" pointSize="17"/>
+                                                <color key="textColor" red="0.70588237050000002" green="0.1176470593" blue="0.44705882670000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="m1" translatesAutoresizingMaskIntoConstraints="NO" id="yZk-vx-G1t">
+                                                <rect key="frame" x="8" y="316" width="288" height="93"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="93" id="TN0-UA-jNc"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="t1111" translatesAutoresizingMaskIntoConstraints="NO" id="m9X-zu-MaF">
+                                                <rect key="frame" x="34" y="80" width="237" height="109"/>
+                                            </imageView>
+                                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lyi-Cx-qBu">
+                                                <rect key="frame" x="8" y="428" width="288" height="37"/>
+                                                <color key="backgroundColor" red="0.70588237047195435" green="0.11764705926179886" blue="0.44705882668495178" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="37" id="nNA-0g-fBO"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="15"/>
+                                                <state key="normal" title="COMING SOON">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="213" id="tMl-77-V6n"/>
+                                            <constraint firstItem="lyi-Cx-qBu" firstAttribute="leading" secondItem="8om-dS-Y4w" secondAttribute="leading" id="1pH-cZ-CO6"/>
+                                            <constraint firstItem="m9X-zu-MaF" firstAttribute="top" secondItem="9He-nB-z2P" secondAttribute="bottom" constant="26" id="3dv-s8-bBg"/>
+                                            <constraint firstItem="yZk-vx-G1t" firstAttribute="top" secondItem="7kp-4D-NoO" secondAttribute="bottom" constant="16" id="4oX-z4-nQt"/>
+                                            <constraint firstItem="yZk-vx-G1t" firstAttribute="trailing" secondItem="lyi-Cx-qBu" secondAttribute="trailing" id="6c3-eq-BV8"/>
+                                            <constraint firstItem="yZk-vx-G1t" firstAttribute="leading" secondItem="lyi-Cx-qBu" secondAttribute="leading" id="7wc-JN-qvV"/>
+                                            <constraint firstItem="7kp-4D-NoO" firstAttribute="centerX" secondItem="yZk-vx-G1t" secondAttribute="centerX" id="8Gr-6F-4cn"/>
+                                            <constraint firstItem="m9X-zu-MaF" firstAttribute="centerX" secondItem="8om-dS-Y4w" secondAttribute="centerX" id="JYw-Py-4bq"/>
+                                            <constraint firstItem="9He-nB-z2P" firstAttribute="leading" secondItem="xsO-gq-Wsc" secondAttribute="leading" id="KOl-Ih-Zw7"/>
+                                            <constraint firstItem="7kp-4D-NoO" firstAttribute="top" secondItem="8om-dS-Y4w" secondAttribute="bottom" constant="27" id="Sbt-Hj-atU"/>
+                                            <constraint firstItem="9He-nB-z2P" firstAttribute="top" secondItem="xsO-gq-Wsc" secondAttribute="top" constant="33" id="Svf-zd-ivF"/>
+                                            <constraint firstItem="7kp-4D-NoO" firstAttribute="top" secondItem="xsO-gq-Wsc" secondAttribute="top" constant="274" id="cIe-Hr-kai"/>
+                                            <constraint firstItem="m9X-zu-MaF" firstAttribute="leading" secondItem="xsO-gq-Wsc" secondAttribute="leading" constant="34" id="cT4-CW-GHI"/>
+                                            <constraint firstItem="lyi-Cx-qBu" firstAttribute="top" secondItem="yZk-vx-G1t" secondAttribute="bottom" constant="19" id="cuk-fp-FSt"/>
+                                            <constraint firstAttribute="bottom" secondItem="lyi-Cx-qBu" secondAttribute="bottom" constant="87" id="dY6-jJ-ZqT"/>
+                                            <constraint firstItem="lyi-Cx-qBu" firstAttribute="leading" secondItem="xsO-gq-Wsc" secondAttribute="leadingMargin" id="gL4-yJ-zwJ"/>
+                                            <constraint firstItem="m9X-zu-MaF" firstAttribute="centerX" secondItem="9He-nB-z2P" secondAttribute="centerX" id="jwN-3a-8Bk"/>
+                                            <constraint firstItem="8om-dS-Y4w" firstAttribute="top" secondItem="m9X-zu-MaF" secondAttribute="bottom" constant="21" id="kOw-hd-Kzm"/>
+                                            <constraint firstItem="7kp-4D-NoO" firstAttribute="leading" secondItem="xsO-gq-Wsc" secondAttribute="leading" constant="3" id="lUt-II-R5q"/>
+                                            <constraint firstItem="7kp-4D-NoO" firstAttribute="centerX" secondItem="8om-dS-Y4w" secondAttribute="centerX" id="pLk-j0-MPW"/>
+                                            <constraint firstItem="7kp-4D-NoO" firstAttribute="centerX" secondItem="xsO-gq-Wsc" secondAttribute="centerX" id="zLk-i4-mUs"/>
                                         </constraints>
-                                    </imageView>
-                                    <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8om-dS-Y4w">
-                                        <rect key="frame" x="7" y="438" width="307" height="37"/>
-                                        <color key="backgroundColor" red="0.90588235855102539" green="0.17647059261798859" blue="0.54117649793624878" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="37" id="hrl-cG-fqF"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="15"/>
-                                        <state key="normal" title="BUY NOW">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="hCu-jj-Ly5" kind="show" id="ylE-ai-sFP">
-                                                <segue key="commit" inheritsFrom="parent" id="D1f-QB-uB7"/>
-                                                <segue key="preview" inheritsFrom="commit" id="9WK-dO-kgm"/>
-                                            </segue>
-                                        </connections>
-                                    </button>
-                                    <imageView autoresizesSubviews="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mercimage" translatesAutoresizingMaskIntoConstraints="NO" id="eDi-AE-sPY">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="201"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="201" id="dd0-FE-OKm"/>
-                                        </constraints>
-                                    </imageView>
+                                    </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="c2z-IS-g7f" secondAttribute="trailing" constant="6" id="6R7-dN-Chf"/>
-                                    <constraint firstItem="eDi-AE-sPY" firstAttribute="leading" secondItem="c2z-IS-g7f" secondAttribute="leading" constant="-7" id="FMI-9U-WDE"/>
-                                    <constraint firstAttribute="bottom" secondItem="8om-dS-Y4w" secondAttribute="bottom" constant="8" id="RDw-rD-OD3"/>
-                                    <constraint firstItem="eDi-AE-sPY" firstAttribute="trailing" secondItem="c2z-IS-g7f" secondAttribute="trailing" constant="6" id="ZwE-tW-Hqb"/>
-                                    <constraint firstItem="c2z-IS-g7f" firstAttribute="top" secondItem="eDi-AE-sPY" secondAttribute="bottom" constant="16" id="amU-l5-0ft"/>
-                                    <constraint firstItem="8om-dS-Y4w" firstAttribute="leading" secondItem="c2z-IS-g7f" secondAttribute="leading" id="ivZ-IN-xvB"/>
-                                    <constraint firstItem="8om-dS-Y4w" firstAttribute="trailing" secondItem="c2z-IS-g7f" secondAttribute="trailing" id="jbQ-fH-q2r"/>
-                                    <constraint firstItem="8om-dS-Y4w" firstAttribute="top" secondItem="c2z-IS-g7f" secondAttribute="bottom" constant="8" symbolic="YES" id="ku2-gd-Miu"/>
-                                    <constraint firstItem="c2z-IS-g7f" firstAttribute="leading" secondItem="s9Z-e7-CSc" secondAttribute="leading" constant="7" id="qyL-kf-1oi"/>
-                                    <constraint firstItem="8om-dS-Y4w" firstAttribute="centerX" secondItem="s9Z-e7-CSc" secondAttribute="centerX" id="uDq-KQ-AaL"/>
-                                    <constraint firstItem="eDi-AE-sPY" firstAttribute="top" secondItem="s9Z-e7-CSc" secondAttribute="topMargin" constant="-8" id="wJj-D0-OOT"/>
+                                    <constraint firstItem="xsO-gq-Wsc" firstAttribute="centerX" secondItem="s9Z-e7-CSc" secondAttribute="centerX" id="AkB-ma-ABK"/>
+                                    <constraint firstItem="xsO-gq-Wsc" firstAttribute="top" secondItem="s9Z-e7-CSc" secondAttribute="top" constant="8" id="EN2-Fh-ehL"/>
+                                    <constraint firstAttribute="bottom" secondItem="xsO-gq-Wsc" secondAttribute="bottom" constant="8" id="F3L-mh-xfk"/>
+                                    <constraint firstItem="xsO-gq-Wsc" firstAttribute="centerY" secondItem="s9Z-e7-CSc" secondAttribute="centerY" id="KPZ-gy-Pdf"/>
+                                    <constraint firstAttribute="trailing" secondItem="xsO-gq-Wsc" secondAttribute="trailing" constant="8" id="NdY-2J-SGo"/>
+                                    <constraint firstItem="xsO-gq-Wsc" firstAttribute="leading" secondItem="s9Z-e7-CSc" secondAttribute="leading" constant="8" id="gLt-Aa-1Uu"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="0.76862746477127075" green="0.94117647409439087" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="s9Z-e7-CSc" firstAttribute="top" secondItem="LYE-xe-qnE" secondAttribute="top" id="92d-oM-FpC"/>
-                            <constraint firstItem="s9Z-e7-CSc" firstAttribute="leading" secondItem="LYE-xe-qnE" secondAttribute="leading" id="GNB-hl-jw0"/>
-                            <constraint firstItem="s9Z-e7-CSc" firstAttribute="bottom" secondItem="Xkq-e7-VNZ" secondAttribute="top" id="JlS-2Y-RGN"/>
-                            <constraint firstAttribute="trailing" secondItem="s9Z-e7-CSc" secondAttribute="trailing" id="oy5-Kr-F1A"/>
+                            <constraint firstItem="s9Z-e7-CSc" firstAttribute="top" secondItem="LYE-xe-qnE" secondAttribute="top" id="Ac0-PJ-69N"/>
+                            <constraint firstAttribute="trailing" secondItem="s9Z-e7-CSc" secondAttribute="trailing" id="OOQ-1F-lqT"/>
+                            <constraint firstItem="s9Z-e7-CSc" firstAttribute="leading" secondItem="LYE-xe-qnE" secondAttribute="leading" id="Wnk-Z8-98J"/>
+                            <constraint firstItem="s9Z-e7-CSc" firstAttribute="bottom" secondItem="Xkq-e7-VNZ" secondAttribute="top" id="nDn-W8-aDS"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
@@ -929,12 +983,12 @@
     </scenes>
     <resources>
         <image name="ic_action_panther" width="96" height="96"/>
-        <image name="merchandise" width="600" height="466"/>
-        <image name="mercimage" width="800" height="398"/>
+        <image name="m1" width="286" height="256"/>
+        <image name="t1111" width="307" height="275"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="kGR-72-TwO"/>
         <segue reference="DFT-vF-egz"/>
         <segue reference="6k6-pP-MVb"/>
-        <segue reference="ylE-ai-sFP"/>
     </inferredMetricsTieBreakers>
 </document>
