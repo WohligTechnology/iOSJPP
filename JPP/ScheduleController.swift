@@ -10,6 +10,7 @@ import UIKit
 import EventKit
 import SwiftyJSON
 
+var SchduleCtrlGlo:ScheduleController!
 
 class ScheduleController: UIViewController {
     
@@ -63,8 +64,14 @@ class ScheduleController: UIViewController {
     
     func createEventTop(sender:UIButton) {
         createEvent(EventNameTop,EventTime: EventTimeTop)
+        
+        let alertController = UIAlertController(title: "Match added to your Calender", message:
+            "", preferredStyle: UIAlertControllerStyle.Alert)
+        alertController.addAction(UIAlertAction(title: "Continue", style: UIAlertActionStyle.Default,handler: nil))
+        
+        self.presentViewController(alertController, animated: true, completion: nil)
+        
     }
-    
     
     func scheduleComplete (json:JSON) {
         
@@ -150,7 +157,9 @@ class ScheduleController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setNavigationBarItemText("SCHEDULE")
+        
+        SchduleCtrlGlo = self;
+        self.setNavigationBarItemText("FIXTURES")
         
         loadingInit()
         self.view.addSubview(loaderGlo)

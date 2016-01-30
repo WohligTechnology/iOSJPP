@@ -134,10 +134,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate,PushNotificationDelegate {
         players.append(Player(name: "Hwangi Ahn", achieve: "Incheon indoor game- Bronze Medal, National Championship (2011,2012,2013)-2nd Position, Asian Games (2014)- Bronze Medal", tour: "", age: "32", type: "", nativePlace: "Gyoung Ju", jerseyNo: "17", image: "hwangi.jpg"))
         
         
-//        PushNotificationManager.pushManager().delegate = self
-//        PushNotificationManager.pushManager().handlePushReceived(launchOptions)
-//        PushNotificationManager.pushManager().sendAppOpen()
-//        PushNotificationManager.pushManager().registerForPushNotifications()
+        PushNotificationManager.pushManager().delegate = self
+        PushNotificationManager.pushManager().handlePushReceived(launchOptions)
+        PushNotificationManager.pushManager().sendAppOpen()
+        PushNotificationManager.pushManager().registerForPushNotifications()
         return true
     }
     

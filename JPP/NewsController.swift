@@ -14,7 +14,7 @@ class NewsController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setNavigationBarItemText("NEWS")
+        self.setNavigationBarItemText("NEWS & MEDIA")
         
         loadingInit()
         self.view.addSubview(loaderGlo)

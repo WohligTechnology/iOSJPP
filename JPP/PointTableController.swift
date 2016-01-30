@@ -24,7 +24,7 @@ class PointTableController: UIViewController,UITableViewDelegate,UITableViewData
 
         
         rest.getPointTable(pointLoaded)
-        self.setNavigationBarItemText("POINT TABLE")
+        self.setNavigationBarItemText("POINTS TABLE")
         tableHeader.tableNo.font = UIFont(name:"Oswald-Bold", size: 14.0)
         tableHeader.tableNo.text = "No."
         

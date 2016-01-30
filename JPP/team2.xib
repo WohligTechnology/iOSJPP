@@ -21,7 +21,7 @@
                         <constraint firstAttribute="height" constant="34" id="PRG-tF-ijG"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TABLE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8El-aH-ENo">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="POINTS TABLE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8El-aH-ENo">
                     <rect key="frame" x="0.0" y="0.0" width="300" height="34"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="34" id="0MZ-8s-nWe"/>

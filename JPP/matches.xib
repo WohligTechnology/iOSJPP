@@ -13,7 +13,7 @@
         </mutableArray>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="matches" customModule="Jaipur_Pink_Panther" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="matches" customModule="Jaipur_Pink_Panthers" customModuleProvider="target">
             <connections>
                 <outlet property="matchesDate" destination="74G-d4-Wx0" id="FVS-Vq-7P5"/>
                 <outlet property="matchesTeams" destination="8K5-0L-apj" id="kUB-5U-QHz"/>

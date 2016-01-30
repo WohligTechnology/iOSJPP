@@ -12,14 +12,16 @@ import UIKit
     
     @IBOutlet weak var matchesTeams: UILabel!
     @IBOutlet weak var matchesDate: UILabel!
+    
     @IBAction func addCalenderTap(sender: AnyObject) {
-
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "dd MMM yyyy, HH:mm"
         let event2Time = dateFormatter.dateFromString(matchesDate.text!)!
-
         createEvent(matchesTeams.text!, EventTime: event2Time)
-        
+        let alertController = UIAlertController(title: "Match added to your Calender", message:
+            "", preferredStyle: UIAlertControllerStyle.Alert)
+        alertController.addAction(UIAlertAction(title: "Continue", style: UIAlertActionStyle.Default,handler: nil))
+        SchduleCtrlGlo.presentViewController(alertController, animated: true, completion: nil)
     }
     
     override init(frame: CGRect) {
@@ -42,11 +44,6 @@ import UIKit
         sortnewview.frame = bounds
         sortnewview.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
         self.addSubview(sortnewview);
-        
-        
-        
-        
-        
     }
     
     
