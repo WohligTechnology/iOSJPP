@@ -12,6 +12,13 @@
 		360A51031C579ACB001F7E40 /* playerInside.xib in Resources */ = {isa = PBXBuildFile; fileRef = 360A51021C579ACB001F7E40 /* playerInside.xib */; };
 		362A175B1C58AA3C00B11F22 /* team2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 362A175A1C58AA3C00B11F22 /* team2.xib */; };
 		362A175D1C58AA6500B11F22 /* team2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362A175C1C58AA6500B11F22 /* team2.swift */; };
+		3636099B1C5C740800078DC7 /* Pushwoosh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3636099A1C5C740800078DC7 /* Pushwoosh.framework */; };
+		363609A01C5C749E00078DC7 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3636099F1C5C749E00078DC7 /* libz.tbd */; };
+		363609A21C5C74A500078DC7 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 363609A11C5C74A500078DC7 /* libstdc++.tbd */; };
+		363609A41C5C74FE00078DC7 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 363609A31C5C74FE00078DC7 /* MapKit.framework */; };
+		363609A61C5C750700078DC7 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 363609A51C5C750700078DC7 /* ImageIO.framework */; };
+		363609A81C5C755B00078DC7 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 363609A71C5C755B00078DC7 /* AVFoundation.framework */; };
+		363609AA1C5C759F00078DC7 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 363609A91C5C759F00078DC7 /* SystemConfiguration.framework */; };
 		366F19D71C58EFBD00321669 /* WebController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366F19D61C58EFBD00321669 /* WebController.swift */; };
 		366F19D91C58F32700321669 /* BookTicketController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366F19D81C58F32700321669 /* BookTicketController.swift */; };
 		366F19DC1C58F52600321669 /* bookTicket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366F19DB1C58F52600321669 /* bookTicket.swift */; };
@@ -97,6 +104,14 @@
 		360A51021C579ACB001F7E40 /* playerInside.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = playerInside.xib; sourceTree = "<group>"; };
 		362A175A1C58AA3C00B11F22 /* team2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = team2.xib; sourceTree = "<group>"; };
 		362A175C1C58AA6500B11F22 /* team2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = team2.swift; sourceTree = "<group>"; };
+		3636099A1C5C740800078DC7 /* Pushwoosh.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Pushwoosh.framework; sourceTree = "<group>"; };
+		3636099C1C5C741A00078DC7 /* JPP-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JPP-Bridging-Header.h"; sourceTree = "<group>"; };
+		3636099F1C5C749E00078DC7 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		363609A11C5C74A500078DC7 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
+		363609A31C5C74FE00078DC7 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		363609A51C5C750700078DC7 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		363609A71C5C755B00078DC7 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		363609A91C5C759F00078DC7 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		366F19D61C58EFBD00321669 /* WebController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebController.swift; sourceTree = "<group>"; };
 		366F19D81C58F32700321669 /* BookTicketController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookTicketController.swift; sourceTree = "<group>"; };
 		366F19DB1C58F52600321669 /* bookTicket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bookTicket.swift; sourceTree = "<group>"; };
@@ -183,7 +198,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				363609AA1C5C759F00078DC7 /* SystemConfiguration.framework in Frameworks */,
+				363609A81C5C755B00078DC7 /* AVFoundation.framework in Frameworks */,
+				363609A61C5C750700078DC7 /* ImageIO.framework in Frameworks */,
+				363609A41C5C74FE00078DC7 /* MapKit.framework in Frameworks */,
+				363609A01C5C749E00078DC7 /* libz.tbd in Frameworks */,
+				363609A21C5C74A500078DC7 /* libstdc++.tbd in Frameworks */,
 				96117823854BBFB45F51F300 /* Pods.framework in Frameworks */,
+				3636099B1C5C740800078DC7 /* Pushwoosh.framework in Frameworks */,
 				3CD47F20EEDEDD9528BA0932 /* Pods_JPP.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,6 +316,7 @@
 		36F9C15E1C55EDBF003D02AB /* JPP */ = {
 			isa = PBXGroup;
 			children = (
+				3636099A1C5C740800078DC7 /* Pushwoosh.framework */,
 				36F9C15F1C55EDBF003D02AB /* AppDelegate.swift */,
 				36F9C1711C55F935003D02AB /* Helper */,
 				36F9C1861C5616E4003D02AB /* Controller */,
@@ -303,6 +326,7 @@
 				36F9C18D1C56282B003D02AB /* Fonts */,
 				36F9C1661C55EDBF003D02AB /* Assets.xcassets */,
 				36F9C16B1C55EDBF003D02AB /* Info.plist */,
+				3636099C1C5C741A00078DC7 /* JPP-Bridging-Header.h */,
 			);
 			path = JPP;
 			sourceTree = "<group>";
@@ -447,6 +471,12 @@
 		7283620D2DBE0A487EB4AD33 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				363609A91C5C759F00078DC7 /* SystemConfiguration.framework */,
+				363609A71C5C755B00078DC7 /* AVFoundation.framework */,
+				363609A51C5C750700078DC7 /* ImageIO.framework */,
+				363609A31C5C74FE00078DC7 /* MapKit.framework */,
+				363609A11C5C74A500078DC7 /* libstdc++.tbd */,
+				3636099F1C5C749E00078DC7 /* libz.tbd */,
 				AADCA4CCFDB108A580EB8D69 /* Pods.framework */,
 				FD4C274A56DABBBF9AF41245 /* Pods_JPP.framework */,
 			);
@@ -826,13 +856,20 @@
 			baseConfigurationReference = 2D336F626161773594C67CC5 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/JPP",
+				);
 				INFOPLIST_FILE = JPP/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = wohlig.JPP;
 				PRODUCT_NAME = "Jaipur Pink Panther";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "JPP/JPP-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -842,13 +879,19 @@
 			baseConfigurationReference = 87466C106F929A2F048F5460 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/JPP",
+				);
 				INFOPLIST_FILE = JPP/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = wohlig.JPP;
 				PRODUCT_NAME = "Jaipur Pink Panther";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "JPP/JPP-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
