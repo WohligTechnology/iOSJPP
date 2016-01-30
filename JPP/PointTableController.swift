@@ -22,6 +22,8 @@ class PointTableController: UIViewController,UITableViewDelegate,UITableViewData
         super.viewDidLoad()
         
 
+        loadingInit()
+        self.view.addSubview(loaderGlo)
         
         rest.getPointTable(pointLoaded)
         self.setNavigationBarItemText("POINTS TABLE")
