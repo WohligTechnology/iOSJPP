@@ -104,7 +104,7 @@
 		360A51021C579ACB001F7E40 /* playerInside.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = playerInside.xib; sourceTree = "<group>"; };
 		362A175A1C58AA3C00B11F22 /* team2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = team2.xib; sourceTree = "<group>"; };
 		362A175C1C58AA6500B11F22 /* team2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = team2.swift; sourceTree = "<group>"; };
-		3636099A1C5C740800078DC7 /* Pushwoosh.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Pushwoosh.framework; sourceTree = "<group>"; };
+		3636099A1C5C740800078DC7 /* Pushwoosh.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pushwoosh.framework; path = JPP/Pushwoosh.framework; sourceTree = "<group>"; };
 		3636099C1C5C741A00078DC7 /* JPP-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JPP-Bridging-Header.h"; sourceTree = "<group>"; };
 		3636099F1C5C749E00078DC7 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		363609A11C5C74A500078DC7 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
@@ -316,7 +316,6 @@
 		36F9C15E1C55EDBF003D02AB /* JPP */ = {
 			isa = PBXGroup;
 			children = (
-				3636099A1C5C740800078DC7 /* Pushwoosh.framework */,
 				36F9C15F1C55EDBF003D02AB /* AppDelegate.swift */,
 				36F9C1711C55F935003D02AB /* Helper */,
 				36F9C1861C5616E4003D02AB /* Controller */,
@@ -471,6 +470,7 @@
 		7283620D2DBE0A487EB4AD33 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3636099A1C5C740800078DC7 /* Pushwoosh.framework */,
 				363609A91C5C759F00078DC7 /* SystemConfiguration.framework */,
 				363609A71C5C755B00078DC7 /* AVFoundation.framework */,
 				363609A51C5C750700078DC7 /* ImageIO.framework */,

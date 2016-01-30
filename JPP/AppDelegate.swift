@@ -8,11 +8,8 @@
 
 import UIKit
 import EventKitUI
-
 let eventStore = EKEventStore()
-
 var mediaUrl = "";
-
 func createEvent(EventName:String, EventTime:NSDate) {
     let event = EKEvent(eventStore: eventStore)
     event.title = EventName
@@ -26,7 +23,6 @@ func createEvent(EventName:String, EventTime:NSDate) {
 //        print("Bad things happened")
     }
 }
-
 var SaveCalender = 1;
 var galleryID = "0";
 var videoIDGlo = "0";
