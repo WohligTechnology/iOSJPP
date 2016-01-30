@@ -12,7 +12,7 @@ class WallpaperController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setNavigationBarItemText("WALLPAPER")
+        self.setNavigationBarItemText("WALLPAPERS")
 
         // Do any additional setup after loading the view.
     }

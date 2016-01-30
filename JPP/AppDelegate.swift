@@ -129,9 +129,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate,PushNotificationDelegate {
         
         players.append(Player(name: "Satish kumar", achieve: "Senior National (2007,2008,2011)- 1st Positon, Senior National (2015)- 2nd Position,Senior Federation (2006) - 3rd Position, Beach Kabaddi National Campionship (2008) - 1st Position", tour: "Senior National -(2007,2008,2011,2015),Senior Federation Cup (2006), Beach Kabaddi National Campionship(2008)", age: "31", type: "Raider", nativePlace: "Rohera", jerseyNo: "06", image: "satish.jpg"))
         
-        players.append(Player(name: "Mohammad Maghsoudlou", achieve: "Asian Indoor Kabaddi Games Incheon (2014)-2nd Position, Asian Beach Kabaddi Games China (2012)-1st Position, National Kabaddi Championship (2008,2009,2010,2011,2012)-1st Position, National Kabaddi Premier League (2006,2007)-1st Position", tour: "", age: "25", type: "All Rounder", nativePlace: "Gorgan", jerseyNo: "23", image: "mohammad.jpg"))
+        players.append(Player(name: "Mohammad Maghsoudlou", achieve: "Asian Indoor Kabaddi Games Incheon (2014)-2nd Position, Asian Beach Kabaddi Games China (2012)-1st Position, National Kabaddi Championship (2008,2009,2010,2011,2012)-1st Position, National Kabaddi Premier League (2006,2007)-1st Position", tour: "No information currently available", age: "25", type: "All Rounder", nativePlace: "Gorgan", jerseyNo: "23", image: "mohammad.jpg"))
         
-        players.append(Player(name: "Hwangi Ahn", achieve: "Incheon indoor game- Bronze Medal, National Championship (2011,2012,2013)-2nd Position, Asian Games (2014)- Bronze Medal", tour: "", age: "32", type: "", nativePlace: "Gyoung Ju", jerseyNo: "17", image: "hwangi.jpg"))
+        players.append(Player(name: "Hwangi Ahn", achieve: "Incheon indoor game- Bronze Medal, National Championship (2011,2012,2013)-2nd Position, Asian Games (2014)- Bronze Medal", tour: "No information currently available", age: "32", type: "All Rounder", nativePlace: "Gyoung Ju", jerseyNo: "17", image: "hwangi.jpg"))
         
         
         PushNotificationManager.pushManager().delegate = self
