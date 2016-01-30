@@ -40,6 +40,8 @@ class NewsController: UIViewController, UITableViewDataSource, UITableViewDelega
             newsJSON = json;
             dispatch_async(dispatch_get_main_queue(),{
                 self.newsTableView.reloadData()
+            });
+            dispatch_async(dispatch_get_main_queue(), {
                 loadingStop()
             });
         }

@@ -55,8 +55,11 @@ class GalleryController: UIViewController,UITableViewDataSource,UITableViewDeleg
             dispatch_async(dispatch_get_main_queue(),{
                 self.photoTableView.reloadData()
             });
-            loadingStop()
+           
         }
+        dispatch_async(dispatch_get_main_queue(), {
+            loadingStop()
+        });
     }
     override func viewDidAppear(animated: Bool) {
         

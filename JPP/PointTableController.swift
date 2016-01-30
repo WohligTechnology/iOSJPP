@@ -67,11 +67,13 @@ class PointTableController: UIViewController,UITableViewDelegate,UITableViewData
             pointJson = json;
             dispatch_async(dispatch_get_main_queue(),{
                 self.pointTable.reloadData()
-                loadingStop()
             });
             
         }
-        
+        dispatch_async(dispatch_get_main_queue(), {
+            loadingStop()
+        });
+
     }
     
     override func didReceiveMemoryWarning() {

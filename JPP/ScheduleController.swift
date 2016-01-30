@@ -134,9 +134,11 @@ class ScheduleController: UIViewController {
                 
                 bookTic.bookButton.addTarget(self, action: "BookButtonTap:", forControlEvents: UIControlEvents.TouchUpInside)
                 
-                loadingStop()
-                
             })
+            
+            dispatch_async(dispatch_get_main_queue(), {
+                loadingStop()
+            });
         }
         
     }

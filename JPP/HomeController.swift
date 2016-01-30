@@ -23,16 +23,17 @@ class HomeController: UIViewController,UIGestureRecognizerDelegate {
     var HomeJSON = JSON(1)
     
     func handleTap(sender: UITapGestureRecognizer? = nil) {
-        newsDate = HomeJSON["news"]["timestamp"].string!
-        newsContent = HomeJSON["news"]["content"].string!
-        newsTitle = HomeJSON["news"]["name"].string!
-        newsImage = HomeJSON["news"]["image"].string!
-        performSegueWithIdentifier("homeNews", sender: nil)
+        
+        mediaUrl = HomeJSON["news"]["content"].string!
+        
+        performSegueWithIdentifier("homeNewsExternal", sender: nil)
+        
         
     }
     
     func homeLoaded(json:JSON) {
         
+
         if(json == 1)
         {
             let alertController = UIAlertController(title: "No Connection", message:
@@ -62,23 +63,18 @@ class HomeController: UIViewController,UIGestureRecognizerDelegate {
                     
                     updates.trapLabel.text = "LATEST UPDATE"
                     
-                    if((json["news"]["id"].string) != nil) {
-                        let newsBox = news(frame: CGRectMake(8,8,self.verticalLayout.frame.width-16,280) );
-                        
-                        newsBox.newsDate.text = json["news"]["timestamp"].string
-                        newsBox.newsDesc.text = json["news"]["content"].string
-                        newsBox.newsTitle.text = json["news"]["name"].string
-                        newsBox.newsImage.image = rest.getThumb(json["news"]["image"].string!)
-                        
-                        let tap = UITapGestureRecognizer(target: self, action: Selector("handleTap:"))
-                        tap.delegate = self
-                        newsBox.addGestureRecognizer(tap)
-                        
-                        self.verticalLayout.addSubview(newsBox);
-                    }
                 }
                 
-                
+                if((json["news"]["id"].string) != nil) {
+                    let newsBox = news(frame: CGRectMake(8,8,self.verticalLayout.frame.width-16,230) );
+                    newsBox.newsDate.text = json["news"]["timestamp"].string
+                    newsBox.newsTitle.text = json["news"]["name"].string
+                    newsBox.newsImage.image = rest.getThumb(json["news"]["image"].string!)
+                    let tap = UITapGestureRecognizer(target: self, action: Selector("handleTap:"))
+                    tap.delegate = self
+                    newsBox.addGestureRecognizer(tap)
+                    self.verticalLayout.addSubview(newsBox);
+                }
                 
                 let teamTitle = team2(frame: CGRectMake(8,8,self.verticalLayout.frame.width-16,34) );
                 self.verticalLayout.addSubview(teamTitle);
@@ -141,9 +137,15 @@ class HomeController: UIViewController,UIGestureRecognizerDelegate {
                 }
                 self.resizeView(8);
                 
-                loadingStop()
+                
                 
             })
+            
+            dispatch_async(dispatch_get_main_queue(), {
+                loadingStop()
+            });
+            
+            
         }
     }
     

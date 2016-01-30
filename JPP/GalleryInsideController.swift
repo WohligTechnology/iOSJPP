@@ -61,10 +61,12 @@ class GalleryInsideController: UIViewController,UICollectionViewDataSource,UICol
             jsonData = json;
             dispatch_async(dispatch_get_main_queue(),{
                 self.galleryTable.reloadData()
-                loadingStop()
             });
             
         }
+        dispatch_async(dispatch_get_main_queue(), {
+            loadingStop()
+        });
     }
     
     

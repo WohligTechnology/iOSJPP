@@ -42,16 +42,19 @@ var heightGlo = bounds.size.height
 
 func loadingInit() {
     loaderGlo = loading(frame: CGRectMake(0,0,widthGlo,heightGlo-44) )
-    loaderGlo.alpha = 0.0
+    loaderGlo.alpha = 0
     loadingStart()
 }
 
 func loadingStart() {
     loaderGlo.frame.origin = CGPoint(x: 0, y: 0)
-   
+    loaderGlo.alpha = 1
+
 }
 func loadingStop() {
     loaderGlo.frame.origin = CGPoint(x: 0, y: heightGlo+44)
+    loaderGlo.alpha = 0
+
 //    loaderGlo.animation.moveY(heightGlo-44).makeOpacity(0.3).animateWithCompletion(0.5, {
 //        loaderGlo.frame.origin = CGPoint(x: 0, y: heightGlo-44)
 //    })
@@ -131,10 +134,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate,PushNotificationDelegate {
         players.append(Player(name: "Hwangi Ahn", achieve: "Incheon indoor game- Bronze Medal, National Championship (2011,2012,2013)-2nd Position, Asian Games (2014)- Bronze Medal", tour: "", age: "32", type: "", nativePlace: "Gyoung Ju", jerseyNo: "17", image: "hwangi.jpg"))
         
         
-        PushNotificationManager.pushManager().delegate = self
-        PushNotificationManager.pushManager().handlePushReceived(launchOptions)
-        PushNotificationManager.pushManager().sendAppOpen()
-        PushNotificationManager.pushManager().registerForPushNotifications()
+//        PushNotificationManager.pushManager().delegate = self
+//        PushNotificationManager.pushManager().handlePushReceived(launchOptions)
+//        PushNotificationManager.pushManager().sendAppOpen()
+//        PushNotificationManager.pushManager().registerForPushNotifications()
         return true
     }
     
