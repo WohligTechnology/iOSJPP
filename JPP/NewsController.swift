@@ -41,10 +41,11 @@ class NewsController: UIViewController, UITableViewDataSource, UITableViewDelega
             dispatch_async(dispatch_get_main_queue(),{
                 self.newsTableView.reloadData()
             });
-            dispatch_async(dispatch_get_main_queue(), {
-                loadingStop()
-            });
+           
         }
+        dispatch_async(dispatch_get_main_queue(), {
+            loadingStop()
+        });
     }
     
     
@@ -66,7 +67,7 @@ class NewsController: UIViewController, UITableViewDataSource, UITableViewDelega
 //            mediaBox.mediaTitle.text = newsJSON[indexPath.row]["name"].string
             mediaBox.mediaDesc.text = newsJSON[indexPath.row]["name"].string
             mediaBox.mediaDate.text = newsJSON[indexPath.row]["timestamp"].string
-            mediaBox.mediaImage.hnk_setImageFromURL(rest.getImageCache(newsJSON[indexPath.row]["image"].string!))
+            mediaBox.mediaImage.hnk_setImageFromURL(rest.getImageThumbCache(newsJSON[indexPath.row]["image"].string!))
             cell.addSubview(mediaBox)
         }
         

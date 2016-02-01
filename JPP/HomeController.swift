@@ -70,7 +70,7 @@ class HomeController: UIViewController,UIGestureRecognizerDelegate {
                     let newsBox = news(frame: CGRectMake(8,8,self.verticalLayout.frame.width-16,230) );
                     newsBox.newsDate.text = json["news"]["timestamp"].string
                     newsBox.newsSubTitle.text = json["news"]["name"].string
-                    newsBox.newsImage.image = rest.getThumb(json["news"]["image"].string!)
+                    newsBox.newsImage.hnk_setImageFromURL(rest.getImageThumbCache(json["news"]["image"].string!))
                     let tap = UITapGestureRecognizer(target: self, action: Selector("handleTap:"))
                     tap.delegate = self
                     newsBox.addGestureRecognizer(tap)

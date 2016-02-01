@@ -11,7 +11,7 @@ import SwiftHTTP
 import SwiftyJSON
 
 //let adminUrl = "http://192.168.0.124/jppbackend/";
-let adminUrl = "http://wohlig.co.in/jppbackend/";
+let adminUrl = "http://jaipurpinkpanthers.com/admin/";
 let imageURL = adminUrl + "uploads/";
 let apiURL = adminUrl + "index.php/json/";
 
@@ -50,7 +50,12 @@ public class RestApi {
     }
     
     public func getImageCache(urlStr:String) -> NSURL {
-        let url = NSURL(string: imageURL + urlStr)
+        let url = NSURL(string: adminUrl + "index.php/image/index?name=" + urlStr + "&width=400")
+        return url!
+    }
+    
+    public func getImageThumbCache(urlStr:String) -> NSURL {
+        let url = NSURL(string: adminUrl + "index.php/image/index?name=" + urlStr + "&width=250")
         return url!
     }
     

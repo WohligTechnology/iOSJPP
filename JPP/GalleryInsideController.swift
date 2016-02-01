@@ -89,7 +89,7 @@ class GalleryInsideController: UIViewController,UICollectionViewDataSource,UICol
         
         if((jsonData[indexPath.row]["name"].string) != nil) {
             let mediaBox = thumbnailImage(frame: CGRectMake(8,8,cell.frame.width-8,230));
-            mediaBox.thumbImage.hnk_setImageFromURL(rest.getImageCache(jsonData[indexPath.row]["image"].string!))
+            mediaBox.thumbImage.hnk_setImageFromURL(rest.getImageThumbCache(jsonData[indexPath.row]["image"].string!))
             cell.addSubview(mediaBox)
         }
         return cell
