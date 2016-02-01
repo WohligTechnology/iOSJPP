@@ -20,7 +20,7 @@ class AboutController: UIViewController {
         self.verticalLayout = VerticalLayout(width: self.view.frame.width);
         self.scrollView.insertSubview(self.verticalLayout, atIndex: 0)
         
-        self.verticalLayout.addSubview(about(frame: CGRectMake(8,8,verticalLayout.frame.width-16,600)));
+        self.verticalLayout.addSubview(about(frame: CGRectMake(8,8,verticalLayout.frame.width-16,550)));
 //        
 //        self.verticalLayout.addSubview(trapezium(frame: CGRectMake(8,8,verticalLayout.frame.width-16,34)))
 //        

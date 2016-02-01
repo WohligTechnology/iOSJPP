@@ -131,8 +131,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate,PushNotificationDelegate {
         
         players.append(Player(name: "Mohammad Maghsoudlou", achieve: "Asian Indoor Kabaddi Games Incheon (2014)-2nd Position, Asian Beach Kabaddi Games China (2012)-1st Position, National Kabaddi Championship (2008,2009,2010,2011,2012)-1st Position, National Kabaddi Premier League (2006,2007)-1st Position", tour: "No information currently available", age: "25", type: "All Rounder", nativePlace: "Gorgan", jerseyNo: "23", image: "p16.png"))
         
-        players.append(Player(name: "Hwangi Ahn", achieve: "Incheon indoor game- Bronze Medal, National Championship (2011,2012,2013)-2nd Position, Asian Games (2014)- Bronze Medal", tour: "No information currently available", age: "32", type: "All Rounder", nativePlace: "Gyoung Ju", jerseyNo: "17", image: "p17.png"))
-        
         
         PushNotificationManager.pushManager().delegate = self
         PushNotificationManager.pushManager().handlePushReceived(launchOptions)
