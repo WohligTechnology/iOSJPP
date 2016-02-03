@@ -12,7 +12,7 @@
         </mutableArray>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="media" customModule="Jaipur_Pink_Panther" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="media" customModule="JPP" customModuleProvider="target">
             <connections>
                 <outlet property="mediaDate" destination="sMN-Dg-jzj" id="XET-aY-MBz"/>
                 <outlet property="mediaDesc" destination="PlO-dy-pip" id="WkF-qL-riv"/>

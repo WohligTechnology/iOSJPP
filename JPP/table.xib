@@ -14,7 +14,7 @@
         </mutableArray>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="table" customModule="Jaipur_Pink_Panthers" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="table" customModule="JPP" customModuleProvider="target">
             <connections>
                 <outlet property="tableLost" destination="F3r-DV-jLw" id="BSP-vC-rMd"/>
                 <outlet property="tableNo" destination="paX-RA-nnL" id="ywr-4v-vav"/>

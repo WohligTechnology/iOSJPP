@@ -55,6 +55,7 @@ class PointTableController: UIViewController,UITableViewDelegate,UITableViewData
     
     func pointLoaded (json:JSON) {
         
+        print(json);
         
         if(json == 1)
         {
@@ -96,7 +97,7 @@ class PointTableController: UIViewController,UITableViewDelegate,UITableViewData
         if((pointJson[indexPath.row]["name"].string) != nil) {
             let mediaBox = table(frame: CGRectMake(0,8,self.view.frame.width-32,230));
             mediaBox.tableTeam.text = pointJson[indexPath.row]["name"].string
-            mediaBox.tableNo.text = pointJson[indexPath.row]["id"].string
+            mediaBox.tableNo.text = String(indexPath.row  + 1)
             mediaBox.tablePlayed.text = pointJson[indexPath.row]["played"].string
             mediaBox.tableLost.text = pointJson[indexPath.row]["lost"].string
             mediaBox.tableWon.text = pointJson[indexPath.row]["wins"].string

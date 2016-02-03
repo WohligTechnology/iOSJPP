@@ -120,7 +120,7 @@ class HomeController: UIViewController,UIGestureRecognizerDelegate {
                     
                     let insideTable = table(frame: CGRectMake(8,CGFloat(topDistance),PinkBox.frame.width-16,44));
                     
-                    insideTable.tableNo.text = json["points"][i]["id"].string
+                    insideTable.tableNo.text = String(i+1)
                     
                     insideTable.tableTeam.text = json["points"][i]["name"].string
                     
