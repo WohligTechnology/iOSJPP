@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "36F9C15B1C55EDBF003D02AB"
-               BuildableName = "JPP.app"
-               BlueprintName = "JPP"
-               ReferencedContainer = "container:JPP.xcodeproj">
+               BlueprintIdentifier = "7DDF79495F24B309AF089ACC99FC1151"
+               BuildableName = "Haneke.framework"
+               BlueprintName = "HanekeSwift"
+               ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -29,15 +29,6 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "36F9C15B1C55EDBF003D02AB"
-            BuildableName = "JPP.app"
-            BlueprintName = "JPP"
-            ReferencedContainer = "container:JPP.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -51,16 +42,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "36F9C15B1C55EDBF003D02AB"
-            BuildableName = "JPP.app"
-            BlueprintName = "JPP"
-            ReferencedContainer = "container:JPP.xcodeproj">
+            BlueprintIdentifier = "7DDF79495F24B309AF089ACC99FC1151"
+            BuildableName = "Haneke.framework"
+            BlueprintName = "HanekeSwift"
+            ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -70,16 +60,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "36F9C15B1C55EDBF003D02AB"
-            BuildableName = "JPP.app"
-            BlueprintName = "JPP"
-            ReferencedContainer = "container:JPP.xcodeproj">
+            BlueprintIdentifier = "7DDF79495F24B309AF089ACC99FC1151"
+            BuildableName = "Haneke.framework"
+            BlueprintName = "HanekeSwift"
+            ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

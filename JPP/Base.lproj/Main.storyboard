@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -24,7 +24,7 @@
         <!--SideMenu-->
         <scene sceneID="PrO-K1-ZtT">
             <objects>
-                <viewController storyboardIdentifier="sideMenu" title="SideMenu" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bYQ-JT-oOa" customClass="SideMenuController" customModule="Jaipur_Pink_Panthers" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="sideMenu" title="SideMenu" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bYQ-JT-oOa" customClass="SideMenuController" customModule="JPP" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NLR-TK-eDe"/>
                         <viewControllerLayoutGuide type="bottom" id="SyE-eT-NX6"/>
@@ -49,11 +49,11 @@
                                         <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Mgz-Mo-8sT" id="ylK-aa-5kE">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mNM-Q6-aw7">
-                                                    <rect key="frame" x="15" y="0.0" width="290" height="43.5"/>
+                                                    <rect key="frame" x="15" y="0.0" width="290" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="16"/>
                                                     <color key="textColor" red="0.90588235855102539" green="0.17647059261798859" blue="0.54117649793624878" alpha="1" colorSpace="calibratedRGB"/>
@@ -89,7 +89,7 @@
         <!--HOME-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="home" title="HOME" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="HomeController" customModule="Jaipur_Pink_Panthers" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="home" title="HOME" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="HomeController" customModule="JPP" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -129,7 +129,7 @@
         <!--SCHEDULE-->
         <scene sceneID="1Hx-gg-UUB">
             <objects>
-                <viewController storyboardIdentifier="schedule" title="SCHEDULE" useStoryboardIdentifierAsRestorationIdentifier="YES" id="KAR-n7-XSF" customClass="ScheduleController" customModule="Jaipur_Pink_Panthers" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="schedule" title="SCHEDULE" useStoryboardIdentifierAsRestorationIdentifier="YES" id="KAR-n7-XSF" customClass="ScheduleController" customModule="JPP" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="N1F-cS-beH"/>
                         <viewControllerLayoutGuide type="bottom" id="jSv-8r-9wK"/>
@@ -169,7 +169,7 @@
         <!--Video Play Controller-->
         <scene sceneID="QLM-7q-RRi">
             <objects>
-                <viewController id="9VB-4e-Lpi" customClass="VideoPlayController" customModule="Jaipur_Pink_Panthers" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9VB-4e-Lpi" customClass="VideoPlayController" customModule="JPP" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="r5H-rN-rui"/>
                         <viewControllerLayoutGuide type="bottom" id="TTd-ro-jJY"/>
@@ -203,7 +203,7 @@
         <!--All Web View Controller-->
         <scene sceneID="PnI-Kd-Ekj">
             <objects>
-                <viewController id="wvq-oX-Pd2" customClass="AllWebViewController" customModule="Jaipur_Pink_Panthers" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="wvq-oX-Pd2" customClass="AllWebViewController" customModule="JPP" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1pG-nS-T4a"/>
                         <viewControllerLayoutGuide type="bottom" id="Rmd-G2-JT4"/>
@@ -237,7 +237,7 @@
         <!--GALLERY-->
         <scene sceneID="f7i-Qd-P9z">
             <objects>
-                <viewController storyboardIdentifier="gallery" title="GALLERY" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fNh-XM-Cbv" customClass="GalleryController" customModule="Jaipur_Pink_Panthers" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="gallery" title="GALLERY" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fNh-XM-Cbv" customClass="GalleryController" customModule="JPP" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZjW-Ur-DMn"/>
                         <viewControllerLayoutGuide type="bottom" id="Y8n-ua-bfq"/>
@@ -304,7 +304,7 @@
                                         <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NHv-U5-o2t" id="Uap-9D-jVU">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <color key="backgroundColor" red="0.76862746479999999" green="0.94117647410000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </tableViewCellContentView>
@@ -342,7 +342,7 @@
         <!--KNOW YOUR TEAM-->
         <scene sceneID="EUA-Su-nZi">
             <objects>
-                <viewController storyboardIdentifier="knowteam" title="KNOW YOUR TEAM" useStoryboardIdentifierAsRestorationIdentifier="YES" id="68s-mp-GG3" customClass="KnowTeamController" customModule="Jaipur_Pink_Panthers" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="knowteam" title="KNOW YOUR TEAM" useStoryboardIdentifierAsRestorationIdentifier="YES" id="68s-mp-GG3" customClass="KnowTeamController" customModule="JPP" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RIy-7M-kSo"/>
                         <viewControllerLayoutGuide type="bottom" id="HfT-Dx-Yvh"/>
@@ -408,7 +408,7 @@
         <!--NEWS & MEDIA-->
         <scene sceneID="hh8-kl-69u">
             <objects>
-                <viewController storyboardIdentifier="news" title="NEWS &amp; MEDIA" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5Ua-8r-qiT" customClass="NewsController" customModule="Jaipur_Pink_Panthers" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="news" title="NEWS &amp; MEDIA" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5Ua-8r-qiT" customClass="NewsController" customModule="JPP" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RDk-Gl-0ue"/>
                         <viewControllerLayoutGuide type="bottom" id="AaF-WY-LBv"/>
@@ -439,11 +439,11 @@
                                         <rect key="frame" x="0.0" y="28" width="303" height="230"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1TZ-rN-Rd2" id="z1S-Nd-ch3">
-                                            <rect key="frame" x="0.0" y="0.0" width="303" height="229.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="303" height="229"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GMb-1M-QVu">
-                                                    <rect key="frame" x="15" y="0.0" width="273" height="229.5"/>
+                                                    <rect key="frame" x="15" y="0.0" width="273" height="229"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -480,7 +480,7 @@
         <!--MERCHANDISE-->
         <scene sceneID="gSn-Im-QQ7">
             <objects>
-                <viewController storyboardIdentifier="merchandise" title="MERCHANDISE" useStoryboardIdentifierAsRestorationIdentifier="YES" id="w5q-5q-7oN" customClass="MerchandiseController" customModule="Jaipur_Pink_Panthers" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="merchandise" title="MERCHANDISE" useStoryboardIdentifierAsRestorationIdentifier="YES" id="w5q-5q-7oN" customClass="MerchandiseController" customModule="JPP" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="emz-Wc-TO8"/>
                         <viewControllerLayoutGuide type="bottom" id="Xkq-e7-VNZ"/>
@@ -603,7 +603,7 @@
         <!--WALLPAPERS-->
         <scene sceneID="LlI-mb-xWp">
             <objects>
-                <viewController storyboardIdentifier="wallpaper" title="WALLPAPERS" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3hL-ES-IRc" customClass="WallpaperController" customModule="Jaipur_Pink_Panthers" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="wallpaper" title="WALLPAPERS" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3hL-ES-IRc" customClass="WallpaperController" customModule="JPP" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="50e-5U-egb"/>
                         <viewControllerLayoutGuide type="bottom" id="yeQ-eQ-z6Z"/>
@@ -622,7 +622,7 @@
         <!--POINT TABLE-->
         <scene sceneID="P4z-vm-5sU">
             <objects>
-                <viewController storyboardIdentifier="point" title="POINT TABLE" useStoryboardIdentifierAsRestorationIdentifier="YES" id="xzZ-rB-b5g" customClass="PointTableController" customModule="Jaipur_Pink_Panthers" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="point" title="POINT TABLE" useStoryboardIdentifierAsRestorationIdentifier="YES" id="xzZ-rB-b5g" customClass="PointTableController" customModule="JPP" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PXt-g0-WEo"/>
                         <viewControllerLayoutGuide type="bottom" id="4g7-qf-tWx"/>
@@ -634,7 +634,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y8h-Rk-kI0">
                                 <rect key="frame" x="8" y="8" width="305" height="552"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kd3-fS-FOp" customClass="table" customModule="Jaipur_Pink_Panthers" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kd3-fS-FOp" customClass="table" customModule="JPP" customModuleProvider="target">
                                         <rect key="frame" x="8" y="8" width="289" height="35"/>
                                         <color key="backgroundColor" red="0.92941176470588238" green="0.29019607843137252" blue="0.60784313725490191" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -649,7 +649,7 @@
                                                 <rect key="frame" x="0.0" y="28" width="289" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jGz-OS-QR8" id="A5X-jA-eF7">
-                                                    <rect key="frame" x="0.0" y="0.0" width="289" height="43.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="289" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </tableViewCellContentView>
                                                 <color key="backgroundColor" red="0.92941176469999998" green="0.2901960784" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -695,7 +695,7 @@
         <!--ABOUT US-->
         <scene sceneID="MA8-pi-yBY">
             <objects>
-                <viewController storyboardIdentifier="about" title="ABOUT US" useStoryboardIdentifierAsRestorationIdentifier="YES" id="OLs-8j-9Vj" customClass="AboutController" customModule="Jaipur_Pink_Panthers" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="about" title="ABOUT US" useStoryboardIdentifierAsRestorationIdentifier="YES" id="OLs-8j-9Vj" customClass="AboutController" customModule="JPP" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SBf-VQ-asZ"/>
                         <viewControllerLayoutGuide type="bottom" id="iH1-wj-FUc"/>
@@ -728,7 +728,7 @@
         <!--GALLERY INSIDE-->
         <scene sceneID="EQi-dl-Wvh">
             <objects>
-                <viewController storyboardIdentifier="GalleryInside" title="GALLERY INSIDE" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rBo-i2-X6q" customClass="GalleryInsideController" customModule="Jaipur_Pink_Panthers" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GalleryInside" title="GALLERY INSIDE" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rBo-i2-X6q" customClass="GalleryInsideController" customModule="JPP" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="s8g-M2-AKj"/>
                         <viewControllerLayoutGuide type="bottom" id="39G-Z5-2bs"/>
@@ -795,7 +795,7 @@
         <!--NEWS & MEDIA INSIDE-->
         <scene sceneID="xxr-KN-zzV">
             <objects>
-                <viewController title="NEWS &amp; MEDIA INSIDE" id="633-qu-Ovh" customClass="NewsInsideController" customModule="Jaipur_Pink_Panthers" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="NEWS &amp; MEDIA INSIDE" id="633-qu-Ovh" customClass="NewsInsideController" customModule="JPP" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="607-Vq-DVm"/>
                         <viewControllerLayoutGuide type="bottom" id="MmS-Ks-ViS"/>
@@ -828,7 +828,7 @@
         <!--KNOW YOUR TEAM INSIDE-->
         <scene sceneID="jHu-HA-akC">
             <objects>
-                <viewController title="KNOW YOUR TEAM INSIDE" id="3Bo-nL-RZg" customClass="KvowTeamInsideController" customModule="Jaipur_Pink_Panthers" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="KNOW YOUR TEAM INSIDE" id="3Bo-nL-RZg" customClass="KvowTeamInsideController" customModule="JPP" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nhq-Kh-76i"/>
                         <viewControllerLayoutGuide type="bottom" id="IUM-6o-lId"/>
@@ -837,7 +837,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Liw-XK-C8i" customClass="playerInside" customModule="Jaipur_Pink_Panthers" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Liw-XK-C8i" customClass="playerInside" customModule="JPP" customModuleProvider="target">
                                 <rect key="frame" x="8" y="8" width="304" height="552"/>
                                 <color key="backgroundColor" red="0.76862746479999999" green="0.94117647410000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
@@ -881,7 +881,7 @@
         <!--Shop-->
         <scene sceneID="Qe4-aS-SWq">
             <objects>
-                <viewController title="Shop" id="hCu-jj-Ly5" customClass="WebController" customModule="Jaipur_Pink_Panthers" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Shop" id="hCu-jj-Ly5" customClass="WebController" customModule="JPP" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LSN-4u-xxo"/>
                         <viewControllerLayoutGuide type="bottom" id="khH-UC-aWe"/>
@@ -915,7 +915,7 @@
         <!--GALLERY INSIDE 2-->
         <scene sceneID="WHa-No-R6C">
             <objects>
-                <viewController storyboardIdentifier="GalleryImageDetail" title="GALLERY INSIDE 2" useStoryboardIdentifierAsRestorationIdentifier="YES" id="CrH-OF-I8r" customClass="GalleryInside2Controller" customModule="Jaipur_Pink_Panthers" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GalleryImageDetail" title="GALLERY INSIDE 2" useStoryboardIdentifierAsRestorationIdentifier="YES" id="CrH-OF-I8r" customClass="GalleryInside2Controller" customModule="JPP" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Jbc-sZ-MlW"/>
                         <viewControllerLayoutGuide type="bottom" id="4t3-vr-tQo"/>
@@ -924,7 +924,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="awf-MB-9J8" customClass="singleThumbnailImage" customModule="Jaipur_Pink_Panthers" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="awf-MB-9J8" customClass="singleThumbnailImage" customModule="JPP" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -949,7 +949,7 @@
         <!--Book Ticket-->
         <scene sceneID="8Yy-IR-r7H">
             <objects>
-                <viewController title="Book Ticket" id="S3R-VS-V10" customClass="BookTicketController" customModule="Jaipur_Pink_Panthers" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Book Ticket" id="S3R-VS-V10" customClass="BookTicketController" customModule="JPP" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="OZr-WE-SRc"/>
                         <viewControllerLayoutGuide type="bottom" id="MO1-OA-CkS"/>
