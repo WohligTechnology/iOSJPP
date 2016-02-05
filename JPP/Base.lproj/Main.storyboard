@@ -53,14 +53,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mNM-Q6-aw7">
-                                                    <rect key="frame" x="58" y="0.0" width="247" height="43"/>
+                                                    <rect key="frame" x="55" y="0.0" width="250" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="16"/>
                                                     <color key="textColor" red="0.90588235855102539" green="0.17647059261798859" blue="0.54117649793624878" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="home" id="Jrf-j0-FqH">
-                                                    <rect key="frame" x="15" y="7" width="28" height="28"/>
+                                                    <rect key="frame" x="15" y="9" width="25" height="25"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
                                             </subviews>
@@ -986,7 +986,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="home" width="28" height="28"/>
+        <image name="home" width="25" height="25"/>
         <image name="ic_action_panther" width="96" height="96"/>
         <image name="m1" width="286" height="256"/>
         <image name="t1111" width="307" height="275"/>

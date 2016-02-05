@@ -3,13 +3,159 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Oswald-Light.ttf">
+            <string>Oswald-Light</string>
+        </mutableArray>
+        <mutableArray key="Oswald-Regular.ttf">
+            <string>Oswald-Regular</string>
+            <string>Oswald-Regular</string>
+            <string>Oswald-Regular</string>
+            <string>Oswald-Regular</string>
+            <string>Oswald-Regular</string>
+            <string>Oswald-Regular</string>
+            <string>Oswald-Regular</string>
+        </mutableArray>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SIGN UP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hlX-J5-OtV">
+                    <rect key="frame" x="8" y="15" width="359" height="32"/>
+                    <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="21"/>
+                    <color key="textColor" red="0.93333333333333335" green="0.29019607843137252" blue="0.60784313725490191" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stay tuned to our weekly contest on our social media pages to win some exclusive merchandise. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eb6-gf-5WC">
+                    <rect key="frame" x="8" y="389" width="359" height="42"/>
+                    <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="14"/>
+                    <color key="textColor" red="0.84313725490196079" green="0.21568627450980393" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="First Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TKT-Vw-tSm">
+                    <rect key="frame" x="8" y="119" width="297" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="s8B-F9-KQ5"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Last Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="47N-Tx-Jtp">
+                    <rect key="frame" x="8" y="169" width="297" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="brB-Pi-SD2"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Mobile Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xTF-t2-5lb">
+                    <rect key="frame" x="8" y="219" width="297" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="cmB-1e-Mx5"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Email Address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UyJ-86-G0t">
+                    <rect key="frame" x="8" y="269" width="297" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="h1p-Or-ig0"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TOy-cP-aKS">
+                    <rect key="frame" x="8" y="57" width="359" height="42"/>
+                    <string key="text">Register and get a chance to win exclusive jaipur pink panther merchandise, meet and greet with the players and home match tickets. </string>
+                    <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="14"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3bH-kd-Yq4">
+                    <rect key="frame" x="8" y="451" width="35" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="35" id="lG4-uy-wJv"/>
+                        <constraint firstAttribute="height" constant="35" id="sEr-DY-H1x"/>
+                    </constraints>
+                    <state key="normal" image="facebook-circle"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iwN-nR-mMu">
+                    <rect key="frame" x="58" y="451" width="35" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="65Z-oa-fzO"/>
+                        <constraint firstAttribute="width" constant="35" id="STJ-5D-7gq"/>
+                    </constraints>
+                    <state key="normal" image="twitter-circle"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wnt-On-BEy">
+                    <rect key="frame" x="108" y="451" width="35" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="YjT-iY-GJU"/>
+                        <constraint firstAttribute="width" constant="35" id="yfg-QY-Obh"/>
+                    </constraints>
+                    <state key="normal" image="instagram-circle"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ebW-CG-vOS">
+                    <rect key="frame" x="8" y="329" width="135" height="35"/>
+                    <color key="backgroundColor" red="0.84313725490196079" green="0.21568627450980393" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="135" id="sYU-Uw-9xC"/>
+                        <constraint firstAttribute="height" constant="35" id="ypE-56-OyH"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="16"/>
+                    <state key="normal" title="SUBMIT">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="hlX-J5-OtV" firstAttribute="trailing" secondItem="TOy-cP-aKS" secondAttribute="trailing" id="0qK-h0-xf5"/>
+                <constraint firstItem="ebW-CG-vOS" firstAttribute="leading" secondItem="eb6-gf-5WC" secondAttribute="leading" id="4Vx-qf-eKq"/>
+                <constraint firstItem="TKT-Vw-tSm" firstAttribute="top" secondItem="TOy-cP-aKS" secondAttribute="bottom" constant="20" id="5CE-6G-QLD"/>
+                <constraint firstAttribute="trailing" secondItem="TKT-Vw-tSm" secondAttribute="trailing" constant="70" id="62b-lM-U8D"/>
+                <constraint firstItem="47N-Tx-Jtp" firstAttribute="trailing" secondItem="xTF-t2-5lb" secondAttribute="trailing" id="BFj-dG-Xwt"/>
+                <constraint firstItem="wnt-On-BEy" firstAttribute="leading" secondItem="iwN-nR-mMu" secondAttribute="trailing" constant="15" id="D0J-VM-Ck7"/>
+                <constraint firstItem="iwN-nR-mMu" firstAttribute="baseline" secondItem="wnt-On-BEy" secondAttribute="baseline" id="ERd-DO-jSM"/>
+                <constraint firstItem="3bH-kd-Yq4" firstAttribute="baseline" secondItem="iwN-nR-mMu" secondAttribute="baseline" id="GCF-IY-SpP"/>
+                <constraint firstItem="UyJ-86-G0t" firstAttribute="leading" secondItem="ebW-CG-vOS" secondAttribute="leading" id="Ikh-RT-czg"/>
+                <constraint firstItem="hlX-J5-OtV" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="JjY-or-abF"/>
+                <constraint firstAttribute="trailing" secondItem="eb6-gf-5WC" secondAttribute="trailing" constant="8" id="LF7-gM-8jx"/>
+                <constraint firstItem="ebW-CG-vOS" firstAttribute="top" secondItem="UyJ-86-G0t" secondAttribute="bottom" constant="25" id="MHG-Ux-Lut"/>
+                <constraint firstAttribute="trailing" secondItem="hlX-J5-OtV" secondAttribute="trailing" constant="8" id="MyN-MX-PaF"/>
+                <constraint firstItem="xTF-t2-5lb" firstAttribute="top" secondItem="47N-Tx-Jtp" secondAttribute="bottom" constant="15" id="N1K-gp-bdg"/>
+                <constraint firstItem="iwN-nR-mMu" firstAttribute="leading" secondItem="3bH-kd-Yq4" secondAttribute="trailing" constant="15" id="Pcm-ib-cNH"/>
+                <constraint firstItem="TKT-Vw-tSm" firstAttribute="leading" secondItem="47N-Tx-Jtp" secondAttribute="leading" id="WyF-B3-XYq"/>
+                <constraint firstItem="eb6-gf-5WC" firstAttribute="top" secondItem="ebW-CG-vOS" secondAttribute="bottom" constant="25" id="XIB-Lr-2rz"/>
+                <constraint firstItem="TKT-Vw-tSm" firstAttribute="trailing" secondItem="47N-Tx-Jtp" secondAttribute="trailing" id="a44-lF-dcL"/>
+                <constraint firstItem="hlX-J5-OtV" firstAttribute="leading" secondItem="TOy-cP-aKS" secondAttribute="leading" id="cmc-Pc-7xr"/>
+                <constraint firstItem="TOy-cP-aKS" firstAttribute="leading" secondItem="TKT-Vw-tSm" secondAttribute="leading" id="dhq-gx-qan"/>
+                <constraint firstItem="3bH-kd-Yq4" firstAttribute="top" secondItem="eb6-gf-5WC" secondAttribute="bottom" constant="20" id="gpw-j9-DMF"/>
+                <constraint firstItem="xTF-t2-5lb" firstAttribute="trailing" secondItem="UyJ-86-G0t" secondAttribute="trailing" id="iZ5-O6-FsE"/>
+                <constraint firstItem="47N-Tx-Jtp" firstAttribute="leading" secondItem="xTF-t2-5lb" secondAttribute="leading" id="ige-I6-Z07"/>
+                <constraint firstItem="UyJ-86-G0t" firstAttribute="top" secondItem="xTF-t2-5lb" secondAttribute="bottom" constant="15" id="kbO-9d-0OL"/>
+                <constraint firstItem="eb6-gf-5WC" firstAttribute="leading" secondItem="3bH-kd-Yq4" secondAttribute="leading" id="mH7-8o-XGa"/>
+                <constraint firstItem="TOy-cP-aKS" firstAttribute="top" secondItem="hlX-J5-OtV" secondAttribute="bottom" constant="10" id="ozZ-kF-Ejp"/>
+                <constraint firstItem="iwN-nR-mMu" firstAttribute="top" secondItem="eb6-gf-5WC" secondAttribute="bottom" constant="20" id="qhh-IT-3jg"/>
+                <constraint firstItem="wnt-On-BEy" firstAttribute="top" secondItem="eb6-gf-5WC" secondAttribute="bottom" constant="20" id="uZg-Vn-3AC"/>
+                <constraint firstItem="hlX-J5-OtV" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="wOG-vb-RhG"/>
+                <constraint firstItem="47N-Tx-Jtp" firstAttribute="top" secondItem="TKT-Vw-tSm" secondAttribute="bottom" constant="15" id="wVG-Ku-F7y"/>
+                <constraint firstItem="xTF-t2-5lb" firstAttribute="leading" secondItem="UyJ-86-G0t" secondAttribute="leading" id="xjh-Mb-hdY"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
         </view>
     </objects>
+    <resources>
+        <image name="facebook-circle" width="35" height="35"/>
+        <image name="instagram-circle" width="35" height="35"/>
+        <image name="twitter-circle" width="35" height="35"/>
+    </resources>
 </document>
