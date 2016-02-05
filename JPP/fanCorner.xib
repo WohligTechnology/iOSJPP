@@ -20,7 +20,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB">
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="fanCorner" customModule="JPP" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
@@ -151,6 +151,16 @@
                 <constraint firstItem="xTF-t2-5lb" firstAttribute="leading" secondItem="UyJ-86-G0t" secondAttribute="leading" id="xjh-Mb-hdY"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <connections>
+                <outlet property="email" destination="UyJ-86-G0t" id="W0P-p4-fwS"/>
+                <outlet property="facebookBtn" destination="3bH-kd-Yq4" id="9tp-Ac-d5P"/>
+                <outlet property="firstName" destination="TKT-Vw-tSm" id="1MR-o5-FfB"/>
+                <outlet property="instagramBtn" destination="wnt-On-BEy" id="XqM-XA-dJJ"/>
+                <outlet property="lastName" destination="47N-Tx-Jtp" id="M8I-cb-ayb"/>
+                <outlet property="mobileNo" destination="xTF-t2-5lb" id="fqs-AX-NOh"/>
+                <outlet property="submit" destination="ebW-CG-vOS" id="5WK-N2-iDh"/>
+                <outlet property="twitterBtn" destination="iwN-nR-mMu" id="RC5-Sn-l37"/>
+            </connections>
         </view>
     </objects>
     <resources>
