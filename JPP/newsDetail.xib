@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
@@ -13,7 +13,7 @@
         </mutableArray>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="newsDetail" customModule="Jaipur_Pink_Panther" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="newsDetail" customModule="JPP" customModuleProvider="target">
             <connections>
                 <outlet property="newImgae" destination="pTB-UR-Boc" id="qWw-9y-YFS"/>
                 <outlet property="newsContent" destination="Ux0-jf-Kpm" id="ADU-I9-0cI"/>
@@ -43,7 +43,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ux0-jf-Kpm">
-                    <rect key="frame" x="8" y="312" width="358" height="373.5"/>
+                    <rect key="frame" x="8" y="312" width="358" height="374"/>
                     <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vel tristique dolor. Ut cursus erat quis magna facilisis cursus. Etiam diam ex, elementum vitae pharetra vel, vestibulum non enim. Maecenas nec pellentesque arcu. Sed id tempor metus. Maecenas gravida nunc non urna gravida, eget maximus ex tempor. Nam purus arcu, elementum at imperdiet mollis, viverra et magna. Ut laoreet nec augue vel vehicula.
 
 Cras vulputate facilisis velit, sed ullamcorper magna tristique ac. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed tristique ipsum non ullamcorper maximus. Quisque elit elit, hendrerit quis mollis a, posuere eu libero. Donec et nisl nulla. Donec eleifend porta nulla, porta mattis ex scelerisque sit amet. Morbi hendrerit urna pulvinar semper fringilla. Vestibulum a nulla et dui consectetur iaculis ut quis mauris. Duis accumsan scelerisque nulla sed lacinia. Morbi lacinia elementum velit, ac pretium nisl rutrum ut. Mauris sed felis lacinia, interdum est a, hendrerit urna.

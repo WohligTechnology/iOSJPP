@@ -50,7 +50,7 @@
                     </constraints>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Last Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="47N-Tx-Jtp">
                     <rect key="frame" x="8" y="169" width="297" height="35"/>
@@ -59,7 +59,7 @@
                     </constraints>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Mobile Number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xTF-t2-5lb">
                     <rect key="frame" x="8" y="219" width="297" height="35"/>
@@ -68,7 +68,7 @@
                     </constraints>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Email Address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UyJ-86-G0t">
                     <rect key="frame" x="8" y="269" width="297" height="35"/>
@@ -77,7 +77,7 @@
                     </constraints>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                 </textField>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TOy-cP-aKS">
                     <rect key="frame" x="8" y="57" width="359" height="42"/>

@@ -12,27 +12,27 @@
                         <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
                         <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                    <view key="view" autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView autoresizesSubviews="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splashBackground" translatesAutoresizingMaskIntoConstraints="NO" id="V6u-rO-2mv">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splashLogo" translatesAutoresizingMaskIntoConstraints="NO" id="ayj-lQ-OGv">
+                            <imageView autoresizesSubviews="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splashLogo" translatesAutoresizingMaskIntoConstraints="NO" id="ayj-lQ-OGv">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ayj-lQ-OGv" firstAttribute="bottom" secondItem="xb3-aO-Qok" secondAttribute="top" id="0xa-IY-2g1"/>
-                            <constraint firstItem="ayj-lQ-OGv" firstAttribute="top" secondItem="V6u-rO-2mv" secondAttribute="top" id="Kol-1J-e7F"/>
+                            <constraint firstItem="ayj-lQ-OGv" firstAttribute="leading" secondItem="V6u-rO-2mv" secondAttribute="leading" id="6iW-oj-fu1"/>
+                            <constraint firstItem="ayj-lQ-OGv" firstAttribute="bottom" secondItem="xb3-aO-Qok" secondAttribute="top" id="Ac5-Rz-Jhi"/>
                             <constraint firstItem="V6u-rO-2mv" firstAttribute="bottom" secondItem="xb3-aO-Qok" secondAttribute="top" id="PxH-Qi-TJk"/>
-                            <constraint firstItem="ayj-lQ-OGv" firstAttribute="trailing" secondItem="V6u-rO-2mv" secondAttribute="trailing" id="QMA-Qb-WKt"/>
                             <constraint firstItem="V6u-rO-2mv" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="g9b-tK-fVD"/>
                             <constraint firstAttribute="trailing" secondItem="V6u-rO-2mv" secondAttribute="trailing" id="iWv-bc-Prs"/>
+                            <constraint firstItem="ayj-lQ-OGv" firstAttribute="trailing" secondItem="V6u-rO-2mv" secondAttribute="trailing" id="jS7-1c-XmO"/>
                             <constraint firstItem="V6u-rO-2mv" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="maK-69-j0a"/>
-                            <constraint firstItem="ayj-lQ-OGv" firstAttribute="leading" secondItem="V6u-rO-2mv" secondAttribute="leading" id="rYA-AH-BeG"/>
+                            <constraint firstItem="ayj-lQ-OGv" firstAttribute="top" secondItem="V6u-rO-2mv" secondAttribute="top" id="yrD-sz-eKi"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>

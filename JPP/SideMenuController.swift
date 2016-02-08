@@ -71,6 +71,7 @@ class SideMenuController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     var data = ["HOME", "FIXTURES", "GALLERY","NEWS & MEDIA","KNOW YOUR PANTHERS","TICKETS & MERCHANDISE","WALLPAPERS","POINTS TABLE", "FAN CORNER","ABOUT"]
+    var dataimage = ["home.png", "fixtures.png", "gallery.png","newsicon.png","know.png","tickets.png","galleryinside.png","point.png", "fan.png","about.png"]
     
     // MARK: - UITableViewDataSource
     
@@ -84,6 +85,7 @@ class SideMenuController: UIViewController, UITableViewDataSource, UITableViewDe
         tableView.tableFooterView = UIView()
         let cell = tableView.dequeueReusableCellWithIdentifier("menuCell", forIndexPath: indexPath)
         cell.textLabel?.text = data[indexPath.row]
+        cell.imageView!.image = UIImage(named: dataimage[indexPath.row])
         return cell
     }
     
