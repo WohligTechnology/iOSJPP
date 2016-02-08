@@ -35,6 +35,7 @@ import UIKit
         
         let borderWidth:CGFloat = 1.0
         
+        // BORDER
         firstName.layer.borderWidth = borderWidth
         firstName.layer.borderColor = BlueColor.CGColor
         self.lastName.layer.borderWidth = borderWidth
@@ -44,5 +45,34 @@ import UIKit
         self.email.layer.borderWidth = borderWidth
         self.email.layer.borderColor = BlueColor.CGColor
         
+        // PADDING
+        let firstPad = UIView(frame: CGRectMake(0, 0, 10, self.firstName.frame.height))
+        firstName.leftView = firstPad
+        firstName.leftViewMode = UITextFieldViewMode.Always
+        let lastPad = UIView(frame: CGRectMake(0, 0, 10, self.lastName.frame.height))
+        lastName.leftView = lastPad
+        lastName.leftViewMode = UITextFieldViewMode.Always
+        let mobilePad = UIView(frame: CGRectMake(0, 0, 10, self.mobile.frame.height))
+        mobile.leftView = mobilePad
+        mobile.leftViewMode = UITextFieldViewMode.Always
+        let emailPad = UIView(frame: CGRectMake(0, 0, 10, self.email.frame.height))
+        email.leftView = emailPad
+        email.leftViewMode = UITextFieldViewMode.Always
+        
     }
+}
+
+class TextField: UITextField {
+    
+    let padding = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
+    
+    private func newBounds(bounds: CGRect) -> CGRect {
+        var newBounds = bounds
+        newBounds.origin.x += padding.left
+        newBounds.origin.y += padding.top
+        newBounds.size.height -= padding.top + padding.bottom
+        newBounds.size.width -= padding.left + padding.right
+        return newBounds
+    }
+    
 }
