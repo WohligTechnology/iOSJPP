@@ -9,17 +9,7 @@
 import UIKit
 
 @IBDesignable class fanCorner: UIView {
-    
-    @IBOutlet weak var firstName: UITextField!
-    @IBOutlet weak var lastName: UITextField!
-    @IBOutlet weak var mobileNo: UITextField!
-    @IBOutlet weak var email: UITextField!
-    
-    @IBOutlet weak var submit: UIButton!
-    
-    @IBOutlet weak var facebookBtn: UIButton!
-    @IBOutlet weak var twitterBtn: UIButton!
-    @IBOutlet weak var instagramBtn: UIButton!
+   
     
     override init(frame: CGRect) {
         super.init(frame: frame)

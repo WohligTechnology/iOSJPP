@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
@@ -25,14 +25,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ayj-lQ-OGv" firstAttribute="bottom" secondItem="xb3-aO-Qok" secondAttribute="top" id="0xa-IY-2g1"/>
+                            <constraint firstItem="ayj-lQ-OGv" firstAttribute="top" secondItem="V6u-rO-2mv" secondAttribute="top" id="Kol-1J-e7F"/>
                             <constraint firstItem="V6u-rO-2mv" firstAttribute="bottom" secondItem="xb3-aO-Qok" secondAttribute="top" id="PxH-Qi-TJk"/>
-                            <constraint firstItem="ayj-lQ-OGv" firstAttribute="trailing" secondItem="V6u-rO-2mv" secondAttribute="trailing" id="aXp-vp-VCD"/>
-                            <constraint firstItem="ayj-lQ-OGv" firstAttribute="leading" secondItem="V6u-rO-2mv" secondAttribute="leading" id="fvH-PK-D1V"/>
+                            <constraint firstItem="ayj-lQ-OGv" firstAttribute="trailing" secondItem="V6u-rO-2mv" secondAttribute="trailing" id="QMA-Qb-WKt"/>
                             <constraint firstItem="V6u-rO-2mv" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="g9b-tK-fVD"/>
                             <constraint firstAttribute="trailing" secondItem="V6u-rO-2mv" secondAttribute="trailing" id="iWv-bc-Prs"/>
                             <constraint firstItem="V6u-rO-2mv" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="maK-69-j0a"/>
-                            <constraint firstItem="ayj-lQ-OGv" firstAttribute="bottom" secondItem="xb3-aO-Qok" secondAttribute="top" id="wur-pp-McL"/>
-                            <constraint firstItem="ayj-lQ-OGv" firstAttribute="top" secondItem="V6u-rO-2mv" secondAttribute="top" id="zHZ-oD-0W5"/>
+                            <constraint firstItem="ayj-lQ-OGv" firstAttribute="leading" secondItem="V6u-rO-2mv" secondAttribute="leading" id="rYA-AH-BeG"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>

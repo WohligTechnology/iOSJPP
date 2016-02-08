@@ -19,6 +19,7 @@ class SideMenuController: UIViewController, UITableViewDataSource, UITableViewDe
     var merchandiseController:UIViewController!
     var wallpaperController:UIViewController!
     var pointController:UIViewController!
+    var fancornerController:UIViewController!
     var aboutsController:UIViewController!
     
     override func viewDidLoad() {
@@ -50,6 +51,9 @@ class SideMenuController: UIViewController, UITableViewDataSource, UITableViewDe
         let pointController = storyboard.instantiateViewControllerWithIdentifier("point") as! PointTableController
         self.pointController = UINavigationController(rootViewController: pointController)
         
+        let fancornerController = storyboard.instantiateViewControllerWithIdentifier("fanCorner") as! FanCornerController
+        self.fancornerController = UINavigationController(rootViewController: fancornerController)
+        
         let aboutsController = storyboard.instantiateViewControllerWithIdentifier("about") as! AboutController
         self.aboutsController = UINavigationController(rootViewController: aboutsController)
     }
@@ -66,7 +70,7 @@ class SideMenuController: UIViewController, UITableViewDataSource, UITableViewDe
         return 1
     }
     
-    var data = ["HOME", "FIXTURES", "GALLERY","KNOW YOUR PANTHERS","NEWS & MEDIA","MERCHANDISE","WALLPAPERS","POINTS TABLE","ABOUT"]
+    var data = ["HOME", "FIXTURES", "GALLERY","NEWS & MEDIA","KNOW YOUR PANTHERS","TICKETS & MERCHANDISE","WALLPAPERS","POINTS TABLE", "FAN CORNER","ABOUT"]
     
     // MARK: - UITableViewDataSource
     
@@ -94,9 +98,9 @@ class SideMenuController: UIViewController, UITableViewDataSource, UITableViewDe
             isGalWal = 0
             self.slideMenuController()?.changeMainViewController(self.galleryController, close: true)
         case 3:
-            self.slideMenuController()?.changeMainViewController(self.knowTeamController, close: true)
-        case 4:
             self.slideMenuController()?.changeMainViewController(self.newsController, close: true)
+        case 4:
+            self.slideMenuController()?.changeMainViewController(self.knowTeamController, close: true)
         case 5:
             self.slideMenuController()?.changeMainViewController(self.merchandiseController, close: true)
         case 6:
@@ -105,6 +109,8 @@ class SideMenuController: UIViewController, UITableViewDataSource, UITableViewDe
         case 7:
             self.slideMenuController()?.changeMainViewController(self.pointController, close: true)
         case 8:
+            self.slideMenuController()?.changeMainViewController(self.fancornerController, close: true)
+        case 9:
             self.slideMenuController()?.changeMainViewController(self.aboutsController, close: true)
         default:
             self.slideMenuController()?.changeMainViewController(self.homeController, close: true)

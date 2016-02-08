@@ -92,6 +92,7 @@
 		96117823854BBFB45F51F300 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AADCA4CCFDB108A580EB8D69 /* Pods.framework */; };
 		C23892D81C58C6EE00CA4DC1 /* thumbnailImage.xib in Resources */ = {isa = PBXBuildFile; fileRef = C23892D71C58C6EE00CA4DC1 /* thumbnailImage.xib */; };
 		C23892DA1C58C92700CA4DC1 /* thumbnailImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23892D91C58C92700CA4DC1 /* thumbnailImage.swift */; };
+		C263D49C1C68688100837BA8 /* FanCornerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C263D49B1C68688100837BA8 /* FanCornerController.swift */; };
 		C28B79F11C58DAC2001C4474 /* newsDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = C28B79F01C58DAC2001C4474 /* newsDetail.xib */; };
 		C28B79F31C58DF47001C4474 /* newsDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28B79F21C58DF47001C4474 /* newsDetail.swift */; };
 		C29C75941C5A38BF0091FF6E /* TeamPlayers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29C75931C5A38BF0091FF6E /* TeamPlayers.swift */; };
@@ -189,6 +190,7 @@
 		AADCA4CCFDB108A580EB8D69 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C23892D71C58C6EE00CA4DC1 /* thumbnailImage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = thumbnailImage.xib; sourceTree = "<group>"; };
 		C23892D91C58C92700CA4DC1 /* thumbnailImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = thumbnailImage.swift; sourceTree = "<group>"; };
+		C263D49B1C68688100837BA8 /* FanCornerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FanCornerController.swift; sourceTree = "<group>"; };
 		C28B79F01C58DAC2001C4474 /* newsDetail.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = newsDetail.xib; sourceTree = "<group>"; };
 		C28B79F21C58DF47001C4474 /* newsDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = newsDetail.swift; sourceTree = "<group>"; };
 		C29C75931C5A38BF0091FF6E /* TeamPlayers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamPlayers.swift; sourceTree = "<group>"; };
@@ -392,6 +394,7 @@
 				36F2CEB21C57720600D0D2D6 /* WallpaperInsideController.swift */,
 				36F2CEB41C57721800D0D2D6 /* PointTableController.swift */,
 				36F2CEB61C57722B00D0D2D6 /* AboutController.swift */,
+				C263D49B1C68688100837BA8 /* FanCornerController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -734,6 +737,7 @@
 				36F2CEAB1C57718B00D0D2D6 /* KnowTeamController.swift in Sources */,
 				36F2CE9D1C57708C00D0D2D6 /* HomeController.swift in Sources */,
 				36F9C1B91C5653E5003D02AB /* matches.swift in Sources */,
+				C263D49C1C68688100837BA8 /* FanCornerController.swift in Sources */,
 				36F2CEAF1C5771D800D0D2D6 /* MerchandiseController.swift in Sources */,
 				36F2CEA11C5770D400D0D2D6 /* GalleryController.swift in Sources */,
 				36F9C1AE1C5643DF003D02AB /* news.swift in Sources */,

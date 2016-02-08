@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -695,6 +695,39 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7B1-Ob-eid" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2503" y="403"/>
+        </scene>
+        <!--FAN CORNER-->
+        <scene sceneID="Dry-dO-bNg">
+            <objects>
+                <viewController storyboardIdentifier="fanCorner" title="FAN CORNER" useStoryboardIdentifierAsRestorationIdentifier="YES" id="oke-Al-eYN" customClass="FanCornerController" customModule="JPP" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0zd-o1-jcR"/>
+                        <viewControllerLayoutGuide type="bottom" id="IoG-ui-bkk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pTC-A3-gZZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2GC-ib-hR2">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.32112520973154363" green="1" blue="0.98823529409999999" alpha="1" colorSpace="deviceRGB"/>
+                        <constraints>
+                            <constraint firstItem="2GC-ib-hR2" firstAttribute="leading" secondItem="pTC-A3-gZZ" secondAttribute="leading" id="4ox-GA-o03"/>
+                            <constraint firstAttribute="trailing" secondItem="2GC-ib-hR2" secondAttribute="trailing" id="BPc-gg-byP"/>
+                            <constraint firstItem="2GC-ib-hR2" firstAttribute="bottom" secondItem="IoG-ui-bkk" secondAttribute="top" id="UvD-vS-KjH"/>
+                            <constraint firstItem="2GC-ib-hR2" firstAttribute="top" secondItem="pTC-A3-gZZ" secondAttribute="top" id="c4E-t8-pwN"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="scrollView" destination="2GC-ib-hR2" id="zMT-S1-T1i"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aWJ-D4-9WA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3275" y="403"/>
         </scene>
         <!--ABOUT US-->
         <scene sceneID="MA8-pi-yBY">
