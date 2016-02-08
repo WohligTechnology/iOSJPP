@@ -19,7 +19,7 @@ class FanCornerController: UIViewController {
         self.scrollView.insertSubview(self.verticalLayout, atIndex: 0)
         
         
-        let fan = fanCorner(frame: CGRectMake(8,8,self.verticalLayout.frame.width-16,550));
+        let fan = fanCorner(frame: CGRectMake(8,8,self.verticalLayout.frame.width-16,525));
         self.verticalLayout.addSubview(fan);
         resizeView(8)
     }

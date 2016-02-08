@@ -10,6 +10,10 @@ import UIKit
 
 @IBDesignable class fanCorner: UIView {
    
+    @IBOutlet var firstName: UITextField!
+    @IBOutlet var lastName: UITextField!
+    @IBOutlet var mobile: UITextField!
+    @IBOutlet var email: UITextField!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -28,5 +32,17 @@ import UIKit
         sortnewview.frame = bounds
         sortnewview.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
         self.addSubview(sortnewview);
+        
+        let borderWidth:CGFloat = 1.0
+        
+        firstName.layer.borderWidth = borderWidth
+        firstName.layer.borderColor = BlueColor.CGColor
+        self.lastName.layer.borderWidth = borderWidth
+        self.lastName.layer.borderColor = BlueColor.CGColor
+        self.mobile.layer.borderWidth = borderWidth
+        self.mobile.layer.borderColor = BlueColor.CGColor
+        self.email.layer.borderWidth = borderWidth
+        self.email.layer.borderColor = BlueColor.CGColor
+        
     }
 }

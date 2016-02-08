@@ -18,7 +18,14 @@
         </mutableArray>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="fanCorner" customModule="JPP" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="fanCorner" customModule="JPP" customModuleProvider="target">
+            <connections>
+                <outlet property="email" destination="UyJ-86-G0t" id="aQn-qb-cfJ"/>
+                <outlet property="firstName" destination="TKT-Vw-tSm" id="Unx-e5-avo"/>
+                <outlet property="lastName" destination="47N-Tx-Jtp" id="YCi-cG-TJj"/>
+                <outlet property="mobile" destination="xTF-t2-5lb" id="FsM-17-a3O"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -54,7 +61,7 @@
                     <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Mobile Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xTF-t2-5lb">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Mobile Number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xTF-t2-5lb">
                     <rect key="frame" x="8" y="219" width="297" height="35"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="35" id="cmB-1e-Mx5"/>
