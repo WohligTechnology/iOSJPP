@@ -136,7 +136,7 @@ public class RestApi {
     public func getSchedule( completion: ( (JSON) -> Void) )  {
         var json = JSON(1);
         do {
-            let opt = try HTTP.GET(apiURL + "getSchedule")
+            let opt = try HTTP.GET(apiURL + "getScheduleAndroid")
             opt.start { response in
                 if let _ = response.error {
                     completion(json);
