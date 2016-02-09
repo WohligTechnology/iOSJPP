@@ -96,6 +96,12 @@
 		C28B79F11C58DAC2001C4474 /* newsDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = C28B79F01C58DAC2001C4474 /* newsDetail.xib */; };
 		C28B79F31C58DF47001C4474 /* newsDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28B79F21C58DF47001C4474 /* newsDetail.swift */; };
 		C29C75941C5A38BF0091FF6E /* TeamPlayers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29C75931C5A38BF0091FF6E /* TeamPlayers.swift */; };
+		C2F0A10C1C69AFE400345A36 /* doneMatch.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2F0A10B1C69AFE400345A36 /* doneMatch.xib */; };
+		C2F0A1111C69B78500345A36 /* kenyanbold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C2F0A10D1C69B78500345A36 /* kenyanbold.ttf */; };
+		C2F0A1121C69B78500345A36 /* kenyanbolditalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C2F0A10E1C69B78500345A36 /* kenyanbolditalic.ttf */; };
+		C2F0A1131C69B78500345A36 /* kenyanregular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C2F0A10F1C69B78500345A36 /* kenyanregular.ttf */; };
+		C2F0A1141C69B78500345A36 /* kenyanregularitalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C2F0A1101C69B78500345A36 /* kenyanregularitalic.ttf */; };
+		C2F0A1161C69B8BB00345A36 /* doneMatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F0A1151C69B8BB00345A36 /* doneMatch.swift */; };
 		C2FF852B1C58D05000F2CFED /* singleThumbnailImage.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2FF852A1C58D05000F2CFED /* singleThumbnailImage.xib */; };
 		C2FF852D1C58D17A00F2CFED /* singleThumbnailImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FF852C1C58D17A00F2CFED /* singleThumbnailImage.swift */; };
 /* End PBXBuildFile section */
@@ -194,6 +200,12 @@
 		C28B79F01C58DAC2001C4474 /* newsDetail.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = newsDetail.xib; sourceTree = "<group>"; };
 		C28B79F21C58DF47001C4474 /* newsDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = newsDetail.swift; sourceTree = "<group>"; };
 		C29C75931C5A38BF0091FF6E /* TeamPlayers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamPlayers.swift; sourceTree = "<group>"; };
+		C2F0A10B1C69AFE400345A36 /* doneMatch.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = doneMatch.xib; sourceTree = "<group>"; };
+		C2F0A10D1C69B78500345A36 /* kenyanbold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = kenyanbold.ttf; sourceTree = "<group>"; };
+		C2F0A10E1C69B78500345A36 /* kenyanbolditalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = kenyanbolditalic.ttf; sourceTree = "<group>"; };
+		C2F0A10F1C69B78500345A36 /* kenyanregular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = kenyanregular.ttf; sourceTree = "<group>"; };
+		C2F0A1101C69B78500345A36 /* kenyanregularitalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = kenyanregularitalic.ttf; sourceTree = "<group>"; };
+		C2F0A1151C69B8BB00345A36 /* doneMatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = doneMatch.swift; sourceTree = "<group>"; };
 		C2FF852A1C58D05000F2CFED /* singleThumbnailImage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = singleThumbnailImage.xib; sourceTree = "<group>"; };
 		C2FF852C1C58D17A00F2CFED /* singleThumbnailImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = singleThumbnailImage.swift; sourceTree = "<group>"; };
 		FD4C274A56DABBBF9AF41245 /* Pods_JPP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JPP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -349,6 +361,7 @@
 		36F9C1841C5616C6003D02AB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C2F0A10A1C69AFCA00345A36 /* doneMatch */,
 				7809A3C21C64BF9000562E6A /* fanCorner */,
 				36B957821C5A807000AEC0D3 /* loading */,
 				3685BD401C5A160700BC44D0 /* upcoming */,
@@ -426,6 +439,10 @@
 				36F9C1911C562837003D02AB /* voyagefant_0.ttf */,
 				36F9C1921C562837003D02AB /* voyagefant3d.ttf */,
 				36F9C1931C562837003D02AB /* voyagefantacad.ttf */,
+				C2F0A10D1C69B78500345A36 /* kenyanbold.ttf */,
+				C2F0A10E1C69B78500345A36 /* kenyanbolditalic.ttf */,
+				C2F0A10F1C69B78500345A36 /* kenyanregular.ttf */,
+				C2F0A1101C69B78500345A36 /* kenyanregularitalic.ttf */,
 				36F9C1941C562837003D02AB /* voyagefantcond.ttf */,
 				36F9C1951C562837003D02AB /* voyagefantexpand.ttf */,
 				36F9C1961C562837003D02AB /* voyagefantgchrome.ttf */,
@@ -552,6 +569,15 @@
 			name = newsDetail;
 			sourceTree = "<group>";
 		};
+		C2F0A10A1C69AFCA00345A36 /* doneMatch */ = {
+			isa = PBXGroup;
+			children = (
+				C2F0A10B1C69AFE400345A36 /* doneMatch.xib */,
+				C2F0A1151C69B8BB00345A36 /* doneMatch.swift */,
+			);
+			name = doneMatch;
+			sourceTree = "<group>";
+		};
 		C2FF85291C58D03600F2CFED /* singleThumbnailImage */ = {
 			isa = PBXGroup;
 			children = (
@@ -633,6 +659,7 @@
 				36F9C19F1C5641BB003D02AB /* Oswald-Regular.ttf in Resources */,
 				C23892D81C58C6EE00CA4DC1 /* thumbnailImage.xib in Resources */,
 				36F9C1A01C5641BB003D02AB /* voyagefant_0.ttf in Resources */,
+				C2F0A10C1C69AFE400345A36 /* doneMatch.xib in Resources */,
 				36F9C1A11C5641BB003D02AB /* voyagefant3d.ttf in Resources */,
 				366F19DE1C58F55800321669 /* bookTicket.xib in Resources */,
 				36F2CE941C565DD600D0D2D6 /* team.xib in Resources */,
@@ -640,8 +667,10 @@
 				36F9C1A21C5641BB003D02AB /* voyagefantacad.ttf in Resources */,
 				36F9C1A31C5641BB003D02AB /* voyagefantcond.ttf in Resources */,
 				36F9C1A41C5641BB003D02AB /* voyagefantexpand.ttf in Resources */,
+				C2F0A1131C69B78500345A36 /* kenyanregular.ttf in Resources */,
 				36F9C1A51C5641BB003D02AB /* voyagefantgchrome.ttf in Resources */,
 				36F2CE9B1C573A2300D0D2D6 /* media.xib in Resources */,
+				C2F0A1111C69B78500345A36 /* kenyanbold.ttf in Resources */,
 				36F2CE8A1C56561300D0D2D6 /* player.xib in Resources */,
 				360A51031C579ACB001F7E40 /* playerInside.xib in Resources */,
 				36F9C1BB1C5653EF003D02AB /* matches.xib in Resources */,
@@ -655,6 +684,7 @@
 				36F9C1A81C5641BB003D02AB /* voyagefanthplat.ttf in Resources */,
 				36F9C1A91C5641BB003D02AB /* voyagefantlaser.ttf in Resources */,
 				36F9C1AA1C5641BB003D02AB /* voyagefantstraight.ttf in Resources */,
+				C2F0A1121C69B78500345A36 /* kenyanbolditalic.ttf in Resources */,
 				36F9C1AB1C5641BB003D02AB /* voyagefantstraightleft.ttf in Resources */,
 				78238FE41C57A7890067E7D5 /* about.xib in Resources */,
 				36F2CE911C56585100D0D2D6 /* galleryAlbum.xib in Resources */,
@@ -665,6 +695,7 @@
 				36F9C1891C561722003D02AB /* schedule.xib in Resources */,
 				36F9C1651C55EDBF003D02AB /* Main.storyboard in Resources */,
 				7809A3C41C64BFB900562E6A /* fanCorner.xib in Resources */,
+				C2F0A1141C69B78500345A36 /* kenyanregularitalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -730,6 +761,7 @@
 				36F2CEA91C57712A00D0D2D6 /* NewsInsideController.swift in Sources */,
 				366F19D91C58F32700321669 /* BookTicketController.swift in Sources */,
 				36F2CEB51C57721800D0D2D6 /* PointTableController.swift in Sources */,
+				C2F0A1161C69B8BB00345A36 /* doneMatch.swift in Sources */,
 				C28B79F31C58DF47001C4474 /* newsDetail.swift in Sources */,
 				36F2CE9F1C5770B900D0D2D6 /* ScheduleController.swift in Sources */,
 				36F2CEA51C5770FE00D0D2D6 /* GalleryInside2Controller.swift in Sources */,
