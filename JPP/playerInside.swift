@@ -42,21 +42,21 @@ import UIKit
         sortnewview.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
         self.addSubview(sortnewview);
         
-        let borderLeft = CALayer()
-        let borderRight = CALayer()
-        let width = CGFloat(1.0)
-        
-        borderLeft.borderColor = UIColor.purpleColor().CGColor
-        borderLeft.frame = CGRect(x: 1, y: 0, width: width, height: playerAgeView.frame.size.height)
-        borderLeft.borderWidth = width
-        
-        borderRight.borderColor = UIColor.purpleColor().CGColor
-        borderRight.frame = CGRect(x: playerAgeView.frame.size.width - 4, y: 0, width: width, height: playerAgeView.frame.size.height)
-        borderRight.borderWidth = width
-        
-        playerAgeView.layer.addSublayer(borderLeft)
-        playerAgeView.layer.addSublayer(borderRight)
-        playerAgeView.layer.masksToBounds = true
+//        let borderLeft = CALayer()
+//        let borderRight = CALayer()
+//        let width = CGFloat(1.0)
+//        
+//        borderLeft.borderColor = UIColor.purpleColor().CGColor
+//        borderLeft.frame = CGRect(x: 1, y: 0, width: width, height: playerAgeView.frame.size.height)
+//        borderLeft.borderWidth = width
+//        
+//        borderRight.borderColor = UIColor.purpleColor().CGColor
+//        borderRight.frame = CGRect(x: playerAgeView.frame.size.width - 4, y: 0, width: width, height: playerAgeView.frame.size.height)
+//        borderRight.borderWidth = width
+//        
+//        playerAgeView.layer.addSublayer(borderLeft)
+//        playerAgeView.layer.addSublayer(borderRight)
+//        playerAgeView.layer.masksToBounds = true
         
         //self.playerAgeView.layer.borderWidth = 1
         //self.playerAgeView.layer.borderColor = UIColor.purpleColor().CGColor
