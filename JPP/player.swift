@@ -18,10 +18,6 @@ import UIKit
         super.init(frame: frame)
         loadViewFromNib ()
     }
-    
-    
-   
-    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         loadViewFromNib ()
@@ -34,6 +30,9 @@ import UIKit
         sortnewview.frame = bounds
         sortnewview.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
         self.addSubview(sortnewview);
+        
+        self.playerTitle.text = playerTitle.text?.uppercaseString
+        self.playerPosition.text = playerPosition.text?.uppercaseString
     }
     
     

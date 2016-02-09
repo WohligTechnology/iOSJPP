@@ -1025,8 +1025,8 @@
         <image name="t1111" width="307" height="275"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="h9U-vf-KS7"/>
         <segue reference="OjI-yv-ygZ"/>
         <segue reference="6k6-pP-MVb"/>
-        <segue reference="DFT-vF-egz"/>
     </inferredMetricsTieBreakers>
 </document>

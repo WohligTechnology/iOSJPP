@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="Oswald-Light.ttf">
@@ -23,10 +21,11 @@
         </mutableArray>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="playerInside" customModule="Jaipur_Pink_Panther" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="playerInside" customModule="JPP" customModuleProvider="target">
             <connections>
                 <outlet property="playerAchivements" destination="Qbl-to-AXj" id="ite-PW-7Vs"/>
                 <outlet property="playerAge" destination="mgL-Sl-8jm" id="Xcd-u8-gtZ"/>
+                <outlet property="playerAgeView" destination="G9k-ad-ceb" id="zvl-LR-jQf"/>
                 <outlet property="playerJersey" destination="F0s-uI-UbA" id="LOC-8Y-vbk"/>
                 <outlet property="playerNative" destination="n8Y-HL-nxy" id="Pgu-ji-8C6"/>
                 <outlet property="playerPer" destination="aVV-Xq-dHV" id="RuH-K0-2bX"/>
@@ -38,7 +37,7 @@
             <rect key="frame" x="0.0" y="0.0" width="370" height="610"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aVV-Xq-dHV" customClass="player" customModule="Jaipur_Pink_Panther" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aVV-Xq-dHV" customClass="player" customModule="JPP" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="17" width="370" height="305"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
@@ -55,7 +54,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="352" height="38"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yjE-uc-9YA">
-                                            <rect key="frame" x="0.0" y="0.0" width="116.5" height="38"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="117" height="38"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NATIVE PLACE:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xdm-O4-lpV">
                                                     <rect key="frame" x="8" y="9" width="61" height="21"/>
@@ -87,12 +86,12 @@
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G9k-ad-ceb">
-                                            <rect key="frame" x="117" y="0.0" width="117" height="38"/>
+                                            <rect key="frame" x="118" y="0.0" width="116" height="38"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AGE:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zJz-Lr-FPD">
-                                                    <rect key="frame" x="8" y="0.0" width="35" height="38"/>
+                                                    <rect key="frame" x="41" y="0.0" width="24" height="38"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="35" id="cOA-nf-Vkz"/>
+                                                        <constraint firstAttribute="width" constant="24" id="aAJ-r3-bZo"/>
                                                         <constraint firstAttribute="width" constant="61" id="dam-MP-YZT"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="11"/>
@@ -105,10 +104,10 @@
                                                     </variation>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="27" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mgL-Sl-8jm">
-                                                    <rect key="frame" x="33" y="0.0" width="84" height="38"/>
+                                                    <rect key="frame" x="66" y="0.0" width="20" height="38"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="48" id="8D9-gD-5bQ"/>
-                                                        <constraint firstAttribute="width" constant="84" id="USC-hC-UZb"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="20" id="8D9-gD-5bQ"/>
+                                                        <constraint firstAttribute="width" constant="20" id="USC-hC-UZb"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="11"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -117,20 +116,27 @@
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
-                                                <constraint firstItem="zJz-Lr-FPD" firstAttribute="firstBaseline" secondItem="mgL-Sl-8jm" secondAttribute="firstBaseline" id="10e-IQ-VGg"/>
-                                                <constraint firstItem="mgL-Sl-8jm" firstAttribute="leading" secondItem="G9k-ad-ceb" secondAttribute="leading" constant="33" id="6nC-gD-ijG"/>
-                                                <constraint firstItem="zJz-Lr-FPD" firstAttribute="leading" secondItem="G9k-ad-ceb" secondAttribute="leadingMargin" id="7Nb-6F-6qn"/>
+                                                <constraint firstItem="zJz-Lr-FPD" firstAttribute="firstBaseline" secondItem="mgL-Sl-8jm" secondAttribute="firstBaseline" id="5yc-7z-Cdt"/>
+                                                <constraint firstItem="mgL-Sl-8jm" firstAttribute="leading" secondItem="G9k-ad-ceb" secondAttribute="leading" constant="66" id="6nC-gD-ijG"/>
+                                                <constraint firstItem="zJz-Lr-FPD" firstAttribute="leading" secondItem="G9k-ad-ceb" secondAttribute="leading" constant="41" id="Gem-wK-oSV"/>
+                                                <constraint firstItem="zJz-Lr-FPD" firstAttribute="baseline" secondItem="mgL-Sl-8jm" secondAttribute="baseline" id="LXL-a7-MuW"/>
                                                 <constraint firstAttribute="bottom" secondItem="mgL-Sl-8jm" secondAttribute="bottom" id="Osz-zS-llE"/>
                                                 <constraint firstItem="mgL-Sl-8jm" firstAttribute="top" secondItem="G9k-ad-ceb" secondAttribute="top" id="WoK-SO-XXd"/>
                                                 <constraint firstAttribute="trailing" secondItem="zJz-Lr-FPD" secondAttribute="trailing" constant="74" id="bGX-st-mJt"/>
-                                                <constraint firstItem="zJz-Lr-FPD" firstAttribute="baseline" secondItem="mgL-Sl-8jm" secondAttribute="baseline" id="fTu-0v-1fI"/>
+                                                <constraint firstItem="mgL-Sl-8jm" firstAttribute="leading" secondItem="zJz-Lr-FPD" secondAttribute="trailing" constant="1" id="hFf-BA-GtM"/>
                                             </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="bGX-st-mJt"/>
+                                                    <exclude reference="hFf-BA-GtM"/>
+                                                </mask>
+                                            </variation>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lf6-go-dAt">
-                                            <rect key="frame" x="235" y="0.0" width="116.5" height="38"/>
+                                            <rect key="frame" x="235" y="0.0" width="117" height="38"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JERSEY NUMBER:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eX3-Mq-WJ1">
-                                                    <rect key="frame" x="0.0" y="9" width="73" height="21"/>
+                                                    <rect key="frame" x="10" y="9" width="73" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="73" id="6cb-iv-7W2"/>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="73" id="W2R-n0-BIM"/>
@@ -145,10 +151,10 @@
                                                     </variation>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F0s-uI-UbA">
-                                                    <rect key="frame" x="81" y="0.0" width="29" height="38"/>
+                                                    <rect key="frame" x="91" y="0.0" width="16" height="38"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="29" id="Pv6-pd-KWZ"/>
-                                                        <constraint firstAttribute="width" constant="29" id="iaX-0d-UTk"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="16" id="Pv6-pd-KWZ"/>
+                                                        <constraint firstAttribute="width" constant="16" id="iaX-0d-UTk"/>
                                                         <constraint firstAttribute="width" relation="lessThanOrEqual" constant="34" id="wzR-dL-BFz"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="11"/>
@@ -164,7 +170,7 @@
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="eX3-Mq-WJ1" secondAttribute="bottom" constant="8" id="4PG-1u-mXF"/>
-                                                <constraint firstItem="eX3-Mq-WJ1" firstAttribute="leading" secondItem="Lf6-go-dAt" secondAttribute="leading" id="AYE-fq-UbG"/>
+                                                <constraint firstItem="eX3-Mq-WJ1" firstAttribute="leading" secondItem="Lf6-go-dAt" secondAttribute="leading" constant="10" id="AYE-fq-UbG"/>
                                                 <constraint firstAttribute="bottom" secondItem="F0s-uI-UbA" secondAttribute="bottom" id="m8Y-D2-xs4"/>
                                                 <constraint firstItem="F0s-uI-UbA" firstAttribute="top" secondItem="Lf6-go-dAt" secondAttribute="top" id="p8a-Oc-3HA"/>
                                                 <constraint firstItem="eX3-Mq-WJ1" firstAttribute="top" secondItem="Lf6-go-dAt" secondAttribute="top" constant="9" id="pF2-aX-vqJ"/>
