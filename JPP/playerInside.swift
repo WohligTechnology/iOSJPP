@@ -12,11 +12,13 @@ import UIKit
     @IBOutlet weak var playerPer: player!
     
     @IBOutlet weak var playerNative: UILabel!
+    @IBOutlet var playerNativePlace: UILabel!
     
     @IBOutlet var playerAgeView: UIView!
     @IBOutlet weak var playerAge: UILabel!
     
     @IBOutlet weak var playerJersey: UILabel!
+    @IBOutlet var playerJerseyNo: UILabel!
     
     @IBOutlet weak var playerAchivements: UILabel!
     
@@ -45,11 +47,11 @@ import UIKit
         let width = CGFloat(1.0)
         
         borderLeft.borderColor = UIColor.purpleColor().CGColor
-        borderLeft.frame = CGRect(x: 0, y: 0, width: width, height: playerAgeView.frame.size.height)
+        borderLeft.frame = CGRect(x: 1, y: 0, width: width, height: playerAgeView.frame.size.height)
         borderLeft.borderWidth = width
         
         borderRight.borderColor = UIColor.purpleColor().CGColor
-        borderRight.frame = CGRect(x: 100, y: 0, width: width, height: playerAgeView.frame.size.height)
+        borderRight.frame = CGRect(x: playerAgeView.frame.size.width - 4, y: 0, width: width, height: playerAgeView.frame.size.height)
         borderRight.borderWidth = width
         
         playerAgeView.layer.addSublayer(borderLeft)
