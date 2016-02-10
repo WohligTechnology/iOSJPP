@@ -37,7 +37,7 @@
                     <color key="textColor" red="0.93333333333333335" green="0.29019607843137252" blue="0.60784313725490191" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stay tuned to our weekly contest on our social media pages to win some exclusive merchandise. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eb6-gf-5WC">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stay tuned to our weekly contest on social mediamedia and stand a chance to win exclusive merchandise! " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eb6-gf-5WC">
                     <rect key="frame" x="8" y="389" width="359" height="42"/>
                     <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="14"/>
                     <color key="textColor" red="0.84313725490196079" green="0.21568627450980393" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>

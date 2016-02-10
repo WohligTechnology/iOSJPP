@@ -13,6 +13,8 @@ class PointTableController: UIViewController,UITableViewDelegate,UITableViewData
     @IBOutlet weak var pointTable: UITableView!
     @IBOutlet weak var tableHeader: table!
     
+    let font = UIFont(name: "Oswald-Bold", size: 14.0)
+    
     override func viewDidAppear(animated: Bool) {
         
         self.view.addSubview(loaderGlo)
@@ -27,24 +29,24 @@ class PointTableController: UIViewController,UITableViewDelegate,UITableViewData
         
         rest.getPointTable(pointLoaded)
         self.setNavigationBarItemText("POINTS TABLE")
-        tableHeader.tableNo.font = UIFont(name:"Oswald-Bold", size: 14.0)
+        tableHeader.tableNo.font = font
         tableHeader.tableNo.text = "No."
         
         
-        tableHeader.tableTeam.font = UIFont(name:"Oswald-Bold", size: 14.0)
+        tableHeader.tableTeam.font = font
         tableHeader.tableTeam.text = "Team"
         
         
-        tableHeader.tablePlayed.font = UIFont(name:"Oswald-Bold", size: 14.0)
+        tableHeader.tablePlayed.font = font
         tableHeader.tablePlayed.text = "P"
         
-        tableHeader.tableWon.font = UIFont(name:"Oswald-Bold", size: 14.0)
+        tableHeader.tableWon.font = font
         tableHeader.tableWon.text = "W"
         
-        tableHeader.tableLost.font = UIFont(name:"Oswald-Bold", size: 14.0)
+        tableHeader.tableLost.font = font
         tableHeader.tableLost.text = "L"
         
-        tableHeader.tablePoint.font = UIFont(name:"Oswald-Bold", size: 14.0)
+        tableHeader.tablePoint.font = font
         tableHeader.tablePoint.text = "PTS"
         
         
@@ -97,6 +99,14 @@ class PointTableController: UIViewController,UITableViewDelegate,UITableViewData
         if((pointJson[indexPath.row]["name"].string) != nil) {
             let mediaBox = table(frame: CGRectMake(0,8,self.view.frame.width-32,230));
             mediaBox.tableTeam.text = pointJson[indexPath.row]["name"].string
+            if (pointJson[indexPath.row]["name"].string == "Jaipur Pink Panthers") {
+                mediaBox.tableTeam.font = font
+                mediaBox.tableNo.font = font
+                mediaBox.tablePlayed.font = font
+                mediaBox.tableLost.font = font
+                mediaBox.tableWon.font = font
+                mediaBox.tablePoint.font = font
+            }
             mediaBox.tableNo.text = String(indexPath.row  + 1)
             mediaBox.tablePlayed.text = pointJson[indexPath.row]["played"].string
             mediaBox.tableLost.text = pointJson[indexPath.row]["lost"].string

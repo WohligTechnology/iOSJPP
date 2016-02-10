@@ -7,6 +7,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="singleThumbnailImage" customModule="JPP" customModuleProvider="target">
             <connections>
                 <outlet property="openImage" destination="MJ4-Ys-enW" id="zZq-Bi-DV6"/>
+                <outlet property="shareBtn" destination="Ic8-cO-pV8" id="UGp-3Z-j54"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

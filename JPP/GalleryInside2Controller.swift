@@ -19,6 +19,11 @@ class GalleryInside2Controller: UIViewController {
         
         gal2Global = self;
         
+        if(isGalWal == 0)
+        {
+            fullView.shareBtn.alpha = 0;
+        }
+        
         fullView.openImage.hnk_setImageFromURL(rest.getImageCache(galleryImage))
         
     }

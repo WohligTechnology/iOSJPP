@@ -10,6 +10,8 @@ import UIKit
 
 @IBDesignable class singleThumbnailImage: UIView {
     
+    @IBOutlet var shareBtn: UIButton!
+    
     @IBAction func onShareClick(sender: AnyObject) {
         shareImage()
     }
@@ -33,7 +35,6 @@ import UIKit
         self.addSubview(sortnewview);
         
     }
-    
     
     func shareImage() {
         //var messageStr:String  = "Check out my awesome iPicSafe photo!"

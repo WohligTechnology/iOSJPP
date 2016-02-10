@@ -16,7 +16,7 @@ class HomeController: UIViewController,UIGestureRecognizerDelegate {
     @IBOutlet weak var scrollView: UIScrollView!
     var verticalLayout : VerticalLayout!
     
-    
+    let font = UIFont(name: "Oswald-Bold", size: 14.0)
     
     
     
@@ -86,24 +86,24 @@ class HomeController: UIViewController,UIGestureRecognizerDelegate {
                 
                 let tableHeader = table(frame: CGRectMake(8,8,PinkBox.frame.width-16,44));
                 
-                tableHeader.tableNo.font = UIFont(name:"Oswald-Bold", size: 14.0)
+                tableHeader.tableNo.font = self.font
                 tableHeader.tableNo.text = "No."
                 
                 
-                tableHeader.tableTeam.font = UIFont(name:"Oswald-Bold", size: 14.0)
+                tableHeader.tableTeam.font = self.font
                 tableHeader.tableTeam.text = "Team"
                 
                 
-                tableHeader.tablePlayed.font = UIFont(name:"Oswald-Bold", size: 14.0)
+                tableHeader.tablePlayed.font = self.font
                 tableHeader.tablePlayed.text = "P"
                 
-                tableHeader.tableWon.font = UIFont(name:"Oswald-Bold", size: 14.0)
+                tableHeader.tableWon.font = self.font
                 tableHeader.tableWon.text = "W"
                 
-                tableHeader.tableLost.font = UIFont(name:"Oswald-Bold", size: 14.0)
+                tableHeader.tableLost.font = self.font
                 tableHeader.tableLost.text = "L"
                 
-                tableHeader.tablePoint.font = UIFont(name:"Oswald-Bold", size: 14.0)
+                tableHeader.tablePoint.font = self.font
                 tableHeader.tablePoint.text = "PTS"
                 
                 
@@ -131,6 +131,15 @@ class HomeController: UIViewController,UIGestureRecognizerDelegate {
                     insideTable.tableLost.text = json["points"][i]["lost"].string
                     
                     insideTable.tablePoint.text = json["points"][i]["point"].string
+                    
+                    if (json["points"][i]["name"].string == "Jaipur Pink Panthers") {
+                        insideTable.tableNo.font = self.font
+                        insideTable.tableTeam.font = self.font
+                        insideTable.tablePlayed.font = self.font
+                        insideTable.tableWon.font = self.font
+                        insideTable.tableLost.font = self.font
+                        insideTable.tablePoint.font = self.font
+                    }
                     
                     PinkBox.frame.size.height = CGFloat(topDistance + 44 + 8)
                     
