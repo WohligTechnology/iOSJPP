@@ -10,8 +10,8 @@ import Foundation
 import SwiftHTTP
 import SwiftyJSON
 
-//let adminUrl = "http://192.168.0.124/jppbackend/";
-let adminUrl = "http://jaipurpinkpanthers.com/admin/";
+let adminUrl = "http://192.168.0.124/jppbackend/";
+//let adminUrl = "http://jaipurpinkpanthers.com/admin/";
 let imageURL = adminUrl + "uploads/";
 let apiURL = adminUrl + "index.php/json/";
 
@@ -154,10 +154,11 @@ public class RestApi {
         }
     }
     
-    public func sendFanCorner(firstname:String,lastname:String,mobile:String,email:String, completion: ( (JSON) -> Void) )  {
+    public func sendFanCorner(firstname:String, lastname:String, mobile:String, email:String, completion: ( (JSON) -> Void) )  {
         var json = JSON(1);
+        let params = ["firstname": firstname, "lastname": lastname, "mobile": mobile, "email": email]
+        print(params)
         do {
-            let params = ["firstname": firstname, "lastname": lastname, "mobile": mobile, "email": email ]
             let opt = try HTTP.POST(apiURL + "contactus", parameters: params)
             opt.start { response in
                 if let _ = response.error {
@@ -167,6 +168,8 @@ public class RestApi {
                 {
                     json  = JSON(data: response.data)
                     completion(json);
+                    print("WOW!!! ITS DONE")
+                    print(params)
                 }
             }
         } catch _ {

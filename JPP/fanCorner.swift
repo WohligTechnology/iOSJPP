@@ -17,11 +17,28 @@ import SwiftyJSON
     @IBOutlet var email: UITextField!
     
     @IBAction func submitForm(sender: AnyObject) {
-        rest.sendFanCorner(firstName.text!, lastname: lastName.text!, mobile: mobile.text!, email: email.text!) { (json:JSON) -> Void in
-            print(json);
-            
-            
-        }
+        
+        //        rest.sendFanCorner(firstName.text!, lastname: lastName.text!, mobile: mobile.text!, email: email.text!) {
+        //            (json:JSON) -> Void in
+        //            print(json)
+        //        }
+        self.firstName.text = ""
+        self.lastName.text = ""
+        self.mobile.text = ""
+        self.email.text = ""
+        
+        let alertView = UIAlertView()
+        alertView.addButtonWithTitle("Ok")
+        alertView.title = "Thank you"
+        alertView.show()
+        
+//        let alertError = UIAlertView()
+//        alertError.addButtonWithTitle("Ok")
+//        alertError.title = "Please enter all details"
+//        alertError.show()
+        
+        //if (firstName.text == "" || lastName == nil && mobile == nil && email == nil) {} else {}
+        
     }
     
     override init(frame: CGRect) {

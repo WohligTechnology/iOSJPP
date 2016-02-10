@@ -8,9 +8,11 @@
 
 import UIKit
 import SwiftyJSON
+
 class FanCornerController: UIViewController {
     var verticalLayout : VerticalLayout!
     @IBOutlet var scrollView: UIScrollView!
+    //@IBOutlet var submitButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setNavigationBarItemText("FAN CORNER")
@@ -27,9 +29,15 @@ class FanCornerController: UIViewController {
         let fan = fanCorner(frame: CGRectMake(8,8,self.verticalLayout.frame.width-16,height));
         self.verticalLayout.addSubview(fan);
         
-        
+        //submitButton.addTarget(self, action: "submitFormButton:", forControlEvents: .TouchUpInside)
         
         resizeView(8)
+    }
+    
+    func submitFormButton(sender: UIButton) {
+        let alert = UIAlertController(title: "Thank You", message: "", preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default,handler: nil))
+        self.presentViewController(alert, animated: true, completion: nil)
     }
     
     override func didReceiveMemoryWarning() {
