@@ -26,6 +26,9 @@ class FanCornerController: UIViewController {
         
         let fan = fanCorner(frame: CGRectMake(8,8,self.verticalLayout.frame.width-16,height));
         self.verticalLayout.addSubview(fan);
+        
+        
+        
         resizeView(8)
     }
     

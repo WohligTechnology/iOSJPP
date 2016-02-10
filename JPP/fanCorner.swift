@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 @IBDesignable class fanCorner: UIView {
    
@@ -14,6 +15,14 @@ import UIKit
     @IBOutlet var lastName: UITextField!
     @IBOutlet var mobile: UITextField!
     @IBOutlet var email: UITextField!
+    
+    @IBAction func submitForm(sender: AnyObject) {
+        rest.sendFanCorner(firstName.text!, lastname: lastName.text!, mobile: mobile.text!, email: email.text!) { (json:JSON) -> Void in
+            print(json);
+            
+            
+        }
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)

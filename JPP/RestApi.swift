@@ -79,6 +79,8 @@ public class RestApi {
     public func getGallery( completion: ( (JSON) -> Void) )  {
         var json = JSON(1);
         do {
+            
+            
             let opt = try HTTP.GET(apiURL + "getallgallery")
             opt.start { response in
                 if let _ = response.error {
@@ -151,6 +153,27 @@ public class RestApi {
             completion(json);
         }
     }
+    
+    public func sendFanCorner(firstname:String,lastname:String,mobile:String,email:String, completion: ( (JSON) -> Void) )  {
+        var json = JSON(1);
+        do {
+            let params = ["firstname": firstname, "lastname": lastname, "mobile": mobile, "email": email ]
+            let opt = try HTTP.POST(apiURL + "contactus", parameters: params)
+            opt.start { response in
+                if let _ = response.error {
+                    completion(json);
+                }
+                else
+                {
+                    json  = JSON(data: response.data)
+                    completion(json);
+                }
+            }
+        } catch _ {
+            completion(json);
+        }
+    }
+
     
     func getHome(completion: ( (JSON) -> Void)) {
         var json = JSON(1);
