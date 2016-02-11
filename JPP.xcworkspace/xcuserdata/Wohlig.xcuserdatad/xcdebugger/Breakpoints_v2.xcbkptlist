@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JPP/FanCornerController.swift"
-            timestampString = "476801645.400765"
+            timestampString = "476861573.121816"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
             landmarkName = "resizeView(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -26,13 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JPP/fanCorner.swift"
-            timestampString = "476802386.942309"
+            timestampString = "476861522.41821"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
-            landmarkName = "submitForm(_:)"
-            landmarkType = "5">
+            startingLineNumber = "5"
+            endingLineNumber = "5">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -9,12 +9,15 @@
 import UIKit
 import SwiftyJSON
 
+var fanControllerGlobal:FanCornerController!
+
 class FanCornerController: UIViewController {
     var verticalLayout : VerticalLayout!
     @IBOutlet var scrollView: UIScrollView!
     //@IBOutlet var submitButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        fanControllerGlobal = self;
         self.setNavigationBarItemText("FAN CORNER")
         
         self.verticalLayout = VerticalLayout(width: self.view.frame.width);

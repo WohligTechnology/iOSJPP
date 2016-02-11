@@ -18,26 +18,25 @@ import SwiftyJSON
     
     @IBAction func submitForm(sender: AnyObject) {
         
-        //        rest.sendFanCorner(firstName.text!, lastname: lastName.text!, mobile: mobile.text!, email: email.text!) {
-        //            (json:JSON) -> Void in
-        //            print(json)
-        //        }
+        if(firstName.text == "" || lastName.text == "" || mobile.text == "" || email.text == "") {
+            let alertE = UIAlertController(title: "Please enter all details", message:"", preferredStyle: .Alert)
+            alertE.addAction(UIAlertAction(title: "OK", style: .Default) { _ in })
+            fanControllerGlobal.presentViewController(alertE, animated: true){}
+        } else {
+            rest.sendFanCorner(firstName.text!, lastname: lastName.text!, mobile: mobile.text!, email: email.text!) {
+                (json:JSON) -> Void in
+                print(json)
+            }
+            
+            let alert = UIAlertController(title: "Thank You", message:"", preferredStyle: .Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .Default) { _ in })
+            fanControllerGlobal.presentViewController(alert, animated: true){}
+        }
+        
         self.firstName.text = ""
         self.lastName.text = ""
         self.mobile.text = ""
         self.email.text = ""
-        
-        let alertView = UIAlertView()
-        alertView.addButtonWithTitle("Ok")
-        alertView.title = "Thank you"
-        alertView.show()
-        
-//        let alertError = UIAlertView()
-//        alertError.addButtonWithTitle("Ok")
-//        alertError.title = "Please enter all details"
-//        alertError.show()
-        
-        //if (firstName.text == "" || lastName == nil && mobile == nil && email == nil) {} else {}
         
     }
     
@@ -84,6 +83,11 @@ import SwiftyJSON
         let emailPad = UIView(frame: CGRectMake(0, 0, 10, self.email.frame.height))
         email.leftView = emailPad
         email.leftViewMode = UITextFieldViewMode.Always
+        
+        self.firstName.text = ""
+        self.lastName.text = ""
+        self.mobile.text = ""
+        self.email.text = ""
         
     }
 }

@@ -157,9 +157,9 @@ public class RestApi {
     public func sendFanCorner(firstname:String, lastname:String, mobile:String, email:String, completion: ( (JSON) -> Void) )  {
         var json = JSON(1);
         let params = ["firstname": firstname, "lastname": lastname, "mobile": mobile, "email": email]
-        print(params)
+        //print(params)
         do {
-            let opt = try HTTP.POST(apiURL + "contactus", parameters: params)
+            let opt = try HTTP.POST(apiURL + "contactus", parameters: params, requestSerializer: JSONParameterSerializer())
             opt.start { response in
                 if let _ = response.error {
                     completion(json);
@@ -168,8 +168,6 @@ public class RestApi {
                 {
                     json  = JSON(data: response.data)
                     completion(json);
-                    print("WOW!!! ITS DONE")
-                    print(params)
                 }
             }
         } catch _ {
