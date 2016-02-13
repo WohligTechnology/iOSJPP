@@ -11,14 +11,14 @@ import SwiftyJSON
 import DKChainableAnimationKit
 import EventKitUI
 
-class HomeController: UIViewController,UIGestureRecognizerDelegate {
+class HomeController: UIViewController, UIGestureRecognizerDelegate {
     
     @IBOutlet weak var scrollView: UIScrollView!
     var verticalLayout : VerticalLayout!
     
     let font = UIFont(name: "Oswald-Bold", size: 14.0)
     
-    
+    var refeshController = UIRefreshControl()
     
     var HomeJSON = JSON(1)
     
@@ -165,11 +165,27 @@ class HomeController: UIViewController,UIGestureRecognizerDelegate {
         super.viewDidLoad()
         
         self.setNavigationBarItem()
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: "refresh:", forControlEvents: .ValueChanged)
+        scrollView.addSubview(refreshControl)
         
         loadingInit()
+        callhome()
+       
+    }
+    
+    
+    func callhome() {
+        print("ANDRODI ANDROID ANDROID");
         self.view.addSubview(loaderGlo)
-        
         rest.getHome(homeLoaded)
+    }
+    
+    func refresh(refreshControl: UIRefreshControl) {
+        // Do your job, when done:
+
+        callhome()
+        refreshControl.endRefreshing()
     }
     
     func resizeView(offset:CGFloat)

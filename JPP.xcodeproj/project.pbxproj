@@ -924,7 +924,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wohlig.JPP;
 				PRODUCT_NAME = JPP;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "db05889a-9e60-4ff0-9967-29f1e5cd490b";
 				SWIFT_OBJC_BRIDGING_HEADER = "JPP/JPP-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -947,7 +947,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wohlig.JPP;
 				PRODUCT_NAME = JPP;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "db05889a-9e60-4ff0-9967-29f1e5cd490b";
 				SWIFT_OBJC_BRIDGING_HEADER = "JPP/JPP-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
