@@ -95,7 +95,6 @@ class GalleryController: UIViewController,UITableViewDataSource,UITableViewDeleg
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        
         tableView.rowHeight = 208.0
         tableView.separatorStyle = UITableViewCellSeparatorStyle.None
         tableView.tableFooterView = UIView()
@@ -117,9 +116,6 @@ class GalleryController: UIViewController,UITableViewDataSource,UITableViewDeleg
                 cell.addSubview(mediaBox)
             }
         }
-        
-        
-        
         
         return cell
     }

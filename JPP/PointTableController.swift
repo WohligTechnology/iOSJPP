@@ -14,6 +14,7 @@ class PointTableController: UIViewController,UITableViewDelegate,UITableViewData
     @IBOutlet weak var tableHeader: table!
     
     let font = UIFont(name: "Oswald-Bold", size: 14.0)
+    let lightBlueColor = UIColor(red: 196/255, green: 240/255, blue: 255/255, alpha: 1)
     
     override func viewDidAppear(animated: Bool) {
         
@@ -92,6 +93,7 @@ class PointTableController: UIViewController,UITableViewDelegate,UITableViewData
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         tableView.separatorStyle = UITableViewCellSeparatorStyle.SingleLine
+        tableView.allowsSelection = false
         tableView.tableFooterView = UIView()
         let cell = tableView.dequeueReusableCellWithIdentifier("pointTableCell", forIndexPath: indexPath)
         
@@ -106,6 +108,15 @@ class PointTableController: UIViewController,UITableViewDelegate,UITableViewData
                 mediaBox.tableLost.font = font
                 mediaBox.tableWon.font = font
                 mediaBox.tablePoint.font = font
+                
+                mediaBox.backgroundColor = UIColor(red: 77/255, green: 203/255, blue: 244/255, alpha: 1)
+                
+//                mediaBox.tableTeam.textColor = lightBlueColor
+//                mediaBox.tableNo.textColor = lightBlueColor
+//                mediaBox.tablePlayed.textColor = lightBlueColor
+//                mediaBox.tableLost.textColor = lightBlueColor
+//                mediaBox.tableWon.textColor = lightBlueColor
+//                mediaBox.tablePoint.textColor = lightBlueColor
             }
             mediaBox.tableNo.text = String(indexPath.row  + 1)
             mediaBox.tablePlayed.text = pointJson[indexPath.row]["played"].string

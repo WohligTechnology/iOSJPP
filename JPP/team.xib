@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -13,7 +13,7 @@
         </mutableArray>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="team" customModule="Jaipur_Pink_Panther" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="team" customModule="JPP" customModuleProvider="target">
             <connections>
                 <outlet property="teamDesc" destination="1tR-dU-n89" id="AId-SD-m6j"/>
                 <outlet property="teamImage" destination="x13-Hu-KbC" id="rB7-fV-fyj"/>
@@ -62,7 +62,7 @@
                 <constraint firstItem="x13-Hu-KbC" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="oRO-Je-SW6"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="144" y="53"/>
+            <point key="canvasLocation" x="340" y="234"/>
         </view>
     </objects>
     <resources>

@@ -15,6 +15,7 @@ import UIKit
     @IBOutlet weak var team1Score: UILabel!
     @IBOutlet weak var team2Image: UIImageView!
     @IBOutlet weak var team2Score: UILabel!
+    @IBOutlet weak var matchTime: UILabel!
     @IBOutlet weak var matchStadium: UILabel!
     @IBOutlet weak var matchDate: UILabel!
     @IBOutlet weak var addToCalendar: UIButton!

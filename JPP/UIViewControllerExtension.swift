@@ -42,7 +42,7 @@ extension UIViewController {
     func setNavigationBarItemText(text:String) {
         
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
-        let font = UIFont(name: "Oswald-Light", size: 22)
+        let font = UIFont(name: "Oswald-Light", size: 18)
         self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName : font!,NSForegroundColorAttributeName : UIColor(red: 1, green: 1, blue: 1, alpha: 1) ]
         self.navigationController?.navigationBar.translucent = false
         self.addLeftBarButtonWithImage(UIImage(named: "ic_menu_black_24dp")!)

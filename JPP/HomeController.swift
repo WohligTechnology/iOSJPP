@@ -13,10 +13,12 @@ import EventKitUI
 
 class HomeController: UIViewController, UIGestureRecognizerDelegate {
     
+    var i = 0;
     @IBOutlet weak var scrollView: UIScrollView!
     var verticalLayout : VerticalLayout!
     
     let font = UIFont(name: "Oswald-Bold", size: 14.0)
+    let blue = UIColor(red: 77/255, green: 203/255, blue: 244/255, alpha: 1)
     
     var refeshController = UIRefreshControl()
     
@@ -33,7 +35,7 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
     
     func homeLoaded(json:JSON) {
         
-
+        //print(json);
         if(json == 1)
         {
             let alertController = UIAlertController(title: "No Connection", message:
@@ -43,11 +45,17 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
             self.presentViewController(alertController, animated: true, completion: nil)
         }
         else
-        {
+        {   self.i++
             HomeJSON = json;
             dispatch_async(dispatch_get_main_queue(), {
+                
+                if(self.i>1)
+                {
+                    self.verticalLayout.removeFromSuperview()
+                }
                 self.verticalLayout = VerticalLayout(width: self.view.frame.width);
                 self.scrollView.insertSubview(self.verticalLayout, atIndex: 0)
+
                 
                 if((json["latestupdate"]["team1id"].string) != nil) {
                     
@@ -59,6 +67,8 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                     updates.team2Image.image = UIImage(named: "t" + json["latestupdate"]["team2id"].string! + ".png")
                     updates.team1Score.text = json["latestupdate"]["score1"].string
                     updates.team2Score.text = json["latestupdate"]["score2"].string
+                    updates.matchTime.text = json["lastestupdate"]["matchtime"].string
+                    //updates.matchTime.text = "5:30"
                     updates.matchDate.text = json["latestupdate"]["starttimedate"].string
                     updates.matchStadium.text = json["latestupdate"]["stadium"].string
                     
@@ -139,6 +149,8 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                         insideTable.tableWon.font = self.font
                         insideTable.tableLost.font = self.font
                         insideTable.tablePoint.font = self.font
+                        
+                        insideTable.backgroundColor = UIColor(red: 77/255, green: 203/255, blue: 244/255, alpha: 1)
                     }
                     
                     PinkBox.frame.size.height = CGFloat(topDistance + 44 + 8)
@@ -146,8 +158,6 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                     PinkBox.addSubview(insideTable);
                 }
                 self.resizeView(8);
-                
-                
                 
             })
             
@@ -166,6 +176,9 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
         
         self.setNavigationBarItem()
         let refreshControl = UIRefreshControl()
+        //refreshControl.addSubview(loaderView)
+        refreshControl.backgroundColor = lightBlueColor
+        refreshControl.tintColor = PinkColor
         refreshControl.addTarget(self, action: "refresh:", forControlEvents: .ValueChanged)
         scrollView.addSubview(refreshControl)
         
@@ -176,7 +189,6 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
     
     
     func callhome() {
-        print("ANDRODI ANDROID ANDROID");
         self.view.addSubview(loaderGlo)
         rest.getHome(homeLoaded)
     }
