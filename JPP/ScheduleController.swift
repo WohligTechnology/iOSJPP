@@ -122,14 +122,14 @@ class ScheduleController: UIViewController {
                 for(var i=1;i<json.count;i++)
                 {
                     
-                    let topDistance = self.topSpacing+self.spacingPink+((65+self.spacingPink)*(i-1));
-                    let insideTable = matches(frame: CGRectMake(8,CGFloat(topDistance),self.verticalLayout.frame.width-16,65));
+                    let topDistance = self.topSpacing+self.spacingPink+((100+self.spacingPink)*(i-1));
+                    let insideTable = matches(frame: CGRectMake(8,CGFloat(topDistance),self.verticalLayout.frame.width-16,100));
                     insideTable.matchesTeams.text = json[i]["team1"].string! + " VS " + json[i]["team2"].string!
                     
                     insideTable.matchesDate.text = json[i]["starttimedate"].string
                     
                     
-                    whiteView.frame.size.height = CGFloat(topDistance+65+8);
+                    whiteView.frame.size.height = CGFloat(topDistance+100+8);
                     whiteView.addSubview(insideTable);
                 }
                 

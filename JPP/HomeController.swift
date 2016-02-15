@@ -67,8 +67,7 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                     updates.team2Image.image = UIImage(named: "t" + json["latestupdate"]["team2id"].string! + ".png")
                     updates.team1Score.text = json["latestupdate"]["score1"].string
                     updates.team2Score.text = json["latestupdate"]["score2"].string
-                    updates.matchTime.text = json["lastestupdate"]["matchtime"].string
-                    //updates.matchTime.text = "5:30"
+                    updates.matchTime.text = json["latestupdate"]["matchtime"].string
                     updates.matchDate.text = json["latestupdate"]["starttimedate"].string
                     updates.matchStadium.text = json["latestupdate"]["stadium"].string
                     
