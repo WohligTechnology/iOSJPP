@@ -517,20 +517,20 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TICKETS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9He-nB-z2P">
-                                                <rect key="frame" x="0.0" y="33" width="304" height="21"/>
+                                                <rect key="frame" x="0.0" y="33" width="304" height="28"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="21" id="WTJ-fc-9nl"/>
+                                                    <constraint firstAttribute="height" constant="28" id="WTJ-fc-9nl"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="Oswald-Bold" family="Oswald" pointSize="17"/>
+                                                <fontDescription key="fontDescription" name="Oswald-Bold" family="Oswald" pointSize="24"/>
                                                 <color key="textColor" red="0.70588237047195435" green="0.11764705926179886" blue="0.44705882668495178" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MERCHANDISE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7kp-4D-NoO">
-                                                <rect key="frame" x="3" y="274" width="298" height="26"/>
+                                                <rect key="frame" x="3" y="273" width="298" height="27"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="26" id="jVc-jm-YnS"/>
+                                                    <constraint firstAttribute="height" constant="27" id="jVc-jm-YnS"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="Oswald-Bold" family="Oswald" pointSize="17"/>
+                                                <fontDescription key="fontDescription" name="Oswald-Bold" family="Oswald" pointSize="24"/>
                                                 <color key="textColor" red="0.70588237050000002" green="0.1176470593" blue="0.44705882670000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -558,16 +558,16 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="lyi-Cx-qBu" firstAttribute="leading" secondItem="8om-dS-Y4w" secondAttribute="leading" id="1pH-cZ-CO6"/>
-                                            <constraint firstItem="m9X-zu-MaF" firstAttribute="top" secondItem="9He-nB-z2P" secondAttribute="bottom" constant="26" id="3dv-s8-bBg"/>
+                                            <constraint firstItem="m9X-zu-MaF" firstAttribute="top" secondItem="9He-nB-z2P" secondAttribute="bottom" constant="19" id="3dv-s8-bBg"/>
                                             <constraint firstItem="yZk-vx-G1t" firstAttribute="top" secondItem="7kp-4D-NoO" secondAttribute="bottom" constant="16" id="4oX-z4-nQt"/>
                                             <constraint firstItem="yZk-vx-G1t" firstAttribute="trailing" secondItem="lyi-Cx-qBu" secondAttribute="trailing" id="6c3-eq-BV8"/>
                                             <constraint firstItem="yZk-vx-G1t" firstAttribute="leading" secondItem="lyi-Cx-qBu" secondAttribute="leading" id="7wc-JN-qvV"/>
                                             <constraint firstItem="7kp-4D-NoO" firstAttribute="centerX" secondItem="yZk-vx-G1t" secondAttribute="centerX" id="8Gr-6F-4cn"/>
                                             <constraint firstItem="m9X-zu-MaF" firstAttribute="centerX" secondItem="8om-dS-Y4w" secondAttribute="centerX" id="JYw-Py-4bq"/>
                                             <constraint firstItem="9He-nB-z2P" firstAttribute="leading" secondItem="xsO-gq-Wsc" secondAttribute="leading" id="KOl-Ih-Zw7"/>
-                                            <constraint firstItem="7kp-4D-NoO" firstAttribute="top" secondItem="8om-dS-Y4w" secondAttribute="bottom" constant="27" id="Sbt-Hj-atU"/>
+                                            <constraint firstItem="7kp-4D-NoO" firstAttribute="top" secondItem="8om-dS-Y4w" secondAttribute="bottom" constant="26" id="Sbt-Hj-atU"/>
                                             <constraint firstItem="9He-nB-z2P" firstAttribute="top" secondItem="xsO-gq-Wsc" secondAttribute="top" constant="33" id="Svf-zd-ivF"/>
-                                            <constraint firstItem="7kp-4D-NoO" firstAttribute="top" secondItem="xsO-gq-Wsc" secondAttribute="top" constant="274" id="cIe-Hr-kai"/>
+                                            <constraint firstItem="7kp-4D-NoO" firstAttribute="top" secondItem="xsO-gq-Wsc" secondAttribute="top" constant="273" id="cIe-Hr-kai"/>
                                             <constraint firstItem="m9X-zu-MaF" firstAttribute="leading" secondItem="xsO-gq-Wsc" secondAttribute="leading" constant="34" id="cT4-CW-GHI"/>
                                             <constraint firstItem="lyi-Cx-qBu" firstAttribute="top" secondItem="yZk-vx-G1t" secondAttribute="bottom" constant="19" id="cuk-fp-FSt"/>
                                             <constraint firstAttribute="bottom" secondItem="lyi-Cx-qBu" secondAttribute="bottom" constant="87" id="dY6-jJ-ZqT"/>
@@ -1025,8 +1025,8 @@
         <image name="t1111" width="307" height="275"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="d8n-GQ-egr"/>
-        <segue reference="OjI-yv-ygZ"/>
         <segue reference="h9U-vf-KS7"/>
+        <segue reference="kGR-72-TwO"/>
+        <segue reference="d8n-GQ-egr"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -128,7 +128,7 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                     
                     let topDistance = topSpaceinPink+spacingPink+((44+spacingPink)*(i+1));
                     
-                    let insideTable = table(frame: CGRectMake(8,CGFloat(topDistance),PinkBox.frame.width-16,44));
+                    let insideTable = table(frame: CGRectMake(8,CGFloat(topDistance),PinkBox.frame.width-16,40));
                     
                     insideTable.tableNo.text = String(i+1)
                     
