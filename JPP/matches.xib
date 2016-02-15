@@ -12,11 +12,16 @@
             <string>Oswald-Regular</string>
             <string>Oswald-Regular</string>
             <string>Oswald-Regular</string>
+            <string>Oswald-Regular</string>
         </mutableArray>
     </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="matches" customModule="JPP" customModuleProvider="target">
             <connections>
+                <outlet property="addCalender" destination="lss-2h-qUr" id="Dc6-6g-pKZ"/>
+                <outlet property="addCalender2" destination="FiI-RX-wRn" id="25b-fs-fWo"/>
+                <outlet property="bookTicket" destination="NE4-wW-xKf" id="4L6-cE-zPf"/>
+                <outlet property="buttonHolder" destination="m2u-6l-nON" id="9gQ-3G-qNR"/>
                 <outlet property="matchesDate" destination="74G-d4-Wx0" id="FVS-Vq-7P5"/>
                 <outlet property="matchesTeams" destination="8K5-0L-apj" id="kUB-5U-QHz"/>
             </connections>
@@ -39,18 +44,21 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="m2u-6l-nON">
-                    <rect key="frame" x="16" y="58" width="330" height="34"/>
+                    <rect key="frame" x="16" y="59" width="330" height="29"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lss-2h-qUr">
-                            <rect key="frame" x="0.0" y="0.0" width="157" height="34"/>
+                            <rect key="frame" x="0.0" y="0.0" width="157" height="29"/>
                             <color key="backgroundColor" red="1" green="0.31899784370000001" blue="0.66240949280000005" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="16"/>
                             <state key="normal" title="   Add to Calender" image="calender_white">
                                 <color key="titleColor" red="0.98823529409999999" green="1" blue="0.98823529409999999" alpha="1" colorSpace="deviceRGB"/>
                             </state>
+                            <connections>
+                                <action selector="addCalenderTap:" destination="-1" eventType="touchUpInside" id="iET-SG-5PS"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NE4-wW-xKf">
-                            <rect key="frame" x="173" y="0.0" width="157" height="34"/>
+                            <rect key="frame" x="173" y="0.0" width="157" height="29"/>
                             <color key="backgroundColor" red="1" green="0.31899784370000001" blue="0.66240949280000005" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="157" id="dxH-dP-5Tt"/>
@@ -59,13 +67,13 @@
                             <state key="normal" title="   Book Tickets" image="tickets_white">
                                 <color key="titleColor" red="0.98823529409999999" green="1" blue="0.98823529409999999" alpha="1" colorSpace="deviceRGB"/>
                             </state>
+                            <connections>
+                                <action selector="bookTicketTap:" destination="-1" eventType="touchUpInside" id="QQf-RF-00g"/>
+                            </connections>
                         </button>
                     </subviews>
                     <constraints>
-                        <constraint firstItem="lss-2h-qUr" firstAttribute="leading" secondItem="m2u-6l-nON" secondAttribute="leading" id="Ogf-7Y-XWq"/>
-                        <constraint firstItem="lss-2h-qUr" firstAttribute="top" secondItem="m2u-6l-nON" secondAttribute="top" id="UH8-Bu-vtY"/>
                         <constraint firstItem="NE4-wW-xKf" firstAttribute="leading" secondItem="lss-2h-qUr" secondAttribute="trailing" constant="8" id="bX7-rk-IwM"/>
-                        <constraint firstAttribute="bottom" secondItem="lss-2h-qUr" secondAttribute="bottom" id="cFC-Rr-Jgp"/>
                     </constraints>
                     <variation key="default">
                         <mask key="constraints">
@@ -73,21 +81,33 @@
                         </mask>
                     </variation>
                 </stackView>
+                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FiI-RX-wRn">
+                    <rect key="frame" x="105" y="58" width="160" height="30"/>
+                    <color key="backgroundColor" red="1" green="0.31899784370000001" blue="0.66240949280000005" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="16"/>
+                    <state key="normal" title="   Add to Calender" image="calender_white">
+                        <color key="titleColor" red="0.98823529409999999" green="1" blue="0.98823529409999999" alpha="1" colorSpace="deviceRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="addCalenderTap:" destination="-1" eventType="touchUpInside" id="gCh-Bg-6lu"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="0.76862745098039209" green="0.94117647058823528" blue="1" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="8K5-0L-apj" secondAttribute="trailing" id="0Td-Wc-PET"/>
                 <constraint firstItem="8K5-0L-apj" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="topMargin" id="1Ae-oo-H1t"/>
-                <constraint firstAttribute="bottom" secondItem="m2u-6l-nON" secondAttribute="bottom" constant="8" id="4Z2-cq-W9i"/>
+                <constraint firstAttribute="bottom" secondItem="m2u-6l-nON" secondAttribute="bottom" constant="12" id="4Z2-cq-W9i"/>
                 <constraint firstAttribute="trailing" secondItem="m2u-6l-nON" secondAttribute="trailing" constant="8" id="AO1-ZC-CB2"/>
                 <constraint firstItem="m2u-6l-nON" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="CZH-SM-wYr"/>
+                <constraint firstItem="m2u-6l-nON" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="NDW-SI-lvI"/>
                 <constraint firstItem="74G-d4-Wx0" firstAttribute="top" secondItem="8K5-0L-apj" secondAttribute="bottom" id="WKa-WT-Fw6"/>
                 <constraint firstItem="74G-d4-Wx0" firstAttribute="trailing" secondItem="8K5-0L-apj" secondAttribute="trailing" id="Y4H-6Z-1tk"/>
                 <constraint firstItem="74G-d4-Wx0" firstAttribute="leading" secondItem="8K5-0L-apj" secondAttribute="leading" id="aek-ED-ePi"/>
                 <constraint firstItem="m2u-6l-nON" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="b1j-Qy-m26"/>
                 <constraint firstItem="74G-d4-Wx0" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottomMargin" id="djW-Va-OyI"/>
                 <constraint firstAttribute="trailing" secondItem="m2u-6l-nON" secondAttribute="trailing" constant="16" id="fXf-sO-Eih"/>
-                <constraint firstItem="m2u-6l-nON" firstAttribute="top" secondItem="74G-d4-Wx0" secondAttribute="bottom" constant="8" id="gGi-Q7-vgP"/>
+                <constraint firstItem="m2u-6l-nON" firstAttribute="top" secondItem="74G-d4-Wx0" secondAttribute="bottom" constant="9" id="gGi-Q7-vgP"/>
                 <constraint firstAttribute="bottom" secondItem="74G-d4-Wx0" secondAttribute="bottom" constant="50" id="n56-Ri-zHU"/>
                 <constraint firstItem="74G-d4-Wx0" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" id="u4B-7L-Sqz"/>
             </constraints>
@@ -99,7 +119,7 @@
                     <exclude reference="CZH-SM-wYr"/>
                 </mask>
             </variation>
-            <point key="canvasLocation" x="357" y="260"/>
+            <point key="canvasLocation" x="183" y="251"/>
         </view>
     </objects>
     <resources>

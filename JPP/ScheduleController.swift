@@ -74,7 +74,7 @@ class ScheduleController: UIViewController {
     }
     
     func scheduleComplete (json:JSON) {
-        
+		
         if(json == 1)
         {
             let alertController = UIAlertController(title: "No Connection", message:
@@ -125,6 +125,17 @@ class ScheduleController: UIViewController {
                     let topDistance = self.topSpacing+self.spacingPink+((100+self.spacingPink)*(i-1));
                     let insideTable = matches(frame: CGRectMake(8,CGFloat(topDistance),self.verticalLayout.frame.width-16,100));
                     insideTable.matchesTeams.text = json[i]["team1"].string! + " VS " + json[i]["team2"].string!
+                    insideTable.bookURL = json[i]["bookticket"].string!
+                    
+                    if(json[i]["team1id"].string != "5")
+                    {
+                        insideTable.buttonHolder.alpha = 0;
+                        
+                    }
+                    else
+                    {
+                        insideTable.addCalender2.alpha = 0;
+                    }
                     
                     insideTable.matchesDate.text = json[i]["starttimedate"].string
                     
@@ -168,6 +179,7 @@ class ScheduleController: UIViewController {
     }
     
     func BookButtonTap(sender: UIButton) {
+        GlobalBookTicketURL = "";
         self.performSegueWithIdentifier("bookWeb", sender: nil)
     }
     
