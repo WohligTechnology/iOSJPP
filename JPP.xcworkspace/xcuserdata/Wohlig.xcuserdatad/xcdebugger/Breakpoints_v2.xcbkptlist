@@ -33,5 +33,98 @@
             endingLineNumber = "5">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JPP/news.swift"
+            timestampString = "477293498.400318"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "news"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "JPP.news.newsDesc.getter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UILabel&gt;"
+                  moduleName = "JPP"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Wohlig/Documents/xcode/iOSJPP/JPP/news.swift"
+                  timestampString = "477293498.561962"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "JPP.news.newsDesc.setter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UILabel&gt;"
+                  moduleName = "JPP"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Wohlig/Documents/xcode/iOSJPP/JPP/news.swift"
+                  timestampString = "477293498.563384"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "JPP.news.init (JPP.news.Type)(frame : __C.CGRect) -&gt; JPP.news"
+                  moduleName = "JPP"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Wohlig/Documents/xcode/iOSJPP/JPP/news.swift"
+                  timestampString = "477293498.563509"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "226">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "JPP.news.init (JPP.news.Type)(coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;JPP.news&gt;"
+                  moduleName = "JPP"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Wohlig/Documents/xcode/iOSJPP/JPP/news.swift"
+                  timestampString = "477293498.563604"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "138">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "JPP.news.newsDesc.materializeForSet : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UILabel&gt;"
+                  moduleName = "JPP"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Wohlig/Documents/xcode/iOSJPP/JPP/news.swift"
+                  timestampString = "477293498.563692"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

@@ -12,6 +12,7 @@ import UIKit
     
     @IBOutlet weak var newsTitle: UILabel!
     @IBOutlet weak var newsSubTitle: UILabel!
+    @IBOutlet weak var newsDescription: UILabel!
     @IBOutlet weak var newsDesc: UILabel!
     @IBOutlet weak var newsDate: UILabel!
     @IBOutlet weak var newsImage: UIImageView!
@@ -33,6 +34,8 @@ import UIKit
         sortnewview.frame = bounds
         sortnewview.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
         self.addSubview(sortnewview);
+        
+        self.newsDescription.sizeToFit()
     }
     
     
