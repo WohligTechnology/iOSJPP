@@ -78,9 +78,9 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                 if((json["news"]["id"].string) != nil) {
                     let newsBox = news(frame: CGRectMake(8,8,self.verticalLayout.frame.width-16,230) );
                     newsBox.newsDate.text = json["news"]["timestamp"].string
-                    //newsBox.newsTitle.text = json["news"]["name"].string
-                    //newsBox.newsSubTitle.text = json["news"]["content"].string
-                    newsBox.newsTitle.text = "Welcome to wonderland. we all love jaipur pink panthers"
+                    newsBox.newsSubTitle.text = json["news"]["name"].string
+                    newsBox.newsDescription.text = json["news"]["content"].string
+                    //newsBox.newsDescription.text = "Welcome to wonderland. we all love jaipur pink panthers"
                     newsBox.newsImage.hnk_setImageFromURL(rest.getImageThumbCache(json["news"]["image"].string!))
                     let tap = UITapGestureRecognizer(target: self, action: Selector("handleTap:"))
                     tap.delegate = self
