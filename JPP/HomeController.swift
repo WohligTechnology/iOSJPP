@@ -13,6 +13,7 @@ import EventKitUI
 
 class HomeController: UIViewController, UIGestureRecognizerDelegate {
     
+    var newsController:UIViewController!
     var i = 0;
     @IBOutlet weak var scrollView: UIScrollView!
     var verticalLayout : VerticalLayout!
@@ -28,14 +29,14 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
         
         mediaUrl = HomeJSON["news"]["content"].string!
         
-        performSegueWithIdentifier("homeNewsExternal", sender: nil)
+        let newsController = storyboard!.instantiateViewControllerWithIdentifier("news") as! NewsController
+        self.newsController = UINavigationController(rootViewController: newsController)
         
+         self.slideMenuController()?.changeMainViewController(self.newsController, close: true)
         
     }
     
     func homeLoaded(json:JSON) {
-        
-        //print(json);
         if(json == 1)
         {
             let alertController = UIAlertController(title: "No Connection", message:
@@ -48,7 +49,6 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
         {   self.i++
             HomeJSON = json;
             dispatch_async(dispatch_get_main_queue(), {
-                
                 if(self.i>1)
                 {
                     self.verticalLayout.removeFromSuperview()
@@ -80,7 +80,7 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                     newsBox.newsDate.text = json["news"]["timestamp"].string
                     newsBox.newsSubTitle.text = json["news"]["name"].string
                     newsBox.newsDescription.text = json["news"]["content"].string
-                    //newsBox.newsDescription.text = "Welcome to wonderland. we all love jaipur pink panthers"
+
                     newsBox.newsImage.hnk_setImageFromURL(rest.getImageThumbCache(json["news"]["image"].string!))
                     let tap = UITapGestureRecognizer(target: self, action: Selector("handleTap:"))
                     tap.delegate = self

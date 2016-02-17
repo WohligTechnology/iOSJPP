@@ -22,6 +22,7 @@
                 <outlet property="newsDate" destination="Pg9-Mp-9Cc" id="6RF-V9-UFj"/>
                 <outlet property="newsDescription" destination="20Z-Su-t8b" id="bQ8-7w-rtt"/>
                 <outlet property="newsImage" destination="3ui-Ee-yRq" id="O5n-Jp-0b7"/>
+                <outlet property="newsReadMore" destination="5TE-2r-Ixx" id="bgv-hr-vho"/>
                 <outlet property="newsSubTitle" destination="XnZ-Hz-iSx" id="EfX-Qh-EnQ"/>
             </connections>
         </placeholder>
