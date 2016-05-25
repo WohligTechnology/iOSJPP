@@ -24,7 +24,7 @@ class GalleryController: UIViewController,UITableViewDataSource,UITableViewDeleg
         if(activeGal != 1) {
             loadingStart()
             activeGal = 1;
-            pinkBar.frame.origin.x = self.view.frame.width/2;
+            //pinkBar.frame.origin.x = self.view.frame.width/2;
             rest.getVideo(GalleryLoaded)
         }
     }
@@ -32,7 +32,7 @@ class GalleryController: UIViewController,UITableViewDataSource,UITableViewDeleg
         if(activeGal != 0) {
             loadingStart()
             activeGal = 0;
-            pinkBar.frame.origin.x = 0;
+            //pinkBar.frame.origin.x = 0;
             rest.getGallery(GalleryLoaded)
         }
         

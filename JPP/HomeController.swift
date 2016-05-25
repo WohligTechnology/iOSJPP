@@ -18,7 +18,7 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet weak var scrollView: UIScrollView!
     var verticalLayout : VerticalLayout!
     
-    let font = UIFont(name: "Oswald-Bold", size: 14.0)
+    let font = UIFont(name: "Oswald-Regular", size: 14.0)
     let blue = UIColor(red: 77/255, green: 203/255, blue: 244/255, alpha: 1)
     
     var refeshController = UIRefreshControl()
@@ -92,7 +92,7 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                 self.verticalLayout.addSubview(teamTitle);
                 
                 let PinkBox = UIView(frame:CGRectMake(8,0,self.verticalLayout.frame.width-16,300));
-                PinkBox.backgroundColor = PinkColor;
+                PinkBox.backgroundColor = UIColor(red: 77/255, green: 203/255, blue: 244/255, alpha: 1)
                 self.verticalLayout.addSubview(PinkBox);
                 
                 let tableHeader = table(frame: CGRectMake(8,8,PinkBox.frame.width-16,44));
@@ -150,6 +150,13 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                         insideTable.tableWon.font = self.font
                         insideTable.tableLost.font = self.font
                         insideTable.tablePoint.font = self.font
+                        
+                        insideTable.tableNo.textColor = PinkColor
+                        insideTable.tableTeam.textColor = PinkColor
+                        insideTable.tablePlayed.textColor = PinkColor
+                        insideTable.tableWon.textColor = PinkColor
+                        insideTable.tableLost.textColor = PinkColor
+                        insideTable.tablePoint.textColor = PinkColor
                         
                         insideTable.backgroundColor = UIColor(red: 77/255, green: 203/255, blue: 244/255, alpha: 1)
                     }

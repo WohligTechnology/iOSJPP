@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="Oswald-Regular.ttf">
@@ -15,7 +15,7 @@
             <rect key="frame" x="0.0" y="0.0" width="300" height="34"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trap2" translatesAutoresizingMaskIntoConstraints="NO" id="2n4-OX-Xry">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trapezium" translatesAutoresizingMaskIntoConstraints="NO" id="2n4-OX-Xry">
                     <rect key="frame" x="0.0" y="0.0" width="300" height="34"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="34" id="PRG-tF-ijG"/>
@@ -27,11 +27,11 @@
                         <constraint firstAttribute="height" constant="34" id="0MZ-8s-nWe"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="15"/>
-                    <color key="textColor" red="0.25490196079999999" green="0.74901960779999999" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <color key="backgroundColor" red="0.92941176891326904" green="0.29019609093666077" blue="0.60784316062927246" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.30588235294117649" green="0.792156862745098" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="8El-aH-ENo" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="9ee-mq-SuX"/>
                 <constraint firstItem="2n4-OX-Xry" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Uly-R0-jY1"/>
@@ -44,6 +44,6 @@
         </view>
     </objects>
     <resources>
-        <image name="trap2" width="444" height="98"/>
+        <image name="trapezium" width="444" height="98"/>
     </resources>
 </document>

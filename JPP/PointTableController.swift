@@ -13,7 +13,7 @@ class PointTableController: UIViewController,UITableViewDelegate,UITableViewData
     @IBOutlet weak var pointTable: UITableView!
     @IBOutlet weak var tableHeader: table!
     
-    let font = UIFont(name: "Oswald-Bold", size: 14.0)
+    let font = UIFont(name: "Oswald-Regular", size: 14.0)
     let lightBlueColor = UIColor(red: 196/255, green: 240/255, blue: 255/255, alpha: 1)
     
     override func viewDidAppear(animated: Bool) {
@@ -108,6 +108,13 @@ class PointTableController: UIViewController,UITableViewDelegate,UITableViewData
                 mediaBox.tableLost.font = font
                 mediaBox.tableWon.font = font
                 mediaBox.tablePoint.font = font
+                
+                mediaBox.tableNo.textColor = PinkColor
+                mediaBox.tableTeam.textColor = PinkColor
+                mediaBox.tablePlayed.textColor = PinkColor
+                mediaBox.tableWon.textColor = PinkColor
+                mediaBox.tableLost.textColor = PinkColor
+                mediaBox.tablePoint.textColor = PinkColor
                 
                 mediaBox.backgroundColor = UIColor(red: 77/255, green: 203/255, blue: 244/255, alpha: 1)
                 

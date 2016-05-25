@@ -22,7 +22,8 @@ class FanCornerController: UIViewController {
         
         self.verticalLayout = VerticalLayout(width: self.view.frame.width);
         self.scrollView.insertSubview(self.verticalLayout, atIndex: 0)
-        var height:CGFloat = 525;
+        //var height:CGFloat = 525
+        var height:CGFloat = 910
         print(self.view.frame.height);
         if(self.view.frame.height > height)
         {
