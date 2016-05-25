@@ -73,8 +73,7 @@ class GalleryController: UIViewController,UITableViewDataSource,UITableViewDeleg
         pinkBar = UIView(frame: CGRectMake(0,photosButton.frame.height,self.view.frame.width/2,3));
         pinkBar.backgroundColor = PinkColor;
         
-        
-        self.view.addSubview(pinkBar)
+        //self.view.addSubview(pinkBar)
         
         loadingInit()
         self.view.addSubview(loaderGlo)

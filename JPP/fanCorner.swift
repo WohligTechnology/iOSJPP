@@ -15,6 +15,7 @@ import SwiftyJSON
     @IBOutlet var lastName: UITextField!
     @IBOutlet var mobile: UITextField!
     @IBOutlet var email: UITextField!
+    @IBOutlet weak var city: UITextField!
     
     @IBAction func submitForm(sender: AnyObject) {
         
@@ -69,6 +70,8 @@ import SwiftyJSON
         self.mobile.layer.borderColor = BlueColor.CGColor
         self.email.layer.borderWidth = borderWidth
         self.email.layer.borderColor = BlueColor.CGColor
+        city.layer.borderWidth = borderWidth
+        city.layer.borderColor = BlueColor.CGColor
         
         // PADDING
         let firstPad = UIView(frame: CGRectMake(0, 0, 10, self.firstName.frame.height))
@@ -83,6 +86,9 @@ import SwiftyJSON
         let emailPad = UIView(frame: CGRectMake(0, 0, 10, self.email.frame.height))
         email.leftView = emailPad
         email.leftViewMode = UITextFieldViewMode.Always
+        let cityPad = UIView(frame: CGRectMake(0, 0, 10, self.email.frame.height))
+        city.leftView = cityPad
+        city.leftViewMode = UITextFieldViewMode.Always
         
         self.firstName.text = ""
         self.lastName.text = ""
