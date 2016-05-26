@@ -14,6 +14,7 @@ import EventKitUI
 class HomeController: UIViewController, UIGestureRecognizerDelegate {
     
     var newsController:UIViewController!
+    var galleryController: UIViewController!
     var i = 0;
     @IBOutlet weak var scrollView: UIScrollView!
     var verticalLayout : VerticalLayout!
@@ -33,6 +34,15 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
         self.newsController = UINavigationController(rootViewController: newsController)
         
          self.slideMenuController()?.changeMainViewController(self.newsController, close: true)
+        
+    }
+    
+    func jpptvTap(sender: UITapGestureRecognizer? = nil) {
+        
+        let galleryController = storyboard!.instantiateViewControllerWithIdentifier("gallery") as! GalleryController
+        self.galleryController = UINavigationController(rootViewController: galleryController)
+        
+        self.slideMenuController()?.changeMainViewController(self.galleryController, close: true)
         
     }
     
@@ -87,6 +97,13 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                     newsBox.addGestureRecognizer(tap)
                     self.verticalLayout.addSubview(newsBox);
                 }
+                
+                // JPP TV SECTION
+                let tvsection = jpptv(frame: CGRectMake(8, 8, self.verticalLayout.frame.size.width - 16, 200))
+                let tvtap = UITapGestureRecognizer(target: self, action: Selector("jpptvTap:"))
+                tvtap.delegate = self
+                tvsection.addGestureRecognizer(tvtap)
+                self.verticalLayout.addSubview(tvsection)
                 
                 let teamTitle = team2(frame: CGRectMake(8,8,self.verticalLayout.frame.width-16,34) );
                 self.verticalLayout.addSubview(teamTitle);
