@@ -301,7 +301,7 @@
                                 </constraints>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XUh-lm-ghA">
-                                <rect key="frame" x="0.0" y="50" width="320" height="518"/>
+                                <rect key="frame" x="0.0" y="28" width="320" height="540"/>
                                 <color key="backgroundColor" red="0.76862746479999999" green="0.94117647410000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="separatorColor" red="0.76862746479999999" green="0.94117647410000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
@@ -327,7 +327,7 @@
                             <constraint firstItem="WIM-NZ-aHr" firstAttribute="leading" secondItem="zmM-mV-jM2" secondAttribute="leadingMargin" constant="-20" id="8H3-aM-192"/>
                             <constraint firstItem="aZX-vC-ljM" firstAttribute="top" secondItem="MJQ-Og-fx5" secondAttribute="bottom" constant="58" id="LIK-Xk-Mj9"/>
                             <constraint firstItem="XUh-lm-ghA" firstAttribute="centerX" secondItem="WIM-NZ-aHr" secondAttribute="centerX" id="MCH-y2-1Mu"/>
-                            <constraint firstItem="XUh-lm-ghA" firstAttribute="top" secondItem="ZjW-Ur-DMn" secondAttribute="bottom" constant="30" id="QD4-R1-AZK"/>
+                            <constraint firstItem="XUh-lm-ghA" firstAttribute="top" secondItem="ZjW-Ur-DMn" secondAttribute="bottom" constant="8" id="QD4-R1-AZK"/>
                             <constraint firstAttribute="trailing" secondItem="XUh-lm-ghA" secondAttribute="trailing" id="Sv4-EF-xSI"/>
                             <constraint firstItem="WIM-NZ-aHr" firstAttribute="top" secondItem="zmM-mV-jM2" secondAttribute="topMargin" id="WDt-w6-Wxu"/>
                             <constraint firstItem="XUh-lm-ghA" firstAttribute="bottom" secondItem="Y8n-ua-bfq" secondAttribute="top" id="cXz-fZ-Ksh"/>

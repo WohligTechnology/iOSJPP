@@ -45,7 +45,7 @@ import SwiftyJSON
             alertE.addAction(UIAlertAction(title: "OK", style: .Default) { _ in })
             fanControllerGlobal.presentViewController(alertE, animated: true){}
         } else {
-            rest.sendFanCorner(firstName.text!, lastname: lastName.text!, mobile: mobile.text!, email: email.text!, location: city.text!) {
+            rest.sendFanCorner(firstName.text!, lastname: lastName.text!, mobile: mobile.text!, email: email.text!, city: city.text!) {
                 (json:JSON) -> Void in
                 print(json)
             }

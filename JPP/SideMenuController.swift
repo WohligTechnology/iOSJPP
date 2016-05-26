@@ -14,6 +14,7 @@ class SideMenuController: UIViewController, UITableViewDataSource, UITableViewDe
     var homeController:UIViewController!
     var scheduleController:UIViewController!
     var galleryController:UIViewController!
+    var jpptvController:UIViewController!
     var newsController:UIViewController!
     var knowTeamController:UIViewController!
     var merchandiseController:UIViewController!
@@ -35,6 +36,10 @@ class SideMenuController: UIViewController, UITableViewDataSource, UITableViewDe
         
         let galleryController = storyboard.instantiateViewControllerWithIdentifier("gallery") as! GalleryController
         self.galleryController = UINavigationController(rootViewController: galleryController)
+        
+        let jpptvController = storyboard.instantiateViewControllerWithIdentifier("gallery") as! GalleryController
+        self.jpptvController = UINavigationController(rootViewController: jpptvController)
+        jpptvController.activeGal = 1
         
         let newsController = storyboard.instantiateViewControllerWithIdentifier("news") as! NewsController
         self.newsController = UINavigationController(rootViewController: newsController)
@@ -103,8 +108,7 @@ class SideMenuController: UIViewController, UITableViewDataSource, UITableViewDe
             self.slideMenuController()?.changeMainViewController(self.galleryController, close: true)
         case 4:
             isGalWal = 0
-            self.slideMenuController()?.changeMainViewController(self.galleryController, close: true)
-            //GalleryController.activeGal = 1
+            self.slideMenuController()?.changeMainViewController(self.jpptvController, close: true)
         case 5:
             self.slideMenuController()?.changeMainViewController(self.newsController, close: true)
         case 6:

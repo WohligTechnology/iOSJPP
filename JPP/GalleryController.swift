@@ -68,7 +68,12 @@ class GalleryController: UIViewController,UITableViewDataSource,UITableViewDeleg
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setNavigationBarItemText("GALLERY")
+        
+        if(activeGal != 0) {
+            self.setNavigationBarItemText("JPP TV")
+        } else if(activeGal != 1) {
+            self.setNavigationBarItemText("GALLERY")
+        }
         
         pinkBar = UIView(frame: CGRectMake(0,photosButton.frame.height,self.view.frame.width/2,3));
         pinkBar.backgroundColor = PinkColor;
@@ -100,7 +105,11 @@ class GalleryController: UIViewController,UITableViewDataSource,UITableViewDeleg
         let cell = tableView.dequeueReusableCellWithIdentifier("galCell", forIndexPath: indexPath)
         if(activeGal == 0 ) {
             if((photosJson[indexPath.row]["image"].string) != nil) {
-                let mediaBox = galleryAlbum(frame: CGRectMake(8,16,self.view.frame.width-16,200));
+                var mediaBox = galleryAlbum(frame: CGRectMake(8,0,self.view.frame.width-16,200))
+                if(photosJson[0]) {
+                    mediaBox = galleryAlbum(frame: CGRectMake(8,16,self.view.frame.width-16,200))
+                }
+                //print("**************************************** \(photosJson[indexPath.row]) ******************************************")
                 mediaBox.galleryTitle.text = photosJson[indexPath.row]["name"].stringValue
                 mediaBox.galleryBanner.hnk_setImageFromURL(rest.getImageCache(photosJson[indexPath.row]["image"].string!))
                 cell.addSubview(mediaBox)
@@ -108,9 +117,14 @@ class GalleryController: UIViewController,UITableViewDataSource,UITableViewDeleg
         }
         if(activeGal == 1 ) {
             if((photosJson[indexPath.row]["image"].string) != nil) {
-                let mediaBox = galleryAlbum(frame: CGRectMake(8,16,self.view.frame.width-16,200));
+                var mediaBox = galleryAlbum(frame: CGRectMake(8,0,self.view.frame.width-16,200))
+                if(photosJson[0]) {
+                    mediaBox = galleryAlbum(frame: CGRectMake(8,16,self.view.frame.width-16,200))
+                }
+                rest.getVideo(GalleryLoaded)
                 mediaBox.galleryTitle.text = photosJson[indexPath.row]["name"].stringValue
                 let image = photosJson[indexPath.row]["url"].stringValue;
+                //print("ahjvashjba ajksbajksba asjkbdajksbd \(image)")
                 mediaBox.galleryBanner.hnk_setImageFromURL(rest.getImageExternalCacheURL(rest.getYoutubeImage(image)) )
                 cell.addSubview(mediaBox)
             }
@@ -128,7 +142,8 @@ class GalleryController: UIViewController,UITableViewDataSource,UITableViewDeleg
         }
         if(activeGal == 1)
         {
-            videoIDGlo = photosJson[indexPath.row]["url"].string!
+            rest.getVideo(GalleryLoaded)
+            //videoIDGlo = photosJson[indexPath.row]["url"].string!
             performSegueWithIdentifier("videoOpen", sender: nil)
         }
     }
