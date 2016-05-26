@@ -12,7 +12,7 @@ import Haneke
 
 class GalleryController: UIViewController,UITableViewDataSource,UITableViewDelegate {
     
-    var activeGal = 0;
+    var activeGal = 0
     
     @IBOutlet weak var photoTableView: UITableView!
     @IBOutlet weak var photosButton: UIButton!

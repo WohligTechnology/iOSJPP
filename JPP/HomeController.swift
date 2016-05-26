@@ -15,6 +15,7 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
     
     var newsController:UIViewController!
     var galleryController: UIViewController!
+    var fancornerController: UIViewController!
     var i = 0;
     @IBOutlet weak var scrollView: UIScrollView!
     var verticalLayout : VerticalLayout!
@@ -38,14 +39,18 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     func jpptvTap(sender: UITapGestureRecognizer? = nil) {
-        
         let galleryController = storyboard!.instantiateViewControllerWithIdentifier("gallery") as! GalleryController
         self.galleryController = UINavigationController(rootViewController: galleryController)
-        
         self.slideMenuController()?.changeMainViewController(self.galleryController, close: true)
-        
+        galleryController.activeGal = 1
     }
     
+    func signupTap(sender: UITapGestureRecognizer? = nil) {
+        let fancornerController = storyboard!.instantiateViewControllerWithIdentifier("fanCorner") as! FanCornerController
+        self.fancornerController = UINavigationController(rootViewController: fancornerController)
+        self.slideMenuController()?.changeMainViewController(self.fancornerController, close: true)
+    }
+     
     func homeLoaded(json:JSON) {
         if(json == 1)
         {
@@ -97,6 +102,13 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                     newsBox.addGestureRecognizer(tap)
                     self.verticalLayout.addSubview(newsBox);
                 }
+                
+                // SIGN UP SECTION
+                let signupsection = signupSection(frame: CGRectMake(8, 8, self.verticalLayout.frame.size.width - 16, 80))
+                let sutap = UITapGestureRecognizer(target: self, action: Selector("signupTap:"))
+                sutap.delegate = self
+                signupsection.signupButton.addGestureRecognizer(sutap)
+                self.verticalLayout.addSubview(signupsection)
                 
                 // JPP TV SECTION
                 let tvsection = jpptv(frame: CGRectMake(8, 8, self.verticalLayout.frame.size.width - 16, 200))

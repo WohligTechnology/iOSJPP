@@ -104,6 +104,7 @@ class SideMenuController: UIViewController, UITableViewDataSource, UITableViewDe
         case 4:
             isGalWal = 0
             self.slideMenuController()?.changeMainViewController(self.galleryController, close: true)
+            //GalleryController.activeGal = 1
         case 5:
             self.slideMenuController()?.changeMainViewController(self.newsController, close: true)
         case 6:
