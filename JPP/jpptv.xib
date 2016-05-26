@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="392" height="221"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jpptv_section" translatesAutoresizingMaskIntoConstraints="NO" id="A0K-v6-ho0">
+                    <rect key="frame" x="0.0" y="0.0" width="392" height="221"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="A0K-v6-ho0" secondAttribute="bottom" id="004-Jf-OMx"/>
+                <constraint firstAttribute="trailing" secondItem="A0K-v6-ho0" secondAttribute="trailing" id="SZm-S8-310"/>
+                <constraint firstItem="A0K-v6-ho0" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="YyB-Tn-w2E"/>
+                <constraint firstItem="A0K-v6-ho0" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="gPU-lK-UC7"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="414" y="200"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="jpptv_section" width="1178" height="663"/>
+    </resources>
+</document>
