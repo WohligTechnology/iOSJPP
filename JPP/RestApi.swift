@@ -154,9 +154,9 @@ public class RestApi {
         }
     }
     
-    public func sendFanCorner(firstname:String, lastname:String, mobile:String, email:String, city:String, completion: ( (JSON) -> Void) )  {
+    public func sendFanCorner(firstname:String, lastname:String, mobile:String, email:String, city:String, favouriteplayer:String, completion: ( (JSON) -> Void) )  {
         var json = JSON(1);
-        let params = ["firstname": firstname, "lastname": lastname, "mobile": mobile, "email": email, "city": city]
+        let params = ["firstname": firstname, "lastname": lastname, "mobile": mobile, "email": email, "city": city, "favouriteplayer": favouriteplayer]
         //print(params)
         do {
             let opt = try HTTP.POST(apiURL + "contactus", parameters: params, requestSerializer: JSONParameterSerializer())

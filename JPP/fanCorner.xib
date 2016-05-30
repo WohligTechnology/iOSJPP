@@ -211,6 +211,9 @@
                         <constraint firstAttribute="width" constant="15" id="3Li-GK-FTr"/>
                         <constraint firstAttribute="height" constant="15" id="rOn-cY-vyA"/>
                     </constraints>
+                    <connections>
+                        <action selector="checkbutton1:" destination="-1" eventType="touchUpInside" id="VzN-sG-Sm0"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anil Patil" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yAG-Bc-T8z">
                     <rect key="frame" x="41" y="409" width="130" height="20"/>

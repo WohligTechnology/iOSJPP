@@ -36,6 +36,8 @@ import SwiftyJSON
     @IBOutlet weak var button16: UIButton!
     @IBOutlet weak var button17: UIButton!
     
+    var favouriteplayer = ""
+    
     var borderColor = UIColor(red: 0, green: 176/255, blue: 174/255, alpha: 1)
     
     @IBAction func submitForm(sender: AnyObject) {
@@ -45,7 +47,7 @@ import SwiftyJSON
             alertE.addAction(UIAlertAction(title: "OK", style: .Default) { _ in })
             fanControllerGlobal.presentViewController(alertE, animated: true){}
         } else {
-            rest.sendFanCorner(firstName.text!, lastname: lastName.text!, mobile: mobile.text!, email: email.text!, city: city.text!) {
+            rest.sendFanCorner(firstName.text!, lastname: lastName.text!, mobile: mobile.text!, email: email.text!, city: city.text!, favouriteplayer: favouriteplayer) {
                 (json:JSON) -> Void in
                 print(json)
             }
@@ -154,6 +156,19 @@ import SwiftyJSON
         self.email.text = ""
         
     }
+    
+    var checkb1 = 0
+    
+    @IBAction func checkbutton1(sender: AnyObject) {
+        if (checkb1 == 0) {
+            button1.backgroundColor = UIColor.whiteColor()
+            checkb1 = 1
+        } else {
+            button1.backgroundColor = borderColor
+            checkb1 = 0
+        }
+    }
+    
 }
 
 class TextField: UITextField {
