@@ -70,23 +70,38 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                 }
                 self.verticalLayout = VerticalLayout(width: self.view.frame.width);
                 self.scrollView.insertSubview(self.verticalLayout, atIndex: 0)
-
+                print(json["latestmatch"])
                 
-                if((json["latestupdate"]["team1id"].string) != nil) {
+//                if((json["latestupdate"]["team1id"].string) != nil) {
+//                    
+//                    let updates = schedule(frame: CGRectMake(8,8,self.verticalLayout.frame.width-16,300));
+//                    self.verticalLayout.addSubview(updates);
+//                    updates.addToCalendar.hidden = true;
+//                    
+//                    updates.team1Image.image = UIImage(named: "t" + json["latestupdate"]["team1id"].string! + ".png")
+//                    updates.team2Image.image = UIImage(named: "t" + json["latestupdate"]["team2id"].string! + ".png")
+//                    updates.team1Score.text = json["latestupdate"]["score1"].string
+//                    updates.team2Score.text = json["latestupdate"]["score2"].string
+//                    updates.matchTime.text = json["latestupdate"]["matchtime"].string
+//                    updates.matchDate.text = json["latestupdate"]["starttimedate"].string
+//                    updates.matchStadium.text = json["latestupdate"]["stadium"].string
+//                    
+//                    updates.trapLabel.text = "LATEST UPDATE"
+//                    
+//                }
+                
+                if((json["latestmatch"]["team1id"].string) != nil) {
                     
-                    let updates = schedule(frame: CGRectMake(8,8,self.verticalLayout.frame.width-16,300));
-                    self.verticalLayout.addSubview(updates);
-                    updates.addToCalendar.hidden = true;
+                    let updates = seasonOpener(frame: CGRectMake(8,8,self.verticalLayout.frame.width-16,400))
+                    self.verticalLayout.addSubview(updates)
+                    //updates.addToCalender.hidden = true
                     
-                    updates.team1Image.image = UIImage(named: "t" + json["latestupdate"]["team1id"].string! + ".png")
-                    updates.team2Image.image = UIImage(named: "t" + json["latestupdate"]["team2id"].string! + ".png")
-                    updates.team1Score.text = json["latestupdate"]["score1"].string
-                    updates.team2Score.text = json["latestupdate"]["score2"].string
-                    updates.matchTime.text = json["latestupdate"]["matchtime"].string
-                    updates.matchDate.text = json["latestupdate"]["starttimedate"].string
-                    updates.matchStadium.text = json["latestupdate"]["stadium"].string
+                    updates.team1Image.image = UIImage(named: "t" + json["latestmatch"]["team1id"].string! + ".png")
+                    updates.team2Image.image = UIImage(named: "t" + json["latestmatch"]["team2id"].string! + ".png")
+                    updates.matchTime.text = json["latestmatch"]["starttimedate"].string
+                    updates.matchVenue.text = json["latestmatch"]["stadium"].string
                     
-                    updates.trapLabel.text = "LATEST UPDATE"
+                    updates.trapLabel.text = "SEASON 4 OPENER"
                     
                 }
                 

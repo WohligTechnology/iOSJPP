@@ -10,6 +10,19 @@ import UIKit
 
 @IBDesignable class seasonOpener: UIView {
     
+    @IBOutlet weak var trapLabel: UILabel!
+    @IBOutlet weak var team1Image: UIImageView!
+    @IBOutlet weak var team2Image: UIImageView!
+    @IBOutlet weak var matchVenue: UILabel!
+    @IBOutlet weak var matchTime: UILabel!
+    @IBOutlet weak var remainingMonths: UILabel!
+    @IBOutlet weak var remainingDays: UILabel!
+    @IBOutlet weak var remainingHours: UILabel!
+    @IBOutlet weak var remainingMins: UILabel!
+    
+    @IBOutlet weak var bookTickets: UIButton!
+    @IBOutlet weak var addToCalender: UIButton!
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         loadViewFromNib ()
