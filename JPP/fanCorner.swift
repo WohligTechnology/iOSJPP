@@ -36,11 +36,20 @@ import SwiftyJSON
     @IBOutlet weak var button16: UIButton!
     @IBOutlet weak var button17: UIButton!
     
+    var checkb1 = 0, checkb2 = 0, checkb3 = 0, checkb4 = 0,
+    checkb5 = 0, checkb6 = 0, checkb7 = 0, checkb8 = 0,
+    checkb9 = 0, checkb10 = 0, checkb11 = 0, checkb12 = 0,
+    checkb13 = 0, checkb14 = 0, checkb15 = 0, checkb16 = 0, checkb17 = 0
+    
     var favouriteplayer = ""
     
     var borderColor = UIColor(red: 0, green: 176/255, blue: 174/255, alpha: 1)
     
     @IBAction func submitForm(sender: AnyObject) {
+        
+        favouriteplayer = String(favouriteplayer.characters.dropLast())
+        favouriteplayer = favouriteplayer.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+        print("submit \(favouriteplayer)")
         
         if(firstName.text == "" || lastName.text == "" || mobile.text == "" || email.text == "" || city.text == "") {
             let alertE = UIAlertController(title: "Please enter all details", message:"", preferredStyle: .Alert)
@@ -62,7 +71,247 @@ import SwiftyJSON
         self.mobile.text = ""
         self.email.text = ""
         self.city.text = ""
+        favouriteplayer = ""
         
+        button1.backgroundColor = UIColor.whiteColor(); checkb1 = 0
+        button2.backgroundColor = UIColor.whiteColor(); checkb2 = 0
+        button3.backgroundColor = UIColor.whiteColor(); checkb3 = 0
+        button4.backgroundColor = UIColor.whiteColor(); checkb4 = 0
+        button5.backgroundColor = UIColor.whiteColor(); checkb5 = 0
+        button6.backgroundColor = UIColor.whiteColor(); checkb6 = 0
+        button7.backgroundColor = UIColor.whiteColor(); checkb7 = 0
+        button8.backgroundColor = UIColor.whiteColor(); checkb8 = 0
+        button9.backgroundColor = UIColor.whiteColor(); checkb9 = 0
+        button10.backgroundColor = UIColor.whiteColor(); checkb10 = 0
+        button11.backgroundColor = UIColor.whiteColor(); checkb11 = 0
+        button12.backgroundColor = UIColor.whiteColor(); checkb12 = 0
+        button13.backgroundColor = UIColor.whiteColor(); checkb13 = 0
+        button14.backgroundColor = UIColor.whiteColor(); checkb14 = 0
+        button15.backgroundColor = UIColor.whiteColor(); checkb15 = 0
+        button16.backgroundColor = UIColor.whiteColor(); checkb16 = 0
+        button17.backgroundColor = UIColor.whiteColor(); checkb17 = 0
+        
+    }
+    
+    @IBAction func checkbutton1(sender: AnyObject) { // Anil Patil
+        if (checkb1 == 0) {
+            button1.backgroundColor = borderColor
+            favouriteplayer += " Anil Patil ,"
+            print("checkbox: \(favouriteplayer)")
+            checkb1 = 1
+        } else {
+            button1.backgroundColor = UIColor.whiteColor()
+            favouriteplayer = favouriteplayer.stringByReplacingOccurrencesOfString(" Anil Patil ,", withString: "")
+            checkb1 = 0
+        }
+    }
+    
+    @IBAction func checkbutton2(sender: AnyObject) {
+        if (checkb2 == 0) {
+            button2.backgroundColor = borderColor
+            favouriteplayer += " C. Arun ,"
+            print("checkbox: \(favouriteplayer)")
+            checkb2 = 1
+        } else {
+            button2.backgroundColor = UIColor.whiteColor()
+            favouriteplayer = favouriteplayer.stringByReplacingOccurrencesOfString(" C. Arun ,", withString: "")
+            checkb2 = 0
+        }
+    }
+    
+    @IBAction func checkbutton3(sender: AnyObject) {
+        if (checkb3 == 0) {
+            button3.backgroundColor = borderColor
+            favouriteplayer += " Gangadhari Mallesh ,"
+            print("checkbox: \(favouriteplayer)")
+            checkb3 = 1
+        } else {
+            button3.backgroundColor = UIColor.whiteColor()
+            favouriteplayer = favouriteplayer.stringByReplacingOccurrencesOfString(" Gangadhari Mallesh ,", withString: "")
+            checkb3 = 0
+        }
+    }
+    
+    @IBAction func checkbutton4(sender: AnyObject) {
+        if (checkb4 == 0) {
+            button4.backgroundColor = borderColor
+            favouriteplayer += " Jagdeesha K.K ,"
+            print("checkbox: \(favouriteplayer)")
+            checkb4 = 1
+        } else {
+            button4.backgroundColor = UIColor.whiteColor()
+            favouriteplayer = favouriteplayer.stringByReplacingOccurrencesOfString(" Jagdeesha K.K ,", withString: "")
+            checkb4 = 0
+        }
+    }
+    
+    @IBAction func checkbutton5(sender: AnyObject) {
+        if (checkb5 == 0) {
+            button5.backgroundColor = borderColor
+            favouriteplayer += " Jasvir Singh ,"
+            print("checkbox: \(favouriteplayer)")
+            checkb5 = 1
+        } else {
+            button5.backgroundColor = UIColor.whiteColor()
+            favouriteplayer = favouriteplayer.stringByReplacingOccurrencesOfString(" Jasvir Singh ,", withString: "")
+            checkb5 = 0
+        }
+    }
+    
+    @IBAction func checkbutton6(sender: AnyObject) {
+        if (checkb6 == 0) {
+            button6.backgroundColor = borderColor
+            favouriteplayer += " Kuldeep Singh ,"
+            print("checkbox: \(favouriteplayer)")
+            checkb6 = 1
+        } else {
+            button6.backgroundColor = UIColor.whiteColor()
+            favouriteplayer = favouriteplayer.stringByReplacingOccurrencesOfString(" Kuldeep Singh ,", withString: "")
+            checkb6 = 0
+        }
+    }
+    
+    @IBAction func checkbutton7(sender: AnyObject) {
+        if (checkb7 == 0) {
+            button7.backgroundColor = borderColor
+            favouriteplayer += " Mohammad Maghsodlou ,"
+            print("checkbox: \(favouriteplayer)")
+            checkb7 = 1
+        } else {
+            button7.backgroundColor = UIColor.whiteColor()
+            favouriteplayer = favouriteplayer.stringByReplacingOccurrencesOfString(" Mohammad Maghsodlou ,", withString: "")
+            checkb7 = 0
+        }
+    }
+    
+    @IBAction func checkbutton8(sender: AnyObject) {
+        if (checkb8 == 0) {
+            button8.backgroundColor = borderColor
+            favouriteplayer += " Navneet Gautham ,"
+            print("checkbox: \(favouriteplayer)")
+            checkb8 = 1
+        } else {
+            button8.backgroundColor = UIColor.whiteColor()
+            favouriteplayer = favouriteplayer.stringByReplacingOccurrencesOfString(" Navneet Gautham ,", withString: "")
+            checkb8 = 0
+        }
+    }
+    
+    @IBAction func checkbutton9(sender: AnyObject) {
+        if (checkb9 == 0) {
+            button9.backgroundColor = borderColor
+            favouriteplayer += " Rajesh Narwal ,"
+            print("checkbox: \(favouriteplayer)")
+            checkb9 = 1
+        } else {
+            button9.backgroundColor = UIColor.whiteColor()
+            favouriteplayer = favouriteplayer.stringByReplacingOccurrencesOfString(" Rajesh Narwal ,", withString: "")
+            checkb9 = 0
+        }
+    }
+    
+    @IBAction func checkbutton10(sender: AnyObject) {
+        if (checkb10 == 0) {
+            button10.backgroundColor = borderColor
+            favouriteplayer += " Raju Lal Choudhary ,"
+            print("checkbox: \(favouriteplayer)")
+            checkb10 = 1
+        } else {
+            button10.backgroundColor = UIColor.whiteColor()
+            favouriteplayer = favouriteplayer.stringByReplacingOccurrencesOfString(" Raju Lal Choudhary ,", withString: "")
+            checkb10 = 0
+        }
+    }
+    
+    @IBAction func checkbutton11(sender: AnyObject) {
+        if (checkb11 == 0) {
+            button11.backgroundColor = borderColor
+            favouriteplayer += " Ran Singh ,"
+            print("checkbox: \(favouriteplayer)")
+            checkb11 = 1
+        } else {
+            button11.backgroundColor = UIColor.whiteColor()
+            favouriteplayer = favouriteplayer.stringByReplacingOccurrencesOfString(" Ran Singh ,", withString: "")
+            checkb11 = 0
+        }
+    }
+    
+    @IBAction func checkbutton12(sender: AnyObject) {
+        if (checkb12 == 0) {
+            button12.backgroundColor = borderColor
+            favouriteplayer += " Rohit Kumar Prajapati ,"
+            print("checkbox: \(favouriteplayer)")
+            checkb12 = 1
+        } else {
+            button12.backgroundColor = UIColor.whiteColor()
+            favouriteplayer = favouriteplayer.stringByReplacingOccurrencesOfString(" Rohit Kumar Prajapati ,", withString: "")
+            checkb12 = 0
+        }
+    }
+    
+    @IBAction func checkbutton13(sender: AnyObject) {
+        if (checkb13 == 0) {
+            button13.backgroundColor = borderColor
+            favouriteplayer += " Rohit Rana ,"
+            print("checkbox: \(favouriteplayer)")
+            checkb13 = 1
+        } else {
+            button13.backgroundColor = UIColor.whiteColor()
+            favouriteplayer = favouriteplayer.stringByReplacingOccurrencesOfString(" Rohit Rana ,", withString: "")
+            checkb13 = 0
+        }
+    }
+    
+    @IBAction func checkbutton14(sender: AnyObject) {
+        if (checkb14 == 0) {
+            button14.backgroundColor = borderColor
+            favouriteplayer += " Sanjay Shrestha ,"
+            print("checkbox: \(favouriteplayer)")
+            checkb14 = 1
+        } else {
+            button14.backgroundColor = UIColor.whiteColor()
+            favouriteplayer = favouriteplayer.stringByReplacingOccurrencesOfString(" Sanjay Shrestha ,", withString: "")
+            checkb14 = 0
+        }
+    }
+    
+    @IBAction func checkbutton15(sender: AnyObject) {
+        if (checkb15 == 0) {
+            button15.backgroundColor = borderColor
+            favouriteplayer += " Samarjeet Singh ,"
+            print("checkbox: \(favouriteplayer)")
+            checkb15 = 1
+        } else {
+            button15.backgroundColor = UIColor.whiteColor()
+            favouriteplayer = favouriteplayer.stringByReplacingOccurrencesOfString(" Samarjeet Singh ,", withString: "")
+            checkb15 = 0
+        }
+    }
+    
+    @IBAction func checkbutton16(sender: AnyObject) {
+        if (checkb16 == 0) {
+            button16.backgroundColor = borderColor
+            favouriteplayer += " Sonu Narwal ,"
+            print("checkbox: \(favouriteplayer)")
+            checkb16 = 1
+        } else {
+            button16.backgroundColor = UIColor.whiteColor()
+            favouriteplayer = favouriteplayer.stringByReplacingOccurrencesOfString(" Sonu Narwal ,", withString: "")
+            checkb16 = 0
+        }
+    }
+    
+    @IBAction func checkbutton17(sender: AnyObject) {
+        if (checkb17 == 0) {
+            button17.backgroundColor = borderColor
+            favouriteplayer += " Wei Yang Tsai ,"
+            print("checkbox: \(favouriteplayer)")
+            checkb17 = 1
+        } else {
+            button17.backgroundColor = UIColor.whiteColor()
+            favouriteplayer = favouriteplayer.stringByReplacingOccurrencesOfString(" Wei Yang Tsai ,", withString: "")
+            checkb17 = 0
+        }
     }
     
     override init(frame: CGRect) {
@@ -155,18 +404,6 @@ import SwiftyJSON
         self.mobile.text = ""
         self.email.text = ""
         
-    }
-    
-    var checkb1 = 0
-    
-    @IBAction func checkbutton1(sender: AnyObject) {
-        if (checkb1 == 0) {
-            button1.backgroundColor = UIColor.whiteColor()
-            checkb1 = 1
-        } else {
-            button1.backgroundColor = borderColor
-            checkb1 = 0
-        }
     }
     
 }

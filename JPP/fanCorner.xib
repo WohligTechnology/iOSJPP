@@ -212,7 +212,7 @@
                         <constraint firstAttribute="height" constant="15" id="rOn-cY-vyA"/>
                     </constraints>
                     <connections>
-                        <action selector="checkbutton1:" destination="-1" eventType="touchUpInside" id="VzN-sG-Sm0"/>
+                        <action selector="checkbutton1:" destination="-1" eventType="touchUpInside" id="Aqr-jx-cFP"/>
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anil Patil" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yAG-Bc-T8z">
@@ -231,6 +231,9 @@
                         <constraint firstAttribute="height" constant="15" id="E1u-IC-g1L"/>
                         <constraint firstAttribute="width" constant="15" id="SMu-4w-5ty"/>
                     </constraints>
+                    <connections>
+                        <action selector="checkbutton2:" destination="-1" eventType="touchUpInside" id="JpK-PO-ohG"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C. Arun" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CuH-UJ-J9n">
                     <rect key="frame" x="41" y="444" width="130" height="20"/>
@@ -248,6 +251,9 @@
                         <constraint firstAttribute="height" constant="15" id="2Eq-A5-etc"/>
                         <constraint firstAttribute="width" constant="15" id="EP0-0b-L8p"/>
                     </constraints>
+                    <connections>
+                        <action selector="checkbutton3:" destination="-1" eventType="touchUpInside" id="Izl-LX-hiL"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gangadhari Mallesh" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="srA-qZ-H5c">
                     <rect key="frame" x="41" y="477" width="130" height="20"/>
@@ -265,6 +271,9 @@
                         <constraint firstAttribute="height" constant="15" id="PDp-Ki-Of0"/>
                         <constraint firstAttribute="width" constant="15" id="f5l-8h-p9D"/>
                     </constraints>
+                    <connections>
+                        <action selector="checkbutton4:" destination="-1" eventType="touchUpInside" id="FjG-qY-U0B"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jagdeesha K.K" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9a4-Dd-QDL">
                     <rect key="frame" x="41" y="513" width="130" height="20"/>
@@ -282,6 +291,9 @@
                         <constraint firstAttribute="height" constant="15" id="RiD-0z-73J"/>
                         <constraint firstAttribute="width" constant="15" id="wBa-HS-SQ4"/>
                     </constraints>
+                    <connections>
+                        <action selector="checkbutton5:" destination="-1" eventType="touchUpInside" id="FgZ-27-hba"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jasvir Singh" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Au1-l2-r7t">
                     <rect key="frame" x="41" y="549" width="130" height="20"/>
@@ -299,6 +311,9 @@
                         <constraint firstAttribute="height" constant="15" id="BZj-8P-qRZ"/>
                         <constraint firstAttribute="width" constant="15" id="JaL-1e-wUi"/>
                     </constraints>
+                    <connections>
+                        <action selector="checkbutton6:" destination="-1" eventType="touchUpInside" id="sgd-KC-vVb"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kuldeep Singh" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fiK-gm-dgy">
                     <rect key="frame" x="41" y="584" width="130" height="20"/>
@@ -316,6 +331,9 @@
                         <constraint firstAttribute="height" constant="15" id="jZO-UF-g5D"/>
                         <constraint firstAttribute="width" constant="15" id="zct-zG-Akj"/>
                     </constraints>
+                    <connections>
+                        <action selector="checkbutton7:" destination="-1" eventType="touchUpInside" id="tEL-t9-ewc"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mohammad Maghsodlou" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vtx-v3-Bd6">
                     <rect key="frame" x="41" y="619" width="130" height="20"/>
@@ -333,6 +351,9 @@
                         <constraint firstAttribute="width" constant="15" id="Naq-8c-hCj"/>
                         <constraint firstAttribute="height" constant="15" id="ok1-AG-1OC"/>
                     </constraints>
+                    <connections>
+                        <action selector="checkbutton8:" destination="-1" eventType="touchUpInside" id="0hb-4f-F5W"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Navneet Gautham" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PUz-N2-g9o">
                     <rect key="frame" x="41" y="654" width="130" height="20"/>
@@ -350,6 +371,9 @@
                         <constraint firstAttribute="width" constant="15" id="Xs9-KE-Hh8"/>
                         <constraint firstAttribute="height" constant="15" id="wrp-IG-ueu"/>
                     </constraints>
+                    <connections>
+                        <action selector="checkbutton9:" destination="-1" eventType="touchUpInside" id="v6b-SM-7Ns"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rajesh Narwal" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ns1-o8-Kh2">
                     <rect key="frame" x="41" y="689" width="130" height="20"/>
@@ -367,6 +391,9 @@
                         <constraint firstAttribute="width" constant="15" id="Uf6-xt-VD9"/>
                         <constraint firstAttribute="height" constant="15" id="s9l-BI-cDA"/>
                     </constraints>
+                    <connections>
+                        <action selector="checkbutton10:" destination="-1" eventType="touchUpInside" id="w3W-0C-fGH"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Raju Lal Choudhary" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O7s-aK-z08">
                     <rect key="frame" x="216" y="409" width="150" height="20"/>
@@ -384,6 +411,9 @@
                         <constraint firstAttribute="width" constant="15" id="J40-qm-qNZ"/>
                         <constraint firstAttribute="height" constant="15" id="ifH-ZY-wR4"/>
                     </constraints>
+                    <connections>
+                        <action selector="checkbutton11:" destination="-1" eventType="touchUpInside" id="5Ep-Du-jab"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ran Singh" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ff-DP-iMi">
                     <rect key="frame" x="216" y="444" width="150" height="20"/>
@@ -401,6 +431,9 @@
                         <constraint firstAttribute="width" constant="15" id="9W6-tP-RmR"/>
                         <constraint firstAttribute="height" constant="15" id="i8t-sD-o9t"/>
                     </constraints>
+                    <connections>
+                        <action selector="checkbutton12:" destination="-1" eventType="touchUpInside" id="cTJ-aO-d64"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rohit Kumar Prajapati" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WW5-pS-8jy">
                     <rect key="frame" x="216" y="479" width="150" height="20"/>
@@ -418,6 +451,9 @@
                         <constraint firstAttribute="width" constant="15" id="JTD-R4-9C3"/>
                         <constraint firstAttribute="height" constant="15" id="QYO-po-qri"/>
                     </constraints>
+                    <connections>
+                        <action selector="checkbutton13:" destination="-1" eventType="touchUpInside" id="hMV-Hd-6kJ"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rohit Rana" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bhv-qY-rAI">
                     <rect key="frame" x="216" y="514" width="150" height="20"/>
@@ -435,6 +471,9 @@
                         <constraint firstAttribute="height" constant="15" id="0sM-Nh-4LK"/>
                         <constraint firstAttribute="width" constant="15" id="Bsg-JR-JQR"/>
                     </constraints>
+                    <connections>
+                        <action selector="checkbutton14:" destination="-1" eventType="touchUpInside" id="usk-ud-liy"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sanjay Shrestha" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="veB-1V-ixc">
                     <rect key="frame" x="216" y="549" width="150" height="20"/>
@@ -452,6 +491,9 @@
                         <constraint firstAttribute="width" constant="15" id="duK-DA-P58"/>
                         <constraint firstAttribute="height" constant="15" id="tSU-gs-ecp"/>
                     </constraints>
+                    <connections>
+                        <action selector="checkbutton15:" destination="-1" eventType="touchUpInside" id="4I1-bT-A3e"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Samarjeet Singh" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fwY-yy-Ry7">
                     <rect key="frame" x="216" y="584" width="150" height="20"/>
@@ -469,6 +511,9 @@
                         <constraint firstAttribute="height" constant="15" id="1cH-af-fb5"/>
                         <constraint firstAttribute="width" constant="15" id="hC2-Yt-PXQ"/>
                     </constraints>
+                    <connections>
+                        <action selector="checkbutton16:" destination="-1" eventType="touchUpInside" id="On5-bv-eZq"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sonu Narwal" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PED-LJ-X7Z">
                     <rect key="frame" x="216" y="619" width="150" height="20"/>
@@ -486,6 +531,9 @@
                         <constraint firstAttribute="width" constant="15" id="3ug-3b-aVJ"/>
                         <constraint firstAttribute="height" constant="15" id="ctq-y3-Ur6"/>
                     </constraints>
+                    <connections>
+                        <action selector="checkbutton17:" destination="-1" eventType="touchUpInside" id="EIu-Qe-DHx"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wei Yang Tsai" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vZ3-KD-Fsc">
                     <rect key="frame" x="216" y="654" width="150" height="20"/>
