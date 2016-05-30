@@ -39,6 +39,4 @@ import UIKit
         self.addSubview(sortnewview);
     }
     
-
-
 }

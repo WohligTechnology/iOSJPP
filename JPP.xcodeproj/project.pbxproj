@@ -87,6 +87,7 @@
 		3A3357521CF6E54200F074ED /* signupSection.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A3357511CF6E54200F074ED /* signupSection.xib */; };
 		3A3357541CF6E75700F074ED /* signupSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3357531CF6E75700F074ED /* signupSection.swift */; };
 		3A57CEDB1CFC454E004D612C /* seasonOpener.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A57CEDA1CFC454E004D612C /* seasonOpener.xib */; };
+		3A57CEDD1CFC5808004D612C /* seasonOpener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A57CEDC1CFC5808004D612C /* seasonOpener.swift */; };
 		3CD47F20EEDEDD9528BA0932 /* Pods_JPP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD4C274A56DABBBF9AF41245 /* Pods_JPP.framework */; };
 		7809A3C41C64BFB900562E6A /* fanCorner.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7809A3C31C64BFB900562E6A /* fanCorner.xib */; };
 		7809A3C61C64BFCB00562E6A /* fanCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7809A3C51C64BFCB00562E6A /* fanCorner.swift */; };
@@ -196,6 +197,7 @@
 		3A3357511CF6E54200F074ED /* signupSection.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = signupSection.xib; sourceTree = "<group>"; };
 		3A3357531CF6E75700F074ED /* signupSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = signupSection.swift; sourceTree = "<group>"; };
 		3A57CEDA1CFC454E004D612C /* seasonOpener.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = seasonOpener.xib; sourceTree = "<group>"; };
+		3A57CEDC1CFC5808004D612C /* seasonOpener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = seasonOpener.swift; sourceTree = "<group>"; };
 		7809A3C31C64BFB900562E6A /* fanCorner.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = fanCorner.xib; sourceTree = "<group>"; };
 		7809A3C51C64BFCB00562E6A /* fanCorner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fanCorner.swift; sourceTree = "<group>"; };
 		78238FE11C57A77E0067E7D5 /* about.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = about.swift; sourceTree = "<group>"; };
@@ -527,6 +529,7 @@
 			isa = PBXGroup;
 			children = (
 				3A57CEDA1CFC454E004D612C /* seasonOpener.xib */,
+				3A57CEDC1CFC5808004D612C /* seasonOpener.swift */,
 			);
 			name = seasonOpener;
 			sourceTree = "<group>";
@@ -826,6 +829,7 @@
 				36F2CEB31C57720600D0D2D6 /* WallpaperInsideController.swift in Sources */,
 				362A175D1C58AA6500B11F22 /* team2.swift in Sources */,
 				36F9C1831C5616B1003D02AB /* Layout.swift in Sources */,
+				3A57CEDD1CFC5808004D612C /* seasonOpener.swift in Sources */,
 				36B789791C5A70380098C426 /* VideoPlayController.swift in Sources */,
 				36F9C1731C55F948003D02AB /* SlideMenuController.swift in Sources */,
 				36F2CEB71C57722B00D0D2D6 /* AboutController.swift in Sources */,
