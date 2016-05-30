@@ -75,8 +75,8 @@ class SideMenuController: UIViewController, UITableViewDataSource, UITableViewDe
         return 1
     }
     
-    var data = ["HOME", "SEASON 4 SCHEDULE", "FIXTURES", "GALLERY", "JPP TV", "NEWS & MEDIA","KNOW YOUR PANTHERS","TICKETS & MERCHANDISE","WALLPAPERS","POINTS TABLE", "FAN CORNER","ABOUT"]
-    var dataimage = ["home.png", "season4.png", "fixtures.png", "gallery.png", "jpptv.png", "newsicon.png","know.png","tickets.png","galleryinside.png","point.png", "fan.png","about.png"]
+    var data = ["HOME", "SEASON 4 SCHEDULE", "GALLERY", "JPP TV", "NEWS & MEDIA","KNOW YOUR PANTHERS","TICKETS & MERCHANDISE","WALLPAPERS","POINTS TABLE", "FAN CORNER","ABOUT"]
+    var dataimage = ["home.png", "season4.png", "gallery.png", "jpptv.png", "newsicon.png","know.png","tickets.png","galleryinside.png","point.png", "fan.png","about.png"]
     
     // MARK: - UITableViewDataSource
     
@@ -102,27 +102,25 @@ class SideMenuController: UIViewController, UITableViewDataSource, UITableViewDe
         case 1:
             self.slideMenuController()?.changeMainViewController(self.scheduleController, close: true)
         case 2:
-            self.slideMenuController()?.changeMainViewController(self.scheduleController, close: true)
-        case 3:
             isGalWal = 0
             self.slideMenuController()?.changeMainViewController(self.galleryController, close: true)
-        case 4:
+        case 3:
             isGalWal = 0
             self.slideMenuController()?.changeMainViewController(self.jpptvController, close: true)
-        case 5:
+        case 4:
             self.slideMenuController()?.changeMainViewController(self.newsController, close: true)
-        case 6:
+        case 5:
             self.slideMenuController()?.changeMainViewController(self.knowTeamController, close: true)
-        case 7:
+        case 6:
             self.slideMenuController()?.changeMainViewController(self.merchandiseController, close: true)
-        case 8:
+        case 7:
             isGalWal = 1
             self.slideMenuController()?.changeMainViewController(self.wallpaperController, close: true)
-        case 9:
+        case 8:
             self.slideMenuController()?.changeMainViewController(self.pointController, close: true)
-        case 10:
+        case 9:
             self.slideMenuController()?.changeMainViewController(self.fancornerController, close: true)
-        case 11:
+        case 10:
             self.slideMenuController()?.changeMainViewController(self.aboutsController, close: true)
         default:
             self.slideMenuController()?.changeMainViewController(self.homeController, close: true)

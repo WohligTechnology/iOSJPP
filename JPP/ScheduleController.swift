@@ -170,7 +170,7 @@ class ScheduleController: UIViewController {
         super.viewDidLoad()
         
         SchduleCtrlGlo = self;
-        self.setNavigationBarItemText("FIXTURES")
+        self.setNavigationBarItemText("SEASON 4 SCHEDULE")
         
         loadingInit()
         self.view.addSubview(loaderGlo)
