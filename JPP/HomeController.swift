@@ -92,7 +92,7 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                 
                 if((json["latestmatch"]["team1id"].string) != nil) {
                     
-                    let updates = seasonOpener(frame: CGRectMake(8,8,self.verticalLayout.frame.width-16,400))
+                    let updates = seasonOpener(frame: CGRectMake(8,8,self.verticalLayout.frame.width-16,380))
                     self.verticalLayout.addSubview(updates)
                     //updates.addToCalender.hidden = true
                     
@@ -102,6 +102,40 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                     updates.matchVenue.text = json["latestmatch"]["stadium"].string
                     
                     updates.trapLabel.text = "SEASON 4 OPENER"
+                    
+                    let date = NSDate()
+                    let calendar = NSCalendar.currentCalendar()
+                    let components = calendar.components([.Month, .Day, .Hour, .Minute, .Second], fromDate: date)
+                    let month = components.month
+                    let day = components.day
+                    let hour = components.hour
+                    let minutes = components.minute
+                    //let seconds = components.second
+                    
+                    let range = calendar.rangeOfUnit(.Day, inUnit: .Month, forDate: date)
+                    range.length
+                    
+                    let matchMonth = 6
+                    let matchDay = 25
+                    let matchHour = 21
+                    let matchMins = 00
+                    
+                    var diffMonth = matchMonth - month
+                    var diffDay = matchDay - day
+                    var diffHour = matchHour - hour
+                    var diffMin = matchMins - minutes
+                    
+                    
+                    if(diffMin < 0) { diffHour = diffHour - 1;  diffMin = diffMin + 60 }
+                    
+                    if(diffHour < 0) { diffDay = diffDay - 1; diffHour = diffHour + 24 }
+                    
+                    if(diffDay < 0) { diffMonth = diffMonth - 1; diffDay = diffDay + range.length }
+                    
+                    updates.remainingMonths.text = String(diffMonth)
+                    updates.remainingDays.text = String(diffDay)
+                    updates.remainingHours.text = String(diffHour)
+                    updates.remainingMins.text = String(diffMin)
                     
                 }
                 
@@ -236,7 +270,7 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
         
         loadingInit()
         callhome()
-       
+        
     }
     
     
@@ -247,7 +281,6 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
     
     func refresh(refreshControl: UIRefreshControl) {
         // Do your job, when done:
-
         callhome()
         refreshControl.endRefreshing()
     }
