@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
@@ -22,14 +22,12 @@
             <string>Oswald-Regular</string>
             <string>Oswald-Regular</string>
             <string>Oswald-Regular</string>
-            <string>Oswald-Regular</string>
         </mutableArray>
     </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="seasonOpener" customModule="JPP" customModuleProvider="target">
             <connections>
                 <outlet property="addToCalender" destination="fyB-Ub-8Ni" id="h0M-ZF-q4z"/>
-                <outlet property="bookTickets" destination="Sv6-CH-5dI" id="DdW-mS-2VZ"/>
                 <outlet property="matchTime" destination="Ikj-6r-fLd" id="Ag8-1k-lGN"/>
                 <outlet property="matchVenue" destination="bAS-KJ-bSh" id="s3T-xM-OWp"/>
                 <outlet property="remainingDays" destination="L4T-If-dB1" id="yed-4Y-OtU"/>
@@ -42,7 +40,7 @@
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="nrs-pd-RXk">
+        <view clipsSubviews="YES" contentMode="scaleToFill" id="nrs-pd-RXk">
             <rect key="frame" x="0.0" y="0.0" width="428" height="385"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
@@ -282,21 +280,16 @@
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="gFp-nV-kuY">
                     <rect key="frame" x="20" y="326" width="388" height="40"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sv6-CH-5dI">
-                            <rect key="frame" x="0.0" y="0.0" width="189" height="40"/>
-                            <color key="backgroundColor" red="0.30196078431372547" green="0.79607843137254897" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
-                            <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="16"/>
-                            <state key="normal" title="BOOK TICKETS">
-                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
-                        </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fyB-Ub-8Ni">
-                            <rect key="frame" x="199" y="0.0" width="189" height="40"/>
+                            <rect key="frame" x="0.0" y="0.0" width="388" height="40"/>
                             <color key="backgroundColor" red="0.30196078430000001" green="0.79607843140000001" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="16"/>
                             <state key="normal" title="ADD TO CALENDER">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
+                            <connections>
+                                <action selector="addToCalender:" destination="-1" eventType="touchUpInside" id="heb-9u-NTw"/>
+                            </connections>
                         </button>
                     </subviews>
                     <constraints>

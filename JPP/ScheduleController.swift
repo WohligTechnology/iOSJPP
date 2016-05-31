@@ -127,15 +127,15 @@ class ScheduleController: UIViewController {
                     insideTable.matchesTeams.text = json[i]["team1"].string! + " VS " + json[i]["team2"].string!
                     insideTable.bookURL = json[i]["bookticket"].string!
                     
-                    if(json[i]["team1id"].string != "5")
-                    {
-                        insideTable.buttonHolder.alpha = 0;
-                        
-                    }
-                    else
-                    {
-                        insideTable.addCalender2.alpha = 0;
-                    }
+//                    if(json[i]["team1id"].string != "5")
+//                    {
+  insideTable.buttonHolder.alpha = 0;
+//                        
+//                    }
+//                    else
+                 //   {
+                       // insideTable.addCalender2.alpha = 0;
+                   // }
                     
                     insideTable.matchesDate.text = json[i]["starttimedate"].string
                     
@@ -144,13 +144,13 @@ class ScheduleController: UIViewController {
                     whiteView.addSubview(insideTable);
                 }
                 
-                let bookTic = bookTicket(frame:CGRectMake(8,8,self.verticalLayout.frame.width-16,44));
+               // let bookTic = bookTicket(frame:CGRectMake(8,8,self.verticalLayout.frame.width-16,44));
                 
-                self.verticalLayout.addSubview(bookTic);
+               // self.verticalLayout.addSubview(bookTic);
                 
                 self.resizeView(8);
                 
-                bookTic.bookButton.addTarget(self, action: "BookButtonTap:", forControlEvents: UIControlEvents.TouchUpInside)
+               // bookTic.bookButton.addTarget(self, action: "BookButtonTap:", forControlEvents: UIControlEvents.TouchUpInside)
                 
             })
             

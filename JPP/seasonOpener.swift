@@ -20,13 +20,32 @@ import UIKit
     @IBOutlet weak var remainingHours: UILabel!
     @IBOutlet weak var remainingMins: UILabel!
     
-    @IBOutlet weak var bookTickets: UIButton!
+    
     @IBOutlet weak var addToCalender: UIButton!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         loadViewFromNib ()
     }
+    
+    @IBAction func addToCalender(sender: AnyObject) {
+    
+       // createEvent(EventNameTop,EventTime: EventTimeTop)
+        
+        let alertController = UIAlertController(title: "Match added to your Calender", message:
+            "", preferredStyle: UIAlertControllerStyle.Alert)
+        alertController.addAction(UIAlertAction(title: "Continue", style: UIAlertActionStyle.Default,handler: nil))
+        
+        GHomeController.presentViewController(alertController, animated: true, completion: nil)
+
+        
+    }
+    
+//    @IBAction func bookTicket(sender: AnyObject) {
+//        GlobalBookTicketURL = "";
+//        GHomeController.performSegueWithIdentifier("homeBook", sender: self)
+//
+//    }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)

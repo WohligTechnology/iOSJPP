@@ -11,7 +11,50 @@ import SwiftyJSON
 import DKChainableAnimationKit
 import EventKitUI
 
+var GHomeController:HomeController!;
+
 class HomeController: UIViewController, UIGestureRecognizerDelegate {
+
+  
+    
+    func checkCalendarAuthorizationStatus() {
+        let status = EKEventStore.authorizationStatusForEntityType(EKEntityType.Event)
+        
+        switch (status) {
+        case EKAuthorizationStatus.NotDetermined:
+            requestAccessToCalendar()
+        case EKAuthorizationStatus.Authorized:
+            print("Authorised");
+        case EKAuthorizationStatus.Restricted:
+            print("Restricted");
+        case EKAuthorizationStatus.Denied:
+            print("Denied");
+        }
+    }
+    
+    func requestAccessToCalendar() {
+        eventStore.requestAccessToEntityType(EKEntityType.Event, completion: {
+            (accessGranted: Bool, error: NSError?) in
+            
+            if accessGranted == true {
+                dispatch_async(dispatch_get_main_queue(), {
+                    print("Access Graned");
+                    SaveCalender = 1;
+                })
+            } else {
+                dispatch_async(dispatch_get_main_queue(), {
+                    SaveCalender = 0;
+                    print("Access not Graned");
+                })
+            }
+        })
+    }
+
+
+    
+    func setInterval(interval:NSTimeInterval, block:()->Void) -> NSTimer {
+        return NSTimer.scheduledTimerWithTimeInterval(interval, target: NSBlockOperation(block: block), selector: "main", userInfo: nil, repeats: true)
+    }
     
     var newsController:UIViewController!
     var galleryController: UIViewController!
@@ -111,7 +154,7 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                     let day = components.day
                     let hour = components.hour
                     let minutes = components.minute
-                    //let seconds = components.second
+
                     
                     let range = calendar.rangeOfUnit(.Day, inUnit: .Month, forDate: date)
                     range.length
@@ -126,6 +169,35 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                     var diffHour = matchHour - hour
                     var diffMin = matchMins - minutes
                     
+                    self.setInterval(10, block: { () -> Void in
+                        
+                        let date = NSDate()
+                        let calendar = NSCalendar.currentCalendar()
+                        let components = calendar.components([.Month, .Day, .Hour, .Minute, .Second], fromDate: date)
+                        let month = components.month
+                        let day = components.day
+                        let hour = components.hour
+                        let minutes = components.minute
+                    
+                        
+                        var diffMonth = matchMonth - month
+                        var diffDay = matchDay - day
+                        var diffHour = matchHour - hour
+                        var diffMin = matchMins - minutes
+                        
+                        if(diffMin < 0) { diffHour = diffHour - 1;  diffMin = diffMin + 60 }
+                        
+                        if(diffHour < 0) { diffDay = diffDay - 1; diffHour = diffHour + 24 }
+                        
+                        if(diffDay < 0) { diffMonth = diffMonth - 1; diffDay = diffDay + range.length }
+                        
+                        updates.remainingMonths.text = String(diffMonth)
+                        updates.remainingDays.text = String(diffDay)
+                        updates.remainingHours.text = String(diffHour)
+                        updates.remainingMins.text = String(diffMin)
+
+                        
+                    })
                     
                     if(diffMin < 0) { diffHour = diffHour - 1;  diffMin = diffMin + 60 }
                     
@@ -260,6 +332,9 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    
+        checkCalendarAuthorizationStatus()
+        GHomeController = self;
         
         self.setNavigationBarItem()
         let refreshControl = UIRefreshControl()
