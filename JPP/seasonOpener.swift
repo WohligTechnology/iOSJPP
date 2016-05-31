@@ -20,6 +20,10 @@ import UIKit
     @IBOutlet weak var remainingHours: UILabel!
     @IBOutlet weak var remainingMins: UILabel!
     
+    var EventTimeTop = NSDate();
+    var EventNameTop:String!;
+    
+    
     
     @IBOutlet weak var addToCalender: UIButton!
     
@@ -30,7 +34,7 @@ import UIKit
     
     @IBAction func addToCalender(sender: AnyObject) {
     
-       // createEvent(EventNameTop,EventTime: EventTimeTop)
+       createEvent(EventNameTop,EventTime: EventTimeTop)
         
         let alertController = UIAlertController(title: "Match added to your Calender", message:
             "", preferredStyle: UIAlertControllerStyle.Alert)

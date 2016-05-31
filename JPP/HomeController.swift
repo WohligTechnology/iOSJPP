@@ -137,9 +137,16 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                 if((json["latestmatch"]["team1id"].string) != nil) {
                     
                     let updates = seasonOpener(frame: CGRectMake(8,8,self.verticalLayout.frame.width-16,380))
+                    
+                    
+                    let dateFormatter = NSDateFormatter()
+                    dateFormatter.dateFormat = "dd MMM yyyy, HH:mm"
+                    updates.EventTimeTop = dateFormatter.dateFromString(json["latestmatch"]["starttimedate"].string!)!
+                    updates.EventNameTop = json["latestmatch"]["team1"].string! + " VS " + json["latestmatch"]["team2"].string!;
+                    
+                    
                     self.verticalLayout.addSubview(updates)
                     //updates.addToCalender.hidden = true
-                    
                     updates.team1Image.image = UIImage(named: "t" + json["latestmatch"]["team1id"].string! + ".png")
                     updates.team2Image.image = UIImage(named: "t" + json["latestmatch"]["team2id"].string! + ".png")
                     updates.matchTime.text = json["latestmatch"]["starttimedate"].string
