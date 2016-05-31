@@ -90,6 +90,7 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
 //                    
 //                }
                 
+                
                 if((json["latestmatch"]["team1id"].string) != nil) {
                     
                     let updates = seasonOpener(frame: CGRectMake(8,8,self.verticalLayout.frame.width-16,380))
