@@ -17,17 +17,17 @@ public class Player {
     var tour = ""
     var age = ""
     var type = ""
-    var nativePlace = ""
+    var state = ""
     var jerseyNo = ""
     var image = ""
     
-    init(name:String, achieve:String, tour:String, age:String, type:String, nativePlace:String, jerseyNo:String, image:String) {
+    init(name:String, achieve:String, tour:String, age:String, type:String, state:String, jerseyNo:String, image:String) {
         self.name = name
         self.achieve = achieve
         self.tour = tour
         self.age = age
         self.type = type
-        self.nativePlace = nativePlace
+        self.state = state
         self.jerseyNo = jerseyNo
         self.image = image
         

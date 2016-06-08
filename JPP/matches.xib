@@ -31,13 +31,13 @@
             <rect key="frame" x="0.0" y="0.0" width="362" height="100"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="4 Feb 2016, 20:00(IST)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="74G-d4-Wx0">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" misplaced="YES" text="4 Feb 2016, 20:00(IST)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="74G-d4-Wx0">
                     <rect key="frame" x="8" y="29" width="354" height="21"/>
                     <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="13"/>
                     <color key="textColor" red="0.51372549019607838" green="0.69803921568627447" blue="0.76078431372549016" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JAIPUR PINK PANTHER VS JAIPUR PINK PANTHER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8K5-0L-apj">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="JAIPUR PINK PANTHER VS JAIPUR PINK PANTHER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8K5-0L-apj">
                     <rect key="frame" x="8" y="8" width="354" height="21"/>
                     <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="14"/>
                     <color key="textColor" red="0.90588235294117647" green="0.17647058823529413" blue="0.54117647058823526" alpha="1" colorSpace="calibratedRGB"/>

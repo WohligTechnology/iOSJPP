@@ -1041,7 +1041,7 @@
         <image name="t1111" width="307" height="275"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="OjI-yv-ygZ"/>
         <segue reference="h9U-vf-KS7"/>
+        <segue reference="S8G-Ai-RDf"/>
     </inferredMetricsTieBreakers>
 </document>

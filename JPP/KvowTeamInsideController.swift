@@ -23,7 +23,7 @@ class KvowTeamInsideController: UIViewController {
         
         playerIn.playerAchivements.text = players[playerIndex].achieve
         playerIn.playerTournaments.text = players[playerIndex].tour
-        playerIn.playerNative.text = players[playerIndex].nativePlace
+        playerIn.playerNative.text = players[playerIndex].state
         playerIn.playerAge.text = players[playerIndex].age
         playerIn.playerJersey.text = players[playerIndex].jerseyNo
 //
