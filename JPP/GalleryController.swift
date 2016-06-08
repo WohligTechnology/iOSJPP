@@ -109,7 +109,7 @@ class GalleryController: UIViewController,UITableViewDataSource,UITableViewDeleg
                 if(photosJson[0]) {
                     mediaBox = galleryAlbum(frame: CGRectMake(8,16,self.view.frame.width-16,200))
                 }
-                //print("**************************************** \(photosJson[indexPath.row]) ******************************************")
+        
                 mediaBox.galleryTitle.text = photosJson[indexPath.row]["name"].stringValue
                 mediaBox.galleryBanner.hnk_setImageFromURL(rest.getImageCache(photosJson[indexPath.row]["image"].string!))
                 cell.addSubview(mediaBox)
@@ -124,7 +124,7 @@ class GalleryController: UIViewController,UITableViewDataSource,UITableViewDeleg
                 rest.getVideo(GalleryLoaded)
                 mediaBox.galleryTitle.text = photosJson[indexPath.row]["name"].stringValue
                 let image = photosJson[indexPath.row]["url"].stringValue;
-                //print("ahjvashjba ajksbajksba asjkbdajksbd \(image)")
+                
                 mediaBox.galleryBanner.hnk_setImageFromURL(rest.getImageExternalCacheURL(rest.getYoutubeImage(image)) )
                 cell.addSubview(mediaBox)
             }
