@@ -143,7 +143,7 @@ class GalleryController: UIViewController,UITableViewDataSource,UITableViewDeleg
         if(activeGal == 1)
         {
             rest.getVideo(GalleryLoaded)
-            //videoIDGlo = photosJson[indexPath.row]["url"].string!
+            videoIDGlo = photosJson[indexPath.row]["url"].string!
             performSegueWithIdentifier("videoOpen", sender: nil)
         }
     }
