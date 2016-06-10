@@ -65,7 +65,8 @@ class NewsController: UIViewController, UITableViewDataSource, UITableViewDelega
         if((newsJSON[indexPath.row]["name"].string) != nil) {
             let mediaBox = media(frame: CGRectMake(0,8,self.view.frame.width-16,230));
 //            mediaBox.mediaTitle.text = newsJSON[indexPath.row]["name"].string
-            mediaBox.mediaDesc.text = newsJSON[indexPath.row]["name"].string
+            mediaBox.mediaDesc.text = newsJSON[indexPath.row]["name"].string!
+            //print("NEWS : \(newsJSON[indexPath.row]["name"].string!)")
             mediaBox.mediaDate.text = newsJSON[indexPath.row]["timestamp"].string
             mediaBox.mediaImage.hnk_setImageFromURL(rest.getImageThumbCache(newsJSON[indexPath.row]["image"].string!))
             cell.addSubview(mediaBox)
@@ -77,6 +78,7 @@ class NewsController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         newsImage = newsJSON[indexPath.row]["image"].string!
         newsTitle = newsJSON[indexPath.row]["name"].string!
+        print("NEWS SELECTED : \(newsContent)")
         newsDate = newsJSON[indexPath.row]["timestamp"].string!
         newsContent = newsJSON[indexPath.row]["content"].string!
         
