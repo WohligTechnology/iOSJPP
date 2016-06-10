@@ -36,9 +36,6 @@ class KnowTeamController: UIViewController,UICollectionViewDataSource,UICollecti
         mediaBox.layer.borderColor = UIColor(red:18/255.0, green:126/255.0, blue:165/255.0, alpha: 1.0).CGColor
         cell.addSubview(mediaBox)
         
-        
-        
-        
         return cell
     }
     
