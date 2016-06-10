@@ -103,15 +103,17 @@ class GalleryController: UIViewController,UITableViewDataSource,UITableViewDeleg
         tableView.separatorStyle = UITableViewCellSeparatorStyle.None
         tableView.tableFooterView = UIView()
         let cell = tableView.dequeueReusableCellWithIdentifier("galCell", forIndexPath: indexPath)
+        cell.selectionStyle = UITableViewCellSelectionStyle.None
         if(activeGal == 0 ) {
             if((photosJson[indexPath.row]["image"].string) != nil) {
                 var mediaBox = galleryAlbum(frame: CGRectMake(8,0,self.view.frame.width-16,200))
-                if(photosJson[0]) {
+                 if(photosJson[0]) {
                     mediaBox = galleryAlbum(frame: CGRectMake(8,16,self.view.frame.width-16,200))
                 }
         
                 mediaBox.galleryTitle.text = photosJson[indexPath.row]["name"].stringValue
                 mediaBox.galleryBanner.hnk_setImageFromURL(rest.getImageCache(photosJson[indexPath.row]["image"].string!))
+                mediaBox.galleryTitleBackView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.70)
                 cell.addSubview(mediaBox)
             }
         }

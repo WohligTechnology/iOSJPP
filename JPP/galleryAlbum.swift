@@ -12,6 +12,7 @@ import UIKit
     
     @IBOutlet weak var galleryTitle: UILabel!
     @IBOutlet weak var galleryBanner: UIImageView!
+    @IBOutlet weak var galleryTitleBackView: UIView!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -30,6 +31,8 @@ import UIKit
         sortnewview.frame = bounds
         sortnewview.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
         self.addSubview(sortnewview);
+        
+        galleryTitleBackView.layer.zPosition = 100000
     }
     
     

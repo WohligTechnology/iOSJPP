@@ -92,7 +92,7 @@ class PointTableController: UIViewController,UITableViewDelegate,UITableViewData
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        tableView.separatorStyle = UITableViewCellSeparatorStyle.SingleLine
+        tableView.separatorStyle = UITableViewCellSeparatorStyle.None
         tableView.allowsSelection = false
         tableView.tableFooterView = UIView()
         let cell = tableView.dequeueReusableCellWithIdentifier("pointTableCell", forIndexPath: indexPath)
