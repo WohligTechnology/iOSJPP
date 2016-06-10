@@ -890,22 +890,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Liw-XK-C8i" customClass="playerInside" customModule="JPP" customModuleProvider="target">
-                                <rect key="frame" x="8" y="8" width="304" height="552"/>
-                                <color key="backgroundColor" red="0.76862746479999999" green="0.94117647410000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HcW-sX-oqC">
+                                <rect key="frame" x="4" y="28" width="312" height="532"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="58E-Hu-qTv" customClass="playerInside" customModule="JPP" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="312" height="532"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="58E-Hu-qTv" firstAttribute="centerX" secondItem="HcW-sX-oqC" secondAttribute="centerX" id="Dde-Io-3JH"/>
+                                    <constraint firstAttribute="trailing" secondItem="58E-Hu-qTv" secondAttribute="trailing" id="Wsd-W7-zxv"/>
+                                    <constraint firstAttribute="bottom" secondItem="58E-Hu-qTv" secondAttribute="bottom" id="c32-gu-iL0"/>
+                                    <constraint firstItem="58E-Hu-qTv" firstAttribute="centerY" secondItem="HcW-sX-oqC" secondAttribute="centerY" id="es5-0w-nzP"/>
+                                    <constraint firstItem="58E-Hu-qTv" firstAttribute="leading" secondItem="HcW-sX-oqC" secondAttribute="leading" id="h7P-pg-8UV"/>
+                                    <constraint firstItem="58E-Hu-qTv" firstAttribute="top" secondItem="HcW-sX-oqC" secondAttribute="top" id="iJT-ZJ-xXW"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="0.76862746479999999" green="0.94117647410000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="Liw-XK-C8i" firstAttribute="top" secondItem="jJQ-ny-2bq" secondAttribute="top" constant="8" id="Wdm-cr-BDr"/>
-                            <constraint firstItem="Liw-XK-C8i" firstAttribute="bottom" secondItem="IUM-6o-lId" secondAttribute="top" constant="-8" id="XYO-EN-9HZ"/>
-                            <constraint firstItem="Liw-XK-C8i" firstAttribute="leading" secondItem="jJQ-ny-2bq" secondAttribute="leading" constant="8" id="auw-2M-bh0"/>
-                            <constraint firstAttribute="trailing" secondItem="Liw-XK-C8i" secondAttribute="trailing" constant="8" id="tVx-nf-dz7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HcW-sX-oqC" secondAttribute="trailing" constant="-12" id="Vsc-NS-xIr"/>
+                            <constraint firstItem="HcW-sX-oqC" firstAttribute="leading" secondItem="jJQ-ny-2bq" secondAttribute="leadingMargin" constant="-12" id="XcS-Nq-g8g"/>
+                            <constraint firstItem="HcW-sX-oqC" firstAttribute="top" secondItem="nhq-Kh-76i" secondAttribute="bottom" constant="8" id="uJq-xO-y9o"/>
+                            <constraint firstItem="IUM-6o-lId" firstAttribute="top" secondItem="HcW-sX-oqC" secondAttribute="bottom" constant="8" id="v7Z-fL-Rhr"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="playerIn" destination="Liw-XK-C8i" id="6Pm-5c-duh"/>
+                        <outlet property="playerIn" destination="58E-Hu-qTv" id="0GG-7M-oWd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HIv-Zd-NtY" userLabel="First Responder" sceneMemberID="firstResponder"/>

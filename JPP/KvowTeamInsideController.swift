@@ -9,13 +9,20 @@
 import UIKit
 import SwiftyJSON
 class KvowTeamInsideController: UIViewController {
-
     
     @IBOutlet weak var playerIn: playerInside!
+    
+    var scroll: UIScrollView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+//        scroll = UIScrollView(frame: CGRectMake(8, 8, self.view.frame.size.width, self.view.frame.size.height))
+//        scroll.backgroundColor = UIColor.blackColor()
+//        scroll.contentSize.height = 1000
+//        scroll.layer.zPosition = 100
+//        self.view.addSubview(scroll)
+//        
+//        scroll.addSubview(playerIn)
         
         playerIn.playerPer.playerTitle.text = players[playerIndex].name
         playerIn.playerPer.playerImage.image = UIImage(named: players[playerIndex].image)
