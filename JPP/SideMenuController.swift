@@ -75,8 +75,8 @@ class SideMenuController: UIViewController, UITableViewDataSource, UITableViewDe
         return 1
     }
     
-    var data = ["HOME", "SEASON 4 SCHEDULE", "GALLERY", "JPP TV", "NEWS & MEDIA","KNOW YOUR PANTHERS","TICKETS & MERCHANDISE","WALLPAPERS","POINTS TABLE", "FAN CORNER","ABOUT"]
-    var dataimage = ["home.png", "season4.png", "gallery.png", "jpptv.png", "newsicon.png","know.png","tickets.png","galleryinside.png","point.png", "fan.png","about.png"]
+    var data = ["HOME", "SEASON 4 SCHEDULE", "TICKETS & MERCHANDISE", "GALLERY", "JPP TV", "NEWS & MEDIA","KNOW YOUR PANTHERS","WALLPAPERS", "POINTS TABLE", "FAN CORNER","ABOUT"]
+    var dataimage = ["home.png", "season4.png", "tickets.png", "gallery.png", "jpptv.png", "newsicon.png","know.png","galleryinside.png","point.png", "fan.png","about.png"]
     
     // MARK: - UITableViewDataSource
     
@@ -102,17 +102,17 @@ class SideMenuController: UIViewController, UITableViewDataSource, UITableViewDe
         case 1:
             self.slideMenuController()?.changeMainViewController(self.scheduleController, close: true)
         case 2:
-            isGalWal = 0
-            self.slideMenuController()?.changeMainViewController(self.galleryController, close: true)
+            self.slideMenuController()?.changeMainViewController(self.merchandiseController, close: true)
         case 3:
             isGalWal = 0
-            self.slideMenuController()?.changeMainViewController(self.jpptvController, close: true)
+            self.slideMenuController()?.changeMainViewController(self.galleryController, close: true)
         case 4:
-            self.slideMenuController()?.changeMainViewController(self.newsController, close: true)
+            isGalWal = 0
+            self.slideMenuController()?.changeMainViewController(self.jpptvController, close: true)
         case 5:
-            self.slideMenuController()?.changeMainViewController(self.knowTeamController, close: true)
+            self.slideMenuController()?.changeMainViewController(self.newsController, close: true)
         case 6:
-            self.slideMenuController()?.changeMainViewController(self.merchandiseController, close: true)
+            self.slideMenuController()?.changeMainViewController(self.knowTeamController, close: true)
         case 7:
             isGalWal = 1
             self.slideMenuController()?.changeMainViewController(self.wallpaperController, close: true)
