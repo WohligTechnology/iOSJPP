@@ -14,8 +14,12 @@
         <mutableArray key="Oswald-Light.ttf">
             <string>Oswald-Light</string>
             <string>Oswald-Light</string>
+            <string>Oswald-Light</string>
+            <string>Oswald-Light</string>
         </mutableArray>
         <mutableArray key="Oswald-Regular.ttf">
+            <string>Oswald-Regular</string>
+            <string>Oswald-Regular</string>
             <string>Oswald-Regular</string>
             <string>Oswald-Regular</string>
             <string>Oswald-Regular</string>
@@ -497,10 +501,10 @@
             </objects>
             <point key="canvasLocation" x="1105" y="403"/>
         </scene>
-        <!--MERCHANDISE-->
+        <!--Merchandise Controller-->
         <scene sceneID="gSn-Im-QQ7">
             <objects>
-                <viewController storyboardIdentifier="merchandise" title="MERCHANDISE" useStoryboardIdentifierAsRestorationIdentifier="YES" id="w5q-5q-7oN" customClass="MerchandiseController" customModule="JPP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="merchandise" useStoryboardIdentifierAsRestorationIdentifier="YES" id="w5q-5q-7oN" customClass="MerchandiseController" customModule="JPP" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="emz-Wc-TO8"/>
                         <viewControllerLayoutGuide type="bottom" id="Xkq-e7-VNZ"/>
@@ -931,6 +935,175 @@
             </objects>
             <point key="canvasLocation" x="2151" y="1126"/>
         </scene>
+        <!--MERCHANDISE-->
+        <scene sceneID="C6O-tA-ES4">
+            <objects>
+                <viewController storyboardIdentifier="bookTicketsController" title="MERCHANDISE" id="zRs-6p-gez" customClass="BookTicketsViewController" customModule="JPP" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TZF-ZA-LZO"/>
+                        <viewControllerLayoutGuide type="bottom" id="elK-8C-Qd6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1hn-TI-kyY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="1" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6Za-72-eSP">
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="bookTicketsCell" rowHeight="278" id="5iO-Q3-V1T" customClass="TicketEventTableViewCell" customModule="JPP" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="1" width="320" height="278"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5iO-Q3-V1T" id="iar-HW-iUM">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="277"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView autoresizesSubviews="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="schedule_back" translatesAutoresizingMaskIntoConstraints="NO" id="Zxv-KI-v1a">
+                                                    <rect key="frame" x="8" y="4" width="304" height="261"/>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ivW-3Y-aLI">
+                                                    <rect key="frame" x="100" y="211" width="120" height="30"/>
+                                                    <color key="backgroundColor" red="0.30196078430000001" green="0.79607843140000001" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="120" id="A0i-EV-FC6"/>
+                                                        <constraint firstAttribute="height" constant="30" id="afE-Zp-12w"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="14"/>
+                                                    <state key="normal" title="BOOK TICKETS">
+                                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <segue destination="S3R-VS-V10" kind="show" identifier="bookTickets" id="OTn-pz-FsZ"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30 JAN 2016, 20:00(IST)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ipX-xY-izs">
+                                                    <rect key="frame" x="23" y="182" width="274" height="21"/>
+                                                    <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="14"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trapezium" translatesAutoresizingMaskIntoConstraints="NO" id="Z2b-Tc-FXG">
+                                                    <rect key="frame" x="8" y="4" width="304" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="Iut-uA-aHc"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MATCH - 00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PkG-Xa-WRq">
+                                                    <rect key="frame" x="10" y="4" width="304" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="ozk-fC-vXb"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="15"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pp" translatesAutoresizingMaskIntoConstraints="NO" id="ofa-Tt-gsh">
+                                                    <rect key="frame" x="197" y="38" width="115" height="115"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="115" id="3CA-XF-FAv"/>
+                                                        <constraint firstAttribute="width" constant="115" id="BZP-Bc-oBp"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jpp" translatesAutoresizingMaskIntoConstraints="NO" id="z4u-zO-hE4">
+                                                    <rect key="frame" x="23" y="38" width="115" height="115"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="115" id="zXl-rR-CvF"/>
+                                                        <constraint firstAttribute="width" constant="115" id="zdy-P9-nGj"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sawai Mansingh Stadium, Jaipur" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AsN-JG-hyj">
+                                                    <rect key="frame" x="23" y="161" width="274" height="21"/>
+                                                    <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="14"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vs_pink" translatesAutoresizingMaskIntoConstraints="NO" id="cqX-7o-Sh1">
+                                                    <rect key="frame" x="30" y="42" width="267" height="92"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="92" id="9AR-ak-Jrq"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="PkG-Xa-WRq" firstAttribute="top" secondItem="iar-HW-iUM" secondAttribute="topMargin" constant="-4" id="4lh-AA-g8x"/>
+                                                <constraint firstItem="ivW-3Y-aLI" firstAttribute="top" secondItem="ipX-xY-izs" secondAttribute="bottom" constant="8" id="4q5-C7-NXd"/>
+                                                <constraint firstItem="Zxv-KI-v1a" firstAttribute="trailing" secondItem="iar-HW-iUM" secondAttribute="trailingMargin" id="7Xe-fs-paF"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="AsN-JG-hyj" secondAttribute="trailing" constant="15" id="8P4-UT-1I5"/>
+                                                <constraint firstItem="ipX-xY-izs" firstAttribute="leading" secondItem="iar-HW-iUM" secondAttribute="leadingMargin" constant="15" id="8yf-mK-3QK"/>
+                                                <constraint firstItem="AsN-JG-hyj" firstAttribute="leading" secondItem="iar-HW-iUM" secondAttribute="leadingMargin" constant="15" id="AAE-Lo-1qP"/>
+                                                <constraint firstItem="Z2b-Tc-FXG" firstAttribute="leading" secondItem="iar-HW-iUM" secondAttribute="leadingMargin" id="Aj6-by-3Gw"/>
+                                                <constraint firstItem="ivW-3Y-aLI" firstAttribute="centerX" secondItem="iar-HW-iUM" secondAttribute="centerX" id="ElK-PU-Bqj"/>
+                                                <constraint firstItem="AsN-JG-hyj" firstAttribute="top" secondItem="z4u-zO-hE4" secondAttribute="bottom" constant="8" id="K9l-eX-JQR"/>
+                                                <constraint firstItem="PkG-Xa-WRq" firstAttribute="trailing" secondItem="iar-HW-iUM" secondAttribute="trailingMargin" constant="2" id="T5z-Lk-4Gt"/>
+                                                <constraint firstItem="Zxv-KI-v1a" firstAttribute="leading" secondItem="iar-HW-iUM" secondAttribute="leadingMargin" id="XyT-7R-abH"/>
+                                                <constraint firstItem="cqX-7o-Sh1" firstAttribute="top" secondItem="PkG-Xa-WRq" secondAttribute="bottom" constant="8" id="dkN-UB-f59"/>
+                                                <constraint firstItem="z4u-zO-hE4" firstAttribute="leading" secondItem="iar-HW-iUM" secondAttribute="leadingMargin" constant="15" id="dra-7u-9lW"/>
+                                                <constraint firstItem="Zxv-KI-v1a" firstAttribute="bottom" secondItem="iar-HW-iUM" secondAttribute="bottomMargin" constant="-4" id="eTR-Bc-EDj"/>
+                                                <constraint firstItem="Z2b-Tc-FXG" firstAttribute="trailing" secondItem="iar-HW-iUM" secondAttribute="trailingMargin" id="gWZ-qg-bI9"/>
+                                                <constraint firstItem="ipX-xY-izs" firstAttribute="top" secondItem="AsN-JG-hyj" secondAttribute="bottom" id="iWh-DG-FsT"/>
+                                                <constraint firstItem="Z2b-Tc-FXG" firstAttribute="top" secondItem="iar-HW-iUM" secondAttribute="topMargin" constant="-4" id="jio-f6-aAV"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="ipX-xY-izs" secondAttribute="trailing" constant="15" id="jn1-nN-UU5"/>
+                                                <constraint firstItem="Zxv-KI-v1a" firstAttribute="top" secondItem="iar-HW-iUM" secondAttribute="topMargin" constant="-4" id="kj6-Ae-9Ir"/>
+                                                <constraint firstItem="z4u-zO-hE4" firstAttribute="top" secondItem="PkG-Xa-WRq" secondAttribute="bottom" constant="4" id="lfm-E2-NaZ"/>
+                                                <constraint firstItem="PkG-Xa-WRq" firstAttribute="leading" secondItem="iar-HW-iUM" secondAttribute="leadingMargin" constant="2" id="nrv-iW-sPq"/>
+                                                <constraint firstItem="cqX-7o-Sh1" firstAttribute="centerX" secondItem="iar-HW-iUM" secondAttribute="centerX" constant="3.5" id="qg3-k0-7qU"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="ofa-Tt-gsh" secondAttribute="trailing" id="sp0-kJ-PLi"/>
+                                                <constraint firstItem="ofa-Tt-gsh" firstAttribute="top" secondItem="PkG-Xa-WRq" secondAttribute="bottom" constant="4" id="tnm-u2-Usy"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.76862745098039209" green="0.94117647058823528" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="AgainstTeamLogo" destination="ofa-Tt-gsh" id="9cI-ud-qX7"/>
+                                            <outlet property="Venue" destination="AsN-JG-hyj" id="paO-jw-GbL"/>
+                                            <outlet property="matchLabel" destination="PkG-Xa-WRq" id="g6B-Hh-xJ7"/>
+                                            <outlet property="schedule" destination="ipX-xY-izs" id="8h5-Mb-wTX"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="merchandiseCell" rowHeight="153" id="njS-6k-RNK" customClass="MerchandiseTableViewCell" customModule="JPP" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="279" width="320" height="153"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="njS-6k-RNK" id="YYu-PA-1aU">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="152"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="merch" translatesAutoresizingMaskIntoConstraints="NO" id="dlM-cI-q3O">
+                                                    <rect key="frame" x="8" y="0.0" width="304" height="142"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.76862745098039209" green="0.94117647058823528" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="dlM-cI-q3O" firstAttribute="top" secondItem="YYu-PA-1aU" secondAttribute="top" id="7hd-4X-MeP"/>
+                                                <constraint firstAttribute="trailing" secondItem="dlM-cI-q3O" secondAttribute="trailing" constant="8" id="EHZ-m2-f6c"/>
+                                                <constraint firstAttribute="bottom" secondItem="dlM-cI-q3O" secondAttribute="bottom" constant="10" id="bRY-xC-tep"/>
+                                                <constraint firstItem="dlM-cI-q3O" firstAttribute="leading" secondItem="YYu-PA-1aU" secondAttribute="leading" constant="8" id="hPb-c1-KTx"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="zRs-6p-gez" id="Zp8-iG-41c"/>
+                                    <outlet property="delegate" destination="zRs-6p-gez" id="j2H-m7-QJS"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6Za-72-eSP" firstAttribute="top" secondItem="TZF-ZA-LZO" secondAttribute="bottom" id="OWG-sE-jkb"/>
+                            <constraint firstItem="6Za-72-eSP" firstAttribute="leading" secondItem="1hn-TI-kyY" secondAttribute="leading" id="klX-vM-pfG"/>
+                            <constraint firstItem="elK-8C-Qd6" firstAttribute="top" secondItem="6Za-72-eSP" secondAttribute="bottom" id="ljj-G2-BpN"/>
+                            <constraint firstAttribute="trailing" secondItem="6Za-72-eSP" secondAttribute="trailing" id="z9o-K8-Q4k"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="bookMyTicketTable" destination="6Za-72-eSP" id="l9T-u0-ZYf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fG6-0H-caP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-63" y="1126"/>
+        </scene>
         <!--Shop-->
         <scene sceneID="Qe4-aS-SWq">
             <objects>
@@ -1002,7 +1175,7 @@
         <!--Book Ticket-->
         <scene sceneID="8Yy-IR-r7H">
             <objects>
-                <viewController title="Book Ticket" id="S3R-VS-V10" customClass="BookTicketController" customModule="JPP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WebController" title="Book Ticket" id="S3R-VS-V10" customClass="BookTicketController" customModule="JPP" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="OZr-WE-SRc"/>
                         <viewControllerLayoutGuide type="bottom" id="MO1-OA-CkS"/>
@@ -1037,11 +1210,17 @@
     <resources>
         <image name="home" width="25" height="25"/>
         <image name="ic_action_panther" width="96" height="96"/>
+        <image name="jpp" width="414" height="379"/>
         <image name="m1" width="286" height="256"/>
+        <image name="merch" width="1176" height="521"/>
+        <image name="pp" width="400" height="372"/>
+        <image name="schedule_back" width="800" height="605"/>
         <image name="t1111" width="307" height="275"/>
+        <image name="trapezium" width="444" height="98"/>
+        <image name="vs_pink" width="267" height="262"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="h9U-vf-KS7"/>
-        <segue reference="S8G-Ai-RDf"/>
+        <segue reference="OTn-pz-FsZ"/>
     </inferredMetricsTieBreakers>
 </document>

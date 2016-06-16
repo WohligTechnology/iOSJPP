@@ -13,7 +13,7 @@ class MerchandiseController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setNavigationBarItemText("MERCHANDISE")
+//        self.setNavigationBarItemText("MERCHANDISE")
         
         
         
