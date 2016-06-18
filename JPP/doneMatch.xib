@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
@@ -19,6 +19,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="doneMatch" customModule="JPP" customModuleProvider="target">
             <connections>
+                <outlet property="team1image" destination="nmh-c7-KlS" id="JL9-9L-sfU"/>
+                <outlet property="team2image" destination="fOQ-Jw-jIu" id="OuE-jn-bwv"/>
                 <outlet property="teamOneScore" destination="Hjz-XK-v9g" id="D66-pD-4lO"/>
                 <outlet property="teamTwoScore" destination="Hjz-XK-v9g" id="lUp-fI-rBe"/>
             </connections>
@@ -31,7 +33,7 @@
                 <imageView autoresizesSubviews="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="schedule_back" translatesAutoresizingMaskIntoConstraints="NO" id="4mF-6u-zKB">
                     <rect key="frame" x="0.0" y="0.0" width="426" height="297"/>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W61-PR-OkZ">
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W61-PR-OkZ">
                     <rect key="frame" x="23" y="237" width="180" height="44"/>
                     <color key="backgroundColor" red="0.30196078430000001" green="0.79607843140000001" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
@@ -48,7 +50,7 @@
                         </mask>
                     </variation>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RUm-Sh-zgM">
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RUm-Sh-zgM">
                     <rect key="frame" x="225" y="237" width="180" height="44"/>
                     <color key="backgroundColor" red="0.98823529409999999" green="1" blue="0.98823529409999999" alpha="1" colorSpace="deviceRGB"/>
                     <constraints>

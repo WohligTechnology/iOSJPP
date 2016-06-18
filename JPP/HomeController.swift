@@ -115,6 +115,10 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                 self.scrollView.insertSubview(self.verticalLayout, atIndex: 0)
                 print(json["latestmatch"])
                 
+                if(json["latestmatch"]["score2"] == ""){
+                    
+                }
+                
 //                if((json["latestupdate"]["team1id"].string) != nil) {
 //                    
 //                    let updates = schedule(frame: CGRectMake(8,8,self.verticalLayout.frame.width-16,300));
@@ -134,7 +138,7 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
 //                }
                 
                 
-                if((json["latestmatch"]["team1id"].string) != nil) {
+                if((json["latestmatch"]["team1id"].string) != nil && json["latestmatch"]["score2"] != "") {
                     
                     let updates = seasonOpener(frame: CGRectMake(8,8,self.verticalLayout.frame.width-16,380))
                     
@@ -217,6 +221,18 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                     updates.remainingHours.text = String(diffHour)
                     updates.remainingMins.text = String(diffMin)
                     
+                }else{
+                    let updates = doneMatch(frame: CGRectMake(8,8,self.verticalLayout.frame.width-16,300));
+                                        self.verticalLayout.addSubview(updates);
+                    updates.teamOneScore.font = UIFont(name: "Kenyan-Coffee", size: 45)
+                    updates.teamTwoScore.font = UIFont(name: "Kenyan-Coffee", size: 45)
+                    updates.teamOneScore.layer.borderWidth = 3
+                    updates.teamOneScore.layer.borderColor = UIColor.whiteColor().CGColor
+                    updates.teamTwoScore.layer.borderWidth = 3
+                    updates.teamTwoScore.layer.borderColor = UIColor.whiteColor().CGColor
+                    
+                    updates.team1image.image = UIImage(named: "t" + json["latestmatch"]["team1id"].string! + ".png")
+                    updates.team2image.image = UIImage(named: "t" + json["latestmatch"]["team2id"].string! + ".png")
                 }
                 
                 if((json["news"]["id"].string) != nil) {

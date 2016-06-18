@@ -14,6 +14,8 @@ import UIKit
     @IBOutlet var teamTwoScore: UILabel!
     let borderWidth:CGFloat = 3
     
+    @IBOutlet weak var team1image: UIImageView!
+    @IBOutlet weak var team2image: UIImageView!
     override init(frame: CGRect) {
         super.init(frame: frame)
         loadViewFromNib ()
