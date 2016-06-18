@@ -223,16 +223,17 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                     
                 }else{
                     let updates = doneMatch(frame: CGRectMake(8,8,self.verticalLayout.frame.width-16,300));
-                                        self.verticalLayout.addSubview(updates);
-                    updates.teamOneScore.font = UIFont(name: "Kenyan-Coffee", size: 45)
-                    updates.teamTwoScore.font = UIFont(name: "Kenyan-Coffee", size: 45)
-                    updates.teamOneScore.layer.borderWidth = 3
-                    updates.teamOneScore.layer.borderColor = UIColor.whiteColor().CGColor
-                    updates.teamTwoScore.layer.borderWidth = 3
-                    updates.teamTwoScore.layer.borderColor = UIColor.whiteColor().CGColor
+                    //updates.teamOneScore.font = UIFont(name: "Kenyan-Coffee", size: 45)
+                    //updates.teamTwoScore.font = UIFont(name: "Kenyan-Coffee", size: 45)
+                    //updates.teamOneScore.layer.borderWidth = 3
+                    //updates.teamOneScore.layer.borderColor = UIColor.whiteColor().CGColor
+                    //updates.teamTwoScore.layer.borderWidth = 3
+                    //updates.teamTwoScore.layer.borderColor = UIColor.whiteColor().CGColor
                     
                     updates.team1image.image = UIImage(named: "t" + json["latestmatch"]["team1id"].string! + ".png")
                     updates.team2image.image = UIImage(named: "t" + json["latestmatch"]["team2id"].string! + ".png")
+                    
+                    self.verticalLayout.addSubview(updates)
                 }
                 
                 if((json["news"]["id"].string) != nil) {

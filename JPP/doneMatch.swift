@@ -36,12 +36,14 @@ import UIKit
         self.addSubview(sortnewview);
         
         // font and border to score
-        self.teamOneScore.font = UIFont(name: "Kenyan-Coffee", size: 45)
-        self.teamTwoScore.font = UIFont(name: "Kenyan-Coffee", size: 45)
-        self.teamOneScore.layer.borderWidth = borderWidth
-        self.teamOneScore.layer.borderColor = UIColor.whiteColor().CGColor
-        self.teamTwoScore.layer.borderWidth = borderWidth
-        self.teamTwoScore.layer.borderColor = UIColor.whiteColor().CGColor
+        //self.teamOneScore.font = UIFont(name: "Kenyan-Coffee", size: 45)
+        //self.teamTwoScore.font = UIFont(name: "Kenyan-Coffee", size: 45)
+        //self.teamOneScore.layer.borderWidth = borderWidth
+        //self.teamOneScore.layer.borderColor = UIColor.whiteColor().CGColor
+        //self.teamTwoScore.layer.borderWidth = borderWidth
+        //self.teamTwoScore.layer.borderColor = UIColor.whiteColor().CGColor
+        
+        //self.teamOneScore.attributedText = NSAttributedString(string: "38", attributes: [NSForegroundColorAttributeName : PinkColor, NSStrokeColorAttributeName : UIColor.whiteColor(), NSStrokeWidthAttributeName : 3, NSFontAttributeName : UIFont(name: "Kenyan-Coffee", size: 45)!])
         
     }
     
