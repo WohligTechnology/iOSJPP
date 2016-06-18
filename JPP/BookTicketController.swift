@@ -9,19 +9,20 @@
 import UIKit
 
 class BookTicketController: UIViewController {
-
+    
+    public var url: NSURL?
     @IBOutlet weak var webView: UIWebView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        var url: NSURL!;
-        if(GlobalBookTicketURL == "")
-        {
-            url = NSURL (string:  "http://in.bookmyshow.com/sports/kabaddi/jaipur-pink-panthers/?utm_source=web_prokabaddi&utm_medium=referral&utm_campaign=web_prokabaddi_011816");
-        }
-        else
-        {
-            url = NSURL (string:  GlobalBookTicketURL);
-        }
+        
+//        if(GlobalBookTicketURL == "")
+//        {
+//            url = NSURL (string:  "http://in.bookmyshow.com/sports/kabaddi/jaipur-pink-panthers/?utm_source=web_prokabaddi&utm_medium=referral&utm_campaign=web_prokabaddi_011816");
+//        }
+//        else
+//        {
+//            url = NSURL (string:  GlobalBookTicketURL);
+//        }
         let requestObj = NSURLRequest(URL: url!);
         webView.loadRequest(requestObj);
 

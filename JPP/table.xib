@@ -104,6 +104,7 @@
                 <constraint firstAttribute="trailing" secondItem="2Hu-pa-83X" secondAttribute="trailing" id="c08-SE-aAA"/>
                 <constraint firstAttribute="bottom" secondItem="2Hu-pa-83X" secondAttribute="bottom" id="rXY-q4-Ajx"/>
             </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="445" y="1.5"/>
         </view>

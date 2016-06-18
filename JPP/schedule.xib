@@ -111,8 +111,8 @@
                         <constraint firstAttribute="height" constant="34" id="3P4-eb-tSR"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SCHEDULE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oaa-vd-nht">
-                    <rect key="frame" x="8" y="0.0" width="412" height="30"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="SCHEDULE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oaa-vd-nht">
+                    <rect key="frame" x="8" y="0.0" width="412" height="24"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="yHG-YY-W9p"/>
                     </constraints>

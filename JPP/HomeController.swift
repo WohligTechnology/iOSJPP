@@ -233,7 +233,7 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                 }
                 
                 // SIGN UP SECTION
-                let signupsection = signupSection(frame: CGRectMake(8, 8, self.verticalLayout.frame.size.width - 16, 80))
+                let signupsection = signupSection(frame: CGRectMake(8, 8, self.verticalLayout.frame.size.width - 16, 90))
                 let sutap = UITapGestureRecognizer(target: self, action: Selector("signupTap:"))
                 sutap.delegate = self
                 signupsection.signupButton.addGestureRecognizer(sutap)

@@ -35,6 +35,7 @@ import SwiftyJSON
     @IBOutlet weak var button15: UIButton!
     @IBOutlet weak var button16: UIButton!
     @IBOutlet weak var button17: UIButton!
+    @IBOutlet weak var button18: UIButton!
     
     
     
@@ -233,15 +234,28 @@ import SwiftyJSON
 //        }
 //    }
     
+    @IBAction func checkbutton9(sender: AnyObject) {
+        if (checkb9 == 0) {
+            button9.backgroundColor = borderColor
+            favouriteplayer += players[8].name + ","
+            print("checkbox: \(favouriteplayer)")
+            checkb9 = 1
+        } else {
+            button9.backgroundColor = UIColor.whiteColor()
+            favouriteplayer = favouriteplayer.stringByReplacingOccurrencesOfString(players[8].name + ",", withString: "")
+            checkb9 = 0
+        }
+    }
+    
     @IBAction func checkbutton10(sender: AnyObject) {
         if (checkb10 == 0) {
             button10.backgroundColor = borderColor
-            favouriteplayer += players[8].name + ","
+            favouriteplayer += players[9].name + ","
             print("checkbox: \(favouriteplayer)")
             checkb10 = 1
         } else {
             button10.backgroundColor = UIColor.whiteColor()
-            favouriteplayer = favouriteplayer.stringByReplacingOccurrencesOfString(players[8].name + ",", withString: "")
+            favouriteplayer = favouriteplayer.stringByReplacingOccurrencesOfString(players[9].name + ",", withString: "")
             checkb10 = 0
         }
     }
@@ -249,12 +263,12 @@ import SwiftyJSON
     @IBAction func checkbutton11(sender: AnyObject) {
         if (checkb11 == 0) {
             button11.backgroundColor = borderColor
-            favouriteplayer += players[9].name + ","
+            favouriteplayer += players[10].name + ","
             print("checkbox: \(favouriteplayer)")
             checkb11 = 1
         } else {
             button11.backgroundColor = UIColor.whiteColor()
-            favouriteplayer = favouriteplayer.stringByReplacingOccurrencesOfString(players[9].name + ",", withString: "")
+            favouriteplayer = favouriteplayer.stringByReplacingOccurrencesOfString(players[10].name + ",", withString: "")
             checkb11 = 0
         }
     }
@@ -262,12 +276,12 @@ import SwiftyJSON
     @IBAction func checkbutton12(sender: AnyObject) {
         if (checkb12 == 0) {
             button12.backgroundColor = borderColor
-            favouriteplayer += players[10].name + ","
+            favouriteplayer += players[11].name + ","
             print("checkbox: \(favouriteplayer)")
             checkb12 = 1
         } else {
             button12.backgroundColor = UIColor.whiteColor()
-            favouriteplayer = favouriteplayer.stringByReplacingOccurrencesOfString(players[10].name + ",", withString: "")
+            favouriteplayer = favouriteplayer.stringByReplacingOccurrencesOfString(players[11].name + ",", withString: "")
             checkb12 = 0
         }
     }
@@ -275,12 +289,12 @@ import SwiftyJSON
     @IBAction func checkbutton13(sender: AnyObject) {
         if (checkb13 == 0) {
             button13.backgroundColor = borderColor
-            favouriteplayer += players[11].name + ","
+            favouriteplayer += players[12].name + ","
             print("checkbox: \(favouriteplayer)")
             checkb13 = 1
         } else {
             button13.backgroundColor = UIColor.whiteColor()
-            favouriteplayer = favouriteplayer.stringByReplacingOccurrencesOfString(players[11].name + ",", withString: "")
+            favouriteplayer = favouriteplayer.stringByReplacingOccurrencesOfString(players[12].name + ",", withString: "")
             checkb13 = 0
         }
     }
@@ -288,12 +302,12 @@ import SwiftyJSON
     @IBAction func checkbutton14(sender: AnyObject) {
         if (checkb14 == 0) {
             button14.backgroundColor = borderColor
-            favouriteplayer += players[12].name + ","
+            favouriteplayer += players[13].name + ","
             print("checkbox: \(favouriteplayer)")
             checkb14 = 1
         } else {
             button14.backgroundColor = UIColor.whiteColor()
-            favouriteplayer = favouriteplayer.stringByReplacingOccurrencesOfString(players[12].name + ",", withString: "")
+            favouriteplayer = favouriteplayer.stringByReplacingOccurrencesOfString(players[13].name + ",", withString: "")
             checkb14 = 0
         }
     }
@@ -301,26 +315,13 @@ import SwiftyJSON
     @IBAction func checkbutton15(sender: AnyObject) {
         if (checkb15 == 0) {
             button15.backgroundColor = borderColor
-            favouriteplayer += players[13].name + ","
+            favouriteplayer += players[14].name + ","
             print("checkbox: \(favouriteplayer)")
             checkb15 = 1
         } else {
             button15.backgroundColor = UIColor.whiteColor()
-            favouriteplayer = favouriteplayer.stringByReplacingOccurrencesOfString(players[13].name + ",", withString: "")
-            checkb15 = 0
-        }
-    }
-    
-    @IBAction func checkbutton16(sender: AnyObject) {
-        if (checkb16 == 0) {
-            button16.backgroundColor = borderColor
-            favouriteplayer += players[14].name + ","
-            print("checkbox: \(favouriteplayer)")
-            checkb16 = 1
-        } else {
-            button16.backgroundColor = UIColor.whiteColor()
             favouriteplayer = favouriteplayer.stringByReplacingOccurrencesOfString(players[14].name + ",", withString: "")
-            checkb16 = 0
+            checkb15 = 0
         }
     }
 
@@ -418,10 +419,10 @@ import SwiftyJSON
         button14.layer.borderColor = borderColor.CGColor
         button15.layer.borderWidth = borderWidth
         button15.layer.borderColor = borderColor.CGColor
-        button16.layer.borderWidth = borderWidth
-        button16.layer.borderColor = borderColor.CGColor
-        button17.layer.borderWidth = borderWidth
-        button17.layer.borderColor = borderColor.CGColor
+//        button16.layer.borderWidth = borderWidth
+//        button16.layer.borderColor = borderColor.CGColor
+//        button17.layer.borderWidth = borderWidth
+//        button17.layer.borderColor = borderColor.CGColor
         
         // PADDING
         let firstPad = UIView(frame: CGRectMake(0, 0, 10, self.firstName.frame.height))
