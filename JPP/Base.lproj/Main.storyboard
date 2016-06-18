@@ -960,19 +960,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="1" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6Za-72-eSP">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="1" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6Za-72-eSP">
                                 <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
+                                <color key="sectionIndexBackgroundColor" red="0.76862745099999996" green="0.94117647059999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="bookTicketsCell" rowHeight="278" id="5iO-Q3-V1T" customClass="TicketEventTableViewCell" customModule="JPP" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="bookTicketsCell" rowHeight="278" id="5iO-Q3-V1T" customClass="TicketEventTableViewCell" customModule="JPP" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="1" width="320" height="278"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5iO-Q3-V1T" id="iar-HW-iUM">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="277"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="278"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView autoresizesSubviews="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="schedule_back" translatesAutoresizingMaskIntoConstraints="NO" id="Zxv-KI-v1a">
+                                                <imageView autoresizesSubviews="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="schedule_back" translatesAutoresizingMaskIntoConstraints="NO" id="Zxv-KI-v1a">
                                                     <rect key="frame" x="8" y="4" width="304" height="261"/>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ivW-3Y-aLI">
@@ -1073,14 +1074,14 @@
                                             <outlet property="schedule" destination="ipX-xY-izs" id="8h5-Mb-wTX"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="merchandiseCell" rowHeight="153" id="njS-6k-RNK" customClass="MerchandiseTableViewCell" customModule="JPP" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="merchandiseCell" rowHeight="153" id="njS-6k-RNK" customClass="MerchandiseTableViewCell" customModule="JPP" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="279" width="320" height="153"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="njS-6k-RNK" id="YYu-PA-1aU">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="152"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="153"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="merch" translatesAutoresizingMaskIntoConstraints="NO" id="dlM-cI-q3O">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="merch" translatesAutoresizingMaskIntoConstraints="NO" id="dlM-cI-q3O">
                                                     <rect key="frame" x="8" y="0.0" width="304" height="142"/>
                                                 </imageView>
                                             </subviews>
