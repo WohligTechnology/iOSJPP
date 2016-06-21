@@ -11,8 +11,9 @@ import UIKit
 @IBDesignable class doneMatch: UIView {
     
     @IBOutlet var teamOneScore: UILabel!
-    @IBOutlet var teamTwoScore: UILabel!
+    @IBOutlet weak var teamTwoScore: UILabel!
     let borderWidth:CGFloat = 3
+    @IBOutlet weak var fulltimeText: UILabel!
     
     @IBOutlet weak var team1image: UIImageView!
     @IBOutlet weak var team2image: UIImageView!

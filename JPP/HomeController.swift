@@ -138,7 +138,7 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
 //                }
                 
                 
-                if((json["latestmatch"]["team1id"].string) != nil && json["latestmatch"]["score2"] != "") {
+                if((json["latestmatch"]["team1id"].string) != nil && json["latestmatch"]["score2"] == "") {
                     
                     let updates = seasonOpener(frame: CGRectMake(8,8,self.verticalLayout.frame.width-16,380))
                     
@@ -232,6 +232,50 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                     
                     updates.team1image.image = UIImage(named: "t" + json["latestmatch"]["team1id"].string! + ".png")
                     updates.team2image.image = UIImage(named: "t" + json["latestmatch"]["team2id"].string! + ".png")
+                    
+                    switch json["latestmatch"]["team1"].string! {
+                    case "Jaipur Pink Panthers":
+                        updates.teamOneScore.tintColor = UIColor(red: 231/255, green: 45/255, blue: 137/255, alpha: 1) //E72D89
+                    case "Bengaluru Bulls":
+                        updates.teamOneScore.textColor = UIColor(red: 176/255, green: 29/255, blue: 33/255, alpha: 1) //b01d21
+                    case "Bengal Warriors":
+                        updates.teamOneScore.textColor = UIColor(red: 242/255, green: 103/255, blue: 36/255, alpha: 1) //f26724
+                    case "Dabang Delhi":
+                        updates.teamOneScore.textColor = UIColor(red: 217/255, green: 31/255, blue: 45/255, alpha: 1) //d91f2d
+                    case "Patna Pirates":
+                        updates.teamOneScore.textColor = UIColor(red: 10/255, green: 68/255, blue: 54/255, alpha: 1) //0a4436
+                    case "Puneri Patlan":
+                        updates.teamOneScore.textColor = UIColor(red: 240/255, green: 78/255, blue: 35/255, alpha: 1) //f04e23
+                    case "Telgu Titans":
+                        updates.teamOneScore.textColor = UIColor(red: 218/255, green: 33/255, blue: 49/255, alpha: 1) //da2131
+                    case "U Mumba":
+                        updates.teamOneScore.textColor = UIColor(red: 241/255, green: 89/255, blue: 34/255, alpha: 1) //f15922
+                    default:
+                        updates.teamOneScore.textColor = UIColor(red: 231/255, green: 45/255, blue: 137/255, alpha: 1) //E72D89
+                    }
+                    
+                    switch json["latestmatch"]["team2"].string! {
+                    case "Jaipur Pink Panthers":
+                        updates.teamTwoScore.textColor = UIColor(red: 231/255, green: 45/255, blue: 137/255, alpha: 1) //E72D89
+                        print("Jaipur Pink Panthers")
+                    case "Bengaluru Bulls":
+                        updates.teamTwoScore.textColor = UIColor(red: 176/255, green: 29/255, blue: 33/255, alpha: 1) //b01d21
+                        print("Bengaluru Bulls")
+                    case "Bengal Warriors":
+                        updates.teamTwoScore.textColor = UIColor(red: 242/255, green: 103/255, blue: 36/255, alpha: 1) //f26724
+                    case "Dabang Delhi":
+                        updates.teamTwoScore.textColor = UIColor(red: 217/255, green: 31/255, blue: 45/255, alpha: 1) //d91f2d
+                    case "Patna Pirates":
+                        updates.teamTwoScore.textColor = UIColor(red: 10/255, green: 68/255, blue: 54/255, alpha: 1) //0a4436
+                    case "Puneri Patlan":
+                        updates.teamTwoScore.textColor = UIColor(red: 240/255, green: 78/255, blue: 35/255, alpha: 1) //f04e23
+                    case "Telgu Titans":
+                        updates.teamTwoScore.textColor = UIColor(red: 218/255, green: 33/255, blue: 49/255, alpha: 1) //da2131
+                    case "U Mumba":
+                        updates.teamTwoScore.textColor = UIColor(red: 241/255, green: 89/255, blue: 34/255, alpha: 1) //f15922
+                    default:
+                        updates.teamTwoScore.textColor = UIColor(red: 231/255, green: 45/255, blue: 137/255, alpha: 1) //E72D89
+                    }
                     
                     self.verticalLayout.addSubview(updates)
                 }
