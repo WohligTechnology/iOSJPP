@@ -15,6 +15,9 @@ class FanCornerController: UIViewController {
     var verticalLayout : VerticalLayout!
     @IBOutlet var scrollView: UIScrollView!
     //@IBOutlet var submitButton: UIButton!
+    
+    var fan: fanCorner!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         fanControllerGlobal = self;
@@ -30,12 +33,23 @@ class FanCornerController: UIViewController {
             height = self.scrollView.frame.height + 20
         }
         
-        let fan = fanCorner(frame: CGRectMake(8,8,self.verticalLayout.frame.width-16,height));
+        fan = fanCorner(frame: CGRectMake(8,8,self.verticalLayout.frame.width-16,height));
         self.verticalLayout.addSubview(fan);
         
         //submitButton.addTarget(self, action: "submitFormButton:", forControlEvents: .TouchUpInside)
         
+        let tapGesture = UITapGestureRecognizer(target: self, action: "tapOutsideKeyboardClose:")
+        view.addGestureRecognizer(tapGesture)
+        
         resizeView(8)
+    }
+    
+    func tapOutsideKeyboardClose(gesture: UITapGestureRecognizer) {
+        fan.firstName.resignFirstResponder()
+        fan.lastName.resignFirstResponder()
+        fan.mobile.resignFirstResponder()
+        fan.email.resignFirstResponder()
+        fan.city.resignFirstResponder()
     }
     
     func submitFormButton(sender: UIButton) {
