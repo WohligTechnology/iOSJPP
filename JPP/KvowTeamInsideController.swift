@@ -11,35 +11,49 @@ import SwiftyJSON
 class KvowTeamInsideController: UIViewController {
     
     @IBOutlet weak var playerIn: playerInside!
-    
+    var verticalLayout : VerticalLayout!
     var scroll: UIScrollView!
+    @IBOutlet weak var playerScrollView: UIScrollView!
+    let height: CGFloat = 620
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        scroll = UIScrollView(frame: CGRectMake(8, 8, self.view.frame.size.width, self.view.frame.size.height))
-//        scroll.backgroundColor = UIColor.blackColor()
-//        scroll.contentSize.height = 1000
-//        scroll.layer.zPosition = 100
-//        self.view.addSubview(scroll)
-//        
-//        scroll.addSubview(playerIn)
+        self.verticalLayout = VerticalLayout(width: self.view.frame.size.width - 8)
         
-        playerIn.playerPer.playerTitle.text = players[playerIndex].name
-        playerIn.playerPer.playerImage.image = UIImage(named: players[playerIndex].image)
-        playerIn.playerPer.playerPosition.text = players[playerIndex].type
+        let playerInsideView = playerInside(frame: CGRectMake(8, 8, verticalLayout.frame.size.width - 8, height - 8))
+        //playerInsideView.frame.size.height = playerInside.
         
-        playerIn.playerAchivements.text = players[playerIndex].achieve
-        playerIn.playerTournaments.text = players[playerIndex].tour
-        playerIn.playerNative.text = players[playerIndex].state
-        playerIn.playerAge.text = players[playerIndex].age
-        playerIn.playerJersey.text = players[playerIndex].jerseyNo
-//
+        scroll = UIScrollView(frame: CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - 65))
+        scroll.contentSize.height = self.view.frame.size.height - 65
+        //print("\(playerInsideView.frame.size.height)")
+        scroll.layer.zPosition = 100
+        
+        //playerScrollView.insertSubview(self.verticalLayout, atIndex: 0)
+        
+        //playerIn = playerInside(frame: CGRectMake(8, 8, self.view.frame.size.width, self.view.frame.size.height))
+        playerInsideView.playerPer.playerTitle.text = players[playerIndex].name
+        playerInsideView.playerPer.playerImage.image = UIImage(named: players[playerIndex].image)
+        playerInsideView.playerPer.playerPosition.text = players[playerIndex].type
+        
+        playerInsideView.playerAchivements.text = players[playerIndex].achieve
+        playerInsideView.playerTournaments.text = players[playerIndex].tour
+        playerInsideView.playerNative.text = players[playerIndex].state
+        playerInsideView.playerAge.text = players[playerIndex].age
+        playerInsideView.playerJersey.text = players[playerIndex].jerseyNo
+        
         self.title =  players[playerIndex].name
         
+        self.view.addSubview(scroll)
+        scroll.addSubview(verticalLayout)
+        self.verticalLayout.addSubview(playerInsideView)
         
+        resizeView(8)
     }
     
-    
+    func resizeView(offset:CGFloat) {
+        self.verticalLayout.layoutSubviews()
+        scroll.contentSize = CGSize(width: self.verticalLayout.frame.width, height: height + offset)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
