@@ -973,8 +973,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="278"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView autoresizesSubviews="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="schedule_back" translatesAutoresizingMaskIntoConstraints="NO" id="Zxv-KI-v1a">
-                                                    <rect key="frame" x="8" y="4" width="304" height="261"/>
+                                                <imageView autoresizesSubviews="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="schedule_back" translatesAutoresizingMaskIntoConstraints="NO" id="Zxv-KI-v1a">
+                                                    <rect key="frame" x="8" y="4" width="304" height="262"/>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ivW-3Y-aLI">
                                                     <rect key="frame" x="100" y="211" width="120" height="30"/>
@@ -1081,16 +1081,20 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="153"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="merch" translatesAutoresizingMaskIntoConstraints="NO" id="dlM-cI-q3O">
-                                                    <rect key="frame" x="8" y="0.0" width="304" height="142"/>
-                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JsI-y0-EPN">
+                                                    <rect key="frame" x="8" y="8" width="304" height="137"/>
+                                                    <state key="normal" image="merchan"/>
+                                                    <connections>
+                                                        <segue destination="S3R-VS-V10" kind="show" identifier="merchandise" id="P9f-bW-7Zd"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" red="0.76862745098039209" green="0.94117647058823528" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
-                                                <constraint firstItem="dlM-cI-q3O" firstAttribute="top" secondItem="YYu-PA-1aU" secondAttribute="top" id="7hd-4X-MeP"/>
-                                                <constraint firstAttribute="trailing" secondItem="dlM-cI-q3O" secondAttribute="trailing" constant="8" id="EHZ-m2-f6c"/>
-                                                <constraint firstAttribute="bottom" secondItem="dlM-cI-q3O" secondAttribute="bottom" constant="10" id="bRY-xC-tep"/>
-                                                <constraint firstItem="dlM-cI-q3O" firstAttribute="leading" secondItem="YYu-PA-1aU" secondAttribute="leading" constant="8" id="hPb-c1-KTx"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="JsI-y0-EPN" secondAttribute="bottom" id="0Eb-TL-9vA"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="JsI-y0-EPN" secondAttribute="trailing" id="aKp-lz-ybD"/>
+                                                <constraint firstItem="JsI-y0-EPN" firstAttribute="leading" secondItem="YYu-PA-1aU" secondAttribute="leadingMargin" id="gwU-2P-SUI"/>
+                                                <constraint firstItem="JsI-y0-EPN" firstAttribute="top" secondItem="YYu-PA-1aU" secondAttribute="topMargin" id="h3c-BE-5UN"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -1189,7 +1193,7 @@
         <!--Book Ticket-->
         <scene sceneID="8Yy-IR-r7H">
             <objects>
-                <viewController storyboardIdentifier="WebController" title="Book Ticket" id="S3R-VS-V10" customClass="BookTicketController" customModule="JPP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WebController" title="Book Ticket" useStoryboardIdentifierAsRestorationIdentifier="YES" id="S3R-VS-V10" customClass="BookTicketController" customModule="JPP" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="OZr-WE-SRc"/>
                         <viewControllerLayoutGuide type="bottom" id="MO1-OA-CkS"/>
@@ -1226,7 +1230,7 @@
         <image name="ic_action_panther" width="96" height="96"/>
         <image name="jpp" width="414" height="379"/>
         <image name="m1" width="286" height="256"/>
-        <image name="merch" width="1176" height="521"/>
+        <image name="merchan" width="1600" height="558"/>
         <image name="pp" width="400" height="372"/>
         <image name="schedule_back" width="800" height="605"/>
         <image name="t1111" width="307" height="275"/>
@@ -1235,6 +1239,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="h9U-vf-KS7"/>
-        <segue reference="OjI-yv-ygZ"/>
+        <segue reference="P9f-bW-7Zd"/>
     </inferredMetricsTieBreakers>
 </document>

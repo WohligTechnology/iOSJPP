@@ -123,6 +123,8 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
             updates.teamTwoScore.text = json["latestMatch"]["score2"].string
         }
         
+        updates.fulltimeText.text = json["latestMatch"]["totalmatchtime"].string!
+        
         switch json["latestMatch"]["team1"].string! {
         case "Jaipur Pink Panthers":
             updates.teamOneScore.tintColor = UIColor(red: 231/255, green: 45/255, blue: 137/255, alpha: 1) //E72D89
@@ -171,7 +173,7 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     func homeLoaded(json:JSON) {
-        //print(json)
+        print(json)
         if(json == 1)
         {
             let alertController = UIAlertController(title: "No Connection", message:
@@ -227,10 +229,11 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                 if(self.diffDay < 0) { self.diffMonth = self.diffMonth - 1; self.diffDay = self.diffDay + range.length }
 
 
-                //print("in diff min min")
-                //print(self.diffMin)
+                print("in diff min min")
+                print(self.diffMin)
+                print(self.diffMonth)
                 
-                if(json["latestMatch"]["score2"] == "" && self.diffMin > 0) {
+                if(json["latestMatch"]["score2"] == "" && self.diffMin > 0 && self.diffHour >= 0 && self.diffDay >= 0 && self.diffMonth >= 0) {
                     
                     let updates = seasonOpener(frame: CGRectMake(8,8,self.verticalLayout.frame.width-16,380))
                     

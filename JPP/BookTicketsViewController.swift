@@ -79,9 +79,10 @@ class BookTicketsViewController: UIViewController, UITableViewDataSource, UITabl
             let WebController:BookTicketController = segue.destinationViewController as! BookTicketController
             let theUrl = NSURL(string: allUrls[indexPath!.row])
             WebController.url = theUrl
-
-            
-            
+        } else if segue.identifier == "merchandise" {
+            let WebController:BookTicketController = segue.destinationViewController as! BookTicketController
+            let theUrl = NSURL(string: "http://www.didasportswear.com/jaipur-pink-panthers.html")
+            WebController.url = theUrl
         }
         
         
@@ -109,8 +110,5 @@ class TicketEventTableViewCell: UITableViewCell {
 }
 
 class MerchandiseTableViewCell: UITableViewCell {
-    
-    
-    
 }
 
