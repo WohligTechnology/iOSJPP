@@ -138,7 +138,7 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
             updates.teamOneScore.textColor = UIColor(red: 10/255, green: 68/255, blue: 54/255, alpha: 1) //0a4436
         case "Puneri Patlan":
             updates.teamOneScore.textColor = UIColor(red: 240/255, green: 78/255, blue: 35/255, alpha: 1) //f04e23
-        case "Telgu Titans":
+        case "Telugu Titans":
             updates.teamOneScore.textColor = UIColor(red: 218/255, green: 33/255, blue: 49/255, alpha: 1) //da2131
         case "U Mumba":
             updates.teamOneScore.textColor = UIColor(red: 241/255, green: 89/255, blue: 34/255, alpha: 1) //f15922
@@ -161,7 +161,7 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
             updates.teamTwoScore.textColor = UIColor(red: 10/255, green: 68/255, blue: 54/255, alpha: 1) //0a4436
         case "Puneri Patlan":
             updates.teamTwoScore.textColor = UIColor(red: 240/255, green: 78/255, blue: 35/255, alpha: 1) //f04e23
-        case "Telgu Titans":
+        case "Telugu Titans":
             updates.teamTwoScore.textColor = UIColor(red: 218/255, green: 33/255, blue: 49/255, alpha: 1) //da2131
         case "U Mumba":
             updates.teamTwoScore.textColor = UIColor(red: 241/255, green: 89/255, blue: 34/255, alpha: 1) //f15922
@@ -233,7 +233,11 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                 print(self.diffMin)
                 print(self.diffMonth)
                 
-                if(json["latestMatch"]["score2"] == "" && self.diffMin > 0 && self.diffHour >= 0 && self.diffDay >= 0 && self.diffMonth >= 0) {
+                if(json["latestMatch"]["score2"] == "" && self.diffMin >= 0 && self.diffHour >= 0 && self.diffDay >= 0 && self.diffMonth >= 0) {
+                    
+                    if self.diffMonth == 0 && self.diffDay == 0 && self.diffHour == 0 && self.diffMin == 0 {
+                        self.showScore(json)
+                    }else{
                     
                     let updates = seasonOpener(frame: CGRectMake(8,8,self.verticalLayout.frame.width-16,380))
                     
@@ -330,7 +334,7 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                     updates.remainingDays.text = String(self.diffDay)
                     updates.remainingHours.text = String(self.diffHour)
                     updates.remainingMins.text = String(self.diffMin)
-                    
+                    }
                 } else{
                     self.showScore(json)
                 }
