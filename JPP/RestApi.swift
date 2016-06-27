@@ -76,8 +76,6 @@ public class RestApi {
     public func getGallery( completion: ( (JSON) -> Void) )  {
         var json = JSON(1);
         do {
-            
-            
             let opt = try HTTP.GET(apiURL + "getallgallery")
             opt.start { response in
                 if let _ = response.error {

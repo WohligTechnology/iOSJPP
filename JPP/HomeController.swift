@@ -110,20 +110,20 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
         //updates.teamTwoScore.layer.borderWidth = 3
         //updates.teamTwoScore.layer.borderColor = UIColor.whiteColor().CGColor
         
-        updates.team1image.image = UIImage(named: "t" + json["team1id"].string! + ".png")
-        updates.team2image.image = UIImage(named: "t" + json["team2id"].string! + ".png")
-        if json["score1"]=="" {
+        updates.team1image.image = UIImage(named: "t" + json["latestMatch"]["team1id"].string! + ".png")
+        updates.team2image.image = UIImage(named: "t" + json["latestMatch"]["team2id"].string! + ".png")
+        if json["latestMatch"]["score1"]=="" {
             updates.teamOneScore.text = "0"
         }else{
-            updates.teamOneScore.text = json["score1"].string
+            updates.teamOneScore.text = json["latestMatch"]["score1"].string
         }
-        if json["score2"]=="" {
+        if json["latestMatch"]["score2"]=="" {
             updates.teamTwoScore.text = "0"
         }else{
-            updates.teamTwoScore.text = json["score2"].string
+            updates.teamTwoScore.text = json["latestMatch"]["score2"].string
         }
         
-        switch json["team1"].string! {
+        switch json["latestMatch"]["team1"].string! {
         case "Jaipur Pink Panthers":
             updates.teamOneScore.tintColor = UIColor(red: 231/255, green: 45/255, blue: 137/255, alpha: 1) //E72D89
         case "Bengaluru Bulls":
@@ -144,7 +144,7 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
             updates.teamOneScore.textColor = UIColor(red: 231/255, green: 45/255, blue: 137/255, alpha: 1) //E72D89
         }
         
-        switch json["team2"].string! {
+        switch json["latestMatch"]["team2"].string! {
         case "Jaipur Pink Panthers":
             updates.teamTwoScore.textColor = UIColor(red: 231/255, green: 45/255, blue: 137/255, alpha: 1) //E72D89
             print("Jaipur Pink Panthers")
@@ -171,7 +171,7 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     func homeLoaded(json:JSON) {
-        print(json)
+        //print(json)
         if(json == 1)
         {
             let alertController = UIAlertController(title: "No Connection", message:
@@ -181,7 +181,7 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
             self.presentViewController(alertController, animated: true, completion: nil)
         }
         else
-        {   self.i++
+        {   self.i += 1
             HomeJSON = json;
             dispatch_async(dispatch_get_main_queue(), {
                 if(self.i>1)
@@ -202,7 +202,7 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                 let hour = components.hour
                 let minutes = components.minute
                 
-                let datematch = dateFormatter.dateFromString(json["starttimedate"].string!)!
+                let datematch = dateFormatter.dateFromString(json["latestMatch"]["starttimedate"].string!)!
                 let unitFlags: NSCalendarUnit = [.Month, .Day, .Hour, .Minute, .Second]
                 let componentsmatch = NSCalendar.currentCalendar().components(unitFlags, fromDate: datematch)
                 print(componentsmatch)
@@ -227,26 +227,26 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                 if(self.diffDay < 0) { self.diffMonth = self.diffMonth - 1; self.diffDay = self.diffDay + range.length }
 
 
-                print("in diff min min")
-                print(self.diffMin)
+                //print("in diff min min")
+                //print(self.diffMin)
                 
-                if(json["score2"] == "" && self.diffMin > 0) {
+                if(json["latestMatch"]["score2"] == "" && self.diffMin > 0) {
                     
                     let updates = seasonOpener(frame: CGRectMake(8,8,self.verticalLayout.frame.width-16,380))
                     
                     
                     let dateFormatter = NSDateFormatter()
                     dateFormatter.dateFormat = "dd MMM yyyy, HH:mm"
-                    updates.EventTimeTop = dateFormatter.dateFromString(json["starttimedate"].string!)!
-                    updates.EventNameTop = json["team1"].string! + " VS " + json["team2"].string!;
+                    updates.EventTimeTop = dateFormatter.dateFromString(json["latestMatch"]["starttimedate"].string!)!
+                    updates.EventNameTop = json["latestMatch"]["team1"].string! + " VS " + json["latestMatch"]["team2"].string!;
                     
                     
                     self.verticalLayout.addSubview(updates)
                     //updates.addToCalender.hidden = true
-                    updates.team1Image.image = UIImage(named: "t" + json["team1id"].string! + ".png")
-                    updates.team2Image.image = UIImage(named: "t" + json["team2id"].string! + ".png")
-                    updates.matchTime.text = json["starttimedate"].string
-                    updates.matchVenue.text = json["stadium"].string
+                    updates.team1Image.image = UIImage(named: "t" + json["latestMatch"]["team1id"].string! + ".png")
+                    updates.team2Image.image = UIImage(named: "t" + json["latestMatch"]["team2id"].string! + ".png")
+                    updates.matchTime.text = json["latestMatch"]["starttimedate"].string
+                    updates.matchVenue.text = json["latestMatch"]["stadium"].string
                     
                     updates.trapLabel.text = "NEXT MATCH"
                     
@@ -262,7 +262,7 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                     let range = calendar.rangeOfUnit(.Day, inUnit: .Month, forDate: date)
                     range.length
                     
-                    let datematch = dateFormatter.dateFromString(json["starttimedate"].string!)!
+                    let datematch = dateFormatter.dateFromString(json["latestMatch"]["starttimedate"].string!)!
                     let unitFlags: NSCalendarUnit = [.Month, .Day, .Hour, .Minute, .Second]
                     let componentsmatch = NSCalendar.currentCalendar().components(unitFlags, fromDate: datematch)
                     
@@ -298,19 +298,19 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                         
                         if(diffDay < 0) { diffMonth = diffMonth - 1; diffDay = diffDay + range.length }
                         
-                        print(diffDay)
-                        print(diffHour)
-                        print(diffMin)
+                        //print(diffDay)
+                        //print(diffHour)
+                        //print(diffMin)
                         
                         updates.remainingMonths.text = String(diffMonth)
                         updates.remainingDays.text = String(diffDay)
                         updates.remainingHours.text = String(diffHour)
                         updates.remainingMins.text = String(diffMin)
                         if(diffMin <= 0 && diffHour <= 0 && diffDay <= 0){
-                            print("start match")
+                            //print("start match")
                             self.refresh(self.refeshController)
                         }else{
-                            print("still on")
+                            //print("still on")
 //                            updates.removeFromSuperview()
 
                         }
@@ -328,7 +328,7 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                     updates.remainingHours.text = String(self.diffHour)
                     updates.remainingMins.text = String(self.diffMin)
                     
-                }else{
+                } else{
                     self.showScore(json)
                 }
                 
@@ -396,8 +396,7 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                 let topSpaceinPink = 8;
                 let spacingPink = 3;
                 
-                
-                for(var i=0;i<json["points"].count;i++)
+                for(var i = 0; i<json["points"].count; i++)
                 {
                     
                     let topDistance = topSpaceinPink+spacingPink+((44+spacingPink)*(i+1));
@@ -474,7 +473,7 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
     
     func callhome() {
         self.view.addSubview(loaderGlo)
-        rest.getHomeMatch(homeLoaded)
+        rest.getHome(homeLoaded)
     }
     
     func refresh(refreshControl: UIRefreshControl) {
