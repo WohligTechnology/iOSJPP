@@ -174,9 +174,30 @@ public class RestApi {
 
     
     func getHome(completion: ( (JSON) -> Void)) {
+        
         var json = JSON(1);
         do {
             let opt = try HTTP.GET(apiURL + "getHomeContent")
+            opt.start { response in
+                if let _ = response.error {
+                    completion(json);
+                }
+                else
+                {
+                    json  = JSON(data: response.data)
+                    completion(json);
+                }
+            }
+        } catch _ {
+            completion(json);
+        }
+    }
+    
+    
+    func getHomeMatch(completion: ( (JSON) -> Void)) {
+        var json = JSON(1);
+        do {
+            let opt = try HTTP.GET(apiURL + "getLatestMatch")
             opt.start { response in
                 if let _ = response.error {
                     completion(json);
