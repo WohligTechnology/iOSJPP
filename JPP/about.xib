@@ -23,7 +23,7 @@
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nLM-Bn-hRo">
-                    <rect key="frame" x="8" y="190" width="304" height="321"/>
+                    <rect key="frame" x="8" y="190" width="304" height="331"/>
                     <string key="text">Jaipur Pink Panthers is a professional kabaddi team based in Jaipur, Rajasthan that competes in the Pro Kabaddi League.
  
 Founded: 2014
@@ -36,7 +36,7 @@ Captain: Jasvir Singh
  
 Home ground: Sawai Mansingh stadium, Jaipur
  
-Jaipur Pink Panthers are the champions of the inaugural season of the Pro Kabaddi League in 2014</string>
+Jaipur Pink Panthers are the champions of the first season of the Pro Kabaddi League in 2014</string>
                     <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="15"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
@@ -47,7 +47,7 @@ Jaipur Pink Panthers are the champions of the inaugural season of the Pro Kabadd
                 <constraint firstItem="nLM-Bn-hRo" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" id="1eq-x3-qDU"/>
                 <constraint firstItem="nLM-Bn-hRo" firstAttribute="top" secondItem="MoV-Eo-giM" secondAttribute="bottom" constant="7" id="5AN-o6-pVW"/>
                 <constraint firstAttribute="trailing" secondItem="MoV-Eo-giM" secondAttribute="trailing" id="KKc-ds-Ftf"/>
-                <constraint firstAttribute="bottom" secondItem="nLM-Bn-hRo" secondAttribute="bottom" constant="20" id="KcJ-2K-cWV"/>
+                <constraint firstAttribute="bottom" secondItem="nLM-Bn-hRo" secondAttribute="bottom" constant="10" id="KcJ-2K-cWV"/>
                 <constraint firstItem="MoV-Eo-giM" firstAttribute="centerX" secondItem="nLM-Bn-hRo" secondAttribute="centerX" id="PBP-MQ-QpL"/>
                 <constraint firstItem="MoV-Eo-giM" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="jpS-5S-7KK"/>
                 <constraint firstItem="MoV-Eo-giM" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="lSi-8Y-diU"/>

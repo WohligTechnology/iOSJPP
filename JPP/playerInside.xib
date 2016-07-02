@@ -69,7 +69,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jaipur" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n8Y-HL-nxy">
-                                                    <rect key="frame" x="44" y="9" width="22" height="21"/>
+                                                    <rect key="frame" x="40" y="9" width="22" height="21"/>
                                                     <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="11"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -77,7 +77,7 @@
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
-                                                <constraint firstItem="n8Y-HL-nxy" firstAttribute="leading" secondItem="Xdm-O4-lpV" secondAttribute="trailing" constant="6" id="5hP-xR-APb"/>
+                                                <constraint firstItem="n8Y-HL-nxy" firstAttribute="leading" secondItem="Xdm-O4-lpV" secondAttribute="trailing" constant="2" id="5hP-xR-APb"/>
                                                 <constraint firstItem="Xdm-O4-lpV" firstAttribute="leading" secondItem="yjE-uc-9YA" secondAttribute="leadingMargin" id="YwH-yu-Z3m"/>
                                                 <constraint firstItem="Xdm-O4-lpV" firstAttribute="firstBaseline" secondItem="n8Y-HL-nxy" secondAttribute="firstBaseline" id="c8y-bi-0q8"/>
                                                 <constraint firstItem="Xdm-O4-lpV" firstAttribute="centerY" secondItem="yjE-uc-9YA" secondAttribute="centerY" id="mJt-K3-fUj"/>
