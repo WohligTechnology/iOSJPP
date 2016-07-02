@@ -444,8 +444,16 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                     
                     PinkBox.addSubview(insideTable);
                 }
-                self.resizeView(8);
                 
+                // SPONSERS SECTION
+                let sponserView = UIView(frame: CGRectMake(8, 8, self.view.frame.size.width - 16, 80))
+                let sponserimage = UIImageView(frame: CGRectMake(0, 0, self.view.frame.size.width - 16, 80))
+                sponserimage.image = UIImage(named: "sponsers")
+                sponserimage.contentMode = UIViewContentMode.ScaleAspectFit
+                sponserView.addSubview(sponserimage)
+                self.verticalLayout.addSubview(sponserView)
+                
+                self.resizeView(8);
             })
             
             dispatch_async(dispatch_get_main_queue(), {
