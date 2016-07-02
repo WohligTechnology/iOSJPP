@@ -87,13 +87,13 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SIGN UP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hlX-J5-OtV">
-                    <rect key="frame" x="16" y="15" width="351" height="32"/>
+                    <rect key="frame" x="16" y="15" width="341" height="32"/>
                     <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="21"/>
                     <color key="textColor" red="0.93333333333333335" green="0.29019607843137252" blue="0.60784313725490191" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TKT-Vw-tSm">
-                    <rect key="frame" x="16" y="192" width="289" height="35"/>
+                    <rect key="frame" x="16" y="192" width="279" height="35"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="35" id="s8B-F9-KQ5"/>
                     </constraints>
@@ -107,7 +107,7 @@
                     </userDefinedRuntimeAttributes>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="47N-Tx-Jtp">
-                    <rect key="frame" x="16" y="242" width="289" height="35"/>
+                    <rect key="frame" x="16" y="242" width="279" height="35"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="35" id="brB-Pi-SD2"/>
                     </constraints>
@@ -121,7 +121,7 @@
                     </userDefinedRuntimeAttributes>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mobile Number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xTF-t2-5lb">
-                    <rect key="frame" x="16" y="292" width="289" height="35"/>
+                    <rect key="frame" x="16" y="292" width="279" height="35"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="35" id="cmB-1e-Mx5"/>
                     </constraints>
@@ -135,7 +135,7 @@
                     </userDefinedRuntimeAttributes>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email Address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UyJ-86-G0t">
-                    <rect key="frame" x="16" y="342" width="289" height="35"/>
+                    <rect key="frame" x="16" y="342" width="279" height="35"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="35" id="h1p-Or-ig0"/>
                     </constraints>
@@ -149,7 +149,7 @@
                     </userDefinedRuntimeAttributes>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="City" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zO9-UB-KDP">
-                    <rect key="frame" x="16" y="392" width="289" height="35"/>
+                    <rect key="frame" x="16" y="392" width="279" height="35"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="35" id="jny-Q2-cG6"/>
                     </constraints>
@@ -163,7 +163,7 @@
                     </userDefinedRuntimeAttributes>
                 </textField>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TOy-cP-aKS">
-                    <rect key="frame" x="16" y="57" width="351" height="115"/>
+                    <rect key="frame" x="16" y="57" width="341" height="115"/>
                     <string key="text">Register and get a chance to win exclusive jaipur pink panther merchandise, meet and greet with the players and home match tickets. </string>
                     <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="14"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -179,7 +179,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wei Yang Tsai" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vZ3-KD-Fsc">
-                    <rect key="frame" x="196" y="794" width="150" height="20"/>
+                    <rect key="frame" x="186" y="794" width="150" height="20"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="cBz-l6-YC2"/>
                         <constraint firstAttribute="width" constant="150" id="n6I-N4-D45"/>
@@ -189,7 +189,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stay tuned to our weekly contest on social mediamedia and stand a chance to win exclusive merchandise! " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eb6-gf-5WC">
-                    <rect key="frame" x="19" y="859" width="337" height="42"/>
+                    <rect key="frame" x="19" y="859" width="327" height="42"/>
                     <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="14"/>
                     <color key="textColor" red="0.84313725490196079" green="0.21568627450980393" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
@@ -226,10 +226,10 @@
                     </connections>
                 </button>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="zCm-A9-cZY">
-                    <rect key="frame" x="16" y="475" width="340" height="321"/>
+                    <rect key="frame" x="16" y="475" width="330" height="321"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="lC2-jX-Ja8">
-                            <rect key="frame" x="0.0" y="0.0" width="340" height="25"/>
+                            <rect key="frame" x="0.0" y="0.0" width="330" height="25"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t4M-si-NtQ">
                                     <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
@@ -240,8 +240,8 @@
                                     </constraints>
                                     <variation key="default">
                                         <mask key="constraints">
-                                            <exclude reference="tUC-vA-GQg"/>
                                             <exclude reference="kre-gY-6bt"/>
+                                            <exclude reference="tUC-vA-GQg"/>
                                         </mask>
                                     </variation>
                                     <connections>
@@ -249,17 +249,17 @@
                                     </connections>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="wnK-OV-Eje">
-                                    <rect key="frame" x="35" y="0.0" width="130" height="25"/>
+                                    <rect key="frame" x="35" y="0.0" width="120" height="25"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="25" id="5sA-ms-Z5H"/>
-                                        <constraint firstAttribute="width" constant="130" id="brQ-gl-zX6"/>
+                                        <constraint firstAttribute="width" constant="120" id="fdq-Em-uaq"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="14"/>
+                                    <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="12"/>
                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="xwu-3a-sAY">
-                                    <rect key="frame" x="175" y="0.0" width="165" height="25"/>
+                                    <rect key="frame" x="165" y="0.0" width="165" height="25"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uUL-JS-BX6">
                                             <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
@@ -282,18 +282,9 @@
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Xmh-wJ-rkW">
                                             <rect key="frame" x="35" y="0.0" width="130" height="25"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="40" id="Nx6-nj-K1a"/>
-                                                <constraint firstAttribute="width" constant="130" id="xDT-gl-IlU"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="14"/>
+                                            <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="12"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
-                                            <variation key="default">
-                                                <mask key="constraints">
-                                                    <exclude reference="Nx6-nj-K1a"/>
-                                                </mask>
-                                            </variation>
                                         </label>
                                     </subviews>
                                     <constraints>
@@ -301,9 +292,17 @@
                                     </constraints>
                                 </stackView>
                             </subviews>
+                            <constraints>
+                                <constraint firstItem="xwu-3a-sAY" firstAttribute="leading" secondItem="wnK-OV-Eje" secondAttribute="trailing" id="KVA-gw-YaO"/>
+                            </constraints>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="KVA-gw-YaO"/>
+                                </mask>
+                            </variation>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="MNw-ih-1Qf">
-                            <rect key="frame" x="0.0" y="37" width="340" height="25"/>
+                            <rect key="frame" x="0.0" y="37" width="330" height="25"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dex-dW-STy">
                                     <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
@@ -324,22 +323,16 @@
                                     </connections>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="DRD-Ro-yJd">
-                                    <rect key="frame" x="35" y="0.0" width="130" height="25"/>
+                                    <rect key="frame" x="35" y="0.0" width="120" height="25"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="40" id="FJM-TE-KVP"/>
-                                        <constraint firstAttribute="width" constant="130" id="u7Q-2Z-U7p"/>
+                                        <constraint firstAttribute="width" constant="120" id="gPw-1p-DZh"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="14"/>
+                                    <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="12"/>
                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
-                                    <variation key="default">
-                                        <mask key="constraints">
-                                            <exclude reference="FJM-TE-KVP"/>
-                                        </mask>
-                                    </variation>
                                 </label>
                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8nI-YT-sVh">
-                                    <rect key="frame" x="175" y="0.0" width="165" height="25"/>
+                                    <rect key="frame" x="165" y="0.0" width="165" height="25"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FFc-pp-KkD">
                                             <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
@@ -362,18 +355,9 @@
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="GC5-0D-McY">
                                             <rect key="frame" x="35" y="0.0" width="130" height="25"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="40" id="2r6-i0-cWk"/>
-                                                <constraint firstAttribute="width" constant="130" id="PY0-7m-zEM"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="14"/>
+                                            <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="12"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
-                                            <variation key="default">
-                                                <mask key="constraints">
-                                                    <exclude reference="2r6-i0-cWk"/>
-                                                </mask>
-                                            </variation>
                                         </label>
                                     </subviews>
                                     <constraints>
@@ -383,7 +367,7 @@
                             </subviews>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ftj-vN-q0H">
-                            <rect key="frame" x="0.0" y="74" width="340" height="25"/>
+                            <rect key="frame" x="0.0" y="74" width="330" height="25"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BuM-S9-E1i">
                                     <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
@@ -404,22 +388,16 @@
                                     </connections>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Svx-57-UBl">
-                                    <rect key="frame" x="35" y="0.0" width="130" height="25"/>
+                                    <rect key="frame" x="35" y="0.0" width="120" height="25"/>
                                     <constraints>
-                                        <constraint firstAttribute="width" constant="130" id="IoO-of-vnk"/>
-                                        <constraint firstAttribute="height" constant="40" id="V2Q-60-bwo"/>
+                                        <constraint firstAttribute="width" constant="120" id="Kco-l9-bnJ"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="14"/>
+                                    <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="12"/>
                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
-                                    <variation key="default">
-                                        <mask key="constraints">
-                                            <exclude reference="V2Q-60-bwo"/>
-                                        </mask>
-                                    </variation>
                                 </label>
                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="2Nj-8D-DDB">
-                                    <rect key="frame" x="175" y="0.0" width="165" height="25"/>
+                                    <rect key="frame" x="165" y="0.0" width="165" height="25"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dpt-l9-4Ji">
                                             <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
@@ -440,18 +418,9 @@
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="xHO-5R-Jcx">
                                             <rect key="frame" x="35" y="0.0" width="130" height="25"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="130" id="CzS-ck-nva"/>
-                                                <constraint firstAttribute="height" constant="40" id="ImL-Re-Idh"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="14"/>
+                                            <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="12"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
-                                            <variation key="default">
-                                                <mask key="constraints">
-                                                    <exclude reference="ImL-Re-Idh"/>
-                                                </mask>
-                                            </variation>
                                         </label>
                                     </subviews>
                                     <constraints>
@@ -461,7 +430,7 @@
                             </subviews>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="STv-5O-fHh">
-                            <rect key="frame" x="0.0" y="111" width="340" height="25"/>
+                            <rect key="frame" x="0.0" y="111" width="330" height="25"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CAK-6x-9qj">
                                     <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
@@ -482,22 +451,16 @@
                                     </connections>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="lNm-0G-4Em">
-                                    <rect key="frame" x="35" y="0.0" width="130" height="25"/>
+                                    <rect key="frame" x="35" y="0.0" width="120" height="25"/>
                                     <constraints>
-                                        <constraint firstAttribute="width" constant="130" id="E7F-08-Rsp"/>
-                                        <constraint firstAttribute="height" constant="40" id="stg-BE-Zfg"/>
+                                        <constraint firstAttribute="width" constant="120" id="JVG-nd-iDK"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="14"/>
+                                    <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="12"/>
                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
-                                    <variation key="default">
-                                        <mask key="constraints">
-                                            <exclude reference="stg-BE-Zfg"/>
-                                        </mask>
-                                    </variation>
                                 </label>
                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="mfO-ke-BDP">
-                                    <rect key="frame" x="175" y="0.0" width="165" height="25"/>
+                                    <rect key="frame" x="165" y="0.0" width="165" height="25"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mMi-XL-jIQ">
                                             <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
@@ -521,18 +484,9 @@
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="xlX-eN-Bf1">
                                             <rect key="frame" x="35" y="0.0" width="130" height="25"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="40" id="qha-Uv-ei4"/>
-                                                <constraint firstAttribute="width" constant="130" id="rTY-rw-9B3"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="14"/>
+                                            <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="12"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
-                                            <variation key="default">
-                                                <mask key="constraints">
-                                                    <exclude reference="qha-Uv-ei4"/>
-                                                </mask>
-                                            </variation>
                                         </label>
                                     </subviews>
                                     <constraints>
@@ -542,7 +496,7 @@
                             </subviews>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="wgk-Lb-AQE">
-                            <rect key="frame" x="0.0" y="148" width="340" height="25"/>
+                            <rect key="frame" x="0.0" y="148" width="330" height="25"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aEQ-os-04w">
                                     <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
@@ -563,22 +517,16 @@
                                     </connections>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="629-Lz-ugu">
-                                    <rect key="frame" x="35" y="0.0" width="130" height="25"/>
+                                    <rect key="frame" x="35" y="0.0" width="120" height="25"/>
                                     <constraints>
-                                        <constraint firstAttribute="width" constant="130" id="ZEg-Cd-WMK"/>
-                                        <constraint firstAttribute="height" constant="40" id="rUb-sm-d29"/>
+                                        <constraint firstAttribute="width" constant="120" id="Ue2-Dz-VVg"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="14"/>
+                                    <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="12"/>
                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
-                                    <variation key="default">
-                                        <mask key="constraints">
-                                            <exclude reference="rUb-sm-d29"/>
-                                        </mask>
-                                    </variation>
                                 </label>
                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZOS-dK-Cdv">
-                                    <rect key="frame" x="175" y="0.0" width="165" height="25"/>
+                                    <rect key="frame" x="165" y="0.0" width="165" height="25"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a6I-Of-AqG">
                                             <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
@@ -602,18 +550,9 @@
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="iZG-Yp-qLx">
                                             <rect key="frame" x="35" y="0.0" width="130" height="25"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="40" id="QEJ-92-FNI"/>
-                                                <constraint firstAttribute="width" constant="130" id="erx-P3-4Wg"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="14"/>
+                                            <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="12"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
-                                            <variation key="default">
-                                                <mask key="constraints">
-                                                    <exclude reference="QEJ-92-FNI"/>
-                                                </mask>
-                                            </variation>
                                         </label>
                                     </subviews>
                                     <constraints>
@@ -623,7 +562,7 @@
                             </subviews>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="xzV-cv-Pzb">
-                            <rect key="frame" x="0.0" y="185" width="340" height="25"/>
+                            <rect key="frame" x="0.0" y="185" width="330" height="25"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eI0-mP-FRh">
                                     <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
@@ -644,22 +583,16 @@
                                     </connections>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="bJb-UJ-haK">
-                                    <rect key="frame" x="35" y="0.0" width="130" height="25"/>
+                                    <rect key="frame" x="35" y="0.0" width="120" height="25"/>
                                     <constraints>
-                                        <constraint firstAttribute="width" constant="130" id="JjM-dg-MBw"/>
-                                        <constraint firstAttribute="height" constant="40" id="Ura-rh-Hon"/>
+                                        <constraint firstAttribute="width" constant="120" id="1FW-8y-9Tw"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="14"/>
+                                    <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="12"/>
                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
-                                    <variation key="default">
-                                        <mask key="constraints">
-                                            <exclude reference="Ura-rh-Hon"/>
-                                        </mask>
-                                    </variation>
                                 </label>
                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="b1t-x1-i1M">
-                                    <rect key="frame" x="175" y="0.0" width="165" height="25"/>
+                                    <rect key="frame" x="165" y="0.0" width="165" height="25"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5x6-y0-kSI">
                                             <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
@@ -683,18 +616,9 @@
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="9yd-v8-ceA">
                                             <rect key="frame" x="35" y="0.0" width="130" height="25"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="40" id="5C3-cS-FxV"/>
-                                                <constraint firstAttribute="width" constant="130" id="vW6-Sb-6L5"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="14"/>
+                                            <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="12"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
-                                            <variation key="default">
-                                                <mask key="constraints">
-                                                    <exclude reference="5C3-cS-FxV"/>
-                                                </mask>
-                                            </variation>
                                         </label>
                                     </subviews>
                                     <constraints>
@@ -704,7 +628,7 @@
                             </subviews>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="cOD-8e-4Qv">
-                            <rect key="frame" x="0.0" y="222" width="340" height="25"/>
+                            <rect key="frame" x="0.0" y="222" width="330" height="25"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JsL-xa-qVL">
                                     <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
@@ -725,22 +649,16 @@
                                     </connections>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="aAr-RC-q7K">
-                                    <rect key="frame" x="35" y="0.0" width="130" height="25"/>
+                                    <rect key="frame" x="35" y="0.0" width="120" height="25"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="40" id="5zj-rO-WW1"/>
-                                        <constraint firstAttribute="width" constant="130" id="vwm-5M-8ii"/>
+                                        <constraint firstAttribute="width" constant="120" id="l7R-ie-SFC"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="14"/>
+                                    <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="12"/>
                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
-                                    <variation key="default">
-                                        <mask key="constraints">
-                                            <exclude reference="5zj-rO-WW1"/>
-                                        </mask>
-                                    </variation>
                                 </label>
                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="JJA-6z-Bg0">
-                                    <rect key="frame" x="175" y="0.0" width="165" height="25"/>
+                                    <rect key="frame" x="165" y="0.0" width="165" height="25"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RgL-Ln-yPl">
                                             <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
@@ -764,18 +682,9 @@
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="TVL-v3-37j">
                                             <rect key="frame" x="35" y="0.0" width="130" height="25"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="130" id="1ms-4c-Ue1"/>
-                                                <constraint firstAttribute="height" constant="40" id="a2a-rx-u77"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="14"/>
+                                            <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="12"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
-                                            <variation key="default">
-                                                <mask key="constraints">
-                                                    <exclude reference="a2a-rx-u77"/>
-                                                </mask>
-                                            </variation>
                                         </label>
                                     </subviews>
                                     <constraints>
@@ -785,7 +694,7 @@
                             </subviews>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="2Ps-Eg-QTr">
-                            <rect key="frame" x="0.0" y="259" width="340" height="25"/>
+                            <rect key="frame" x="0.0" y="259" width="330" height="25"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w1U-We-SZv">
                                     <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
@@ -806,22 +715,16 @@
                                     </connections>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="bps-oj-CaL">
-                                    <rect key="frame" x="35" y="0.0" width="130" height="25"/>
+                                    <rect key="frame" x="35" y="0.0" width="120" height="25"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="40" id="m3N-iD-Dd2"/>
-                                        <constraint firstAttribute="width" constant="130" id="qLr-TR-etO"/>
+                                        <constraint firstAttribute="width" constant="120" id="MOF-YY-dwy"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="14"/>
+                                    <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="12"/>
                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
-                                    <variation key="default">
-                                        <mask key="constraints">
-                                            <exclude reference="m3N-iD-Dd2"/>
-                                        </mask>
-                                    </variation>
                                 </label>
                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Hn6-yl-Z8o">
-                                    <rect key="frame" x="175" y="0.0" width="165" height="25"/>
+                                    <rect key="frame" x="165" y="0.0" width="165" height="25"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vVB-qC-Zwx">
                                             <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
@@ -842,18 +745,9 @@
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="ykt-mb-VgE">
                                             <rect key="frame" x="35" y="0.0" width="130" height="25"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="130" id="Tdw-QN-hKi"/>
-                                                <constraint firstAttribute="height" constant="40" id="YVV-DC-XQZ"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="14"/>
+                                            <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="12"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
-                                            <variation key="default">
-                                                <mask key="constraints">
-                                                    <exclude reference="YVV-DC-XQZ"/>
-                                                </mask>
-                                            </variation>
                                         </label>
                                     </subviews>
                                     <constraints>
@@ -863,10 +757,10 @@
                             </subviews>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="HN3-35-74H">
-                            <rect key="frame" x="0.0" y="296" width="340" height="25"/>
+                            <rect key="frame" x="0.0" y="296" width="330" height="25"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fyR-KF-822">
-                                    <rect key="frame" x="0.0" y="0.0" width="340" height="25"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="330" height="25"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ji-sa-K4y">
                                             <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
@@ -884,22 +778,16 @@
                                             </variation>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="yAG-Bc-T8z">
-                                            <rect key="frame" x="35" y="0.0" width="130" height="25"/>
+                                            <rect key="frame" x="35" y="0.0" width="120" height="25"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="130" id="Uu6-3Q-VkT"/>
-                                                <constraint firstAttribute="height" constant="40" id="Y0z-8p-jQR"/>
+                                                <constraint firstAttribute="width" constant="120" id="RFG-rx-3nW"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="14"/>
+                                            <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="12"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
-                                            <variation key="default">
-                                                <mask key="constraints">
-                                                    <exclude reference="Y0z-8p-jQR"/>
-                                                </mask>
-                                            </variation>
                                         </label>
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="HDk-pA-zhU">
-                                            <rect key="frame" x="175" y="0.0" width="165" height="25"/>
+                                            <rect key="frame" x="165" y="0.0" width="165" height="25"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lcy-1v-tHN">
                                                     <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
@@ -920,18 +808,9 @@
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="6V9-0z-Fpg">
                                                     <rect key="frame" x="35" y="0.0" width="130" height="25"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="40" id="WYn-bl-ile"/>
-                                                        <constraint firstAttribute="width" constant="130" id="rz5-HU-XtG"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="12"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
-                                                    <variation key="default">
-                                                        <mask key="constraints">
-                                                            <exclude reference="WYn-bl-ile"/>
-                                                        </mask>
-                                                    </variation>
                                                 </label>
                                             </subviews>
                                             <constraints>
@@ -1009,7 +888,7 @@
                     <exclude reference="XIB-Lr-2rz"/>
                 </mask>
             </variation>
-            <point key="canvasLocation" x="538.5" y="435"/>
+            <point key="canvasLocation" x="129.5" y="422"/>
         </view>
     </objects>
     <resources>
