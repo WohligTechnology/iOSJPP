@@ -19,11 +19,11 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="340" height="229"/>
+            <rect key="frame" x="0.0" y="0.0" width="340" height="356"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum..." lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PlO-dy-pip">
-                    <rect key="frame" x="8" y="145" width="324" height="57"/>
+                    <rect key="frame" x="8" y="272" width="324" height="57"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="57" id="g6J-Vy-ZgN"/>
                     </constraints>
@@ -32,13 +32,13 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView autoresizesSubviews="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loadingimages" translatesAutoresizingMaskIntoConstraints="NO" id="0Es-M7-7LR">
-                    <rect key="frame" x="0.0" y="0.0" width="340" height="143"/>
+                    <rect key="frame" x="0.0" y="0.0" width="340" height="270"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="143" id="a2a-Mc-lDb"/>
+                        <constraint firstAttribute="height" constant="270" id="a2a-Mc-lDb"/>
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="14 August 2015" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sMN-Dg-jzj">
-                    <rect key="frame" x="211" y="200" width="121" height="26"/>
+                    <rect key="frame" x="211" y="330" width="121" height="26"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="121" id="H0z-h4-MiG"/>
                         <constraint firstAttribute="height" constant="26" id="qYL-S7-5bc"/>
@@ -52,16 +52,16 @@
             <constraints>
                 <constraint firstItem="0Es-M7-7LR" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="1Qb-2N-F4w"/>
                 <constraint firstAttribute="trailing" secondItem="0Es-M7-7LR" secondAttribute="trailing" id="3lQ-Jy-pl3"/>
-                <constraint firstItem="sMN-Dg-jzj" firstAttribute="top" secondItem="0Es-M7-7LR" secondAttribute="bottom" constant="57" id="6h5-eU-P5G"/>
                 <constraint firstItem="PlO-dy-pip" firstAttribute="top" secondItem="0Es-M7-7LR" secondAttribute="bottom" constant="2" id="9Xl-QV-s4R"/>
                 <constraint firstAttribute="trailing" secondItem="sMN-Dg-jzj" secondAttribute="trailing" constant="8" id="Nvf-44-fl6"/>
+                <constraint firstItem="sMN-Dg-jzj" firstAttribute="top" secondItem="PlO-dy-pip" secondAttribute="bottom" constant="1" id="ORK-5V-dfj"/>
                 <constraint firstItem="PlO-dy-pip" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="j7z-R6-7cI"/>
                 <constraint firstItem="0Es-M7-7LR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="kfF-X0-MfR"/>
-                <constraint firstItem="sMN-Dg-jzj" firstAttribute="top" secondItem="0Es-M7-7LR" secondAttribute="bottom" constant="57" id="qVL-sk-2rd"/>
                 <constraint firstAttribute="trailing" secondItem="PlO-dy-pip" secondAttribute="trailing" constant="8" id="xqf-cH-Tga"/>
+                <constraint firstItem="PlO-dy-pip" firstAttribute="top" secondItem="0Es-M7-7LR" secondAttribute="bottom" constant="2" id="yE8-7Z-9kO"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="279" y="181.5"/>
+            <point key="canvasLocation" x="279" y="245"/>
         </view>
     </objects>
     <resources>

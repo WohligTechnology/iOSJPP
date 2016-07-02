@@ -55,14 +55,14 @@ class NewsController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        tableView.rowHeight = 240.0
+        tableView.rowHeight = 370.0
         tableView.separatorStyle = UITableViewCellSeparatorStyle.None
         tableView.tableFooterView = UIView()
         let cell = tableView.dequeueReusableCellWithIdentifier("mediaCell", forIndexPath: indexPath)
         cell.selectionStyle = UITableViewCellSelectionStyle.None
         
         if((newsJSON[indexPath.row]["name"].string) != nil) {
-            let mediaBox = media(frame: CGRectMake(0,8,self.view.frame.width-16,230));
+            let mediaBox = media(frame: CGRectMake(0,8,self.view.frame.width-16,360));
 //            mediaBox.mediaTitle.text = newsJSON[indexPath.row]["name"].string
             mediaBox.mediaDesc.text = newsJSON[indexPath.row]["name"].string!
             mediaBox.mediaDate.text = newsJSON[indexPath.row]["timestamp"].string
