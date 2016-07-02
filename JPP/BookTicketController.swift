@@ -10,7 +10,7 @@ import UIKit
 
 class BookTicketController: UIViewController {
     
-    public var url: NSURL?
+    var url: NSURL?
     @IBOutlet weak var webView: UIWebView!
     override func viewDidLoad() {
         super.viewDidLoad()

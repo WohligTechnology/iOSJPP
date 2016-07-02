@@ -380,10 +380,8 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                 tableHeader.tableNo.font = self.font
                 tableHeader.tableNo.text = "No."
                 
-                
                 tableHeader.tableTeam.font = self.font
                 tableHeader.tableTeam.text = "Team"
-                
                 
                 tableHeader.tablePlayed.font = self.font
                 tableHeader.tablePlayed.text = "P"
