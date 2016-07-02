@@ -342,7 +342,7 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                 
                 
                 if((json["news"]["id"].string) != nil) {
-                    let newsBox = news(frame: CGRectMake(8,8,self.verticalLayout.frame.width-16,260) );
+                    let newsBox = news(frame: CGRectMake(8,8,self.verticalLayout.frame.width-16,280) );
                     newsBox.newsDate.text = json["news"]["timestamp"].string
                     newsBox.newsSubTitle.text = json["news"]["name"].string
                     newsBox.newsDescription.text = json["news"]["content"].string
