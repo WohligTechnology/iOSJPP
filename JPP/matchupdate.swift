@@ -8,7 +8,7 @@
 
 import UIKit
 
-class macthupdate: UIView {
+@IBDesignable class matchupdate: UIView {
     
     @IBOutlet weak var matchTitle: UILabel!
     @IBOutlet weak var teamoneImage: UIImageView!
@@ -31,10 +31,10 @@ class macthupdate: UIView {
     
     func loadViewFromNib() {
         let bundle = NSBundle(forClass: self.dynamicType)
-        let nib = UINib(nibName: "macthupdate", bundle: bundle)
-        let macthupdate = nib.instantiateWithOwner(self, options: nil)[0] as! UIView
-        macthupdate.frame = bounds
-        macthupdate.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
-        self.addSubview(macthupdate);
+        let nib = UINib(nibName: "matchupdate", bundle: bundle)
+        let matchupdate = nib.instantiateWithOwner(self, options: nil)[0] as! UIView
+        matchupdate.frame = bounds
+        matchupdate.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
+        self.addSubview(matchupdate);
     }
 }

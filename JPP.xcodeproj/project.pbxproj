@@ -90,6 +90,7 @@
 		3A57CEDD1CFC5808004D612C /* seasonOpener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A57CEDC1CFC5808004D612C /* seasonOpener.swift */; };
 		3AA5E83C1D2A3B4900AEDD27 /* matchupdate.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AA5E83B1D2A3B4900AEDD27 /* matchupdate.xib */; };
 		3AA5E83E1D2A3E9800AEDD27 /* matchupdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA5E83D1D2A3E9800AEDD27 /* matchupdate.swift */; };
+		3AA5E8401D2A424600AEDD27 /* MatchUpdateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA5E83F1D2A424600AEDD27 /* MatchUpdateController.swift */; };
 		3CD47F20EEDEDD9528BA0932 /* Pods_JPP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD4C274A56DABBBF9AF41245 /* Pods_JPP.framework */; };
 		7809A3C41C64BFB900562E6A /* fanCorner.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7809A3C31C64BFB900562E6A /* fanCorner.xib */; };
 		7809A3C61C64BFCB00562E6A /* fanCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7809A3C51C64BFCB00562E6A /* fanCorner.swift */; };
@@ -203,6 +204,7 @@
 		3A57CEDC1CFC5808004D612C /* seasonOpener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = seasonOpener.swift; sourceTree = "<group>"; };
 		3AA5E83B1D2A3B4900AEDD27 /* matchupdate.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = matchupdate.xib; sourceTree = "<group>"; };
 		3AA5E83D1D2A3E9800AEDD27 /* matchupdate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = matchupdate.swift; sourceTree = "<group>"; };
+		3AA5E83F1D2A424600AEDD27 /* MatchUpdateController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchUpdateController.swift; sourceTree = "<group>"; };
 		7809A3C31C64BFB900562E6A /* fanCorner.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = fanCorner.xib; sourceTree = "<group>"; };
 		7809A3C51C64BFCB00562E6A /* fanCorner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fanCorner.swift; sourceTree = "<group>"; };
 		78238FE11C57A77E0067E7D5 /* about.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = about.swift; sourceTree = "<group>"; };
@@ -431,6 +433,7 @@
 				36F2CEB61C57722B00D0D2D6 /* AboutController.swift */,
 				C263D49B1C68688100837BA8 /* FanCornerController.swift */,
 				C257ACEB1D128009002C94F6 /* BookTicketsViewController.swift */,
+				3AA5E83F1D2A424600AEDD27 /* MatchUpdateController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -867,6 +870,7 @@
 				36B957841C5A808B00AEC0D3 /* loading.swift in Sources */,
 				36F2CEA71C57711E00D0D2D6 /* NewsController.swift in Sources */,
 				36F2CE8C1C56561F00D0D2D6 /* player.swift in Sources */,
+				3AA5E8401D2A424600AEDD27 /* MatchUpdateController.swift in Sources */,
 				36F9C1601C55EDBF003D02AB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

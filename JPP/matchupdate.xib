@@ -18,7 +18,7 @@
         </mutableArray>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="macthupdate" customModule="JPP" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="matchupdate" customModule="JPP" customModuleProvider="target">
             <connections>
                 <outlet property="matchTime" destination="SVb-ZJ-SzX" id="1yh-a2-sbG"/>
                 <outlet property="matchTitle" destination="lQY-13-RjC" id="pH3-V3-Fun"/>
@@ -155,7 +155,7 @@
                 <constraint firstAttribute="trailing" secondItem="DSD-F0-5zt" secondAttribute="trailing" constant="60" id="zdf-F0-P6c"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="55" y="349"/>
+            <point key="canvasLocation" x="549" y="362"/>
         </view>
     </objects>
     <resources>
