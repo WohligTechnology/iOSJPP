@@ -75,8 +75,8 @@ class SideMenuController: UIViewController, UITableViewDataSource, UITableViewDe
         return 1
     }
     
-    var data = ["HOME", "SEASON 4 SCHEDULE", "TICKETS & MERCHANDISE", "GALLERY", "JPP TV", "NEWS & MEDIA","KNOW YOUR PANTHERS","WALLPAPERS", "POINTS TABLE", "FAN CORNER","ABOUT"]
-    var dataimage = ["home.png", "season4.png", "tickets.png", "gallery.png", "jpptv.png", "newsicon.png","know.png","galleryinside.png","point.png", "fan.png","about.png"]
+    var data = ["HOME", "SEASON 4 SCHEDULE", "TICKETS & MERCHANDISE", "GALLERY", "JPP TV", "NEWS & MEDIA","KNOW YOUR PANTHERS","WALLPAPERS", "POINTS TABLE", "MATCH UPDATE", "FAN CORNER","ABOUT"]
+    var dataimage = ["home.png", "season4.png", "tickets.png", "gallery.png", "jpptv.png", "newsicon.png","know.png","galleryinside.png","point.png", "matchupdate.png", "fan.png","about.png"]
     
     // MARK: - UITableViewDataSource
     
@@ -121,6 +121,8 @@ class SideMenuController: UIViewController, UITableViewDataSource, UITableViewDe
         case 9:
             self.slideMenuController()?.changeMainViewController(self.fancornerController, close: true)
         case 10:
+            self.slideMenuController()?.changeMainViewController(self.fancornerController, close: true)
+        case 11:
             self.slideMenuController()?.changeMainViewController(self.aboutsController, close: true)
         default:
             self.slideMenuController()?.changeMainViewController(self.homeController, close: true)
