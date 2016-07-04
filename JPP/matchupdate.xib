@@ -18,7 +18,18 @@
         </mutableArray>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="macthupdate" customModule="JPP" customModuleProvider="target">
+            <connections>
+                <outlet property="matchTime" destination="SVb-ZJ-SzX" id="1yh-a2-sbG"/>
+                <outlet property="matchTitle" destination="lQY-13-RjC" id="pH3-V3-Fun"/>
+                <outlet property="matchTotalTime" destination="bMY-SG-Oth" id="GR7-Ci-sPd"/>
+                <outlet property="stadiumName" destination="G8a-Jz-1J8" id="M7w-qa-fb6"/>
+                <outlet property="teamoneImage" destination="ZpF-cZ-lhy" id="blZ-V6-3Rz"/>
+                <outlet property="teamoneScore" destination="4QS-vV-mRX" id="PYe-XE-tQc"/>
+                <outlet property="teamtwoImage" destination="nFj-SK-vOx" id="XBa-cg-o4P"/>
+                <outlet property="teamtwoScore" destination="DSD-F0-5zt" id="ElF-Jc-ZBy"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="OOg-Zm-BdY">
             <rect key="frame" x="0.0" y="0.0" width="426" height="322"/>
