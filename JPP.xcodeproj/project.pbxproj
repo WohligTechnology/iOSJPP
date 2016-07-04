@@ -88,6 +88,7 @@
 		3A3357541CF6E75700F074ED /* signupSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3357531CF6E75700F074ED /* signupSection.swift */; };
 		3A57CEDB1CFC454E004D612C /* seasonOpener.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A57CEDA1CFC454E004D612C /* seasonOpener.xib */; };
 		3A57CEDD1CFC5808004D612C /* seasonOpener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A57CEDC1CFC5808004D612C /* seasonOpener.swift */; };
+		3AA5E83C1D2A3B4900AEDD27 /* matchupdate.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AA5E83B1D2A3B4900AEDD27 /* matchupdate.xib */; };
 		3CD47F20EEDEDD9528BA0932 /* Pods_JPP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD4C274A56DABBBF9AF41245 /* Pods_JPP.framework */; };
 		7809A3C41C64BFB900562E6A /* fanCorner.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7809A3C31C64BFB900562E6A /* fanCorner.xib */; };
 		7809A3C61C64BFCB00562E6A /* fanCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7809A3C51C64BFCB00562E6A /* fanCorner.swift */; };
@@ -199,6 +200,7 @@
 		3A3357531CF6E75700F074ED /* signupSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = signupSection.swift; sourceTree = "<group>"; };
 		3A57CEDA1CFC454E004D612C /* seasonOpener.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = seasonOpener.xib; sourceTree = "<group>"; };
 		3A57CEDC1CFC5808004D612C /* seasonOpener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = seasonOpener.swift; sourceTree = "<group>"; };
+		3AA5E83B1D2A3B4900AEDD27 /* matchupdate.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = matchupdate.xib; sourceTree = "<group>"; };
 		7809A3C31C64BFB900562E6A /* fanCorner.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = fanCorner.xib; sourceTree = "<group>"; };
 		7809A3C51C64BFCB00562E6A /* fanCorner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fanCorner.swift; sourceTree = "<group>"; };
 		78238FE11C57A77E0067E7D5 /* about.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = about.swift; sourceTree = "<group>"; };
@@ -375,6 +377,7 @@
 		36F9C1841C5616C6003D02AB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3AA5E83A1D2A3B2E00AEDD27 /* matchupdate */,
 				3A57CED91CFC452A004D612C /* seasonOpener */,
 				3A3357501CF6E4EF00F074ED /* signupSection */,
 				3A3357491CF6D0A300F074ED /* jpptv */,
@@ -535,6 +538,14 @@
 				3A57CEDC1CFC5808004D612C /* seasonOpener.swift */,
 			);
 			name = seasonOpener;
+			sourceTree = "<group>";
+		};
+		3AA5E83A1D2A3B2E00AEDD27 /* matchupdate */ = {
+			isa = PBXGroup;
+			children = (
+				3AA5E83B1D2A3B4900AEDD27 /* matchupdate.xib */,
+			);
+			name = matchupdate;
 			sourceTree = "<group>";
 		};
 		7283620D2DBE0A487EB4AD33 /* Frameworks */ = {
@@ -699,6 +710,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AA5E83C1D2A3B4900AEDD27 /* matchupdate.xib in Resources */,
 				36F9C19D1C5641BB003D02AB /* Oswald-Bold.ttf in Resources */,
 				3A3357521CF6E54200F074ED /* signupSection.xib in Resources */,
 				36F9C19E1C5641BB003D02AB /* Oswald-Light.ttf in Resources */,
