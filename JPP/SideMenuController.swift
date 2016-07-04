@@ -20,6 +20,7 @@ class SideMenuController: UIViewController, UITableViewDataSource, UITableViewDe
     var merchandiseController:UIViewController!
     var wallpaperController:UIViewController!
     var pointController:UIViewController!
+    var matchupdateController:UIViewController!
     var fancornerController:UIViewController!
     var aboutsController:UIViewController!
     
@@ -55,6 +56,9 @@ class SideMenuController: UIViewController, UITableViewDataSource, UITableViewDe
         
         let pointController = storyboard.instantiateViewControllerWithIdentifier("point") as! PointTableController
         self.pointController = UINavigationController(rootViewController: pointController)
+        
+        let matchupdateController = storyboard.instantiateViewControllerWithIdentifier("matchupdate") as! MatchUpdateController
+        self.matchupdateController = UINavigationController(rootViewController: matchupdateController)
         
         let fancornerController = storyboard.instantiateViewControllerWithIdentifier("fanCorner") as! FanCornerController
         self.fancornerController = UINavigationController(rootViewController: fancornerController)
@@ -119,7 +123,7 @@ class SideMenuController: UIViewController, UITableViewDataSource, UITableViewDe
         case 8:
             self.slideMenuController()?.changeMainViewController(self.pointController, close: true)
         case 9:
-            self.slideMenuController()?.changeMainViewController(self.fancornerController, close: true)
+            self.slideMenuController()?.changeMainViewController(self.matchupdateController, close: true)
         case 10:
             self.slideMenuController()?.changeMainViewController(self.fancornerController, close: true)
         case 11:

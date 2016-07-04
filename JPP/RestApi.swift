@@ -111,6 +111,25 @@ public class RestApi {
         }
     }
     
+    public func getMatchUpdate( completion: ( (JSON) -> Void) )  {
+        var json = JSON(1);
+        do {
+            let opt = try HTTP.GET(apiURL + "getscheduleforiosandroidseason4")
+            opt.start { response in
+                if let _ = response.error {
+                    completion(json);
+                }
+                else
+                {
+                    json  = JSON(data: response.data)
+                    completion(json)
+                }
+            }
+        } catch _ {
+            completion(json)
+        }
+    }
+    
     public func getPointTable( completion: ( (JSON) -> Void) )  {
         var json = JSON(1);
         do {

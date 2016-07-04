@@ -20,7 +20,7 @@ class MatchUpdateController: UIViewController, UITableViewDelegate, UITableViewD
         loadingInit()
         self.view.addSubview(loaderGlo)
         
-        rest.getNews(matchupdateLoaded)
+        rest.getMatchUpdate(matchupdateLoaded)
     }
     
     var matchupdateJSON = JSON([])
@@ -33,7 +33,7 @@ class MatchUpdateController: UIViewController, UITableViewDelegate, UITableViewD
             self.presentViewController(alertController, animated: true, completion: nil)
         }
         else {
-            matchupdateJSON = json;
+            matchupdateJSON = json
             dispatch_async(dispatch_get_main_queue(),{
                 self.matchupdateTableView.reloadData()
             });
@@ -50,20 +50,17 @@ class MatchUpdateController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        tableView.rowHeight = 370.0
+        tableView.rowHeight = 330.0
         tableView.separatorStyle = UITableViewCellSeparatorStyle.None
         tableView.tableFooterView = UIView()
         let cell = tableView.dequeueReusableCellWithIdentifier("matchupdateCell", forIndexPath: indexPath)
         cell.selectionStyle = UITableViewCellSelectionStyle.None
         
-        if((matchupdateJSON[indexPath.row]["name"].string) != nil) {
-            let matchupdateView = matchupdate(frame: CGRectMake(0,8,self.view.frame.width-16,360));
-            for (let i = 1; i <= matchupdateJSON.count; i+1) {
-                matchupdateView.matchTitle.text = "MATCH - " + String(i)
-            }
-            matchupdateView.matchTitle.text = matchupdateJSON[indexPath.row]["name"].string!
-            matchupdateView.teamoneImage.hnk_setImageFromURL(rest.getImageThumbCache(matchupdateJSON[indexPath.row]["team1id"].string!))
-            matchupdateView.teamtwoImage.hnk_setImageFromURL(rest.getImageThumbCache(matchupdateJSON[indexPath.row]["team2id"].string!))
+        if((matchupdateJSON[indexPath.row]["matchtime"].string) != nil) {
+            let matchupdateView = matchupdate(frame: CGRectMake(0,0,self.view.frame.width-16,322));
+            matchupdateView.matchTitle.text = "MATCH - " + String(indexPath.row + 1)
+            matchupdateView.teamoneImage.image = UIImage(named: "t" + matchupdateJSON[indexPath.row]["team1id"].string! + ".png")
+            matchupdateView.teamtwoImage.image = UIImage(named: "t" + matchupdateJSON[indexPath.row]["team2id"].string! + ".png")
             matchupdateView.stadiumName.text = matchupdateJSON[indexPath.row]["stadium"].string
             matchupdateView.matchTime.text = matchupdateJSON[indexPath.row]["starttimedate"].string
             matchupdateView.matchTotalTime.text = matchupdateJSON[indexPath.row]["matchtime"].string

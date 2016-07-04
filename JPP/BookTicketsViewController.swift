@@ -18,6 +18,7 @@ class BookTicketsViewController: UIViewController, UITableViewDataSource, UITabl
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setNavigationBarItemText("MERCHANDISE")
+        self.view.backgroundColor = BlueColor
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,24 +28,28 @@ class BookTicketsViewController: UIViewController, UITableViewDataSource, UITabl
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return allUrls.count + 1
+        //return allUrls.count + 1
+        return 1
         
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        if indexPath.row > allUrls.count - 1 {
-           
-            let cell = tableView.dequeueReusableCellWithIdentifier("merchandiseCell") as! MerchandiseTableViewCell
-            return cell
-            
-        }
-//        print("index: \(indexPath.row)")
+//        if indexPath.row > allUrls.count - 1 {
+//           
+//            let cell = tableView.dequeueReusableCellWithIdentifier("merchandiseCell") as! MerchandiseTableViewCell
+//            return cell
+//            
+//        }
+////        print("index: \(indexPath.row)")
+//        
+//        let cell = tableView.dequeueReusableCellWithIdentifier("bookTicketsCell") as! TicketEventTableViewCell
+//        cell.matchLabel.text = "MATCH - 0" + String(indexPath.row + 1)
+//        cell.AgainstTeamLogo.image = UIImage(named: images[indexPath.row])
+//        cell.schedule.text = time[indexPath.row]
+//        return cell
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("bookTicketsCell") as! TicketEventTableViewCell
-        cell.matchLabel.text = "MATCH - 0" + String(indexPath.row + 1)
-        cell.AgainstTeamLogo.image = UIImage(named: images[indexPath.row])
-        cell.schedule.text = time[indexPath.row]
+        let cell = tableView.dequeueReusableCellWithIdentifier("merchandiseCell") as! MerchandiseTableViewCell
         return cell
         
     }
@@ -56,7 +61,8 @@ class BookTicketsViewController: UIViewController, UITableViewDataSource, UITabl
             return 150
         }
         
-        return 268
+        //return 268
+        return 150
         
     }
     
