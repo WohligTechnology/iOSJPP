@@ -48,7 +48,7 @@ class SideMenuController: UIViewController, UITableViewDataSource, UITableViewDe
         let knowTeamController = storyboard.instantiateViewControllerWithIdentifier("knowteam") as! KnowTeamController
         self.knowTeamController = UINavigationController(rootViewController: knowTeamController)
         
-        let merchandiseController = storyboard.instantiateViewControllerWithIdentifier("bookTicketsController") as! BookTicketsViewController
+        let merchandiseController = storyboard.instantiateViewControllerWithIdentifier("merchandiseST") as! MerchandiseViewController
         self.merchandiseController = UINavigationController(rootViewController: merchandiseController)
         
         let wallpaperController = storyboard.instantiateViewControllerWithIdentifier("GalleryInside") as! GalleryInsideController

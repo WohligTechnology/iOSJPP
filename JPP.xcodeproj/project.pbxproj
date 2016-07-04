@@ -91,6 +91,7 @@
 		3AA5E83C1D2A3B4900AEDD27 /* matchupdate.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AA5E83B1D2A3B4900AEDD27 /* matchupdate.xib */; };
 		3AA5E83E1D2A3E9800AEDD27 /* matchupdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA5E83D1D2A3E9800AEDD27 /* matchupdate.swift */; };
 		3AA5E8401D2A424600AEDD27 /* MatchUpdateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA5E83F1D2A424600AEDD27 /* MatchUpdateController.swift */; };
+		3AA5E8421D2A8C9200AEDD27 /* MerchandiseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA5E8411D2A8C9200AEDD27 /* MerchandiseViewController.swift */; };
 		3CD47F20EEDEDD9528BA0932 /* Pods_JPP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD4C274A56DABBBF9AF41245 /* Pods_JPP.framework */; };
 		7809A3C41C64BFB900562E6A /* fanCorner.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7809A3C31C64BFB900562E6A /* fanCorner.xib */; };
 		7809A3C61C64BFCB00562E6A /* fanCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7809A3C51C64BFCB00562E6A /* fanCorner.swift */; };
@@ -205,6 +206,7 @@
 		3AA5E83B1D2A3B4900AEDD27 /* matchupdate.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = matchupdate.xib; sourceTree = "<group>"; };
 		3AA5E83D1D2A3E9800AEDD27 /* matchupdate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = matchupdate.swift; sourceTree = "<group>"; };
 		3AA5E83F1D2A424600AEDD27 /* MatchUpdateController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchUpdateController.swift; sourceTree = "<group>"; };
+		3AA5E8411D2A8C9200AEDD27 /* MerchandiseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MerchandiseViewController.swift; sourceTree = "<group>"; };
 		7809A3C31C64BFB900562E6A /* fanCorner.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = fanCorner.xib; sourceTree = "<group>"; };
 		7809A3C51C64BFCB00562E6A /* fanCorner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fanCorner.swift; sourceTree = "<group>"; };
 		78238FE11C57A77E0067E7D5 /* about.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = about.swift; sourceTree = "<group>"; };
@@ -434,6 +436,7 @@
 				C263D49B1C68688100837BA8 /* FanCornerController.swift */,
 				C257ACEB1D128009002C94F6 /* BookTicketsViewController.swift */,
 				3AA5E83F1D2A424600AEDD27 /* MatchUpdateController.swift */,
+				3AA5E8411D2A8C9200AEDD27 /* MerchandiseViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -845,6 +848,7 @@
 				36F9C1AE1C5643DF003D02AB /* news.swift in Sources */,
 				3685BD441C5A164B00BC44D0 /* upcoming.swift in Sources */,
 				36F9C18C1C561759003D02AB /* schedule.swift in Sources */,
+				3AA5E8421D2A8C9200AEDD27 /* MerchandiseViewController.swift in Sources */,
 				360A50FE1C577A05001F7E40 /* SideMenuController.swift in Sources */,
 				7809A3C61C64BFCB00562E6A /* fanCorner.swift in Sources */,
 				366F19DC1C58F52600321669 /* bookTicket.swift in Sources */,
