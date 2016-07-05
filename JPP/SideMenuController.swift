@@ -79,8 +79,8 @@ class SideMenuController: UIViewController, UITableViewDataSource, UITableViewDe
         return 1
     }
     
-    var data = ["HOME", "SEASON 4 SCHEDULE", "TICKETS & MERCHANDISE", "GALLERY", "JPP TV", "NEWS & MEDIA","KNOW YOUR PANTHERS","WALLPAPERS", "POINTS TABLE", "MATCH UPDATE", "FAN CORNER","ABOUT"]
-    var dataimage = ["home.png", "season4.png", "tickets.png", "gallery.png", "jpptv.png", "newsicon.png","know.png","galleryinside.png","point.png", "matchupdate.png", "fan.png","about.png"]
+    var data = ["HOME", "SEASON 4 SCHEDULE", "MATCH UPDATE", "MERCHANDISE", "GALLERY", "JPP TV", "NEWS & MEDIA","KNOW YOUR PANTHERS","WALLPAPERS", "POINTS TABLE", "FAN CORNER","ABOUT"]
+    var dataimage = ["home.png", "season4.png", "matchupdate.png", "tickets.png", "gallery.png", "jpptv.png", "newsicon.png","know.png","galleryinside.png","point.png", "fan.png","about.png"]
     
     // MARK: - UITableViewDataSource
     
@@ -106,24 +106,23 @@ class SideMenuController: UIViewController, UITableViewDataSource, UITableViewDe
         case 1:
             self.slideMenuController()?.changeMainViewController(self.scheduleController, close: true)
         case 2:
-            self.slideMenuController()?.changeMainViewController(self.merchandiseController, close: true)
+            self.slideMenuController()?.changeMainViewController(self.matchupdateController, close: true)
         case 3:
-            isGalWal = 0
-            self.slideMenuController()?.changeMainViewController(self.galleryController, close: true)
+            self.slideMenuController()?.changeMainViewController(self.merchandiseController, close: true)
         case 4:
             isGalWal = 0
-            self.slideMenuController()?.changeMainViewController(self.jpptvController, close: true)
+            self.slideMenuController()?.changeMainViewController(self.galleryController, close: true)
         case 5:
-            self.slideMenuController()?.changeMainViewController(self.newsController, close: true)
-        case 6:
-            self.slideMenuController()?.changeMainViewController(self.knowTeamController, close: true)
-        case 7:
             isGalWal = 1
-            self.slideMenuController()?.changeMainViewController(self.wallpaperController, close: true)
+            self.slideMenuController()?.changeMainViewController(self.jpptvController, close: true)
+        case 6:
+            self.slideMenuController()?.changeMainViewController(self.newsController, close: true)
+        case 7:
+            self.slideMenuController()?.changeMainViewController(self.knowTeamController, close: true)
         case 8:
-            self.slideMenuController()?.changeMainViewController(self.pointController, close: true)
+            self.slideMenuController()?.changeMainViewController(self.wallpaperController, close: true)
         case 9:
-            self.slideMenuController()?.changeMainViewController(self.matchupdateController, close: true)
+            self.slideMenuController()?.changeMainViewController(self.pointController, close: true)
         case 10:
             self.slideMenuController()?.changeMainViewController(self.fancornerController, close: true)
         case 11:
