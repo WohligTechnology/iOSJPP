@@ -446,7 +446,7 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                 // SPONSERS SECTION
                 let sponserView = UIView(frame: CGRectMake(8, 8, self.view.frame.size.width - 16, 80))
                 let sponserimage = UIImageView(frame: CGRectMake(0, 0, self.view.frame.size.width - 16, 80))
-                sponserimage.image = UIImage(named: "sponsers")
+                sponserimage.image = UIImage(named: "sponsors")
                 sponserimage.contentMode = UIViewContentMode.ScaleAspectFit
                 sponserView.addSubview(sponserimage)
                 self.verticalLayout.addSubview(sponserView)
