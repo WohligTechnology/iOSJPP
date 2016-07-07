@@ -58,7 +58,7 @@ class MatchUpdateController: UIViewController, UITableViewDelegate, UITableViewD
         
         if((matchupdateJSON[indexPath.row]["matchtime"].string) != nil) {
             let matchupdateView = matchupdate(frame: CGRectMake(0,0,self.view.frame.width-16,322));
-            matchupdateView.matchTitle.text = "MATCH - " + String(indexPath.row + 1)
+            matchupdateView.matchTitle.text = "MATCH - " + String(matchupdateJSON.count - indexPath.row)
             matchupdateView.teamoneImage.image = UIImage(named: "t" + matchupdateJSON[indexPath.row]["team1id"].string! + ".png")
             matchupdateView.teamtwoImage.image = UIImage(named: "t" + matchupdateJSON[indexPath.row]["team2id"].string! + ".png")
             matchupdateView.stadiumName.text = matchupdateJSON[indexPath.row]["stadium"].string

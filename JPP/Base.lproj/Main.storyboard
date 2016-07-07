@@ -1035,7 +1035,7 @@
                                     <constraint firstAttribute="height" constant="35" id="MIg-gS-Lzk"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="16"/>
-                                <state key="normal" title="BOOK NOW">
+                                <state key="normal" title="BUY NOW">
                                     <color key="titleColor" red="0.90588235289999997" green="0.1764705882" blue="0.53725490200000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -1324,10 +1324,10 @@
             </objects>
             <point key="canvasLocation" x="760" y="1832"/>
         </scene>
-        <!--Book Ticket-->
+        <!--Book Ticket Controller-->
         <scene sceneID="8Yy-IR-r7H">
             <objects>
-                <viewController storyboardIdentifier="WebController" title="Book Ticket" useStoryboardIdentifierAsRestorationIdentifier="YES" id="S3R-VS-V10" customClass="BookTicketController" customModule="JPP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WebController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="S3R-VS-V10" customClass="BookTicketController" customModule="JPP" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="OZr-WE-SRc"/>
                         <viewControllerLayoutGuide type="bottom" id="MO1-OA-CkS"/>

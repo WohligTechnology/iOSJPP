@@ -120,6 +120,7 @@ class SideMenuController: UIViewController, UITableViewDataSource, UITableViewDe
         case 7:
             self.slideMenuController()?.changeMainViewController(self.knowTeamController, close: true)
         case 8:
+            isGalWal = 1
             self.slideMenuController()?.changeMainViewController(self.wallpaperController, close: true)
         case 9:
             self.slideMenuController()?.changeMainViewController(self.pointController, close: true)
