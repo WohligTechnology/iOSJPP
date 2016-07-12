@@ -839,7 +839,10 @@
                                 <rect key="frame" x="128" y="354" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <segue destination="CrH-OF-I8r" kind="presentation" identifier="galleryImageDetail" modalTransitionStyle="partialCurl" id="WTz-Cl-1DE"/>
+                                    <segue destination="CrH-OF-I8r" kind="show" identifier="galleryImageDetail" id="WTz-Cl-1DE">
+                                        <segue key="commit" inheritsFrom="parent" id="7yB-hJ-Aq7"/>
+                                        <segue key="preview" inheritsFrom="commit" id="Aqr-ah-WPz"/>
+                                    </segue>
                                 </connections>
                             </button>
                         </subviews>
@@ -1386,7 +1389,8 @@
         <image name="vs_pink" width="267" height="262"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="S8G-Ai-RDf"/>
+        <segue reference="WTz-Cl-1DE"/>
+        <segue reference="OjI-yv-ygZ"/>
         <segue reference="h9U-vf-KS7"/>
     </inferredMetricsTieBreakers>
 </document>
