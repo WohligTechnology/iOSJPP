@@ -17,6 +17,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="table" customModule="JPP" customModuleProvider="target">
             <connections>
+                <outlet property="tableDraw" destination="aPZ-pG-VuJ" id="4q0-t8-GIy"/>
                 <outlet property="tableLost" destination="F3r-DV-jLw" id="BSP-vC-rMd"/>
                 <outlet property="tableNo" destination="paX-RA-nnL" id="ywr-4v-vav"/>
                 <outlet property="tablePlayed" destination="bGT-CU-qne" id="yxN-AF-43I"/>

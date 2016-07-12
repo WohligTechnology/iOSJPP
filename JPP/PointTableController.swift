@@ -47,6 +47,9 @@ class PointTableController: UIViewController,UITableViewDelegate,UITableViewData
         tableHeader.tableLost.font = font
         tableHeader.tableLost.text = "L"
         
+        tableHeader.tableDraw.font = font
+        tableHeader.tableDraw.text = "D"
+        
         tableHeader.tablePoint.font = font
         tableHeader.tablePoint.text = "PTS"
         
@@ -107,6 +110,7 @@ class PointTableController: UIViewController,UITableViewDelegate,UITableViewData
                 mediaBox.tablePlayed.font = font
                 mediaBox.tableLost.font = font
                 mediaBox.tableWon.font = font
+                mediaBox.tableDraw.font = font
                 mediaBox.tablePoint.font = font
                 
                 mediaBox.tableNo.textColor = PinkColor
@@ -114,6 +118,7 @@ class PointTableController: UIViewController,UITableViewDelegate,UITableViewData
                 mediaBox.tablePlayed.textColor = PinkColor
                 mediaBox.tableWon.textColor = PinkColor
                 mediaBox.tableLost.textColor = PinkColor
+                mediaBox.tableDraw.textColor = PinkColor
                 mediaBox.tablePoint.textColor = PinkColor
                 
                 mediaBox.backgroundColor = UIColor(red: 77/255, green: 203/255, blue: 244/255, alpha: 1)
@@ -132,6 +137,7 @@ class PointTableController: UIViewController,UITableViewDelegate,UITableViewData
             mediaBox.tablePoint.text = pointJson[indexPath.row]["point"].string
             cell.addSubview(mediaBox)
         }
+        
         
         return cell
     }

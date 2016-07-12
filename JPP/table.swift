@@ -17,6 +17,7 @@ import UIKit
     @IBOutlet weak var tableLost: UILabel!
     @IBOutlet weak var tablePoint: UILabel!
     
+    @IBOutlet weak var tableDraw: UILabel!
     override init(frame: CGRect) {
         super.init(frame: frame)
         loadViewFromNib ()

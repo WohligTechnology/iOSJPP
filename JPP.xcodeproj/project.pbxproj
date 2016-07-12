@@ -19,6 +19,8 @@
 		363609A61C5C750700078DC7 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 363609A51C5C750700078DC7 /* ImageIO.framework */; };
 		363609A81C5C755B00078DC7 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 363609A71C5C755B00078DC7 /* AVFoundation.framework */; };
 		363609AA1C5C759F00078DC7 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 363609A91C5C759F00078DC7 /* SystemConfiguration.framework */; };
+		363DE0E41D34CED600906E51 /* sponsorsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363DE0E31D34CED600906E51 /* sponsorsView.swift */; };
+		363DE0E61D34CF3000906E51 /* sponsorsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 363DE0E51D34CF3000906E51 /* sponsorsView.xib */; };
 		366F19D71C58EFBD00321669 /* WebController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366F19D61C58EFBD00321669 /* WebController.swift */; };
 		366F19D91C58F32700321669 /* BookTicketController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366F19D81C58F32700321669 /* BookTicketController.swift */; };
 		366F19DC1C58F52600321669 /* bookTicket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366F19DB1C58F52600321669 /* bookTicket.swift */; };
@@ -132,6 +134,8 @@
 		363609A51C5C750700078DC7 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		363609A71C5C755B00078DC7 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		363609A91C5C759F00078DC7 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		363DE0E31D34CED600906E51 /* sponsorsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sponsorsView.swift; sourceTree = "<group>"; };
+		363DE0E51D34CF3000906E51 /* sponsorsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = sponsorsView.xib; sourceTree = "<group>"; };
 		366F19D61C58EFBD00321669 /* WebController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebController.swift; sourceTree = "<group>"; };
 		366F19D81C58F32700321669 /* BookTicketController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookTicketController.swift; sourceTree = "<group>"; };
 		366F19DB1C58F52600321669 /* bookTicket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bookTicket.swift; sourceTree = "<group>"; };
@@ -271,6 +275,15 @@
 			name = tableTrap;
 			sourceTree = "<group>";
 		};
+		363DE0E21D34CEAC00906E51 /* sponsors */ = {
+			isa = PBXGroup;
+			children = (
+				363DE0E31D34CED600906E51 /* sponsorsView.swift */,
+				363DE0E51D34CF3000906E51 /* sponsorsView.xib */,
+			);
+			name = sponsors;
+			sourceTree = "<group>";
+		};
 		366F19DA1C58F4FB00321669 /* bookTicket */ = {
 			isa = PBXGroup;
 			children = (
@@ -383,6 +396,7 @@
 		36F9C1841C5616C6003D02AB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				363DE0E21D34CEAC00906E51 /* sponsors */,
 				3AA5E83A1D2A3B2E00AEDD27 /* matchupdate */,
 				3A57CED91CFC452A004D612C /* seasonOpener */,
 				3A3357501CF6E4EF00F074ED /* signupSection */,
@@ -734,6 +748,7 @@
 				78238FE71C57AC170067E7D5 /* trapezium.xib in Resources */,
 				36F9C1A21C5641BB003D02AB /* voyagefantacad.ttf in Resources */,
 				36F9C1A31C5641BB003D02AB /* voyagefantcond.ttf in Resources */,
+				363DE0E61D34CF3000906E51 /* sponsorsView.xib in Resources */,
 				36F9C1A41C5641BB003D02AB /* voyagefantexpand.ttf in Resources */,
 				C2F0A1131C69B78500345A36 /* kenyanregular.ttf in Resources */,
 				36F9C1A51C5641BB003D02AB /* voyagefantgchrome.ttf in Resources */,
@@ -846,6 +861,7 @@
 				3A33574D1CF6D13500F074ED /* jpptv.swift in Sources */,
 				36F2CEA11C5770D400D0D2D6 /* GalleryController.swift in Sources */,
 				36F9C1AE1C5643DF003D02AB /* news.swift in Sources */,
+				363DE0E41D34CED600906E51 /* sponsorsView.swift in Sources */,
 				3685BD441C5A164B00BC44D0 /* upcoming.swift in Sources */,
 				36F9C18C1C561759003D02AB /* schedule.swift in Sources */,
 				3AA5E8421D2A8C9200AEDD27 /* MerchandiseViewController.swift in Sources */,

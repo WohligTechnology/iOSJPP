@@ -392,6 +392,9 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                 tableHeader.tableLost.font = self.font
                 tableHeader.tableLost.text = "L"
                 
+                tableHeader.tableDraw.font = self.font
+                tableHeader.tableDraw.text = "D"
+                
                 tableHeader.tablePoint.font = self.font
                 tableHeader.tablePoint.text = "PTS"
                 
@@ -426,6 +429,7 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                         insideTable.tablePlayed.font = self.font
                         insideTable.tableWon.font = self.font
                         insideTable.tableLost.font = self.font
+                        insideTable.tableDraw.font = self.font
                         insideTable.tablePoint.font = self.font
                         
                         insideTable.tableNo.textColor = PinkColor
@@ -433,6 +437,7 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                         insideTable.tablePlayed.textColor = PinkColor
                         insideTable.tableWon.textColor = PinkColor
                         insideTable.tableLost.textColor = PinkColor
+                        insideTable.tableDraw.textColor = PinkColor
                         insideTable.tablePoint.textColor = PinkColor
                         
                         insideTable.backgroundColor = UIColor(red: 77/255, green: 203/255, blue: 244/255, alpha: 1)
