@@ -136,7 +136,7 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
             updates.teamOneScore.textColor = UIColor(red: 217/255, green: 31/255, blue: 45/255, alpha: 1) //d91f2d
         case "Patna Pirates":
             updates.teamOneScore.textColor = UIColor(red: 10/255, green: 68/255, blue: 54/255, alpha: 1) //0a4436
-        case "Puneri Patlan":
+        case "Puneri Paltan":
             updates.teamOneScore.textColor = UIColor(red: 240/255, green: 78/255, blue: 35/255, alpha: 1) //f04e23
         case "Telugu Titans":
             updates.teamOneScore.textColor = UIColor(red: 218/255, green: 33/255, blue: 49/255, alpha: 1) //da2131
@@ -159,7 +159,7 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
             updates.teamTwoScore.textColor = UIColor(red: 217/255, green: 31/255, blue: 45/255, alpha: 1) //d91f2d
         case "Patna Pirates":
             updates.teamTwoScore.textColor = UIColor(red: 10/255, green: 68/255, blue: 54/255, alpha: 1) //0a4436
-        case "Puneri Patlan":
+        case "Puneri Paltan":
             updates.teamTwoScore.textColor = UIColor(red: 240/255, green: 78/255, blue: 35/255, alpha: 1) //f04e23
         case "Telugu Titans":
             updates.teamTwoScore.textColor = UIColor(red: 218/255, green: 33/255, blue: 49/255, alpha: 1) //da2131
