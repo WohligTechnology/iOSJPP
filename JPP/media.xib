@@ -15,15 +15,16 @@
                 <outlet property="mediaDate" destination="sMN-Dg-jzj" id="XET-aY-MBz"/>
                 <outlet property="mediaDesc" destination="PlO-dy-pip" id="WkF-qL-riv"/>
                 <outlet property="mediaImage" destination="0Es-M7-7LR" id="LKZ-DY-qa5"/>
+                <outlet property="newsImage" destination="vrp-KY-N4J" id="xEo-iR-V5m"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="340" height="356"/>
+        <view autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleAspectFit" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="340" height="410"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum..." lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PlO-dy-pip">
-                    <rect key="frame" x="8" y="272" width="324" height="57"/>
+                    <rect key="frame" x="8" y="323" width="324" height="57"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="57" id="g6J-Vy-ZgN"/>
                     </constraints>
@@ -38,7 +39,7 @@
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="14 August 2015" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sMN-Dg-jzj">
-                    <rect key="frame" x="211" y="330" width="121" height="26"/>
+                    <rect key="frame" x="211" y="376" width="121" height="26"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="121" id="H0z-h4-MiG"/>
                         <constraint firstAttribute="height" constant="26" id="qYL-S7-5bc"/>
@@ -47,21 +48,28 @@
                     <color key="textColor" red="0.59607845544815063" green="0.59607845544815063" blue="0.59607845544815063" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <imageView clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" semanticContentAttribute="forceLeftToRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loadingimages" translatesAutoresizingMaskIntoConstraints="NO" id="vrp-KY-N4J">
+                    <rect key="frame" x="8" y="289" width="324" height="35"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="0Es-M7-7LR" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="1Qb-2N-F4w"/>
                 <constraint firstAttribute="trailing" secondItem="0Es-M7-7LR" secondAttribute="trailing" id="3lQ-Jy-pl3"/>
-                <constraint firstItem="PlO-dy-pip" firstAttribute="top" secondItem="0Es-M7-7LR" secondAttribute="bottom" constant="2" id="9Xl-QV-s4R"/>
+                <constraint firstItem="PlO-dy-pip" firstAttribute="top" secondItem="0Es-M7-7LR" secondAttribute="bottom" constant="53" id="9Xl-QV-s4R"/>
                 <constraint firstAttribute="trailing" secondItem="sMN-Dg-jzj" secondAttribute="trailing" constant="8" id="Nvf-44-fl6"/>
-                <constraint firstItem="sMN-Dg-jzj" firstAttribute="top" secondItem="PlO-dy-pip" secondAttribute="bottom" constant="1" id="ORK-5V-dfj"/>
+                <constraint firstItem="sMN-Dg-jzj" firstAttribute="top" secondItem="PlO-dy-pip" secondAttribute="bottom" constant="-4" id="ORK-5V-dfj"/>
+                <constraint firstItem="vrp-KY-N4J" firstAttribute="top" secondItem="0Es-M7-7LR" secondAttribute="bottom" constant="19" id="UwP-YT-rBV"/>
+                <constraint firstAttribute="trailing" secondItem="vrp-KY-N4J" secondAttribute="trailing" constant="8" id="WlX-hl-Pnu"/>
+                <constraint firstItem="vrp-KY-N4J" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="ZtF-AP-0AP"/>
+                <constraint firstItem="sMN-Dg-jzj" firstAttribute="top" secondItem="vrp-KY-N4J" secondAttribute="bottom" constant="52" id="a1U-Xz-325"/>
                 <constraint firstItem="PlO-dy-pip" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="j7z-R6-7cI"/>
                 <constraint firstItem="0Es-M7-7LR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="kfF-X0-MfR"/>
                 <constraint firstAttribute="trailing" secondItem="PlO-dy-pip" secondAttribute="trailing" constant="8" id="xqf-cH-Tga"/>
-                <constraint firstItem="PlO-dy-pip" firstAttribute="top" secondItem="0Es-M7-7LR" secondAttribute="bottom" constant="2" id="yE8-7Z-9kO"/>
+                <constraint firstItem="PlO-dy-pip" firstAttribute="top" secondItem="0Es-M7-7LR" secondAttribute="bottom" constant="53" id="yE8-7Z-9kO"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="279" y="245"/>
+            <point key="canvasLocation" x="279" y="272"/>
         </view>
     </objects>
     <resources>

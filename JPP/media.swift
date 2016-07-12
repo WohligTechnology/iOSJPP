@@ -12,6 +12,7 @@ import UIKit
     @IBOutlet weak var mediaImage: UIImageView!
     @IBOutlet weak var mediaDate: UILabel!
     @IBOutlet weak var mediaDesc: UILabel!
+    @IBOutlet weak var newsImage: UIImageView!
     
     override init(frame: CGRect) {
         super.init(frame: frame)

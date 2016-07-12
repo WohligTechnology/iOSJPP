@@ -27,6 +27,7 @@ class NewsController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func newsLoaded (json:JSON) {
      
+        print(json)
         if(json == 1)
         {
             let alertController = UIAlertController(title: "No Connection", message:
@@ -55,18 +56,19 @@ class NewsController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        tableView.rowHeight = 370.0
+        tableView.rowHeight = 420.0
         tableView.separatorStyle = UITableViewCellSeparatorStyle.None
         tableView.tableFooterView = UIView()
         let cell = tableView.dequeueReusableCellWithIdentifier("mediaCell", forIndexPath: indexPath)
         cell.selectionStyle = UITableViewCellSelectionStyle.None
         
         if((newsJSON[indexPath.row]["name"].string) != nil) {
-            let mediaBox = media(frame: CGRectMake(0,8,self.view.frame.width-16,360));
+            let mediaBox = media(frame: CGRectMake(0,8,self.view.frame.width-16,410));
 //            mediaBox.mediaTitle.text = newsJSON[indexPath.row]["name"].string
             mediaBox.mediaDesc.text = newsJSON[indexPath.row]["name"].string!
             mediaBox.mediaDate.text = newsJSON[indexPath.row]["timestamp"].string
             mediaBox.mediaImage.hnk_setImageFromURL(rest.getImageThumbCache(newsJSON[indexPath.row]["image"].string!))
+             mediaBox.newsImage.hnk_setImageFromURL(rest.getImageThumbCache(newsJSON[indexPath.row]["logo"].string!))
             cell.addSubview(mediaBox)
         }
         

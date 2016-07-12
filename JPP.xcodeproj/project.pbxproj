@@ -687,7 +687,7 @@
 				TargetAttributes = {
 					36F9C15B1C55EDBF003D02AB = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = D9R47RBCNL;
+						DevelopmentTeam = YVWVDTRG4B;
 						SystemCapabilities = {
 							com.apple.Push = {
 								enabled = 1;
@@ -1001,7 +1001,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jaipurpinkpanthers.iphone;
 				PRODUCT_NAME = JPP;
-				PROVISIONING_PROFILE = "349d28ac-a515-4088-b004-7c445ca552a9";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "JPP/JPP-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1025,7 +1025,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jaipurpinkpanthers.iphone;
 				PRODUCT_NAME = JPP;
-				PROVISIONING_PROFILE = "349d28ac-a515-4088-b004-7c445ca552a9";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "JPP/JPP-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 			};

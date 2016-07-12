@@ -11,6 +11,7 @@
             <string>Oswald-Light</string>
             <string>Oswald-Light</string>
             <string>Oswald-Light</string>
+            <string>Oswald-Light</string>
         </mutableArray>
     </customFonts>
     <objects>
@@ -57,7 +58,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bGT-CU-qne">
-                            <rect key="frame" x="190" y="9" width="25" height="21"/>
+                            <rect key="frame" x="177" y="9" width="25" height="21"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="25" id="yit-xG-ixv"/>
                             </constraints>
@@ -65,7 +66,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="28" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lC1-yR-cxY">
-                            <rect key="frame" x="220" y="9" width="25" height="21"/>
+                            <rect key="frame" x="206" y="9" width="25" height="21"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="25" id="qhF-T5-YBi"/>
                             </constraints>
@@ -73,9 +74,17 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F3r-DV-jLw">
-                            <rect key="frame" x="250" y="9" width="25" height="21"/>
+                            <rect key="frame" x="234" y="9" width="25" height="21"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="25" id="4Hf-s3-R5n"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="14"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aPZ-pG-VuJ">
+                            <rect key="frame" x="263" y="9" width="25" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="25" id="3Xh-aU-tyC"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="14"/>
                             <nil key="highlightedColor"/>
@@ -83,16 +92,18 @@
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="0.34894935344827588" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstItem="F3r-DV-jLw" firstAttribute="leading" secondItem="lC1-yR-cxY" secondAttribute="trailing" constant="5" id="0f0-cF-PVm"/>
+                        <constraint firstItem="F3r-DV-jLw" firstAttribute="leading" secondItem="lC1-yR-cxY" secondAttribute="trailing" constant="3" id="0f0-cF-PVm"/>
                         <constraint firstItem="bCC-gT-Key" firstAttribute="leading" secondItem="paX-RA-nnL" secondAttribute="trailing" constant="5" id="7C5-tL-ukS"/>
                         <constraint firstItem="lC1-yR-cxY" firstAttribute="baseline" secondItem="bGT-CU-qne" secondAttribute="baseline" id="8D5-Yw-vDL"/>
                         <constraint firstItem="U4h-3l-veQ" firstAttribute="baseline" secondItem="lC1-yR-cxY" secondAttribute="baseline" id="CXm-gh-FTv"/>
-                        <constraint firstItem="lC1-yR-cxY" firstAttribute="leading" secondItem="bGT-CU-qne" secondAttribute="trailing" constant="5" id="D3B-a2-Yd9"/>
+                        <constraint firstItem="lC1-yR-cxY" firstAttribute="leading" secondItem="bGT-CU-qne" secondAttribute="trailing" constant="4" id="D3B-a2-Yd9"/>
                         <constraint firstItem="paX-RA-nnL" firstAttribute="baseline" secondItem="bCC-gT-Key" secondAttribute="baseline" id="DIb-Ro-W0i"/>
                         <constraint firstItem="U4h-3l-veQ" firstAttribute="baseline" secondItem="F3r-DV-jLw" secondAttribute="baseline" id="Ey0-qi-LQR"/>
                         <constraint firstItem="paX-RA-nnL" firstAttribute="top" secondItem="2Hu-pa-83X" secondAttribute="top" constant="9" id="IpL-bD-yTA"/>
+                        <constraint firstItem="aPZ-pG-VuJ" firstAttribute="baseline" secondItem="U4h-3l-veQ" secondAttribute="baseline" id="ND1-9q-1CP"/>
+                        <constraint firstItem="aPZ-pG-VuJ" firstAttribute="leading" secondItem="F3r-DV-jLw" secondAttribute="trailing" constant="4" id="O0h-Ot-rh7"/>
                         <constraint firstItem="paX-RA-nnL" firstAttribute="leading" secondItem="2Hu-pa-83X" secondAttribute="leading" constant="10" id="deF-st-xN0"/>
-                        <constraint firstItem="U4h-3l-veQ" firstAttribute="leading" secondItem="F3r-DV-jLw" secondAttribute="trailing" constant="10" id="kqD-7v-fo1"/>
+                        <constraint firstItem="U4h-3l-veQ" firstAttribute="leading" secondItem="F3r-DV-jLw" secondAttribute="trailing" constant="26" id="kqD-7v-fo1"/>
                         <constraint firstAttribute="trailing" secondItem="U4h-3l-veQ" secondAttribute="trailing" constant="10" id="oib-pA-LeO"/>
                         <constraint firstItem="bGT-CU-qne" firstAttribute="baseline" secondItem="bCC-gT-Key" secondAttribute="baseline" id="wCH-e9-2kB"/>
                     </constraints>
