@@ -419,6 +419,8 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                     
                     insideTable.tableWon.text = json["points"][i]["wins"].string
                     
+                    insideTable.tableDraw.text = json["points"][i]["draw"].string
+                    
                     insideTable.tableLost.text = json["points"][i]["lost"].string
                     
                     insideTable.tablePoint.text = json["points"][i]["point"].string

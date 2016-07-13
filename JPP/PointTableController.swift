@@ -134,6 +134,7 @@ class PointTableController: UIViewController,UITableViewDelegate,UITableViewData
             mediaBox.tablePlayed.text = pointJson[indexPath.row]["played"].string
             mediaBox.tableLost.text = pointJson[indexPath.row]["lost"].string
             mediaBox.tableWon.text = pointJson[indexPath.row]["wins"].string
+            mediaBox.tableDraw.text = pointJson[indexPath.row]["draw"].string
             mediaBox.tablePoint.text = pointJson[indexPath.row]["point"].string
             cell.addSubview(mediaBox)
         }
