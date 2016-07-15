@@ -25,6 +25,7 @@ class SideMenuController: UIViewController, UITableViewDataSource, UITableViewDe
     var aboutsController:UIViewController!
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -65,6 +66,7 @@ class SideMenuController: UIViewController, UITableViewDataSource, UITableViewDe
         
         let aboutsController = storyboard.instantiateViewControllerWithIdentifier("about") as! AboutController
         self.aboutsController = UINavigationController(rootViewController: aboutsController)
+        
     }
     
     override func didReceiveMemoryWarning() {
