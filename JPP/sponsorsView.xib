@@ -30,6 +30,6 @@
         </view>
     </objects>
     <resources>
-        <image name="sponsors" width="1179" height="253"/>
+        <image name="sponsors" width="800" height="269"/>
     </resources>
 </document>

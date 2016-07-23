@@ -28,6 +28,8 @@
 		3685BD421C5A163000BC44D0 /* upcoming.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3685BD411C5A163000BC44D0 /* upcoming.xib */; };
 		3685BD441C5A164B00BC44D0 /* upcoming.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3685BD431C5A164B00BC44D0 /* upcoming.swift */; };
 		36AD11BD1C5BA33F005DD9F1 /* AllWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AD11BC1C5BA33F005DD9F1 /* AllWebViewController.swift */; };
+		36B500741D4352DA00C63DAD /* semiFinal.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36B500731D4352DA00C63DAD /* semiFinal.xib */; };
+		36B500761D43581700C63DAD /* semiFinal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B500751D43581700C63DAD /* semiFinal.swift */; };
 		36B789791C5A70380098C426 /* VideoPlayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B789781C5A70380098C426 /* VideoPlayController.swift */; };
 		36B957841C5A808B00AEC0D3 /* loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B957831C5A808B00AEC0D3 /* loading.swift */; };
 		36B957861C5A809500AEC0D3 /* loading.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36B957851C5A809500AEC0D3 /* loading.xib */; };
@@ -143,6 +145,8 @@
 		3685BD411C5A163000BC44D0 /* upcoming.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = upcoming.xib; sourceTree = "<group>"; };
 		3685BD431C5A164B00BC44D0 /* upcoming.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = upcoming.swift; sourceTree = "<group>"; };
 		36AD11BC1C5BA33F005DD9F1 /* AllWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllWebViewController.swift; sourceTree = "<group>"; };
+		36B500731D4352DA00C63DAD /* semiFinal.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = semiFinal.xib; sourceTree = "<group>"; };
+		36B500751D43581700C63DAD /* semiFinal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = semiFinal.swift; sourceTree = "<group>"; };
 		36B789781C5A70380098C426 /* VideoPlayController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPlayController.swift; sourceTree = "<group>"; };
 		36B957831C5A808B00AEC0D3 /* loading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loading.swift; sourceTree = "<group>"; };
 		36B957851C5A809500AEC0D3 /* loading.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = loading.xib; sourceTree = "<group>"; };
@@ -264,6 +268,15 @@
 				360A51021C579ACB001F7E40 /* playerInside.xib */,
 			);
 			name = playerInside;
+			sourceTree = "<group>";
+		};
+		3624A5591D434C9800E77B42 /* semiFinal */ = {
+			isa = PBXGroup;
+			children = (
+				36B500731D4352DA00C63DAD /* semiFinal.xib */,
+				36B500751D43581700C63DAD /* semiFinal.swift */,
+			);
+			name = semiFinal;
 			sourceTree = "<group>";
 		};
 		362A17591C58AA1400B11F22 /* tableTrap */ = {
@@ -396,6 +409,7 @@
 		36F9C1841C5616C6003D02AB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3624A5591D434C9800E77B42 /* semiFinal */,
 				363DE0E21D34CEAC00906E51 /* sponsors */,
 				3AA5E83A1D2A3B2E00AEDD27 /* matchupdate */,
 				3A57CED91CFC452A004D612C /* seasonOpener */,
@@ -771,6 +785,7 @@
 				C2F0A1121C69B78500345A36 /* kenyanbolditalic.ttf in Resources */,
 				36F9C1AB1C5641BB003D02AB /* voyagefantstraightleft.ttf in Resources */,
 				78238FE41C57A7890067E7D5 /* about.xib in Resources */,
+				36B500741D4352DA00C63DAD /* semiFinal.xib in Resources */,
 				36F2CE911C56585100D0D2D6 /* galleryAlbum.xib in Resources */,
 				36B957861C5A809500AEC0D3 /* loading.xib in Resources */,
 				36F9C16A1C55EDBF003D02AB /* LaunchScreen.storyboard in Resources */,
@@ -853,6 +868,7 @@
 				36F2CEA51C5770FE00D0D2D6 /* GalleryInside2Controller.swift in Sources */,
 				78238FE91C57AC350067E7D5 /* trapezium.swift in Sources */,
 				36F2CEAB1C57718B00D0D2D6 /* KnowTeamController.swift in Sources */,
+				36B500761D43581700C63DAD /* semiFinal.swift in Sources */,
 				36F2CE9D1C57708C00D0D2D6 /* HomeController.swift in Sources */,
 				36F9C1B91C5653E5003D02AB /* matches.swift in Sources */,
 				C263D49C1C68688100837BA8 /* FanCornerController.swift in Sources */,

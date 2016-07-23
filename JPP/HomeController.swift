@@ -103,6 +103,7 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
     
     func showScore(json:JSON) {
         let updates = doneMatch(frame: CGRectMake(8,8,self.verticalLayout.frame.width-16,300));
+        
         //updates.teamOneScore.font = UIFont(name: "Kenyan-Coffee", size: 45)
         //updates.teamTwoScore.font = UIFont(name: "Kenyan-Coffee", size: 45)
         //updates.teamOneScore.layer.borderWidth = 3
