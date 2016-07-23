@@ -62,19 +62,12 @@ import UIKit
     }
     func loadViewFromNib() {
         let bundle = NSBundle(forClass: self.dynamicType)
-        let nib = UINib(nibName: "seasonOpener", bundle: bundle)
+        let nib = UINib(nibName: "semiFinal", bundle: bundle)
         let seasonOpener = nib.instantiateWithOwner(self, options: nil)[0] as! UIView
         seasonOpener.frame = bounds
         seasonOpener.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
         self.addSubview(seasonOpener)
     }
     
-    /*
-     // Only override drawRect: if you perform custom drawing.
-     // An empty implementation adversely affects performance during animation.
-     override func drawRect(rect: CGRect) {
-     // Drawing code
-     }
-     */
     
 }

@@ -91,24 +91,33 @@ class ScheduleController: UIViewController {
 
                 self.verticalLayout = VerticalFitLayout(width: self.view.frame.width);
                 self.scrollView.insertSubview(self.verticalLayout, atIndex: 0)
+                var height2 = CGFloat(512.0);
+                if(heightGlo-56 > 512)
+                {
+                    height2 = heightGlo-56-25;
+                }
+                let updates = semiFinal(frame: CGRectMake(8,8,self.verticalLayout.frame.width-16,height2))
                 
-                let upcomingVar = upcoming(frame: CGRectMake(8,8,self.verticalLayout.frame.width-16,300));
-                self.verticalLayout.addSubview(upcomingVar);
                 
-                upcomingVar.team1Image.image = UIImage(named: "t" + json[0]["team1id"].string! + ".png")
-                upcomingVar.team2Image.image = UIImage(named: "t" + json[0]["team2id"].string! + ".png")
+                let dateFormatter = NSDateFormatter()
+                dateFormatter.dateFormat = "dd MMM yyyy, HH:mm"
+//                updates.EventTimeTop = dateFormatter.dateFromString(json[0]["starttimedate"].string!)!
+//                updates.EventNameTop = json[0]["team1"].string! + " VS " + json[0]["team2"].string!;
+//                
+//                
+                self.verticalLayout.addSubview(updates)
+//                //updates.addToCalender.hidden = true
+//                updates.team1Image.image = UIImage(named: "t" + json[0]["team1id"].string! + ".png")
+//                updates.team2Image.image = UIImage(named: "t" + json[0]["team2id"].string! + ".png")
+//                updates.matchTime.text = json[0]["starttimedate"].string
+//                updates.matchVenue.text = json[0]["stadium"].string
                 
-                upcomingVar.trapLabel.text="UPCOMING MATCH";
-                upcomingVar.matchStadium.text = json[0]["stadium"].string
-                upcomingVar.matchDate.text = json[0]["starttimedate"].string
-                upcomingVar.addToCalendar.addTarget(self, action: "createEventTop:", forControlEvents: UIControlEvents.TouchUpInside)
+        
                 
                 var whiteView:UIView!
                 whiteView = UIView(frame:CGRectMake(0,8,self.verticalLayout.frame.width,1000));
                 whiteView.backgroundColor = UIColor.whiteColor()
                 
-                let dateFormatter = NSDateFormatter()
-                dateFormatter.dateFormat = "dd MMM yyyy, HH:mm"
                 self.EventTimeTop = dateFormatter.dateFromString(json[0]["starttimedate"].string!)!
                 self.EventNameTop = json[0]["team1"].string! + " VS " + json[0]["team2"].string!;
                 
@@ -117,7 +126,7 @@ class ScheduleController: UIViewController {
                 whiteView.addSubview(trap);
                 trap.trapeziumTitle.text="OTHER MATCHES";
                 
-                self.verticalLayout.addSubview(whiteView);
+//                self.verticalLayout.addSubview(whiteView);
                 
                 for(var i=1;i<json.count;i++)
                 {
