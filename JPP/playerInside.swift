@@ -23,6 +23,7 @@ import UIKit
     @IBOutlet weak var playerAchivements: UILabel!
     
     @IBOutlet weak var playerTournaments: UILabel!
+    @IBOutlet weak var achivementsLabel: UILabel!
     
     override init(frame: CGRect) {
         super.init(frame: frame)

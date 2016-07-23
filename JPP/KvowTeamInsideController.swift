@@ -41,6 +41,11 @@ class KvowTeamInsideController: UIViewController {
         playerInsideView.playerAge.text = players[playerIndex].age
         playerInsideView.playerJersey.text = players[playerIndex].jerseyNo
         
+        if(players[playerIndex].achieve == "")
+        {
+            playerInsideView.achivementsLabel.text = "";
+        }
+        
         self.title =  players[playerIndex].name
         
         self.view.addSubview(scroll)
