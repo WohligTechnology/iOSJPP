@@ -85,7 +85,7 @@ class ScheduleController: UIViewController {
         }
         else
         {
-            
+            print(json[0]);
             
             dispatch_async(dispatch_get_main_queue(), {
 
@@ -96,30 +96,80 @@ class ScheduleController: UIViewController {
                 {
                     height2 = heightGlo-56-25;
                 }
-                let updates = semiFinal(frame: CGRectMake(8,8,self.verticalLayout.frame.width-16,height2))
-                
                 
                 let dateFormatter = NSDateFormatter()
                 dateFormatter.dateFormat = "dd MMM yyyy, HH:mm"
-//                updates.EventTimeTop = dateFormatter.dateFromString(json[0]["starttimedate"].string!)!
-//                updates.EventNameTop = json[0]["team1"].string! + " VS " + json[0]["team2"].string!;
-//                
-//                
-                self.verticalLayout.addSubview(updates)
-//                //updates.addToCalender.hidden = true
-//                updates.team1Image.image = UIImage(named: "t" + json[0]["team1id"].string! + ".png")
-//                updates.team2Image.image = UIImage(named: "t" + json[0]["team2id"].string! + ".png")
-//                updates.matchTime.text = json[0]["starttimedate"].string
-//                updates.matchVenue.text = json[0]["stadium"].string
+                
+                if(json[0]["level"].stringValue == "semifinal" )
+                {
+                    let updates = semiFinal(frame: CGRectMake(8,8,self.verticalLayout.frame.width-16,height2))
+                    self.verticalLayout.addSubview(updates)
+                    
+                    //                updates.addToCalender.hidden = true
+                    updates.team1Image.image = UIImage(named: "t" + json[0]["team1id"].string! + ".png")
+                    updates.team2Image.image = UIImage(named: "t" + json[0]["team2id"].string! + ".png")
+                    updates.matchTime.text = json[0]["starttimedate"].string
+                    updates.matchVenue.text = json[0]["stadium"].string
+                    
+                    
+                    updates.EventTimeTop = dateFormatter.dateFromString(json[0]["starttimedate"].string!)!
+                    updates.EventNameTop = json[0]["team1"].string! + " VS " + json[0]["team2"].string!;
+                }
+                else if(json[0]["level"].stringValue == "final" )
+                {
+                    let updates = semiFinal(frame: CGRectMake(8,8,self.verticalLayout.frame.width-16,height2))
+                    self.verticalLayout.addSubview(updates)
+                    
+                    if(json[0]["id"]) {
+                        self.verticalLayout.addSubview(updates)
+                        
+                        //                updates.addToCalender.hidden = true
+                        updates.team1Image.image = UIImage(named: "t" + json[0]["team1id"].string! + ".png")
+                        updates.team2Image.image = UIImage(named: "t" + json[0]["team2id"].string! + ".png")
+                        updates.matchTime.text = json[0]["starttimedate"].string
+                        updates.matchVenue.text = json[0]["stadium"].string
+                        
+                        updates.semiImage.image = UIImage(named: "finals")
+                        
+                        
+                        updates.EventTimeTop = dateFormatter.dateFromString(json[0]["starttimedate"].string!)!
+                        updates.EventNameTop = json[0]["team1"].string! + " VS " + json[0]["team2"].string!;
+                    }
+                }
+                else {
+                    let updates = seasonOpener(frame: CGRectMake(8,8,self.verticalLayout.frame.width-16,385))
+                    self.verticalLayout.addSubview(updates)
+                    
+                    if(json[0]["id"]) {
+                        self.verticalLayout.addSubview(updates)
+                        
+                        //                updates.addToCalender.hidden = true
+                        updates.team1Image.image = UIImage(named: "t" + json[0]["team1id"].string! + ".png")
+                        updates.team2Image.image = UIImage(named: "t" + json[0]["team2id"].string! + ".png")
+                        updates.matchTime.text = json[0]["starttimedate"].string
+                        updates.matchVenue.text = json[0]["stadium"].string
+                        
+                        
+                        updates.EventTimeTop = dateFormatter.dateFromString(json[0]["starttimedate"].string!)!
+                        updates.EventNameTop = json[0]["team1"].string! + " VS " + json[0]["team2"].string!;
+                    }
+                }
+                
+                
+                
+                
                 
         
                 
                 var whiteView:UIView!
                 whiteView = UIView(frame:CGRectMake(0,8,self.verticalLayout.frame.width,1000));
                 whiteView.backgroundColor = UIColor.whiteColor()
-                
+                if(json[0]["starttimedate"]) {
+                    
                 self.EventTimeTop = dateFormatter.dateFromString(json[0]["starttimedate"].string!)!
                 self.EventNameTop = json[0]["team1"].string! + " VS " + json[0]["team2"].string!;
+                    
+                }
                 
                 let trap = trapezium(frame: CGRectMake(8,0,self.verticalLayout.frame.width-16,34));
                 self.resizeView(8);

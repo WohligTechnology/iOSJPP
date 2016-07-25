@@ -174,7 +174,7 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     func homeLoaded(json:JSON) {
-        print(json)
+        
         if(json == 1)
         {
             let alertController = UIAlertController(title: "No Connection", message:
@@ -204,6 +204,8 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                 let day = components.day
                 let hour = components.hour
                 let minutes = components.minute
+                
+                print(json["latestMatch"]);
                 if ( json["latestMatch"]["starttimedate"] ) {
                     let datematch = dateFormatter.dateFromString(json["latestMatch"]["starttimedate"].string!)!
                     let unitFlags: NSCalendarUnit = [.Month, .Day, .Hour, .Minute, .Second]
@@ -230,10 +232,6 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                     if(self.diffDay < 0) { self.diffMonth = self.diffMonth - 1; self.diffDay = self.diffDay + range.length }
                     
                     
-                    print("in diff min min")
-                    print(self.diffMin)
-                    print(self.diffMonth)
-                    
                     if(json["latestMatch"]["score2"] == "" && self.diffMin >= 0 && self.diffHour >= 0 && self.diffDay >= 0 && self.diffMonth >= 0) {
                         
                         if self.diffMonth == 0 && self.diffDay == 0 && self.diffHour == 0 && self.diffMin == 0 {
@@ -256,7 +254,18 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                             updates.matchTime.text = json["latestMatch"]["starttimedate"].string
                             updates.matchVenue.text = json["latestMatch"]["stadium"].string
                             
-                            updates.trapLabel.text = "NEXT MATCH"
+                            
+                            if(json["latestMatch"]["level"].stringValue == "semifinal" )
+                            {
+                                updates.trapLabel.text = "SEMI FINAL MATCH"
+                            }
+                            else if(json["latestMatch"]["level"].stringValue == "final" )
+                            {
+                                updates.trapLabel.text = "FINAL MATCH"
+                            }
+                            else {
+                                updates.trapLabel.text = "NEXT MATCH"
+                            }
                             
                             let date = NSDate()
                             let calendar = NSCalendar.currentCalendar()
