@@ -210,8 +210,6 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                     let datematch = dateFormatter.dateFromString(json["latestMatch"]["starttimedate"].string!)!
                     let unitFlags: NSCalendarUnit = [.Month, .Day, .Hour, .Minute, .Second]
                     let componentsmatch = NSCalendar.currentCalendar().components(unitFlags, fromDate: datematch)
-                    print(componentsmatch)
-                    print(components)
                     
                     let matchMonth = componentsmatch.month
                     let matchDay = componentsmatch.day
@@ -265,8 +263,12 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                             
                             updates.matchTime.text = json["latestMatch"]["starttimedate"].string
                             
-                            if(json["latestMatch"]["stadium"]) {
-                            updates.matchVenue.text = json["latestMatch"]["stadium"].string
+                            
+                            print(json["latestMatch"]["stadium"].string);
+                            print("JJJJJJJJJJ");
+                            if(json["latestMatch"]["stadium"].string != nil) {
+                                updates.matchVenue.text = json["latestMatch"]["stadium"].string
+                                print("KKKKKKKKKK");
                             }
                             
                             
