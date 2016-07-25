@@ -244,15 +244,30 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                             let dateFormatter = NSDateFormatter()
                             dateFormatter.dateFormat = "dd MMM yyyy, HH:mm"
                             updates.EventTimeTop = dateFormatter.dateFromString(json["latestMatch"]["starttimedate"].string!)!
-                            updates.EventNameTop = json["latestMatch"]["team1"].string! + " VS " + json["latestMatch"]["team2"].string!;
+                            
+                            if(json["latestMatch"]["team1"] && json["latestMatch"]["team2"])
+                            {
+                                updates.EventNameTop = json["latestMatch"]["team1"].string! + " VS " + json["latestMatch"]["team2"].string!;
+                            }
                             
                             
                             self.verticalLayout.addSubview(updates)
                             //updates.addToCalender.hidden = true
+                            
+                            
+                            if(json["latestMatch"]["team1id"]) {
                             updates.team1Image.image = UIImage(named: "t" + json["latestMatch"]["team1id"].string! + ".png")
+                            }
+                            if(json["latestMatch"]["team2id"]) {
                             updates.team2Image.image = UIImage(named: "t" + json["latestMatch"]["team2id"].string! + ".png")
+                            }
+                            
+                            
                             updates.matchTime.text = json["latestMatch"]["starttimedate"].string
+                            
+                            if(json["latestMatch"]["stadium"]) {
                             updates.matchVenue.text = json["latestMatch"]["stadium"].string
+                            }
                             
                             
                             if(json["latestMatch"]["level"].stringValue == "semifinal" )

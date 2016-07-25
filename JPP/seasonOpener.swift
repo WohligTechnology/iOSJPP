@@ -45,7 +45,6 @@ import UIKit
         alertController.addAction(UIAlertAction(title: "Continue", style: UIAlertActionStyle.Default,handler: nil))
         
         GHomeController.presentViewController(alertController, animated: true, completion: nil)
-
         
     }
     

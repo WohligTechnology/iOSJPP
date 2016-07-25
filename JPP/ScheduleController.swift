@@ -143,15 +143,24 @@ class ScheduleController: UIViewController {
                     if(json[0]["id"]) {
                         self.verticalLayout.addSubview(updates)
                         
-                        //                updates.addToCalender.hidden = true
-                        updates.team1Image.image = UIImage(named: "t" + json[0]["team1id"].string! + ".png")
-                        updates.team2Image.image = UIImage(named: "t" + json[0]["team2id"].string! + ".png")
+                                       updates.addToCalender.hidden = true
+                        if(json[0]["team1id"]) {
+                            updates.team1Image.image = UIImage(named: "t" + json[0]["team1id"].string! + ".png")
+                        }
+                        if(json[0]["team2id"]) {
+                            updates.team2Image.image = UIImage(named: "t" + json[0]["team2id"].string! + ".png")
+                        }
                         updates.matchTime.text = json[0]["starttimedate"].string
-                        updates.matchVenue.text = json[0]["stadium"].string
+                        
+                        if(json[0]["stadium"]) {
+                            updates.matchVenue.text = json[0]["stadium"].string
+                        }
                         
                         
                         updates.EventTimeTop = dateFormatter.dateFromString(json[0]["starttimedate"].string!)!
+                        if(json[0]["team1"] && json[0]["team2"]) {
                         updates.EventNameTop = json[0]["team1"].string! + " VS " + json[0]["team2"].string!;
+                        }
                     }
                 }
                 
@@ -167,7 +176,9 @@ class ScheduleController: UIViewController {
                 if(json[0]["starttimedate"]) {
                     
                 self.EventTimeTop = dateFormatter.dateFromString(json[0]["starttimedate"].string!)!
-                self.EventNameTop = json[0]["team1"].string! + " VS " + json[0]["team2"].string!;
+                    if(json[0]["team1"] && json[0]["team2"]) {
+                        self.EventNameTop = json[0]["team1"].string! + " VS " + json[0]["team2"].string!;
+                    }
                     
                 }
                 
