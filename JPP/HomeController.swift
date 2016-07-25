@@ -274,7 +274,7 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                             
                             if(json["latestMatch"]["level"].stringValue == "semifinal" )
                             {
-                                updates.trapLabel.text = "SEMI FINAL"
+                                updates.trapLabel.text = "SEMI FINALS"
                             }
                             else if(json["latestMatch"]["level"].stringValue == "final" )
                             {
