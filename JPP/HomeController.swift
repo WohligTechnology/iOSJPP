@@ -255,7 +255,7 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                             //updates.addToCalender.hidden = true
                             
                             
-                            if(json["latestMatch"]["team1id"]) {
+                            if(json["latestMatch"]["team1id"] ) {
                             updates.team1Image.image = UIImage(named: "t" + json["latestMatch"]["team1id"].string! + ".png")
                             }
                             if(json["latestMatch"]["team2id"]) {

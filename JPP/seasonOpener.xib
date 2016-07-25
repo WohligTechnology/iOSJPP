@@ -53,14 +53,14 @@
                         <constraint firstAttribute="height" constant="110" id="fQC-Jk-bpg"/>
                     </constraints>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jpp" translatesAutoresizingMaskIntoConstraints="NO" id="g3h-7j-rmE">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TBD" translatesAutoresizingMaskIntoConstraints="NO" id="g3h-7j-rmE">
                     <rect key="frame" x="5" y="34" width="140" height="140"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="140" id="8gF-R3-9jI"/>
                         <constraint firstAttribute="width" constant="140" id="Hjn-vr-ulv"/>
                     </constraints>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pp" translatesAutoresizingMaskIntoConstraints="NO" id="0aT-Z8-qHZ">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TBD" translatesAutoresizingMaskIntoConstraints="NO" id="0aT-Z8-qHZ">
                     <rect key="frame" x="283" y="34" width="140" height="140"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="140" id="33V-Mj-HJU"/>
@@ -333,8 +333,7 @@
         </view>
     </objects>
     <resources>
-        <image name="jpp" width="414" height="379"/>
-        <image name="pp" width="400" height="372"/>
+        <image name="TBD" width="800" height="800"/>
         <image name="schedule_back" width="800" height="605"/>
         <image name="timer_back" width="114" height="99"/>
         <image name="trapezium" width="444" height="98"/>

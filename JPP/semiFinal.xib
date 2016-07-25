@@ -46,14 +46,14 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundsemi" translatesAutoresizingMaskIntoConstraints="NO" id="yPt-pz-Wy7">
                     <rect key="frame" x="0.0" y="0.0" width="428" height="512"/>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jpp" translatesAutoresizingMaskIntoConstraints="NO" id="oYr-5h-gJa">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TBD" translatesAutoresizingMaskIntoConstraints="NO" id="oYr-5h-gJa">
                     <rect key="frame" x="5" y="131" width="140" height="140"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="140" id="1Z9-he-z0g"/>
                         <constraint firstAttribute="height" constant="140" id="hdL-6d-CBd"/>
                     </constraints>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="pp" translatesAutoresizingMaskIntoConstraints="NO" id="aWh-5M-1mZ">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="TBD" translatesAutoresizingMaskIntoConstraints="NO" id="aWh-5M-1mZ">
                     <rect key="frame" x="283" y="131" width="140" height="140"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="140" id="MJP-4N-IW3"/>
@@ -222,9 +222,8 @@
         </view>
     </objects>
     <resources>
+        <image name="TBD" width="800" height="800"/>
         <image name="backgroundsemi" width="1242" height="1943"/>
-        <image name="jpp" width="414" height="379"/>
-        <image name="pp" width="400" height="372"/>
         <image name="semifinal" width="900" height="178"/>
         <image name="timer_back" width="114" height="99"/>
         <image name="vs_pink" width="267" height="262"/>
