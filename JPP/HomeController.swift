@@ -204,75 +204,12 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                 let day = components.day
                 let hour = components.hour
                 let minutes = components.minute
-                
-                let datematch = dateFormatter.dateFromString(json["latestMatch"]["starttimedate"].string!)!
-                let unitFlags: NSCalendarUnit = [.Month, .Day, .Hour, .Minute, .Second]
-                let componentsmatch = NSCalendar.currentCalendar().components(unitFlags, fromDate: datematch)
-                print(componentsmatch)
-                print(components)
-                
-                let matchMonth = componentsmatch.month
-                let matchDay = componentsmatch.day
-                let matchHour = componentsmatch.hour
-                let matchMins = componentsmatch.minute
-                
-                self.diffMonth = matchMonth - month
-                self.diffDay = matchDay - day
-                self.diffHour = matchHour - hour
-                self.diffMin = matchMins - minutes
-                let range = calendar.rangeOfUnit(.Day, inUnit: .Month, forDate: date)
-                range.length
-                
-                if(self.diffMin < 0) { self.diffHour = self.diffHour - 1;  self.diffMin = self.diffMin + 60 }
-                
-                if(self.diffHour < 0) { self.diffDay = self.diffDay - 1; self.diffHour = self.diffHour + 24 }
-                
-                if(self.diffDay < 0) { self.diffMonth = self.diffMonth - 1; self.diffDay = self.diffDay + range.length }
-
-
-                print("in diff min min")
-                print(self.diffMin)
-                print(self.diffMonth)
-                
-                if(json["latestMatch"]["score2"] == "" && self.diffMin >= 0 && self.diffHour >= 0 && self.diffDay >= 0 && self.diffMonth >= 0) {
-                    
-                    if self.diffMonth == 0 && self.diffDay == 0 && self.diffHour == 0 && self.diffMin == 0 {
-                        self.showScore(json)
-                    }else{
-                    
-                    let updates = seasonOpener(frame: CGRectMake(8,8,self.verticalLayout.frame.width-16,380))
-                    
-                    
-                    let dateFormatter = NSDateFormatter()
-                    dateFormatter.dateFormat = "dd MMM yyyy, HH:mm"
-                    updates.EventTimeTop = dateFormatter.dateFromString(json["latestMatch"]["starttimedate"].string!)!
-                    updates.EventNameTop = json["latestMatch"]["team1"].string! + " VS " + json["latestMatch"]["team2"].string!;
-                    
-                    
-                    self.verticalLayout.addSubview(updates)
-                    //updates.addToCalender.hidden = true
-                    updates.team1Image.image = UIImage(named: "t" + json["latestMatch"]["team1id"].string! + ".png")
-                    updates.team2Image.image = UIImage(named: "t" + json["latestMatch"]["team2id"].string! + ".png")
-                    updates.matchTime.text = json["latestMatch"]["starttimedate"].string
-                    updates.matchVenue.text = json["latestMatch"]["stadium"].string
-                    
-                    updates.trapLabel.text = "NEXT MATCH"
-                    
-                    let date = NSDate()
-                    let calendar = NSCalendar.currentCalendar()
-                    let components = calendar.components([.Month, .Day, .Hour, .Minute, .Second], fromDate: date)
-                    let month = components.month
-                    let day = components.day
-                    let hour = components.hour
-                    let minutes = components.minute
-
-                    
-                    let range = calendar.rangeOfUnit(.Day, inUnit: .Month, forDate: date)
-                    range.length
-                    
+                if ( json["latestMatch"]["starttimedate"] ) {
                     let datematch = dateFormatter.dateFromString(json["latestMatch"]["starttimedate"].string!)!
                     let unitFlags: NSCalendarUnit = [.Month, .Day, .Hour, .Minute, .Second]
                     let componentsmatch = NSCalendar.currentCalendar().components(unitFlags, fromDate: datematch)
+                    print(componentsmatch)
+                    print(components)
                     
                     let matchMonth = componentsmatch.month
                     let matchDay = componentsmatch.day
@@ -283,47 +220,8 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                     self.diffDay = matchDay - day
                     self.diffHour = matchHour - hour
                     self.diffMin = matchMins - minutes
-                    
-                    self.setInterval(10, block: { () -> Void in
-                        
-                        let date = NSDate()
-                        let calendar = NSCalendar.currentCalendar()
-                        let components = calendar.components([.Month, .Day, .Hour, .Minute, .Second], fromDate: date)
-                        let month = components.month
-                        let day = components.day
-                        let hour = components.hour
-                        let minutes = components.minute
-                    
-                        
-                        var diffMonth = matchMonth - month
-                        var diffDay = matchDay - day
-                        var diffHour = matchHour - hour
-                        var diffMin = matchMins - minutes
-                        
-                        if(diffMin < 0) { diffHour = diffHour - 1;  diffMin = diffMin + 60 }
-                        
-                        if(diffHour < 0) { diffDay = diffDay - 1; diffHour = diffHour + 24 }
-                        
-                        if(diffDay < 0) { diffMonth = diffMonth - 1; diffDay = diffDay + range.length }
-                        
-                        //print(diffDay)
-                        //print(diffHour)
-                        //print(diffMin)
-                        
-                        updates.remainingMonths.text = String(diffMonth)
-                        updates.remainingDays.text = String(diffDay)
-                        updates.remainingHours.text = String(diffHour)
-                        updates.remainingMins.text = String(diffMin)
-                        if(diffMin <= 0 && diffHour <= 0 && diffDay <= 0){
-                            //print("start match")
-                            self.refresh(self.refeshController)
-                        }else{
-                            //print("still on")
-//                            updates.removeFromSuperview()
-
-                        }
-                        
-                    })
+                    let range = calendar.rangeOfUnit(.Day, inUnit: .Month, forDate: date)
+                    range.length
                     
                     if(self.diffMin < 0) { self.diffHour = self.diffHour - 1;  self.diffMin = self.diffMin + 60 }
                     
@@ -331,14 +229,122 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                     
                     if(self.diffDay < 0) { self.diffMonth = self.diffMonth - 1; self.diffDay = self.diffDay + range.length }
                     
-                    updates.remainingMonths.text = String(self.diffMonth)
-                    updates.remainingDays.text = String(self.diffDay)
-                    updates.remainingHours.text = String(self.diffHour)
-                    updates.remainingMins.text = String(self.diffMin)
+                    
+                    print("in diff min min")
+                    print(self.diffMin)
+                    print(self.diffMonth)
+                    
+                    if(json["latestMatch"]["score2"] == "" && self.diffMin >= 0 && self.diffHour >= 0 && self.diffDay >= 0 && self.diffMonth >= 0) {
+                        
+                        if self.diffMonth == 0 && self.diffDay == 0 && self.diffHour == 0 && self.diffMin == 0 {
+                            self.showScore(json)
+                        }else{
+                            
+                            let updates = seasonOpener(frame: CGRectMake(8,8,self.verticalLayout.frame.width-16,380))
+                            
+                            
+                            let dateFormatter = NSDateFormatter()
+                            dateFormatter.dateFormat = "dd MMM yyyy, HH:mm"
+                            updates.EventTimeTop = dateFormatter.dateFromString(json["latestMatch"]["starttimedate"].string!)!
+                            updates.EventNameTop = json["latestMatch"]["team1"].string! + " VS " + json["latestMatch"]["team2"].string!;
+                            
+                            
+                            self.verticalLayout.addSubview(updates)
+                            //updates.addToCalender.hidden = true
+                            updates.team1Image.image = UIImage(named: "t" + json["latestMatch"]["team1id"].string! + ".png")
+                            updates.team2Image.image = UIImage(named: "t" + json["latestMatch"]["team2id"].string! + ".png")
+                            updates.matchTime.text = json["latestMatch"]["starttimedate"].string
+                            updates.matchVenue.text = json["latestMatch"]["stadium"].string
+                            
+                            updates.trapLabel.text = "NEXT MATCH"
+                            
+                            let date = NSDate()
+                            let calendar = NSCalendar.currentCalendar()
+                            let components = calendar.components([.Month, .Day, .Hour, .Minute, .Second], fromDate: date)
+                            let month = components.month
+                            let day = components.day
+                            let hour = components.hour
+                            let minutes = components.minute
+                            
+                            
+                            let range = calendar.rangeOfUnit(.Day, inUnit: .Month, forDate: date)
+                            range.length
+                            
+                            let datematch = dateFormatter.dateFromString(json["latestMatch"]["starttimedate"].string!)!
+                            let unitFlags: NSCalendarUnit = [.Month, .Day, .Hour, .Minute, .Second]
+                            let componentsmatch = NSCalendar.currentCalendar().components(unitFlags, fromDate: datematch)
+                            
+                            let matchMonth = componentsmatch.month
+                            let matchDay = componentsmatch.day
+                            let matchHour = componentsmatch.hour
+                            let matchMins = componentsmatch.minute
+                            
+                            self.diffMonth = matchMonth - month
+                            self.diffDay = matchDay - day
+                            self.diffHour = matchHour - hour
+                            self.diffMin = matchMins - minutes
+                            
+                            self.setInterval(10, block: { () -> Void in
+                                
+                                let date = NSDate()
+                                let calendar = NSCalendar.currentCalendar()
+                                let components = calendar.components([.Month, .Day, .Hour, .Minute, .Second], fromDate: date)
+                                let month = components.month
+                                let day = components.day
+                                let hour = components.hour
+                                let minutes = components.minute
+                                
+                                
+                                var diffMonth = matchMonth - month
+                                var diffDay = matchDay - day
+                                var diffHour = matchHour - hour
+                                var diffMin = matchMins - minutes
+                                
+                                if(diffMin < 0) { diffHour = diffHour - 1;  diffMin = diffMin + 60 }
+                                
+                                if(diffHour < 0) { diffDay = diffDay - 1; diffHour = diffHour + 24 }
+                                
+                                if(diffDay < 0) { diffMonth = diffMonth - 1; diffDay = diffDay + range.length }
+                                
+                                //print(diffDay)
+                                //print(diffHour)
+                                //print(diffMin)
+                                
+                                updates.remainingMonths.text = String(diffMonth)
+                                updates.remainingDays.text = String(diffDay)
+                                updates.remainingHours.text = String(diffHour)
+                                updates.remainingMins.text = String(diffMin)
+                                if(diffMin <= 0 && diffHour <= 0 && diffDay <= 0){
+                                    //print("start match")
+                                    self.refresh(self.refeshController)
+                                }else{
+                                    //print("still on")
+                                    //                            updates.removeFromSuperview()
+                                    
+                                }
+                                
+                            })
+                            
+                            if(self.diffMin < 0) { self.diffHour = self.diffHour - 1;  self.diffMin = self.diffMin + 60 }
+                            
+                            if(self.diffHour < 0) { self.diffDay = self.diffDay - 1; self.diffHour = self.diffHour + 24 }
+                            
+                            if(self.diffDay < 0) { self.diffMonth = self.diffMonth - 1; self.diffDay = self.diffDay + range.length }
+                            
+                            updates.remainingMonths.text = String(self.diffMonth)
+                            updates.remainingDays.text = String(self.diffDay)
+                            updates.remainingHours.text = String(self.diffHour)
+                            updates.remainingMins.text = String(self.diffMin)
+                        }
+                    } else{
+                        self.showScore(json)
                     }
-                } else{
-                    self.showScore(json)
                 }
+                else
+                {
+                    print("Going inside");
+                }
+                
                 
                 
                 
