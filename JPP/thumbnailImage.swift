@@ -28,6 +28,7 @@ import UIKit
         sortnewview.frame = bounds
         sortnewview.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
         self.addSubview(sortnewview);
+
     }
     
     
