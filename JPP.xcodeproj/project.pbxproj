@@ -715,7 +715,7 @@
 				TargetAttributes = {
 					36F9C15B1C55EDBF003D02AB = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = YVWVDTRG4B;
+						DevelopmentTeam = D9R47RBCNL;
 						SystemCapabilities = {
 							com.apple.Push = {
 								enabled = 1;
@@ -1031,7 +1031,7 @@
 				INFOPLIST_FILE = JPP/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.wohlig.JPP;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jaipurpinkpanthers.iphone;
 				PRODUCT_NAME = JPP;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "JPP/JPP-Bridging-Header.h";
@@ -1055,7 +1055,7 @@
 				INFOPLIST_FILE = JPP/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.wohlig.JPP;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jaipurpinkpanthers.iphone;
 				PRODUCT_NAME = JPP;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "JPP/JPP-Bridging-Header.h";
