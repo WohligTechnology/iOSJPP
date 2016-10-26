@@ -25,45 +25,45 @@ class NewsController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     var newsJSON = JSON([])
     
-    func newsLoaded (json:JSON) {
+    func newsLoaded (_ json:JSON) {
      
         print(json)
         if(json == 1)
         {
             let alertController = UIAlertController(title: "No Connection", message:
-                "Please check your internet connection", preferredStyle: UIAlertControllerStyle.Alert)
-            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+                "Please check your internet connection", preferredStyle: UIAlertControllerStyle.alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
             
-            self.presentViewController(alertController, animated: true, completion: nil)
+            self.present(alertController, animated: true, completion: nil)
         }
         else
         {
             newsJSON = json;
-            dispatch_async(dispatch_get_main_queue(),{
+            DispatchQueue.main.async(execute: {
                 self.newsTableView.reloadData()
             });
            
         }
-        dispatch_async(dispatch_get_main_queue(), {
+        DispatchQueue.main.async(execute: {
             loadingStop()
         });
     }
     
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return newsJSON.count
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         tableView.rowHeight = 420.0
-        tableView.separatorStyle = UITableViewCellSeparatorStyle.None
+        tableView.separatorStyle = UITableViewCellSeparatorStyle.none
         tableView.tableFooterView = UIView()
-        let cell = tableView.dequeueReusableCellWithIdentifier("mediaCell", forIndexPath: indexPath)
-        cell.selectionStyle = UITableViewCellSelectionStyle.None
+        let cell = tableView.dequeueReusableCell(withIdentifier: "mediaCell", for: indexPath)
+        cell.selectionStyle = UITableViewCellSelectionStyle.none
         
         if((newsJSON[indexPath.row]["name"].string) != nil) {
-            let mediaBox = media(frame: CGRectMake(0,8,self.view.frame.width-16,410));
+            let mediaBox = media(frame: CGRect(x: 0,y: 8,width: self.view.frame.width-16,height: 410));
 //            mediaBox.mediaTitle.text = newsJSON[indexPath.row]["name"].string
             mediaBox.mediaDesc.text = newsJSON[indexPath.row]["name"].string!
             mediaBox.mediaDate.text = newsJSON[indexPath.row]["timestamp"].string
@@ -75,7 +75,7 @@ class NewsController: UIViewController, UITableViewDataSource, UITableViewDelega
         return cell
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         newsImage = newsJSON[indexPath.row]["image"].string!
         newsTitle = newsJSON[indexPath.row]["name"].string!
         newsDate = newsJSON[indexPath.row]["timestamp"].string!
@@ -83,7 +83,7 @@ class NewsController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         mediaUrl = newsJSON[indexPath.row]["content"].string!
         
-         performSegueWithIdentifier("newsExternal", sender: nil)
+         performSegue(withIdentifier: "newsExternal", sender: nil)
     }
     
     

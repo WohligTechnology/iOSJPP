@@ -1,4 +1,4 @@
-//  RAMBounceAnimation.swift
+//  RAMTransitionItemAnimations.swift
 //
 // Copyright (c) 11/10/14 Ramotion Inc. (http://ramotion.com)
 //
@@ -22,9 +22,17 @@
 
 import UIKit
 
-
-/// The RAMBounceAnimation class provides bounce animation.
-open class RAMBounceAnimation : RAMItemAnimation {
+/// Transition animtion
+open class RAMTransitionItemAnimations : RAMItemAnimation {
+  
+  ///  Options for animating. Default TransitionNone
+  open var transitionOptions : UIViewAnimationOptions!
+  
+  override init() {
+    super.init()
+    
+    transitionOptions = UIViewAnimationOptions()
+  }
   
   /**
    Start animation, method call when UITabBarItem is selected
@@ -33,8 +41,12 @@ open class RAMBounceAnimation : RAMItemAnimation {
    - parameter textLabel: animating UITabBarItem textLabel
    */
   override open func playAnimation(_ icon : UIImageView, textLabel : UILabel) {
-    playBounceAnimation(icon)
-    textLabel.textColor = textSelectedColor
+    
+    selectedColor(icon, textLabel: textLabel)
+    
+    UIView.transition(with: icon, duration: TimeInterval(duration), options: transitionOptions, animations: {
+      }, completion: { _ in
+    })
   }
   
   /**
@@ -45,8 +57,7 @@ open class RAMBounceAnimation : RAMItemAnimation {
    - parameter defaultTextColor: default UITabBarItem text color
    - parameter defaultIconColor: default UITabBarItem icon color
    */
-  override open func deselectAnimation(_ icon : UIImageView, textLabel : UILabel, defaultTextColor : UIColor, defaultIconColor: UIColor) {
-    textLabel.textColor = defaultTextColor
+  override open func deselectAnimation(_ icon : UIImageView, textLabel : UILabel, defaultTextColor : UIColor, defaultIconColor : UIColor) {
     
     if let iconImage = icon.image {
       let renderMode = defaultIconColor.cgColor.alpha == 0 ? UIImageRenderingMode.alwaysOriginal :
@@ -55,6 +66,7 @@ open class RAMBounceAnimation : RAMItemAnimation {
       icon.image = renderImage
       icon.tintColor = defaultIconColor
     }
+    textLabel.textColor = defaultTextColor
   }
   
   /**
@@ -64,28 +76,56 @@ open class RAMBounceAnimation : RAMItemAnimation {
    - parameter textLabel: animating UITabBarItem textLabel
    */
   override open func selectedState(_ icon : UIImageView, textLabel : UILabel) {
-    textLabel.textColor = textSelectedColor
     
-    if let iconImage = icon.image {
-      let renderImage = iconImage.withRenderingMode(.alwaysTemplate)
-      icon.image = renderImage
-      icon.tintColor = iconSelectedColor
-    }
+    selectedColor(icon, textLabel: textLabel)
   }
   
-  func playBounceAnimation(_ icon : UIImageView) {
+  
+  func selectedColor(_ icon : UIImageView, textLabel : UILabel) {
     
-    let bounceAnimation = CAKeyframeAnimation(keyPath: Constants.AnimationKeys.Scale)
-    bounceAnimation.values = [1.0 ,1.4, 0.9, 1.15, 0.95, 1.02, 1.0]
-    bounceAnimation.duration = TimeInterval(duration)
-    bounceAnimation.calculationMode = kCAAnimationCubic
-    
-    icon.layer.add(bounceAnimation, forKey: nil)
-    
-    if let iconImage = icon.image {
+    if let iconImage = icon.image , iconSelectedColor != nil {
       let renderImage = iconImage.withRenderingMode(.alwaysTemplate)
       icon.image = renderImage
       icon.tintColor = iconSelectedColor
     }
+    
+    textLabel.textColor = textSelectedColor
+  }
+}
+
+class RAMFlipLeftTransitionItemAnimations : RAMTransitionItemAnimations {
+  
+  override init() {
+    super.init()
+    
+    transitionOptions = UIViewAnimationOptions.transitionFlipFromLeft
+  }
+}
+
+
+class RAMFlipRightTransitionItemAnimations : RAMTransitionItemAnimations {
+  
+  override init() {
+    super.init()
+    
+    transitionOptions = UIViewAnimationOptions.transitionFlipFromRight
+  }
+}
+
+class RAMFlipTopTransitionItemAnimations : RAMTransitionItemAnimations {
+  
+  override init() {
+    super.init()
+    
+    transitionOptions = UIViewAnimationOptions.transitionFlipFromTop
+  }
+}
+
+class RAMFlipBottomTransitionItemAnimations : RAMTransitionItemAnimations {
+  
+  override init() {
+    super.init()
+    
+    transitionOptions = UIViewAnimationOptions.transitionFlipFromBottom
   }
 }

@@ -20,7 +20,7 @@ import UIKit
     @IBOutlet weak var remainingHours: UILabel!
     @IBOutlet weak var remainingMins: UILabel!
     
-    var EventTimeTop = NSDate();
+    var EventTimeTop = Date();
     var EventNameTop:String!;
     
     
@@ -36,15 +36,15 @@ import UIKit
         loadViewFromNib ()
     }
     
-    @IBAction func addToCalender(sender: AnyObject) {
+    @IBAction func addToCalender(_ sender: AnyObject) {
     
        createEvent(EventNameTop,EventTime: EventTimeTop)
         
         let alertController = UIAlertController(title: "Match added to your Calender", message:
-            "", preferredStyle: UIAlertControllerStyle.Alert)
-        alertController.addAction(UIAlertAction(title: "Continue", style: UIAlertActionStyle.Default,handler: nil))
+            "", preferredStyle: UIAlertControllerStyle.alert)
+        alertController.addAction(UIAlertAction(title: "Continue", style: UIAlertActionStyle.default,handler: nil))
         
-        GHomeController.presentViewController(alertController, animated: true, completion: nil)
+        GHomeController.present(alertController, animated: true, completion: nil)
         
     }
     
@@ -60,11 +60,11 @@ import UIKit
         
     }
     func loadViewFromNib() {
-        let bundle = NSBundle(forClass: self.dynamicType)
+        let bundle = Bundle(for: type(of: self))
         let nib = UINib(nibName: "seasonOpener", bundle: bundle)
-        let seasonOpener = nib.instantiateWithOwner(self, options: nil)[0] as! UIView
+        let seasonOpener = nib.instantiate(withOwner: self, options: nil)[0] as! UIView
         seasonOpener.frame = bounds
-        seasonOpener.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
+        seasonOpener.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         self.addSubview(seasonOpener)
     }
 

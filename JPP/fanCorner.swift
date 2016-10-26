@@ -68,25 +68,25 @@ import SwiftyJSON
     
     var borderColor = UIColor(red: 0, green: 176/255, blue: 174/255, alpha: 1)
     
-    @IBAction func submitForm(sender: AnyObject) {
+    @IBAction func submitForm(_ sender: AnyObject) {
         
         favouriteplayer = String(favouriteplayer.characters.dropLast())
-        favouriteplayer = favouriteplayer.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+        favouriteplayer = favouriteplayer.trimmingCharacters(in: CharacterSet.whitespaces)
         print("submit \(favouriteplayer)")
         
         if(firstName.text == "" || lastName.text == "" || mobile.text == "" || email.text == "" || city.text == "") {
-            let alertE = UIAlertController(title: "Please enter all details", message:"", preferredStyle: .Alert)
-            alertE.addAction(UIAlertAction(title: "OK", style: .Default) { _ in })
-            fanControllerGlobal.presentViewController(alertE, animated: true){}
+            let alertE = UIAlertController(title: "Please enter all details", message:"", preferredStyle: .alert)
+            alertE.addAction(UIAlertAction(title: "OK", style: .default) { _ in })
+            fanControllerGlobal.present(alertE, animated: true){}
         } else {
             rest.sendFanCorner(firstName.text!, lastname: lastName.text!, mobile: mobile.text!, email: email.text!, city: city.text!, favouriteplayer: favouriteplayer) {
                 (json:JSON) -> Void in
                 print(json)
             }
             
-            let alert = UIAlertController(title: "Thank You", message:"", preferredStyle: .Alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .Default) { _ in })
-            fanControllerGlobal.presentViewController(alert, animated: true){}
+            let alert = UIAlertController(title: "Thank You", message:"", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default) { _ in })
+            fanControllerGlobal.present(alert, animated: true){}
         }
         
         self.firstName.text = ""
@@ -96,27 +96,27 @@ import SwiftyJSON
         self.city.text = ""
         favouriteplayer = ""
         
-        button1.backgroundColor = UIColor.whiteColor(); checkb1 = 0
-        button2.backgroundColor = UIColor.whiteColor(); checkb2 = 0
-        button3.backgroundColor = UIColor.whiteColor(); checkb3 = 0
-        button4.backgroundColor = UIColor.whiteColor(); checkb4 = 0
-        button5.backgroundColor = UIColor.whiteColor(); checkb5 = 0
-        button6.backgroundColor = UIColor.whiteColor(); checkb6 = 0
-        button7.backgroundColor = UIColor.whiteColor(); checkb7 = 0
-        button8.backgroundColor = UIColor.whiteColor(); checkb8 = 0
-        button9.backgroundColor = UIColor.whiteColor(); checkb9 = 0
-        button10.backgroundColor = UIColor.whiteColor(); checkb10 = 0
-        button11.backgroundColor = UIColor.whiteColor(); checkb11 = 0
-        button12.backgroundColor = UIColor.whiteColor(); checkb12 = 0
-        button13.backgroundColor = UIColor.whiteColor(); checkb13 = 0
-        button14.backgroundColor = UIColor.whiteColor(); checkb14 = 0
-        button15.backgroundColor = UIColor.whiteColor(); checkb15 = 0
-        button16.backgroundColor = UIColor.whiteColor(); checkb16 = 0
-        button17.backgroundColor = UIColor.whiteColor(); checkb17 = 0
+        button1.backgroundColor = UIColor.white; checkb1 = 0
+        button2.backgroundColor = UIColor.white; checkb2 = 0
+        button3.backgroundColor = UIColor.white; checkb3 = 0
+        button4.backgroundColor = UIColor.white; checkb4 = 0
+        button5.backgroundColor = UIColor.white; checkb5 = 0
+        button6.backgroundColor = UIColor.white; checkb6 = 0
+        button7.backgroundColor = UIColor.white; checkb7 = 0
+        button8.backgroundColor = UIColor.white; checkb8 = 0
+        button9.backgroundColor = UIColor.white; checkb9 = 0
+        button10.backgroundColor = UIColor.white; checkb10 = 0
+        button11.backgroundColor = UIColor.white; checkb11 = 0
+        button12.backgroundColor = UIColor.white; checkb12 = 0
+        button13.backgroundColor = UIColor.white; checkb13 = 0
+        button14.backgroundColor = UIColor.white; checkb14 = 0
+        button15.backgroundColor = UIColor.white; checkb15 = 0
+        button16.backgroundColor = UIColor.white; checkb16 = 0
+        button17.backgroundColor = UIColor.white; checkb17 = 0
         
     }
     
-    @IBAction func checkbutton1(sender: AnyObject) { // Anil Patil
+    @IBAction func checkbutton1(_ sender: AnyObject) { // Anil Patil
         
         if (checkb1 == 0) {
             button1.backgroundColor = borderColor
@@ -124,99 +124,99 @@ import SwiftyJSON
             print("checkbox: \(favouriteplayer)")
             checkb1 = 1
         } else {
-            button1.backgroundColor = UIColor.whiteColor()
-            favouriteplayer = favouriteplayer.stringByReplacingOccurrencesOfString(players[0].name + ",", withString: "")
+            button1.backgroundColor = UIColor.white
+            favouriteplayer = favouriteplayer.replacingOccurrences(of: players[0].name + ",", with: "")
             checkb1 = 0
         }
     }
     
-    @IBAction func checkbutton2(sender: AnyObject) {
+    @IBAction func checkbutton2(_ sender: AnyObject) {
         if (checkb2 == 0) {
             button2.backgroundColor = borderColor
             favouriteplayer += players[1].name + ","
             print("checkbox: \(favouriteplayer)")
             checkb2 = 1
         } else {
-            button2.backgroundColor = UIColor.whiteColor()
-            favouriteplayer = favouriteplayer.stringByReplacingOccurrencesOfString(players[1].name + ",", withString: "")
+            button2.backgroundColor = UIColor.white
+            favouriteplayer = favouriteplayer.replacingOccurrences(of: players[1].name + ",", with: "")
             checkb2 = 0
         }
     }
     
-    @IBAction func checkbutton3(sender: AnyObject) {
+    @IBAction func checkbutton3(_ sender: AnyObject) {
         if (checkb3 == 0) {
             button3.backgroundColor = borderColor
             favouriteplayer += players[2].name + ","
             print("checkbox: \(favouriteplayer)")
             checkb3 = 1
         } else {
-            button3.backgroundColor = UIColor.whiteColor()
-            favouriteplayer = favouriteplayer.stringByReplacingOccurrencesOfString(players[2].name + ",", withString: "")
+            button3.backgroundColor = UIColor.white
+            favouriteplayer = favouriteplayer.replacingOccurrences(of: players[2].name + ",", with: "")
             checkb3 = 0
         }
     }
     
-    @IBAction func checkbutton4(sender: AnyObject) {
+    @IBAction func checkbutton4(_ sender: AnyObject) {
         if (checkb4 == 0) {
             button4.backgroundColor = borderColor
             favouriteplayer += players[3].name + ","
             print("checkbox: \(favouriteplayer)")
             checkb4 = 1
         } else {
-            button4.backgroundColor = UIColor.whiteColor()
-            favouriteplayer = favouriteplayer.stringByReplacingOccurrencesOfString(players[3].name + ",", withString: "")
+            button4.backgroundColor = UIColor.white
+            favouriteplayer = favouriteplayer.replacingOccurrences(of: players[3].name + ",", with: "")
             checkb4 = 0
         }
     }
     
-    @IBAction func checkbutton5(sender: AnyObject) {
+    @IBAction func checkbutton5(_ sender: AnyObject) {
         if (checkb5 == 0) {
             button5.backgroundColor = borderColor
             favouriteplayer += players[4].name + ","
             print("checkbox: \(favouriteplayer)")
             checkb5 = 1
         } else {
-            button5.backgroundColor = UIColor.whiteColor()
-            favouriteplayer = favouriteplayer.stringByReplacingOccurrencesOfString(players[4].name + ",", withString: "")
+            button5.backgroundColor = UIColor.white
+            favouriteplayer = favouriteplayer.replacingOccurrences(of: players[4].name + ",", with: "")
             checkb5 = 0
         }
     }
     
-    @IBAction func checkbutton6(sender: AnyObject) {
+    @IBAction func checkbutton6(_ sender: AnyObject) {
         if (checkb6 == 0) {
             button6.backgroundColor = borderColor
             favouriteplayer += players[5].name + ","
             print("checkbox: \(favouriteplayer)")
             checkb6 = 1
         } else {
-            button6.backgroundColor = UIColor.whiteColor()
-            favouriteplayer = favouriteplayer.stringByReplacingOccurrencesOfString(players[5].name + ",", withString: "")
+            button6.backgroundColor = UIColor.white
+            favouriteplayer = favouriteplayer.replacingOccurrences(of: players[5].name + ",", with: "")
             checkb6 = 0
         }
     }
     
-    @IBAction func checkbutton7(sender: AnyObject) {
+    @IBAction func checkbutton7(_ sender: AnyObject) {
         if (checkb7 == 0) {
             button7.backgroundColor = borderColor
             favouriteplayer += players[6].name + ","
             print("checkbox: \(favouriteplayer)")
             checkb7 = 1
         } else {
-            button7.backgroundColor = UIColor.whiteColor()
-            favouriteplayer = favouriteplayer.stringByReplacingOccurrencesOfString(players[6].name + ",", withString: "")
+            button7.backgroundColor = UIColor.white
+            favouriteplayer = favouriteplayer.replacingOccurrences(of: players[6].name + ",", with: "")
             checkb7 = 0
         }
     }
     
-    @IBAction func checkbutton8(sender: AnyObject) {
+    @IBAction func checkbutton8(_ sender: AnyObject) {
         if (checkb8 == 0) {
             button8.backgroundColor = borderColor
             favouriteplayer += players[7].name + ","
             print("checkbox: \(favouriteplayer)")
             checkb8 = 1
         } else {
-            button8.backgroundColor = UIColor.whiteColor()
-            favouriteplayer = favouriteplayer.stringByReplacingOccurrencesOfString(players[7].name + ",", withString: "")
+            button8.backgroundColor = UIColor.white
+            favouriteplayer = favouriteplayer.replacingOccurrences(of: players[7].name + ",", with: "")
             checkb8 = 0
         }
     }
@@ -234,93 +234,93 @@ import SwiftyJSON
 //        }
 //    }
     
-    @IBAction func checkbutton9(sender: AnyObject) {
+    @IBAction func checkbutton9(_ sender: AnyObject) {
         if (checkb9 == 0) {
             button9.backgroundColor = borderColor
             favouriteplayer += players[8].name + ","
             print("checkbox: \(favouriteplayer)")
             checkb9 = 1
         } else {
-            button9.backgroundColor = UIColor.whiteColor()
-            favouriteplayer = favouriteplayer.stringByReplacingOccurrencesOfString(players[8].name + ",", withString: "")
+            button9.backgroundColor = UIColor.white
+            favouriteplayer = favouriteplayer.replacingOccurrences(of: players[8].name + ",", with: "")
             checkb9 = 0
         }
     }
     
-    @IBAction func checkbutton10(sender: AnyObject) {
+    @IBAction func checkbutton10(_ sender: AnyObject) {
         if (checkb10 == 0) {
             button10.backgroundColor = borderColor
             favouriteplayer += players[9].name + ","
             print("checkbox: \(favouriteplayer)")
             checkb10 = 1
         } else {
-            button10.backgroundColor = UIColor.whiteColor()
-            favouriteplayer = favouriteplayer.stringByReplacingOccurrencesOfString(players[9].name + ",", withString: "")
+            button10.backgroundColor = UIColor.white
+            favouriteplayer = favouriteplayer.replacingOccurrences(of: players[9].name + ",", with: "")
             checkb10 = 0
         }
     }
     
-    @IBAction func checkbutton11(sender: AnyObject) {
+    @IBAction func checkbutton11(_ sender: AnyObject) {
         if (checkb11 == 0) {
             button11.backgroundColor = borderColor
             favouriteplayer += players[10].name + ","
             print("checkbox: \(favouriteplayer)")
             checkb11 = 1
         } else {
-            button11.backgroundColor = UIColor.whiteColor()
-            favouriteplayer = favouriteplayer.stringByReplacingOccurrencesOfString(players[10].name + ",", withString: "")
+            button11.backgroundColor = UIColor.white
+            favouriteplayer = favouriteplayer.replacingOccurrences(of: players[10].name + ",", with: "")
             checkb11 = 0
         }
     }
     
-    @IBAction func checkbutton12(sender: AnyObject) {
+    @IBAction func checkbutton12(_ sender: AnyObject) {
         if (checkb12 == 0) {
             button12.backgroundColor = borderColor
             favouriteplayer += players[11].name + ","
             print("checkbox: \(favouriteplayer)")
             checkb12 = 1
         } else {
-            button12.backgroundColor = UIColor.whiteColor()
-            favouriteplayer = favouriteplayer.stringByReplacingOccurrencesOfString(players[11].name + ",", withString: "")
+            button12.backgroundColor = UIColor.white
+            favouriteplayer = favouriteplayer.replacingOccurrences(of: players[11].name + ",", with: "")
             checkb12 = 0
         }
     }
     
-    @IBAction func checkbutton13(sender: AnyObject) {
+    @IBAction func checkbutton13(_ sender: AnyObject) {
         if (checkb13 == 0) {
             button13.backgroundColor = borderColor
             favouriteplayer += players[12].name + ","
             print("checkbox: \(favouriteplayer)")
             checkb13 = 1
         } else {
-            button13.backgroundColor = UIColor.whiteColor()
-            favouriteplayer = favouriteplayer.stringByReplacingOccurrencesOfString(players[12].name + ",", withString: "")
+            button13.backgroundColor = UIColor.white
+            favouriteplayer = favouriteplayer.replacingOccurrences(of: players[12].name + ",", with: "")
             checkb13 = 0
         }
     }
     
-    @IBAction func checkbutton14(sender: AnyObject) {
+    @IBAction func checkbutton14(_ sender: AnyObject) {
         if (checkb14 == 0) {
             button14.backgroundColor = borderColor
             favouriteplayer += players[13].name + ","
             print("checkbox: \(favouriteplayer)")
             checkb14 = 1
         } else {
-            button14.backgroundColor = UIColor.whiteColor()
-            favouriteplayer = favouriteplayer.stringByReplacingOccurrencesOfString(players[13].name + ",", withString: "")
+            button14.backgroundColor = UIColor.white
+            favouriteplayer = favouriteplayer.replacingOccurrences(of: players[13].name + ",", with: "")
             checkb14 = 0
         }
     }
     
-    @IBAction func checkbutton15(sender: AnyObject) {
+    @IBAction func checkbutton15(_ sender: AnyObject) {
         if (checkb15 == 0) {
             button15.backgroundColor = borderColor
             favouriteplayer += players[14].name + ","
             print("checkbox: \(favouriteplayer)")
             checkb15 = 1
         } else {
-            button15.backgroundColor = UIColor.whiteColor()
-            favouriteplayer = favouriteplayer.stringByReplacingOccurrencesOfString(players[14].name + ",", withString: "")
+            button15.backgroundColor = UIColor.white
+            favouriteplayer = favouriteplayer.replacingOccurrences(of: players[14].name + ",", with: "")
             checkb15 = 0
         }
     }
@@ -349,11 +349,11 @@ import SwiftyJSON
         
     }
     func loadViewFromNib() {
-        let bundle = NSBundle(forClass: self.dynamicType)
+        let bundle = Bundle(for: type(of: self))
         let nib = UINib(nibName: "fanCorner", bundle: bundle)
-        let sortnewview = nib.instantiateWithOwner(self, options: nil)[0] as! UIView
+        let sortnewview = nib.instantiate(withOwner: self, options: nil)[0] as! UIView
         sortnewview.frame = bounds
-        sortnewview.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
+        sortnewview.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         self.addSubview(sortnewview);
         
         let borderWidth:CGFloat = 0.5
@@ -378,68 +378,68 @@ import SwiftyJSON
         
         // BORDER
         firstName.layer.borderWidth = borderWidth
-        firstName.layer.borderColor = borderColor.CGColor
+        firstName.layer.borderColor = borderColor.cgColor
         self.lastName.layer.borderWidth = borderWidth
-        self.lastName.layer.borderColor = borderColor.CGColor
+        self.lastName.layer.borderColor = borderColor.cgColor
         self.mobile.layer.borderWidth = borderWidth
-        self.mobile.layer.borderColor = borderColor.CGColor
+        self.mobile.layer.borderColor = borderColor.cgColor
         self.email.layer.borderWidth = borderWidth
-        self.email.layer.borderColor = borderColor.CGColor
+        self.email.layer.borderColor = borderColor.cgColor
         city.layer.borderWidth = borderWidth
-        city.layer.borderColor = borderColor.CGColor
+        city.layer.borderColor = borderColor.cgColor
         
         // BUTTON BORDER
         button1.layer.borderWidth = borderWidth
-        button1.layer.borderColor = borderColor.CGColor
+        button1.layer.borderColor = borderColor.cgColor
         button2.layer.borderWidth = borderWidth
-        button2.layer.borderColor = borderColor.CGColor
+        button2.layer.borderColor = borderColor.cgColor
         button3.layer.borderWidth = borderWidth
-        button3.layer.borderColor = borderColor.CGColor
+        button3.layer.borderColor = borderColor.cgColor
         button4.layer.borderWidth = borderWidth
-        button4.layer.borderColor = borderColor.CGColor
+        button4.layer.borderColor = borderColor.cgColor
         button5.layer.borderWidth = borderWidth
-        button5.layer.borderColor = borderColor.CGColor
+        button5.layer.borderColor = borderColor.cgColor
         button6.layer.borderWidth = borderWidth
-        button6.layer.borderColor = borderColor.CGColor
+        button6.layer.borderColor = borderColor.cgColor
         button7.layer.borderWidth = borderWidth
-        button7.layer.borderColor = borderColor.CGColor
+        button7.layer.borderColor = borderColor.cgColor
         button8.layer.borderWidth = borderWidth
-        button8.layer.borderColor = borderColor.CGColor
+        button8.layer.borderColor = borderColor.cgColor
         button9.layer.borderWidth = borderWidth
-        button9.layer.borderColor = borderColor.CGColor
+        button9.layer.borderColor = borderColor.cgColor
         button10.layer.borderWidth = borderWidth
-        button10.layer.borderColor = borderColor.CGColor
+        button10.layer.borderColor = borderColor.cgColor
         button11.layer.borderWidth = borderWidth
-        button11.layer.borderColor = borderColor.CGColor
+        button11.layer.borderColor = borderColor.cgColor
         button12.layer.borderWidth = borderWidth
-        button12.layer.borderColor = borderColor.CGColor
+        button12.layer.borderColor = borderColor.cgColor
         button13.layer.borderWidth = borderWidth
-        button13.layer.borderColor = borderColor.CGColor
+        button13.layer.borderColor = borderColor.cgColor
         button14.layer.borderWidth = borderWidth
-        button14.layer.borderColor = borderColor.CGColor
+        button14.layer.borderColor = borderColor.cgColor
         button15.layer.borderWidth = borderWidth
-        button15.layer.borderColor = borderColor.CGColor
+        button15.layer.borderColor = borderColor.cgColor
 //        button16.layer.borderWidth = borderWidth
 //        button16.layer.borderColor = borderColor.CGColor
 //        button17.layer.borderWidth = borderWidth
 //        button17.layer.borderColor = borderColor.CGColor
         
         // PADDING
-        let firstPad = UIView(frame: CGRectMake(0, 0, 10, self.firstName.frame.height))
+        let firstPad = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: self.firstName.frame.height))
         firstName.leftView = firstPad
-        firstName.leftViewMode = UITextFieldViewMode.Always
-        let lastPad = UIView(frame: CGRectMake(0, 0, 10, self.lastName.frame.height))
+        firstName.leftViewMode = UITextFieldViewMode.always
+        let lastPad = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: self.lastName.frame.height))
         lastName.leftView = lastPad
-        lastName.leftViewMode = UITextFieldViewMode.Always
-        let mobilePad = UIView(frame: CGRectMake(0, 0, 10, self.mobile.frame.height))
+        lastName.leftViewMode = UITextFieldViewMode.always
+        let mobilePad = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: self.mobile.frame.height))
         mobile.leftView = mobilePad
-        mobile.leftViewMode = UITextFieldViewMode.Always
-        let emailPad = UIView(frame: CGRectMake(0, 0, 10, self.email.frame.height))
+        mobile.leftViewMode = UITextFieldViewMode.always
+        let emailPad = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: self.email.frame.height))
         email.leftView = emailPad
-        email.leftViewMode = UITextFieldViewMode.Always
-        let cityPad = UIView(frame: CGRectMake(0, 0, 10, self.email.frame.height))
+        email.leftViewMode = UITextFieldViewMode.always
+        let cityPad = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: self.email.frame.height))
         city.leftView = cityPad
-        city.leftViewMode = UITextFieldViewMode.Always
+        city.leftViewMode = UITextFieldViewMode.always
         
         self.firstName.text = ""
         self.lastName.text = ""
@@ -454,7 +454,7 @@ class TextField: UITextField {
     
     let padding = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
     
-    private func newBounds(bounds: CGRect) -> CGRect {
+    fileprivate func newBounds(_ bounds: CGRect) -> CGRect {
         var newBounds = bounds
         newBounds.origin.x += padding.left
         newBounds.origin.y += padding.top

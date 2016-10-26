@@ -20,10 +20,10 @@ class KvowTeamInsideController: UIViewController {
         
         self.verticalLayout = VerticalLayout(width: self.view.frame.size.width - 8)
         
-        let playerInsideView = playerInside(frame: CGRectMake(8, 8, verticalLayout.frame.size.width - 8, height - 8))
+        let playerInsideView = playerInside(frame: CGRect(x: 8, y: 8, width: verticalLayout.frame.size.width - 8, height: height - 8))
         //playerInsideView.frame.size.height = playerInside.
         
-        scroll = UIScrollView(frame: CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - 65))
+        scroll = UIScrollView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height - 65))
         scroll.contentSize.height = self.view.frame.size.height - 65
         //print("\(playerInsideView.frame.size.height)")
         scroll.layer.zPosition = 100
@@ -55,7 +55,7 @@ class KvowTeamInsideController: UIViewController {
         resizeView(8)
     }
     
-    func resizeView(offset:CGFloat) {
+    func resizeView(_ offset:CGFloat) {
         self.verticalLayout.layoutSubviews()
         scroll.contentSize = CGSize(width: self.verticalLayout.frame.width, height: height + offset)
     }

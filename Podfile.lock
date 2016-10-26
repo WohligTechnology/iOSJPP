@@ -1,34 +1,61 @@
 PODS:
-  - DKChainableAnimationKit (1.6.0)
+  - DKChainableAnimationKit (2.0.0)
   - HanekeSwift (0.10.1)
-  - RAMAnimatedTabBarController (1.0.7)
-  - SlideMenuControllerSwift (2.0.5)
-  - SwiftHTTP (1.0.3)
-  - SwiftyJSON (2.3.2)
+  - RAMAnimatedTabBarController (2.0.2)
+  - SlideMenuControllerSwift (3.0.0)
+  - SwiftHTTP (2.0.1)
+  - SwiftyJSON (3.1.1)
 
 DEPENDENCIES:
-  - DKChainableAnimationKit (~> 1.6.0)
-  - HanekeSwift
-  - RAMAnimatedTabBarController (~> 1.0.6)
-  - SlideMenuControllerSwift
-  - SwiftHTTP (~> 1.0.3)
-  - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`)
+  - DKChainableAnimationKit (from `https://github.com/Draveness/DKChainableAnimationKit.git`, branch `master`)
+  - HanekeSwift (from `https://github.com/Haneke/HanekeSwift.git`, branch `feature/swift-3`)
+  - RAMAnimatedTabBarController (~> 2.0.2)
+  - SlideMenuControllerSwift (from `https://github.com/dekatotoro/SlideMenuControllerSwift.git`, branch `master`)
+  - SwiftHTTP (from `https://github.com/daltoniam/SwiftHTTP.git`, branch `master`)
+  - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`, branch `master`)
 
 EXTERNAL SOURCES:
+  DKChainableAnimationKit:
+    :branch: master
+    :git: https://github.com/Draveness/DKChainableAnimationKit.git
+  HanekeSwift:
+    :branch: feature/swift-3
+    :git: https://github.com/Haneke/HanekeSwift.git
+  SlideMenuControllerSwift:
+    :branch: master
+    :git: https://github.com/dekatotoro/SlideMenuControllerSwift.git
+  SwiftHTTP:
+    :branch: master
+    :git: https://github.com/daltoniam/SwiftHTTP.git
   SwiftyJSON:
+    :branch: master
     :git: https://github.com/SwiftyJSON/SwiftyJSON.git
 
 CHECKOUT OPTIONS:
+  DKChainableAnimationKit:
+    :commit: 82b9d7ce1f12d8c44a6c9d8582c086d6ca400c8f
+    :git: https://github.com/Draveness/DKChainableAnimationKit.git
+  HanekeSwift:
+    :commit: 6e48f795c5928101043a5e11e1377877e042012d
+    :git: https://github.com/Haneke/HanekeSwift.git
+  SlideMenuControllerSwift:
+    :commit: 435232407b304b463e3672df1a6b2f955c7a6be9
+    :git: https://github.com/dekatotoro/SlideMenuControllerSwift.git
+  SwiftHTTP:
+    :commit: dcccd4d184274fc3a81f45b6c72d9684f6a12c71
+    :git: https://github.com/daltoniam/SwiftHTTP.git
   SwiftyJSON:
-    :commit: 929539eb6a3304eaa9153ca44041a78b85bf2ee5
+    :commit: 6a0c3a82e2b4a07723b4958146315c7928220189
     :git: https://github.com/SwiftyJSON/SwiftyJSON.git
 
 SPEC CHECKSUMS:
-  DKChainableAnimationKit: fe28909402825a42cc632b211eadcc39ad2bee38
-  HanekeSwift: 08e47d3d0f2899ec58e5d257beba0de619aca9e8
-  RAMAnimatedTabBarController: f779af4c652e3b609e7f068b12ac8dab46909aa7
-  SlideMenuControllerSwift: 9dcae36265e14c4f42e729f212463beb60d2cf96
-  SwiftHTTP: fface018ab365bfb49fa3dca9fdfe77cafccde8b
-  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
+  DKChainableAnimationKit: 20401b3ad31b57d90548bfdb214077f2d2d79d49
+  HanekeSwift: 4113367892828e7700d24a384027de6ebc79aad1
+  RAMAnimatedTabBarController: 8b4b7e41d1d6c76ebf6482233f4bc528231db437
+  SlideMenuControllerSwift: 9c0a84f9a3fba51681debd7be77617094562ebcc
+  SwiftHTTP: 6d57b54ee84d9ad9cf81b6bc1c4cae593e3f6329
+  SwiftyJSON: f0be2e604f83e8405a624e9f891898bf6ed4e019
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: 4d8e74c57023d4d92d3d9923fabcfb01ec4d8f3c
+
+COCOAPODS: 1.1.1

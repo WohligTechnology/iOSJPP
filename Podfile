@@ -1,17 +1,14 @@
-# Uncomment this line to define a global platform for your project
-platform :ios, '8.0'
-# Uncomment this line if you're using Swift
+platform :ios, ‘9.0’
 use_frameworks!
 
-pod 'SlideMenuControllerSwift'
-pod 'RAMAnimatedTabBarController', '~> 1.0.6'
-
-pod 'SwiftHTTP', '~> 1.0.3'
-pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
-pod 'DKChainableAnimationKit', '~> 1.6.0'
-pod 'HanekeSwift'
 
 target 'JPP' do
 
+pod 'SlideMenuControllerSwift’, :git => 'https://github.com/dekatotoro/SlideMenuControllerSwift.git', :branch => ‘master’
+pod 'RAMAnimatedTabBarController', "~> 2.0.2"
+pod 'SwiftHTTP', :git => 'https://github.com/daltoniam/SwiftHTTP.git', :branch => ‘master’
+pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git', :branch => ‘master’
+pod 'DKChainableAnimationKit', :git => 'https://github.com/Draveness/DKChainableAnimationKit.git', :branch => ‘master’
+pod 'HanekeSwift', :git => 'https://github.com/Haneke/HanekeSwift.git', :branch => ‘feature/swift-3’
 
 end

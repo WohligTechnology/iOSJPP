@@ -14,8 +14,8 @@ class VideoPlayController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let url = NSURL (string:  "https://www.youtube.com/embed/"+videoIDGlo+"?autoplay=1&modestbranding=1&showinfo=0&rel=0&loop=1");
-        let requestObj = NSURLRequest(URL: url!);
+        let url = URL (string:  "https://www.youtube.com/embed/"+videoIDGlo+"?autoplay=1&modestbranding=1&showinfo=0&rel=0&loop=1");
+        let requestObj = URLRequest(url: url!);
         webView.loadRequest(requestObj);
         
         self.title = "Video";

@@ -30,10 +30,10 @@ class MerchandiseViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "bookMerchandise" {
-            let WebController:BookTicketController = segue.destinationViewController as! BookTicketController
-            let theUrl = NSURL(string: "http://www.didasportswear.com/jaipur-pink-panthers.html")
+            let WebController:BookTicketController = segue.destination as! BookTicketController
+            let theUrl = URL(string: "http://www.didasportswear.com/jaipur-pink-panthers.html")
             WebController.url = theUrl
         }
     }

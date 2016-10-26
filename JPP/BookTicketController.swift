@@ -10,7 +10,7 @@ import UIKit
 
 class BookTicketController: UIViewController {
     
-    var url: NSURL?
+    var url: URL?
     @IBOutlet weak var webView: UIWebView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +23,7 @@ class BookTicketController: UIViewController {
 //        {
 //            url = NSURL (string:  GlobalBookTicketURL);
 //        }
-        let requestObj = NSURLRequest(URL: url!);
+        let requestObj = URLRequest(url: url!);
         webView.loadRequest(requestObj);
 
 

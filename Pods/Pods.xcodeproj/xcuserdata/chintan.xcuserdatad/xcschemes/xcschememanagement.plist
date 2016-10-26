@@ -19,11 +19,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>RAMAnimatedTabBarController.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -47,42 +42,37 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1512E3411A7378077828357290520722</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>186526C95A6E6A368E316AEBD475C8CB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>1C2DF87D176E8F0AB5789F0D9FD39235</key>
+		<key>2C2B1953A91633859BF7AD238FF567A0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>1D3782E6298F2E002745BECCF2B10617</key>
+		<key>38A618CAE793784087E6021560032375</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3C5F94FCCCB15B2AA30E60C0D4E049FA</key>
+		<key>8B45A05D5126D81DBC0F72D66DAA6736</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7925F3FD432AFDBE83D5C1C60F3AD71E</key>
+		<key>9F84C5B67A0504B5F2AC35FCEDB9A09E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7DDF79495F24B309AF089ACC99FC1151</key>
+		<key>CD64AC8BE1CA2FFC75564A3257EBC495</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F882F61085400CBA03A1F9D556FC22FF</key>
+		<key>CE32B29B29AE12C25C6BD2456AF313F0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
