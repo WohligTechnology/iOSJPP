@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SwiftyJSON
 import DKChainableAnimationKit
 import EventKitUI
 
@@ -23,7 +22,8 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
         
         switch (status) {
         case EKAuthorizationStatus.notDetermined:
-            requestAccessToCalendar()
+            break;
+//            requestAccessToCalendar()
         case EKAuthorizationStatus.authorized:
             print("Authorised");
         case EKAuthorizationStatus.restricted:
@@ -33,23 +33,23 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
         }
     }
     
-    func requestAccessToCalendar() {
-        eventStore.requestAccess(to: EKEntityType.event, completion: {
-            (accessGranted: Bool, error: NSError?) in
-            
-            if accessGranted == true {
-                DispatchQueue.main.async(execute: {
-                    print("Access Graned");
-                    SaveCalender = 1;
-                })
-            } else {
-                DispatchQueue.main.async(execute: {
-                    SaveCalender = 0;
-                    print("Access not Graned");
-                })
-            }
-        } as! EKEventStoreRequestAccessCompletionHandler)
-    }
+//    func requestAccessToCalendar() {
+//        eventStore.requestAccess(to: EKEntityType.event, completion: {
+//            (accessGranted: Bool, error: NSError?) in
+//            
+//            if accessGranted == true {
+//                DispatchQueue.main.async(execute: {
+//                    print("Access Graned");
+//                    SaveCalender = 1;
+//                })
+//            } else {
+//                DispatchQueue.main.async(execute: {
+//                    SaveCalender = 0;
+//                    print("Access not Graned");
+//                })
+//            }
+//        } as! EKEventStoreRequestAccessCompletionHandler)
+//    }
 
 
     

@@ -8,7 +8,6 @@
 import Foundation
 import UIKit
 import EventKit
-import SwiftyJSON
 
 var SchduleCtrlGlo:ScheduleController!
 

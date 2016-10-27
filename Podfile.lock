@@ -3,8 +3,7 @@ PODS:
   - HanekeSwift (0.10.1)
   - RAMAnimatedTabBarController (2.0.2)
   - SlideMenuControllerSwift (3.0.0)
-  - SwiftHTTP (2.0.1)
-  - SwiftyJSON (3.1.1)
+  - SwiftHTTP (2.0.2)
 
 DEPENDENCIES:
   - DKChainableAnimationKit (from `https://github.com/Draveness/DKChainableAnimationKit.git`, branch `master`)
@@ -12,7 +11,6 @@ DEPENDENCIES:
   - RAMAnimatedTabBarController (~> 2.0.2)
   - SlideMenuControllerSwift (from `https://github.com/dekatotoro/SlideMenuControllerSwift.git`, branch `master`)
   - SwiftHTTP (from `https://github.com/daltoniam/SwiftHTTP.git`, branch `master`)
-  - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`, branch `master`)
 
 EXTERNAL SOURCES:
   DKChainableAnimationKit:
@@ -27,9 +25,6 @@ EXTERNAL SOURCES:
   SwiftHTTP:
     :branch: master
     :git: https://github.com/daltoniam/SwiftHTTP.git
-  SwiftyJSON:
-    :branch: master
-    :git: https://github.com/SwiftyJSON/SwiftyJSON.git
 
 CHECKOUT OPTIONS:
   DKChainableAnimationKit:
@@ -42,20 +37,16 @@ CHECKOUT OPTIONS:
     :commit: 435232407b304b463e3672df1a6b2f955c7a6be9
     :git: https://github.com/dekatotoro/SlideMenuControllerSwift.git
   SwiftHTTP:
-    :commit: dcccd4d184274fc3a81f45b6c72d9684f6a12c71
+    :commit: 94e3bef83ed33b2d0baeffaa17e36ba41586141d
     :git: https://github.com/daltoniam/SwiftHTTP.git
-  SwiftyJSON:
-    :commit: 6a0c3a82e2b4a07723b4958146315c7928220189
-    :git: https://github.com/SwiftyJSON/SwiftyJSON.git
 
 SPEC CHECKSUMS:
   DKChainableAnimationKit: 20401b3ad31b57d90548bfdb214077f2d2d79d49
   HanekeSwift: 4113367892828e7700d24a384027de6ebc79aad1
   RAMAnimatedTabBarController: 8b4b7e41d1d6c76ebf6482233f4bc528231db437
   SlideMenuControllerSwift: 9c0a84f9a3fba51681debd7be77617094562ebcc
-  SwiftHTTP: 6d57b54ee84d9ad9cf81b6bc1c4cae593e3f6329
-  SwiftyJSON: f0be2e604f83e8405a624e9f891898bf6ed4e019
+  SwiftHTTP: c04bfedac299c931fbf419f07b7d42024ff45fdd
 
-PODFILE CHECKSUM: 4d8e74c57023d4d92d3d9923fabcfb01ec4d8f3c
+PODFILE CHECKSUM: f2c4bda4893793d1987a3aed1212312b4aced16b
 
 COCOAPODS: 1.1.1

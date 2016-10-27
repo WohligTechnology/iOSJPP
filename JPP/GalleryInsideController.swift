@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SwiftyJSON
 
 class GalleryInsideController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate {
     

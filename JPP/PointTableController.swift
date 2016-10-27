@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import SwiftyJSON
+
 class PointTableController: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
     @IBOutlet weak var pointTable: UITableView!

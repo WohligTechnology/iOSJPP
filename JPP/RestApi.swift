@@ -8,7 +8,6 @@
 
 import Foundation
 import SwiftHTTP
-import SwiftyJSON
 
 //let adminUrl = "http://192.168.1.103/jppbackend/";
 let adminUrl = "http://admin.jaipurpinkpanthers.com/";

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import SwiftyJSON
+
 var gal2Global:GalleryInside2Controller!;
 
 class GalleryInside2Controller: UIViewController {

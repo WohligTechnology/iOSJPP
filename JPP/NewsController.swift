@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import SwiftyJSON
+
 class NewsController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var newsTableView: UITableView!

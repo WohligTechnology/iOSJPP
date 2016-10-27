@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import SwiftyJSON
+
 class KnowTeamController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate {
     
     override func viewDidLoad() {

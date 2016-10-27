@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SwiftyJSON
 import Haneke
 
 class GalleryController: UIViewController,UITableViewDataSource,UITableViewDelegate {

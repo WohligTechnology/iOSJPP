@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import SwiftyJSON
+
 class KvowTeamInsideController: UIViewController {
     
     @IBOutlet weak var playerIn: playerInside!
