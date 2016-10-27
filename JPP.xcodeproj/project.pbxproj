@@ -97,6 +97,7 @@
 		3AA5E83E1D2A3E9800AEDD27 /* matchupdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA5E83D1D2A3E9800AEDD27 /* matchupdate.swift */; };
 		3AA5E8401D2A424600AEDD27 /* MatchUpdateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA5E83F1D2A424600AEDD27 /* MatchUpdateController.swift */; };
 		3AA5E8421D2A8C9200AEDD27 /* MerchandiseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA5E8411D2A8C9200AEDD27 /* MerchandiseViewController.swift */; };
+		58E594868D217AF24457C8EA /* Pods_JPP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37A0FFFEDE16483BB227439E /* Pods_JPP.framework */; };
 		7809A3C41C64BFB900562E6A /* fanCorner.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7809A3C31C64BFB900562E6A /* fanCorner.xib */; };
 		7809A3C61C64BFCB00562E6A /* fanCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7809A3C51C64BFCB00562E6A /* fanCorner.swift */; };
 		78238FE21C57A77E0067E7D5 /* about.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78238FE11C57A77E0067E7D5 /* about.swift */; };
@@ -205,6 +206,7 @@
 		36F9C1B81C5653E5003D02AB /* matches.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = matches.swift; sourceTree = "<group>"; };
 		36F9C1BA1C5653EF003D02AB /* matches.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = matches.xib; sourceTree = "<group>"; };
 		36FF12761C59319900E0F990 /* RestApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestApi.swift; sourceTree = "<group>"; };
+		37A0FFFEDE16483BB227439E /* Pods_JPP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JPP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A33574A1CF6D0B400F074ED /* jpptv.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = jpptv.xib; sourceTree = "<group>"; };
 		3A33574C1CF6D13500F074ED /* jpptv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = jpptv.swift; sourceTree = "<group>"; };
 		3A3357511CF6E54200F074ED /* signupSection.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = signupSection.xib; sourceTree = "<group>"; };
@@ -253,6 +255,7 @@
 				363609A01C5C749E00078DC7 /* libz.tbd in Frameworks */,
 				363609A21C5C74A500078DC7 /* libstdc++.tbd in Frameworks */,
 				3636099B1C5C740800078DC7 /* Pushwoosh.framework in Frameworks */,
+				58E594868D217AF24457C8EA /* Pods_JPP.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -594,6 +597,7 @@
 				363609A31C5C74FE00078DC7 /* MapKit.framework */,
 				363609A11C5C74A500078DC7 /* libstdc++.tbd */,
 				3636099F1C5C749E00078DC7 /* libz.tbd */,
+				37A0FFFEDE16483BB227439E /* Pods_JPP.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

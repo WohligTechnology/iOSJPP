@@ -6,16 +6,13 @@ PODS:
   - SwiftHTTP (2.0.2)
 
 DEPENDENCIES:
-  - DKChainableAnimationKit (from `https://github.com/Draveness/DKChainableAnimationKit.git`, branch `master`)
+  - DKChainableAnimationKit (~> 2.0.0)
   - HanekeSwift (from `https://github.com/Haneke/HanekeSwift.git`, branch `feature/swift-3`)
   - RAMAnimatedTabBarController (~> 2.0.2)
   - SlideMenuControllerSwift (from `https://github.com/dekatotoro/SlideMenuControllerSwift.git`, branch `master`)
   - SwiftHTTP (from `https://github.com/daltoniam/SwiftHTTP.git`, branch `master`)
 
 EXTERNAL SOURCES:
-  DKChainableAnimationKit:
-    :branch: master
-    :git: https://github.com/Draveness/DKChainableAnimationKit.git
   HanekeSwift:
     :branch: feature/swift-3
     :git: https://github.com/Haneke/HanekeSwift.git
@@ -27,9 +24,6 @@ EXTERNAL SOURCES:
     :git: https://github.com/daltoniam/SwiftHTTP.git
 
 CHECKOUT OPTIONS:
-  DKChainableAnimationKit:
-    :commit: 82b9d7ce1f12d8c44a6c9d8582c086d6ca400c8f
-    :git: https://github.com/Draveness/DKChainableAnimationKit.git
   HanekeSwift:
     :commit: 6e48f795c5928101043a5e11e1377877e042012d
     :git: https://github.com/Haneke/HanekeSwift.git
@@ -41,12 +35,12 @@ CHECKOUT OPTIONS:
     :git: https://github.com/daltoniam/SwiftHTTP.git
 
 SPEC CHECKSUMS:
-  DKChainableAnimationKit: 20401b3ad31b57d90548bfdb214077f2d2d79d49
+  DKChainableAnimationKit: b9e079381d6e059f8a1f969223d16e3970ec3545
   HanekeSwift: 4113367892828e7700d24a384027de6ebc79aad1
   RAMAnimatedTabBarController: 8b4b7e41d1d6c76ebf6482233f4bc528231db437
   SlideMenuControllerSwift: 9c0a84f9a3fba51681debd7be77617094562ebcc
   SwiftHTTP: c04bfedac299c931fbf419f07b7d42024ff45fdd
 
-PODFILE CHECKSUM: f2c4bda4893793d1987a3aed1212312b4aced16b
+PODFILE CHECKSUM: 195da2a345ea8de958cb8570b6e6ba963c1b1a04
 
 COCOAPODS: 1.1.1
