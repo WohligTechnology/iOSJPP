@@ -21,6 +21,7 @@ class SideMenuController: UIViewController, UITableViewDataSource, UITableViewDe
     var wallpaperController:UIViewController!
     var pointController:UIViewController!
     var matchupdateController:UIViewController!
+    var worldcupController:UIViewController!
     var fancornerController:UIViewController!
     var aboutsController:UIViewController!
     
@@ -61,6 +62,9 @@ class SideMenuController: UIViewController, UITableViewDataSource, UITableViewDe
         let matchupdateController = storyboard.instantiateViewController(withIdentifier: "matchupdate") as! MatchUpdateController
         self.matchupdateController = UINavigationController(rootViewController: matchupdateController)
         
+        let worldcupController = storyboard.instantiateViewController(withIdentifier: "worldcup") as! WorldCupController
+        self.worldcupController = UINavigationController(rootViewController: worldcupController)
+        
         let fancornerController = storyboard.instantiateViewController(withIdentifier: "fanCorner") as! FanCornerController
         self.fancornerController = UINavigationController(rootViewController: fancornerController)
         
@@ -81,8 +85,8 @@ class SideMenuController: UIViewController, UITableViewDataSource, UITableViewDe
         return 1
     }
     
-    var data = ["HOME", "SEASON 4 REVIEW", "MERCHANDISE", "GALLERY", "JPP TV", "NEWS & MEDIA","KNOW YOUR PANTHERS","WALLPAPERS", "POINTS TABLE", "FAN CORNER","ABOUT"]
-    var dataimage = ["home.png", "matchupdate.png", "tickets.png", "gallery.png", "jpptv.png", "newsicon.png","know.png","galleryinside.png","point.png", "fan.png","about.png"]
+    var data = ["HOME", "WORLD CUP", "SEASON 4 REVIEW", "MERCHANDISE", "GALLERY", "JPP TV", "NEWS & MEDIA","KNOW YOUR PANTHERS","WALLPAPERS", "POINTS TABLE", "FAN CORNER","ABOUT"]
+    var dataimage = ["home.png", "matchupdate.png", "matchupdate.png", "tickets.png", "gallery.png", "jpptv.png", "newsicon.png","know.png","galleryinside.png","point.png", "fan.png","about.png"]
     
     // MARK: - UITableViewDataSource
     
@@ -107,28 +111,31 @@ class SideMenuController: UIViewController, UITableViewDataSource, UITableViewDe
             self.slideMenuController()?.changeMainViewController(self.homeController, close: true)
 //        case 1:
 //            self.slideMenuController()?.changeMainViewController(self.scheduleController, close: true)
+            
         case 1:
-            self.slideMenuController()?.changeMainViewController(self.matchupdateController, close: true)
+            self.slideMenuController()?.changeMainViewController(self.worldcupController, close: true)
         case 2:
-            self.slideMenuController()?.changeMainViewController(self.merchandiseController, close: true)
+            self.slideMenuController()?.changeMainViewController(self.matchupdateController, close: true)
         case 3:
+            self.slideMenuController()?.changeMainViewController(self.merchandiseController, close: true)
+        case 4:
             isGalWal = 0
             self.slideMenuController()?.changeMainViewController(self.galleryController, close: true)
-        case 4:
+        case 5:
             isGalWal = 1
             self.slideMenuController()?.changeMainViewController(self.jpptvController, close: true)
-        case 5:
-            self.slideMenuController()?.changeMainViewController(self.newsController, close: true)
         case 6:
-            self.slideMenuController()?.changeMainViewController(self.knowTeamController, close: true)
+            self.slideMenuController()?.changeMainViewController(self.newsController, close: true)
         case 7:
+            self.slideMenuController()?.changeMainViewController(self.knowTeamController, close: true)
+        case 8:
             isGalWal = 1
             self.slideMenuController()?.changeMainViewController(self.wallpaperController, close: true)
-        case 8:
-            self.slideMenuController()?.changeMainViewController(self.pointController, close: true)
         case 9:
-            self.slideMenuController()?.changeMainViewController(self.fancornerController, close: true)
+            self.slideMenuController()?.changeMainViewController(self.pointController, close: true)
         case 10:
+            self.slideMenuController()?.changeMainViewController(self.fancornerController, close: true)
+        case 11:
             self.slideMenuController()?.changeMainViewController(self.aboutsController, close: true)
         default:
             self.slideMenuController()?.changeMainViewController(self.homeController, close: true)

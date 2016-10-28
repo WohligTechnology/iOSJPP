@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		360231951DC39C7900B17C2F /* WorldCupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360231941DC39C7900B17C2F /* WorldCupController.swift */; };
 		360A50FE1C577A05001F7E40 /* SideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360A50FD1C577A05001F7E40 /* SideMenuController.swift */; };
 		360A51011C579AAD001F7E40 /* playerInside.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360A51001C579AAD001F7E40 /* playerInside.swift */; };
 		360A51031C579ACB001F7E40 /* playerInside.xib in Resources */ = {isa = PBXBuildFile; fileRef = 360A51021C579ACB001F7E40 /* playerInside.xib */; };
@@ -123,6 +124,7 @@
 
 /* Begin PBXFileReference section */
 		2D336F626161773594C67CC5 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		360231941DC39C7900B17C2F /* WorldCupController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorldCupController.swift; sourceTree = "<group>"; };
 		360A50FD1C577A05001F7E40 /* SideMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuController.swift; sourceTree = "<group>"; };
 		360A51001C579AAD001F7E40 /* playerInside.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = playerInside.swift; sourceTree = "<group>"; };
 		360A51021C579ACB001F7E40 /* playerInside.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = playerInside.xib; sourceTree = "<group>"; };
@@ -467,6 +469,7 @@
 				C257ACEB1D128009002C94F6 /* BookTicketsViewController.swift */,
 				3AA5E83F1D2A424600AEDD27 /* MatchUpdateController.swift */,
 				3AA5E8411D2A8C9200AEDD27 /* MerchandiseViewController.swift */,
+				360231941DC39C7900B17C2F /* WorldCupController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -861,6 +864,7 @@
 				36F2CE8F1C56584400D0D2D6 /* galleryAlbum.swift in Sources */,
 				36AD11BD1C5BA33F005DD9F1 /* AllWebViewController.swift in Sources */,
 				C257ACEC1D128009002C94F6 /* BookTicketsViewController.swift in Sources */,
+				360231951DC39C7900B17C2F /* WorldCupController.swift in Sources */,
 				360A51011C579AAD001F7E40 /* playerInside.swift in Sources */,
 				36F2CEA91C57712A00D0D2D6 /* NewsInsideController.swift in Sources */,
 				366F19D91C58F32700321669 /* BookTicketController.swift in Sources */,

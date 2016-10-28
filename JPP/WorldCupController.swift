@@ -1,30 +1,24 @@
 //
-//  MatchUpdateController.swift
+//  WorldCupController.swift
 //  JPP
 //
-//  Created by Harsh Thakkar on 04/07/16.
+//  Created by Chintan Shah on 28/10/16.
 //  Copyright © 2016 Wohlig Technology. All rights reserved.
 //
 
 import UIKit
 
+class WorldCupController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-class MatchUpdateController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
-    @IBOutlet weak var matchupdateTableView: UITableView!
+    @IBOutlet weak var worldcupTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        self.setNavigationBarItemText("MATCH UPDATE")
+        self.setNavigationBarItemText("WORLD CUP 2016")
         loadingInit()
         self.view.addSubview(loaderGlo)
-        
-        if scheduleType == "kabaddi" {
-            rest.getMatchUpdate(matchupdateLoaded)
-        } else if scheduleType == "worldcup" {
-            rest.getWorldCup(matchupdateLoaded)
-        }
+        rest.getWorldCup(matchupdateLoaded)
         
     }
     
@@ -41,7 +35,7 @@ class MatchUpdateController: UIViewController, UITableViewDelegate, UITableViewD
         else {
             matchupdateJSON = json
             DispatchQueue.main.async(execute: {
-                self.matchupdateTableView.reloadData()
+                self.worldcupTableView.reloadData()
             });
         }
         DispatchQueue.main.async(execute: {
@@ -59,7 +53,7 @@ class MatchUpdateController: UIViewController, UITableViewDelegate, UITableViewD
         tableView.rowHeight = 330.0
         tableView.separatorStyle = UITableViewCellSeparatorStyle.none
         tableView.tableFooterView = UIView()
-        let cell = tableView.dequeueReusableCell(withIdentifier: "matchupdateCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "worldcupCell", for: indexPath)
         cell.selectionStyle = UITableViewCellSelectionStyle.none
         
         if((matchupdateJSON[indexPath.row]["matchtime"].string) != nil) {
@@ -67,7 +61,8 @@ class MatchUpdateController: UIViewController, UITableViewDelegate, UITableViewD
             matchupdateView.matchTitle.text = "MATCH - " + String(matchupdateJSON.count - indexPath.row)
             matchupdateView.teamoneImage.image = UIImage(named: "t" + matchupdateJSON[indexPath.row]["team1id"].string! + ".png")
             matchupdateView.teamtwoImage.image = UIImage(named: "t" + matchupdateJSON[indexPath.row]["team2id"].string! + ".png")
-            matchupdateView.stadiumName.text = matchupdateJSON[indexPath.row]["stadium"].string
+            //matchupdateView.stadiumName.text = matchupdateJSON[indexPath.row]["stadium"].string
+            matchupdateView.stadiumName.text = ""
             matchupdateView.matchTime.text = matchupdateJSON[indexPath.row]["starttimedate"].string
             matchupdateView.matchTotalTime.text = matchupdateJSON[indexPath.row]["matchtime"].string
             matchupdateView.teamoneScore.text = matchupdateJSON[indexPath.row]["score1"].string
@@ -114,7 +109,7 @@ class MatchUpdateController: UIViewController, UITableViewDelegate, UITableViewD
             default:
                 matchupdateView.teamtwoScore.textColor = UIColor(red: 231/255, green: 45/255, blue: 137/255, alpha: 1) //E72D89
             }
-
+            
             
             
             cell.addSubview(matchupdateView)
@@ -128,18 +123,13 @@ class MatchUpdateController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
 
     /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
