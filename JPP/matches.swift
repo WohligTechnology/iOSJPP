@@ -20,20 +20,20 @@ var GlobalBookTicketURL = "";
     
     @IBOutlet weak var addCalender2: UIButton!
     @IBOutlet weak var addCalenderConstrain: NSLayoutConstraint!
-    @IBAction func addCalenderTap(sender: AnyObject) {
-        let dateFormatter = NSDateFormatter()
+    @IBAction func addCalenderTap(_ sender: AnyObject) {
+        let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd MMM yyyy, HH:mm"
-        let event2Time = dateFormatter.dateFromString(matchesDate.text!)!
+        let event2Time = dateFormatter.date(from: matchesDate.text!)!
         createEvent(matchesTeams.text!, EventTime: event2Time)
         let alertController = UIAlertController(title: "Match added to your Calender", message:
-            "", preferredStyle: UIAlertControllerStyle.Alert)
-        alertController.addAction(UIAlertAction(title: "Continue", style: UIAlertActionStyle.Default,handler: nil))
-        SchduleCtrlGlo.presentViewController(alertController, animated: true, completion: nil)
+            "", preferredStyle: UIAlertControllerStyle.alert)
+        alertController.addAction(UIAlertAction(title: "Continue", style: UIAlertActionStyle.default,handler: nil))
+        SchduleCtrlGlo.present(alertController, animated: true, completion: nil)
     }
-    @IBAction func bookTicketTap(sender: AnyObject) {
+    @IBAction func bookTicketTap(_ sender: AnyObject) {
 
         GlobalBookTicketURL = bookURL;
-        SchduleCtrlGlo.performSegueWithIdentifier("bookWeb", sender: nil)
+        SchduleCtrlGlo.performSegue(withIdentifier: "bookWeb", sender: nil)
     }
     
     
@@ -53,11 +53,11 @@ var GlobalBookTicketURL = "";
     
     
     func loadViewFromNib() {
-        let bundle = NSBundle(forClass: self.dynamicType)
+        let bundle = Bundle(for: type(of: self))
         let nib = UINib(nibName: "matches", bundle: bundle)
-        let sortnewview = nib.instantiateWithOwner(self, options: nil)[0] as! UIView
+        let sortnewview = nib.instantiate(withOwner: self, options: nil)[0] as! UIView
         sortnewview.frame = bounds
-        sortnewview.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
+        sortnewview.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         self.addSubview(sortnewview);
     }
     

@@ -12,7 +12,7 @@ import UIKit
     
     @IBOutlet var shareBtn: UIButton!
     
-    @IBAction func onShareClick(sender: AnyObject) {
+    @IBAction func onShareClick(_ sender: AnyObject) {
         shareImage()
     }
     @IBOutlet weak var openImage: UIImageView!
@@ -27,11 +27,11 @@ import UIKit
         
     }
     func loadViewFromNib() {
-        let bundle = NSBundle(forClass: self.dynamicType)
+        let bundle = Bundle(for: type(of: self))
         let nib = UINib(nibName: "singleThumbnailImage", bundle: bundle)
-        let sortnewview = nib.instantiateWithOwner(self, options: nil)[0] as! UIView
+        let sortnewview = nib.instantiate(withOwner: self, options: nil)[0] as! UIView
         sortnewview.frame = bounds
-        sortnewview.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
+        sortnewview.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         self.addSubview(sortnewview);
         
     }
@@ -42,8 +42,8 @@ import UIKit
         //var shareItems:Array = [img, messageStr]
         let shareItems:Array = [img]
         let activityViewController:UIActivityViewController = UIActivityViewController(activityItems: shareItems, applicationActivities: nil)
-        activityViewController.excludedActivityTypes = [UIActivityTypePrint, UIActivityTypePostToWeibo, UIActivityTypeCopyToPasteboard, UIActivityTypeAddToReadingList, UIActivityTypePostToVimeo]
-        gal2Global.presentViewController(activityViewController, animated: true, completion: nil)
+        activityViewController.excludedActivityTypes = [UIActivityType.print, UIActivityType.postToWeibo, UIActivityType.copyToPasteboard, UIActivityType.addToReadingList, UIActivityType.postToVimeo]
+        gal2Global.present(activityViewController, animated: true, completion: nil)
     }
     
     

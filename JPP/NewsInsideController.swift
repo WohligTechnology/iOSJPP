@@ -17,10 +17,10 @@ class NewsInsideController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.verticalLayout = VerticalLayout(width: self.view.frame.width);
-        self.scrollView.insertSubview(self.verticalLayout, atIndex: 0)
+        self.scrollView.insertSubview(self.verticalLayout, at: 0)
         
         
-        let insideView = newsDetail(frame: CGRectMake(8,8,self.view.frame.width-16,700));
+        let insideView = newsDetail(frame: CGRect(x: 8,y: 8,width: self.view.frame.width-16,height: 700));
         self.title = newsTitle
         insideView.newsTitle.text = newsTitle;
         insideView.newImgae.hnk_setImageFromURL(rest.getImageThumbCache(newsImage))
@@ -35,7 +35,7 @@ class NewsInsideController: UIViewController {
         
     }
     
-    func resizeView(offset:CGFloat)
+    func resizeView(_ offset:CGFloat)
     {
         self.verticalLayout.layoutSubviews()
         self.scrollView.contentSize = CGSize(width: self.verticalLayout.frame.width, height: self.verticalLayout.frame.height + offset)

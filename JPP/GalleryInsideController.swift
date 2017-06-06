@@ -12,7 +12,7 @@ import SwiftyJSON
 class GalleryInsideController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate {
     
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         
         self.view.addSubview(loaderGlo)
     }
@@ -34,7 +34,7 @@ class GalleryInsideController: UIViewController,UICollectionViewDataSource,UICol
             rest.getWallPaper(newsLoaded)
             self.setNavigationBarItemText("WALLPAPER")
         }
-        navigationItem.leftBarButtonItem?.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "Oswald-Light", size: 20)!], forState: UIControlState.Normal)
+        navigationItem.leftBarButtonItem?.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "Oswald-Light", size: 20)!], for: UIControlState())
         
         
         //        self.setNavigationBarItemText("GALLERY INSIDE")
@@ -45,26 +45,26 @@ class GalleryInsideController: UIViewController,UICollectionViewDataSource,UICol
     
     var jsonData = JSON([])
     
-    func newsLoaded (json:JSON) {
+    func newsLoaded (_ json:JSON) {
         
         if(json == 1)
         {
             let alertController = UIAlertController(title: "No Connection", message:
-                "Please check your internet connection", preferredStyle: UIAlertControllerStyle.Alert)
-            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+                "Please check your internet connection", preferredStyle: UIAlertControllerStyle.alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
             
-            self.presentViewController(alertController, animated: true, completion: nil)
+            self.present(alertController, animated: true, completion: nil)
         }
         else
         {
             
             jsonData = json;
-            dispatch_async(dispatch_get_main_queue(),{
+            DispatchQueue.main.async(execute: {
                 self.galleryTable.reloadData()
             });
             
         }
-        dispatch_async(dispatch_get_main_queue(), {
+        DispatchQueue.main.async(execute: {
             loadingStop()
         });
     }
@@ -78,36 +78,36 @@ class GalleryInsideController: UIViewController,UICollectionViewDataSource,UICol
     
     
     
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return jsonData.count;
     }
     
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("thumbnail", forIndexPath: indexPath) as UICollectionViewCell
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "thumbnail", for: indexPath) as UICollectionViewCell
         //        cell.addSubview(thumbnailImage(frame: CGRectMake(8,8,cell.frame.width - 8,cell.frame.height - 8)));
         
         
         if((jsonData[indexPath.row]["name"].string) != nil) {
-            let mediaBox = thumbnailImage(frame: CGRectMake(8,8,cell.frame.width-8,230));
+            let mediaBox = thumbnailImage(frame: CGRect(x: 8,y: 8,width: cell.frame.width-8,height: 230));
             mediaBox.thumbImage.hnk_setImageFromURL(rest.getImageThumbCache(jsonData[indexPath.row]["image"].string!))
             cell.addSubview(mediaBox)
         }
         return cell
     }
     
-    func collectionView(collectionView : UICollectionView,layout collectionViewLayout:UICollectionViewLayout,sizeForItemAtIndexPath indexPath:NSIndexPath) -> CGSize
+    func collectionView(_ collectionView : UICollectionView,layout collectionViewLayout:UICollectionViewLayout,sizeForItemAtIndexPath indexPath:IndexPath) -> CGSize
     {
         
-        return CGSizeMake(self.view.frame.width/2 - 4 ,self.view.frame.width/2)
+        return CGSize(width: self.view.frame.width/2 - 4 ,height: self.view.frame.width/2)
     }
     
-    func collectionView(collectionView: UICollectionView,
-        didSelectItemAtIndexPath indexPath: NSIndexPath) {
+    func collectionView(_ collectionView: UICollectionView,
+        didSelectItemAt indexPath: IndexPath) {
             
             galleryImage = jsonData[indexPath.row]["image"].string!
             
             
-            performSegueWithIdentifier("galleryImageDetail", sender: nil)
+            performSegue(withIdentifier: "galleryImageDetail", sender: nil)
     }
     
     

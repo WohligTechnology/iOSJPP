@@ -26,14 +26,14 @@ class BookTicketsViewController: UIViewController, UITableViewDataSource, UITabl
         // Dispose of any resources that can be recreated.
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         //return allUrls.count + 1
         return 1
         
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
 //        if indexPath.row > allUrls.count - 1 {
 //           
@@ -49,12 +49,12 @@ class BookTicketsViewController: UIViewController, UITableViewDataSource, UITabl
 //        cell.schedule.text = time[indexPath.row]
 //        return cell
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("merchandiseCell") as! MerchandiseTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "merchandiseCell") as! MerchandiseTableViewCell
         return cell
         
     }
     
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         if indexPath.row > allUrls.count - 1 {
             
@@ -66,13 +66,13 @@ class BookTicketsViewController: UIViewController, UITableViewDataSource, UITabl
         
     }
     
-    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         
         return 0
         
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "bookTickets" {
             
@@ -80,15 +80,15 @@ class BookTicketsViewController: UIViewController, UITableViewDataSource, UITabl
             let view = button.superview
             let cell = view!.superview as! TicketEventTableViewCell
             
-            let indexPath = bookMyTicketTable.indexPathForCell(cell)
+            let indexPath = bookMyTicketTable.indexPath(for: cell)
             
-            let WebController:BookTicketController = segue.destinationViewController as! BookTicketController
-            let theUrl = NSURL(string: allUrls[indexPath!.row])
-            WebController.url = theUrl
+            let WebController:BookTicketController = segue.destination as! BookTicketController
+            let theUrl = URL(string: allUrls[indexPath!.row])
+            WebController.url = theUrl as! NSURL as URL
         } else if segue.identifier == "merchandise" {
-            let WebController:BookTicketController = segue.destinationViewController as! BookTicketController
-            let theUrl = NSURL(string: "http://www.didasportswear.com/jaipur-pink-panthers.html")
-            WebController.url = theUrl
+            let WebController:BookTicketController = segue.destination as! BookTicketController
+            let theUrl = URL(string: "http://www.didasportswear.com/jaipur-pink-panthers.html")
+            WebController.url = theUrl as! NSURL as URL
         }
         
         

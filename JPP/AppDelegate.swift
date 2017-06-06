@@ -10,14 +10,14 @@ import UIKit
 import EventKitUI
 let eventStore = EKEventStore()
 var mediaUrl = "";
-func createEvent(EventName:String, EventTime:NSDate) {
+func createEvent(_ EventName:String, EventTime:Date) {
     let event = EKEvent(eventStore: eventStore)
     event.title = EventName
     event.startDate = EventTime
-    event.endDate = EventTime.dateByAddingTimeInterval(60 * 60)
+    event.endDate = EventTime.addingTimeInterval(60 * 60)
     event.calendar = eventStore.defaultCalendarForNewEvents
     do {
-        try eventStore.saveEvent(event, span: .ThisEvent)
+        try eventStore.save(event, span: .thisEvent)
 //        print("Working Fine Event Stored");
     } catch {
 //        print("Bad things happened")
@@ -36,12 +36,12 @@ var playerIndex = 0;
 var isGalWal = 0;
 var players:[Player] = []
 var loaderGlo:loading!
-var bounds = UIScreen.mainScreen().bounds
+var bounds = UIScreen.main.bounds
 var widthGlo = bounds.size.width
 var heightGlo = bounds.size.height
 
 func loadingInit() {
-    loaderGlo = loading(frame: CGRectMake(0,0,widthGlo,heightGlo-44) )
+    loaderGlo = loading(frame: CGRect(x: 0,y: 0,width: widthGlo,height: heightGlo-44) )
     loaderGlo.alpha = 0
     loadingStart()
 }
@@ -76,9 +76,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate,PushNotificationDelegate {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         var nvc: UINavigationController!
         
-        let leftViewController = storyboard.instantiateViewControllerWithIdentifier("sideMenu") as!SideMenuController
+        let leftViewController = storyboard.instantiateViewController(withIdentifier: "sideMenu") as!SideMenuController
         
-        let mainViewController = storyboard.instantiateViewControllerWithIdentifier("home") as! HomeController
+        let mainViewController = storyboard.instantiateViewController(withIdentifier: "home") as! HomeController
         
         nvc = UINavigationController(rootViewController: mainViewController)
         
@@ -93,7 +93,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,PushNotificationDelegate {
     }
 
 
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         createMenuView()
         
@@ -126,48 +126,48 @@ class AppDelegate: UIResponder, UIApplicationDelegate,PushNotificationDelegate {
 
 
         
-        PushNotificationManager.pushManager().delegate = self
-        PushNotificationManager.pushManager().handlePushReceived(launchOptions)
-        PushNotificationManager.pushManager().sendAppOpen()
-        PushNotificationManager.pushManager().registerForPushNotifications()
+        PushNotificationManager.push().delegate = self
+        PushNotificationManager.push().handlePushReceived(launchOptions)
+        PushNotificationManager.push().sendAppOpen()
+        PushNotificationManager.push().registerForPushNotifications()
         return true
     }
     
-    func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
-        PushNotificationManager.pushManager().handlePushRegistration(deviceToken)
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        PushNotificationManager.push().handlePushRegistration(deviceToken)
     }
     
-    func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError) {
-        PushNotificationManager.pushManager().handlePushRegistrationFailure(error)
+    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        PushNotificationManager.push().handlePushRegistrationFailure(error)
     }
     
-    func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
-        PushNotificationManager.pushManager().handlePushReceived(userInfo)
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any]) {
+        PushNotificationManager.push().handlePushReceived(userInfo)
     }
     
-    func onPushAccepted(pushManager: PushNotificationManager!, withNotification pushNotification: [NSObject : AnyObject]!, onStart: Bool) {
+    func onPushAccepted(_ pushManager: PushNotificationManager!, withNotification pushNotification: [AnyHashable: Any]!, onStart: Bool) {
         print("Push notification accepted: \(pushNotification)");
     }
 
-    func applicationWillResignActive(application: UIApplication) {
+    func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
     }
 
-    func applicationDidEnterBackground(application: UIApplication) {
+    func applicationDidEnterBackground(_ application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
     }
 
-    func applicationWillEnterForeground(application: UIApplication) {
+    func applicationWillEnterForeground(_ application: UIApplication) {
         // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
     }
 
-    func applicationDidBecomeActive(application: UIApplication) {
+    func applicationDidBecomeActive(_ application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     }
 
-    func applicationWillTerminate(application: UIApplication) {
+    func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 

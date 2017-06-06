@@ -62,5 +62,7 @@ Pushwoosh_APPNAME
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>NSCalendarsUsageDescription</key>
+	<string>$(PRODUCT_NAME) calendar events</string>
 </dict>
 </plist>

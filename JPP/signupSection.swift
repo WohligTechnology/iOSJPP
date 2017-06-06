@@ -25,11 +25,11 @@ class signupSection: UIView {
     }
     
     func loadViewFromNib() {
-        let bundle = NSBundle(forClass: self.dynamicType)
+        let bundle = Bundle(for: type(of: self))
         let nib = UINib(nibName: "signupSection", bundle: bundle)
-        let signupSection = nib.instantiateWithOwner(self, options: nil)[0] as! UIView
+        let signupSection = nib.instantiate(withOwner: self, options: nil)[0] as! UIView
         signupSection.frame = bounds
-        signupSection.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
+        signupSection.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         self.addSubview(signupSection)
         
         signupMainView.layer.cornerRadius = 2

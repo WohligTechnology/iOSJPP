@@ -22,11 +22,11 @@ import UIKit
     }
     
     func loadViewFromNib() {
-        let bundle = NSBundle(forClass: self.dynamicType)
+        let bundle = Bundle(for: type(of: self))
         let nib = UINib(nibName: "jpptv", bundle: bundle)
-        let jpptv = nib.instantiateWithOwner(self, options: nil)[0] as! UIView
+        let jpptv = nib.instantiate(withOwner: self, options: nil)[0] as! UIView
         jpptv.frame = bounds
-        jpptv.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
+        jpptv.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         self.addSubview(jpptv)
     }
 

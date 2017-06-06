@@ -30,11 +30,11 @@ import UIKit
     }
     
     func loadViewFromNib() {
-        let bundle = NSBundle(forClass: self.dynamicType)
+        let bundle = Bundle(for: type(of: self))
         let nib = UINib(nibName: "matchupdate", bundle: bundle)
-        let matchupdate = nib.instantiateWithOwner(self, options: nil)[0] as! UIView
+        let matchupdate = nib.instantiate(withOwner: self, options: nil)[0] as! UIView
         matchupdate.frame = bounds
-        matchupdate.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
+        matchupdate.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         self.addSubview(matchupdate);
     }
 }

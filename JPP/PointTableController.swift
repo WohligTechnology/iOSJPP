@@ -16,7 +16,7 @@ class PointTableController: UIViewController,UITableViewDelegate,UITableViewData
     let font = UIFont(name: "Oswald-Regular", size: 14.0)
     let lightBlueColor = UIColor(red: 196/255, green: 240/255, blue: 255/255, alpha: 1)
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         
         self.view.addSubview(loaderGlo)
     }
@@ -59,27 +59,27 @@ class PointTableController: UIViewController,UITableViewDelegate,UITableViewData
 
     var pointJson = JSON([])
     
-    func pointLoaded (json:JSON) {
+    func pointLoaded (_ json:JSON) {
         
         print(json);
         
         if(json == 1)
         {
             let alertController = UIAlertController(title: "No Connection", message:
-                "Please check your internet connection", preferredStyle: UIAlertControllerStyle.Alert)
-            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+                "Please check your internet connection", preferredStyle: UIAlertControllerStyle.alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
             
-            self.presentViewController(alertController, animated: true, completion: nil)
+            self.present(alertController, animated: true, completion: nil)
         }
         else
         {
             pointJson = json;
-            dispatch_async(dispatch_get_main_queue(),{
+            DispatchQueue.main.async(execute: {
                 self.pointTable.reloadData()
             });
             
         }
-        dispatch_async(dispatch_get_main_queue(), {
+        DispatchQueue.main.async(execute: {
             loadingStop()
         });
 
@@ -90,19 +90,19 @@ class PointTableController: UIViewController,UITableViewDelegate,UITableViewData
         // Dispose of any resources that can be recreated.
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return pointJson.count
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        tableView.separatorStyle = UITableViewCellSeparatorStyle.None
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        tableView.separatorStyle = UITableViewCellSeparatorStyle.none
         tableView.allowsSelection = false
         tableView.tableFooterView = UIView()
-        let cell = tableView.dequeueReusableCellWithIdentifier("pointTableCell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "pointTableCell", for: indexPath)
         
         
         if((pointJson[indexPath.row]["name"].string) != nil) {
-            let mediaBox = table(frame: CGRectMake(0,8,self.view.frame.width-32,230));
+            let mediaBox = table(frame: CGRect(x: 0,y: 8,width: self.view.frame.width-32,height: 230));
             mediaBox.tableTeam.text = pointJson[indexPath.row]["name"].string
             if (pointJson[indexPath.row]["name"].string == "Jaipur Pink Panthers") {
                 mediaBox.tableTeam.font = font
@@ -143,7 +143,7 @@ class PointTableController: UIViewController,UITableViewDelegate,UITableViewData
         return cell
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
     }
 
