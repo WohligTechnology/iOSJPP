@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double DKChainableAnimationKitVersionNumber;
-FOUNDATION_EXPORT const unsigned char DKChainableAnimationKitVersionString[];
+FOUNDATION_EXPORT double SwiftyJSONVersionNumber;
+FOUNDATION_EXPORT const unsigned char SwiftyJSONVersionString[];
 
