@@ -10,10 +10,10 @@ import UIKit
 
 public extension DKChainableAnimationKit {
 
-    public func moveOnPath(_ path: UIBezierPath) -> DKChainableAnimationKit {
+    public func moveOnPath(path: UIBezierPath) -> DKChainableAnimationKit {
         self.addAnimationCalculationAction { (view: UIView) -> Void in
             let pathAnimation = self.basicAnimationForKeyPath("position")
-            pathAnimation.path = path.cgPath
+            pathAnimation.path = path.CGPath
             self.addAnimationFromCalculationBlock(pathAnimation)
         }
 
@@ -24,10 +24,10 @@ public extension DKChainableAnimationKit {
         return self
     }
 
-    public func moveAndRotateOnPath(_ path: UIBezierPath) -> DKChainableAnimationKit {
+    public func moveAndRotateOnPath(path: UIBezierPath) -> DKChainableAnimationKit {
         self.addAnimationCalculationAction { (view: UIView) -> Void in
             let pathAnimation = self.basicAnimationForKeyPath("position")
-            pathAnimation.path = path.cgPath
+            pathAnimation.path = path.CGPath
             pathAnimation.rotationMode = kCAAnimationRotateAuto
             self.addAnimationFromCalculationBlock(pathAnimation)
         }
@@ -39,10 +39,10 @@ public extension DKChainableAnimationKit {
         return self
     }
 
-    public func moveAndReverseRotateOnPath(_ path: UIBezierPath) -> DKChainableAnimationKit {
+    public func moveAndReverseRotateOnPath(path: UIBezierPath) -> DKChainableAnimationKit {
         self.addAnimationCalculationAction { (view: UIView) -> Void in
             let pathAnimation = self.basicAnimationForKeyPath("position")
-            pathAnimation.path = path.cgPath
+            pathAnimation.path = path.CGPath
             pathAnimation.rotationMode = kCAAnimationRotateAutoReverse
             self.addAnimationFromCalculationBlock(pathAnimation)
         }

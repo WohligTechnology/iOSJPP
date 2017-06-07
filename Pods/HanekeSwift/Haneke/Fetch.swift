@@ -9,32 +9,32 @@
 import Foundation
 
 enum FetchState<T> {
-    case pending
+    case Pending
     // Using Wrapper as a workaround for error 'unimplemented IR generation feature non-fixed multi-payload enum layout'
     // See: http://swiftradar.tumblr.com/post/88314603360/swift-fails-to-compile-enum-with-two-data-cases
     // See: http://owensd.io/2014/08/06/fixed-enum-layout.html
-    case success(Wrapper<T>)
-    case failure(Error?)
+    case Success(Wrapper<T>)
+    case Failure(NSError?)
 }
 
-open class Fetch<T> {
+public class Fetch<T> {
     
     public typealias Succeeder = (T) -> ()
     
-    public typealias Failer = (Error?) -> ()
+    public typealias Failer = (NSError?) -> ()
     
-    fileprivate var onSuccess : Succeeder?
+    private var onSuccess : Succeeder?
     
-    fileprivate var onFailure : Failer?
+    private var onFailure : Failer?
     
-    fileprivate var state : FetchState<T> = FetchState.pending
+    private var state : FetchState<T> = FetchState.Pending
     
     public init() {}
     
-    @discardableResult open func onSuccess(_ onSuccess: @escaping Succeeder) -> Self {
+    public func onSuccess(onSuccess: Succeeder) -> Self {
         self.onSuccess = onSuccess
         switch self.state {
-        case FetchState.success(let wrapper):
+        case FetchState.Success(let wrapper):
             onSuccess(wrapper.value)
         default:
             break
@@ -42,10 +42,10 @@ open class Fetch<T> {
         return self
     }
     
-    @discardableResult open func onFailure(_ onFailure: @escaping Failer) -> Self {
+    public func onFailure(onFailure: Failer) -> Self {
         self.onFailure = onFailure
         switch self.state {
-        case FetchState.failure(let error):
+        case FetchState.Failure(let error):
             onFailure(error)
         default:
             break
@@ -53,19 +53,19 @@ open class Fetch<T> {
         return self
     }
     
-    func succeed(_ value: T) {
-        self.state = FetchState.success(Wrapper(value))
+    func succeed(value: T) {
+        self.state = FetchState.Success(Wrapper(value))
         self.onSuccess?(value)
     }
     
-    func fail(_ error: Error? = nil) {
-        self.state = FetchState.failure(error)
+    func fail(error: NSError? = nil) {
+        self.state = FetchState.Failure(error)
         self.onFailure?(error)
     }
     
     var hasFailed : Bool {
         switch self.state {
-        case FetchState.failure(_):
+        case FetchState.Failure(_):
             return true
         default:
             return false
@@ -74,7 +74,7 @@ open class Fetch<T> {
     
     var hasSucceeded : Bool {
         switch self.state {
-        case FetchState.success(_):
+        case FetchState.Success(_):
             return true
         default:
             return false
@@ -83,7 +83,7 @@ open class Fetch<T> {
     
 }
 
-open class Wrapper<T> {
-    open let value: T
+public class Wrapper<T> {
+    public let value: T
     public init(_ value: T) { self.value = value }
 }

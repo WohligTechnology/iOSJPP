@@ -24,10 +24,10 @@ public struct Shared {
         return Static.cache
     }
     
-    public static var dataCache : Cache<Data> {
+    public static var dataCache : Cache<NSData> {
         struct Static {
             static let name = "shared-data"
-            static let cache = Cache<Data>(name: name)
+            static let cache = Cache<NSData>(name: name)
         }
         return Static.cache
     }
@@ -39,17 +39,17 @@ public struct Shared {
         }
         return Static.cache
     }
-    
-    public static var JSONCache : Cache<JSON> {
-        struct Static {
-            static let name = "shared-json"
-            static let cache = Cache<JSON>(name: name)
-        }
-        return Static.cache
-    }
+//    
+//    public static var JSONCache : Cache<JSON> {
+//        struct Static {
+//            static let name = "shared-json"
+//            static let cache = Cache<JSON>(name: name)
+//        }
+//        return Static.cache
+//    }
 }
 
-func errorWithCode(_ code: Int, description: String) -> Error {
+func errorWithCode(code: Int, description: String) -> NSError {
     let userInfo = [NSLocalizedDescriptionKey: description]
-    return NSError(domain: HanekeGlobals.Domain, code: code, userInfo: userInfo) as Error
+    return NSError(domain: HanekeGlobals.Domain, code: code, userInfo: userInfo)
 }

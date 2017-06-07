@@ -13,7 +13,6 @@ import Haneke
 class GalleryController: UIViewController,UITableViewDataSource,UITableViewDelegate {
     
     var activeGal = 0
-//    typealias JSON = SwiftyJSON.JSON
     
     @IBOutlet weak var photoTableView: UITableView!
     @IBOutlet weak var photosButton: UIButton!
@@ -21,7 +20,7 @@ class GalleryController: UIViewController,UITableViewDataSource,UITableViewDeleg
     
     var pinkBar:UIView!
     
-    @IBAction func videoButtonTap(_ sender: AnyObject) {
+    @IBAction func videoButtonTap(sender: AnyObject) {
         if(activeGal != 1) {
             loadingStart()
             activeGal = 1;
@@ -29,7 +28,7 @@ class GalleryController: UIViewController,UITableViewDataSource,UITableViewDeleg
             rest.getVideo(GalleryLoaded)
         }
     }
-    @IBAction func photoButtonTap(_ sender: AnyObject) {
+    @IBAction func photoButtonTap(sender: AnyObject) {
         if(activeGal != 0) {
             loadingStart()
             activeGal = 0;
@@ -41,28 +40,28 @@ class GalleryController: UIViewController,UITableViewDataSource,UITableViewDeleg
     
     var photosJson = JSON([])
     
-    func GalleryLoaded (_ json: JSON) {
+    func GalleryLoaded (json:JSON) {
         if(json == 1)
         {
             let alertController = UIAlertController(title: "No Connection", message:
-                "Please check your internet connection", preferredStyle: UIAlertControllerStyle.alert)
-            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
+                "Please check your internet connection", preferredStyle: UIAlertControllerStyle.Alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
             
-            self.present(alertController, animated: true, completion: nil)
+            self.presentViewController(alertController, animated: true, completion: nil)
         }
         else
         {
             photosJson = json;
-            DispatchQueue.main.async(execute: {
+            dispatch_async(dispatch_get_main_queue(),{
                 self.photoTableView.reloadData()
             });
            
         }
-        DispatchQueue.main.async(execute: {
+        dispatch_async(dispatch_get_main_queue(), {
             loadingStop()
         });
     }
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewDidAppear(animated: Bool) {
         
         self.view.addSubview(loaderGlo)
     }
@@ -76,7 +75,7 @@ class GalleryController: UIViewController,UITableViewDataSource,UITableViewDeleg
             self.setNavigationBarItemText("GALLERY")
         }
         
-        pinkBar = UIView(frame: CGRect(x: 0,y: photosButton.frame.height,width: self.view.frame.width/2,height: 3));
+        pinkBar = UIView(frame: CGRectMake(0,photosButton.frame.height,self.view.frame.width/2,3));
         pinkBar.backgroundColor = PinkColor;
         
         //self.view.addSubview(pinkBar)
@@ -95,21 +94,21 @@ class GalleryController: UIViewController,UITableViewDataSource,UITableViewDeleg
     }
     
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return photosJson.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         tableView.rowHeight = 208.0
-        tableView.separatorStyle = UITableViewCellSeparatorStyle.none
+        tableView.separatorStyle = UITableViewCellSeparatorStyle.None
         tableView.tableFooterView = UIView()
-        let cell = tableView.dequeueReusableCell(withIdentifier: "galCell", for: indexPath)
-        cell.selectionStyle = UITableViewCellSelectionStyle.none
+        let cell = tableView.dequeueReusableCellWithIdentifier("galCell", forIndexPath: indexPath)
+        cell.selectionStyle = UITableViewCellSelectionStyle.None
         if(activeGal == 0 ) {
             if((photosJson[indexPath.row]["image"].string) != nil) {
-                var mediaBox = galleryAlbum(frame: CGRect(x: 8,y: 0,width: self.view.frame.width-16,height: 200))
-                 if(photosJson[0]).boolValue {
-                    mediaBox = galleryAlbum(frame: CGRect(x: 8,y: 16,width: self.view.frame.width-16,height: 200))
+                var mediaBox = galleryAlbum(frame: CGRectMake(8,0,self.view.frame.width-16,200))
+                 if(photosJson[0]) {
+                    mediaBox = galleryAlbum(frame: CGRectMake(8,16,self.view.frame.width-16,200))
                 }
         
                 mediaBox.galleryTitle.text = photosJson[indexPath.row]["name"].stringValue
@@ -120,9 +119,9 @@ class GalleryController: UIViewController,UITableViewDataSource,UITableViewDeleg
         }
         if(activeGal == 1 ) {
             if((photosJson[indexPath.row]["image"].string) != nil) {
-                var mediaBox = galleryAlbum(frame: CGRect(x: 8,y: 0,width: self.view.frame.width-16,height: 200))
-                if(photosJson[0]).boolValue {
-                    mediaBox = galleryAlbum(frame: CGRect(x: 8,y: 16,width: self.view.frame.width-16,height: 200))
+                var mediaBox = galleryAlbum(frame: CGRectMake(8,0,self.view.frame.width-16,200))
+                if(photosJson[0]) {
+                    mediaBox = galleryAlbum(frame: CGRectMake(8,16,self.view.frame.width-16,200))
                 }
                 rest.getVideo(GalleryLoaded)
                 mediaBox.galleryTitle.text = photosJson[indexPath.row]["name"].stringValue
@@ -136,18 +135,18 @@ class GalleryController: UIViewController,UITableViewDataSource,UITableViewDeleg
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if(activeGal == 0)
         {
             GalleryInsideTitle = photosJson[indexPath.row]["name"].string!
             galleryID = photosJson[indexPath.row]["id"].string!
-            performSegue(withIdentifier: "galleryDetail", sender: nil)
+            performSegueWithIdentifier("galleryDetail", sender: nil)
         }
         if(activeGal == 1)
         {
             rest.getVideo(GalleryLoaded)
             videoIDGlo = photosJson[indexPath.row]["url"].string!
-            performSegue(withIdentifier: "videoOpen", sender: nil)
+            performSegueWithIdentifier("videoOpen", sender: nil)
         }
     }
 }

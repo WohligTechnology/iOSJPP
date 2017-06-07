@@ -24,15 +24,15 @@ import UIKit
         
     }
     func loadViewFromNib() {
-        let bundle = Bundle(for: type(of: self))
+        let bundle = NSBundle(forClass: self.dynamicType)
         let nib = UINib(nibName: "player", bundle: bundle)
-        let sortnewview = nib.instantiate(withOwner: self, options: nil)[0] as! UIView
+        let sortnewview = nib.instantiateWithOwner(self, options: nil)[0] as! UIView
         sortnewview.frame = bounds
-        sortnewview.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        sortnewview.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
         self.addSubview(sortnewview);
         
-        self.playerTitle.text = playerTitle.text?.uppercased()
-        self.playerPosition.text = playerPosition.text?.uppercased()
+        self.playerTitle.text = playerTitle.text?.uppercaseString
+        self.playerPosition.text = playerPosition.text?.uppercaseString
     }
     
     

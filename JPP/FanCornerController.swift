@@ -24,7 +24,7 @@ class FanCornerController: UIViewController {
         self.setNavigationBarItemText("FAN CORNER")
         
         self.verticalLayout = VerticalLayout(width: self.view.frame.width);
-        self.scrollView.insertSubview(self.verticalLayout, at: 0)
+        self.scrollView.insertSubview(self.verticalLayout, atIndex: 0)
         //var height:CGFloat = 525
         var height:CGFloat = 930
         print(self.view.frame.height);
@@ -33,18 +33,18 @@ class FanCornerController: UIViewController {
             height = self.scrollView.frame.height + 20
         }
         
-        fan = fanCorner(frame: CGRect(x: 8,y: 8,width: self.verticalLayout.frame.width-16,height: height));
+        fan = fanCorner(frame: CGRectMake(8,8,self.verticalLayout.frame.width-16,height));
         self.verticalLayout.addSubview(fan);
         
         //submitButton.addTarget(self, action: "submitFormButton:", forControlEvents: .TouchUpInside)
         
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(FanCornerController.tapOutsideKeyboardClose(_:)))
+        let tapGesture = UITapGestureRecognizer(target: self, action: "tapOutsideKeyboardClose:")
         view.addGestureRecognizer(tapGesture)
         
         resizeView(8)
     }
     
-    func tapOutsideKeyboardClose(_ gesture: UITapGestureRecognizer) {
+    func tapOutsideKeyboardClose(gesture: UITapGestureRecognizer) {
         fan.firstName.resignFirstResponder()
         fan.lastName.resignFirstResponder()
         fan.mobile.resignFirstResponder()
@@ -52,17 +52,17 @@ class FanCornerController: UIViewController {
         fan.city.resignFirstResponder()
     }
     
-    func submitFormButton(_ sender: UIButton) {
-        let alert = UIAlertController(title: "Thank You", message: "", preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default,handler: nil))
-        self.present(alert, animated: true, completion: nil)
+    func submitFormButton(sender: UIButton) {
+        let alert = UIAlertController(title: "Thank You", message: "", preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default,handler: nil))
+        self.presentViewController(alert, animated: true, completion: nil)
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    func resizeView(_ offset:CGFloat)
+    func resizeView(offset:CGFloat)
     {
         self.verticalLayout.layoutSubviews()
         self.scrollView.contentSize = CGSize(width: self.verticalLayout.frame.width, height: self.verticalLayout.frame.height + offset)

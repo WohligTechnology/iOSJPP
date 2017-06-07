@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 
-open class Player {
+public class Player {
     
     var name = ""
     var achieve = ""

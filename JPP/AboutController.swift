@@ -18,9 +18,9 @@ class AboutController: UIViewController {
         
         
         self.verticalLayout = VerticalLayout(width: self.view.frame.width);
-        self.scrollView.insertSubview(self.verticalLayout, at: 0)
+        self.scrollView.insertSubview(self.verticalLayout, atIndex: 0)
         
-        self.verticalLayout.addSubview(about(frame: CGRect(x: 8,y: 8,width: verticalLayout.frame.width-16,height: 570)));
+        self.verticalLayout.addSubview(about(frame: CGRectMake(8,8,verticalLayout.frame.width-16,570)));
 //        
 //        self.verticalLayout.addSubview(trapezium(frame: CGRectMake(8,8,verticalLayout.frame.width-16,34)))
 //        
@@ -42,7 +42,7 @@ class AboutController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    func resizeView(_ offset:CGFloat)
+    func resizeView(offset:CGFloat)
     {
         self.verticalLayout.layoutSubviews()
         self.scrollView.contentSize = CGSize(width: self.verticalLayout.frame.width, height: self.verticalLayout.frame.height + offset)

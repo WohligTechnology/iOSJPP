@@ -20,7 +20,7 @@ import UIKit
     @IBOutlet weak var remainingMins: UILabel!
     @IBOutlet weak var semiImage: UIImageView!
     
-    var EventTimeTop = Date();
+    var EventTimeTop = NSDate();
     var EventNameTop:String!;
     
     
@@ -36,15 +36,15 @@ import UIKit
         loadViewFromNib ()
     }
     
-    @IBAction func addToCalender(_ sender: AnyObject) {
+    @IBAction func addToCalender(sender: AnyObject) {
         
         createEvent(EventNameTop,EventTime: EventTimeTop)
         
         let alertController = UIAlertController(title: "Match added to your Calender", message:
-            "", preferredStyle: UIAlertControllerStyle.alert)
-        alertController.addAction(UIAlertAction(title: "Continue", style: UIAlertActionStyle.default,handler: nil))
+            "", preferredStyle: UIAlertControllerStyle.Alert)
+        alertController.addAction(UIAlertAction(title: "Continue", style: UIAlertActionStyle.Default,handler: nil))
         
-        SchduleCtrlGlo.present(alertController, animated: true, completion: nil)
+        SchduleCtrlGlo.presentViewController(alertController, animated: true, completion: nil)
         
         
     }
@@ -62,11 +62,11 @@ import UIKit
         
     }
     func loadViewFromNib() {
-        let bundle = Bundle(for: type(of: self))
+        let bundle = NSBundle(forClass: self.dynamicType)
         let nib = UINib(nibName: "semiFinal", bundle: bundle)
-        let seasonOpener = nib.instantiate(withOwner: self, options: nil)[0] as! UIView
+        let seasonOpener = nib.instantiateWithOwner(self, options: nil)[0] as! UIView
         seasonOpener.frame = bounds
-        seasonOpener.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        seasonOpener.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
         self.addSubview(seasonOpener)
     }
     

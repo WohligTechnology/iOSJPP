@@ -10,28 +10,28 @@ import Foundation
 
 struct Log {
     
-    fileprivate static let Tag = "[HANEKE]"
+    private static let Tag = "[HANEKE]"
     
-    fileprivate enum Level : String {
+    private enum Level : String {
         case Debug = "[DEBUG]"
         case Error = "[ERROR]"
     }
     
-    fileprivate static func log(_ level: Level, _ message: @autoclosure () -> String, _ error: Error? = nil) {
+    private static func log(level: Level, @autoclosure _ message: () -> String, _ error: NSError? = nil) {
         if let error = error {
-            print("\(Tag)\(level.rawValue) \(message()) with error \(error)")
+            NSLog("%@%@ %@ with error %@", Tag, level.rawValue, message(), error)
         } else {
-            print("\(Tag)\(level.rawValue) \(message())")
+            NSLog("%@%@ %@", Tag, level.rawValue, message())
         }
     }
     
-    static func debug(message: @autoclosure () -> String, error: Error? = nil) {
+    static func debug(@autoclosure message: () -> String, _ error: NSError? = nil) {
         #if DEBUG
             log(.Debug, message, error)
         #endif
     }
     
-    static func error(message: @autoclosure () -> String, error: Error? = nil) {
+    static func error(@autoclosure message: () -> String, _ error: NSError? = nil) {
         log(.Error, message, error)
     }
     

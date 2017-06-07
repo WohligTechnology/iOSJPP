@@ -19,42 +19,42 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
   
     
     func checkCalendarAuthorizationStatus() {
-        let status = EKEventStore.authorizationStatus(for: EKEntityType.event)
+        let status = EKEventStore.authorizationStatusForEntityType(EKEntityType.Event)
         
         switch (status) {
-        case EKAuthorizationStatus.notDetermined:
+        case EKAuthorizationStatus.NotDetermined:
             requestAccessToCalendar()
-        case EKAuthorizationStatus.authorized:
+        case EKAuthorizationStatus.Authorized:
             print("Authorised");
-        case EKAuthorizationStatus.restricted:
+        case EKAuthorizationStatus.Restricted:
             print("Restricted");
-        case EKAuthorizationStatus.denied:
+        case EKAuthorizationStatus.Denied:
             print("Denied");
         }
     }
     
     func requestAccessToCalendar() {
-        eventStore.requestAccess(to: EKEntityType.event, completion: {
-            (accessGranted: Bool, error: Error?) in
+        eventStore.requestAccessToEntityType(EKEntityType.Event, completion: {
+            (accessGranted: Bool, error: NSError?) in
             
             if accessGranted == true {
-                DispatchQueue.main.async(execute: {
+                dispatch_async(dispatch_get_main_queue(), {
                     print("Access Graned");
                     SaveCalender = 1;
                 })
             } else {
-                DispatchQueue.main.async(execute: {
+                dispatch_async(dispatch_get_main_queue(), {
                     SaveCalender = 0;
                     print("Access not Graned");
                 })
             }
-        } as! EKEventStoreRequestAccessCompletionHandler)
+        })
     }
 
 
     
-    func setInterval(_ interval:TimeInterval, block:@escaping ()->Void) -> Timer {
-        return Timer.scheduledTimer(timeInterval: interval, target: BlockOperation(block: block), selector: #selector(Operation.main), userInfo: nil, repeats: true)
+    func setInterval(interval:NSTimeInterval, block:()->Void) -> NSTimer {
+        return NSTimer.scheduledTimerWithTimeInterval(interval, target: NSBlockOperation(block: block), selector: "main", userInfo: nil, repeats: true)
     }
     
     var newsController:UIViewController!
@@ -77,32 +77,32 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
     
     var HomeJSON = JSON(1)
     
-    func handleTap(_ sender: UITapGestureRecognizer? = nil) {
+    func handleTap(sender: UITapGestureRecognizer? = nil) {
         
         mediaUrl = HomeJSON["news"]["content"].string!
         
-        let newsController = storyboard!.instantiateViewController(withIdentifier: "news") as! NewsController
+        let newsController = storyboard!.instantiateViewControllerWithIdentifier("news") as! NewsController
         self.newsController = UINavigationController(rootViewController: newsController)
         
          self.slideMenuController()?.changeMainViewController(self.newsController, close: true)
         
     }
     
-    func jpptvTap(_ sender: UITapGestureRecognizer? = nil) {
-        let galleryController = storyboard!.instantiateViewController(withIdentifier: "gallery") as! GalleryController
+    func jpptvTap(sender: UITapGestureRecognizer? = nil) {
+        let galleryController = storyboard!.instantiateViewControllerWithIdentifier("gallery") as! GalleryController
         self.galleryController = UINavigationController(rootViewController: galleryController)
         self.slideMenuController()?.changeMainViewController(self.galleryController, close: true)
         galleryController.activeGal = 1
     }
     
-    func signupTap(_ sender: UITapGestureRecognizer? = nil) {
-        let fancornerController = storyboard!.instantiateViewController(withIdentifier: "fanCorner") as! FanCornerController
+    func signupTap(sender: UITapGestureRecognizer? = nil) {
+        let fancornerController = storyboard!.instantiateViewControllerWithIdentifier("fanCorner") as! FanCornerController
         self.fancornerController = UINavigationController(rootViewController: fancornerController)
         self.slideMenuController()?.changeMainViewController(self.fancornerController, close: true)
     }
     
-    func showScore(_ json:JSON) {
-        let updates = doneMatch(frame: CGRect(x: 8,y: 8,width: self.verticalLayout.frame.width-16,height: 300));
+    func showScore(json:JSON) {
+        let updates = doneMatch(frame: CGRectMake(8,8,self.verticalLayout.frame.width-16,300));
         
         //updates.teamOneScore.font = UIFont(name: "Kenyan-Coffee", size: 45)
         //updates.teamTwoScore.font = UIFont(name: "Kenyan-Coffee", size: 45)
@@ -173,33 +173,33 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
         self.verticalLayout.addSubview(updates)
     }
     
-    func homeLoaded(_ json:JSON) {
+    func homeLoaded(json:JSON) {
         
         if(json == 1)
         {
             let alertController = UIAlertController(title: "No Connection", message:
-                "Please check your internet connection", preferredStyle: UIAlertControllerStyle.alert)
-            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
+                "Please check your internet connection", preferredStyle: UIAlertControllerStyle.Alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
             
-            self.present(alertController, animated: true, completion: nil)
+            self.presentViewController(alertController, animated: true, completion: nil)
         }
         else
         {   self.i += 1
             HomeJSON = json;
-            DispatchQueue.main.async(execute: {
+            dispatch_async(dispatch_get_main_queue(), {
                 if(self.i>1)
                 {
                     self.verticalLayout.removeFromSuperview()
                 }
                 self.verticalLayout = VerticalLayout(width: self.view.frame.width);
-                self.scrollView.insertSubview(self.verticalLayout, at: 0)
+                self.scrollView.insertSubview(self.verticalLayout, atIndex: 0)
                 
-                let dateFormatter = DateFormatter()
+                let dateFormatter = NSDateFormatter()
                 dateFormatter.dateFormat = "dd MMM yyyy, HH:mm"
                 
-                let date = Date()
-                let calendar = Calendar.current
-                let components = (calendar as NSCalendar).components([.month, .day, .hour, .minute, .second], from: date)
+                let date = NSDate()
+                let calendar = NSCalendar.currentCalendar()
+                let components = calendar.components([.Month, .Day, .Hour, .Minute, .Second], fromDate: date)
                 let month = components.month
                 let day = components.day
                 let hour = components.hour
@@ -371,46 +371,46 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
 //                    print("Going inside");
 //                }
                 
-                let thumbImage = thumbnailImage(frame: CGRect(x: 8,y: 8,width: self.verticalLayout.frame.width-16,height: 280));
+                let thumbImage = thumbnailImage(frame: CGRectMake(8,8,self.verticalLayout.frame.width-16,280));
                 thumbImage.thumbImage.image = UIImage(named: "patnabanner.jpg")
                 self.verticalLayout.addSubview(thumbImage);
                 
                 
                 if((json["news"]["id"].string) != nil) {
-                    let newsBox = news(frame: CGRect(x: 8,y: 8,width: self.verticalLayout.frame.width-16,height: 280) );
+                    let newsBox = news(frame: CGRectMake(8,8,self.verticalLayout.frame.width-16,280) );
                     newsBox.newsDate.text = json["news"]["timestamp"].string
                     newsBox.newsSubTitle.text = json["news"]["name"].string
                     newsBox.newsDescription.text = json["news"]["content"].string
 
                     newsBox.newsImage.hnk_setImageFromURL(rest.getImageThumbCache(json["news"]["image"].string!))
-                    let tap = UITapGestureRecognizer(target: self, action: #selector(HomeController.handleTap(_:)))
+                    let tap = UITapGestureRecognizer(target: self, action: Selector("handleTap:"))
                     tap.delegate = self
                     newsBox.addGestureRecognizer(tap)
                     self.verticalLayout.addSubview(newsBox);
                 }
                 
                 // SIGN UP SECTION
-                let signupsection = signupSection(frame: CGRect(x: 8, y: 8, width: self.verticalLayout.frame.size.width - 16, height: 90))
-                let sutap = UITapGestureRecognizer(target: self, action: #selector(HomeController.signupTap(_:)))
+                let signupsection = signupSection(frame: CGRectMake(8, 8, self.verticalLayout.frame.size.width - 16, 90))
+                let sutap = UITapGestureRecognizer(target: self, action: Selector("signupTap:"))
                 sutap.delegate = self
                 signupsection.signupButton.addGestureRecognizer(sutap)
                 self.verticalLayout.addSubview(signupsection)
                 
                 // JPP TV SECTION
-                let tvsection = jpptv(frame: CGRect(x: 8, y: 8, width: self.verticalLayout.frame.size.width - 16, height: 200))
-                let tvtap = UITapGestureRecognizer(target: self, action: #selector(HomeController.jpptvTap(_:)))
+                let tvsection = jpptv(frame: CGRectMake(8, 8, self.verticalLayout.frame.size.width - 16, 200))
+                let tvtap = UITapGestureRecognizer(target: self, action: Selector("jpptvTap:"))
                 tvtap.delegate = self
                 tvsection.addGestureRecognizer(tvtap)
                 self.verticalLayout.addSubview(tvsection)
                 
-                let teamTitle = team2(frame: CGRect(x: 8,y: 8,width: self.verticalLayout.frame.width-16,height: 34) );
+                let teamTitle = team2(frame: CGRectMake(8,8,self.verticalLayout.frame.width-16,34) );
                 self.verticalLayout.addSubview(teamTitle);
                 
-                let PinkBox = UIView(frame:CGRect(x: 8,y: 0,width: self.verticalLayout.frame.width-16,height: 300));
+                let PinkBox = UIView(frame:CGRectMake(8,0,self.verticalLayout.frame.width-16,300));
                 PinkBox.backgroundColor = UIColor(red: 77/255, green: 203/255, blue: 244/255, alpha: 1)
                 self.verticalLayout.addSubview(PinkBox);
                 
-                let tableHeader = table(frame: CGRect(x: 8,y: 8,width: PinkBox.frame.width-16,height: 44));
+                let tableHeader = table(frame: CGRectMake(8,8,PinkBox.frame.width-16,44));
                 
                 tableHeader.tableNo.font = self.font
                 tableHeader.tableNo.text = "No."
@@ -439,12 +439,12 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                 let topSpaceinPink = 8;
                 let spacingPink = 3;
                 
-                for i in 0 ..< json["points"].count
+                for(var i = 0; i<json["points"].count; i++)
                 {
                     
                     let topDistance = topSpaceinPink+spacingPink+((44+spacingPink)*(i+1));
                     
-                    let insideTable = table(frame: CGRect(x: 8,y: CGFloat(topDistance),width: PinkBox.frame.width-16,height: 40));
+                    let insideTable = table(frame: CGRectMake(8,CGFloat(topDistance),PinkBox.frame.width-16,40));
                     
                     insideTable.tableNo.text = String(i+1)
                     
@@ -486,17 +486,17 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                 }
                 
                 // SPONSERS SECTION
-                let sponserView = UIView(frame: CGRect(x: 8, y: 8, width: self.view.frame.size.width - 16, height: 140))
-                let sponserimage = UIImageView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width - 16, height: 140))
+                let sponserView = UIView(frame: CGRectMake(8, 8, self.view.frame.size.width - 16, 140))
+                let sponserimage = UIImageView(frame: CGRectMake(0, 0, self.view.frame.size.width - 16, 140))
                 sponserimage.image = UIImage(named: "sponsors")
-                sponserimage.contentMode = UIViewContentMode.scaleAspectFit
+                sponserimage.contentMode = UIViewContentMode.ScaleAspectFit
                 sponserView.addSubview(sponserimage)
                 self.verticalLayout.addSubview(sponserView)
                 
                 self.resizeView(8);
             })
             
-            DispatchQueue.main.async(execute: {
+            dispatch_async(dispatch_get_main_queue(), {
                 loadingStop()
             });
             
@@ -517,7 +517,7 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
         //refreshControl.addSubview(loaderView)
         refreshControl.backgroundColor = lightBlueColor
         refreshControl.tintColor = PinkColor
-        refreshControl.addTarget(self, action: #selector(HomeController.refresh(_:)), for: .valueChanged)
+        refreshControl.addTarget(self, action: "refresh:", forControlEvents: .ValueChanged)
         scrollView.addSubview(refreshControl)
         
         loadingInit()
@@ -531,13 +531,13 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
         rest.getHome(homeLoaded)
     }
     
-    func refresh(_ refreshControl: UIRefreshControl) {
+    func refresh(refreshControl: UIRefreshControl) {
         // Do your job, when done:
         callhome()
         refreshControl.endRefreshing()
     }
     
-    func resizeView(_ offset:CGFloat)
+    func resizeView(offset:CGFloat)
     {
         self.verticalLayout.layoutSubviews()
         self.scrollView.contentSize = CGSize(width: self.verticalLayout.frame.width, height: self.verticalLayout.frame.height + offset)

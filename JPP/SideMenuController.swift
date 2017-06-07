@@ -30,41 +30,41 @@ class SideMenuController: UIViewController, UITableViewDataSource, UITableViewDe
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
-        let homeController = storyboard.instantiateViewController(withIdentifier: "home") as! HomeController
+        let homeController = storyboard.instantiateViewControllerWithIdentifier("home") as! HomeController
         self.homeController = UINavigationController(rootViewController: homeController)
         
-        let scheduleController = storyboard.instantiateViewController(withIdentifier: "schedule") as! ScheduleController
+        let scheduleController = storyboard.instantiateViewControllerWithIdentifier("schedule") as! ScheduleController
         self.scheduleController = UINavigationController(rootViewController: scheduleController)
         
-        let galleryController = storyboard.instantiateViewController(withIdentifier: "gallery") as! GalleryController
+        let galleryController = storyboard.instantiateViewControllerWithIdentifier("gallery") as! GalleryController
         self.galleryController = UINavigationController(rootViewController: galleryController)
         
-        let jpptvController = storyboard.instantiateViewController(withIdentifier: "gallery") as! GalleryController
+        let jpptvController = storyboard.instantiateViewControllerWithIdentifier("gallery") as! GalleryController
         self.jpptvController = UINavigationController(rootViewController: jpptvController)
         jpptvController.activeGal = 1
         
-        let newsController = storyboard.instantiateViewController(withIdentifier: "news") as! NewsController
+        let newsController = storyboard.instantiateViewControllerWithIdentifier("news") as! NewsController
         self.newsController = UINavigationController(rootViewController: newsController)
         
-        let knowTeamController = storyboard.instantiateViewController(withIdentifier: "knowteam") as! KnowTeamController
+        let knowTeamController = storyboard.instantiateViewControllerWithIdentifier("knowteam") as! KnowTeamController
         self.knowTeamController = UINavigationController(rootViewController: knowTeamController)
         
-        let merchandiseController = storyboard.instantiateViewController(withIdentifier: "merchandiseST") as! MerchandiseViewController
+        let merchandiseController = storyboard.instantiateViewControllerWithIdentifier("merchandiseST") as! MerchandiseViewController
         self.merchandiseController = UINavigationController(rootViewController: merchandiseController)
         
-        let wallpaperController = storyboard.instantiateViewController(withIdentifier: "GalleryInside") as! GalleryInsideController
+        let wallpaperController = storyboard.instantiateViewControllerWithIdentifier("GalleryInside") as! GalleryInsideController
         self.wallpaperController = UINavigationController(rootViewController: wallpaperController)
         
-        let pointController = storyboard.instantiateViewController(withIdentifier: "point") as! PointTableController
+        let pointController = storyboard.instantiateViewControllerWithIdentifier("point") as! PointTableController
         self.pointController = UINavigationController(rootViewController: pointController)
         
-        let matchupdateController = storyboard.instantiateViewController(withIdentifier: "matchupdate") as! MatchUpdateController
+        let matchupdateController = storyboard.instantiateViewControllerWithIdentifier("matchupdate") as! MatchUpdateController
         self.matchupdateController = UINavigationController(rootViewController: matchupdateController)
         
-        let fancornerController = storyboard.instantiateViewController(withIdentifier: "fanCorner") as! FanCornerController
+        let fancornerController = storyboard.instantiateViewControllerWithIdentifier("fanCorner") as! FanCornerController
         self.fancornerController = UINavigationController(rootViewController: fancornerController)
         
-        let aboutsController = storyboard.instantiateViewController(withIdentifier: "about") as! AboutController
+        let aboutsController = storyboard.instantiateViewControllerWithIdentifier("about") as! AboutController
         self.aboutsController = UINavigationController(rootViewController: aboutsController)
         
     }
@@ -76,7 +76,7 @@ class SideMenuController: UIViewController, UITableViewDataSource, UITableViewDe
     
     // MARK: - Table view data source
     
-    func numberOfSections(in tableView: UITableView) -> Int
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int
     {
         return 1
     }
@@ -86,21 +86,21 @@ class SideMenuController: UIViewController, UITableViewDataSource, UITableViewDe
     
     // MARK: - UITableViewDataSource
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        tableView.separatorStyle = UITableViewCellSeparatorStyle.singleLine
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        tableView.separatorStyle = UITableViewCellSeparatorStyle.SingleLine
         tableView.rowHeight = 56.0
         tableView.tableFooterView = UIView()
-        let cell = tableView.dequeueReusableCell(withIdentifier: "menuCell", for: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("menuCell", forIndexPath: indexPath)
         cell.textLabel?.text = data[indexPath.row]
         cell.imageView!.image = UIImage(named: dataimage[indexPath.row])
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         switch(indexPath.row)
         {
         case 0:

@@ -25,40 +25,40 @@ class MatchUpdateController: UIViewController, UITableViewDelegate, UITableViewD
     
     var matchupdateJSON = JSON([])
     
-    func matchupdateLoaded (_ json:JSON) {
+    func matchupdateLoaded (json:JSON) {
         print(json);
         if json == 1 {
             let alertController = UIAlertController(title: "No Connection", message:
-                "Please check your internet connection", preferredStyle: UIAlertControllerStyle.alert)
-            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
-            self.present(alertController, animated: true, completion: nil)
+                "Please check your internet connection", preferredStyle: UIAlertControllerStyle.Alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+            self.presentViewController(alertController, animated: true, completion: nil)
         }
         else {
             matchupdateJSON = json
-            DispatchQueue.main.async(execute: {
+            dispatch_async(dispatch_get_main_queue(),{
                 self.matchupdateTableView.reloadData()
             });
         }
-        DispatchQueue.main.async(execute: {
+        dispatch_async(dispatch_get_main_queue(), {
             loadingStop()
         });
     }
     
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return matchupdateJSON.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         tableView.rowHeight = 330.0
-        tableView.separatorStyle = UITableViewCellSeparatorStyle.none
+        tableView.separatorStyle = UITableViewCellSeparatorStyle.None
         tableView.tableFooterView = UIView()
-        let cell = tableView.dequeueReusableCell(withIdentifier: "matchupdateCell", for: indexPath)
-        cell.selectionStyle = UITableViewCellSelectionStyle.none
+        let cell = tableView.dequeueReusableCellWithIdentifier("matchupdateCell", forIndexPath: indexPath)
+        cell.selectionStyle = UITableViewCellSelectionStyle.None
         
         if((matchupdateJSON[indexPath.row]["matchtime"].string) != nil) {
-            let matchupdateView = matchupdate(frame: CGRect(x: 0,y: 0,width: self.view.frame.width-16,height: 322));
+            let matchupdateView = matchupdate(frame: CGRectMake(0,0,self.view.frame.width-16,322));
             matchupdateView.matchTitle.text = "MATCH - " + String(matchupdateJSON.count - indexPath.row)
             matchupdateView.teamoneImage.image = UIImage(named: "t" + matchupdateJSON[indexPath.row]["team1id"].string! + ".png")
             matchupdateView.teamtwoImage.image = UIImage(named: "t" + matchupdateJSON[indexPath.row]["team2id"].string! + ".png")
@@ -121,7 +121,7 @@ class MatchUpdateController: UIViewController, UITableViewDelegate, UITableViewD
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
     }
 
     override func didReceiveMemoryWarning() {

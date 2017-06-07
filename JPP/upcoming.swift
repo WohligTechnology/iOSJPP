@@ -30,11 +30,11 @@ import UIKit
         
     }
     func loadViewFromNib() {
-        let bundle = Bundle(for: type(of: self))
+        let bundle = NSBundle(forClass: self.dynamicType)
         let nib = UINib(nibName: "upcoming", bundle: bundle)
-        let sortnewview = nib.instantiate(withOwner: self, options: nil)[0] as! UIView
+        let sortnewview = nib.instantiateWithOwner(self, options: nil)[0] as! UIView
         sortnewview.frame = bounds
-        sortnewview.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        sortnewview.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
         self.addSubview(sortnewview);
     }
     

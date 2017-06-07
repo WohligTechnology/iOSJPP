@@ -14,14 +14,14 @@ extension HanekeGlobals {
     public struct DiskFetcher {
         
         public enum ErrorCode : Int {
-            case invalidData = -500
+            case InvalidData = -500
         }
         
     }
     
 }
 
-open class DiskFetcher<T : DataConvertible> : Fetcher<T> {
+public class DiskFetcher<T : DataConvertible> : Fetcher<T> {
     
     let path: String
     var cancelled = false
@@ -34,36 +34,35 @@ open class DiskFetcher<T : DataConvertible> : Fetcher<T> {
     
     // MARK: Fetcher
     
-    
-    open override func fetch(failure fail: @escaping ((Error?) -> ()), success succeed: @escaping (T.Result) -> ()) {
+    public override func fetch(failure fail: ((NSError?) -> ()), success succeed: (T.Result) -> ()) {
         self.cancelled = false
-        DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async(execute: { [weak self] in
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { [weak self] in
             if let strongSelf = self {
                 strongSelf.privateFetch(failure: fail, success: succeed)
             }
         })
     }
     
-    open override func cancelFetch() {
+    public override func cancelFetch() {
         self.cancelled = true
     }
     
     // MARK: Private
     
-    fileprivate func privateFetch(failure fail: @escaping ((Error?) -> ()), success succeed: @escaping (T.Result) -> ()) {
+    private func privateFetch(failure fail: ((NSError?) -> ()), success succeed: (T.Result) -> ()) {
         if self.cancelled {
             return
         }
         
-        let data : Data
+        let data : NSData
         do {
-            data = try Data(contentsOf: URL(fileURLWithPath: self.path), options: Data.ReadingOptions())
+            data = try NSData(contentsOfFile: self.path, options: NSDataReadingOptions())
         } catch {
-            DispatchQueue.main.async {
+            dispatch_async(dispatch_get_main_queue()) {
                 if self.cancelled {
                     return
                 }
-                fail(error)
+                fail(error as NSError)
             }
             return
         }
@@ -75,14 +74,14 @@ open class DiskFetcher<T : DataConvertible> : Fetcher<T> {
         guard let value : T.Result = T.convertFromData(data) else {
             let localizedFormat = NSLocalizedString("Failed to convert value from data at path %@", comment: "Error description")
             let description = String(format:localizedFormat, self.path)
-            let error = errorWithCode(HanekeGlobals.DiskFetcher.ErrorCode.invalidData.rawValue, description: description)
-            DispatchQueue.main.async {
+            let error = errorWithCode(HanekeGlobals.DiskFetcher.ErrorCode.InvalidData.rawValue, description: description)
+            dispatch_async(dispatch_get_main_queue()) {
                 fail(error)
             }
             return
         }
         
-        DispatchQueue.main.async(execute: {
+        dispatch_async(dispatch_get_main_queue(), {
             if self.cancelled {
                 return
             }

@@ -13,42 +13,42 @@ public extension DKChainableAnimationKit {
 
     public var easeIn: DKChainableAnimationKit {
         get {
-            _ = self.easeInQuad
+            self.easeInQuad
             return self
         }
     }
 
     public var easeOut: DKChainableAnimationKit {
         get {
-            _ = self.easeOutQuad
+            self.easeOutQuad
             return self
         }
     }
 
     public var easeInOut: DKChainableAnimationKit {
         get {
-            _ = self.easeInOutQuad
+            self.easeInOutQuad
             return self
         }
     }
 
     public var easeBack: DKChainableAnimationKit {
         get {
-            _ = self.easeOutBack
+            self.easeOutBack
             return self
         }
     }
 
     public var spring: DKChainableAnimationKit {
         get {
-            _ = self.easeOutElastic
+            self.easeOutElastic
             return self
         }
     }
 
     public var bounce: DKChainableAnimationKit {
         get {
-            _ = self.easeOutBounce
+            self.easeOutBounce
             return self
         }
     }

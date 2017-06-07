@@ -10,146 +10,146 @@ import Foundation
 
 /// HTTP Status Code (RFC 2616)
 public enum HTTPStatusCode: Int {
-    case `continue` = 100,
-    switchingProtocols = 101
+    case Continue = 100,
+    SwitchingProtocols = 101
     
-    case ok = 200,
-    created = 201,
-    accepted = 202,
-    nonAuthoritativeInformation = 203,
-    noContent = 204,
-    resetContent = 205,
-    partialContent = 206
+    case OK = 200,
+    Created = 201,
+    Accepted = 202,
+    NonAuthoritativeInformation = 203,
+    NoContent = 204,
+    ResetContent = 205,
+    PartialContent = 206
     
-    case multipleChoices = 300,
-    movedPermanently = 301,
-    found = 302,
-    seeOther = 303,
-    notModified = 304,
-    useProxy = 305,
-    unused = 306,
-    temporaryRedirect = 307
+    case MultipleChoices = 300,
+    MovedPermanently = 301,
+    Found = 302,
+    SeeOther = 303,
+    NotModified = 304,
+    UseProxy = 305,
+    Unused = 306,
+    TemporaryRedirect = 307
     
-    case badRequest = 400,
-    unauthorized = 401,
-    paymentRequired = 402,
-    forbidden = 403,
-    notFound = 404,
-    methodNotAllowed = 405,
-    notAcceptable = 406,
-    proxyAuthenticationRequired = 407,
-    requestTimeout = 408,
-    conflict = 409,
-    gone = 410,
-    lengthRequired = 411,
-    preconditionFailed = 412,
-    requestEntityTooLarge = 413,
-    requestUriTooLong = 414,
-    unsupportedMediaType = 415,
-    requestedRangeNotSatisfiable = 416,
-    expectationFailed = 417
+    case BadRequest = 400,
+    Unauthorized = 401,
+    PaymentRequired = 402,
+    Forbidden = 403,
+    NotFound = 404,
+    MethodNotAllowed = 405,
+    NotAcceptable = 406,
+    ProxyAuthenticationRequired = 407,
+    RequestTimeout = 408,
+    Conflict = 409,
+    Gone = 410,
+    LengthRequired = 411,
+    PreconditionFailed = 412,
+    RequestEntityTooLarge = 413,
+    RequestUriTooLong = 414,
+    UnsupportedMediaType = 415,
+    RequestedRangeNotSatisfiable = 416,
+    ExpectationFailed = 417
     
-    case internalServerError = 500,
-    notImplemented = 501,
-    badGateway = 502,
-    serviceUnavailable = 503,
-    gatewayTimeout = 504,
-    httpVersionNotSupported = 505
+    case InternalServerError = 500,
+    NotImplemented = 501,
+    BadGateway = 502,
+    ServiceUnavailable = 503,
+    GatewayTimeout = 504,
+    HttpVersionNotSupported = 505
     
-    case invalidUrl = -1001
+    case InvalidUrl = -1001
     
-    case unknownStatus = 0
+    case UnknownStatus = 0
     
     init(statusCode: Int) {
-        self = HTTPStatusCode(rawValue: statusCode) ?? .unknownStatus
+        self = HTTPStatusCode(rawValue: statusCode) ?? .UnknownStatus
     }
     
     public var statusDescription: String {
         get {
             switch self {
-            case .continue:
+            case .Continue:
                 return "Continue"
-            case .switchingProtocols:
+            case .SwitchingProtocols:
                 return "Switching protocols"
-            case .ok:
+            case .OK:
                 return "OK"
-            case .created:
+            case .Created:
                 return "Created"
-            case .accepted:
+            case .Accepted:
                 return "Accepted"
-            case .nonAuthoritativeInformation:
+            case .NonAuthoritativeInformation:
                 return "Non authoritative information"
-            case .noContent:
+            case .NoContent:
                 return "No content"
-            case .resetContent:
+            case .ResetContent:
                 return "Reset content"
-            case .partialContent:
+            case .PartialContent:
                 return "Partial Content"
-            case .multipleChoices:
+            case .MultipleChoices:
                 return "Multiple choices"
-            case .movedPermanently:
+            case .MovedPermanently:
                 return "Moved Permanently"
-            case .found:
+            case .Found:
                 return "Found"
-            case .seeOther:
+            case .SeeOther:
                 return "See other Uri"
-            case .notModified:
+            case .NotModified:
                 return "Not modified"
-            case .useProxy:
+            case .UseProxy:
                 return "Use proxy"
-            case .unused:
+            case .Unused:
                 return "Unused"
-            case .temporaryRedirect:
+            case .TemporaryRedirect:
                 return "Temporary redirect"
-            case .badRequest:
+            case .BadRequest:
                 return "Bad request"
-            case .unauthorized:
+            case .Unauthorized:
                 return "Access denied"
-            case .paymentRequired:
+            case .PaymentRequired:
                 return "Payment required"
-            case .forbidden:
+            case .Forbidden:
                 return "Forbidden"
-            case .notFound:
+            case .NotFound:
                 return "Page not found"
-            case .methodNotAllowed:
+            case .MethodNotAllowed:
                 return "Method not allowed"
-            case .notAcceptable:
+            case .NotAcceptable:
                 return "Not acceptable"
-            case .proxyAuthenticationRequired:
+            case .ProxyAuthenticationRequired:
                 return "Proxy authentication required"
-            case .requestTimeout:
+            case .RequestTimeout:
                 return "Request timeout"
-            case .conflict:
+            case .Conflict:
                 return "Conflict request"
-            case .gone:
+            case .Gone:
                 return "Page is gone"
-            case .lengthRequired:
+            case .LengthRequired:
                 return "Lack content length"
-            case .preconditionFailed:
+            case .PreconditionFailed:
                 return "Precondition failed"
-            case .requestEntityTooLarge:
+            case .RequestEntityTooLarge:
                 return "Request entity is too large"
-            case .requestUriTooLong:
+            case .RequestUriTooLong:
                 return "Request uri is too long"
-            case .unsupportedMediaType:
+            case .UnsupportedMediaType:
                 return "Unsupported media type"
-            case .requestedRangeNotSatisfiable:
+            case .RequestedRangeNotSatisfiable:
                 return "Request range is not satisfiable"
-            case .expectationFailed:
+            case .ExpectationFailed:
                 return "Expected request is failed"
-            case .internalServerError:
+            case .InternalServerError:
                 return "Internal server error"
-            case .notImplemented:
+            case .NotImplemented:
                 return "Server does not implement a feature for request"
-            case .badGateway:
+            case .BadGateway:
                 return "Bad gateway"
-            case .serviceUnavailable:
+            case .ServiceUnavailable:
                 return "Service unavailable"
-            case .gatewayTimeout:
+            case .GatewayTimeout:
                 return "Gateway timeout"
-            case .httpVersionNotSupported:
+            case .HttpVersionNotSupported:
                 return "Http version not supported"
-            case .invalidUrl:
+            case .InvalidUrl:
                 return "Invalid url"
             default:
                 return "Unknown status code"

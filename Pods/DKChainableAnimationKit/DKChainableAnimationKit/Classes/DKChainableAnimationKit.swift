@@ -8,18 +8,18 @@
 
 import UIKit
 
-open class DKChainableAnimationKit {
+public class DKChainableAnimationKit {
 
     weak var view: UIView!
 
-    typealias AnimationCalculationAction = (UIView) -> Void
-    typealias AnimationCompletionAction = (UIView) -> Void
+    typealias AnimationCalculationAction = UIView -> Void
+    typealias AnimationCompletionAction = UIView -> Void
 
     internal var animationCalculationActions: [[AnimationCalculationAction]]!
     internal var animationCompletionActions: [[AnimationCompletionAction]]!
     internal var animationGroups: NSMutableArray!
     internal var animations: [[DKKeyFrameAnimation]]!
-    open var animationCompletion: ((Void) -> Void)?
+    public var animationCompletion: (Void -> Void)?
 
     // MARK: - Initialize
 
@@ -27,14 +27,14 @@ open class DKChainableAnimationKit {
         self.setup()
     }
 
-    fileprivate func setup() {
+    private func setup() {
         self.animations = [[]]
         self.animationGroups = [self.basicAnimationGroup()]
         self.animationCompletionActions = [[]]
         self.animationCalculationActions = [[]]
     }
 
-    fileprivate func clear() {
+    private func clear() {
         self.animations.removeAll()
         self.animationGroups.removeAllObjects()
         self.animationCompletionActions.removeAll()
@@ -42,15 +42,15 @@ open class DKChainableAnimationKit {
         self.animations.append([])
         self.animationCompletionActions.append([AnimationCalculationAction]())
         self.animationCalculationActions.append([AnimationCompletionAction]())
-        self.animationGroups.add(self.basicAnimationGroup())
+        self.animationGroups.addObject(self.basicAnimationGroup())
     }
 
     // MARK: - Animation Time
 
-    open func delay(_ delay: TimeInterval) -> DKChainableAnimationKit {
+    public func delay(delay: NSTimeInterval) -> DKChainableAnimationKit {
         var delay = delay
         for group in self.animationGroups {
-            let duration = (group as AnyObject).duration as TimeInterval
+            let duration = group.duration as NSTimeInterval
             delay += duration
         }
         if let group = self.animationGroups.lastObject as? CAAnimationGroup {
@@ -59,21 +59,21 @@ open class DKChainableAnimationKit {
         return self
     }
 
-    open func delay(_ time: CGFloat) -> DKChainableAnimationKit {
-        return delay(TimeInterval(time))
+    public func delay(time: CGFloat) -> DKChainableAnimationKit {
+        return delay(NSTimeInterval(time))
     }
 
-    open var seconds: DKChainableAnimationKit {
+    public var seconds: DKChainableAnimationKit {
         get {
             return self
         }
     }
 
-    open func wait(_ delay: TimeInterval) -> DKChainableAnimationKit {
+    public func wait(delay: NSTimeInterval) -> DKChainableAnimationKit {
         return self.delay(delay)
     }
 
-    @discardableResult open func animate(_ duration: TimeInterval) -> DKChainableAnimationKit {
+    public func animate(duration: NSTimeInterval) -> DKChainableAnimationKit {
         if let group = self.animationGroups.lastObject as? CAAnimationGroup {
             group.duration = duration
             self.animateChain()
@@ -81,8 +81,8 @@ open class DKChainableAnimationKit {
         return self
     }
 
-    @discardableResult open func animate(_ duration: CGFloat) -> DKChainableAnimationKit {
-        return animate(TimeInterval(duration))
+    public func animate(duration: CGFloat) -> DKChainableAnimationKit {
+        return animate(NSTimeInterval(duration))
     }
 
 //    public func animateWithRepeat(duration: NSTimeInterval) -> DKChainableAnimationKit {
@@ -117,11 +117,11 @@ open class DKChainableAnimationKit {
 //        self.animations = self.tempAnimations
 //    }
 
-    open func thenAfter(_ after: TimeInterval) -> DKChainableAnimationKit {
+    public func thenAfter(after: NSTimeInterval) -> DKChainableAnimationKit {
         if let group = self.animationGroups.lastObject as? CAAnimationGroup {
             group.duration = after
             let newGroup = self.basicAnimationGroup()
-            self.animationGroups.add(newGroup)
+            self.animationGroups.addObject(newGroup)
             self.animations.append([])
             self.animationCalculationActions.append([])
             self.animationCompletionActions.append([])
@@ -129,11 +129,11 @@ open class DKChainableAnimationKit {
         return self
     }
 
-    open func thenAfter(_ after: CGFloat) -> DKChainableAnimationKit {
-        return thenAfter(TimeInterval(after))
+    public func thenAfter(after: CGFloat) -> DKChainableAnimationKit {
+        return thenAfter(NSTimeInterval(after))
     }
 
-    @discardableResult open func animateWithCompletion(_ duration: TimeInterval, _ completion: @escaping (Void) -> Void) -> DKChainableAnimationKit {
+    public func animateWithCompletion(duration: NSTimeInterval, _ completion: Void -> Void) -> DKChainableAnimationKit {
         if let group = self.animationGroups.lastObject as? CAAnimationGroup {
             group.duration = duration
             self.animationCompletion = completion
@@ -142,19 +142,19 @@ open class DKChainableAnimationKit {
         return self
     }
 
-    @discardableResult open func animateWithCompletion(_ duration: CGFloat, _ completion: @escaping (Void) -> Void) -> DKChainableAnimationKit {
-        return animateWithCompletion(TimeInterval(duration), completion)
+    public func animateWithCompletion(duration: CGFloat, _ completion: Void -> Void) -> DKChainableAnimationKit {
+        return animateWithCompletion(NSTimeInterval(duration), completion)
     }
 
-    internal func degreesToRadians(_ degree: Double) -> Double {
+    internal func degreesToRadians(degree: Double) -> Double {
         return (degree / 180.0) * M_PI
     }
 
-    fileprivate func animateChain() {
+    private func animateChain() {
         self.sanityCheck()
         CATransaction.begin()
         CATransaction.setCompletionBlock { () -> Void in
-            self.view?.layer.removeAnimation(forKey: "AnimationChain")
+            self.view.layer.removeAnimationForKey("AnimationChain")
             self.chainLinkDidFinishAnimating()
         }
         self.animateChainLink()
@@ -163,45 +163,44 @@ open class DKChainableAnimationKit {
         self.executeCompletionActions()
     }
 
-    fileprivate func animateChainLink() {
+    private func animateChainLink() {
         self.makeAnchor(0.5, 0.5)
-        if let animationCluster = self.animationCalculationActions.first, let _ = self.view {
+        if let animationCluster = self.animationCalculationActions.first {
             for action in animationCluster {
                 action(self.view)
             }
         }
         if let group: CAAnimationGroup = self.animationGroups.firstObject as? CAAnimationGroup,
-            let animationCluster: [DKKeyFrameAnimation] = self.animations.first {
+            animationCluster: [DKKeyFrameAnimation] = self.animations.first {
             for animation in animationCluster {
                 animation.duration = group.duration
                 animation.calculte()
             }
             group.animations = animationCluster
-            self.view?.layer.add(group, forKey: "AnimationChain")
+            self.view.layer.addAnimation(group, forKey: "AnimationChain")
         }
     }
 
-    fileprivate func executeCompletionActions() {
+    private func executeCompletionActions() {
         if let group = self.animationGroups.firstObject as? CAAnimationGroup {
             let delay = max(group.beginTime - CACurrentMediaTime(), 0.0)
-            let delayTime = DispatchTime.now() + Double(Int64(delay * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
-            DispatchQueue.main.asyncAfter(deadline: delayTime) {
-                if let
-                    actionCluster: [AnimationCompletionAction] = self.animationCompletionActions.first,
-                    let view = self.view {
-                        for action in actionCluster {
-                            action(view)
-                        }
+            let delayTime = dispatch_time(DISPATCH_TIME_NOW,
+                Int64(delay * Double(NSEC_PER_SEC)))
+            dispatch_after(delayTime, dispatch_get_main_queue()) {
+                if let actionCluster: [AnimationCompletionAction] = self.animationCompletionActions.first {
+                    for action in actionCluster {
+                        action(self.view)
+                    }
                 }
             }
         }
     }
 
-    fileprivate func chainLinkDidFinishAnimating() {
-        self.animationCompletionActions.remove(at: 0)
-        self.animationCalculationActions.remove(at: 0)
-        self.animations.remove(at: 0)
-        self.animationGroups.removeObject(at: 0)
+    private func chainLinkDidFinishAnimating() {
+        self.animationCompletionActions.removeAtIndex(0)
+        self.animationCalculationActions.removeAtIndex(0)
+        self.animations.removeAtIndex(0)
+        self.animationGroups.removeObjectAtIndex(0)
 
         if self.animationGroups.count == 0 {
             self.clear()
@@ -214,7 +213,7 @@ open class DKChainableAnimationKit {
         }
     }
 
-    fileprivate func sanityCheck() {
+    private func sanityCheck() {
         assert(self.animations.count == self.animationGroups.count, "FATAL ERROR: ANIMATION GROUPS AND ANIMATIONS ARE OUT OF SYNC");
         assert(self.animationCalculationActions.count == self.animationCompletionActions.count, "FATAL ERROR: ANIMATION CALCULATION OBJECTS AND ANIMATION COMPLETION OBJECTS ARE OUT OF SYNC");
         assert(self.animations.count == self.animationCompletionActions.count, "FATAL ERROR: ANIMATIONS AND ANIMATION COMPLETION OBJECTS ARE OUT OF SYNC");
@@ -222,7 +221,7 @@ open class DKChainableAnimationKit {
 
     // MARK: - Animation Action
 
-    internal func addAnimationKeyframeCalculation(_ functionBlock: @escaping DKKeyframeAnimationFunctionBlock) {
+    internal func addAnimationKeyframeCalculation(functionBlock: DKKeyframeAnimationFunctionBlock) {
         self.addAnimationCalculationAction { (view: UIView) -> Void in
             let animationCluster = self.animations.first
             if let animation = animationCluster?.last {
@@ -231,7 +230,7 @@ open class DKChainableAnimationKit {
         }
     }
 
-    internal func addAnimationCalculationAction(_ action: @escaping AnimationCalculationAction) {
+    internal func addAnimationCalculationAction(action: AnimationCalculationAction) {
         if var actions = self.animationCalculationActions.last as [AnimationCalculationAction]? {
             actions.append(action)
             self.animationCalculationActions.removeLast()
@@ -239,7 +238,7 @@ open class DKChainableAnimationKit {
         }
     }
 
-    internal func addAnimationCompletionAction(_ action: @escaping AnimationCompletionAction) {
+    internal func addAnimationCompletionAction(action: AnimationCompletionAction) {
         if var actions = self.animationCompletionActions.last as [AnimationCompletionAction]? {
             actions.append(action)
             self.animationCompletionActions.removeLast()
@@ -247,11 +246,11 @@ open class DKChainableAnimationKit {
         }
     }
 
-    internal func addAnimationFromCalculationBlock(_ animation: DKKeyFrameAnimation) {
+    internal func addAnimationFromCalculationBlock(animation: DKKeyFrameAnimation) {
         if var animationCluster = self.animations.first {
             animationCluster.append(animation)
-            self.animations.remove(at: 0)
-            self.animations.insert(animationCluster, at: 0)
+            self.animations.removeAtIndex(0)
+            self.animations.insert(animationCluster, atIndex: 0)
         }
     }
 
@@ -261,21 +260,21 @@ open class DKChainableAnimationKit {
         return CAAnimationGroup()
     }
     
-    internal func basicAnimationForKeyPath(_ keyPath: String) -> DKKeyFrameAnimation {
+    internal func basicAnimationForKeyPath(keyPath: String) -> DKKeyFrameAnimation {
         let animation = DKKeyFrameAnimation(keyPath: keyPath)
         animation.repeatCount = 0
         animation.autoreverses = false
         return animation
     }
 
-    internal func newPositionFrom(newOrigin: CGPoint) -> CGPoint {
+    internal func newPositionFrom(newOrigin newOrigin: CGPoint) -> CGPoint {
         let anchor = self.view.layer.anchorPoint
         let size = self.view.bounds.size
         let newPosition = CGPoint(x: newOrigin.x + anchor.x * size.width, y: newOrigin.y + anchor.y * size.height)
         return newPosition
     }
 
-    internal func newPositionFrom(newCenter: CGPoint) -> CGPoint {
+    internal func newPositionFrom(newCenter newCenter: CGPoint) -> CGPoint {
         let anchor = self.view.layer.anchorPoint
         let size = self.view.bounds.size
         let newPosition = CGPoint(x: newCenter.x + (anchor.x - 0.5) * size.width, y: newCenter.y + (anchor.y - 0.5) * size.height)

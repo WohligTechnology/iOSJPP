@@ -19,38 +19,38 @@ class KnowTeamController: UIViewController,UICollectionViewDataSource,UICollecti
     
     
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return players.count;
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "playerCell", for: indexPath) as UICollectionViewCell
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("playerCell", forIndexPath: indexPath) as UICollectionViewCell
         //cell.addSubview(player(frame: CGRectMake(8,8,cell.frame.width - 8,cell.frame.height - 8)));
         
-        let mediaBox = player(frame: CGRect(x: 8,y: 8,width: cell.frame.width - 8,height: cell.frame.height - 8));
+        let mediaBox = player(frame: CGRectMake(8,8,cell.frame.width - 8,cell.frame.height - 8));
         mediaBox.playerTitle.text = players[indexPath.row].name
         mediaBox.playerImage.image = UIImage(named:players[indexPath.row].image)
         mediaBox.playerPosition.text = players[indexPath.row].type
         mediaBox.index = indexPath.row
         mediaBox.layer.borderWidth = 1
-        mediaBox.layer.borderColor = UIColor(red:18/255.0, green:126/255.0, blue:165/255.0, alpha: 1.0).cgColor
+        mediaBox.layer.borderColor = UIColor(red:18/255.0, green:126/255.0, blue:165/255.0, alpha: 1.0).CGColor
         cell.addSubview(mediaBox)
         
         return cell
     }
     
-    func collectionView(_ collectionView : UICollectionView,layout collectionViewLayout:UICollectionViewLayout,sizeForItemAtIndexPath indexPath:IndexPath) -> CGSize
+    func collectionView(collectionView : UICollectionView,layout collectionViewLayout:UICollectionViewLayout,sizeForItemAtIndexPath indexPath:NSIndexPath) -> CGSize
     {
         
-        return CGSize(width: self.view.frame.width/2 - 4, height: self.view.frame.width/2)
+        return CGSizeMake(self.view.frame.width/2 - 4, self.view.frame.width/2)
     }
     
-    func collectionView(_ collectionView: UICollectionView,
-        didSelectItemAt indexPath: IndexPath) {
+    func collectionView(collectionView: UICollectionView,
+        didSelectItemAtIndexPath indexPath: NSIndexPath) {
             playerIndex = indexPath.row
     }
     
-    func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
+    func collectionView(collectionView: UICollectionView, didHighlightItemAtIndexPath indexPath: NSIndexPath) {
        playerIndex = indexPath.row
     }
     

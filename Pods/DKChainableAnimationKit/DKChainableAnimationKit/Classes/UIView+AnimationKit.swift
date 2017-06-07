@@ -28,7 +28,7 @@ public extension UIView {
 
     final public func bezierPathForAnimation() -> UIBezierPath {
         let path = UIBezierPath()
-        path.move(to: self.layer.position)
+        path.moveToPoint(self.layer.position)
         return path
     }
 

@@ -10,74 +10,70 @@ import Foundation
 import SwiftHTTP
 import SwiftyJSON
 
-
-
 //let adminUrl = "http://192.168.1.103/jppbackend/";
 let adminUrl = "http://admin.jaipurpinkpanthers.com/";
 let imageURL = adminUrl + "uploads/";
 let apiURL = adminUrl + "index.php/json/";
 
-open class RestApi {
+public class RestApi {
     
-    open func getYoutubeImage(_ videoID:String) -> String {
+    public func getYoutubeImage(videoID:String) -> String {
         return "http://img.youtube.com/vi/" + videoID + "/hqdefault.jpg"
     }
     
-     func getVideo( _ completion: @escaping ((JSON) -> Void))  {
-        
+    public func getVideo( completion: ( (JSON) -> Void) )  {
+        var json = JSON(1);
         do {
             let opt = try HTTP.GET(apiURL + "getAllVideoGallery")
-            var json = JSON(1);
             opt.start { response in
-                if let err = response.error {
-                    print("error: \(err.localizedDescription)")
+                if let _ = response.error {
+                    completion(json);
                 }
                 else
                 {
                     json  = JSON(data: response.data)
-                    print(json)
                     completion(json);
                 }
             }
-        } catch let error {
-            print("got an error creating the request: \(error)")
+        } catch _ {
+            completion(json);
         }
     }
     
-    open func getImage(_ urlStr:String) -> UIImage {
-        let url = URL(string: imageURL + urlStr)
-        let data = try? Data(contentsOf: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check
+    public func getImage(urlStr:String) -> UIImage {
+        let url = NSURL(string: imageURL + urlStr)
+        let data = NSData(contentsOfURL: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check
         return UIImage(data: data!)!
     }
     
-    open func getImageCache(_ urlStr:String) -> URL {
-        let url = URL(string: adminUrl + "index.php/image/index?name=" + urlStr + "&width=400")
+    public func getImageCache(urlStr:String) -> NSURL {
+        let url = NSURL(string: adminUrl + "index.php/image/index?name=" + urlStr + "&width=400")
         return url!
     }
     
-    open func getImageThumbCache(_ urlStr:String) -> URL {
-        let url = URL(string: adminUrl + "index.php/image/index?name=" + urlStr + "&width=250")
+    public func getImageThumbCache(urlStr:String) -> NSURL {
+        let url = NSURL(string: adminUrl + "index.php/image/index?name=" + urlStr + "&width=250")
         return url!
     }
     
-    open func getImageExternalCacheURL(_ urlStr:String) -> URL {
-        let url = URL(string:urlStr)
+    public func getImageExternalCacheURL(urlStr:String) -> NSURL {
+        let url = NSURL(string:urlStr)
         return url!
     }
     
-    open func getImageExternalURL(_ urlStr:String) -> UIImage {
-        let url = URL(string: urlStr)
-        let data = try? Data(contentsOf: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check
+    public func getImageExternalURL(urlStr:String) -> UIImage {
+        let url = NSURL(string: urlStr)
+        let data = NSData(contentsOfURL: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check
         return UIImage(data: data!)!
     }
     
-    open func getThumb(_ urlStr:String) -> UIImage {
-        let url = URL(string: adminUrl + "index.php/image/index?name=" + urlStr + "&width=400")
-        let data = try? Data(contentsOf: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check
+    public func getThumb(urlStr:String) -> UIImage {
+        let url = NSURL(string: adminUrl + "index.php/image/index?name=" + urlStr + "&width=400")
+        let data = NSData(contentsOfURL: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check
         return UIImage(data: data!)!
     }
     
-    open func getGallery( _ completion: @escaping( (JSON) -> Void) )  {
+    public func getGallery( completion: ( (JSON) -> Void) )  {
         var json = JSON(1);
         do {
             let opt = try HTTP.GET(apiURL + "getallgallery")
@@ -96,7 +92,7 @@ open class RestApi {
         }
     }
     
-    open func getNews( _ completion: @escaping( (JSON) -> Void) )  {
+    public func getNews( completion: ( (JSON) -> Void) )  {
         var json = JSON(1);
         do {
             let opt = try HTTP.GET(apiURL + "getallnews")
@@ -115,7 +111,7 @@ open class RestApi {
         }
     }
     
-    open func getMatchUpdate( _ completion: @escaping( (JSON) -> Void) )  {
+    public func getMatchUpdate( completion: ( (JSON) -> Void) )  {
         var json = JSON(1);
         do {
             let opt = try HTTP.GET(apiURL + "getscheduleforiosandroidseason4")
@@ -134,7 +130,7 @@ open class RestApi {
         }
     }
     
-    open func getPointTable( _ completion: @escaping ( (JSON) -> Void) )  {
+    public func getPointTable( completion: ( (JSON) -> Void) )  {
         var json = JSON(1);
         do {
             let opt = try HTTP.GET(apiURL + "getallpoint")
@@ -153,7 +149,7 @@ open class RestApi {
         }
     }
     
-    open func getSchedule( _ completion: @escaping ( (JSON) -> Void) )  {
+    public func getSchedule( completion: ( (JSON) -> Void) )  {
         var json = JSON(1);
         do {
             let opt = try HTTP.GET(apiURL + "getScheduleAndroid")
@@ -172,7 +168,7 @@ open class RestApi {
         }
     }
     
-    open func sendFanCorner(_ firstname:String, lastname:String, mobile:String, email:String, city:String, favouriteplayer:String, completion: @escaping ( (JSON) -> Void) )  {
+    public func sendFanCorner(firstname:String, lastname:String, mobile:String, email:String, city:String, favouriteplayer:String, completion: ( (JSON) -> Void) )  {
         var json = JSON(1);
         let params = ["firstname": firstname, "lastname": lastname, "mobile": mobile, "email": email, "city": city, "favouriteplayer": favouriteplayer]
         //print(params)
@@ -194,7 +190,7 @@ open class RestApi {
     }
 
     
-    func getHome(_ completion: @escaping ( (JSON) -> Void)) {
+    func getHome(completion: ( (JSON) -> Void)) {
         
         var json = JSON(1);
         do {
@@ -215,7 +211,7 @@ open class RestApi {
     }
     
     
-    func getHomeMatch(_ completion: @escaping ( (JSON) -> Void)) {
+    func getHomeMatch(completion: ( (JSON) -> Void)) {
         var json = JSON(1);
         do {
             let opt = try HTTP.GET(apiURL + "getLatestMatch")
@@ -234,7 +230,7 @@ open class RestApi {
         }
     }
     
-    func getGalleryById(_ id:String,completion: @escaping ( (JSON) -> Void)) {
+    func getGalleryById(id:String,completion: ( (JSON) -> Void)) {
         var json = JSON(1);
         
         let params = ["galleryid": id]
@@ -256,7 +252,7 @@ open class RestApi {
         
     }
     
-    func getWallPaper(_ completion: @escaping ( (JSON) -> Void)) {
+    func getWallPaper(completion: ( (JSON) -> Void)) {
         var json = JSON(1);
         
         let params = ["type": "1"]
