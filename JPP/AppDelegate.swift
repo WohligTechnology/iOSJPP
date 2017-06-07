@@ -34,6 +34,7 @@ var newsContent = "";
 var GalleryInsideTitle = ""
 var playerIndex = 0;
 var isGalWal = 0;
+var scheduleType = "kabaddi"
 var players:[Player] = []
 var loaderGlo:loading!
 var bounds = UIScreen.main.bounds

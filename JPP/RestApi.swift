@@ -167,6 +167,7 @@ open class RestApi {
         }
     }
     
+
     open func getWorldCup( _ completion: @escaping ( (JSON) -> Void) )  {
         var json = JSON(1);
         do {

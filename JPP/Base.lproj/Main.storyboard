@@ -994,6 +994,49 @@
             </objects>
             <point key="canvasLocation" x="2503" y="1126"/>
         </scene>
+        <!--World Cup Controller-->
+        <scene sceneID="Cpf-Lb-5Jh">
+            <objects>
+                <viewController storyboardIdentifier="worldcup" useStoryboardIdentifierAsRestorationIdentifier="YES" id="a1y-UF-FTu" customClass="WorldCupController" customModule="JPP" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dJQ-SO-Nrz"/>
+                        <viewControllerLayoutGuide type="bottom" id="aRp-YE-OFe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="S0b-Sc-wxV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="soQ-Zs-wjc">
+                                <rect key="frame" x="8" y="18" width="359" height="631"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.72156862749999995" green="0.92941176469999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="worldcupCell" rowHeight="60" id="mgq-NC-aIf">
+                                        <rect key="frame" x="0.0" y="28" width="359" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mgq-NC-aIf" id="iIX-aV-vJZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="359" height="59.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.72156862749999995" green="0.92941176469999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="a1y-UF-FTu" id="NWt-eW-vbT"/>
+                                    <outlet property="delegate" destination="a1y-UF-FTu" id="Xsd-Cb-aBU"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.76862746479999999" green="0.94117647410000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="worldcupTableView" destination="soQ-Zs-wjc" id="eXO-GH-vXl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o97-qK-BsL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3201" y="1126"/>
+        </scene>
         <!--Merchandise View Controller-->
         <scene sceneID="3np-Pk-lVH">
             <objects>
