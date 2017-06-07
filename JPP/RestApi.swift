@@ -167,10 +167,11 @@ open class RestApi {
         }
     }
     
-    open func getWorldCup(_ completion: @escaping ( (JSON) -> Void) )  {
+
+    open func getWorldCup( _ completion: @escaping ( (JSON) -> Void) )  {
         var json = JSON(1);
         do {
-            let opt = try HTTP.GET(apiURL + "getscheduleforiosandroidworldcup2016")
+            let opt = try HTTP.GET(apiURL + "getScheduleForIosAndroidWorldCup2016")
             opt.start { response in
                 if let _ = response.error {
                     completion(json);
