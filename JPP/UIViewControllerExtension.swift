@@ -21,7 +21,7 @@ extension UIViewController {
         self.navigationController?.navigationBar.barTintColor = BlueColor
         
         
-        //self.addRightBarButtonWithImage(UIImage(named: "ic_notifications_black_24dp")!)
+        self.addRightBarButtonWithImage(UIImage(named: "ic_notifications_black_24dp")!)
         self.slideMenuController()?.removeLeftGestures()
         self.slideMenuController()?.removeRightGestures()
         self.slideMenuController()?.addLeftGestures()
@@ -38,6 +38,38 @@ extension UIViewController {
         imageView.center.x  = screenSize.width/2
         self.navigationController?.view.addSubview(imageView)
     }
+    
+    func setNavigationBarItem1() {
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+        
+        self.navigationController?.navigationBar.tintColor = UIColor.white
+        self.navigationController?.navigationBar.titleTextAttributes = [ NSForegroundColorAttributeName : UIColor(red: 1, green: 1, blue: 1, alpha: 0) ]
+        
+        self.navigationController?.navigationBar.isTranslucent = false
+        
+        self.navigationController?.toolbar.barTintColor = BlueColor
+        self.navigationController?.navigationBar.barTintColor = BlueColor
+        
+        
+        
+        self.slideMenuController()?.removeLeftGestures()
+        self.slideMenuController()?.removeRightGestures()
+        self.slideMenuController()?.addLeftGestures()
+        self.slideMenuController()?.addRightGestures()
+        
+        
+        let logo = UIImage(named: "ic_action_panther.png")
+        let imageView = UIImageView(image:logo)
+        
+        let screenSize: CGRect = UIScreen.main.bounds
+        imageView.frame = CGRect(x: 0,y: 14,width: 50,height: 50);
+        
+        imageView.contentMode = UIViewContentMode.scaleAspectFit;
+        imageView.center.x  = screenSize.width/2
+        self.navigationController?.view.addSubview(imageView)
+    }
+
+    
     
     func setNavigationBarItemText(_ text:String) {
         
@@ -59,6 +91,8 @@ extension UIViewController {
         self.navigationController?.navigationBar.topItem!.title = text;
         
     }
+    
+   
     
     func removeNavigationBarItem() {
         self.navigationItem.leftBarButtonItem = nil

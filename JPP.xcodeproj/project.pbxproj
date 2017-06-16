@@ -104,6 +104,11 @@
 		78238FE41C57A7890067E7D5 /* about.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78238FE31C57A7890067E7D5 /* about.xib */; };
 		78238FE71C57AC170067E7D5 /* trapezium.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78238FE61C57AC170067E7D5 /* trapezium.xib */; };
 		78238FE91C57AC350067E7D5 /* trapezium.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78238FE81C57AC350067E7D5 /* trapezium.swift */; };
+		8403B8F81EEFC7E00024BF1A /* dreamwalker.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8403B8F71EEFC7E00024BF1A /* dreamwalker.ttf */; };
+		84DAD5981EEE9D8A001A4891 /* playersInside.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAD5971EEE9D8A001A4891 /* playersInside.swift */; };
+		84DAD59A1EEE9F28001A4891 /* PlayerInsideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAD5991EEE9F28001A4891 /* PlayerInsideViewController.swift */; };
+		84DAD59E1EEEC181001A4891 /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84DAD59D1EEEC181001A4891 /* View.xib */; };
+		84F2945F1EEE652F009D4295 /* playersInside.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84F2945E1EEE652F009D4295 /* playersInside.xib */; };
 		C23892D81C58C6EE00CA4DC1 /* thumbnailImage.xib in Resources */ = {isa = PBXBuildFile; fileRef = C23892D71C58C6EE00CA4DC1 /* thumbnailImage.xib */; };
 		C23892DA1C58C92700CA4DC1 /* thumbnailImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23892D91C58C92700CA4DC1 /* thumbnailImage.swift */; };
 		C257ACEC1D128009002C94F6 /* BookTicketsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C257ACEB1D128009002C94F6 /* BookTicketsViewController.swift */; };
@@ -119,6 +124,7 @@
 		C2F0A1161C69B8BB00345A36 /* doneMatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F0A1151C69B8BB00345A36 /* doneMatch.swift */; };
 		C2FF852B1C58D05000F2CFED /* singleThumbnailImage.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2FF852A1C58D05000F2CFED /* singleThumbnailImage.xib */; };
 		C2FF852D1C58D17A00F2CFED /* singleThumbnailImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FF852C1C58D17A00F2CFED /* singleThumbnailImage.swift */; };
+		FE7BD9195DA5A875F6F36CFE /* Pods_JPP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6513E3664119DA1F60805CBD /* Pods_JPP.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -218,6 +224,7 @@
 		3AA5E83D1D2A3E9800AEDD27 /* matchupdate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = matchupdate.swift; sourceTree = "<group>"; };
 		3AA5E83F1D2A424600AEDD27 /* MatchUpdateController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchUpdateController.swift; sourceTree = "<group>"; };
 		3AA5E8411D2A8C9200AEDD27 /* MerchandiseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MerchandiseViewController.swift; sourceTree = "<group>"; };
+		6513E3664119DA1F60805CBD /* Pods_JPP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JPP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7809A3C31C64BFB900562E6A /* fanCorner.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = fanCorner.xib; sourceTree = "<group>"; };
 		7809A3C51C64BFCB00562E6A /* fanCorner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fanCorner.swift; sourceTree = "<group>"; };
 		78238FE11C57A77E0067E7D5 /* about.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = about.swift; sourceTree = "<group>"; };
@@ -225,6 +232,11 @@
 		78238FE61C57AC170067E7D5 /* trapezium.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = trapezium.xib; sourceTree = "<group>"; };
 		78238FE81C57AC350067E7D5 /* trapezium.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = trapezium.swift; sourceTree = "<group>"; };
 		7A941C4902E5C537FC7EB0A6 /* Pods-JPP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JPP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JPP/Pods-JPP.debug.xcconfig"; sourceTree = "<group>"; };
+		8403B8F71EEFC7E00024BF1A /* dreamwalker.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = dreamwalker.ttf; sourceTree = "<group>"; };
+		84DAD5971EEE9D8A001A4891 /* playersInside.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = playersInside.swift; sourceTree = "<group>"; };
+		84DAD5991EEE9F28001A4891 /* PlayerInsideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerInsideViewController.swift; sourceTree = "<group>"; };
+		84DAD59D1EEEC181001A4891 /* View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
+		84F2945E1EEE652F009D4295 /* playersInside.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = playersInside.xib; sourceTree = "<group>"; };
 		87466C106F929A2F048F5460 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		C23892D71C58C6EE00CA4DC1 /* thumbnailImage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = thumbnailImage.xib; sourceTree = "<group>"; };
 		C23892D91C58C92700CA4DC1 /* thumbnailImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = thumbnailImage.swift; sourceTree = "<group>"; };
@@ -256,6 +268,7 @@
 				363609A01C5C749E00078DC7 /* libz.tbd in Frameworks */,
 				363609A21C5C74A500078DC7 /* libstdc++.tbd in Frameworks */,
 				3636099B1C5C740800078DC7 /* Pushwoosh.framework in Frameworks */,
+				FE7BD9195DA5A875F6F36CFE /* Pods_JPP.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +425,8 @@
 		36F9C1841C5616C6003D02AB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				84DAD59C1EEEC15A001A4891 /* New Group */,
+				84F2945D1EEE61F9009D4295 /* playersinside */,
 				3624A5591D434C9800E77B42 /* semiFinal */,
 				363DE0E21D34CEAC00906E51 /* sponsors */,
 				3AA5E83A1D2A3B2E00AEDD27 /* matchupdate */,
@@ -445,6 +460,7 @@
 		36F9C1861C5616E4003D02AB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				84DAD5991EEE9F28001A4891 /* PlayerInsideViewController.swift */,
 				36F2CE9C1C57708C00D0D2D6 /* HomeController.swift */,
 				360A50FD1C577A05001F7E40 /* SideMenuController.swift */,
 				36F2CE9E1C5770B900D0D2D6 /* ScheduleController.swift */,
@@ -497,6 +513,7 @@
 				36F9C18E1C562837003D02AB /* Oswald-Bold.ttf */,
 				36F9C18F1C562837003D02AB /* Oswald-Light.ttf */,
 				36F9C1901C562837003D02AB /* Oswald-Regular.ttf */,
+				8403B8F71EEFC7E00024BF1A /* dreamwalker.ttf */,
 				36F9C1911C562837003D02AB /* voyagefant_0.ttf */,
 				36F9C1921C562837003D02AB /* voyagefant3d.ttf */,
 				36F9C1931C562837003D02AB /* voyagefantacad.ttf */,
@@ -599,6 +616,7 @@
 				363609A31C5C74FE00078DC7 /* MapKit.framework */,
 				363609A11C5C74A500078DC7 /* libstdc++.tbd */,
 				3636099F1C5C749E00078DC7 /* libz.tbd */,
+				6513E3664119DA1F60805CBD /* Pods_JPP.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -646,6 +664,23 @@
 			children = (
 			);
 			name = loader;
+			sourceTree = "<group>";
+		};
+		84DAD59C1EEEC15A001A4891 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				84DAD59D1EEEC181001A4891 /* View.xib */,
+			);
+			name = "New Group";
+			sourceTree = "<group>";
+		};
+		84F2945D1EEE61F9009D4295 /* playersinside */ = {
+			isa = PBXGroup;
+			children = (
+				84F2945E1EEE652F009D4295 /* playersInside.xib */,
+				84DAD5971EEE9D8A001A4891 /* playersInside.swift */,
+			);
+			name = playersinside;
 			sourceTree = "<group>";
 		};
 		C23892D61C58C69200CA4DC1 /* thumbnailImage */ = {
@@ -719,8 +754,9 @@
 				TargetAttributes = {
 					36F9C15B1C55EDBF003D02AB = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = YVWVDTRG4B;
+						DevelopmentTeam = D9R47RBCNL;
 						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Push = {
 								enabled = 1;
@@ -752,6 +788,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84F2945F1EEE652F009D4295 /* playersInside.xib in Resources */,
 				3AA5E83C1D2A3B4900AEDD27 /* matchupdate.xib in Resources */,
 				36F9C19D1C5641BB003D02AB /* Oswald-Bold.ttf in Resources */,
 				3A3357521CF6E54200F074ED /* signupSection.xib in Resources */,
@@ -772,6 +809,7 @@
 				C2F0A1131C69B78500345A36 /* kenyanregular.ttf in Resources */,
 				36F9C1A51C5641BB003D02AB /* voyagefantgchrome.ttf in Resources */,
 				36F2CE9B1C573A2300D0D2D6 /* media.xib in Resources */,
+				8403B8F81EEFC7E00024BF1A /* dreamwalker.ttf in Resources */,
 				C2F0A1111C69B78500345A36 /* kenyanbold.ttf in Resources */,
 				3A57CEDB1CFC454E004D612C /* seasonOpener.xib in Resources */,
 				36F2CE8A1C56561300D0D2D6 /* player.xib in Resources */,
@@ -787,6 +825,7 @@
 				36F9C1A81C5641BB003D02AB /* voyagefanthplat.ttf in Resources */,
 				36F9C1A91C5641BB003D02AB /* voyagefantlaser.ttf in Resources */,
 				36F9C1AA1C5641BB003D02AB /* voyagefantstraight.ttf in Resources */,
+				84DAD59E1EEEC181001A4891 /* View.xib in Resources */,
 				C2F0A1121C69B78500345A36 /* kenyanbolditalic.ttf in Resources */,
 				36F9C1AB1C5641BB003D02AB /* voyagefantstraightleft.ttf in Resources */,
 				78238FE41C57A7890067E7D5 /* about.xib in Resources */,
@@ -848,7 +887,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -876,6 +915,7 @@
 				36F2CEAB1C57718B00D0D2D6 /* KnowTeamController.swift in Sources */,
 				36B500761D43581700C63DAD /* semiFinal.swift in Sources */,
 				36F2CE9D1C57708C00D0D2D6 /* HomeController.swift in Sources */,
+				84DAD5981EEE9D8A001A4891 /* playersInside.swift in Sources */,
 				36F9C1B91C5653E5003D02AB /* matches.swift in Sources */,
 				C263D49C1C68688100837BA8 /* FanCornerController.swift in Sources */,
 				367B90EF1DC0D29F00D76F13 /* SwiftyJSON.swift in Sources */,
@@ -892,6 +932,7 @@
 				7809A3C61C64BFCB00562E6A /* fanCorner.swift in Sources */,
 				366F19DC1C58F52600321669 /* bookTicket.swift in Sources */,
 				366F19D71C58EFBD00321669 /* WebController.swift in Sources */,
+				84DAD59A1EEE9F28001A4891 /* PlayerInsideViewController.swift in Sources */,
 				36F2CEB31C57720600D0D2D6 /* WallpaperInsideController.swift in Sources */,
 				362A175D1C58AA6500B11F22 /* team2.swift in Sources */,
 				36F9C1831C5616B1003D02AB /* Layout.swift in Sources */,
@@ -1038,7 +1079,7 @@
 				CODE_SIGN_ENTITLEMENTS = JPP/JPP.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = YVWVDTRG4B;
+				DEVELOPMENT_TEAM = D9R47RBCNL;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/JPP",
@@ -1046,9 +1087,10 @@
 				INFOPLIST_FILE = JPP/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.wohlig.JPP;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jaipurpinkpanthers.iphone;
 				PRODUCT_NAME = JPP;
 				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "JPP/JPP-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -1066,7 +1108,7 @@
 				CODE_SIGN_ENTITLEMENTS = JPP/JPP.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = YVWVDTRG4B;
+				DEVELOPMENT_TEAM = D9R47RBCNL;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/JPP",
@@ -1074,9 +1116,10 @@
 				INFOPLIST_FILE = JPP/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.wohlig.JPP;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jaipurpinkpanthers.iphone;
 				PRODUCT_NAME = JPP;
 				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "JPP/JPP-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;

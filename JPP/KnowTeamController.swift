@@ -9,18 +9,45 @@
 import UIKit
 
 class KnowTeamController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate {
-    
+    @IBOutlet weak var playersCollection: UICollectionView!
+    var getPlayers: JSON = []
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setNavigationBarItemText("KNOW YOUR PANTHERS")
+        print("HEllo")
         
         // Do any additional setup after loading the view.
+        getAllPlayer()
+        
     }
     
     
+    func getAllPlayer(){
+        rest.getAllPlayers(completion: {(json:JSON) -> () in
+            DispatchQueue.main.sync(execute: {
+                if json == 401 {
+                    print("No Data Found")
+                }else{
+                    
+                    print(json)
+                    self.getPlayers = json["queryresult"]
+                    print("i want this\(self.getPlayers)")
+                    print("givecount\(self.getPlayers.count)")
+                    self.playersCollection.reloadData()
+                }
+            })
+            
+        })
+
+    }
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return players.count;
+        return self.getPlayers.count;
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -28,13 +55,16 @@ class KnowTeamController: UIViewController,UICollectionViewDataSource,UICollecti
         //cell.addSubview(player(frame: CGRectMake(8,8,cell.frame.width - 8,cell.frame.height - 8)));
         
         let mediaBox = player(frame: CGRect(x: 8,y: 8,width: cell.frame.width - 8,height: cell.frame.height - 8));
-        mediaBox.playerTitle.text = players[(indexPath as NSIndexPath).row].name
-        mediaBox.playerImage.image = UIImage(named:players[(indexPath as NSIndexPath).row].image)
-        mediaBox.playerPosition.text = players[(indexPath as NSIndexPath).row].type
+        mediaBox.playerTitle.text = getPlayers[indexPath.row]["name"].stringValue
+       mediaBox.playerImage.hnk_setImageFromURL(rest.getImageCache(getPlayers[indexPath.row]["smallimage"].string!))
+//        mediaBox.playerImage.image = UIImage(named:players[(indexPath as NSIndexPath).row].image)
+        mediaBox.playerPosition.text = getPlayers[indexPath.row]["type"].stringValue
         mediaBox.index = (indexPath as NSIndexPath).row
+        
         mediaBox.layer.borderWidth = 1
         mediaBox.layer.borderColor = UIColor(red:18/255.0, green:126/255.0, blue:165/255.0, alpha: 1.0).cgColor
         cell.addSubview(mediaBox)
+        
         
         return cell
     }
@@ -47,17 +77,33 @@ class KnowTeamController: UIViewController,UICollectionViewDataSource,UICollecti
     
     func collectionView(_ collectionView: UICollectionView,
         didSelectItemAt indexPath: IndexPath) {
-            playerIndex = (indexPath as NSIndexPath).row
+            playerIndex = getPlayers[indexPath.row]["id"].stringValue
+       
+        print("showindex\(playerIndex)")
     }
     
+    
     func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
-       playerIndex = (indexPath as NSIndexPath).row
+       playerIndex = getPlayers[indexPath.row]["id"].stringValue
+         print("showindex\(playerIndex)")
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "playersInside"{
+            let controller = segue.destination as! PlayerInsideViewController
+            controller.players = playerIndex
+        }else{
+            let controller = segue.destination as! PlayerInsideViewController
+            controller.players = playerIndex
+        }
+    }
+
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     
     
     /*

@@ -10,7 +10,8 @@ import Foundation
 import SwiftHTTP
 
 //let adminUrl = "http://192.168.1.103/jppbackend/";
-let adminUrl = "http://admin.jaipurpinkpanthers.com/";
+//let adminUrl = "http://admin.jaipurpinkpanthers.com/";
+let adminUrl = "http://wohlig.co.in/pinkpanther/jppbackend/"
 let imageURL = adminUrl + "uploads/";
 let apiURL = adminUrl + "index.php/json/";
 
@@ -276,7 +277,7 @@ open class RestApi {
         
         let params = ["type": "1"]
         do {
-            let opt = try HTTP.GET(apiURL + "getWallpaper", parameters: params)
+            let opt = try HTTP.POST(apiURL + "getWallpaper", parameters: params)
             opt.start { response in
                 if let _ = response.error {
                     completion(json);
@@ -292,5 +293,69 @@ open class RestApi {
         }
         
     }
+    
+    public func getAllPlayers(completion: @escaping ((JSON) -> Void))
+    {
+        var json = JSON(1)
+       
+       let params = ["type": "1"]
+            do {
+                let opt = try HTTP.GET(apiURL + "getallplayers", parameters: params)
+                opt.start { response in
+                    
+                    if let _ = response.error {
+                        let nsError = response.error! as NSError
+                        if nsError.code == 401 {
+                            json = JSON(nsError.code)
+                            completion(json)
+                        }else{
+                            completion(json);
+                        }
+                    }
+                    else
+                    {
+                        json  = JSON(data: response.data)
+                        completion(json);
+                    }
+                }
+            } catch _ {
+                completion(json);
+            }
+            
+        }
+    
+    
+   func getSinglePlayer(_ id:String,completion: @escaping ( (JSON) -> Void))
+    {
+        var json = JSON(1)
+        
+        let params = ["id": id]
+        do {
+            let opt = try HTTP.POST(apiURL + "getsingleplayer", parameters: params)
+            opt.start { response in
+                
+                if let _ = response.error {
+                    let nsError = response.error! as NSError
+                    if nsError.code == 401 {
+                        json = JSON(nsError.code)
+                        completion(json)
+                    }else{
+                        completion(json);
+                    }
+                }
+                else
+                {
+                    json  = JSON(data: response.data)
+                    completion(json);
+                }
+            }
+        } catch _ {
+            completion(json);
+        }
+        
+    }
+
+    
+
     
 }

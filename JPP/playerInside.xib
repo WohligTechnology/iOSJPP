@@ -1,25 +1,22 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <mutableArray key="Oswald-Light.ttf">
+        <array key="Oswald-Light.ttf">
             <string>Oswald-Light</string>
-            <string>Oswald-Light</string>
-            <string>Oswald-Light</string>
-            <string>Oswald-Light</string>
-            <string>Oswald-Light</string>
-        </mutableArray>
-        <mutableArray key="Oswald-Regular.ttf">
+        </array>
+        <array key="Oswald-Regular.ttf">
             <string>Oswald-Regular</string>
-            <string>Oswald-Regular</string>
-            <string>Oswald-Regular</string>
-            <string>Oswald-Regular</string>
-            <string>Oswald-Regular</string>
-        </mutableArray>
+        </array>
     </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="playerInside" customModule="JPP" customModuleProvider="target">
@@ -43,7 +40,7 @@
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aVV-Xq-dHV" customClass="player" customModule="JPP" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="17" width="370" height="305"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="305" id="Ai8-3V-JwB"/>
                     </constraints>
@@ -58,7 +55,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="352" height="38"/>
                                     <subviews>
                                         <view autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yjE-uc-9YA">
-                                            <rect key="frame" x="0.0" y="0.0" width="117" height="38"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="116.5" height="38"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STATE:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xdm-O4-lpV">
                                                     <rect key="frame" x="8" y="9" width="30" height="21"/>
@@ -66,17 +63,17 @@
                                                         <constraint firstAttribute="width" constant="30" id="fA1-0f-gPN"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="11"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Jaipur" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n8Y-HL-nxy">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jaipur" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n8Y-HL-nxy">
                                                     <rect key="frame" x="38" y="7" width="22" height="24"/>
                                                     <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="11"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstItem="n8Y-HL-nxy" firstAttribute="leading" secondItem="Xdm-O4-lpV" secondAttribute="trailing" id="5hP-xR-APb"/>
                                                 <constraint firstItem="Xdm-O4-lpV" firstAttribute="leading" secondItem="yjE-uc-9YA" secondAttribute="leadingMargin" id="YwH-yu-Z3m"/>
@@ -87,7 +84,7 @@
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G9k-ad-ceb">
-                                            <rect key="frame" x="118" y="0.0" width="117" height="38"/>
+                                            <rect key="frame" x="117.5" y="0.0" width="117" height="38"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="AGE:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zJz-Lr-FPD">
                                                     <rect key="frame" x="45" y="0.0" width="20" height="38"/>
@@ -95,7 +92,7 @@
                                                         <constraint firstAttribute="width" constant="61" id="dam-MP-YZT"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="11"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="default">
                                                         <mask key="constraints">
@@ -109,11 +106,11 @@
                                                         <constraint firstAttribute="width" constant="20" id="jT0-HQ-Avl"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="11"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="mgL-Sl-8jm" secondAttribute="trailing" constant="30" id="BaC-Pc-hMy"/>
                                                 <constraint firstItem="mgL-Sl-8jm" firstAttribute="leading" secondItem="zJz-Lr-FPD" secondAttribute="trailing" constant="1" id="JVd-mZ-HiZ"/>
@@ -132,16 +129,16 @@
                                             </variation>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lf6-go-dAt">
-                                            <rect key="frame" x="236" y="0.0" width="117" height="38"/>
+                                            <rect key="frame" x="235.5" y="0.0" width="116.5" height="38"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="JERSEY NUMBER:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eX3-Mq-WJ1">
-                                                    <rect key="frame" x="15" y="9" width="73" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JERSEY NUMBER:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eX3-Mq-WJ1">
+                                                    <rect key="frame" x="15" y="9" width="72.5" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="73" id="6cb-iv-7W2"/>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="73" id="W2R-n0-BIM"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="11"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="default">
                                                         <mask key="constraints">
@@ -151,7 +148,7 @@
                                                     </variation>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F0s-uI-UbA">
-                                                    <rect key="frame" x="91" y="0.0" width="16" height="38"/>
+                                                    <rect key="frame" x="90.5" y="0.0" width="16" height="38"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="16" id="Pv6-pd-KWZ"/>
                                                         <constraint firstAttribute="width" relation="lessThanOrEqual" constant="16" id="Xz2-wj-uvB"/>
@@ -159,7 +156,7 @@
                                                         <constraint firstAttribute="width" relation="lessThanOrEqual" constant="34" id="wzR-dL-BFz"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="11"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="default">
                                                         <mask key="constraints">
@@ -168,7 +165,7 @@
                                                     </variation>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="F0s-uI-UbA" secondAttribute="bottom" id="2RS-dz-1k9"/>
                                                 <constraint firstItem="F0s-uI-UbA" firstAttribute="leading" secondItem="eX3-Mq-WJ1" secondAttribute="trailing" constant="3" id="DME-HA-ySW"/>
@@ -194,8 +191,8 @@
                                             </variation>
                                         </view>
                                     </subviews>
-                                    <color key="backgroundColor" red="0.90588235855102539" green="0.17647059261798859" blue="0.54117649793624878" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="tintColor" red="0.90588235859999999" green="0.1764705926" blue="0.5411764979" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" red="0.90588235855102539" green="0.17647059261798859" blue="0.54117649793624878" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="tintColor" red="0.90588235859999999" green="0.1764705926" blue="0.5411764979" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstItem="G9k-ad-ceb" firstAttribute="centerX" secondItem="4BK-u1-5JJ" secondAttribute="centerX" id="DA7-ut-Dik"/>
                                         <constraint firstItem="G9k-ad-ceb" firstAttribute="width" secondItem="Lf6-go-dAt" secondAttribute="width" id="TaU-DE-TMW"/>
@@ -203,7 +200,7 @@
                                     </constraints>
                                 </stackView>
                             </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstItem="4BK-u1-5JJ" firstAttribute="top" secondItem="SWe-76-b9k" secondAttribute="top" id="Ay5-Zt-8FM"/>
                                 <constraint firstAttribute="trailing" secondItem="4BK-u1-5JJ" secondAttribute="trailing" id="Cob-xQ-yyh"/>
@@ -212,7 +209,7 @@
                             </constraints>
                         </view>
                     </subviews>
-                    <color key="backgroundColor" red="0.70588237050000002" green="0.1176470593" blue="0.44705882670000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.70588237050000002" green="0.1176470593" blue="0.44705882670000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="GCb-0i-OQv"/>
                         <constraint firstItem="SWe-76-b9k" firstAttribute="top" secondItem="v04-JQ-oPI" secondAttribute="top" constant="1" id="Jkv-Xn-ilo"/>
@@ -227,33 +224,33 @@
                         <constraint firstAttribute="height" constant="21" id="jFX-Xm-UO2"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="14"/>
-                    <color key="textColor" red="0.14901961386203766" green="0.14901961386203766" blue="0.14901961386203766" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="textColor" red="0.14901961386203766" green="0.14901961386203766" blue="0.14901961386203766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="ACHIVEMENTS:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e9T-mQ-jdS">
-                    <rect key="frame" x="8" y="487" width="354" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ACHIVEMENTS:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e9T-mQ-jdS">
+                    <rect key="frame" x="8" y="486.5" width="354" height="21"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="21" id="yex-re-Knx"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="14"/>
-                    <color key="textColor" red="0.14901961389999999" green="0.14901961389999999" blue="0.14901961389999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="textColor" red="0.14901961389999999" green="0.14901961389999999" blue="0.14901961389999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label autoresizesSubviews="NO" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zdc-dw-Dbc">
-                    <rect key="frame" x="8" y="399" width="354" height="78"/>
+                <label autoresizesSubviews="NO" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zdc-dw-Dbc">
+                    <rect key="frame" x="8" y="399" width="354" height="77.5"/>
                     <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pharetra mattis neque, in volutpat mauris. Nam nec neque lobortis, maximus turpis in, dapibus risus. Vivamus luctus sit amet odio non rutrum. Mauris tristique purus at lobortis pellentesque.</string>
                     <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="13"/>
-                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label autoresizesSubviews="NO" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qbl-to-AXj">
-                    <rect key="frame" x="8" y="508" width="354" height="78"/>
+                <label autoresizesSubviews="NO" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qbl-to-AXj">
+                    <rect key="frame" x="8" y="507.5" width="354" height="77.5"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="86" id="PA8-ea-BNu"/>
                     </constraints>
                     <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pharetra mattis neque, in volutpat mauris. Nam nec neque lobortis, maximus turpis in, dapibus risus. Vivamus luctus sit amet odio non rutrum. Mauris tristique purus at lobortis pellentesque.</string>
                     <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="13"/>
-                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                     <variation key="default">
                         <mask key="constraints">
@@ -262,7 +259,7 @@
                     </variation>
                 </label>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="zdc-dw-Dbc" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="2BO-Iy-OUR"/>
                 <constraint firstItem="cKE-fs-EcZ" firstAttribute="top" secondItem="v04-JQ-oPI" secondAttribute="bottom" constant="8" id="33C-1N-fgM"/>

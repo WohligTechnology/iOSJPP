@@ -370,6 +370,7 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
 //                {
 //                    print("Going inside");
 //                }
+                //
                 
                 let thumbImage = thumbnailImage(frame: CGRect(x: 8,y: 8,width: self.verticalLayout.frame.width-16,height: 280));
                 thumbImage.thumbImage.image = UIImage(named: "indiabanner.jpg")
