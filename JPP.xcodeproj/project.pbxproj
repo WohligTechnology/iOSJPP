@@ -105,9 +105,10 @@
 		78238FE71C57AC170067E7D5 /* trapezium.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78238FE61C57AC170067E7D5 /* trapezium.xib */; };
 		78238FE91C57AC350067E7D5 /* trapezium.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78238FE81C57AC350067E7D5 /* trapezium.swift */; };
 		8403B8F81EEFC7E00024BF1A /* dreamwalker.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8403B8F71EEFC7E00024BF1A /* dreamwalker.ttf */; };
+		843A0AF71EFBAE6F00D0F5DC /* bgImage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 843A0AF61EFBAE6F00D0F5DC /* bgImage.xib */; };
+		843A0AFD1EFBAF7C00D0F5DC /* bgImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843A0AFC1EFBAF7C00D0F5DC /* bgImage.swift */; };
 		84DAD5981EEE9D8A001A4891 /* playersInside.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAD5971EEE9D8A001A4891 /* playersInside.swift */; };
 		84DAD59A1EEE9F28001A4891 /* PlayerInsideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAD5991EEE9F28001A4891 /* PlayerInsideViewController.swift */; };
-		84DAD59E1EEEC181001A4891 /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84DAD59D1EEEC181001A4891 /* View.xib */; };
 		84F2945F1EEE652F009D4295 /* playersInside.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84F2945E1EEE652F009D4295 /* playersInside.xib */; };
 		C23892D81C58C6EE00CA4DC1 /* thumbnailImage.xib in Resources */ = {isa = PBXBuildFile; fileRef = C23892D71C58C6EE00CA4DC1 /* thumbnailImage.xib */; };
 		C23892DA1C58C92700CA4DC1 /* thumbnailImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23892D91C58C92700CA4DC1 /* thumbnailImage.swift */; };
@@ -233,9 +234,10 @@
 		78238FE81C57AC350067E7D5 /* trapezium.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = trapezium.swift; sourceTree = "<group>"; };
 		7A941C4902E5C537FC7EB0A6 /* Pods-JPP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JPP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JPP/Pods-JPP.debug.xcconfig"; sourceTree = "<group>"; };
 		8403B8F71EEFC7E00024BF1A /* dreamwalker.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = dreamwalker.ttf; sourceTree = "<group>"; };
+		843A0AF61EFBAE6F00D0F5DC /* bgImage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = bgImage.xib; sourceTree = "<group>"; };
+		843A0AFC1EFBAF7C00D0F5DC /* bgImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bgImage.swift; sourceTree = "<group>"; };
 		84DAD5971EEE9D8A001A4891 /* playersInside.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = playersInside.swift; sourceTree = "<group>"; };
 		84DAD5991EEE9F28001A4891 /* PlayerInsideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerInsideViewController.swift; sourceTree = "<group>"; };
-		84DAD59D1EEEC181001A4891 /* View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
 		84F2945E1EEE652F009D4295 /* playersInside.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = playersInside.xib; sourceTree = "<group>"; };
 		87466C106F929A2F048F5460 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		C23892D71C58C6EE00CA4DC1 /* thumbnailImage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = thumbnailImage.xib; sourceTree = "<group>"; };
@@ -425,7 +427,8 @@
 		36F9C1841C5616C6003D02AB /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				84DAD59C1EEEC15A001A4891 /* New Group */,
+				843A0AF51EFBAE4000D0F5DC /* bgImage */,
+				84D26BF01EF50FB500EAF15E /* sponserView */,
 				84F2945D1EEE61F9009D4295 /* playersinside */,
 				3624A5591D434C9800E77B42 /* semiFinal */,
 				363DE0E21D34CEAC00906E51 /* sponsors */,
@@ -666,12 +669,20 @@
 			name = loader;
 			sourceTree = "<group>";
 		};
-		84DAD59C1EEEC15A001A4891 /* New Group */ = {
+		843A0AF51EFBAE4000D0F5DC /* bgImage */ = {
 			isa = PBXGroup;
 			children = (
-				84DAD59D1EEEC181001A4891 /* View.xib */,
+				843A0AF61EFBAE6F00D0F5DC /* bgImage.xib */,
+				843A0AFC1EFBAF7C00D0F5DC /* bgImage.swift */,
 			);
-			name = "New Group";
+			name = bgImage;
+			sourceTree = "<group>";
+		};
+		84D26BF01EF50FB500EAF15E /* sponserView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = sponserView;
 			sourceTree = "<group>";
 		};
 		84F2945D1EEE61F9009D4295 /* playersinside */ = {
@@ -825,11 +836,11 @@
 				36F9C1A81C5641BB003D02AB /* voyagefanthplat.ttf in Resources */,
 				36F9C1A91C5641BB003D02AB /* voyagefantlaser.ttf in Resources */,
 				36F9C1AA1C5641BB003D02AB /* voyagefantstraight.ttf in Resources */,
-				84DAD59E1EEEC181001A4891 /* View.xib in Resources */,
 				C2F0A1121C69B78500345A36 /* kenyanbolditalic.ttf in Resources */,
 				36F9C1AB1C5641BB003D02AB /* voyagefantstraightleft.ttf in Resources */,
 				78238FE41C57A7890067E7D5 /* about.xib in Resources */,
 				36B500741D4352DA00C63DAD /* semiFinal.xib in Resources */,
+				843A0AF71EFBAE6F00D0F5DC /* bgImage.xib in Resources */,
 				36F2CE911C56585100D0D2D6 /* galleryAlbum.xib in Resources */,
 				36B957861C5A809500AEC0D3 /* loading.xib in Resources */,
 				36F9C16A1C55EDBF003D02AB /* LaunchScreen.storyboard in Resources */,
@@ -945,6 +956,7 @@
 				C23892DA1C58C92700CA4DC1 /* thumbnailImage.swift in Sources */,
 				36F2CEB11C5771F200D0D2D6 /* WallpaperController.swift in Sources */,
 				36F2CEAD1C5771AE00D0D2D6 /* KvowTeamInsideController.swift in Sources */,
+				843A0AFD1EFBAF7C00D0F5DC /* bgImage.swift in Sources */,
 				78238FE21C57A77E0067E7D5 /* about.swift in Sources */,
 				C29C75941C5A38BF0091FF6E /* TeamPlayers.swift in Sources */,
 				36F2CE961C565DE100D0D2D6 /* team.swift in Sources */,
@@ -1085,7 +1097,7 @@
 					"$(PROJECT_DIR)/JPP",
 				);
 				INFOPLIST_FILE = JPP/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jaipurpinkpanthers.iphone;
 				PRODUCT_NAME = JPP;
@@ -1114,7 +1126,7 @@
 					"$(PROJECT_DIR)/JPP",
 				);
 				INFOPLIST_FILE = JPP/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jaipurpinkpanthers.iphone;
 				PRODUCT_NAME = JPP;

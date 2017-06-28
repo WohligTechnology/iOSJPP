@@ -67,7 +67,7 @@ class NewsController: UIViewController, UITableViewDataSource, UITableViewDelega
 //            mediaBox.mediaTitle.text = newsJSON[indexPath.row]["name"].string
             mediaBox.mediaDesc.text = newsJSON[indexPath.row]["name"].string!
             mediaBox.mediaDate.text = newsJSON[indexPath.row]["timestamp"].string
-            mediaBox.mediaImage.hnk_setImageFromURL(rest.getImageThumbCache(newsJSON[indexPath.row]["image"].string!))
+            mediaBox.mediaImage.hnk_setImageFromURL(rest.getImageCache(newsJSON[indexPath.row]["image"].string!))
              mediaBox.newsImage.hnk_setImageFromURL(rest.getImageThumbCache(newsJSON[indexPath.row]["logo"].string!))
             cell.addSubview(mediaBox)
         }

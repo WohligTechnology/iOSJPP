@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -291,20 +291,20 @@
                     <rect key="frame" x="15" y="295" width="344" height="69"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RAIDER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xrr-b2-mzg">
-                            <rect key="frame" x="104.5" y="27" width="71" height="35"/>
-                            <fontDescription key="fontDescription" name="Dreamwalker" family="Dreamwalker" pointSize="25"/>
+                            <rect key="frame" x="113" y="27" width="62.5" height="25.5"/>
+                            <fontDescription key="fontDescription" name="Dreamwalker" family="Dreamwalker" pointSize="22"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JASVIR SINGH" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tzU-DW-oHe">
-                            <rect key="frame" x="104.5" y="2" width="135" height="27"/>
-                            <fontDescription key="fontDescription" name="Dreamwalker" family="Dreamwalker" pointSize="25"/>
+                            <rect key="frame" x="113" y="2" width="119" height="24"/>
+                            <fontDescription key="fontDescription" name="Dreamwalker" family="Dreamwalker" pointSize="22"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="02" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ReW-S7-cNL">
-                            <rect key="frame" x="44.5" y="2" width="52" height="64.5"/>
-                            <fontDescription key="fontDescription" name="Dreamwalker" family="Dreamwalker" pointSize="60"/>
+                            <rect key="frame" x="61.5" y="0.0" width="43.5" height="54"/>
+                            <fontDescription key="fontDescription" name="Dreamwalker" family="Dreamwalker" pointSize="50"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -312,11 +312,11 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstItem="Xrr-b2-mzg" firstAttribute="leading" secondItem="tzU-DW-oHe" secondAttribute="leading" id="CuS-NL-Y7G"/>
-                        <constraint firstItem="tzU-DW-oHe" firstAttribute="top" secondItem="ReW-S7-cNL" secondAttribute="top" id="P0v-Ox-UYh"/>
+                        <constraint firstItem="tzU-DW-oHe" firstAttribute="top" secondItem="ReW-S7-cNL" secondAttribute="top" constant="2" id="P0v-Ox-UYh"/>
                         <constraint firstItem="tzU-DW-oHe" firstAttribute="centerX" secondItem="OjV-vf-q8V" secondAttribute="centerX" id="fVn-Sz-7Cv"/>
                         <constraint firstItem="tzU-DW-oHe" firstAttribute="top" secondItem="OjV-vf-q8V" secondAttribute="top" constant="2" id="g5y-WT-XQr"/>
                         <constraint firstItem="Xrr-b2-mzg" firstAttribute="top" secondItem="OjV-vf-q8V" secondAttribute="top" constant="27" id="gib-xI-EAT"/>
-                        <constraint firstItem="Xrr-b2-mzg" firstAttribute="baseline" secondItem="ReW-S7-cNL" secondAttribute="firstBaseline" id="q1G-OO-e8c"/>
+                        <constraint firstItem="Xrr-b2-mzg" firstAttribute="baseline" secondItem="ReW-S7-cNL" secondAttribute="firstBaseline" constant="2" id="q1G-OO-e8c"/>
                         <constraint firstItem="tzU-DW-oHe" firstAttribute="leading" secondItem="ReW-S7-cNL" secondAttribute="trailing" constant="8" symbolic="YES" id="tuz-9W-2XA"/>
                     </constraints>
                 </view>
@@ -340,6 +340,9 @@
                                     <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="12"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
+                                    <variation key="heightClass=regular-widthClass=regular">
+                                        <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="10"/>
+                                    </variation>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oLt-nJ-mM0">
                                     <rect key="frame" x="0.0" y="51" width="345" height="1"/>
@@ -378,6 +381,9 @@
                                                             <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="10"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
+                                                            <variation key="heightClass=regular-widthClass=regular">
+                                                                <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="9"/>
+                                                            </variation>
                                                         </label>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rP2-nl-HqY">
                                                             <rect key="frame" x="114" y="0.0" width="1" height="50"/>
@@ -404,16 +410,19 @@
                                                     <rect key="frame" x="115" y="0.0" width="115" height="50"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q8Q-2d-FJ2">
-                                                            <rect key="frame" x="49" y="5" width="18.5" height="21"/>
+                                                            <rect key="frame" x="48.5" y="5" width="18.5" height="21"/>
                                                             <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="17"/>
                                                             <color key="textColor" red="0.30588235289999999" green="0.79215686269999996" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOTAL RAID POINTS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g86-sc-lsn">
-                                                            <rect key="frame" x="20" y="25" width="75.5" height="21"/>
+                                                            <rect key="frame" x="20.5" y="25" width="75.5" height="21"/>
                                                             <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="10"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
+                                                            <variation key="heightClass=regular-widthClass=regular">
+                                                                <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="9"/>
+                                                            </variation>
                                                         </label>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y6w-OT-KaV">
                                                             <rect key="frame" x="114" y="0.0" width="1" height="50"/>
@@ -439,33 +448,28 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RfX-fm-pab">
                                                     <rect key="frame" x="230" y="0.0" width="115" height="50"/>
                                                     <subviews>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U31-tk-Iaz">
-                                                            <rect key="frame" x="114" y="0.0" width="1" height="50"/>
-                                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                        </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HkB-Lz-UTI">
-                                                            <rect key="frame" x="49" y="5" width="18.5" height="21"/>
+                                                            <rect key="frame" x="48.5" y="5" width="18.5" height="21"/>
                                                             <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="17"/>
                                                             <color key="textColor" red="0.30588235289999999" green="0.79215686269999996" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOTAL DEFENCE POINTS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="czD-yI-rfS">
-                                                            <rect key="frame" x="11.5" y="25" width="90" height="21"/>
+                                                            <rect key="frame" x="11" y="25" width="90" height="21"/>
                                                             <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="10"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
+                                                            <variation key="heightClass=regular-widthClass=regular">
+                                                                <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="9"/>
+                                                            </variation>
                                                         </label>
                                                     </subviews>
                                                     <constraints>
                                                         <constraint firstAttribute="bottom" secondItem="HkB-Lz-UTI" secondAttribute="bottom" constant="24" id="7Z6-Kk-RDo"/>
-                                                        <constraint firstAttribute="trailing" secondItem="U31-tk-Iaz" secondAttribute="trailing" id="Czb-mp-IyG"/>
                                                         <constraint firstItem="czD-yI-rfS" firstAttribute="centerX" secondItem="RfX-fm-pab" secondAttribute="centerX" constant="-1.5" id="UD9-VG-FXn"/>
                                                         <constraint firstItem="czD-yI-rfS" firstAttribute="top" secondItem="RfX-fm-pab" secondAttribute="top" constant="25" id="Uif-pw-3FZ"/>
                                                         <constraint firstAttribute="bottom" secondItem="czD-yI-rfS" secondAttribute="bottom" constant="4" id="f2V-Cx-inf"/>
-                                                        <constraint firstItem="U31-tk-Iaz" firstAttribute="leading" secondItem="RfX-fm-pab" secondAttribute="leading" constant="114" id="ikd-N8-5H9"/>
-                                                        <constraint firstAttribute="bottom" secondItem="U31-tk-Iaz" secondAttribute="bottom" id="jRA-Gh-fLO"/>
                                                         <constraint firstItem="HkB-Lz-UTI" firstAttribute="centerX" secondItem="RfX-fm-pab" secondAttribute="centerX" id="jzg-42-Wib"/>
-                                                        <constraint firstItem="U31-tk-Iaz" firstAttribute="top" secondItem="RfX-fm-pab" secondAttribute="top" id="lFh-CC-Xt7"/>
                                                         <constraint firstItem="HkB-Lz-UTI" firstAttribute="top" secondItem="RfX-fm-pab" secondAttribute="top" constant="5" id="zW5-Qt-b5a"/>
                                                     </constraints>
                                                 </view>
@@ -537,6 +541,9 @@
                                                     <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="10"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
+                                                    <variation key="heightClass=regular-widthClass=regular">
+                                                        <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="9"/>
+                                                    </variation>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Xe-dB-bEO">
                                                     <rect key="frame" x="49" y="5" width="19" height="21"/>
@@ -581,6 +588,9 @@
                                                     <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="10"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
+                                                    <variation key="heightClass=regular-widthClass=regular">
+                                                        <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="9"/>
+                                                    </variation>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OrD-lR-sMh">
                                                     <rect key="frame" x="51" y="5" width="19" height="21"/>
@@ -605,19 +615,19 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="grd-yl-fcC">
                                             <rect key="frame" x="230" y="0.0" width="115" height="50"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MBH-5t-t4o">
-                                                    <rect key="frame" x="114" y="0.0" width="1" height="50"/>
-                                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YELLOW CARDS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GKF-OO-fEz">
                                                     <rect key="frame" x="32" y="25" width="83" height="21"/>
                                                     <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="10"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
+                                                    <variation key="heightClass=regular-widthClass=regular">
+                                                        <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="9"/>
+                                                    </variation>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yellowcard" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ggm-N6-Tyw">
                                                     <rect key="frame" x="0.0" y="4" width="30" height="42"/>
                                                     <constraints>
+                                                        <constraint firstAttribute="height" constant="42" id="KUr-7m-90N"/>
                                                         <constraint firstAttribute="width" constant="30" id="ojU-Yg-ANI"/>
                                                     </constraints>
                                                 </imageView>
@@ -630,18 +640,13 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="MBH-5t-t4o" firstAttribute="leading" secondItem="grd-yl-fcC" secondAttribute="leading" constant="114" id="0wv-yl-XdG"/>
-                                                <constraint firstAttribute="bottom" secondItem="MBH-5t-t4o" secondAttribute="bottom" id="34n-sm-Lk8"/>
                                                 <constraint firstItem="GKF-OO-fEz" firstAttribute="top" secondItem="grd-yl-fcC" secondAttribute="top" constant="25" id="8Li-l9-Acz"/>
                                                 <constraint firstItem="GKF-OO-fEz" firstAttribute="leading" secondItem="ggm-N6-Tyw" secondAttribute="trailing" constant="2" id="EdK-5l-0Bv"/>
                                                 <constraint firstItem="GKF-OO-fEz" firstAttribute="leading" secondItem="ggm-N6-Tyw" secondAttribute="trailing" constant="2" id="IFX-eK-d5C"/>
                                                 <constraint firstItem="ggm-N6-Tyw" firstAttribute="top" secondItem="grd-yl-fcC" secondAttribute="top" constant="4" id="Oyq-Kg-RyF"/>
-                                                <constraint firstAttribute="trailing" secondItem="MBH-5t-t4o" secondAttribute="trailing" id="Rmv-op-0UZ"/>
                                                 <constraint firstItem="GKF-OO-fEz" firstAttribute="centerX" secondItem="grd-yl-fcC" secondAttribute="centerX" constant="16" id="U5D-Zc-BhT"/>
                                                 <constraint firstItem="GKF-OO-fEz" firstAttribute="bottom" secondItem="ggm-N6-Tyw" secondAttribute="bottom" id="UOm-Gs-rHd"/>
                                                 <constraint firstItem="ggm-N6-Tyw" firstAttribute="leading" secondItem="grd-yl-fcC" secondAttribute="leading" id="swP-dC-QXk"/>
-                                                <constraint firstItem="MBH-5t-t4o" firstAttribute="top" secondItem="grd-yl-fcC" secondAttribute="top" id="tMs-NL-JIJ"/>
-                                                <constraint firstItem="ggm-N6-Tyw" firstAttribute="centerY" secondItem="MBH-5t-t4o" secondAttribute="centerY" id="zM1-jV-sbt"/>
                                             </constraints>
                                         </view>
                                     </subviews>
@@ -683,16 +688,19 @@
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RTy-0F-aYw">
-                                                    <rect key="frame" x="78" y="5" width="18.5" height="21"/>
+                                                    <rect key="frame" x="78.5" y="5" width="18.5" height="21"/>
                                                     <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="17"/>
                                                     <color key="textColor" red="0.30588235289999999" green="0.79215686269999996" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RAIDS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xrD-uZ-Kda">
-                                                    <rect key="frame" x="74" y="23" width="27" height="21"/>
+                                                    <rect key="frame" x="73.5" y="23" width="27" height="21"/>
                                                     <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="11"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
+                                                    <variation key="heightClass=regular-widthClass=regular">
+                                                        <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="10"/>
+                                                    </variation>
                                                 </label>
                                             </subviews>
                                             <constraints>
@@ -719,13 +727,16 @@
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SUCCESSFUL RAIDS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jvc-1b-MGG">
-                                                    <rect key="frame" x="45" y="25" width="85.5" height="20.5"/>
+                                                    <rect key="frame" x="44.5" y="25" width="85.5" height="20.5"/>
                                                     <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="11"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
+                                                    <variation key="heightClass=regular-widthClass=regular">
+                                                        <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="10"/>
+                                                    </variation>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aaX-mI-gmr">
-                                                    <rect key="frame" x="78" y="5" width="18.5" height="20.5"/>
+                                                    <rect key="frame" x="78.5" y="5" width="18.5" height="20.5"/>
                                                     <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="17"/>
                                                     <color key="textColor" red="0.30588235289999999" green="0.79215686269999996" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -755,16 +766,19 @@
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oJa-7q-XPW">
-                                                    <rect key="frame" x="78" y="5" width="18.5" height="21"/>
+                                                    <rect key="frame" x="78.5" y="5" width="18.5" height="21"/>
                                                     <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="17"/>
                                                     <color key="textColor" red="0.30588235289999999" green="0.79215686269999996" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UNSUCCESSFUL RAIDS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="slE-LS-TMy">
-                                                    <rect key="frame" x="38.5" y="25" width="98.5" height="21"/>
+                                                    <rect key="frame" x="38" y="25" width="98.5" height="21"/>
                                                     <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="11"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
+                                                    <variation key="heightClass=regular-widthClass=regular">
+                                                        <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="10"/>
+                                                    </variation>
                                                 </label>
                                             </subviews>
                                             <constraints>
@@ -791,16 +805,19 @@
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Jg-Dz-ZtM">
-                                                    <rect key="frame" x="78.5" y="5" width="18.5" height="20.5"/>
+                                                    <rect key="frame" x="78" y="5" width="18.5" height="20.5"/>
                                                     <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="17"/>
                                                     <color key="textColor" red="0.30588235289999999" green="0.79215686269999996" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EMPTY RAIDS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cNo-av-XrO">
-                                                    <rect key="frame" x="58.5" y="25" width="57.5" height="20.5"/>
+                                                    <rect key="frame" x="59" y="25" width="57.5" height="20.5"/>
                                                     <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="11"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
+                                                    <variation key="heightClass=regular-widthClass=regular">
+                                                        <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="10"/>
+                                                    </variation>
                                                 </label>
                                             </subviews>
                                             <constraints>
@@ -853,6 +870,9 @@
                                                     <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="11"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
+                                                    <variation key="heightClass=regular-widthClass=regular">
+                                                        <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="10"/>
+                                                    </variation>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dge-XT-5DY">
                                                     <rect key="frame" x="65" y="8" width="42" height="21"/>
@@ -892,6 +912,9 @@
                                                     <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="11"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
+                                                    <variation key="heightClass=regular-widthClass=regular">
+                                                        <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="10"/>
+                                                    </variation>
                                                 </label>
                                             </subviews>
                                             <constraints>
@@ -912,7 +935,7 @@
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mFQ-aE-0TL">
-                                                    <rect key="frame" x="76" y="8" width="18.5" height="21"/>
+                                                    <rect key="frame" x="76.5" y="8" width="18.5" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="gYc-Vz-m1F"/>
                                                     </constraints>
@@ -929,6 +952,9 @@
                                                     <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="11"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
+                                                    <variation key="heightClass=regular-widthClass=regular">
+                                                        <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="10"/>
+                                                    </variation>
                                                 </label>
                                             </subviews>
                                             <constraints>

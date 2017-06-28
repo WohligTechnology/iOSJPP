@@ -24,10 +24,12 @@ class NewsInsideController: UIViewController {
         let insideView = newsDetail(frame: CGRect(x: 8,y: 8,width: self.view.frame.width-16,height: 700));
         self.title = newsTitle
         insideView.newsTitle.text = newsTitle;
-        insideView.newImgae.hnk_setImageFromURL(rest.getImageThumbCache(newsImage))
+        insideView.newImgae.hnk_setImageFromURL(rest.getImageCache(newsImage))
+        print("imageimage\(insideView.newImgae)")
         insideView.newsDate.text = newsDate;
         insideView.newsContent.text = newsContent;
         insideView.frame.size.height = insideView.newsContent.frame.size.height + insideView.newImgae.frame.size.height - 100
+        print("lailamelaila")
         
         self.verticalLayout.addSubview(insideView)
         

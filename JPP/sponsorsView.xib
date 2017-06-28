@@ -8,33 +8,57 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Oswald-Regular.ttf">
+            <string>Oswald-Regular</string>
+        </array>
+    </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="sponsorsView" customModule="JPP" customModuleProvider="target">
-            <connections>
-                <outlet property="sponImg" destination="ZAC-zo-6es" id="KPM-vM-cVr"/>
-            </connections>
-        </placeholder>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="sponsorsView" customModule="JPP" customModuleProvider="target"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="420" height="77"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sponsors" translatesAutoresizingMaskIntoConstraints="NO" id="ZAC-zo-6es">
-                    <rect key="frame" x="0.0" y="0.0" width="420" height="77"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kitting Partner:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TgU-fV-PPd">
+                    <rect key="frame" x="168" y="29" width="85" height="18"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="18" id="VRV-X1-RHc"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dida-logo" translatesAutoresizingMaskIntoConstraints="NO" id="YI5-nE-kl0">
+                    <rect key="frame" x="171" y="47" width="78" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="24" id="hpp-UD-NUF"/>
+                    </constraints>
                 </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SPONSORS:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="71s-xO-4x9">
+                    <rect key="frame" x="174" y="6" width="73.5" height="20.5"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20.5" id="wyG-0x-NA4"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="16"/>
+                    <color key="textColor" red="0.79607843140000001" green="0.12941176469999999" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="0.86274509803921573" green="0.86274509803921573" blue="0.86274509803921573" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="ZAC-zo-6es" secondAttribute="bottom" id="NkZ-Hh-RkM"/>
-                <constraint firstItem="ZAC-zo-6es" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="dLu-PK-7Vb"/>
-                <constraint firstAttribute="trailing" secondItem="ZAC-zo-6es" secondAttribute="trailing" id="sp0-Zp-Bxa"/>
-                <constraint firstItem="ZAC-zo-6es" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="syW-PB-bNH"/>
+                <constraint firstItem="71s-xO-4x9" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="6" id="7aI-oi-SWR"/>
+                <constraint firstItem="TgU-fV-PPd" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Bxu-cs-zoc"/>
+                <constraint firstItem="YI5-nE-kl0" firstAttribute="top" secondItem="TgU-fV-PPd" secondAttribute="bottom" id="dZN-mp-Lkn"/>
+                <constraint firstItem="TgU-fV-PPd" firstAttribute="top" secondItem="71s-xO-4x9" secondAttribute="bottom" constant="2.5" id="db2-ad-8LP"/>
+                <constraint firstItem="YI5-nE-kl0" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="mgU-Va-Dy9"/>
+                <constraint firstItem="71s-xO-4x9" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="rlF-W6-FPv"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="236" y="161.5"/>
+            <point key="canvasLocation" x="224" y="162.5"/>
         </view>
     </objects>
     <resources>
-        <image name="sponsors" width="800" height="256"/>
+        <image name="dida-logo" width="78" height="35"/>
     </resources>
 </document>

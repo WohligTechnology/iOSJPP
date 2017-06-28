@@ -15,7 +15,7 @@
             <rect key="frame" x="0.0" y="0.0" width="392" height="221"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jpptv_section" translatesAutoresizingMaskIntoConstraints="NO" id="A0K-v6-ho0">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="meetPanthers" translatesAutoresizingMaskIntoConstraints="NO" id="A0K-v6-ho0">
                     <rect key="frame" x="0.0" y="0.0" width="392" height="221"/>
                 </imageView>
             </subviews>
@@ -32,6 +32,6 @@
         </view>
     </objects>
     <resources>
-        <image name="jpptv_section" width="1178" height="663"/>
+        <image name="meetPanthers" width="1178" height="607"/>
     </resources>
 </document>

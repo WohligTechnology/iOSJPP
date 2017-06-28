@@ -25,13 +25,16 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="100"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SIGN UP AND BECOME PART OF THE PANTHER FAMILY. EXCLUSIVE OFFERS AND LOTS MORE!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="11Y-5M-rDm">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="smallStrip" translatesAutoresizingMaskIntoConstraints="NO" id="4Kx-7F-uyw">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="100"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SIGN UP AND STAND A CHANCE TO WIN JPP MERCHANDISE!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="11Y-5M-rDm">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="50"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="Y6R-RY-Xa1"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="14"/>
-                    <color key="textColor" red="0.84313725490196079" green="0.21568627450980393" blue="0.52156862745098043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EtG-eQ-C2m">
@@ -50,11 +53,15 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="EtG-eQ-C2m" secondAttribute="bottom" constant="10" id="3fR-y6-e19"/>
+                <constraint firstItem="4Kx-7F-uyw" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="7qT-Gh-RZW"/>
                 <constraint firstItem="EtG-eQ-C2m" firstAttribute="centerX" secondItem="11Y-5M-rDm" secondAttribute="centerX" id="DdI-PS-VKs"/>
                 <constraint firstItem="11Y-5M-rDm" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Dw8-hu-DZc"/>
                 <constraint firstItem="EtG-eQ-C2m" firstAttribute="top" secondItem="11Y-5M-rDm" secondAttribute="bottom" constant="10" id="M0T-3a-BMA"/>
+                <constraint firstItem="4Kx-7F-uyw" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="NmY-RH-zvQ"/>
+                <constraint firstAttribute="trailing" secondItem="4Kx-7F-uyw" secondAttribute="trailing" id="dQs-k6-nAh"/>
                 <constraint firstItem="EtG-eQ-C2m" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="50" id="eoC-ar-CKt"/>
                 <constraint firstAttribute="trailing" secondItem="11Y-5M-rDm" secondAttribute="trailing" id="fLS-Fj-2Y1"/>
+                <constraint firstAttribute="bottom" secondItem="4Kx-7F-uyw" secondAttribute="bottom" id="trq-Mi-pED"/>
                 <constraint firstItem="11Y-5M-rDm" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="yNT-OZ-WmL"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
@@ -68,4 +75,7 @@
             <point key="canvasLocation" x="429" y="174"/>
         </view>
     </objects>
+    <resources>
+        <image name="smallStrip" width="1178" height="241"/>
+    </resources>
 </document>

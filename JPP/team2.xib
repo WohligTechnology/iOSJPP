@@ -20,6 +20,9 @@
             <rect key="frame" x="0.0" y="0.0" width="300" height="34"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="smallStrip" translatesAutoresizingMaskIntoConstraints="NO" id="LI5-E8-Uxi">
+                    <rect key="frame" x="0.0" y="0.0" width="300" height="34"/>
+                </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trapezium" translatesAutoresizingMaskIntoConstraints="NO" id="2n4-OX-Xry">
                     <rect key="frame" x="0.0" y="0.0" width="300" height="34"/>
                     <constraints>
@@ -39,9 +42,13 @@
             <color key="backgroundColor" red="0.30588235294117649" green="0.792156862745098" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="8El-aH-ENo" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="9ee-mq-SuX"/>
+                <constraint firstAttribute="trailing" secondItem="LI5-E8-Uxi" secondAttribute="trailing" id="D7H-u9-zWI"/>
+                <constraint firstItem="LI5-E8-Uxi" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="QjQ-ms-aXs"/>
                 <constraint firstItem="2n4-OX-Xry" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Uly-R0-jY1"/>
+                <constraint firstAttribute="bottom" secondItem="LI5-E8-Uxi" secondAttribute="bottom" id="Y7W-YQ-zRf"/>
                 <constraint firstAttribute="trailing" secondItem="8El-aH-ENo" secondAttribute="trailing" id="amD-AI-tHo"/>
                 <constraint firstItem="2n4-OX-Xry" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="dPq-d3-rx0"/>
+                <constraint firstItem="LI5-E8-Uxi" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="kxn-ZY-yxc"/>
                 <constraint firstItem="8El-aH-ENo" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="qHi-C4-BQa"/>
                 <constraint firstAttribute="trailing" secondItem="2n4-OX-Xry" secondAttribute="trailing" id="viA-IF-Mnm"/>
             </constraints>
@@ -49,6 +56,7 @@
         </view>
     </objects>
     <resources>
+        <image name="smallStrip" width="1178" height="241"/>
         <image name="trapezium" width="444" height="98"/>
     </resources>
 </document>

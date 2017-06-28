@@ -12,15 +12,15 @@ class MerchandiseViewController: UIViewController {
 
     @IBOutlet weak var merchandiseKit: UIImageView!
     @IBOutlet weak var merchandiseText: UIImageView!
-    @IBOutlet weak var merchandiseButton: UIButton!
+//    @IBOutlet weak var merchandiseButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setNavigationBarItemText("MERCHANDISE")
         
-        merchandiseKit.layer.zPosition = 10000
+//        merchandiseKit.layer.zPosition = 10000
         merchandiseText.layer.zPosition = 10000
-        merchandiseButton.layer.zPosition = 10000
+//        merchandiseButton.layer.zPosition = 10000
         
         // Do any additional setup after loading the view.
     }
