@@ -66,21 +66,6 @@
 		36F9C1831C5616B1003D02AB /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F9C1821C5616B1003D02AB /* Layout.swift */; };
 		36F9C1891C561722003D02AB /* schedule.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36F9C1881C561722003D02AB /* schedule.xib */; };
 		36F9C18C1C561759003D02AB /* schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F9C18B1C561759003D02AB /* schedule.swift */; };
-		36F9C19D1C5641BB003D02AB /* Oswald-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 36F9C18E1C562837003D02AB /* Oswald-Bold.ttf */; };
-		36F9C19E1C5641BB003D02AB /* Oswald-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 36F9C18F1C562837003D02AB /* Oswald-Light.ttf */; };
-		36F9C19F1C5641BB003D02AB /* Oswald-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 36F9C1901C562837003D02AB /* Oswald-Regular.ttf */; };
-		36F9C1A01C5641BB003D02AB /* voyagefant_0.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 36F9C1911C562837003D02AB /* voyagefant_0.ttf */; };
-		36F9C1A11C5641BB003D02AB /* voyagefant3d.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 36F9C1921C562837003D02AB /* voyagefant3d.ttf */; };
-		36F9C1A21C5641BB003D02AB /* voyagefantacad.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 36F9C1931C562837003D02AB /* voyagefantacad.ttf */; };
-		36F9C1A31C5641BB003D02AB /* voyagefantcond.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 36F9C1941C562837003D02AB /* voyagefantcond.ttf */; };
-		36F9C1A41C5641BB003D02AB /* voyagefantexpand.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 36F9C1951C562837003D02AB /* voyagefantexpand.ttf */; };
-		36F9C1A51C5641BB003D02AB /* voyagefantgchrome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 36F9C1961C562837003D02AB /* voyagefantgchrome.ttf */; };
-		36F9C1A61C5641BB003D02AB /* voyagefantgrad.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 36F9C1971C562837003D02AB /* voyagefantgrad.ttf */; };
-		36F9C1A71C5641BB003D02AB /* voyagefanthalf.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 36F9C1981C562837003D02AB /* voyagefanthalf.ttf */; };
-		36F9C1A81C5641BB003D02AB /* voyagefanthplat.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 36F9C1991C562837003D02AB /* voyagefanthplat.ttf */; };
-		36F9C1A91C5641BB003D02AB /* voyagefantlaser.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 36F9C19A1C562837003D02AB /* voyagefantlaser.ttf */; };
-		36F9C1AA1C5641BB003D02AB /* voyagefantstraight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 36F9C19B1C562837003D02AB /* voyagefantstraight.ttf */; };
-		36F9C1AB1C5641BB003D02AB /* voyagefantstraightleft.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 36F9C19C1C562837003D02AB /* voyagefantstraightleft.ttf */; };
 		36F9C1AE1C5643DF003D02AB /* news.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F9C1AD1C5643DF003D02AB /* news.swift */; };
 		36F9C1B01C5643E8003D02AB /* news.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36F9C1AF1C5643E8003D02AB /* news.xib */; };
 		36F9C1B31C564D14003D02AB /* table.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36F9C1B21C564D14003D02AB /* table.xib */; };
@@ -107,6 +92,25 @@
 		8403B8F81EEFC7E00024BF1A /* dreamwalker.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8403B8F71EEFC7E00024BF1A /* dreamwalker.ttf */; };
 		843A0AF71EFBAE6F00D0F5DC /* bgImage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 843A0AF61EFBAE6F00D0F5DC /* bgImage.xib */; };
 		843A0AFD1EFBAF7C00D0F5DC /* bgImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843A0AFC1EFBAF7C00D0F5DC /* bgImage.swift */; };
+		84CC3FF31F055964003F9643 /* kenyanbolditalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84CC3FF21F055964003F9643 /* kenyanbolditalic.ttf */; };
+		84CC3FF51F05596C003F9643 /* kenyanbold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84CC3FF41F05596C003F9643 /* kenyanbold.ttf */; };
+		84CC3FF71F055971003F9643 /* kenyanregular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84CC3FF61F055971003F9643 /* kenyanregular.ttf */; };
+		84CC3FF91F055977003F9643 /* kenyanregularitalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84CC3FF81F055977003F9643 /* kenyanregularitalic.ttf */; };
+		84CC3FFB1F05597B003F9643 /* Oswald-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84CC3FFA1F05597B003F9643 /* Oswald-Bold.ttf */; };
+		84CC3FFD1F055982003F9643 /* Oswald-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84CC3FFC1F055982003F9643 /* Oswald-Light.ttf */; };
+		84CC3FFF1F055987003F9643 /* Oswald-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84CC3FFE1F055987003F9643 /* Oswald-Regular.ttf */; };
+		84CC40011F05598F003F9643 /* voyagefant_0.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84CC40001F05598F003F9643 /* voyagefant_0.ttf */; };
+		84CC40031F055994003F9643 /* voyagefant3d.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84CC40021F055994003F9643 /* voyagefant3d.ttf */; };
+		84CC40051F055999003F9643 /* voyagefantacad.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84CC40041F055999003F9643 /* voyagefantacad.ttf */; };
+		84CC40071F05599D003F9643 /* voyagefantcond.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84CC40061F05599D003F9643 /* voyagefantcond.ttf */; };
+		84CC40091F0559A1003F9643 /* voyagefantexpand.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84CC40081F0559A1003F9643 /* voyagefantexpand.ttf */; };
+		84CC400B1F0559A6003F9643 /* voyagefantgchrome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84CC400A1F0559A6003F9643 /* voyagefantgchrome.ttf */; };
+		84CC400D1F0559AA003F9643 /* voyagefantgrad.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84CC400C1F0559AA003F9643 /* voyagefantgrad.ttf */; };
+		84CC400F1F0559AE003F9643 /* voyagefanthalf.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84CC400E1F0559AE003F9643 /* voyagefanthalf.ttf */; };
+		84CC40111F0559B4003F9643 /* voyagefanthplat.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84CC40101F0559B4003F9643 /* voyagefanthplat.ttf */; };
+		84CC40131F0559B9003F9643 /* voyagefantlaser.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84CC40121F0559B9003F9643 /* voyagefantlaser.ttf */; };
+		84CC40151F0559BD003F9643 /* voyagefantstraight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84CC40141F0559BD003F9643 /* voyagefantstraight.ttf */; };
+		84CC40171F0559C1003F9643 /* voyagefantstraightleft.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84CC40161F0559C1003F9643 /* voyagefantstraightleft.ttf */; };
 		84DAD5981EEE9D8A001A4891 /* playersInside.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAD5971EEE9D8A001A4891 /* playersInside.swift */; };
 		84DAD59A1EEE9F28001A4891 /* PlayerInsideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAD5991EEE9F28001A4891 /* PlayerInsideViewController.swift */; };
 		84F2945F1EEE652F009D4295 /* playersInside.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84F2945E1EEE652F009D4295 /* playersInside.xib */; };
@@ -118,10 +122,6 @@
 		C28B79F31C58DF47001C4474 /* newsDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28B79F21C58DF47001C4474 /* newsDetail.swift */; };
 		C29C75941C5A38BF0091FF6E /* TeamPlayers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29C75931C5A38BF0091FF6E /* TeamPlayers.swift */; };
 		C2F0A10C1C69AFE400345A36 /* doneMatch.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2F0A10B1C69AFE400345A36 /* doneMatch.xib */; };
-		C2F0A1111C69B78500345A36 /* kenyanbold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C2F0A10D1C69B78500345A36 /* kenyanbold.ttf */; };
-		C2F0A1121C69B78500345A36 /* kenyanbolditalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C2F0A10E1C69B78500345A36 /* kenyanbolditalic.ttf */; };
-		C2F0A1131C69B78500345A36 /* kenyanregular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C2F0A10F1C69B78500345A36 /* kenyanregular.ttf */; };
-		C2F0A1141C69B78500345A36 /* kenyanregularitalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C2F0A1101C69B78500345A36 /* kenyanregularitalic.ttf */; };
 		C2F0A1161C69B8BB00345A36 /* doneMatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F0A1151C69B8BB00345A36 /* doneMatch.swift */; };
 		C2FF852B1C58D05000F2CFED /* singleThumbnailImage.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2FF852A1C58D05000F2CFED /* singleThumbnailImage.xib */; };
 		C2FF852D1C58D17A00F2CFED /* singleThumbnailImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FF852C1C58D17A00F2CFED /* singleThumbnailImage.swift */; };
@@ -192,21 +192,6 @@
 		36F9C1821C5616B1003D02AB /* Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
 		36F9C1881C561722003D02AB /* schedule.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = schedule.xib; sourceTree = "<group>"; };
 		36F9C18B1C561759003D02AB /* schedule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = schedule.swift; sourceTree = "<group>"; };
-		36F9C18E1C562837003D02AB /* Oswald-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Bold.ttf"; sourceTree = "<group>"; };
-		36F9C18F1C562837003D02AB /* Oswald-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Light.ttf"; sourceTree = "<group>"; };
-		36F9C1901C562837003D02AB /* Oswald-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Regular.ttf"; sourceTree = "<group>"; };
-		36F9C1911C562837003D02AB /* voyagefant_0.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = voyagefant_0.ttf; sourceTree = "<group>"; };
-		36F9C1921C562837003D02AB /* voyagefant3d.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = voyagefant3d.ttf; sourceTree = "<group>"; };
-		36F9C1931C562837003D02AB /* voyagefantacad.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = voyagefantacad.ttf; sourceTree = "<group>"; };
-		36F9C1941C562837003D02AB /* voyagefantcond.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = voyagefantcond.ttf; sourceTree = "<group>"; };
-		36F9C1951C562837003D02AB /* voyagefantexpand.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = voyagefantexpand.ttf; sourceTree = "<group>"; };
-		36F9C1961C562837003D02AB /* voyagefantgchrome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = voyagefantgchrome.ttf; sourceTree = "<group>"; };
-		36F9C1971C562837003D02AB /* voyagefantgrad.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = voyagefantgrad.ttf; sourceTree = "<group>"; };
-		36F9C1981C562837003D02AB /* voyagefanthalf.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = voyagefanthalf.ttf; sourceTree = "<group>"; };
-		36F9C1991C562837003D02AB /* voyagefanthplat.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = voyagefanthplat.ttf; sourceTree = "<group>"; };
-		36F9C19A1C562837003D02AB /* voyagefantlaser.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = voyagefantlaser.ttf; sourceTree = "<group>"; };
-		36F9C19B1C562837003D02AB /* voyagefantstraight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = voyagefantstraight.ttf; sourceTree = "<group>"; };
-		36F9C19C1C562837003D02AB /* voyagefantstraightleft.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = voyagefantstraightleft.ttf; sourceTree = "<group>"; };
 		36F9C1AD1C5643DF003D02AB /* news.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = news.swift; sourceTree = "<group>"; };
 		36F9C1AF1C5643E8003D02AB /* news.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = news.xib; sourceTree = "<group>"; };
 		36F9C1B21C564D14003D02AB /* table.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = table.xib; sourceTree = "<group>"; };
@@ -236,6 +221,25 @@
 		8403B8F71EEFC7E00024BF1A /* dreamwalker.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = dreamwalker.ttf; sourceTree = "<group>"; };
 		843A0AF61EFBAE6F00D0F5DC /* bgImage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = bgImage.xib; sourceTree = "<group>"; };
 		843A0AFC1EFBAF7C00D0F5DC /* bgImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bgImage.swift; sourceTree = "<group>"; };
+		84CC3FF21F055964003F9643 /* kenyanbolditalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = kenyanbolditalic.ttf; sourceTree = "<group>"; };
+		84CC3FF41F05596C003F9643 /* kenyanbold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = kenyanbold.ttf; sourceTree = "<group>"; };
+		84CC3FF61F055971003F9643 /* kenyanregular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = kenyanregular.ttf; sourceTree = "<group>"; };
+		84CC3FF81F055977003F9643 /* kenyanregularitalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = kenyanregularitalic.ttf; sourceTree = "<group>"; };
+		84CC3FFA1F05597B003F9643 /* Oswald-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Bold.ttf"; sourceTree = "<group>"; };
+		84CC3FFC1F055982003F9643 /* Oswald-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Light.ttf"; sourceTree = "<group>"; };
+		84CC3FFE1F055987003F9643 /* Oswald-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Regular.ttf"; sourceTree = "<group>"; };
+		84CC40001F05598F003F9643 /* voyagefant_0.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = voyagefant_0.ttf; sourceTree = "<group>"; };
+		84CC40021F055994003F9643 /* voyagefant3d.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = voyagefant3d.ttf; sourceTree = "<group>"; };
+		84CC40041F055999003F9643 /* voyagefantacad.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = voyagefantacad.ttf; sourceTree = "<group>"; };
+		84CC40061F05599D003F9643 /* voyagefantcond.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = voyagefantcond.ttf; sourceTree = "<group>"; };
+		84CC40081F0559A1003F9643 /* voyagefantexpand.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = voyagefantexpand.ttf; sourceTree = "<group>"; };
+		84CC400A1F0559A6003F9643 /* voyagefantgchrome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = voyagefantgchrome.ttf; sourceTree = "<group>"; };
+		84CC400C1F0559AA003F9643 /* voyagefantgrad.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = voyagefantgrad.ttf; sourceTree = "<group>"; };
+		84CC400E1F0559AE003F9643 /* voyagefanthalf.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = voyagefanthalf.ttf; sourceTree = "<group>"; };
+		84CC40101F0559B4003F9643 /* voyagefanthplat.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = voyagefanthplat.ttf; sourceTree = "<group>"; };
+		84CC40121F0559B9003F9643 /* voyagefantlaser.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = voyagefantlaser.ttf; sourceTree = "<group>"; };
+		84CC40141F0559BD003F9643 /* voyagefantstraight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = voyagefantstraight.ttf; sourceTree = "<group>"; };
+		84CC40161F0559C1003F9643 /* voyagefantstraightleft.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = voyagefantstraightleft.ttf; sourceTree = "<group>"; };
 		84DAD5971EEE9D8A001A4891 /* playersInside.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = playersInside.swift; sourceTree = "<group>"; };
 		84DAD5991EEE9F28001A4891 /* PlayerInsideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerInsideViewController.swift; sourceTree = "<group>"; };
 		84F2945E1EEE652F009D4295 /* playersInside.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = playersInside.xib; sourceTree = "<group>"; };
@@ -248,10 +252,6 @@
 		C28B79F21C58DF47001C4474 /* newsDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = newsDetail.swift; sourceTree = "<group>"; };
 		C29C75931C5A38BF0091FF6E /* TeamPlayers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamPlayers.swift; sourceTree = "<group>"; };
 		C2F0A10B1C69AFE400345A36 /* doneMatch.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = doneMatch.xib; sourceTree = "<group>"; };
-		C2F0A10D1C69B78500345A36 /* kenyanbold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = kenyanbold.ttf; sourceTree = "<group>"; };
-		C2F0A10E1C69B78500345A36 /* kenyanbolditalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = kenyanbolditalic.ttf; sourceTree = "<group>"; };
-		C2F0A10F1C69B78500345A36 /* kenyanregular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = kenyanregular.ttf; sourceTree = "<group>"; };
-		C2F0A1101C69B78500345A36 /* kenyanregularitalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = kenyanregularitalic.ttf; sourceTree = "<group>"; };
 		C2F0A1151C69B8BB00345A36 /* doneMatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = doneMatch.swift; sourceTree = "<group>"; };
 		C2FF852A1C58D05000F2CFED /* singleThumbnailImage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = singleThumbnailImage.xib; sourceTree = "<group>"; };
 		C2FF852C1C58D17A00F2CFED /* singleThumbnailImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = singleThumbnailImage.swift; sourceTree = "<group>"; };
@@ -513,26 +513,26 @@
 		36F9C18D1C56282B003D02AB /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				36F9C18E1C562837003D02AB /* Oswald-Bold.ttf */,
-				36F9C18F1C562837003D02AB /* Oswald-Light.ttf */,
-				36F9C1901C562837003D02AB /* Oswald-Regular.ttf */,
+				84CC3FF21F055964003F9643 /* kenyanbolditalic.ttf */,
+				84CC3FF81F055977003F9643 /* kenyanregularitalic.ttf */,
+				84CC40021F055994003F9643 /* voyagefant3d.ttf */,
+				84CC40001F05598F003F9643 /* voyagefant_0.ttf */,
+				84CC400C1F0559AA003F9643 /* voyagefantgrad.ttf */,
+				84CC40101F0559B4003F9643 /* voyagefanthplat.ttf */,
+				84CC40081F0559A1003F9643 /* voyagefantexpand.ttf */,
+				84CC40141F0559BD003F9643 /* voyagefantstraight.ttf */,
+				84CC40161F0559C1003F9643 /* voyagefantstraightleft.ttf */,
+				84CC400A1F0559A6003F9643 /* voyagefantgchrome.ttf */,
+				84CC400E1F0559AE003F9643 /* voyagefanthalf.ttf */,
+				84CC3FF41F05596C003F9643 /* kenyanbold.ttf */,
+				84CC40121F0559B9003F9643 /* voyagefantlaser.ttf */,
+				84CC40061F05599D003F9643 /* voyagefantcond.ttf */,
+				84CC3FFE1F055987003F9643 /* Oswald-Regular.ttf */,
+				84CC3FFA1F05597B003F9643 /* Oswald-Bold.ttf */,
+				84CC40041F055999003F9643 /* voyagefantacad.ttf */,
+				84CC3FF61F055971003F9643 /* kenyanregular.ttf */,
+				84CC3FFC1F055982003F9643 /* Oswald-Light.ttf */,
 				8403B8F71EEFC7E00024BF1A /* dreamwalker.ttf */,
-				36F9C1911C562837003D02AB /* voyagefant_0.ttf */,
-				36F9C1921C562837003D02AB /* voyagefant3d.ttf */,
-				36F9C1931C562837003D02AB /* voyagefantacad.ttf */,
-				C2F0A10D1C69B78500345A36 /* kenyanbold.ttf */,
-				C2F0A10E1C69B78500345A36 /* kenyanbolditalic.ttf */,
-				C2F0A10F1C69B78500345A36 /* kenyanregular.ttf */,
-				C2F0A1101C69B78500345A36 /* kenyanregularitalic.ttf */,
-				36F9C1941C562837003D02AB /* voyagefantcond.ttf */,
-				36F9C1951C562837003D02AB /* voyagefantexpand.ttf */,
-				36F9C1961C562837003D02AB /* voyagefantgchrome.ttf */,
-				36F9C1971C562837003D02AB /* voyagefantgrad.ttf */,
-				36F9C1981C562837003D02AB /* voyagefanthalf.ttf */,
-				36F9C1991C562837003D02AB /* voyagefanthplat.ttf */,
-				36F9C19A1C562837003D02AB /* voyagefantlaser.ttf */,
-				36F9C19B1C562837003D02AB /* voyagefantstraight.ttf */,
-				36F9C19C1C562837003D02AB /* voyagefantstraightleft.ttf */,
 			);
 			name = Fonts;
 			sourceTree = "<group>";
@@ -799,57 +799,57 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84CC3FF31F055964003F9643 /* kenyanbolditalic.ttf in Resources */,
+				84CC3FFD1F055982003F9643 /* Oswald-Light.ttf in Resources */,
 				84F2945F1EEE652F009D4295 /* playersInside.xib in Resources */,
 				3AA5E83C1D2A3B4900AEDD27 /* matchupdate.xib in Resources */,
-				36F9C19D1C5641BB003D02AB /* Oswald-Bold.ttf in Resources */,
 				3A3357521CF6E54200F074ED /* signupSection.xib in Resources */,
-				36F9C19E1C5641BB003D02AB /* Oswald-Light.ttf in Resources */,
+				84CC400F1F0559AE003F9643 /* voyagefanthalf.ttf in Resources */,
+				84CC3FFB1F05597B003F9643 /* Oswald-Bold.ttf in Resources */,
 				3A33574B1CF6D0B400F074ED /* jpptv.xib in Resources */,
-				36F9C19F1C5641BB003D02AB /* Oswald-Regular.ttf in Resources */,
 				C23892D81C58C6EE00CA4DC1 /* thumbnailImage.xib in Resources */,
-				36F9C1A01C5641BB003D02AB /* voyagefant_0.ttf in Resources */,
 				C2F0A10C1C69AFE400345A36 /* doneMatch.xib in Resources */,
-				36F9C1A11C5641BB003D02AB /* voyagefant3d.ttf in Resources */,
 				366F19DE1C58F55800321669 /* bookTicket.xib in Resources */,
+				84CC40071F05599D003F9643 /* voyagefantcond.ttf in Resources */,
 				36F2CE941C565DD600D0D2D6 /* team.xib in Resources */,
+				84CC3FF71F055971003F9643 /* kenyanregular.ttf in Resources */,
 				78238FE71C57AC170067E7D5 /* trapezium.xib in Resources */,
-				36F9C1A21C5641BB003D02AB /* voyagefantacad.ttf in Resources */,
-				36F9C1A31C5641BB003D02AB /* voyagefantcond.ttf in Resources */,
+				84CC40051F055999003F9643 /* voyagefantacad.ttf in Resources */,
+				84CC3FFF1F055987003F9643 /* Oswald-Regular.ttf in Resources */,
 				363DE0E61D34CF3000906E51 /* sponsorsView.xib in Resources */,
-				36F9C1A41C5641BB003D02AB /* voyagefantexpand.ttf in Resources */,
-				C2F0A1131C69B78500345A36 /* kenyanregular.ttf in Resources */,
-				36F9C1A51C5641BB003D02AB /* voyagefantgchrome.ttf in Resources */,
 				36F2CE9B1C573A2300D0D2D6 /* media.xib in Resources */,
 				8403B8F81EEFC7E00024BF1A /* dreamwalker.ttf in Resources */,
-				C2F0A1111C69B78500345A36 /* kenyanbold.ttf in Resources */,
 				3A57CEDB1CFC454E004D612C /* seasonOpener.xib in Resources */,
 				36F2CE8A1C56561300D0D2D6 /* player.xib in Resources */,
+				84CC3FF51F05596C003F9643 /* kenyanbold.ttf in Resources */,
+				84CC40031F055994003F9643 /* voyagefant3d.ttf in Resources */,
+				84CC3FF91F055977003F9643 /* kenyanregularitalic.ttf in Resources */,
 				360A51031C579ACB001F7E40 /* playerInside.xib in Resources */,
 				36F9C1BB1C5653EF003D02AB /* matches.xib in Resources */,
-				36F9C1A61C5641BB003D02AB /* voyagefantgrad.ttf in Resources */,
 				36F9C1B01C5643E8003D02AB /* news.xib in Resources */,
+				84CC40111F0559B4003F9643 /* voyagefanthplat.ttf in Resources */,
 				C2FF852B1C58D05000F2CFED /* singleThumbnailImage.xib in Resources */,
 				C28B79F11C58DAC2001C4474 /* newsDetail.xib in Resources */,
+				84CC40131F0559B9003F9643 /* voyagefantlaser.ttf in Resources */,
 				362A175B1C58AA3C00B11F22 /* team2.xib in Resources */,
-				36F9C1A71C5641BB003D02AB /* voyagefanthalf.ttf in Resources */,
 				3685BD421C5A163000BC44D0 /* upcoming.xib in Resources */,
-				36F9C1A81C5641BB003D02AB /* voyagefanthplat.ttf in Resources */,
-				36F9C1A91C5641BB003D02AB /* voyagefantlaser.ttf in Resources */,
-				36F9C1AA1C5641BB003D02AB /* voyagefantstraight.ttf in Resources */,
-				C2F0A1121C69B78500345A36 /* kenyanbolditalic.ttf in Resources */,
-				36F9C1AB1C5641BB003D02AB /* voyagefantstraightleft.ttf in Resources */,
 				78238FE41C57A7890067E7D5 /* about.xib in Resources */,
+				84CC40091F0559A1003F9643 /* voyagefantexpand.ttf in Resources */,
 				36B500741D4352DA00C63DAD /* semiFinal.xib in Resources */,
 				843A0AF71EFBAE6F00D0F5DC /* bgImage.xib in Resources */,
+				84CC40011F05598F003F9643 /* voyagefant_0.ttf in Resources */,
 				36F2CE911C56585100D0D2D6 /* galleryAlbum.xib in Resources */,
 				36B957861C5A809500AEC0D3 /* loading.xib in Resources */,
+				84CC400D1F0559AA003F9643 /* voyagefantgrad.ttf in Resources */,
 				36F9C16A1C55EDBF003D02AB /* LaunchScreen.storyboard in Resources */,
 				36F9C1B31C564D14003D02AB /* table.xib in Resources */,
 				36F9C1671C55EDBF003D02AB /* Assets.xcassets in Resources */,
+				84CC400B1F0559A6003F9643 /* voyagefantgchrome.ttf in Resources */,
 				36F9C1891C561722003D02AB /* schedule.xib in Resources */,
+				84CC40171F0559C1003F9643 /* voyagefantstraightleft.ttf in Resources */,
 				36F9C1651C55EDBF003D02AB /* Main.storyboard in Resources */,
+				84CC40151F0559BD003F9643 /* voyagefantstraight.ttf in Resources */,
 				7809A3C41C64BFB900562E6A /* fanCorner.xib in Resources */,
-				C2F0A1141C69B78500345A36 /* kenyanregularitalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

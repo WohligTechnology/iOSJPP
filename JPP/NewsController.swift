@@ -27,7 +27,7 @@ class NewsController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func newsLoaded (_ json:JSON) {
      
-        print(json)
+        print("hellojson\(json)" )
         if(json == 1)
         {
             let alertController = UIAlertController(title: "No Connection", message:

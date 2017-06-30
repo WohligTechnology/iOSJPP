@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
@@ -13,9 +12,6 @@
     <customFonts key="customFonts">
         <array key="Oswald-Regular.ttf">
             <string>Oswald-Regular</string>
-        </array>
-        <array key="kenyanregular.ttf">
-            <string>KenyanCoffeeRg-Regular</string>
         </array>
     </customFonts>
     <objects>
@@ -103,15 +99,23 @@
                     <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="24"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="38" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hjz-XK-v9g">
-                    <rect key="frame" x="60" y="205" width="36" height="54"/>
-                    <fontDescription key="fontDescription" name="KenyanCoffeeRg-Regular" family="Kenyan Coffee" pointSize="45"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="38" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hjz-XK-v9g">
+                    <rect key="frame" x="60" y="212" width="41" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="41" id="Gu6-3o-2bo"/>
+                        <constraint firstAttribute="height" constant="40" id="awh-Dd-5RW"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="40"/>
                     <color key="textColor" red="0.90588235294117647" green="0.17647058823529413" blue="0.53725490196078429" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wbm-AH-vvD">
-                    <rect key="frame" x="329" y="205" width="37" height="54"/>
-                    <fontDescription key="fontDescription" name="KenyanCoffeeRg-Regular" family="Kenyan Coffee" pointSize="45"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wbm-AH-vvD">
+                    <rect key="frame" x="326" y="212" width="41" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="Gty-vR-zil"/>
+                        <constraint firstAttribute="width" constant="41" id="uyv-gQ-gCm"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="40"/>
                     <color key="textColor" red="0.066666666666666666" green="0.42745098039215684" blue="0.19607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -134,7 +138,7 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="4mF-6u-zKB" firstAttribute="leading" secondItem="khX-8E-ag1" secondAttribute="leading" id="1I2-9p-uuM"/>
-                <constraint firstAttribute="trailing" secondItem="wbm-AH-vvD" secondAttribute="trailing" constant="60" id="1Pf-ET-Up8"/>
+                <constraint firstAttribute="trailing" secondItem="wbm-AH-vvD" secondAttribute="trailing" constant="59" id="1Pf-ET-Up8"/>
                 <constraint firstAttribute="bottom" secondItem="RUm-Sh-zgM" secondAttribute="bottom" constant="16" id="2x2-RD-bcN"/>
                 <constraint firstAttribute="trailing" secondItem="x1x-3J-NsG" secondAttribute="trailing" id="4V7-7R-7di"/>
                 <constraint firstItem="nmh-c7-KlS" firstAttribute="top" secondItem="khX-8E-ag1" secondAttribute="top" constant="40" id="5YM-r4-7k9"/>
@@ -150,7 +154,7 @@
                 <constraint firstAttribute="bottom" secondItem="4mF-6u-zKB" secondAttribute="bottom" id="KcE-Zg-Uzp"/>
                 <constraint firstAttribute="trailing" secondItem="WrK-bJ-xNF" secondAttribute="trailing" id="Ld0-yy-lMy"/>
                 <constraint firstItem="RUm-Sh-zgM" firstAttribute="top" secondItem="W61-PR-OkZ" secondAttribute="top" id="NK4-Ry-gVc"/>
-                <constraint firstItem="wbm-AH-vvD" firstAttribute="top" secondItem="fOQ-Jw-jIu" secondAttribute="bottom" constant="15" id="Ps9-eF-znT"/>
+                <constraint firstItem="wbm-AH-vvD" firstAttribute="top" secondItem="fOQ-Jw-jIu" secondAttribute="bottom" constant="22" id="Ps9-eF-znT"/>
                 <constraint firstItem="RUm-Sh-zgM" firstAttribute="baseline" secondItem="W61-PR-OkZ" secondAttribute="firstBaseline" id="Py1-cn-o6o"/>
                 <constraint firstItem="S5G-6W-2av" firstAttribute="leading" secondItem="khX-8E-ag1" secondAttribute="leading" id="THI-sk-dKR"/>
                 <constraint firstItem="WrK-bJ-xNF" firstAttribute="leading" secondItem="khX-8E-ag1" secondAttribute="leading" id="TiD-iz-R6O"/>
@@ -159,7 +163,7 @@
                 <constraint firstAttribute="trailing" secondItem="fOQ-Jw-jIu" secondAttribute="trailing" constant="8" id="cYX-Wd-BV8"/>
                 <constraint firstAttribute="trailing" secondItem="4mF-6u-zKB" secondAttribute="trailing" id="czE-vb-9bN"/>
                 <constraint firstItem="Hjz-XK-v9g" firstAttribute="leading" secondItem="khX-8E-ag1" secondAttribute="leading" constant="60" id="dAB-ei-5QW"/>
-                <constraint firstItem="Hjz-XK-v9g" firstAttribute="top" secondItem="nmh-c7-KlS" secondAttribute="bottom" constant="15" id="e7P-ni-deW"/>
+                <constraint firstItem="Hjz-XK-v9g" firstAttribute="top" secondItem="nmh-c7-KlS" secondAttribute="bottom" constant="22" id="e7P-ni-deW"/>
                 <constraint firstItem="WrK-bJ-xNF" firstAttribute="top" secondItem="fOQ-Jw-jIu" secondAttribute="bottom" constant="22" id="nFR-zz-nMM"/>
                 <constraint firstAttribute="trailing" secondItem="RUm-Sh-zgM" secondAttribute="trailing" constant="21" id="nPi-He-7MD"/>
                 <constraint firstItem="RUm-Sh-zgM" firstAttribute="firstBaseline" secondItem="W61-PR-OkZ" secondAttribute="baseline" id="nRh-zh-Dzm"/>

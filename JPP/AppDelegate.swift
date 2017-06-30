@@ -124,7 +124,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate,PushNotificationDelegate {
         
         players.append(Player(name: "Ravinder Kumar", achieve: "2011-12 U-19 School National Games, 2016 Departmental Nationals, 2013 Junior National Championship,2015 University Games", tour: "2016 Star Sports Pro Kabaddi semi-finalist team (Puneri Paltan), 2011 U-19 School National Games (Gold), 2012 U-19 School National Games (Silver)", age: "21", type: "All rounder", state: "Maharashtra", jerseyNo: "99", image: "p28.jpg"))
 
-
+   players.append(Player(name: "Rahul Choudhary", achieve: "2011-12 U-19 School National Games, 2016 Departmental Nationals, 2013 Junior National Championship,2015 University Games", tour: "2016 Star Sports Pro Kabaddi semi-finalist team (Puneri Paltan), 2011 U-19 School National Games (Gold), 2012 U-19 School National Games (Silver)", age: "21", type: "All rounder", state: "Maharashtra", jerseyNo: "99", image: "p28.jpg"))
+        
+          players.append(Player(name: "Dong Gyu Kim", achieve: "2011-12 U-19 School National Games, 2016 Departmental Nationals, 2013 Junior National Championship,2015 University Games", tour: "2016 Star Sports Pro Kabaddi semi-finalist team (Puneri Paltan), 2011 U-19 School National Games (Gold), 2012 U-19 School National Games (Silver)", age: "21", type: "All rounder", state: "Maharashtra", jerseyNo: "99", image: "p28.jpg"))
+        
+          players.append(Player(name: "Jae Min Lee", achieve: "2011-12 U-19 School National Games, 2016 Departmental Nationals, 2013 Junior National Championship,2015 University Games", tour: "2016 Star Sports Pro Kabaddi semi-finalist team (Puneri Paltan), 2011 U-19 School National Games (Gold), 2012 U-19 School National Games (Silver)", age: "21", type: "All rounder", state: "Maharashtra", jerseyNo: "99", image: "p28.jpg"))
 
         
         PushNotificationManager.push().delegate = self

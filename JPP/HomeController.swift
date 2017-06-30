@@ -12,7 +12,7 @@ import EventKitUI
 
 var GHomeController:HomeController!;
 let refreshControl = UIRefreshControl()
-
+var timer = Timer()
 
 class HomeController: UIViewController, UIGestureRecognizerDelegate {
 
@@ -23,24 +23,25 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
         
         switch (status) {
         case EKAuthorizationStatus.notDetermined:
-            break;
-//            requestAccessToCalendar()
+            requestAccessToCalendar()
         case EKAuthorizationStatus.authorized:
             print("Authorised");
         case EKAuthorizationStatus.restricted:
             print("Restricted");
         case EKAuthorizationStatus.denied:
             print("Denied");
+            
         }
     }
     
     func requestAccessToCalendar() {
         eventStore.requestAccess(to: EKEntityType.event, completion: {
-            (accessGranted: Bool, error: NSError?) in
+            (accessGranted: Bool, error: Error?) in
             
             if accessGranted == true {
                 DispatchQueue.main.async(execute: {
                     print("Access Graned");
+                    
                     SaveCalender = 1;
                 })
             } else {
@@ -49,12 +50,12 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                     print("Access not Graned");
                 })
             }
-        } as! EKEventStoreRequestAccessCompletionHandler)
+        })
     }
-
+ 
 
     
-    func setInterval(_ interval:TimeInterval, block:@escaping ()->Void) -> Timer {
+    func setInterval(_ interval:TimeInterval, block: @escaping ()->Void) -> Timer {
         return Timer.scheduledTimer(timeInterval: interval, target: BlockOperation(block: block), selector: #selector(Operation.main), userInfo: nil, repeats: true)
     }
     
@@ -103,80 +104,81 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     func showScore(_ json:JSON) {
-        let updates = doneMatch(frame: CGRect(x: 8,y: 8,width: self.verticalLayout.frame.width-16,height: 300));
         
-        updates.teamOneScore.font = UIFont(name: "Kenyan-Coffee", size: 45)
-        updates.teamTwoScore.font = UIFont(name: "Kenyan-Coffee", size: 45)
-        updates.teamOneScore.layer.borderWidth = 3
-        updates.teamOneScore.layer.borderColor = UIColor.white.cgColor
-        updates.teamTwoScore.layer.borderWidth = 3
-        updates.teamTwoScore.layer.borderColor = UIColor.white.cgColor
+        let updates1 = doneMatch(frame: CGRect(x: 8,y: 8,width: self.verticalLayout.frame.width-16,height: 300));
+        print(updates1)
+        updates1.teamOneScore.font = UIFont(name: "Kenyan-Coffee", size: 45)
+        updates1.teamTwoScore.font = UIFont(name: "Kenyan-Coffee", size: 45)
+        updates1.teamOneScore.layer.borderWidth = 3
+        updates1.teamOneScore.layer.borderColor = UIColor.white.cgColor
+        updates1.teamTwoScore.layer.borderWidth = 3
+        updates1.teamTwoScore.layer.borderColor = UIColor.white.cgColor
         
-        updates.team1image.image = UIImage(named: "t" + json["latestMatch"]["team1id"].string! + ".png")
-        updates.team2image.image = UIImage(named: "t" + json["latestMatch"]["team2id"].string! + ".png")
+        updates1.team1image.image = UIImage(named: "t" + json["latestMatch"]["team1id"].string! + ".png")
+        updates1.team2image.image = UIImage(named: "t" + json["latestMatch"]["team2id"].string! + ".png")
         if json["latestMatch"]["score1"]=="" {
-            updates.teamOneScore.text = "0"
+            updates1.teamOneScore.text = "0"
         }else{
-            updates.teamOneScore.text = json["latestMatch"]["score1"].string
+            updates1.teamOneScore.text = json["latestMatch"]["score1"].string
         }
         if json["latestMatch"]["score2"]=="" {
-            updates.teamTwoScore.text = "0"
+            updates1.teamTwoScore.text = "0"
         }else{
-            updates.teamTwoScore.text = json["latestMatch"]["score2"].string
+            updates1.teamTwoScore.text = json["latestMatch"]["score2"].string
         }
         
-        updates.fulltimeText.text = json["latestMatch"]["totalmatchtime"].string!
+        updates1.fulltimeText.text = json["latestMatch"]["totalmatchtime"].string!
     
         
         switch json["latestMatch"]["team1"].string! {
         case "Jaipur Pink Panthers":
-            updates.teamOneScore.tintColor = UIColor(red: 231/255, green: 45/255, blue: 137/255, alpha: 1) //E72D89
+            updates1.teamOneScore.tintColor = UIColor(red: 231/255, green: 45/255, blue: 137/255, alpha: 1) //E72D89
         case "Bengaluru Bulls":
-            updates.teamOneScore.textColor = UIColor(red: 176/255, green: 29/255, blue: 33/255, alpha: 1) //b01d21
+            updates1.teamOneScore.textColor = UIColor(red: 176/255, green: 29/255, blue: 33/255, alpha: 1) //b01d21
         case "Bengal Warriors":
-            updates.teamOneScore.textColor = UIColor(red: 242/255, green: 103/255, blue: 36/255, alpha: 1) //f26724
+            updates1.teamOneScore.textColor = UIColor(red: 242/255, green: 103/255, blue: 36/255, alpha: 1) //f26724
         case "Dabang Delhi":
-            updates.teamOneScore.textColor = UIColor(red: 217/255, green: 31/255, blue: 45/255, alpha: 1) //d91f2d
+            updates1.teamOneScore.textColor = UIColor(red: 217/255, green: 31/255, blue: 45/255, alpha: 1) //d91f2d
         case "Patna Pirates":
-            updates.teamOneScore.textColor = UIColor(red: 10/255, green: 68/255, blue: 54/255, alpha: 1) //0a4436
+            updates1.teamOneScore.textColor = UIColor(red: 10/255, green: 68/255, blue: 54/255, alpha: 1) //0a4436
         case "Puneri Paltan":
-            updates.teamOneScore.textColor = UIColor(red: 240/255, green: 78/255, blue: 35/255, alpha: 1) //f04e23
+            updates1.teamOneScore.textColor = UIColor(red: 240/255, green: 78/255, blue: 35/255, alpha: 1) //f04e23
         case "Telugu Titans":
-            updates.teamOneScore.textColor = UIColor(red: 218/255, green: 33/255, blue: 49/255, alpha: 1) //da2131
+            updates1.teamOneScore.textColor = UIColor(red: 218/255, green: 33/255, blue: 49/255, alpha: 1) //da2131
         case "U Mumba":
-            updates.teamOneScore.textColor = UIColor(red: 241/255, green: 89/255, blue: 34/255, alpha: 1) //f15922
+            updates1.teamOneScore.textColor = UIColor(red: 241/255, green: 89/255, blue: 34/255, alpha: 1) //f15922
         default:
-            updates.teamOneScore.textColor = UIColor(red: 231/255, green: 45/255, blue: 137/255, alpha: 1) //E72D89
+            updates1.teamOneScore.textColor = UIColor(red: 231/255, green: 45/255, blue: 137/255, alpha: 1) //E72D89
         }
         
         switch json["latestMatch"]["team2"].string! {
         case "Jaipur Pink Panthers":
-            updates.teamTwoScore.textColor = UIColor(red: 231/255, green: 45/255, blue: 137/255, alpha: 1) //E72D89
+            updates1.teamTwoScore.textColor = UIColor(red: 231/255, green: 45/255, blue: 137/255, alpha: 1) //E72D89
             print("Jaipur Pink Panthers")
         case "Bengaluru Bulls":
-            updates.teamTwoScore.textColor = UIColor(red: 176/255, green: 29/255, blue: 33/255, alpha: 1) //b01d21
+            updates1.teamTwoScore.textColor = UIColor(red: 176/255, green: 29/255, blue: 33/255, alpha: 1) //b01d21
             print("Bengaluru Bulls")
         case "Bengal Warriors":
-            updates.teamTwoScore.textColor = UIColor(red: 242/255, green: 103/255, blue: 36/255, alpha: 1) //f26724
+            updates1.teamTwoScore.textColor = UIColor(red: 242/255, green: 103/255, blue: 36/255, alpha: 1) //f26724
         case "Dabang Delhi":
-            updates.teamTwoScore.textColor = UIColor(red: 217/255, green: 31/255, blue: 45/255, alpha: 1) //d91f2d
+            updates1.teamTwoScore.textColor = UIColor(red: 217/255, green: 31/255, blue: 45/255, alpha: 1) //d91f2d
         case "Patna Pirates":
-            updates.teamTwoScore.textColor = UIColor(red: 10/255, green: 68/255, blue: 54/255, alpha: 1) //0a4436
+            updates1.teamTwoScore.textColor = UIColor(red: 10/255, green: 68/255, blue: 54/255, alpha: 1) //0a4436
         case "Puneri Paltan":
-            updates.teamTwoScore.textColor = UIColor(red: 240/255, green: 78/255, blue: 35/255, alpha: 1) //f04e23
+            updates1.teamTwoScore.textColor = UIColor(red: 240/255, green: 78/255, blue: 35/255, alpha: 1) //f04e23
         case "Telugu Titans":
-            updates.teamTwoScore.textColor = UIColor(red: 218/255, green: 33/255, blue: 49/255, alpha: 1) //da2131
+            updates1.teamTwoScore.textColor = UIColor(red: 218/255, green: 33/255, blue: 49/255, alpha: 1) //da2131
         case "U Mumba":
-            updates.teamTwoScore.textColor = UIColor(red: 241/255, green: 89/255, blue: 34/255, alpha: 1) //f15922
+            updates1.teamTwoScore.textColor = UIColor(red: 241/255, green: 89/255, blue: 34/255, alpha: 1) //f15922
         default:
-            updates.teamTwoScore.textColor = UIColor(red: 231/255, green: 45/255, blue: 137/255, alpha: 1) //E72D89
+            updates1.teamTwoScore.textColor = UIColor(red: 231/255, green: 45/255, blue: 137/255, alpha: 1) //E72D89
         }
         
-        self.verticalLayout.addSubview(updates)
+        self.verticalLayout.addSubview(updates1)
     }
     
     func homeLoaded(_ json:JSON) {
-        
+        print(json["latestMatch"]);
         if(json == 1)
         {
             let alertController = UIAlertController(title: "No Connection", message:
@@ -188,6 +190,7 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
         else
         {   self.i += 1
             HomeJSON = json;
+            print(HomeJSON)
             
             DispatchQueue.main.async(execute: {
                 if(self.i>1)
@@ -208,12 +211,12 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                 let hour = components.hour
                 let minutes = components.minute
                 
-                print(json["latestMatch"]);
-                if ( json["latestMatch"]["starttimedate"] ).boolValue {
+                print("hellojson\(json["latestMatch"])");
+                if (( json["latestMatch"]["starttimedate"] ).string != nil) {
                     
                     let datematch = dateFormatter.date(from: json["latestMatch"]["starttimedate"].string!)!
                     let unitFlags = Set<Calendar.Component>([.month, .day, .hour, .minute, .second])
-                    calendar.timeZone = TimeZone(identifier: "UTC")!
+                    calendar.timeZone = NSTimeZone.init(abbreviation: "UTC")! as TimeZone
                     let componentsmatch = calendar.dateComponents(unitFlags, from: datematch)
                     
                     let matchMonth = componentsmatch.month
@@ -241,7 +244,7 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                             self.showScore(json)
                         }else{
                             
-                            let updates = seasonOpener(frame: CGRect(x: 8, y: 8, width: self.verticalLayout.frame.width-16, height: 380)) 
+                            var updates = seasonOpener(frame: CGRect(x: 8, y: 8, width: self.verticalLayout.frame.width-16, height: 380))
                             
                             
                             let dateFormatter = DateFormatter()
@@ -253,7 +256,7 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                             }else {
                                 print("json error")
                             }
-//                            updates.EventTimeTop = dateFormatter.date(from: json["latestMatch"]["starttimedate"].string!)!
+                            updates.EventTimeTop = dateFormatter.date(from: json["latestMatch"]["starttimedate"].string!)!
                             
                             if((json["latestMatch"]["team1"].string != nil) && (json["latestMatch"]["team2"].string != nil))
                             {
@@ -267,16 +270,16 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                             self.verticalLayout.addSubview(updates)
                             
 //                             self.updates.addToCalendar.addTarget(self, action: #selector(self.playerCareer(_:)), for: .touchUpInside)
+//                            
+//                            
+//                                                       updates.addToCalender.isHidden = true
                             
                             
-                                                       //updates.addToCalender.hidden = true
                             
-                            
-                            
-                            if(json["latestMatch"]["team1id"] ).boolValue {
+                            if(json["latestMatch"]["team1id"] ).string != nil {
                             updates.team1Image.image = UIImage(named: "t" + json["latestMatch"]["team1id"].string! + ".png")
                             }
-                            if(json["latestMatch"]["team2id"]).boolValue {
+                            if(json["latestMatch"]["team2id"]).string != nil {
                             updates.team2Image.image = UIImage(named: "t" + json["latestMatch"]["team2id"].string! + ".png")
                             }
                             
@@ -319,7 +322,8 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                             
                             let datematch = dateFormatter.date(from: json["latestMatch"]["starttimedate"].string!)!
                             let unitFlags = Set<Calendar.Component>([.month, .day, .hour, .minute, .second])
-                            calendar.timeZone = TimeZone(identifier: "UTC")!
+                            print("seeThis\(unitFlags)")
+//                            calendar.timeZone = TimeZone(identifier: "UTC")!
                             let componentsmatch = calendar.dateComponents(unitFlags, from: datematch)
                             
                             
@@ -328,16 +332,14 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                             let matchHour = componentsmatch.hour
                             let matchMins = componentsmatch.minute
                             
-                            self.diffMonth = matchMonth! - month!
-                            self.diffDay = matchDay! - day!
-                            self.diffHour = matchHour! - hour!
-                            self.diffMin = matchMins! - minutes!
                             
                             self.setInterval(10, block: { () -> Void in
                                 
                                 let date = NSDate()
-                                let calendar = NSCalendar.current
-                                let components = (calendar as NSCalendar).components([.month, .day, .hour, .minute, .second], from: date as Date)
+                                print("showmedate\(date)")
+                                var calendar = NSCalendar.current
+//                                calendar.timeZone = TimeZone(identifier: "UTC")!
+                                let components = (calendar as NSCalendar).components([.month, .day, .hour, .minute], from: date as Date)
                                 let month = components.month
                                 let day = components.day
                                 let hour = components.hour
@@ -368,11 +370,18 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                                     self.refresh(self.refeshController)
                                 }else{
                                     //print("still on")
-                                    //                            updates.removeFromSuperview()
+//                                   updates.removeFromSuperview()
                                     
                                 }
-                                
                             })
+
+                            
+                            
+                            self.diffMonth = matchMonth! - month!
+                            self.diffDay = matchDay! - day!
+                            self.diffHour = matchHour! - hour!
+                            self.diffMin = matchMins! - minutes!
+                            
                             
                             if(self.diffMin < 0) { self.diffHour = self.diffHour - 1;  self.diffMin = self.diffMin + 60 }
                             
@@ -388,21 +397,20 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                     } else{
                         self.showScore(json)
                     }
+//                    self.resizeView(190)
                 }
-                else
-                    
-                {
+                else{
                     
                     let thumbnail = thumbnailImage(frame: CGRect.zero)
                     self.verticalLayout.addSubview(thumbnail);
                     
-                    rest.getCongratulations({(json:JSON) -> () in
+                    rest.getapphomeimage({(json:JSON) -> () in
                         DispatchQueue.main.sync(execute: {
                             if json == 401 {
                                 print("No Data Found")
                             }else{
                                 
-                                thumbnail.frame = CGRect(x: 8,y: 8,width: self.verticalLayout.frame.width-16,height: 380);
+                                thumbnail.frame = CGRect(x: 8,y: 8,width: self.verticalLayout.frame.width-16,height: 180);
                                 thumbnail.layoutIfNeeded()
 //                                thumbnail.thumbImage.frame = CGRect(x: 8,y: 8,width: self.verticalLayout.frame.width-16,height: 380);
                                 
@@ -412,7 +420,8 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                                 
                                 
                                 print("\n thumbImage : \(thumbnail.thumbImage)")
-                                thumbnail.thumbImage.hnk_setImageFromURL(rest.getImageCache(self.getPicture["data"]["image"].string!))
+                                thumbnail.thumbImage.contentMode = .scaleAspectFit
+                                thumbnail.thumbImage.hnk_setImageFromURL(rest.getImageSizeCache(self.getPicture["image"].string!))
                                 //self.verticalLayout.addSubview(thumbnail);
                                 //                    print("i want this\(self.getPlayers)")
                                 //                    print("givecount\(self.getPlayers.count)")
@@ -426,7 +435,8 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                     print("goingInside")
                    
                 }
-                
+            
+            
                 
                 
                 
@@ -561,7 +571,7 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
 //                sponserView.addSubview(sponserimage)
                 self.verticalLayout.addSubview(sponserView)
                 
-                self.resizeView(390);
+                self.resizeView(10);
             })
             
             DispatchQueue.main.async(execute: {
@@ -577,7 +587,7 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-    
+        
         checkCalendarAuthorizationStatus()
         GHomeController = self;
         
@@ -591,14 +601,14 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
         scrollView.addSubview(refreshControl)
       
 //      rest.getHome(homeLoaded)
-
+        
         loadingInit()
         callhome()
+       
         
     }
     
    
-    
     
     func callhome() {
         self.view.addSubview(loaderGlo)

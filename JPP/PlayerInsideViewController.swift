@@ -14,9 +14,13 @@ class PlayerInsideViewController: UIViewController {
     var players: String!
 //    var playersInsideindex: String!
     var playersInsideJSON: JSON = []
+    var tournamentAchievement: String = ""
+    var acheiveTournament: String = ""
+    var tourny: String = ""
     var player: playersInside!
+    var i = 0
     var verticalLayout : VerticalLayout!
-    
+    var homeAcheivement = NSAttributedString()
     override func viewDidLoad() {
         super.viewDidLoad()
 //        playersInsideindex = "\(players)"
@@ -54,19 +58,69 @@ self.verticalLayout = VerticalLayout(width: self.view.frame.width);
                     print("No Data Found")
                 }else{
                     
-                    print(json)
-                    self.playersInsideJSON = json["data"]["player"]
+                    print("hellojson\(json)")
+                    self.playersInsideJSON = json["data"]
+                   
+                    print("lagggyihyaar\(self.tournamentAchievement)")
                     print("guessing\(self.playersInsideJSON)")
-                    self.player.playerName.text = self.playersInsideJSON["name"].stringValue
+                    self.player.playerName.text = self.playersInsideJSON["player"]["name"].stringValue
                      print("nameplease\(self.player.playerName)")
-                    self.player.playerImage.hnk_setImageFromURL(rest.getImageCache(self.playersInsideJSON["bigimage"].string!))
-                    self.player.playerNumber.text = self.playersInsideJSON["jerseyno"].stringValue
-                    self.player.playerType.text = self.playersInsideJSON["type"].stringValue
-                    self.player.Nationality.text = self.playersInsideJSON["hnationality"].stringValue
-                    self.player.nativePlace.text = self.playersInsideJSON["nativeplacehindi"].stringValue
-                    self.player.dob.text = self.playersInsideJSON["dob"].stringValue
-                    self.player.playerHeight.text = self.playersInsideJSON["height"].stringValue
-                    self.player.playerWeight.text = self.playersInsideJSON["weight"].stringValue
+                    self.player.playerImage.hnk_setImageFromURL(rest.getImageCache(self.playersInsideJSON["player"]["bigimage"].string!))
+                    self.player.playerNumber.text = self.playersInsideJSON["player"]["jerseyno"].stringValue
+                    self.player.playerType.text = self.playersInsideJSON["player"]["type"].stringValue
+                    self.player.Nationality.text = self.playersInsideJSON["player"]["hnationality"].stringValue
+                    self.player.nativePlace.text = self.playersInsideJSON["player"]["nativeplacehindi"].stringValue
+                    self.player.dob.text = self.playersInsideJSON["player"]["dob"].stringValue
+                    self.player.playerHeight.text = self.playersInsideJSON["player"]["height"].stringValue
+                    self.player.playerWeight.text = self.playersInsideJSON["player"]["weight"].stringValue
+                    
+                    if self.playersInsideJSON["player"]["current"].count == 0 {
+                        self.player.currentSeason.isHidden = true
+                    }else {
+                        self.player.currentSeason.isHidden = false
+                    }
+                    
+                    if self.playersInsideJSON["player"]["lastseason"].count == 0 {
+                        self.player.lastSeason.isHidden = true
+                    }else {
+                        self.player.lastSeason.isHidden = false
+                    }
+                    
+                    if self.playersInsideJSON["player"]["career"].count == 0 {
+                        self.player.playerCareer.isHidden = true
+                    }else {
+                        self.player.playerCareer.isHidden = false
+                    }
+            
+                    for i in 0..<self.playersInsideJSON["achievmant"].count{
+                        if self.playersInsideJSON["achievmant"][i]["name"].stringValue == "N/A" && self.playersInsideJSON["tournamentplayed"][i]["year"].stringValue == "N/A"{
+                            self.tournamentAchievement.append("")
+                        }else{
+                            self.tournamentAchievement.append(self.playersInsideJSON["achievmant"][i]["name"].stringValue + "(" +  self.playersInsideJSON["achievmant"][i]["year"].stringValue + ")  ")
+                           
+                            print("showme json \(String(describing: self.playersInsideJSON["achievmant"]["id"].string))")
+                           
+                            
+                            //        player.frame = CGRect(x: 0, y: 0, width: playersScroll.frame.width, height:())
+                        }
+                        
+                    }
+
+                    
+                    
+                    for i in 0..<self.playersInsideJSON["tournamentplayed"].count{
+                        if self.playersInsideJSON["tournamentplayed"][i]["name"].stringValue == "N/A" && self.playersInsideJSON["tournamentplayed"][self.i]["year"].stringValue == "N/A"{
+                            self.acheiveTournament.append("")
+                        }else{
+                            print( "players inside json \(self.playersInsideJSON["tournamentplayed"]):::\(self.playersInsideJSON["tournamentplayed"][i]["name"].stringValue)")
+
+                            self.acheiveTournament.append(self.playersInsideJSON["tournamentplayed"][i]["name"].stringValue + "(" +  self.playersInsideJSON["tournamentplayed"][i]["year"].stringValue + ")  ")
+                            
+                        }
+                        
+                        //        player.frame = CGRect(x: 0, y: 0, width: playersScroll.frame.width, height:())
+                    }
+                    
                     
                     
                     
@@ -91,17 +145,17 @@ self.verticalLayout = VerticalLayout(width: self.view.frame.width);
     
     
     func tournamentsPlayed(_ sender: UIButton){
-       player.descriptionTextView.text = self.playersInsideJSON["lastseason"]["tournamentplayed"].stringValue
+        print("seethis\(self.playersInsideJSON["tournamentplayed"][0]["id"].stringValue)")
+       
+        player.descriptionTextView.text = tournamentAchievement
         player.tournamentsPlayed.alpha = 1.0
         player.acheivements.alpha = 0.6
-//        player.frame = CGRect(x: 0, y: 0, width: playersScroll.frame.width, height:())
-
-           }
+    }
     
     func acheivements(_ sender: UIButton){
-        player.descriptionTextView.text = self.playersInsideJSON["lastseason"]["achievmant"].stringValue
-        player.acheivements.alpha = 1.0
         player.tournamentsPlayed.alpha = 0.6
+        player.acheivements.alpha = 1.0
+        player.descriptionTextView.text = acheiveTournament
     }
 
     
@@ -109,20 +163,21 @@ self.verticalLayout = VerticalLayout(width: self.view.frame.width);
     
     func lastSeason(_ sender: UIButton){
         
-        self.player.matchesPlayed.text = self.playersInsideJSON["lastseason"]["matchplayed"].stringValue
-        self.player.totalPoints.text = self.playersInsideJSON["lastseason"]["totalpoints"].stringValue
-        self.player.totalRaidPoints.text = self.playersInsideJSON["lastseason"]["totalraidpoints"].stringValue
-        self.player.totalDefencePoints.text = self.playersInsideJSON["lastseason"]["totaldefencepoints"].stringValue
-        self.player.GreenCards.text = self.playersInsideJSON["lastseason"]["greencards"].stringValue
-        self.player.RedCards.text = self.playersInsideJSON["lastseason"]["redcards"].stringValue
-        self.player.YellowCards.text = self.playersInsideJSON["lastseason"]["yellowcards"].stringValue
-        self.player.raids.text = self.playersInsideJSON["lastseason"]["raids"].stringValue
-        self.player.successfulRaids.text = self.playersInsideJSON["lastseason"]["successfulraids"].stringValue
-        self.player.unsuccessfulRaids.text = self.playersInsideJSON["lastseason"]["unsuccessfulraids"].stringValue
-        self.player.emptyRaids.text = self.playersInsideJSON["lastseason"]["emptyraids"].stringValue
-        self.player.tackles.text = self.playersInsideJSON["lastseason"]["tackles"].stringValue
-        self.player.totalPoints.text = self.playersInsideJSON["lastseason"]["successfultackles"].stringValue
-        self.player.successfulTackles.text = self.playersInsideJSON["lastseason"]["unsuccessfultackles"].stringValue
+        
+        self.player.matchesPlayed.text = self.playersInsideJSON["player"]["lastseason"]["matchplayed"].stringValue
+        self.player.totalPoints.text = self.playersInsideJSON["player"]["lastseason"]["totalpoints"].stringValue
+        self.player.totalRaidPoints.text = self.playersInsideJSON["player"]["lastseason"]["totalraidpoints"].stringValue
+        self.player.totalDefencePoints.text = self.playersInsideJSON["player"]["lastseason"]["totaldefencepoints"].stringValue
+        self.player.GreenCards.text = self.playersInsideJSON["player"]["lastseason"]["greencards"].stringValue
+        self.player.RedCards.text = self.playersInsideJSON["player"]["lastseason"]["redcards"].stringValue
+        self.player.YellowCards.text = self.playersInsideJSON["player"]["lastseason"]["yellowcards"].stringValue
+        self.player.raids.text = self.playersInsideJSON["player"]["lastseason"]["raids"].stringValue
+        self.player.successfulRaids.text = self.playersInsideJSON["player"]["lastseason"]["successfulraids"].stringValue
+        self.player.unsuccessfulRaids.text = self.playersInsideJSON["player"]["lastseason"]["unsuccessfulraids"].stringValue
+        self.player.emptyRaids.text = self.playersInsideJSON["player"]["lastseason"]["emptyraids"].stringValue
+        self.player.tackles.text = self.playersInsideJSON["player"]["lastseason"]["tackles"].stringValue
+        self.player.totalPoints.text = self.playersInsideJSON["player"]["lastseason"]["successfultackles"].stringValue
+        self.player.successfulTackles.text = self.playersInsideJSON["player"]["lastseason"]["unsuccessfultackles"].stringValue
         player.lastSeason.alpha = 1.0
         player.playerCareer.alpha = 0.6
         player.currentSeason.alpha = 0.6
@@ -130,20 +185,20 @@ self.verticalLayout = VerticalLayout(width: self.view.frame.width);
     
     func playerCareer(_ sender: UIButton){
         
-        self.player.matchesPlayed.text = self.playersInsideJSON["career"]["matchplayed"].stringValue
-        self.player.totalPoints.text = self.playersInsideJSON["career"]["totalpoints"].stringValue
-        self.player.totalRaidPoints.text = self.playersInsideJSON["career"]["totalraidpoints"].stringValue
-        self.player.totalDefencePoints.text = self.playersInsideJSON["career"]["totaldefencepoints"].stringValue
-        self.player.GreenCards.text = self.playersInsideJSON["career"]["greencards"].stringValue
-        self.player.RedCards.text = self.playersInsideJSON["career"]["redcards"].stringValue
-        self.player.YellowCards.text = self.playersInsideJSON["career"]["yellowcards"].stringValue
-        self.player.raids.text = self.playersInsideJSON["career"]["raids"].stringValue
-        self.player.successfulRaids.text = self.playersInsideJSON["career"]["successfulraids"].stringValue
-        self.player.unsuccessfulRaids.text = self.playersInsideJSON["career"]["unsuccessfulraids"].stringValue
-        self.player.emptyRaids.text = self.playersInsideJSON["career"]["emptyraids"].stringValue
-        self.player.tackles.text = self.playersInsideJSON["career"]["tackles"].stringValue
-        self.player.successfulTackles.text = self.playersInsideJSON["career"]["successfultackles"].stringValue
-        self.player.unsuccessfulTackles.text = self.playersInsideJSON["career"]["unsuccessfultackles"].stringValue
+        self.player.matchesPlayed.text = self.playersInsideJSON["player"]["career"]["matchplayed"].stringValue
+        self.player.totalPoints.text = self.playersInsideJSON["player"]["career"]["totalpoints"].stringValue
+        self.player.totalRaidPoints.text = self.playersInsideJSON["player"]["career"]["totalraidpoints"].stringValue
+        self.player.totalDefencePoints.text = self.playersInsideJSON["player"]["career"]["totaldefencepoints"].stringValue
+        self.player.GreenCards.text = self.playersInsideJSON["player"]["career"]["greencards"].stringValue
+        self.player.RedCards.text = self.playersInsideJSON["player"]["career"]["redcards"].stringValue
+        self.player.YellowCards.text = self.playersInsideJSON["player"]["career"]["yellowcards"].stringValue
+        self.player.raids.text = self.playersInsideJSON["player"]["career"]["raids"].stringValue
+        self.player.successfulRaids.text = self.playersInsideJSON["player"]["career"]["successfulraids"].stringValue
+        self.player.unsuccessfulRaids.text = self.playersInsideJSON["player"]["career"]["unsuccessfulraids"].stringValue
+        self.player.emptyRaids.text = self.playersInsideJSON["player"]["career"]["emptyraids"].stringValue
+        self.player.tackles.text = self.playersInsideJSON["player"]["career"]["tackles"].stringValue
+        self.player.successfulTackles.text = self.playersInsideJSON["player"]["career"]["successfultackles"].stringValue
+        self.player.unsuccessfulTackles.text = self.playersInsideJSON["player"]["career"]["unsuccessfultackles"].stringValue
         player.lastSeason.alpha = 0.6
         player.playerCareer.alpha = 1.0
         player.currentSeason.alpha = 0.6
@@ -151,20 +206,20 @@ self.verticalLayout = VerticalLayout(width: self.view.frame.width);
 
     func currentCareer(_ sender: UIButton){
         
-        self.player.matchesPlayed.text = self.playersInsideJSON["current"]["matchplayed"].stringValue
-        self.player.totalPoints.text = self.playersInsideJSON["current"]["totalpoints"].stringValue
-        self.player.totalRaidPoints.text = self.playersInsideJSON["current"]["totalraidpoints"].stringValue
-        self.player.totalDefencePoints.text = self.playersInsideJSON["current"]["totaldefencepoints"].stringValue
-        self.player.GreenCards.text = self.playersInsideJSON["current"]["greencards"].stringValue
-        self.player.RedCards.text = self.playersInsideJSON["current"]["redcards"].stringValue
-        self.player.YellowCards.text = self.playersInsideJSON["current"]["yellowcards"].stringValue
-        self.player.raids.text = self.playersInsideJSON["current"]["raids"].stringValue
-        self.player.successfulRaids.text = self.playersInsideJSON["current"]["successfulraids"].stringValue
-        self.player.unsuccessfulRaids.text = self.playersInsideJSON["current"]["unsuccessfulraids"].stringValue
-        self.player.emptyRaids.text = self.playersInsideJSON["current"]["emptyraids"].stringValue
-        self.player.tackles.text = self.playersInsideJSON["current"]["tackles"].stringValue
-        self.player.successfulTackles.text = self.playersInsideJSON["current"]["successfultackles"].stringValue
-        self.player.unsuccessfulTackles.text = self.playersInsideJSON["current"]["unsuccessfultackles"].stringValue
+        self.player.matchesPlayed.text = self.playersInsideJSON["player"]["current"]["matchplayed"].stringValue
+        self.player.totalPoints.text = self.playersInsideJSON["player"]["current"]["totalpoints"].stringValue
+        self.player.totalRaidPoints.text = self.playersInsideJSON["player"]["current"]["totalraidpoints"].stringValue
+        self.player.totalDefencePoints.text = self.playersInsideJSON["player"]["current"]["totaldefencepoints"].stringValue
+        self.player.GreenCards.text = self.playersInsideJSON["player"]["current"]["greencards"].stringValue
+        self.player.RedCards.text = self.playersInsideJSON["player"]["current"]["redcards"].stringValue
+        self.player.YellowCards.text = self.playersInsideJSON["player"]["current"]["yellowcards"].stringValue
+        self.player.raids.text = self.playersInsideJSON["player"]["current"]["raids"].stringValue
+        self.player.successfulRaids.text = self.playersInsideJSON["player"]["current"]["successfulraids"].stringValue
+        self.player.unsuccessfulRaids.text = self.playersInsideJSON["player"]["current"]["unsuccessfulraids"].stringValue
+        self.player.emptyRaids.text = self.playersInsideJSON["player"]["current"]["emptyraids"].stringValue
+        self.player.tackles.text = self.playersInsideJSON["player"]["current"]["tackles"].stringValue
+        self.player.successfulTackles.text = self.playersInsideJSON["player"]["current"]["successfultackles"].stringValue
+        self.player.unsuccessfulTackles.text = self.playersInsideJSON["player"]["current"]["unsuccessfultackles"].stringValue
         player.lastSeason.alpha = 0.6
         player.playerCareer.alpha = 0.6
         player.currentSeason.alpha = 1.0

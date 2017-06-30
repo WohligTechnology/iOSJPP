@@ -10,7 +10,7 @@ import Foundation
 import SwiftHTTP
 
 //let adminUrl = "http://192.168.1.103/jppbackend/";
-let adminUrl = "http://admin.jaipurpinkpanthers.com/beta/";
+let adminUrl = "http://admin.jaipurpinkpanthers.com/beta/"
 //let adminUrl = "http://wohlig.co.in/pinkpanther/jppbackend/"
 let imageURL = adminUrl + "uploads/";
 let apiURL = adminUrl + "index.php/json/";
@@ -55,6 +55,12 @@ open class RestApi {
         let url = URL(string: adminUrl + "index.php/image/index?name=" + urlStr + "&width=250")
         return url!
     }
+    
+    open func getImageSizeCache(_ urlStr:String) -> URL {
+        let url = URL(string: adminUrl + "index.php/image/index?name=" + urlStr + "&width=600")
+        return url!
+    }
+
     
     open func getImageExternalCacheURL(_ urlStr:String) -> URL {
         let url = URL(string:urlStr)
@@ -375,7 +381,46 @@ open class RestApi {
         
     }
 
-    
+    func getallteam(_ completion: @escaping ( (JSON) -> Void)) {
+        
+        var json = JSON(1);
+        do {
+            let opt = try HTTP.GET(apiURL + "getallteam")
+            opt.start { response in
+                if let _ = response.error {
+                    completion(json);
+                }
+                else
+                {
+                    json  = JSON(data: response.data)
+                    completion(json);
+                }
+            }
+        } catch _ {
+            completion(json);
+        }
+    }
 
+    open func getapphomeimage( _ completion: @escaping ( (JSON) -> Void) )  {
+        var json = JSON(1);
+        do {
+            let opt = try HTTP.GET(apiURL + "getapphomeimage")
+            opt.start { response in
+                if let _ = response.error {
+                    completion(json);
+                }
+                else
+                {
+                    json  = JSON(data: response.data)
+                    completion(json);
+                }
+            }
+        } catch _ {
+            completion(json);
+        }
+    }
+
+    
+    
     
 }

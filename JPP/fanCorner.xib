@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -29,6 +28,7 @@
                 <outlet property="button16" destination="vVB-qC-Zwx" id="r70-9O-Wa9"/>
                 <outlet property="button17" destination="9ji-sa-K4y" id="siN-wF-fa1"/>
                 <outlet property="button18" destination="Lcy-1v-tHN" id="TvN-Sl-wkJ"/>
+                <outlet property="button19" destination="mbB-hN-aTl" id="UoU-d6-1Gv"/>
                 <outlet property="button2" destination="uUL-JS-BX6" id="2VU-pV-cHn"/>
                 <outlet property="button3" destination="dex-dW-STy" id="WgA-ND-pQa"/>
                 <outlet property="button4" destination="FFc-pp-KkD" id="UeL-Uz-E42"/>
@@ -42,6 +42,10 @@
                 <outlet property="firstName" destination="TKT-Vw-tSm" id="Unx-e5-avo"/>
                 <outlet property="lastName" destination="47N-Tx-Jtp" id="YCi-cG-TJj"/>
                 <outlet property="mobile" destination="xTF-t2-5lb" id="FsM-17-a3O"/>
+                <outlet property="teamName16" destination="ykt-mb-VgE" id="ge7-n5-xQb"/>
+                <outlet property="teamName17" destination="yAG-Bc-T8z" id="BGL-H3-Qqt"/>
+                <outlet property="teamName18" destination="6V9-0z-Fpg" id="oWg-30-RdZ"/>
+                <outlet property="teamName19" destination="X2c-qp-6e3" id="Kdz-Qo-5ne"/>
                 <outlet property="teamname1" destination="wnK-OV-Eje" id="Cl3-IO-bIf"/>
                 <outlet property="teamname10" destination="iZG-Yp-qLx" id="gLA-xg-Pov"/>
                 <outlet property="teamname11" destination="bJb-UJ-haK" id="SbH-AZ-uv8"/>
@@ -61,7 +65,7 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="1018"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="1043"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="SIGN UP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hlX-J5-OtV">
@@ -148,7 +152,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Your Favourite Panthers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b7x-2B-G5S">
-                    <rect key="frame" x="16" y="447" width="150.5" height="20"/>
+                    <rect key="frame" x="16" y="435" width="150.5" height="20"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="fE2-Sh-aiO"/>
                     </constraints>
@@ -173,7 +177,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3bH-kd-Yq4">
-                    <rect key="frame" x="19" y="920.5" width="35" height="35"/>
+                    <rect key="frame" x="19" y="945.5" width="35" height="35"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="35" id="lG4-uy-wJv"/>
                         <constraint firstAttribute="height" constant="35" id="sEr-DY-H1x"/>
@@ -181,7 +185,7 @@
                     <state key="normal" image="facebook-circle"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iwN-nR-mMu">
-                    <rect key="frame" x="69" y="920.5" width="35" height="35"/>
+                    <rect key="frame" x="69" y="945.5" width="35" height="35"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="35" id="65Z-oa-fzO"/>
                         <constraint firstAttribute="width" constant="35" id="STJ-5D-7gq"/>
@@ -189,7 +193,7 @@
                     <state key="normal" image="twitter-circle"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ebW-CG-vOS">
-                    <rect key="frame" x="19" y="816" width="135" height="35"/>
+                    <rect key="frame" x="19" y="841" width="135" height="35"/>
                     <color key="backgroundColor" red="0.84313725490196079" green="0.21568627450980393" blue="0.52156862745098043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="135" id="sYU-Uw-9xC"/>
@@ -203,8 +207,8 @@
                         <action selector="submitForm:" destination="-1" eventType="touchUpInside" id="kUu-s1-Y3f"/>
                     </connections>
                 </button>
-                <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="zCm-A9-cZY">
-                    <rect key="frame" x="16" y="475" width="340" height="321"/>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="zCm-A9-cZY">
+                    <rect key="frame" x="16" y="463" width="340" height="358"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="lC2-jX-Ja8">
                             <rect key="frame" x="0.0" y="0.0" width="340" height="25"/>
@@ -720,6 +724,9 @@
                                                     <exclude reference="pWB-0m-LG5"/>
                                                 </mask>
                                             </variation>
+                                            <connections>
+                                                <action selector="checkButton16:" destination="-1" eventType="touchUpInside" id="heW-HO-AAq"/>
+                                            </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="ykt-mb-VgE">
                                             <rect key="frame" x="35" y="0.0" width="140" height="25"/>
@@ -754,6 +761,9 @@
                                                     <exclude reference="rOn-cY-vyA"/>
                                                 </mask>
                                             </variation>
+                                            <connections>
+                                                <action selector="checkButton17:" destination="-1" eventType="touchUpInside" id="h92-zN-Dm7"/>
+                                            </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="yAG-Bc-T8z">
                                             <rect key="frame" x="35" y="0.0" width="120" height="25"/>
@@ -783,6 +793,9 @@
                                                             <exclude reference="tHE-Wf-3B6"/>
                                                         </mask>
                                                     </variation>
+                                                    <connections>
+                                                        <action selector="checkButton18:" destination="-1" eventType="touchUpInside" id="q5t-CY-rhc"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="6V9-0z-Fpg">
                                                     <rect key="frame" x="35" y="0.0" width="140" height="25"/>
@@ -799,10 +812,78 @@
                                 </stackView>
                             </subviews>
                         </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ioN-nv-FDr">
+                            <rect key="frame" x="0.0" y="333" width="340" height="25"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="lpN-f3-U4P">
+                                    <rect key="frame" x="0.0" y="0.0" width="340" height="25"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mbB-hN-aTl">
+                                            <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="25" id="8Vc-SW-qya"/>
+                                                <constraint firstAttribute="width" constant="25" id="Loe-JS-NpT"/>
+                                                <constraint firstAttribute="width" constant="15" id="fAD-dy-Omz"/>
+                                                <constraint firstAttribute="height" constant="15" id="i7q-Tl-liT"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="fAD-dy-Omz"/>
+                                                    <exclude reference="i7q-Tl-liT"/>
+                                                </mask>
+                                            </variation>
+                                            <connections>
+                                                <action selector="checkButton19:" destination="-1" eventType="touchUpInside" id="nv4-iQ-I5c"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="X2c-qp-6e3">
+                                            <rect key="frame" x="35" y="0.0" width="120" height="25"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="120" id="tRk-IQ-gkb"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="12"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="rH5-WN-1Hh">
+                                            <rect key="frame" x="165" y="0.0" width="175" height="25"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nfn-F2-VOb">
+                                                    <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="3Cx-u7-YaX"/>
+                                                        <constraint firstAttribute="height" constant="25" id="G0V-9s-k6p"/>
+                                                        <constraint firstAttribute="width" constant="25" id="Rhq-1a-fmP"/>
+                                                        <constraint firstAttribute="height" constant="15" id="Ug3-ul-LFt"/>
+                                                        <constraint firstAttribute="width" constant="15" id="hwy-r9-5Ko"/>
+                                                    </constraints>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="3Cx-u7-YaX"/>
+                                                            <exclude reference="hwy-r9-5Ko"/>
+                                                            <exclude reference="Ug3-ul-LFt"/>
+                                                        </mask>
+                                                    </variation>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="WHP-E2-ACR">
+                                                    <rect key="frame" x="35" y="0.0" width="140" height="25"/>
+                                                    <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="12"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="165" id="h7e-lu-8m7"/>
+                                            </constraints>
+                                        </stackView>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                        </stackView>
                     </subviews>
                 </stackView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wnt-On-BEy">
-                    <rect key="frame" x="119" y="920.5" width="35" height="35"/>
+                    <rect key="frame" x="119" y="945.5" width="35" height="35"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="35" id="YjT-iY-GJU"/>
                         <constraint firstAttribute="width" constant="35" id="yfg-QY-Obh"/>
@@ -866,7 +947,7 @@
                     <exclude reference="XIB-Lr-2rz"/>
                 </mask>
             </variation>
-            <point key="canvasLocation" x="129.5" y="422"/>
+            <point key="canvasLocation" x="129.5" y="434.5"/>
         </view>
     </objects>
     <resources>

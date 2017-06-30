@@ -38,7 +38,7 @@ import UIKit
     
     @IBAction func addToCalender(_ sender: AnyObject) {
     
-//       createEvent(EventNameTop,EventTime: EventTimeTop)
+      createEvent(EventNameTop,EventTime: EventTimeTop)
         
         let alertController = UIAlertController(title: "Match added to your Calender", message:
             "", preferredStyle: UIAlertControllerStyle.alert)
