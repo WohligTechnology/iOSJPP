@@ -13,10 +13,9 @@ import EventKitUI
 var GHomeController:HomeController!;
 let refreshControl = UIRefreshControl()
 var timer = Timer()
-
+let updates = doneMatch()
 class HomeController: UIViewController, UIGestureRecognizerDelegate {
 
-  
     
     func checkCalendarAuthorizationStatus() {
         let status = EKEventStore.authorizationStatus(for: EKEntityType.event)
@@ -65,6 +64,7 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
     var i = 0;
     @IBOutlet weak var scrollView: UIScrollView!
     var verticalLayout : VerticalLayout!
+    
     var getPicture: JSON = []
     
     var diffMonth = 0
@@ -91,10 +91,10 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     func jpptvTap(_ sender: UITapGestureRecognizer? = nil) {
-        let galleryController = storyboard!.instantiateViewController(withIdentifier: "gallery") as! GalleryController
+        let galleryController = storyboard!.instantiateViewController(withIdentifier: "knowteam") as! KnowTeamController
         self.galleryController = UINavigationController(rootViewController: galleryController)
         self.slideMenuController()?.changeMainViewController(self.galleryController, close: true)
-        galleryController.activeGal = 1
+//        galleryController.activeGal = 1
     }
     
     func signupTap(_ sender: UITapGestureRecognizer? = nil) {
@@ -178,6 +178,34 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     func homeLoaded(_ json:JSON) {
+        let thumbnail = thumbnailImage(frame: CGRect.zero)
+        rest.getapphomeimage({(json:JSON) -> () in
+            DispatchQueue.main.sync(execute: {
+                if json == 401 {
+                    print("No Data Found")
+                }else{
+                    
+                    thumbnail.frame = CGRect(x: 8,y: 8,width: self.verticalLayout.frame.width-16,height: 180);
+                    thumbnail.layoutIfNeeded()
+                     self.resizeView(8)
+                    //                                thumbnail.thumbImage.frame = CGRect(x: 8,y: 8,width: self.verticalLayout.frame.width-16,height: 380);
+                    
+                    print(json)
+                    self.getPicture = json
+                    thumbnail.thumbImage.hnk_setImageFromURL(rest.getImageSizeCache(self.getPicture["image"].stringValue))
+                    print("showshowshow\(self.getPicture)")
+                    
+                    
+                   
+                    //self.verticalLayout.addSubview(thumbnail);
+                    //                    print("i want this\(self.getPlayers)")
+                    //                    print("givecount\(self.getPlayers.count)")
+                    //                    self.playersCollection.reloadData()
+                }
+            })
+            
+        })
+
         print(json["latestMatch"]);
         if(json == 1)
         {
@@ -212,7 +240,8 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                 let minutes = components.minute
                 
                 print("hellojson\(json["latestMatch"])");
-                if (( json["latestMatch"]["starttimedate"] ).string != nil) {
+                if json["latestMatch"]["starttimedate"].string != nil && self.getPicture["status"].stringValue == "2" {
+                    print("showhomeimage\(self.getPicture["image"].string)")
                     
                     let datematch = dateFormatter.date(from: json["latestMatch"]["starttimedate"].string!)!
                     let unitFlags = Set<Calendar.Component>([.month, .day, .hour, .minute, .second])
@@ -266,8 +295,9 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                             }
                             
                            
-
+                            
                             self.verticalLayout.addSubview(updates)
+                            self.resizeView(8)
                             
 //                             self.updates.addToCalendar.addTarget(self, action: #selector(self.playerCareer(_:)), for: .touchUpInside)
 //                            
@@ -304,7 +334,7 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                                 updates.trapLabel.text = "FINALS"
                             }
                             else {
-                                updates.trapLabel.text = "NEXT MATCH"
+                                updates.trapLabel.text = json["latestMatch"]["level"].stringValue
                             }
                             
                             let date = NSDate()
@@ -397,41 +427,17 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                     } else{
                         self.showScore(json)
                     }
-//                    self.resizeView(190)
+                    
                 }
                 else{
                     
-                    let thumbnail = thumbnailImage(frame: CGRect.zero)
+                    
                     self.verticalLayout.addSubview(thumbnail);
                     
-                    rest.getapphomeimage({(json:JSON) -> () in
-                        DispatchQueue.main.sync(execute: {
-                            if json == 401 {
-                                print("No Data Found")
-                            }else{
-                                
-                                thumbnail.frame = CGRect(x: 8,y: 8,width: self.verticalLayout.frame.width-16,height: 180);
-                                thumbnail.layoutIfNeeded()
-//                                thumbnail.thumbImage.frame = CGRect(x: 8,y: 8,width: self.verticalLayout.frame.width-16,height: 380);
-                                
-                                print(json)
-                                self.getPicture = json
-                                print("showshowshow\(self.getPicture)")
-                                
-                                
-                                print("\n thumbImage : \(thumbnail.thumbImage)")
-                                thumbnail.thumbImage.contentMode = .scaleAspectFit
-                                thumbnail.thumbImage.hnk_setImageFromURL(rest.getImageSizeCache(self.getPicture["image"].string!))
-                                //self.verticalLayout.addSubview(thumbnail);
-                                //                    print("i want this\(self.getPlayers)")
-                                //                    print("givecount\(self.getPlayers.count)")
-                                //                    self.playersCollection.reloadData()
-                            }
-                        })
-                        
-                    })
-
-                    
+                    print("\n thumbImage : \(thumbnail.thumbImage)")
+                    thumbnail.thumbImage.contentMode = .scaleAspectFit
+                    thumbnail.thumbImage.hnk_setImageFromURL(rest.getImageSizeCache(self.getPicture["image"].stringValue))
+                    self.resizeView(8)
                     print("goingInside")
                    
                 }
@@ -571,7 +577,7 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
 //                sponserView.addSubview(sponserimage)
                 self.verticalLayout.addSubview(sponserView)
                 
-                self.resizeView(10);
+                self.resizeView(8);
             })
             
             DispatchQueue.main.async(execute: {

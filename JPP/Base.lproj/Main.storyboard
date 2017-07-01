@@ -1498,8 +1498,8 @@
         <image name="vs_pink" width="267" height="262"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="QFm-1H-djl"/>
         <segue reference="WTz-Cl-1DE"/>
-        <segue reference="7Mo-P3-nqO"/>
+        <segue reference="ftB-yf-jNf"/>
+        <segue reference="QFm-1H-djl"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -93,7 +93,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XF2-CC-Urm">
-                    <rect key="frame" x="65" y="236" width="298" height="70"/>
+                    <rect key="frame" x="20" y="236" width="388" height="70"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timer_back" translatesAutoresizingMaskIntoConstraints="NO" id="zxf-AI-Wbh">
                             <rect key="frame" x="0.0" y="0.0" width="52" height="50"/>
@@ -244,6 +244,7 @@
                         <constraint firstAttribute="height" constant="70" id="I8i-ty-pnz"/>
                         <constraint firstItem="2gi-I6-Ji1" firstAttribute="leading" secondItem="47z-SK-vaA" secondAttribute="trailing" id="JQL-4g-P2h"/>
                         <constraint firstItem="4Mu-kC-q9P" firstAttribute="top" secondItem="XF2-CC-Urm" secondAttribute="top" id="KYS-bG-UNM"/>
+                        <constraint firstItem="L4T-If-dB1" firstAttribute="leading" secondItem="ArU-K8-AHC" secondAttribute="leading" id="LgQ-gI-83V"/>
                         <constraint firstItem="5VZ-If-PMs" firstAttribute="leading" secondItem="zJ8-kV-g9T" secondAttribute="trailing" constant="30" id="NI1-y1-CSd"/>
                         <constraint firstItem="Coo-ps-E4T" firstAttribute="top" secondItem="XF2-CC-Urm" secondAttribute="top" id="NT9-0G-gv1"/>
                         <constraint firstItem="NB2-xD-eKz" firstAttribute="leading" secondItem="5VZ-If-PMs" secondAttribute="trailing" constant="30" id="Opx-Mp-56g"/>
@@ -259,8 +260,10 @@
                         <constraint firstItem="zxf-AI-Wbh" firstAttribute="top" secondItem="XF2-CC-Urm" secondAttribute="top" id="dKt-Em-qd8"/>
                         <constraint firstItem="rfG-zI-vKN" firstAttribute="top" secondItem="XF2-CC-Urm" secondAttribute="top" id="f0g-qF-onz"/>
                         <constraint firstItem="47z-SK-vaA" firstAttribute="top" secondItem="XF2-CC-Urm" secondAttribute="top" id="fHi-6Z-XJ2"/>
-                        <constraint firstAttribute="trailing" secondItem="2gi-I6-Ji1" secondAttribute="trailing" id="ggT-oF-DSb"/>
+                        <constraint firstAttribute="trailing" secondItem="2gi-I6-Ji1" secondAttribute="trailing" constant="90" id="ggT-oF-DSb"/>
                         <constraint firstItem="68M-KX-ugx" firstAttribute="leading" secondItem="NB2-xD-eKz" secondAttribute="trailing" constant="30" id="kdn-Iw-7yK"/>
+                        <constraint firstItem="5VZ-If-PMs" firstAttribute="leading" secondItem="XF2-CC-Urm" secondAttribute="leading" constant="84" id="ktr-a9-nc0"/>
+                        <constraint firstItem="rfG-zI-vKN" firstAttribute="centerX" secondItem="XF2-CC-Urm" secondAttribute="centerX" constant="-45" id="mXa-9p-2dQ"/>
                         <constraint firstItem="L4T-If-dB1" firstAttribute="top" secondItem="XF2-CC-Urm" secondAttribute="top" id="nCB-Nv-zbt"/>
                         <constraint firstItem="4Mu-kC-q9P" firstAttribute="leading" secondItem="47z-SK-vaA" secondAttribute="trailing" id="nV3-Zg-y28"/>
                         <constraint firstItem="ftg-DR-Fqw" firstAttribute="top" secondItem="XF2-CC-Urm" secondAttribute="top" id="pEG-Cm-b9I"/>
@@ -268,6 +271,14 @@
                         <constraint firstItem="yY5-zG-91N" firstAttribute="leading" secondItem="ftg-DR-Fqw" secondAttribute="trailing" id="sx9-d7-UMJ"/>
                         <constraint firstItem="zJ8-kV-g9T" firstAttribute="leading" secondItem="XF2-CC-Urm" secondAttribute="leading" id="uzh-1L-PW0"/>
                     </constraints>
+                    <variation key="default">
+                        <mask key="subviews">
+                            <exclude reference="zxf-AI-Wbh"/>
+                            <exclude reference="ftg-DR-Fqw"/>
+                            <exclude reference="yY5-zG-91N"/>
+                            <exclude reference="zJ8-kV-g9T"/>
+                        </mask>
+                    </variation>
                 </view>
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="gFp-nV-kuY">
                     <rect key="frame" x="20" y="326" width="388" height="40"/>

@@ -19,6 +19,7 @@ class PlayerInsideViewController: UIViewController {
     var tourny: String = ""
     var player: playersInside!
     var i = 0
+    
     var verticalLayout : VerticalLayout!
     var homeAcheivement = NSAttributedString()
     override func viewDidLoad() {
@@ -27,7 +28,8 @@ class PlayerInsideViewController: UIViewController {
         print("finalindex\(players)")
         setNavigationBarItem1()
         
-       
+        
+        
 self.verticalLayout = VerticalLayout(width: self.view.frame.width);
         
       player = playersInside(frame: CGRect(x: 0, y: 20, width: view.frame.width, height:983))
@@ -74,19 +76,19 @@ self.verticalLayout = VerticalLayout(width: self.view.frame.width);
                     self.player.playerHeight.text = self.playersInsideJSON["player"]["height"].stringValue
                     self.player.playerWeight.text = self.playersInsideJSON["player"]["weight"].stringValue
                     
-                    if self.playersInsideJSON["player"]["current"].count == 0 {
+                    if self.playersInsideJSON["player"]["current"]["status"].stringValue == "2" {
                         self.player.currentSeason.isHidden = true
                     }else {
                         self.player.currentSeason.isHidden = false
                     }
                     
-                    if self.playersInsideJSON["player"]["lastseason"].count == 0 {
+                    if self.playersInsideJSON["player"]["lastseason"]["status"].stringValue == "2" {
                         self.player.lastSeason.isHidden = true
                     }else {
                         self.player.lastSeason.isHidden = false
                     }
                     
-                    if self.playersInsideJSON["player"]["career"].count == 0 {
+                    if self.playersInsideJSON["player"]["career"]["status"].stringValue == "2" {
                         self.player.playerCareer.isHidden = true
                     }else {
                         self.player.playerCareer.isHidden = false
@@ -94,10 +96,13 @@ self.verticalLayout = VerticalLayout(width: self.view.frame.width);
             
                     for i in 0..<self.playersInsideJSON["achievmant"].count{
                         if self.playersInsideJSON["achievmant"][i]["name"].stringValue == "N/A" && self.playersInsideJSON["tournamentplayed"][i]["year"].stringValue == "N/A"{
+                            self.player.acheivements.isHidden = true
+                            self.player.descriptionTextView.isHidden = true
                             self.tournamentAchievement.append("")
                         }else{
                             self.tournamentAchievement.append(self.playersInsideJSON["achievmant"][i]["name"].stringValue + "(" +  self.playersInsideJSON["achievmant"][i]["year"].stringValue + ")  ")
-                           
+                            self.player.acheivements.isHidden = false
+                            self.player.descriptionTextView.isHidden = false
                             print("showme json \(String(describing: self.playersInsideJSON["achievmant"]["id"].string))")
                            
                             
@@ -111,11 +116,14 @@ self.verticalLayout = VerticalLayout(width: self.view.frame.width);
                     for i in 0..<self.playersInsideJSON["tournamentplayed"].count{
                         if self.playersInsideJSON["tournamentplayed"][i]["name"].stringValue == "N/A" && self.playersInsideJSON["tournamentplayed"][self.i]["year"].stringValue == "N/A"{
                             self.acheiveTournament.append("")
+                             self.player.tournamentsPlayed.isHidden = true
+                            self.player.descriptionTextView.isHidden = true
                         }else{
                             print( "players inside json \(self.playersInsideJSON["tournamentplayed"]):::\(self.playersInsideJSON["tournamentplayed"][i]["name"].stringValue)")
 
                             self.acheiveTournament.append(self.playersInsideJSON["tournamentplayed"][i]["name"].stringValue + "(" +  self.playersInsideJSON["tournamentplayed"][i]["year"].stringValue + ")  ")
-                            
+                             self.player.tournamentsPlayed.isHidden = false
+                            self.player.descriptionTextView.isHidden = false
                         }
                         
                         //        player.frame = CGRect(x: 0, y: 0, width: playersScroll.frame.width, height:())
@@ -140,7 +148,7 @@ self.verticalLayout = VerticalLayout(width: self.view.frame.width);
         
         player.tournamentsPlayed.addTarget(self, action: #selector(self.tournamentsPlayed(_:)), for: .touchUpInside)
          player.acheivements.addTarget(self, action: #selector(self.acheivements(_:)), for: .touchUpInside)
-
+        
     }
     
     
@@ -149,11 +157,11 @@ self.verticalLayout = VerticalLayout(width: self.view.frame.width);
        
         player.descriptionTextView.text = tournamentAchievement
         player.tournamentsPlayed.alpha = 1.0
-        player.acheivements.alpha = 0.6
+        player.acheivements.alpha = 0.5
     }
     
     func acheivements(_ sender: UIButton){
-        player.tournamentsPlayed.alpha = 0.6
+        player.tournamentsPlayed.alpha = 0.5
         player.acheivements.alpha = 1.0
         player.descriptionTextView.text = acheiveTournament
     }
@@ -179,8 +187,8 @@ self.verticalLayout = VerticalLayout(width: self.view.frame.width);
         self.player.totalPoints.text = self.playersInsideJSON["player"]["lastseason"]["successfultackles"].stringValue
         self.player.successfulTackles.text = self.playersInsideJSON["player"]["lastseason"]["unsuccessfultackles"].stringValue
         player.lastSeason.alpha = 1.0
-        player.playerCareer.alpha = 0.6
-        player.currentSeason.alpha = 0.6
+        player.playerCareer.alpha = 0.5
+        player.currentSeason.alpha = 0.5
     }
     
     func playerCareer(_ sender: UIButton){
@@ -199,9 +207,9 @@ self.verticalLayout = VerticalLayout(width: self.view.frame.width);
         self.player.tackles.text = self.playersInsideJSON["player"]["career"]["tackles"].stringValue
         self.player.successfulTackles.text = self.playersInsideJSON["player"]["career"]["successfultackles"].stringValue
         self.player.unsuccessfulTackles.text = self.playersInsideJSON["player"]["career"]["unsuccessfultackles"].stringValue
-        player.lastSeason.alpha = 0.6
+        player.lastSeason.alpha = 0.5
         player.playerCareer.alpha = 1.0
-        player.currentSeason.alpha = 0.6
+        player.currentSeason.alpha = 0.5
     }
 
     func currentCareer(_ sender: UIButton){
@@ -220,8 +228,8 @@ self.verticalLayout = VerticalLayout(width: self.view.frame.width);
         self.player.tackles.text = self.playersInsideJSON["player"]["current"]["tackles"].stringValue
         self.player.successfulTackles.text = self.playersInsideJSON["player"]["current"]["successfultackles"].stringValue
         self.player.unsuccessfulTackles.text = self.playersInsideJSON["player"]["current"]["unsuccessfultackles"].stringValue
-        player.lastSeason.alpha = 0.6
-        player.playerCareer.alpha = 0.6
+        player.lastSeason.alpha = 0.5
+        player.playerCareer.alpha = 0.5
         player.currentSeason.alpha = 1.0
     }
 
