@@ -120,16 +120,10 @@ class PointTableController: UIViewController,UITableViewDelegate,UITableViewData
             
             
             if((pointJson[indexPath.row]["name"].string) != nil) {
-                let mediaBox = table(frame: CGRect(x: 0,y: 8,width: self.view.frame.width-32,height: 230));
+                let mediaBox = table(frame: CGRect(x: 0,y: 8,width: self.view.frame.width-32,height: 180));
                 mediaBox.tableTeam.text = pointJson[indexPath.row]["name"].string
                 mediaBox.tableTeam.backgroundColor = UIColor.clear
-                                mediaBox.tableNo.text = String((indexPath as NSIndexPath).row  + 1)
-                mediaBox.tablePlayed.text = pointJson[indexPath.row]["played"].string
-                mediaBox.tableLost.text = pointJson[indexPath.row]["lost"].string
-                mediaBox.tableWon.text = pointJson[indexPath.row]["wins"].string
-                mediaBox.tableDraw.text = pointJson[indexPath.row]["draw"].string
-                mediaBox.tablePoint.text = pointJson[indexPath.row]["point"].string
-                if (pointJson[indexPath.row]["name"].string == "Jaipur Pink Panthers") {
+                               if (pointJson[indexPath.row]["name"].string == "Jaipur Pink Panthers") {
                     mediaBox.tableTeam.font = font
                     mediaBox.tableNo.font = font
                     mediaBox.tablePlayed.font = font
@@ -155,6 +149,13 @@ class PointTableController: UIViewController,UITableViewDelegate,UITableViewData
                     //                mediaBox.tableWon.textColor = lightBlueColor
                     //                mediaBox.tablePoint.textColor = lightBlueColor
                 }
+                mediaBox.tableNo.text = String((indexPath as NSIndexPath).row  + 1)
+                mediaBox.tablePlayed.text = pointJson[indexPath.row]["played"].string
+                mediaBox.tableLost.text = pointJson[indexPath.row]["lost"].string
+                mediaBox.tableWon.text = pointJson[indexPath.row]["wins"].string
+                mediaBox.tableDraw.text = pointJson[indexPath.row]["draw"].string
+                mediaBox.tablePoint.text = pointJson[indexPath.row]["point"].string
+
 
                 cell.addSubview(mediaBox)
             }

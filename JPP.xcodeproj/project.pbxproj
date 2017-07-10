@@ -1101,7 +1101,7 @@
 					"$(PROJECT_DIR)/JPP",
 				);
 				INFOPLIST_FILE = JPP/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jaipurpinkpanthers.iphone;
 				PRODUCT_NAME = JPP;
@@ -1130,7 +1130,7 @@
 					"$(PROJECT_DIR)/JPP",
 				);
 				INFOPLIST_FILE = JPP/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jaipurpinkpanthers.iphone;
 				PRODUCT_NAME = JPP;
