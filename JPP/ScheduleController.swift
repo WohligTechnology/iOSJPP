@@ -148,8 +148,8 @@ class ScheduleController: UIViewController {
                     updates.matchDate.text = json[0]["starttimedate"].stringValue
                     let dateFormatter = DateFormatter()
                     dateFormatter.dateFormat = "dd MMM yyyy, HH:mm"
-                    updates.EventTimeTop = dateFormatter.date(from: json[0]["starttimedate"].string!)!
-                    updates.EventNameTop = json[0]["team1"].stringValue + " VS " +  json[0]["team2"].stringValue
+//                    updates.EventTimeTop = dateFormatter.date(from: json[0]["starttimedate"].stringValue)!
+//                    updates.EventNameTop = json[0]["team1"].stringValue + " VS " +  json[0]["team2"].stringValue
                     if(json[0]["id"]).boolValue {
                         self.verticalLayout.addSubview(updates)
                         

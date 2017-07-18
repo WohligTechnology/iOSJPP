@@ -15,14 +15,14 @@ public struct SlideMenuOptions {
     public static var shadowOpacity: CGFloat = 0.0
     public static var shadowRadius: CGFloat = 0.0
     public static var shadowOffset: CGSize = CGSize(width: 0,height: 0)
-    public static var panFromBezel: Bool = true
+    public static var panFromBezel: Bool = false
     public static var animationDuration: CGFloat = 0.4
     public static var rightViewWidth: CGFloat = 270.0
     public static var rightBezelWidth: CGFloat? = 16.0
-    public static var rightPanFromBezel: Bool = true
+    public static var rightPanFromBezel: Bool = false
     public static var hideStatusBar: Bool = true
     public static var pointOfNoReturnWidth: CGFloat = 44.0
-    public static var simultaneousGestureRecognizers: Bool = true
+    public static var simultaneousGestureRecognizers: Bool = false
 	public static var opacityViewBackgroundColor: UIColor = UIColor.black
 }
 
@@ -307,7 +307,7 @@ open class SlideMenuController: UIViewController, UIGestureRecognizerDelegate {
                 LeftPanState.wasOpenAtStartOfPan = isLeftOpen()
                 LeftPanState.wasHiddenAtStartOfPan = isLeftHidden()
                 
-                leftViewController?.beginAppearanceTransition(LeftPanState.wasHiddenAtStartOfPan, animated: true)
+                leftViewController?.beginAppearanceTransition(LeftPanState.wasHiddenAtStartOfPan, animated: false)
                 addShadowToView(leftContainerView)
                 setOpenWindowLevel()
             case UIGestureRecognizerState.changed:
@@ -323,7 +323,7 @@ open class SlideMenuController: UIViewController, UIGestureRecognizerDelegate {
                 
                 if panInfo.action == .open {
                     if !LeftPanState.wasHiddenAtStartOfPan {
-                        leftViewController?.beginAppearanceTransition(true, animated: true)
+                        leftViewController?.beginAppearanceTransition(false, animated: true)
                     }
                     openLeftWithVelocity(panInfo.velocity)
                     track(.flickOpen)
@@ -386,7 +386,7 @@ open class SlideMenuController: UIViewController, UIGestureRecognizerDelegate {
             
             if panInfo.action == .open {
                 if !RightPanState.wasHiddenAtStartOfPan {
-                    rightViewController?.beginAppearanceTransition(true, animated: true)
+                    rightViewController?.beginAppearanceTransition(false, animated: true)
                 }
                 openRightWithVelocity(panInfo.velocity)
             } else {

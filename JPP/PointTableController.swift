@@ -15,7 +15,7 @@ class PointTableController: UIViewController,UITableViewDelegate,UITableViewData
     @IBOutlet weak var tableHeader: table!
     var sponsorImage: JSON = []
     
-        let font = UIFont(name: "Oswald-Regular", size: 14.0)
+        let font = UIFont(name: "Oswald-Regular", size: 13.0)
         let lightBlueColor = UIColor(red: 196/255, green: 240/255, blue: 255/255, alpha: 1)
         
         override func viewDidAppear(_ animated: Bool) {
@@ -117,10 +117,11 @@ class PointTableController: UIViewController,UITableViewDelegate,UITableViewData
             tableView.allowsSelection = false
             tableView.tableFooterView = UIView()
             let cell = tableView.dequeueReusableCell(withIdentifier: "pointTableCell", for: indexPath)
-            
+//            let point = CGPoint(x: 0, y: 50)
+//            pointTable.setContentOffset(point, animated: true)
             
             if((pointJson[indexPath.row]["name"].string) != nil) {
-                let mediaBox = table(frame: CGRect(x: 0,y: 8,width: self.view.frame.width-32,height: 180));
+                let mediaBox = table(frame: CGRect(x: 0,y: 8,width: self.view.frame.width-32,height: 50));
                 mediaBox.tableTeam.text = pointJson[indexPath.row]["name"].string
                 mediaBox.tableTeam.backgroundColor = UIColor.clear
                                if (pointJson[indexPath.row]["name"].string == "Jaipur Pink Panthers") {

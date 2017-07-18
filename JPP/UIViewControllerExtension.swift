@@ -20,14 +20,14 @@ extension UIViewController {
         self.navigationController?.toolbar.barTintColor = BlueColor
         self.navigationController?.navigationBar.barTintColor = BlueColor
         
-        
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
 //        self.addRightBarButtonWithImage(UIImage(named: "ic_notifications_black_24dp")!)
         self.slideMenuController()?.removeLeftGestures()
         self.slideMenuController()?.removeRightGestures()
         self.slideMenuController()?.addLeftGestures()
         self.slideMenuController()?.addRightGestures()
         
-        
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
         let logo = UIImage(named: "ic_action_panther.png")
         let imageView = UIImageView(image:logo)
         
@@ -50,13 +50,13 @@ extension UIViewController {
         self.navigationController?.toolbar.barTintColor = BlueColor
         self.navigationController?.navigationBar.barTintColor = BlueColor
         
-        
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
         
         self.slideMenuController()?.removeLeftGestures()
         self.slideMenuController()?.removeRightGestures()
         self.slideMenuController()?.addLeftGestures()
         self.slideMenuController()?.addRightGestures()
-        
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
         
         let logo = UIImage(named: "ic_action_panther.png")
         let imageView = UIImageView(image:logo)
@@ -104,13 +104,13 @@ extension UIViewController {
         self.navigationController?.toolbar.barTintColor = BlueColor
         self.navigationController?.navigationBar.barTintColor = BlueColor
         
-        
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
         //self.addRightBarButtonWithImage(UIImage(named: "ic_notifications_black_24dp")!)
         self.slideMenuController()?.removeLeftGestures()
         self.slideMenuController()?.removeRightGestures()
         self.slideMenuController()?.addLeftGestures()
         self.slideMenuController()?.addRightGestures()
-        
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
         self.navigationController?.navigationBar.topItem!.title = text;
         
     }
@@ -122,5 +122,6 @@ extension UIViewController {
         self.navigationItem.rightBarButtonItem = nil
         self.slideMenuController()?.removeLeftGestures()
         self.slideMenuController()?.removeRightGestures()
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
     }
 }

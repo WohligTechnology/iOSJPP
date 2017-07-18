@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -24,7 +23,7 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="382" height="77"/>
+            <rect key="frame" x="0.0" y="0.0" width="392" height="77"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kitting Partner:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TgU-fV-PPd">
@@ -53,16 +52,16 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GGi-bQ-ceL">
-                    <rect key="frame" x="-10" y="0.0" width="402" height="77"/>
+                    <rect key="frame" x="0.0" y="0.0" width="392" height="77"/>
                 </imageView>
             </subviews>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="GGi-bQ-ceL" secondAttribute="bottom" id="4PM-kk-a1b"/>
                 <constraint firstItem="71s-xO-4x9" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="6" id="7aI-oi-SWR"/>
-                <constraint firstItem="GGi-bQ-ceL" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="-10" id="7zq-D2-h8F"/>
+                <constraint firstItem="GGi-bQ-ceL" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="7zq-D2-h8F"/>
                 <constraint firstItem="TgU-fV-PPd" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Bxu-cs-zoc"/>
                 <constraint firstItem="GGi-bQ-ceL" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="FKC-I8-oBx"/>
-                <constraint firstAttribute="trailing" secondItem="GGi-bQ-ceL" secondAttribute="trailing" constant="-10" id="XhX-j6-3ee"/>
+                <constraint firstAttribute="trailing" secondItem="GGi-bQ-ceL" secondAttribute="trailing" id="XhX-j6-3ee"/>
                 <constraint firstItem="YI5-nE-kl0" firstAttribute="top" secondItem="TgU-fV-PPd" secondAttribute="bottom" id="dZN-mp-Lkn"/>
                 <constraint firstItem="TgU-fV-PPd" firstAttribute="top" secondItem="71s-xO-4x9" secondAttribute="bottom" constant="2.5" id="db2-ad-8LP"/>
                 <constraint firstItem="71s-xO-4x9" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" constant="0.5" id="rlF-W6-FPv"/>
@@ -75,7 +74,7 @@
                     <exclude reference="71s-xO-4x9"/>
                 </mask>
             </variation>
-            <point key="canvasLocation" x="224" y="162.5"/>
+            <point key="canvasLocation" x="229" y="162.5"/>
         </view>
     </objects>
     <resources>

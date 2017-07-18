@@ -468,7 +468,7 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                     
                     thumbnail.thumbImage.hnk_setImageFromURL(rest.getImageSizeCache(self.getPicture["image"].stringValue))
                     print("showThumbnail\(thumbnail.thumbImage)")
-                     thumbnail.thumbImage.contentMode = .scaleAspectFill
+                     thumbnail.thumbImage.contentMode = .scaleAspectFit
                     self.verticalLayout.addSubview(thumbnail);
                     
                                        self.resizeView(8)
@@ -601,10 +601,11 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                     imageView.frame.size.height = CGFloat(topDistance + 44 + 8)
                     
                     PinkBox.addSubview(insideTable);
+                     self.resizeView(8);
                 }
                 
                 // SPONSERS SECTION
-                let sponserView = sponsorsView(frame: CGRect(x: 8, y: 8, width: self.view.frame.size.width - 16, height: 77))
+                let sponserView = sponsorsView(frame: CGRect(x: 8, y: 16, width: self.view.frame.size.width - 16, height: 77))
 //                let sponserimage = UIImageView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width - 16, height: 140))
 //                sponserimage.image = UIImage(named: "sponsors")
 //                sponserimage.contentMode = UIViewContentMode.scaleAspectFit
@@ -662,7 +663,7 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
         GHomeController = self;
         
         self.setNavigationBarItem()
-        
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
         //refreshControl.addSubview(loaderView)
         refreshControl.backgroundColor = lightBlueColor
         refreshControl.tintColor = PinkColor
