@@ -41,7 +41,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JAIPUR PINK PANTHER" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bCC-gT-Key">
-                            <rect key="frame" x="40" y="9.5" width="103.5" height="19.5"/>
+                            <rect key="frame" x="40" y="10.5" width="103.5" height="19.5"/>
                             <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="13"/>
                             <nil key="highlightedColor"/>
                         </label>

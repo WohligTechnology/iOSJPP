@@ -14,8 +14,10 @@ class PointTableController: UIViewController,UITableViewDelegate,UITableViewData
     @IBOutlet weak var pointTable: UITableView!
     @IBOutlet weak var tableHeader: table!
     var sponsorImage: JSON = []
+    var inx: Int = 0
     
         let font = UIFont(name: "Oswald-Regular", size: 13.0)
+        let fontOriginal = UIFont(name: "Oswald-Light", size: 13.0)
         let lightBlueColor = UIColor(red: 196/255, green: 240/255, blue: 255/255, alpha: 1)
         
         override func viewDidAppear(_ animated: Bool) {
@@ -35,6 +37,7 @@ class PointTableController: UIViewController,UITableViewDelegate,UITableViewData
                         print("hellojson\(json)")
                         self.sponsorImage = json
                         self.sponsorShipImage.hnk_setImageFromURL(rest.getImageSizeCache(self.sponsorImage["image"].stringValue))
+                        print("demodemodemo",self.sponsorShipImage.frame.size.height)
                         
                     }
                 })
@@ -116,54 +119,70 @@ class PointTableController: UIViewController,UITableViewDelegate,UITableViewData
             tableView.separatorStyle = UITableViewCellSeparatorStyle.none
             tableView.allowsSelection = false
             tableView.tableFooterView = UIView()
-            let cell = tableView.dequeueReusableCell(withIdentifier: "pointTableCell", for: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: "pointTableCell", for: indexPath) as! PointTableCellClass
 //            let point = CGPoint(x: 0, y: 50)
 //            pointTable.setContentOffset(point, animated: true)
             
+            
             if((pointJson[indexPath.row]["name"].string) != nil) {
-                let mediaBox = table(frame: CGRect(x: 0,y: 8,width: self.view.frame.width-32,height: 50));
-                mediaBox.tableTeam.text = pointJson[indexPath.row]["name"].string
-                mediaBox.tableTeam.backgroundColor = UIColor.clear
-                               if (pointJson[indexPath.row]["name"].string == "Jaipur Pink Panthers") {
-                    mediaBox.tableTeam.font = font
-                    mediaBox.tableNo.font = font
-                    mediaBox.tablePlayed.font = font
-                    mediaBox.tableLost.font = font
-                    mediaBox.tableWon.font = font
-                    mediaBox.tableDraw.font = font
-                    mediaBox.tablePoint.font = font
-                    mediaBox.tableTeam.backgroundColor = UIColor.clear
-                    mediaBox.tableNo.textColor = PinkColor
-                    mediaBox.tableTeam.textColor = PinkColor
-                    mediaBox.tablePlayed.textColor = PinkColor
-                    mediaBox.tableWon.textColor = PinkColor
-                    mediaBox.tableLost.textColor = PinkColor
-                    mediaBox.tableDraw.textColor = PinkColor
-                    mediaBox.tablePoint.textColor = PinkColor
+//                let mediaBox = table(frame: CGRect(x: 0,y: 8,width: self.view.frame.width-32,height: 50));
+                cell.name.text = pointJson[indexPath.row]["name"].string
+                cell.name.backgroundColor = UIColor.clear
+                
+                if (pointJson[indexPath.row]["name"].string == "Jaipur Pink Panthers") {
+                    cell.name.font = font
+                    cell.no.font = font
+                    cell.played.font = font
+                    cell.lost.font = font
+                    cell.wins.font = font
+                    cell.draw.font = font
+                    cell.point.font = font
+                    cell.name.backgroundColor = UIColor.clear
+                    cell.no.textColor = PinkColor
+                    cell.name.textColor = PinkColor
+                    cell.played.textColor = PinkColor
+                    cell.wins.textColor = PinkColor
+                    cell.lost.textColor = PinkColor
+                    cell.draw.textColor = PinkColor
+                    cell.point.textColor = PinkColor
                     
-                    mediaBox.backgroundColor = UIColor(red: 77/255, green: 203/255, blue: 244/255, alpha: 1)
+                    cell.backgroundColor = UIColor(red: 77/255, green: 203/255, blue: 244/255, alpha: 1)
                     
-                    //                mediaBox.tableTeam.textColor = lightBlueColor
-                    //                mediaBox.tableNo.textColor = lightBlueColor
-                    //                mediaBox.tablePlayed.textColor = lightBlueColor
-                    //                mediaBox.tableLost.textColor = lightBlueColor
-                    //                mediaBox.tableWon.textColor = lightBlueColor
-                    //                mediaBox.tablePoint.textColor = lightBlueColor
+                }else{
+                    cell.name.font = fontOriginal
+                    cell.no.font = fontOriginal
+                    cell.played.font = fontOriginal
+                    cell.lost.font = fontOriginal
+                    cell.wins.font = fontOriginal
+                    cell.draw.font = fontOriginal
+                    cell.point.font = fontOriginal
+                    cell.name.backgroundColor = UIColor.clear
+                    cell.no.textColor = UIColor.black
+                    cell.name.textColor = UIColor.black
+                    cell.played.textColor = UIColor.black
+                    cell.wins.textColor = UIColor.black
+                    cell.lost.textColor = UIColor.black
+                    cell.draw.textColor = UIColor.black
+                    cell.point.textColor = UIColor.black
+                    
+                    cell.backgroundColor = UIColor(red: 77/255, green: 203/255, blue: 244/255, alpha: 1)
+
                 }
-                mediaBox.tableNo.text = String((indexPath as NSIndexPath).row  + 1)
-                mediaBox.tablePlayed.text = pointJson[indexPath.row]["played"].string
-                mediaBox.tableLost.text = pointJson[indexPath.row]["lost"].string
-                mediaBox.tableWon.text = pointJson[indexPath.row]["wins"].string
-                mediaBox.tableDraw.text = pointJson[indexPath.row]["draw"].string
-                mediaBox.tablePoint.text = pointJson[indexPath.row]["point"].string
+                cell.no.text = String((indexPath as NSIndexPath).row  + 1)
+                cell.played.text = pointJson[indexPath.row]["played"].string
+                cell.lost.text = pointJson[indexPath.row]["lost"].string
+                cell.wins.text = pointJson[indexPath.row]["wins"].string
+                cell.draw.text = pointJson[indexPath.row]["draw"].string
+                cell.point.text = pointJson[indexPath.row]["point"].string
 
-
-                cell.addSubview(mediaBox)
+                
             }
             
             
             return cell
         }
+    
+        
         
         func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
             
@@ -182,4 +201,15 @@ class PointTableController: UIViewController,UITableViewDelegate,UITableViewData
          }
          */
         
+}
+
+class PointTableCellClass: UITableViewCell {
+    
+    @IBOutlet weak var played: UILabel!
+    @IBOutlet weak var wins: UILabel!
+    @IBOutlet weak var lost: UILabel!
+    @IBOutlet weak var draw: UILabel!
+    @IBOutlet weak var point: UILabel!
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var no: UILabel!
 }
