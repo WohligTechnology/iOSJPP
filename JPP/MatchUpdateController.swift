@@ -64,7 +64,15 @@ class MatchUpdateController: UIViewController, UITableViewDelegate, UITableViewD
         
         if((matchupdateJSON[indexPath.row]["matchtime"].string) != nil) {
             let matchupdateView = matchupdate(frame: CGRect(x: 0,y: 0,width: self.view.frame.width-16,height: 322));
+            if indexPath.row == 0 {
+                matchupdateView.matchTitle.text = "FINAL"
+
+            }else if indexPath.row == 1 {
+                matchupdateView.matchTitle.text = "SEMI-FINAL"
+
+            }else{
             matchupdateView.matchTitle.text = "MATCH - " + String(matchupdateJSON.count - indexPath.row)
+            }
             matchupdateView.teamoneImage.hnk_setImageFromURL(rest.getImageSizeCache(matchupdateJSON[indexPath.row]["appteamimage1"].stringValue))
             matchupdateView.teamtwoImage.hnk_setImageFromURL(rest.getImageSizeCache(matchupdateJSON[indexPath.row]["appteamimage2"].stringValue))
             matchupdateView.stadiumName.text = matchupdateJSON[indexPath.row]["stadium"].string
