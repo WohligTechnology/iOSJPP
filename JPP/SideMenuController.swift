@@ -24,6 +24,7 @@ class SideMenuController: UIViewController, UITableViewDataSource, UITableViewDe
     var worldcupController:UIViewController!
     var fancornerController:UIViewController!
     var aboutsController:UIViewController!
+    var sponsorController:UIViewController!
 //    var playersInsideController:UIViewController!
     
     override func viewDidLoad() {
@@ -91,6 +92,9 @@ class SideMenuController: UIViewController, UITableViewDataSource, UITableViewDe
         let aboutsController = storyboard.instantiateViewController(withIdentifier: "about") as! AboutController
         self.aboutsController = UINavigationController(rootViewController: aboutsController)
         
+        let sponsorController = storyboard.instantiateViewController(withIdentifier: "sponsor") as! SponsorsViewController
+        self.sponsorController = UINavigationController(rootViewController: sponsorController)
+
 //        let playersInsideController = storyboard.instantiateViewController(withIdentifier: "playersInside") as!
 //        PlayerInsideViewController
 //        self.playersInsideController = UINavigationController(rootViewController: playersInsideController)
@@ -109,8 +113,8 @@ class SideMenuController: UIViewController, UITableViewDataSource, UITableViewDe
         return 1
     }
     
-    var data = ["HOME", "SCHEDULE", "SEASON 4 REVIEW", "GALLERY", "JPP TV", "NEWS & MEDIA","KNOW YOUR PANTHERS","WALLPAPERS", "POINTS TABLE", "FAN CORNER","ABOUT"]
-    var dataimage = ["home.png", "fixtures.png", "matchupdate.png", "gallery.png", "jpptv.png", "newsicon.png","know.png","galleryinside.png","point.png", "fan.png","about.png"]
+    var data = ["HOME", "SCHEDULE", "MATCH UPDATES", "GALLERY", "JPP TV", "NEWS & MEDIA","KNOW YOUR PANTHERS","WALLPAPERS", "POINTS TABLE", "FAN CORNER", "ABOUT", "SPONSORS"]
+    var dataimage = ["home.png", "fixtures.png", "matchupdate.png", "gallery.png", "jpptv.png", "newsicon.png","know.png","galleryinside.png","point.png", "fan.png","about.png", "sponsorsimg.png"]
     
     // MARK: - UITableViewDataSource
     
@@ -167,6 +171,8 @@ class SideMenuController: UIViewController, UITableViewDataSource, UITableViewDe
             self.slideMenuController()?.changeMainViewController(self.fancornerController, close: true)
         case 10:
             self.slideMenuController()?.changeMainViewController(self.aboutsController, close: true)
+        case 11:
+            self.slideMenuController()?.changeMainViewController(self.sponsorController, close: true)
         default:
             self.slideMenuController()?.changeMainViewController(self.homeController, close: true)
         }

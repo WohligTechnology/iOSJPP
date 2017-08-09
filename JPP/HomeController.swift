@@ -15,7 +15,7 @@ let refreshControl = UIRefreshControl()
 var timer = Timer()
 let updates = doneMatch()
 class HomeController: UIViewController, UIGestureRecognizerDelegate {
-
+    var pointsTable: JSON = []
     
     func checkCalendarAuthorizationStatus() {
         let status = EKEventStore.authorizationStatus(for: EKEntityType.event)
@@ -73,7 +73,7 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
     var diffHour = 0
     var diffMin = 0
     
-    let font = UIFont(name: "Oswald-Regular", size: 14.0)
+    let font = UIFont(name: "Oswald-Regular", size: 13.0)
     let blue = UIColor(red: 77/255, green: 203/255, blue: 244/255, alpha: 1)
     
     var refeshController = UIRefreshControl()
@@ -548,35 +548,38 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                 
                 
                 PinkBox.addSubview(tableHeader)
+               
+                
+                let zone = ZoneUI(frame: CGRect(x: 8, y: 66, width: PinkBox.frame.width - 16, height: 30))
+                PinkBox.addSubview(zone)
                 
                 let topSpaceinPink = 8;
                 let spacingPink = 3;
                 
-                
-                
-                
-                for i in 0..<json["points"].count
+               
+               
+                for i in 0..<self.pointsTable[0]["pointsTableA"].count
                 {
                     
-                    let topDistance = topSpaceinPink+spacingPink+((44+spacingPink)*(i+1));
+                    let topDistance = topSpaceinPink+spacingPink + 38 + ((44  + spacingPink)*(i+1));
                     
                     let insideTable = table(frame: CGRect(x: 8,y: CGFloat(topDistance),width: PinkBox.frame.width-16,height: 40));
                     
                     insideTable.tableNo.text = String(i+1)
                     
-                    insideTable.tableTeam.text = json["points"][i]["name"].string
+                    insideTable.tableTeam.text = self.pointsTable[0]["pointsTableA"][i]["name"].string
                     
-                    insideTable.tablePlayed.text = json["points"][i]["played"].string
+                    insideTable.tablePlayed.text = self.pointsTable[0]["pointsTableA"][i]["played"].string
                     
-                    insideTable.tableWon.text = json["points"][i]["wins"].string
+                    insideTable.tableWon.text = self.pointsTable[0]["pointsTableA"][i]["wins"].string
                     
-                    insideTable.tableDraw.text = json["points"][i]["draw"].string
+                    insideTable.tableDraw.text = self.pointsTable[0]["pointsTableA"][i]["draw"].string
                     
-                    insideTable.tableLost.text = json["points"][i]["lost"].string
+                    insideTable.tableLost.text = self.pointsTable[0]["pointsTableA"][i]["lost"].string
                     
-                    insideTable.tablePoint.text = json["points"][i]["point"].string
+                    insideTable.tablePoint.text = self.pointsTable[0]["pointsTableA"][i]["point"].string
                     
-                    if (json["points"][i]["name"].string == "Jaipur Pink Panthers") {
+                    if (self.pointsTable[0]["pointsTableA"][i]["name"].string == "Jaipur Pink Panthers") {
                         insideTable.tableNo.font = self.font
                         insideTable.tableTeam.font = self.font
                         insideTable.tablePlayed.font = self.font
@@ -596,24 +599,94 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                         insideTable.backgroundColor = UIColor(red: 77/255, green: 203/255, blue: 244/255, alpha: 1)
                     }
                     
+                    
                     PinkBox.frame.size.height = CGFloat(topDistance + 44 + 8)
+//                    zone.frame.size.height = CGFloat(topDistance + 44 + 8)
                     
                     imageView.frame.size.height = CGFloat(topDistance + 44 + 8)
                     
                     PinkBox.addSubview(insideTable);
-                     self.resizeView(8);
+                    
                 }
                 
-                // SPONSERS SECTION
-                let sponserView = sponsorsView(frame: CGRect(x: 8, y: 16, width: self.view.frame.size.width - 16, height: 77))
-//                let sponserimage = UIImageView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width - 16, height: 140))
-//                sponserimage.image = UIImage(named: "sponsors")
-//                sponserimage.contentMode = UIViewContentMode.scaleAspectFit
-//                sponserView.addSubview(sponserimage)
-                sponserView.sponsorImage.hnk_setImageFromURL(rest.getImageSizeCache(self.HomeJSON["sponsorimage"]["image"].stringValue))
-                self.verticalLayout.addSubview(sponserView)
+                let zone1 = ZoneUI(frame: CGRect(x: 8, y: 386, width: PinkBox.frame.width - 16, height: 30))
+//                zone1.zoneView.backgroundColor = UIColor(red: 77/255, green: 203/255, blue: 244/255, alpha: 1)
+                zone1.zoneLabel.text = "Zone B"
+                PinkBox.addSubview(zone1)
                 
-                self.resizeView(8);
+                for i in 0..<self.pointsTable[0]["pointsTableA"].count
+                {
+                    
+                    let topDistance1 = topSpaceinPink+spacingPink + 358 + ((44  + spacingPink)*(i+1));
+                    
+                    let insideTable1 = table(frame: CGRect(x: 8,y: CGFloat(topDistance1),width: PinkBox.frame.width-16,height: 40));
+                    
+                    insideTable1.tableNo.text = String(i+1)
+                    
+                    insideTable1.tableTeam.text = self.pointsTable[1]["pointsTableB"][i]["name"].string
+                    
+                    insideTable1.tablePlayed.text = self.pointsTable[1]["pointsTableB"][i]["played"].string
+                    
+                    insideTable1.tableWon.text = self.pointsTable[1]["pointsTableB"][i]["wins"].string
+                    
+                    insideTable1.tableDraw.text = self.pointsTable[1]["pointsTableB"][i]["draw"].string
+                    
+                    insideTable1.tableLost.text = self.pointsTable[1]["pointsTableB"][i]["lost"].string
+                    
+                    insideTable1.tablePoint.text = self.pointsTable[1]["pointsTableB"][i]["point"].string
+                    
+                    if (self.pointsTable[1]["pointsTableB"][i]["name"].string == "Jaipur Pink Panthers") {
+                        insideTable1.tableNo.font = self.font
+                        insideTable1.tableTeam.font = self.font
+                        insideTable1.tablePlayed.font = self.font
+                        insideTable1.tableWon.font = self.font
+                        insideTable1.tableLost.font = self.font
+                        insideTable1.tableDraw.font = self.font
+                        insideTable1.tablePoint.font = self.font
+                        
+                        insideTable1.tableNo.textColor = PinkColor
+                        insideTable1.tableTeam.textColor = PinkColor
+                        insideTable1.tablePlayed.textColor = PinkColor
+                        insideTable1.tableWon.textColor = PinkColor
+                        insideTable1.tableLost.textColor = PinkColor
+                        insideTable1.tableDraw.textColor = PinkColor
+                        insideTable1.tablePoint.textColor = PinkColor
+                        
+                        insideTable1.backgroundColor = UIColor(red: 77/255, green: 203/255, blue: 244/255, alpha: 1)
+                    }
+                    
+                    
+                    PinkBox.frame.size.height = CGFloat(topDistance1 + 44 + 8)
+                    //                    zone.frame.size.height = CGFloat(topDistance + 44 + 8)
+                    
+                    imageView.frame.size.height = CGFloat(topDistance1  + 44 + 8)
+                    
+                    PinkBox.addSubview(insideTable1);
+                    self.resizeView(8);
+                }
+
+                
+                // SPONSERS SECTION
+                
+//                let sponserView = sponsorsView(frame: CGRect(x: 8, y: 16, width: self.view.frame.size.width - 16, height: 77))
+//                
+//                print("imagesize\(sponserView)")
+////                let sponserimage = UIImageView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width - 16, height: 140))
+////                sponserimage.image = UIImage(named: "sponsors")
+//                
+////                sponserView.addSubview(sponserimage)
+//                  sponserView.sponsorImage.hnk_setImageFromURL(rest.getImageSizeCache(self.HomeJSON["sponsorimage"]["image"].stringValue))
+//                sponserView.sponsorImage.autoresizingMask = UIViewAutoresizing.flexibleBottomMargin
+//                sponserView.sponsorImage.autoresizingMask = UIViewAutoresizing.flexibleHeight
+//                sponserView.sponsorImage.autoresizingMask = UIViewAutoresizing.flexibleRightMargin
+//                sponserView.sponsorImage.autoresizingMask = UIViewAutoresizing.flexibleLeftMargin
+//                sponserView.sponsorImage.autoresizingMask = UIViewAutoresizing.flexibleTopMargin
+//                sponserView.sponsorImage.autoresizingMask = UIViewAutoresizing.flexibleWidth
+//
+//                
+//                self.verticalLayout.addSubview(sponserView)
+//                
+//                self.resizeView(8);
             })
             
             DispatchQueue.main.async(execute: {
@@ -625,6 +698,25 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     func home(){
+        
+        
+        
+        rest.getPointTable({(json:JSON) -> () in
+            DispatchQueue.main.sync(execute: {
+                if json == 401 {
+                    print("No Data Found")
+                }else{
+                    
+                    print("hellojson\(json)")
+                    self.pointsTable = json
+                    
+                    print("pointsTable\(self.pointsTable)")
+                }
+            })
+            
+        })
+        
+        
         let thumbnail = thumbnailImage(frame: CGRect.zero)
         rest.getapphomeimage({(json:JSON) -> () in
             DispatchQueue.main.sync(execute: {
@@ -676,7 +768,7 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
         home()
         callhome()
        
-        
+       
     }
     
    

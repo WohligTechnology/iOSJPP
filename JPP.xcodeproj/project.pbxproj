@@ -90,6 +90,9 @@
 		78238FE71C57AC170067E7D5 /* trapezium.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78238FE61C57AC170067E7D5 /* trapezium.xib */; };
 		78238FE91C57AC350067E7D5 /* trapezium.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78238FE81C57AC350067E7D5 /* trapezium.swift */; };
 		8403B8F81EEFC7E00024BF1A /* dreamwalker.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8403B8F71EEFC7E00024BF1A /* dreamwalker.ttf */; };
+		8431967D1F31DC3B00B8C469 /* ZoneUI.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8431967C1F31DC3B00B8C469 /* ZoneUI.xib */; };
+		8431967F1F31DCFE00B8C469 /* ZoneUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8431967E1F31DCFE00B8C469 /* ZoneUI.swift */; };
+		843196811F31F9CA00B8C469 /* SponsorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843196801F31F9CA00B8C469 /* SponsorsViewController.swift */; };
 		843A0AF71EFBAE6F00D0F5DC /* bgImage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 843A0AF61EFBAE6F00D0F5DC /* bgImage.xib */; };
 		843A0AFD1EFBAF7C00D0F5DC /* bgImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843A0AFC1EFBAF7C00D0F5DC /* bgImage.swift */; };
 		845F172D1F3CC47400CFC537 /* FacebookController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845F172C1F3CC47400CFC537 /* FacebookController.swift */; };
@@ -220,6 +223,9 @@
 		78238FE81C57AC350067E7D5 /* trapezium.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = trapezium.swift; sourceTree = "<group>"; };
 		7A941C4902E5C537FC7EB0A6 /* Pods-JPP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JPP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JPP/Pods-JPP.debug.xcconfig"; sourceTree = "<group>"; };
 		8403B8F71EEFC7E00024BF1A /* dreamwalker.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = dreamwalker.ttf; sourceTree = "<group>"; };
+		8431967C1F31DC3B00B8C469 /* ZoneUI.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZoneUI.xib; sourceTree = "<group>"; };
+		8431967E1F31DCFE00B8C469 /* ZoneUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZoneUI.swift; sourceTree = "<group>"; };
+		843196801F31F9CA00B8C469 /* SponsorsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SponsorsViewController.swift; sourceTree = "<group>"; };
 		843A0AF61EFBAE6F00D0F5DC /* bgImage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = bgImage.xib; sourceTree = "<group>"; };
 		843A0AFC1EFBAF7C00D0F5DC /* bgImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bgImage.swift; sourceTree = "<group>"; };
 		845F172C1F3CC47400CFC537 /* FacebookController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookController.swift; sourceTree = "<group>"; };
@@ -429,6 +435,7 @@
 		36F9C1841C5616C6003D02AB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8431967B1F31DBF800B8C469 /* zoneUI */,
 				843A0AF51EFBAE4000D0F5DC /* bgImage */,
 				84D26BF01EF50FB500EAF15E /* sponserView */,
 				84F2945D1EEE61F9009D4295 /* playersinside */,
@@ -491,6 +498,7 @@
 				3AA5E83F1D2A424600AEDD27 /* MatchUpdateController.swift */,
 				3AA5E8411D2A8C9200AEDD27 /* MerchandiseViewController.swift */,
 				360231941DC39C7900B17C2F /* WorldCupController.swift */,
+				843196801F31F9CA00B8C469 /* SponsorsViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -672,6 +680,15 @@
 			name = loader;
 			sourceTree = "<group>";
 		};
+		8431967B1F31DBF800B8C469 /* zoneUI */ = {
+			isa = PBXGroup;
+			children = (
+				8431967C1F31DC3B00B8C469 /* ZoneUI.xib */,
+				8431967E1F31DCFE00B8C469 /* ZoneUI.swift */,
+			);
+			name = zoneUI;
+			sourceTree = "<group>";
+		};
 		843A0AF51EFBAE4000D0F5DC /* bgImage */ = {
 			isa = PBXGroup;
 			children = (
@@ -831,6 +848,7 @@
 				36F9C1BB1C5653EF003D02AB /* matches.xib in Resources */,
 				36F9C1B01C5643E8003D02AB /* news.xib in Resources */,
 				84CC40111F0559B4003F9643 /* voyagefanthplat.ttf in Resources */,
+				8431967D1F31DC3B00B8C469 /* ZoneUI.xib in Resources */,
 				C2FF852B1C58D05000F2CFED /* singleThumbnailImage.xib in Resources */,
 				C28B79F11C58DAC2001C4474 /* newsDetail.xib in Resources */,
 				84CC40131F0559B9003F9643 /* voyagefantlaser.ttf in Resources */,
@@ -944,6 +962,8 @@
 				3AA5E8421D2A8C9200AEDD27 /* MerchandiseViewController.swift in Sources */,
 				360A50FE1C577A05001F7E40 /* SideMenuController.swift in Sources */,
 				7809A3C61C64BFCB00562E6A /* fanCorner.swift in Sources */,
+				8431967F1F31DCFE00B8C469 /* ZoneUI.swift in Sources */,
+				843196811F31F9CA00B8C469 /* SponsorsViewController.swift in Sources */,
 				366F19DC1C58F52600321669 /* bookTicket.swift in Sources */,
 				366F19D71C58EFBD00321669 /* WebController.swift in Sources */,
 				84DAD59A1EEE9F28001A4891 /* PlayerInsideViewController.swift in Sources */,
