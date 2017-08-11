@@ -10,7 +10,7 @@ import Foundation
 import SwiftHTTP
 
 //let adminUrl = "http://192.168.1.103/jppbackend/";
-let adminUrl = "http://admin.jaipurpinkpanthers.com/beta/"
+let adminUrl = "http://admin.jaipurpinkpanthers.com/"
 //let adminUrl = "http://wohlig.co.in/pinkpanther/jppbackend/"
 let imageURL = adminUrl + "uploads/";
 let apiURL = adminUrl + "index.php/json/";
@@ -420,7 +420,25 @@ open class RestApi {
         }
     }
 
-    
+    open func getSponsorImage( _ completion: @escaping ( (JSON) -> Void) )  {
+        var json = JSON(1);
+        do {
+            let opt = try HTTP.GET(apiURL + "getsponsorimage")
+            opt.start { response in
+                if let _ = response.error {
+                    completion(json);
+                }
+                else
+                {
+                    json  = JSON(data: response.data)
+                    completion(json);
+                }
+            }
+        } catch _ {
+            completion(json);
+        }
+    }
+
     
     
 }

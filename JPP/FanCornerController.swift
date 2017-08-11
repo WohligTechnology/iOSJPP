@@ -39,8 +39,34 @@ class FanCornerController: UIViewController {
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(FanCornerController.tapOutsideKeyboardClose(_:)))
         view.addGestureRecognizer(tapGesture)
-        
+        fan.facbook.addTarget(self, action: #selector(self.facebook(_:)), for: .touchUpInside)
+        fan.twitter.addTarget(self, action: #selector(self.twitter(_:)), for: .touchUpInside)
+        fan.instagram.addTarget(self, action: #selector(self.instagram(_:)), for: .touchUpInside)
         resizeView(8)
+    }
+    
+    
+    func facebook(_ sender: UIButton){
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let WebController = self.storyboard?.instantiateViewController(withIdentifier: "facebook") as! FacebookController
+        self.navigationController?.pushViewController(WebController, animated: true)
+        let theUrl = URL(string: "https://www.facebook.com/JaipurPinkPanthers/")
+        WebController.url = theUrl
+    }
+    
+    func twitter(_ sender: UIButton){
+        let WebController = self.storyboard?.instantiateViewController(withIdentifier: "facebook") as! FacebookController
+        self.navigationController?.pushViewController(WebController, animated: true)
+        let theUrl = URL(string: "https://twitter.com/JaipurPanthers")
+        WebController.url = theUrl
+    }
+    
+    
+    func instagram(_ sender: UIButton){
+        let WebController = self.storyboard?.instantiateViewController(withIdentifier: "facebook") as! FacebookController
+        self.navigationController?.pushViewController(WebController, animated: true)
+        let theUrl = URL(string: "https://www.instagram.com/jaipur_pinkpanthers/")
+        WebController.url = theUrl
     }
     
     func tapOutsideKeyboardClose(_ gesture: UITapGestureRecognizer) {

@@ -10,6 +10,7 @@
 class sponsorsView: UIView {
     
     @IBOutlet weak var sponImg: UIImageView!
+    @IBOutlet weak var sponsorImage: UIImageView!
         
         override init(frame: CGRect) {
             super.init(frame: frame)

@@ -10,8 +10,10 @@ import UIKit
 
 class PointTableController: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
+    @IBOutlet weak var sponsorShipImage: UIImageView!
     @IBOutlet weak var pointTable: UITableView!
     @IBOutlet weak var tableHeader: table!
+    var sponsorImage: JSON = []
     
         let font = UIFont(name: "Oswald-Regular", size: 14.0)
         let lightBlueColor = UIColor(red: 196/255, green: 240/255, blue: 255/255, alpha: 1)
@@ -23,7 +25,22 @@ class PointTableController: UIViewController,UITableViewDelegate,UITableViewData
         
         override func viewDidLoad() {
             super.viewDidLoad()
-            
+        
+            rest.getSponsorImage({(json:JSON) -> () in
+                DispatchQueue.main.sync(execute: {
+                    if json == 401 {
+                        print("No Data Found")
+                    }else{
+                        
+                        print("hellojson\(json)")
+                        self.sponsorImage = json
+                        self.sponsorShipImage.hnk_setImageFromURL(rest.getImageSizeCache(self.sponsorImage["image"].stringValue))
+                        
+                    }
+                })
+                
+            })
+
             
             loadingInit()
             self.view.addSubview(loaderGlo)

@@ -19,11 +19,24 @@ import UIKit
     @IBOutlet weak var matchDate: UILabel!
     @IBOutlet weak var addToCalendar: UIButton!
     
+    var EventTimeTop = Date();
+    var EventNameTop:String!;
     override init(frame: CGRect) {
         super.init(frame: frame)
         loadViewFromNib ()
     }
     
+    @IBAction func calendar(_ sender: Any) {
+        createEvent(EventNameTop,EventTime: EventTimeTop)
+        
+        let alertController = UIAlertController(title: "Match added to your Calender", message:
+            "", preferredStyle: UIAlertControllerStyle.alert)
+        alertController.addAction(UIAlertAction(title: "Continue", style: UIAlertActionStyle.default,handler: nil))
+        
+        SchduleCtrlGlo.present(alertController, animated: true, completion: nil)
+
+        
+    }
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         loadViewFromNib ()

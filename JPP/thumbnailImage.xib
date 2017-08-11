@@ -16,22 +16,22 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="337" height="293"/>
+            <rect key="frame" x="0.0" y="0.0" width="487" height="268"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView autoresizesSubviews="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loadingimages" translatesAutoresizingMaskIntoConstraints="NO" id="aZ1-dI-Lpj">
-                    <rect key="frame" x="0.0" y="0.0" width="337" height="293"/>
+                    <rect key="frame" x="0.0" y="0.0" width="487" height="268"/>
                 </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="aZ1-dI-Lpj" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" id="8ZZ-yc-ndH"/>
-                <constraint firstItem="aZ1-dI-Lpj" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="YiY-bb-gXq"/>
-                <constraint firstItem="aZ1-dI-Lpj" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="d2j-ti-Bdw"/>
-                <constraint firstItem="aZ1-dI-Lpj" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="ito-uP-PEv"/>
+                <constraint firstItem="aZ1-dI-Lpj" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="2fx-1w-awp"/>
+                <constraint firstItem="aZ1-dI-Lpj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="bz0-8d-oaL"/>
+                <constraint firstAttribute="bottom" secondItem="aZ1-dI-Lpj" secondAttribute="bottom" id="c0l-ZC-v9j"/>
+                <constraint firstAttribute="trailing" secondItem="aZ1-dI-Lpj" secondAttribute="trailing" id="vZe-ei-xdE"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="265.5" y="40.5"/>
+            <point key="canvasLocation" x="340.5" y="146"/>
         </view>
     </objects>
     <resources>

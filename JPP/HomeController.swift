@@ -61,6 +61,7 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
     var newsController:UIViewController!
     var galleryController: UIViewController!
     var fancornerController: UIViewController!
+    var matchupdateController: UIViewController!
     var i = 0;
     @IBOutlet weak var scrollView: UIScrollView!
     var verticalLayout : VerticalLayout!
@@ -97,6 +98,14 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
 //        galleryController.activeGal = 1
     }
     
+    func homeApp(_ sender: UITapGestureRecognizer? = nil) {
+        let matchupdateController = storyboard!.instantiateViewController(withIdentifier: "matchupdate") as! MatchUpdateController
+        self.matchupdateController = UINavigationController(rootViewController: matchupdateController)
+        self.slideMenuController()?.changeMainViewController(self.matchupdateController, close: true)
+        //        galleryController.activeGal = 1
+    }
+
+    
     func signupTap(_ sender: UITapGestureRecognizer? = nil) {
         let fancornerController = storyboard!.instantiateViewController(withIdentifier: "fanCorner") as! FanCornerController
         self.fancornerController = UINavigationController(rootViewController: fancornerController)
@@ -107,15 +116,15 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
         
         let updates1 = doneMatch(frame: CGRect(x: 8,y: 8,width: self.verticalLayout.frame.width-16,height: 300));
         print(updates1)
-        updates1.teamOneScore.font = UIFont(name: "Kenyan-Coffee", size: 45)
-        updates1.teamTwoScore.font = UIFont(name: "Kenyan-Coffee", size: 45)
-        updates1.teamOneScore.layer.borderWidth = 3
-        updates1.teamOneScore.layer.borderColor = UIColor.white.cgColor
-        updates1.teamTwoScore.layer.borderWidth = 3
-        updates1.teamTwoScore.layer.borderColor = UIColor.white.cgColor
+//        updates1.teamOneScore.font = UIFont(name: "Kenyan-Coffee", size: 45)
+//        updates1.teamTwoScore.font = UIFont(name: "Kenyan-Coffee", size: 45)
+//        updates1.teamOneScore.layer.borderWidth = 3
+//        updates1.teamOneScore.layer.borderColor = UIColor.white.cgColor
+//        updates1.teamTwoScore.layer.borderWidth = 3
+//        updates1.teamTwoScore.layer.borderColor = UIColor.white.cgColor
         
-        updates1.team1image.image = UIImage(named: "t" + json["latestMatch"]["team1id"].string! + ".png")
-        updates1.team2image.image = UIImage(named: "t" + json["latestMatch"]["team2id"].string! + ".png")
+         updates1.team1image.hnk_setImageFromURL(rest.getImageSizeCache(json["latestMatch"]["appteamimage1"].stringValue))
+        updates1.team2image.hnk_setImageFromURL(rest.getImageSizeCache(json["latestMatch"]["appteamimage2"].stringValue))
         if json["latestMatch"]["score1"]=="" {
             updates1.teamOneScore.text = "0"
         }else{
@@ -178,34 +187,7 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     func homeLoaded(_ json:JSON) {
-        let thumbnail = thumbnailImage(frame: CGRect.zero)
-        rest.getapphomeimage({(json:JSON) -> () in
-            DispatchQueue.main.sync(execute: {
-                if json == 401 {
-                    print("No Data Found")
-                }else{
-                    
-                    thumbnail.frame = CGRect(x: 8,y: 8,width: self.verticalLayout.frame.width-16,height: 180);
-                    thumbnail.layoutIfNeeded()
-                     self.resizeView(8)
-                    //                                thumbnail.thumbImage.frame = CGRect(x: 8,y: 8,width: self.verticalLayout.frame.width-16,height: 380);
-                    
-                    print(json)
-                    self.getPicture = json
-                    thumbnail.thumbImage.hnk_setImageFromURL(rest.getImageSizeCache(self.getPicture["image"].stringValue))
-                    print("showshowshow\(self.getPicture)")
-                    
-                    
-                   
-                    //self.verticalLayout.addSubview(thumbnail);
-                    //                    print("i want this\(self.getPlayers)")
-                    //                    print("givecount\(self.getPlayers.count)")
-                    //                    self.playersCollection.reloadData()
-                }
-            })
-            
-        })
-
+       
         print(json["latestMatch"]);
         if(json == 1)
         {
@@ -233,11 +215,13 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                 
                 let date = Date()
                 var calendar = Calendar.current
-                let components = (calendar as NSCalendar).components([.month, .day, .hour, .minute, .second], from: date)
+                let components = (calendar as NSCalendar).components([.month, .day, .hour, .minute, .second, .year], from: date)
                 let month = components.month
                 let day = components.day
                 let hour = components.hour
                 let minutes = components.minute
+                var year = components.year
+                print("showMeYear\(year)")
                 
                 print("hellojson\(json["latestMatch"])");
                 if json["latestMatch"]["starttimedate"].string != nil && self.getPicture["status"].stringValue == "2" {
@@ -245,16 +229,53 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                     
                     let datematch = dateFormatter.date(from: json["latestMatch"]["starttimedate"].string!)!
                     let unitFlags = Set<Calendar.Component>([.month, .day, .hour, .minute, .second])
-                    calendar.timeZone = NSTimeZone.init(abbreviation: "UTC")! as TimeZone
+//                    calendar.timeZone = NSTimeZone.init(abbreviation: "IST")! as TimeZone
                     let componentsmatch = calendar.dateComponents(unitFlags, from: datematch)
                     
-                    let matchMonth = componentsmatch.month
+                    var matchMonth = componentsmatch.month
                     let matchDay = componentsmatch.day
                     let matchHour = componentsmatch.hour
                     let matchMins = componentsmatch.minute
+                    var matchYear = componentsmatch.year
                     
                     self.diffMonth = matchMonth! - month!
-                    self.diffDay = matchDay! - day!
+//                    self.diffDay = matchDay! - day!
+                    var diffMonth = matchMonth! - month!
+                    print("diffMonth\(diffMonth)")
+                    var monthBefore = 0
+// 
+                   self.diffDay = 0
+                    self.diffDay = self.diffDay + matchDay! - day!
+                    if diffMonth != 0 {
+                       
+                        for _ in  1...diffMonth{
+                            if matchMonth != 1 {
+                                monthBefore = matchMonth! - 1
+                                
+                                
+                            }else{
+                                monthBefore = 12
+                            };
+                            matchMonth = monthBefore
+                            print("comeonfast\(matchMonth)")
+                            if monthBefore == 1 || monthBefore == 3 || monthBefore == 5 || monthBefore == 7 || monthBefore == 8 || monthBefore == 10 || monthBefore == 12 {
+                                self.diffDay = self.diffDay + 31
+                            }else if monthBefore == 4 || monthBefore == 6 || monthBefore == 9 || monthBefore == 11{
+                                self.diffDay = self.diffDay + 30
+                            }else {
+                                if matchYear!/4 == 0 {
+                                    self.diffDay = self.diffDay + 29
+                                }else {
+                                    self.diffDay = self.diffDay + 28
+                                }
+                            }
+                            
+                        }
+                    }else{
+                        
+                print("pleaseShowmeDays")
+                    }
+
                     self.diffHour = matchHour! - hour!
                     self.diffMin = matchMins! - minutes!
                     let range = calendar.range(of: .day, in: .month, for: date)
@@ -307,10 +328,10 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                             
                             
                             if(json["latestMatch"]["team1id"] ).string != nil {
-                            updates.team1Image.image = UIImage(named: "t" + json["latestMatch"]["team1id"].string! + ".png")
+                            updates.team1Image.hnk_setImageFromURL(rest.getImageSizeCache(json["latestMatch"]["appteamimage1"].stringValue))
                             }
                             if(json["latestMatch"]["team2id"]).string != nil {
-                            updates.team2Image.image = UIImage(named: "t" + json["latestMatch"]["team2id"].string! + ".png")
+                            updates.team2Image.hnk_setImageFromURL(rest.getImageSizeCache(json["latestMatch"]["appteamimage2"].stringValue))
                             }
                             
                             
@@ -351,16 +372,18 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                             range?.count
                             
                             let datematch = dateFormatter.date(from: json["latestMatch"]["starttimedate"].string!)!
-                            let unitFlags = Set<Calendar.Component>([.month, .day, .hour, .minute, .second])
+                            let unitFlags = Set<Calendar.Component>([.month, .day, .hour, .minute, .second, .year])
                             print("seeThis\(unitFlags)")
 //                            calendar.timeZone = TimeZone(identifier: "UTC")!
                             let componentsmatch = calendar.dateComponents(unitFlags, from: datematch)
                             
                             
-                            let matchMonth = componentsmatch.month
+//                            var matchMonth = componentsmatch.month
                             let matchDay = componentsmatch.day
                             let matchHour = componentsmatch.hour
                             let matchMins = componentsmatch.minute
+                            var matchYear = componentsmatch.year
+                            print("yearPlease\(matchYear)")
                             
                             
                             self.setInterval(10, block: { () -> Void in
@@ -369,33 +392,35 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                                 print("showmedate\(date)")
                                 var calendar = NSCalendar.current
 //                                calendar.timeZone = TimeZone(identifier: "UTC")!
-                                let components = (calendar as NSCalendar).components([.month, .day, .hour, .minute], from: date as Date)
+                                let components = (calendar as NSCalendar).components([.month, .day, .hour, .minute, .year], from: date as Date)
                                 let month = components.month
                                 let day = components.day
                                 let hour = components.hour
                                 let minutes = components.minute
+                                let year = components.year
                                 
+                            
                                 
-                                var diffMonth = matchMonth! - month!
-                                var diffDay = matchDay! - day!
+                            
+                                
                                 var diffHour = matchHour! - hour!
                                 var diffMin = matchMins! - minutes!
                                 
                                 if(diffMin < 0) { diffHour = diffHour - 1;  diffMin = diffMin + 60 }
                                 
-                                if(diffHour < 0) { diffDay = diffDay - 1; diffHour = diffHour + 24 }
+                                if(diffHour < 0) { self.diffDay = self.diffDay - 1; diffHour = diffHour + 24 }
                                 
-                                if(diffDay < 0) { diffMonth = diffMonth - 1; diffDay = diffDay + (range?.count)! }
+                                if(self.diffDay < 0) { diffMonth = diffMonth - 1; self.diffDay = self.diffDay + (range?.count)! }
                                 
                                 //print(diffDay)
                                 //print(diffHour)
                                 //print(diffMin)
                                 
                                 updates.remainingMonths.text = String(diffMonth)
-                                updates.remainingDays.text = String(diffDay)
+                                updates.remainingDays.text = String(self.diffDay)
                                 updates.remainingHours.text = String(diffHour)
                                 updates.remainingMins.text = String(diffMin)
-                                if(diffMin <= 0 && diffHour <= 0 && diffDay <= 0){
+                                if(diffMin <= 0 && diffHour <= 0 && self.diffDay <= 0){
                                     //print("start match")
                                     self.refresh(self.refeshController)
                                 }else{
@@ -408,7 +433,7 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                             
                             
                             self.diffMonth = matchMonth! - month!
-                            self.diffDay = matchDay! - day!
+//                            self.diffDay = matchDay! - day!
                             self.diffHour = matchHour! - hour!
                             self.diffMin = matchMins! - minutes!
                             
@@ -430,14 +455,23 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                     
                 }
                 else{
+                    self.home()
+                    let thumbnail = thumbnailImage(frame: CGRect.zero)
+                    thumbnail.frame = CGRect(x: 8,y: 8,width: self.verticalLayout.frame.width-16,height: 200);
                     
+                    let homeApp = UITapGestureRecognizer(target: self, action: #selector(HomeController.homeApp(_:)))
+                    homeApp.delegate = self
+                    thumbnail.addGestureRecognizer(homeApp)
+                    thumbnail.layoutIfNeeded()
+
+                    print("\n thumbImage : \(thumbnail.thumbImage)")
                     
+                    thumbnail.thumbImage.hnk_setImageFromURL(rest.getImageSizeCache(self.getPicture["image"].stringValue))
+                    print("showThumbnail\(thumbnail.thumbImage)")
+                     thumbnail.thumbImage.contentMode = .scaleAspectFill
                     self.verticalLayout.addSubview(thumbnail);
                     
-                    print("\n thumbImage : \(thumbnail.thumbImage)")
-                    thumbnail.thumbImage.contentMode = .scaleAspectFit
-                    thumbnail.thumbImage.hnk_setImageFromURL(rest.getImageSizeCache(self.getPicture["image"].stringValue))
-                    self.resizeView(8)
+                                       self.resizeView(8)
                     print("goingInside")
                    
                 }
@@ -575,6 +609,7 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
 //                sponserimage.image = UIImage(named: "sponsors")
 //                sponserimage.contentMode = UIViewContentMode.scaleAspectFit
 //                sponserView.addSubview(sponserimage)
+                sponserView.sponsorImage.hnk_setImageFromURL(rest.getImageSizeCache(self.HomeJSON["sponsorimage"]["image"].stringValue))
                 self.verticalLayout.addSubview(sponserView)
                 
                 self.resizeView(8);
@@ -588,7 +623,36 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
         }
     }
     
-    
+    func home(){
+        let thumbnail = thumbnailImage(frame: CGRect.zero)
+        rest.getapphomeimage({(json:JSON) -> () in
+            DispatchQueue.main.sync(execute: {
+                if json == 401 {
+                    print("No Data Found")
+                }else{
+                    
+                    //                    thumbnail.frame = CGRect(x: 8,y: 8,width: self.verticalLayout.frame.width-16,height: 180);
+                    //                    thumbnail.layoutIfNeeded()
+                    //                    self.resizeView(8)
+                    //                                thumbnail.thumbImage.frame = CGRect(x: 8,y: 8,width: self.verticalLayout.frame.width-16,height: 380);
+                    
+                    print(json)
+                    self.getPicture = json
+                    thumbnail.thumbImage.hnk_setImageFromURL(rest.getImageSizeCache(self.getPicture["image"].stringValue))
+                    print("showshowshow\(self.getPicture)")
+                    
+                    
+                    
+                    //self.verticalLayout.addSubview(thumbnail);
+                    //                    print("i want this\(self.getPlayers)")
+                    //                    print("givecount\(self.getPlayers.count)")
+                    //                    self.playersCollection.reloadData()
+                }
+            })
+            
+        })
+    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -605,10 +669,10 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
         refreshControl.addTarget(self, action: #selector(HomeController.refresh(_:)), for: .valueChanged)
        
         scrollView.addSubview(refreshControl)
-      
-//      rest.getHome(homeLoaded)
+       //      rest.getHome(homeLoaded)
         
         loadingInit()
+        home()
         callhome()
        
         
@@ -624,6 +688,7 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
     func refresh(_ refreshControl: UIRefreshControl) {
         // Do your job, when done:
         callhome()
+        home()
         refreshControl.endRefreshing()
     }
     

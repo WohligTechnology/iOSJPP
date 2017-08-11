@@ -15,6 +15,9 @@ import UIKit
     @IBOutlet var mobile: UITextField!
     @IBOutlet var email: UITextField!
     @IBOutlet weak var city: UITextField!
+    @IBOutlet weak var facbook: UIButton!
+    @IBOutlet weak var twitter: UIButton!
+    @IBOutlet weak var instagram: UIButton!
     
     @IBOutlet weak var button1: UIButton!
     @IBOutlet weak var button2: UIButton!
@@ -407,6 +410,10 @@ import UIKit
         loadViewFromNib ()
         
     }
+    
+    
+    
+    
     func loadViewFromNib() {
         let bundle = Bundle(for: type(of: self))
         let nib = UINib(nibName: "fanCorner", bundle: bundle)

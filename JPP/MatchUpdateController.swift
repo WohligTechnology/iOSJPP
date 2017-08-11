@@ -7,16 +7,15 @@
 //
 
 import UIKit
-
-
+var match:MatchUpdateController!
 class MatchUpdateController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var matchupdateTableView: UITableView!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        self.setNavigationBarItemText("MATCH UPDATE")
+        self.setNavigationBarItemText("SEASON 4 REVIEW")
         loadingInit()
         self.view.addSubview(loaderGlo)
         
@@ -40,6 +39,7 @@ class MatchUpdateController: UIViewController, UITableViewDelegate, UITableViewD
         }
         else {
             matchupdateJSON = json
+            print("showmematchupdate\(matchupdateJSON)")
             DispatchQueue.main.async(execute: {
                 self.matchupdateTableView.reloadData()
             });
@@ -65,8 +65,8 @@ class MatchUpdateController: UIViewController, UITableViewDelegate, UITableViewD
         if((matchupdateJSON[indexPath.row]["matchtime"].string) != nil) {
             let matchupdateView = matchupdate(frame: CGRect(x: 0,y: 0,width: self.view.frame.width-16,height: 322));
             matchupdateView.matchTitle.text = "MATCH - " + String(matchupdateJSON.count - indexPath.row)
-            matchupdateView.teamoneImage.image = UIImage(named: "t" + matchupdateJSON[indexPath.row]["team1id"].string! + ".png")
-            matchupdateView.teamtwoImage.image = UIImage(named: "t" + matchupdateJSON[indexPath.row]["team2id"].string! + ".png")
+            matchupdateView.teamoneImage.hnk_setImageFromURL(rest.getImageSizeCache(matchupdateJSON[indexPath.row]["appteamimage1"].stringValue))
+            matchupdateView.teamtwoImage.hnk_setImageFromURL(rest.getImageSizeCache(matchupdateJSON[indexPath.row]["appteamimage2"].stringValue))
             matchupdateView.stadiumName.text = matchupdateJSON[indexPath.row]["stadium"].string
             matchupdateView.matchTime.text = matchupdateJSON[indexPath.row]["starttimedate"].string
             matchupdateView.matchTotalTime.text = matchupdateJSON[indexPath.row]["matchtime"].string

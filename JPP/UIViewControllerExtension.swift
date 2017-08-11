@@ -21,7 +21,7 @@ extension UIViewController {
         self.navigationController?.navigationBar.barTintColor = BlueColor
         
         
-        self.addRightBarButtonWithImage(UIImage(named: "ic_notifications_black_24dp")!)
+//        self.addRightBarButtonWithImage(UIImage(named: "ic_notifications_black_24dp")!)
         self.slideMenuController()?.removeLeftGestures()
         self.slideMenuController()?.removeRightGestures()
         self.slideMenuController()?.addLeftGestures()

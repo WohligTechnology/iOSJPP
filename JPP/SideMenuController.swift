@@ -9,7 +9,7 @@
 import UIKit
 
 class SideMenuController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    
+    var matchupdateJSON = JSON([])
     var mainViewController: UIViewController!
     var homeController:UIViewController!
     var scheduleController:UIViewController!
@@ -27,6 +27,25 @@ class SideMenuController: UIViewController, UITableViewDataSource, UITableViewDe
 //    var playersInsideController:UIViewController!
     
     override func viewDidLoad() {
+        
+        
+        
+//        rest.getMatchUpdate({(json:JSON) -> () in
+//            DispatchQueue.main.sync(execute: {
+//                if json == 401 {
+//                    print("No Data Found")
+//                }else{
+//                    
+//                    print("hellojson\(json)")
+//                    self.matchupdateJSON = json
+//                    
+//                    
+//                      
+//                }
+//            })
+//            
+//        })
+
         
         super.viewDidLoad()
         
@@ -90,8 +109,8 @@ class SideMenuController: UIViewController, UITableViewDataSource, UITableViewDe
         return 1
     }
     
-    var data = ["HOME", "SEASON 4 REVIEW", "MERCHANDISE", "GALLERY", "JPP TV", "NEWS & MEDIA","KNOW YOUR PANTHERS","WALLPAPERS", "POINTS TABLE", "FAN CORNER","ABOUT"]
-    var dataimage = ["home.png", "matchupdate.png", "tickets.png", "gallery.png", "jpptv.png", "newsicon.png","know.png","galleryinside.png","point.png", "fan.png","about.png"]
+    var data = ["HOME", "SEASON 4 REVIEW", "GALLERY", "JPP TV", "NEWS & MEDIA","KNOW YOUR PANTHERS","WALLPAPERS", "POINTS TABLE", "FAN CORNER","ABOUT"]
+    var dataimage = ["home.png", "matchupdate.png", "gallery.png", "jpptv.png", "newsicon.png","know.png","galleryinside.png","point.png", "fan.png","about.png"]
     
     // MARK: - UITableViewDataSource
     
@@ -119,31 +138,35 @@ class SideMenuController: UIViewController, UITableViewDataSource, UITableViewDe
             
 //        case 1:
 //            self.slideMenuController()?.changeMainViewController(self.worldcupController, close: true)
-        case 1:
-            self.slideMenuController()?.changeMainViewController(self.matchupdateController, close: true)
+            
+                  case 1:
+////                    if matchupdateJSON.count != 0 {
+                self.slideMenuController()?.changeMainViewController(self.matchupdateController, close: true)
+ 
+//            }else{
+//                print("stuckhere")
+//            }
+        //        case 3:
+//            self.slideMenuController()?.changeMainViewController(self.merchandiseController, close: true)
         case 2:
-            self.slideMenuController()?.changeMainViewController(self.merchandiseController, close: true)
-        case 3:
             isGalWal = 0
             self.slideMenuController()?.changeMainViewController(self.galleryController, close: true)
-        case 4:
+        case 3:
             isGalWal = 1
             self.slideMenuController()?.changeMainViewController(self.jpptvController, close: true)
-        case 5:
+        case 4:
             self.slideMenuController()?.changeMainViewController(self.newsController, close: true)
-        case 6:
+        case 5:
             self.slideMenuController()?.changeMainViewController(self.knowTeamController, close: true)
-        case 7:
+        case 6:
             isGalWal = 1
             self.slideMenuController()?.changeMainViewController(self.wallpaperController, close: true)
-        case 8:
+        case 7:
             self.slideMenuController()?.changeMainViewController(self.pointController, close: true)
-        case 9:
+        case 8:
             self.slideMenuController()?.changeMainViewController(self.fancornerController, close: true)
-        case 10:
+        case 9:
             self.slideMenuController()?.changeMainViewController(self.aboutsController, close: true)
-//        case 11:
-//            self.slideMenuController()?.changeMainViewController(self.playersInsideController, close: true)
         default:
             self.slideMenuController()?.changeMainViewController(self.homeController, close: true)
         }

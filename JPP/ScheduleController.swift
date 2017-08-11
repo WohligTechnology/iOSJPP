@@ -39,16 +39,18 @@ class ScheduleController: UIViewController {
             print("Restricted");
         case EKAuthorizationStatus.denied:
             print("Denied");
+            
         }
     }
     
     func requestAccessToCalendar() {
         eventStore.requestAccess(to: EKEntityType.event, completion: {
-            (accessGranted: Bool, error: NSError?) in
+            (accessGranted: Bool, error: Error?) in
             
             if accessGranted == true {
                 DispatchQueue.main.async(execute: {
                     print("Access Graned");
+                    
                     SaveCalender = 1;
                 })
             } else {
@@ -57,8 +59,9 @@ class ScheduleController: UIViewController {
                     print("Access not Graned");
                 })
             }
-        } as! EKEventStoreRequestAccessCompletionHandler)
+        })
     }
+    
     
     
     func createEventTop(_ sender:UIButton) {
@@ -85,13 +88,14 @@ class ScheduleController: UIViewController {
         else
         {
             print(json[0]);
+            print("showSchedule\(json)")
             
             DispatchQueue.main.async(execute: {
 
                 self.verticalLayout = VerticalFitLayout(width: self.view.frame.width);
                 self.scrollView.insertSubview(self.verticalLayout, at: 0)
-                var height2 = CGFloat(512.0);
-                if(heightGlo-56 > 512)
+                var height2 = CGFloat(350.0);
+                if(heightGlo-56 > 350)
                 {
                     height2 = heightGlo-56-25;
                 }
@@ -101,64 +105,71 @@ class ScheduleController: UIViewController {
                 
                 if(json[0]["level"].stringValue == "semifinal" )
                 {
-                    let updates = semiFinal(frame: CGRect(x: 8,y: 8,width: self.verticalLayout.frame.width-16,height: height2))
+                    let updates = upcoming(frame: CGRect(x: 8,y: 8,width: self.verticalLayout.frame.width-16,height: height2))
                     self.verticalLayout.addSubview(updates)
                     
                     //                updates.addToCalender.hidden = true
-                    updates.team1Image.image = UIImage(named: "t" + json[0]["team1id"].string! + ".png")
-                    updates.team2Image.image = UIImage(named: "t" + json[0]["team2id"].string! + ".png")
-                    updates.matchTime.text = json[0]["starttimedate"].string
-                    updates.matchVenue.text = json[0]["stadium"].string
-                    
-                    
-                    updates.EventTimeTop = dateFormatter.date(from: json[0]["starttimedate"].string!)!
-                    updates.EventNameTop = json[0]["team1"].string! + " VS " + json[0]["team2"].string!;
+                    updates.team1Image.hnk_setImageFromURL(rest.getImageSizeCache(json[0]["appteamimage1"].stringValue))
+                    updates.team2Image.hnk_setImageFromURL(rest.getImageSizeCache(json[0]["appteamimage2"].stringValue))
+//                    updates.matchTime.text = json[0]["starttimedate"].string
+//                    updates.matchVenue.text = json[0]["stadium"].string
+//                    
+//                    
+//                    updates.EventTimeTop = dateFormatter.date(from: json[0]["starttimedate"].string!)!
+//                    updates.EventNameTop = json[0]["team1"].string! + " VS " + json[0]["team2"].string!;
                 }
                 else if(json[0]["level"].stringValue == "final" )
                 {
-                    let updates = semiFinal(frame: CGRect(x: 8,y: 8,width: self.verticalLayout.frame.width-16,height: height2))
+                    let updates = upcoming(frame: CGRect(x: 8,y: 8,width: self.verticalLayout.frame.width-16,height: height2))
                     self.verticalLayout.addSubview(updates)
                     
                     if(json[0]["id"]).boolValue {
                         self.verticalLayout.addSubview(updates)
                         
                         //                updates.addToCalender.hidden = true
-                        updates.team1Image.image = UIImage(named: "t" + json[0]["team1id"].string! + ".png")
-                        updates.team2Image.image = UIImage(named: "t" + json[0]["team2id"].string! + ".png")
-                        updates.matchTime.text = json[0]["starttimedate"].string
-                        updates.matchVenue.text = json[0]["stadium"].string
-                        
-                        updates.semiImage.image = UIImage(named: "finals")
-                        
-                        
-                        updates.EventTimeTop = dateFormatter.date(from: json[0]["starttimedate"].string!)!
-                        updates.EventNameTop = json[0]["team1"].string! + " VS " + json[0]["team2"].string!;
+                        updates.team1Image.hnk_setImageFromURL(rest.getImageSizeCache(json[0]["appteamimage1"].stringValue))
+                        updates.team2Image.hnk_setImageFromURL(rest.getImageSizeCache(json[0]["appteamimage2"].stringValue))
+//                        updates.matchTime.text = json[0]["starttimedate"].string
+//                        updates.matchVenue.text = json[0]["stadium"].string
+//                        
+//                        updates.semiImage.image = UIImage(named: "finals")
+//                        
+//                        
+//                        updates.EventTimeTop = dateFormatter.date(from: json[0]["starttimedate"].string!)!
+//                        updates.EventNameTop = json[0]["team1"].string! + " VS " + json[0]["team2"].string!;
                     }
                 }
                 else {
-                    let updates = seasonOpener(frame: CGRect(x: 8,y: 8,width: self.verticalLayout.frame.width-16,height: 385))
+                    let updates = upcoming(frame: CGRect(x: 8,y: 8,width: self.verticalLayout.frame.width-16,height: 300))
                     self.verticalLayout.addSubview(updates)
-                    
+                    updates.team1Image.hnk_setImageFromURL(rest.getImageSizeCache(json[0]["appteamimage1"].stringValue))
+                    updates.team2Image.hnk_setImageFromURL(rest.getImageSizeCache(json[0]["appteamimage2"].stringValue))
+                    updates.matchStadium.text = json[0]["stadium"].stringValue
+                    updates.matchDate.text = json[0]["starttimedate"].stringValue
+                    let dateFormatter = DateFormatter()
+                    dateFormatter.dateFormat = "dd MMM yyyy, HH:mm"
+                    updates.EventTimeTop = dateFormatter.date(from: json[0]["starttimedate"].string!)!
+                    updates.EventNameTop = json[0]["team1"].stringValue + " VS " +  json[0]["team2"].stringValue
                     if(json[0]["id"]).boolValue {
                         self.verticalLayout.addSubview(updates)
                         
-                                       updates.addToCalender.isHidden = true
+//                                       updates.addToCalender.isHidden = true
                         if(json[0]["team1id"]).boolValue {
-                            updates.team1Image.image = UIImage(named: "t" + json[0]["team1id"].string! + ".png")
+                            updates.team1Image.hnk_setImageFromURL(rest.getImageSizeCache(json[0]["appteamimage1"].stringValue))
                         }
                         if(json[0]["team2id"]).boolValue {
-                            updates.team2Image.image = UIImage(named: "t" + json[0]["team2id"].string! + ".png")
+                            updates.team2Image.hnk_setImageFromURL(rest.getImageSizeCache(json[0]["appteamimage2"].stringValue))
                         }
-                        updates.matchTime.text = json[0]["starttimedate"].string
+//                        updates.matchTime.text = json[0]["starttimedate"].string
                         
                         if(json[0]["stadium"]).boolValue {
-                            updates.matchVenue.text = json[0]["stadium"].string
+//                            updates.matchVenue.text = json[0]["stadium"].string
                         }
                         
                         
-                        updates.EventTimeTop = dateFormatter.date(from: json[0]["starttimedate"].string!)!
+//                        updates.EventTimeTop = dateFormatter.date(from: json[0]["starttimedate"].string!)!
                         if((json[0]["team1"].string != nil) && (json[0]["team2"].string != nil)) {
-                        updates.EventNameTop = json[0]["team1"].string! + " VS " + json[0]["team2"].string!;
+//                        updates.EventNameTop = json[0]["team1"].string! + " VS " + json[0]["team2"].string!;
                         }
                     }
                 }
@@ -188,13 +199,14 @@ class ScheduleController: UIViewController {
                 
 //                self.verticalLayout.addSubview(whiteView);
                 
-                for i in 1...json.count
+                for i in 1..<json.count
                 {
                     
                     let topDistance = self.topSpacing+self.spacingPink+((100+self.spacingPink)*(i-1));
                     let insideTable = matches(frame: CGRect(x: 8,y: CGFloat(topDistance),width: self.verticalLayout.frame.width-16,height: 100));
-                    insideTable.matchesTeams.text = json[i]["team1"].string! + " VS " + json[i]["team2"].string!
-                    insideTable.bookURL = json[i]["bookticket"].string!
+                   
+                    insideTable.matchesTeams.text = json[i]["team1"].stringValue + " VS " + json[i]["team2"].stringValue
+                    insideTable.bookURL = json[i]["bookticket"].stringValue
                     
 //                    if(json[i]["team1id"].string != "5")
 //                    {
@@ -211,6 +223,7 @@ class ScheduleController: UIViewController {
                     
                     whiteView.frame.size.height = CGFloat(topDistance+100+8);
                     whiteView.addSubview(insideTable);
+                    self.verticalLayout.addSubview(whiteView)
                 }
                 
                // let bookTic = bookTicket(frame:CGRectMake(8,8,self.verticalLayout.frame.width-16,44));
@@ -239,7 +252,7 @@ class ScheduleController: UIViewController {
         super.viewDidLoad()
         
         SchduleCtrlGlo = self;
-        self.setNavigationBarItemText("SEASON 4 SCHEDULE")
+        self.setNavigationBarItemText("SEASON 5 SCHEDULE")
         
         loadingInit()
         self.view.addSubview(loaderGlo)
