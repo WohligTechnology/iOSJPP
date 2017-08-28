@@ -51,6 +51,7 @@ class GalleryController: UIViewController,UITableViewDataSource,UITableViewDeleg
         else
         {
             photosJson = json;
+            print("gallery\(photosJson)")
             DispatchQueue.main.async(execute: {
                 self.photoTableView.reloadData()
             });

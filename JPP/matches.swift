@@ -13,6 +13,7 @@ var GlobalBookTicketURL = "";
     @IBOutlet weak var matchesTeams: UILabel!
     @IBOutlet weak var matchesDate: UILabel!
     
+    @IBOutlet weak var bookTickets: UIButton!
     @IBOutlet weak var buttonHolder: UIStackView!
     @IBOutlet weak var bookTicket: UIButton!
     @IBOutlet weak var addCalender: UIButton!

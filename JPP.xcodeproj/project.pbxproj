@@ -95,7 +95,11 @@
 		843196811F31F9CA00B8C469 /* SponsorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843196801F31F9CA00B8C469 /* SponsorsViewController.swift */; };
 		843A0AF71EFBAE6F00D0F5DC /* bgImage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 843A0AF61EFBAE6F00D0F5DC /* bgImage.xib */; };
 		843A0AFD1EFBAF7C00D0F5DC /* bgImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843A0AFC1EFBAF7C00D0F5DC /* bgImage.swift */; };
+		843A5F011F4D9ED4001F28E0 /* TicketsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843A5F001F4D9ED4001F28E0 /* TicketsViewController.swift */; };
+		84500D5B1F4860FB00F8402E /* Merchandise.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84500D5A1F4860FB00F8402E /* Merchandise.xib */; };
+		84500D5D1F48614800F8402E /* Merchandise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84500D5C1F48614800F8402E /* Merchandise.swift */; };
 		845F172D1F3CC47400CFC537 /* FacebookController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845F172C1F3CC47400CFC537 /* FacebookController.swift */; };
+		848A561A1F41D05800CCCE09 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 848A56181F41C4FD00CCCE09 /* UserNotifications.framework */; };
 		84CC3FF31F055964003F9643 /* kenyanbolditalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84CC3FF21F055964003F9643 /* kenyanbolditalic.ttf */; };
 		84CC3FF51F05596C003F9643 /* kenyanbold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84CC3FF41F05596C003F9643 /* kenyanbold.ttf */; };
 		84CC3FF71F055971003F9643 /* kenyanregular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84CC3FF61F055971003F9643 /* kenyanregular.ttf */; };
@@ -228,7 +232,11 @@
 		843196801F31F9CA00B8C469 /* SponsorsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SponsorsViewController.swift; sourceTree = "<group>"; };
 		843A0AF61EFBAE6F00D0F5DC /* bgImage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = bgImage.xib; sourceTree = "<group>"; };
 		843A0AFC1EFBAF7C00D0F5DC /* bgImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bgImage.swift; sourceTree = "<group>"; };
+		843A5F001F4D9ED4001F28E0 /* TicketsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketsViewController.swift; sourceTree = "<group>"; };
+		84500D5A1F4860FB00F8402E /* Merchandise.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Merchandise.xib; sourceTree = "<group>"; };
+		84500D5C1F48614800F8402E /* Merchandise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Merchandise.swift; sourceTree = "<group>"; };
 		845F172C1F3CC47400CFC537 /* FacebookController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookController.swift; sourceTree = "<group>"; };
+		848A56181F41C4FD00CCCE09 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		84CC3FF21F055964003F9643 /* kenyanbolditalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = kenyanbolditalic.ttf; sourceTree = "<group>"; };
 		84CC3FF41F05596C003F9643 /* kenyanbold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = kenyanbold.ttf; sourceTree = "<group>"; };
 		84CC3FF61F055971003F9643 /* kenyanregular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = kenyanregular.ttf; sourceTree = "<group>"; };
@@ -271,6 +279,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				848A561A1F41D05800CCCE09 /* UserNotifications.framework in Frameworks */,
 				363609AA1C5C759F00078DC7 /* SystemConfiguration.framework in Frameworks */,
 				363609A81C5C755B00078DC7 /* AVFoundation.framework in Frameworks */,
 				363609A61C5C750700078DC7 /* ImageIO.framework in Frameworks */,
@@ -435,6 +444,7 @@
 		36F9C1841C5616C6003D02AB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				84500D591F48605500F8402E /* Merchandise */,
 				8431967B1F31DBF800B8C469 /* zoneUI */,
 				843A0AF51EFBAE4000D0F5DC /* bgImage */,
 				84D26BF01EF50FB500EAF15E /* sponserView */,
@@ -472,6 +482,7 @@
 		36F9C1861C5616E4003D02AB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				843A5F001F4D9ED4001F28E0 /* TicketsViewController.swift */,
 				845F172C1F3CC47400CFC537 /* FacebookController.swift */,
 				84DAD5991EEE9F28001A4891 /* PlayerInsideViewController.swift */,
 				36F2CE9C1C57708C00D0D2D6 /* HomeController.swift */,
@@ -623,6 +634,7 @@
 		7283620D2DBE0A487EB4AD33 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				848A56181F41C4FD00CCCE09 /* UserNotifications.framework */,
 				3636099A1C5C740800078DC7 /* Pushwoosh.framework */,
 				363609A91C5C759F00078DC7 /* SystemConfiguration.framework */,
 				363609A71C5C755B00078DC7 /* AVFoundation.framework */,
@@ -696,6 +708,15 @@
 				843A0AFC1EFBAF7C00D0F5DC /* bgImage.swift */,
 			);
 			name = bgImage;
+			sourceTree = "<group>";
+		};
+		84500D591F48605500F8402E /* Merchandise */ = {
+			isa = PBXGroup;
+			children = (
+				84500D5C1F48614800F8402E /* Merchandise.swift */,
+				84500D5A1F4860FB00F8402E /* Merchandise.xib */,
+			);
+			name = Merchandise;
 			sourceTree = "<group>";
 		};
 		84D26BF01EF50FB500EAF15E /* sponserView */ = {
@@ -789,6 +810,9 @@
 						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
 							com.apple.Push = {
 								enabled = 1;
 							};
@@ -835,6 +859,7 @@
 				84CC3FF71F055971003F9643 /* kenyanregular.ttf in Resources */,
 				78238FE71C57AC170067E7D5 /* trapezium.xib in Resources */,
 				84CC40051F055999003F9643 /* voyagefantacad.ttf in Resources */,
+				84500D5B1F4860FB00F8402E /* Merchandise.xib in Resources */,
 				84CC3FFF1F055987003F9643 /* Oswald-Regular.ttf in Resources */,
 				363DE0E61D34CF3000906E51 /* sponsorsView.xib in Resources */,
 				36F2CE9B1C573A2300D0D2D6 /* media.xib in Resources */,
@@ -944,6 +969,7 @@
 				36F2CE9F1C5770B900D0D2D6 /* ScheduleController.swift in Sources */,
 				36F2CEA51C5770FE00D0D2D6 /* GalleryInside2Controller.swift in Sources */,
 				78238FE91C57AC350067E7D5 /* trapezium.swift in Sources */,
+				84500D5D1F48614800F8402E /* Merchandise.swift in Sources */,
 				36F2CEAB1C57718B00D0D2D6 /* KnowTeamController.swift in Sources */,
 				36B500761D43581700C63DAD /* semiFinal.swift in Sources */,
 				36F2CE9D1C57708C00D0D2D6 /* HomeController.swift in Sources */,
@@ -979,6 +1005,7 @@
 				36FF12771C59319900E0F990 /* RestApi.swift in Sources */,
 				C23892DA1C58C92700CA4DC1 /* thumbnailImage.swift in Sources */,
 				36F2CEB11C5771F200D0D2D6 /* WallpaperController.swift in Sources */,
+				843A5F011F4D9ED4001F28E0 /* TicketsViewController.swift in Sources */,
 				36F2CEAD1C5771AE00D0D2D6 /* KvowTeamInsideController.swift in Sources */,
 				843A0AFD1EFBAF7C00D0F5DC /* bgImage.swift in Sources */,
 				78238FE21C57A77E0067E7D5 /* about.swift in Sources */,

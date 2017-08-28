@@ -3,3 +3,4 @@
 //
 
 #import <Pushwoosh/PushNotificationManager.h>
+#import <UserNotifications/UserNotifications.h>

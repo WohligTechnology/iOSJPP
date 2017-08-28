@@ -11,8 +11,12 @@ import UIKit
 
 class MerchandiseController: UIViewController {
 
+    var tickets: JSON = []
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+
 //        self.setNavigationBarItemText("MERCHANDISE")
         
         

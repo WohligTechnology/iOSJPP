@@ -19,6 +19,7 @@ import UIKit
     @IBOutlet weak var matchStadium: UILabel!
     @IBOutlet weak var matchDate: UILabel!
     @IBOutlet weak var addToCalendar: UIButton!
+    @IBOutlet weak var bookTickets: UIButton!
     
     override init(frame: CGRect) {
         super.init(frame: frame)

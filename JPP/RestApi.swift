@@ -141,6 +141,7 @@ open class RestApi {
         var json = JSON(1);
         do {
             let opt = try HTTP.GET(apiURL + "getscheduleforiosandroidseason4")
+            print("apicalltest")
             opt.start { response in
                 if let _ = response.error {
                     completion(json);
@@ -199,6 +200,7 @@ open class RestApi {
         var json = JSON(1);
         do {
             let opt = try HTTP.GET(apiURL + "getScheduleForIosAndroidWorldCup2016")
+             print("apicalltesthello")
             opt.start { response in
                 if let _ = response.error {
                     completion(json);
@@ -439,6 +441,45 @@ open class RestApi {
         }
     }
 
+    
+    open func merchandise( _ completion: @escaping ( (JSON) -> Void) )  {
+        var json = JSON(1);
+        do {
+            let opt = try HTTP.GET(apiURL + "getallmerchandize")
+            opt.start { response in
+                if let _ = response.error {
+                    completion(json);
+                }
+                else
+                {
+                    json  = JSON(data: response.data)
+                    completion(json);
+                }
+            }
+        } catch _ {
+            completion(json);
+        }
+    }
+
+    
+    open func tickets( _ completion: @escaping ( (JSON) -> Void) )  {
+        var json = JSON(1);
+        do {
+            let opt = try HTTP.GET(apiURL + "getAllTicket")
+            opt.start { response in
+                if let _ = response.error {
+                    completion(json);
+                }
+                else
+                {
+                    json  = JSON(data: response.data)
+                    completion(json);
+                }
+            }
+        } catch _ {
+            completion(json);
+        }
+    }
     
     
 }

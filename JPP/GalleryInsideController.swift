@@ -58,6 +58,7 @@ class GalleryInsideController: UIViewController,UICollectionViewDataSource,UICol
         {
             
             jsonData = json;
+            print("hellogallery\(jsonData)")
             DispatchQueue.main.async(execute: {
                 self.galleryTable.reloadData()
             });

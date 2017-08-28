@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -23,6 +22,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="schedule" customModule="JPP" customModuleProvider="target">
             <connections>
                 <outlet property="addToCalendar" destination="aDd-bC-j03" id="whv-KC-KWg"/>
+                <outlet property="bookTickets" destination="08E-L5-UD0" id="jqb-LQ-Dgg"/>
                 <outlet property="matchDate" destination="HYy-N1-L39" id="fhM-Os-sz5"/>
                 <outlet property="matchStadium" destination="W9F-u7-XXP" id="Wy6-eX-NLf"/>
                 <outlet property="matchTime" destination="2gG-L1-fTf" id="ch1-7e-iGA"/>
@@ -121,14 +121,14 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aDd-bC-j03">
-                    <rect key="frame" x="124" y="295" width="180" height="44"/>
+                    <rect key="frame" x="24" y="295" width="165" height="44"/>
                     <color key="backgroundColor" red="0.30196078431372547" green="0.79607843137254897" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="44" id="6dS-n9-fgn"/>
-                        <constraint firstAttribute="width" constant="180" id="PU3-xH-djd"/>
+                        <constraint firstAttribute="width" constant="165" id="PU3-xH-djd"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="15"/>
-                    <state key="normal" title="ADD TO CALENDAR" image="ic_action_calender_pink">
+                    <state key="normal" title="ADD TO CALENDAR">
                         <color key="titleColor" red="0.92941176470588238" green="0.29019607843137252" blue="0.60784313725490191" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                 </button>
@@ -141,6 +141,18 @@
                     <color key="textColor" red="0.98557114601135254" green="1" blue="0.98517388105392456" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="08E-L5-UD0">
+                    <rect key="frame" x="239" y="295" width="165" height="44"/>
+                    <color key="backgroundColor" red="0.30588235289999999" green="0.79215686269999996" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="2sg-Fc-x0y"/>
+                        <constraint firstAttribute="width" constant="165" id="pkv-KZ-5eZ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="15"/>
+                    <state key="normal" title="BOOK TICKETS">
+                        <color key="titleColor" red="0.79607843140000001" green="0.12941176469999999" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -158,15 +170,16 @@
                 <constraint firstItem="2gG-L1-fTf" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ITI-4d-5im"/>
                 <constraint firstItem="G85-z8-6EB" firstAttribute="top" secondItem="0M5-Da-MfR" secondAttribute="bottom" constant="12" id="Km9-Fu-57r"/>
                 <constraint firstAttribute="trailing" secondItem="Oaa-vd-nht" secondAttribute="trailing" constant="8" id="QN2-Sd-S68"/>
+                <constraint firstItem="aDd-bC-j03" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="24" id="S61-eY-fcn"/>
                 <constraint firstItem="gbv-md-THd" firstAttribute="top" secondItem="0M5-Da-MfR" secondAttribute="bottom" constant="13" id="SY0-g5-uFX"/>
                 <constraint firstAttribute="trailing" secondItem="W9F-u7-XXP" secondAttribute="trailing" id="T8h-EV-Awi"/>
                 <constraint firstAttribute="trailing" secondItem="9UC-FM-JCe" secondAttribute="trailing" id="U3u-FA-kUj"/>
-                <constraint firstItem="aDd-bC-j03" firstAttribute="centerX" secondItem="dG5-te-ctT" secondAttribute="centerX" id="XcY-7E-bD8"/>
                 <constraint firstItem="HYy-N1-L39" firstAttribute="top" secondItem="W9F-u7-XXP" secondAttribute="bottom" id="Yxj-jS-2XY"/>
                 <constraint firstAttribute="trailing" secondItem="HYy-N1-L39" secondAttribute="trailing" constant="1" id="ddp-bz-fpk"/>
                 <constraint firstItem="W9F-u7-XXP" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="1" id="ftF-9F-VhZ"/>
                 <constraint firstItem="9UC-FM-JCe" firstAttribute="top" secondItem="0M5-Da-MfR" secondAttribute="bottom" constant="44" id="gWB-el-03f"/>
                 <constraint firstItem="Oaa-vd-nht" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="j28-dv-II7"/>
+                <constraint firstItem="08E-L5-UD0" firstAttribute="top" secondItem="HYy-N1-L39" secondAttribute="bottom" constant="10" id="ljO-Uu-lgX"/>
                 <constraint firstItem="6SV-sQ-PgB" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="mFe-SF-bCh"/>
                 <constraint firstItem="HYy-N1-L39" firstAttribute="top" secondItem="2gG-L1-fTf" secondAttribute="bottom" constant="18" id="mfg-aO-xad"/>
                 <constraint firstItem="W9F-u7-XXP" firstAttribute="top" secondItem="6SV-sQ-PgB" secondAttribute="bottom" constant="13" id="pMi-8j-DYo"/>
@@ -177,6 +190,7 @@
                 <constraint firstAttribute="bottom" secondItem="dG5-te-ctT" secondAttribute="bottom" id="uma-rP-7OE"/>
                 <constraint firstAttribute="trailing" secondItem="6SV-sQ-PgB" secondAttribute="trailing" constant="8" id="vRG-1K-QKp"/>
                 <constraint firstItem="Oaa-vd-nht" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="vWf-QA-dlx"/>
+                <constraint firstAttribute="trailing" secondItem="08E-L5-UD0" secondAttribute="trailing" constant="24" id="vY2-kC-7kD"/>
                 <constraint firstItem="0M5-Da-MfR" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="wx4-7u-vyE"/>
                 <constraint firstItem="dG5-te-ctT" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="yfd-qm-5X6"/>
             </constraints>
@@ -185,7 +199,6 @@
         </view>
     </objects>
     <resources>
-        <image name="ic_action_calender_pink" width="32" height="26"/>
         <image name="jpp" width="414" height="379"/>
         <image name="pp" width="400" height="372"/>
         <image name="schedule_back" width="800" height="605"/>

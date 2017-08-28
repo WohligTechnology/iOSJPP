@@ -70,8 +70,8 @@ class PointTableController: UIViewController,UITableViewDelegate,UITableViewData
             tableHeader.tableLost.font = font
             tableHeader.tableLost.text = "L"
             
-            tableHeader.tableDraw.font = font
-            tableHeader.tableDraw.text = "D"
+//            tableHeader.tableDraw.font = font
+//            tableHeader.tableDraw.text = "D"
             
             tableHeader.tablePoint.font = font
             tableHeader.tablePoint.text = "PTS"
@@ -213,7 +213,7 @@ class PointTableController: UIViewController,UITableViewDelegate,UITableViewData
                     cell.played.font = font
                     cell.lost.font = font
                     cell.wins.font = font
-                    cell.draw.font = font
+//                    cell.draw.font = font
                     cell.point.font = font
                     cell.name.backgroundColor = UIColor.clear
                     cell.no.textColor = PinkColor
@@ -221,7 +221,7 @@ class PointTableController: UIViewController,UITableViewDelegate,UITableViewData
                     cell.played.textColor = PinkColor
                     cell.wins.textColor = PinkColor
                     cell.lost.textColor = PinkColor
-                    cell.draw.textColor = PinkColor
+//                    cell.draw.textColor = PinkColor
                     cell.point.textColor = PinkColor
                     
                     cell.backgroundColor = UIColor(red: 77/255, green: 203/255, blue: 244/255, alpha: 1)
@@ -232,7 +232,7 @@ class PointTableController: UIViewController,UITableViewDelegate,UITableViewData
                     cell.played.font = fontOriginal
                     cell.lost.font = fontOriginal
                     cell.wins.font = fontOriginal
-                    cell.draw.font = fontOriginal
+//                    cell.draw.font = fontOriginal
                     cell.point.font = fontOriginal
                     cell.name.backgroundColor = UIColor.clear
                     cell.no.textColor = UIColor.black
@@ -240,7 +240,7 @@ class PointTableController: UIViewController,UITableViewDelegate,UITableViewData
                     cell.played.textColor = UIColor.black
                     cell.wins.textColor = UIColor.black
                     cell.lost.textColor = UIColor.black
-                    cell.draw.textColor = UIColor.black
+//                    cell.draw.textColor = UIColor.black
                     cell.point.textColor = UIColor.black
                     
                     cell.backgroundColor = UIColor(red: 77/255, green: 203/255, blue: 244/255, alpha: 1)
@@ -250,7 +250,7 @@ class PointTableController: UIViewController,UITableViewDelegate,UITableViewData
                 cell.played.text = pointJson[0]["pointsTableA"][indexPath.row]["played"].string
                 cell.lost.text = pointJson[0]["pointsTableA"][indexPath.row]["lost"].string
                 cell.wins.text = pointJson[0]["pointsTableA"][indexPath.row]["wins"].string
-                cell.draw.text = pointJson[0]["pointsTableA"][indexPath.row]["draw"].string
+//                cell.draw.text = pointJson[0]["pointsTableA"][indexPath.row]["draw"].string
                 cell.point.text = pointJson[0]["pointsTableA"][indexPath.row]["point"].string
 
                 
@@ -265,7 +265,7 @@ class PointTableController: UIViewController,UITableViewDelegate,UITableViewData
                     cell.played.font = font
                     cell.lost.font = font
                     cell.wins.font = font
-                    cell.draw.font = font
+//                    cell.draw.font = font
                     cell.point.font = font
                     cell.name.backgroundColor = UIColor.clear
                     cell.no.textColor = PinkColor
@@ -273,7 +273,7 @@ class PointTableController: UIViewController,UITableViewDelegate,UITableViewData
                     cell.played.textColor = PinkColor
                     cell.wins.textColor = PinkColor
                     cell.lost.textColor = PinkColor
-                    cell.draw.textColor = PinkColor
+//                    cell.draw.textColor = PinkColor
                     cell.point.textColor = PinkColor
                     
                     cell.backgroundColor = UIColor(red: 77/255, green: 203/255, blue: 244/255, alpha: 1)
@@ -284,7 +284,7 @@ class PointTableController: UIViewController,UITableViewDelegate,UITableViewData
                     cell.played.font = fontOriginal
                     cell.lost.font = fontOriginal
                     cell.wins.font = fontOriginal
-                    cell.draw.font = fontOriginal
+//                    cell.draw.font = fontOriginal
                     cell.point.font = fontOriginal
                     cell.name.backgroundColor = UIColor.clear
                     cell.no.textColor = UIColor.black
@@ -292,7 +292,7 @@ class PointTableController: UIViewController,UITableViewDelegate,UITableViewData
                     cell.played.textColor = UIColor.black
                     cell.wins.textColor = UIColor.black
                     cell.lost.textColor = UIColor.black
-                    cell.draw.textColor = UIColor.black
+//                    cell.draw.textColor = UIColor.black
                     cell.point.textColor = UIColor.black
                     
                     cell.backgroundColor = UIColor(red: 77/255, green: 203/255, blue: 244/255, alpha: 1)
@@ -302,7 +302,7 @@ class PointTableController: UIViewController,UITableViewDelegate,UITableViewData
                 cell.played.text = pointJson[1]["pointsTableB"][indexPath.row]["played"].string
                 cell.lost.text = pointJson[1]["pointsTableB"][indexPath.row]["lost"].string
                 cell.wins.text = pointJson[1]["pointsTableB"][indexPath.row]["wins"].string
-                cell.draw.text = pointJson[1]["pointsTableB"][indexPath.row]["draw"].string
+//                cell.draw.text = pointJson[1]["pointsTableB"][indexPath.row]["draw"].string
                 cell.point.text = pointJson[1]["pointsTableB"][indexPath.row]["point"].string
                 
           

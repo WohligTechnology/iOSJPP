@@ -21,8 +21,10 @@ class MatchUpdateController: UIViewController, UITableViewDelegate, UITableViewD
         
         if scheduleType == "kabaddi" {
             rest.getMatchUpdate(matchupdateLoaded)
+             print("apicalltest")
         } else if scheduleType == "worldcup" {
             rest.getWorldCup(matchupdateLoaded)
+            print("apicalltesthello")
         }
         
     }

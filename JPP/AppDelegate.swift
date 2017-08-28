@@ -8,6 +8,8 @@
 
 import UIKit
 import EventKitUI
+import PushKit
+import UserNotifications
 let eventStore = EKEventStore()
 var mediaUrl = "";
 func createEvent(_ EventName:String, EventTime:Date) {
@@ -24,6 +26,7 @@ func createEvent(_ EventName:String, EventTime:Date) {
     }
 }
 var SaveCalender = 1;
+var merchandiseIndex = 0
 var galleryID = "0";
 var videoIDGlo = "0";
 var galleryImage = "0";
@@ -135,6 +138,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate,PushNotificationDelegate {
         PushNotificationManager.push().handlePushReceived(launchOptions)
         PushNotificationManager.push().sendAppOpen()
         PushNotificationManager.push().registerForPushNotifications()
+        if #available(iOS 10.0, *) {
+            let center = UNUserNotificationCenter.current()
+            center.requestAuthorization(options:[.badge, .alert, .sound]) { (granted, error) in
+                // Enable or disable features based on authorization.
+            }
+            application.registerForRemoteNotifications()
+        } else {
+            // Fallback on earlier versions
+        }
+        
+        if #available(iOS 10.0, *) {
+            UNUserNotificationCenter.current().delegate = self as? UNUserNotificationCenterDelegate
+        } else {
+            // Fallback on earlier versions
+        }
+        
         return true
     }
     
@@ -148,6 +167,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,PushNotificationDelegate {
     
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any]) {
         PushNotificationManager.push().handlePushReceived(userInfo)
+        
     }
     
     func onPushAccepted(_ pushManager: PushNotificationManager!, withNotification pushNotification: [AnyHashable: Any]!, onStart: Bool) {

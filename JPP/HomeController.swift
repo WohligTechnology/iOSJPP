@@ -238,7 +238,9 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                     let matchMins = componentsmatch.minute
                     var matchYear = componentsmatch.year
                     
-                    self.diffMonth = matchMonth! - month!
+//                    self.diffMonth = matchMonth! - month!
+//                    self.diffDay == self.diffDay
+                    print("gochi\(self.diffDay)")
 //                    self.diffDay = matchDay! - day!
                     var diffMonth = matchMonth! - month!
                     print("diffMonth\(diffMonth)")
@@ -246,6 +248,7 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
 // 
                    self.diffDay = 0
                     self.diffDay = self.diffDay + matchDay! - day!
+                    print("gochi\(self.diffDay)")
                     if diffMonth != 0 {
                        
                         for _ in  1...diffMonth{
@@ -260,34 +263,41 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                             print("comeonfast\(matchMonth)")
                             if monthBefore == 1 || monthBefore == 3 || monthBefore == 5 || monthBefore == 7 || monthBefore == 8 || monthBefore == 10 || monthBefore == 12 {
                                 self.diffDay = self.diffDay + 31
+                                print("gochi\(self.diffDay)")
                             }else if monthBefore == 4 || monthBefore == 6 || monthBefore == 9 || monthBefore == 11{
                                 self.diffDay = self.diffDay + 30
+                                print("gochi\(self.diffDay)")
                             }else {
                                 if matchYear!/4 == 0 {
                                     self.diffDay = self.diffDay + 29
+                                    print("gochi\(self.diffDay)")
                                 }else {
                                     self.diffDay = self.diffDay + 28
+                                    print("gochi\(self.diffDay)")
                                 }
                             }
                             
                         }
                     }else{
-                        
-                print("pleaseShowmeDays")
+                    self.diffDay = matchDay! - day!
+                        print("gochi55\(self.diffDay)")
+                print("pleaseShowmeDays1")
                     }
 
                     self.diffHour = matchHour! - hour!
                     self.diffMin = matchMins! - minutes!
+                    self.diffDay == self.diffDay
+                    print("gochi56\(self.diffDay)")
                     let range = calendar.range(of: .day, in: .month, for: date)
                     range?.count
                     
                     if(self.diffMin < 0) { self.diffHour = self.diffHour - 1;  self.diffMin = self.diffMin + 60 }
                     
                     if(self.diffHour < 0) { self.diffDay = self.diffDay - 1; self.diffHour = self.diffHour + 24 }
-                    
+                    print("gochi56\(self.diffDay)")
                     if(self.diffDay < 0) { self.diffMonth = self.diffMonth - 1; self.diffDay = self.diffDay + (range?.count)! }
                     
-                    
+                     print("gochi567\(self.diffDay)")
                     if(json["latestMatch"]["score2"] == "" && self.diffMin >= 0 && self.diffHour >= 0 && self.diffDay >= 0 && self.diffMonth >= 0) {
                         
                         if self.diffMonth == 0 && self.diffDay == 0 && self.diffHour == 0 && self.diffMin == 0 {
@@ -371,6 +381,7 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                             let range = calendar.range(of: .day, in: .month, for: date as Date)
                             range?.count
                             
+                            
                             let datematch = dateFormatter.date(from: json["latestMatch"]["starttimedate"].string!)!
                             let unitFlags = Set<Calendar.Component>([.month, .day, .hour, .minute, .second, .year])
                             print("seeThis\(unitFlags)")
@@ -399,9 +410,64 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                                 let minutes = components.minute
                                 let year = components.year
                                 
-                            
+                                let datematch = dateFormatter.date(from: json["latestMatch"]["starttimedate"].string!)!
+                                let unitFlags = Set<Calendar.Component>([.month, .day, .hour, .minute, .second, .year])
+                                print("seeThis\(unitFlags)")
+                                //                            calendar.timeZone = TimeZone(identifier: "UTC")!
+                                let componentsmatch = calendar.dateComponents(unitFlags, from: datematch)
                                 
-                            
+                                
+                                //                            var matchMonth = componentsmatch.month
+                                let matchDay = componentsmatch.day
+                                let matchHour = componentsmatch.hour
+                                let matchMins = componentsmatch.minute
+                                var matchYear = componentsmatch.year
+                                print("yearPlease\(matchYear)")
+                                let range = calendar.range(of: .day, in: .month, for: date as Date)
+                                range?.count
+                                
+                                var diffMonth = matchMonth! - month!
+                                print("diffMonth\(diffMonth)")
+                                var monthBefore = 0
+                                //
+                                self.diffDay = 0
+                                self.diffDay = self.diffDay + matchDay! - day!
+                                print("gochi1\(self.diffDay)")
+                                if diffMonth != 0 {
+                                    
+                                    for _ in  1...diffMonth{
+                                        if matchMonth != 1 {
+                                            monthBefore = matchMonth! - 1
+                                            
+                                            
+                                        }else{
+                                            monthBefore = 12
+                                        };
+                                        matchMonth = monthBefore
+                                        print("comeonfast\(matchMonth)")
+                                        if monthBefore == 1 || monthBefore == 3 || monthBefore == 5 || monthBefore == 7 || monthBefore == 8 || monthBefore == 10 || monthBefore == 12 {
+                                            self.diffDay = self.diffDay + 31
+                                            print("gochi2\(self.diffDay)")
+                                        }else if monthBefore == 4 || monthBefore == 6 || monthBefore == 9 || monthBefore == 11{
+                                            self.diffDay = self.diffDay + 30
+                                            print("gochi3\(self.diffDay)")
+                                        }else {
+                                            if matchYear!/4 == 0 {
+                                                self.diffDay = self.diffDay + 29
+                                                print("gochi4\(self.diffDay)")
+                                            }else {
+                                                self.diffDay = self.diffDay + 28
+                                                print("gochi5\(self.diffDay)")
+                                            }
+                                        }
+                                        
+                                    }
+                                }else{
+                                    self.diffDay = matchDay! - day!
+                                    print("gochi6\(self.diffDay)")
+                                    print("pleaseShowmeDays")
+                                }
+
                                 
                                 var diffHour = matchHour! - hour!
                                 var diffMin = matchMins! - minutes!
@@ -417,6 +483,7 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                                 //print(diffMin)
                                 
                                 updates.remainingMonths.text = String(diffMonth)
+                                print("gochi7\(self.diffDay)")
                                 updates.remainingDays.text = String(self.diffDay)
                                 updates.remainingHours.text = String(diffHour)
                                 updates.remainingMins.text = String(diffMin)
@@ -432,22 +499,31 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
 
                             
                             
-                            self.diffMonth = matchMonth! - month!
-//                            self.diffDay = matchDay! - day!
-                            self.diffHour = matchHour! - hour!
-                            self.diffMin = matchMins! - minutes!
+//                            self.diffMonth = matchMonth! - month!
+//                            
+//                            self.diffDay == self.diffDay
+//                            
+//                            print("gochisee\(self.diffDay)")
+//                            self.diffHour = matchHour! - hour!
+//                            self.diffMin = matchMins! - minutes!
                             
                             
-                            if(self.diffMin < 0) { self.diffHour = self.diffHour - 1;  self.diffMin = self.diffMin + 60 }
-                            
-                            if(self.diffHour < 0) { self.diffDay = self.diffDay - 1; self.diffHour = self.diffHour + 24 }
-                            
-                            if(self.diffDay < 0) { self.diffMonth = self.diffMonth - 1; self.diffDay = self.diffDay + (range?.count)! }
+//                            if(self.diffMin < 0) { self.diffHour = self.diffHour - 1;  self.diffMin = self.diffMin + 60 }
+//                            
+//                            if(self.diffHour < 0) { self.diffDay = self.diffDay - 1; self.diffHour = self.diffHour + 24 }
+//                            
+//                            if(self.diffDay < 0) { self.diffMonth = self.diffMonth - 1; self.diffDay = self.diffDay + (range?.count)! }
                             
                             updates.remainingMonths.text = String(self.diffMonth)
+                            print(updates.remainingMonths.text)
+                            print("gochi\(self.diffDay)")
                             updates.remainingDays.text = String(self.diffDay)
+                            print(updates.remainingDays.text)
+                             
                             updates.remainingHours.text = String(self.diffHour)
+                            print(updates.remainingHours.text)
                             updates.remainingMins.text = String(self.diffMin)
+                            print(updates.remainingMins.text)
                         }
                     } else{
                         self.showScore(json)

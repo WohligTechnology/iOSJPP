@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,6 +22,7 @@
                 <outlet property="addCalender" destination="lss-2h-qUr" id="Dc6-6g-pKZ"/>
                 <outlet property="addCalender2" destination="FiI-RX-wRn" id="25b-fs-fWo"/>
                 <outlet property="bookTicket" destination="NE4-wW-xKf" id="4L6-cE-zPf"/>
+                <outlet property="bookTickets" destination="0z1-c3-cjW" id="zIm-z5-Hzk"/>
                 <outlet property="buttonHolder" destination="m2u-6l-nON" id="9gQ-3G-qNR"/>
                 <outlet property="matchesDate" destination="74G-d4-Wx0" id="FVS-Vq-7P5"/>
                 <outlet property="matchesTeams" destination="8K5-0L-apj" id="kUB-5U-QHz"/>
@@ -88,39 +88,53 @@
                     </variation>
                 </stackView>
                 <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FiI-RX-wRn">
-                    <rect key="frame" x="101" y="58" width="160" height="30"/>
+                    <rect key="frame" x="16" y="58" width="160" height="30"/>
                     <color key="backgroundColor" red="1" green="0.31899784370000001" blue="0.66240949280000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="160" id="Kjy-kV-oUn"/>
                         <constraint firstAttribute="height" constant="30" id="fh7-vx-JdM"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="16"/>
-                    <state key="normal" title="   Add to Calender" image="calender_white">
+                    <state key="normal" title="   Add to Calendar">
                         <color key="titleColor" red="0.98557114601135254" green="1" blue="0.98517388105392456" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <connections>
                         <action selector="addCalenderTap:" destination="-1" eventType="touchUpInside" id="gCh-Bg-6lu"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0z1-c3-cjW">
+                    <rect key="frame" x="186" y="58" width="160" height="30"/>
+                    <color key="backgroundColor" red="1" green="0.31899784370000001" blue="0.66240949280000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="zyS-P0-eTn"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="16"/>
+                    <state key="normal" title="BOOK TICKETS">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
             </subviews>
             <color key="backgroundColor" red="0.76862745098039209" green="0.94117647058823528" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="8K5-0L-apj" secondAttribute="trailing" id="0Td-Wc-PET"/>
                 <constraint firstItem="8K5-0L-apj" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="topMargin" id="1Ae-oo-H1t"/>
+                <constraint firstItem="FiI-RX-wRn" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="3SI-NR-djq"/>
                 <constraint firstAttribute="bottom" secondItem="m2u-6l-nON" secondAttribute="bottom" constant="12" id="4Z2-cq-W9i"/>
+                <constraint firstAttribute="trailing" secondItem="0z1-c3-cjW" secondAttribute="trailing" constant="16" id="4pu-hS-vVa"/>
                 <constraint firstAttribute="trailing" secondItem="m2u-6l-nON" secondAttribute="trailing" constant="8" id="AO1-ZC-CB2"/>
                 <constraint firstItem="m2u-6l-nON" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="CZH-SM-wYr"/>
+                <constraint firstItem="0z1-c3-cjW" firstAttribute="leading" secondItem="FiI-RX-wRn" secondAttribute="trailing" constant="10" id="J3k-h7-7MO"/>
                 <constraint firstItem="m2u-6l-nON" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="NDW-SI-lvI"/>
                 <constraint firstItem="74G-d4-Wx0" firstAttribute="top" secondItem="8K5-0L-apj" secondAttribute="bottom" id="WKa-WT-Fw6"/>
                 <constraint firstItem="FiI-RX-wRn" firstAttribute="top" secondItem="74G-d4-Wx0" secondAttribute="bottom" constant="8" id="Wz6-98-hcX"/>
                 <constraint firstItem="74G-d4-Wx0" firstAttribute="trailing" secondItem="8K5-0L-apj" secondAttribute="trailing" id="Y4H-6Z-1tk"/>
                 <constraint firstItem="74G-d4-Wx0" firstAttribute="leading" secondItem="8K5-0L-apj" secondAttribute="leading" id="aek-ED-ePi"/>
                 <constraint firstItem="m2u-6l-nON" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="b1j-Qy-m26"/>
-                <constraint firstItem="FiI-RX-wRn" firstAttribute="centerX" secondItem="m2u-6l-nON" secondAttribute="centerX" id="cj1-Jf-u16"/>
                 <constraint firstItem="74G-d4-Wx0" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottomMargin" id="djW-Va-OyI"/>
                 <constraint firstAttribute="trailing" secondItem="m2u-6l-nON" secondAttribute="trailing" constant="16" id="fXf-sO-Eih"/>
                 <constraint firstItem="m2u-6l-nON" firstAttribute="top" secondItem="74G-d4-Wx0" secondAttribute="bottom" constant="9" id="gGi-Q7-vgP"/>
                 <constraint firstAttribute="bottom" secondItem="74G-d4-Wx0" secondAttribute="bottom" constant="50" id="n56-Ri-zHU"/>
+                <constraint firstItem="0z1-c3-cjW" firstAttribute="top" secondItem="74G-d4-Wx0" secondAttribute="bottom" constant="8" id="qAn-Zf-8PF"/>
                 <constraint firstItem="74G-d4-Wx0" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" id="u4B-7L-Sqz"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
