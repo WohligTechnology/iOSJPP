@@ -10,6 +10,7 @@ import UIKit
 import EventKitUI
 import PushKit
 import UserNotifications
+import UserNotificationsUI
 let eventStore = EKEventStore()
 var mediaUrl = "";
 func createEvent(_ EventName:String, EventTime:Date) {
@@ -71,7 +72,7 @@ let lightBlueColor = UIColor(red: 196/255, green: 240/255, blue: 255/255, alpha:
 let rest = RestApi();
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate,PushNotificationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate,PushNotificationDelegate, UNUserNotificationCenterDelegate {
 
     var window: UIWindow?
     
@@ -127,12 +128,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate,PushNotificationDelegate {
         
         players.append(Player(name: "Ravinder Kumar", achieve: "2011-12 U-19 School National Games, 2016 Departmental Nationals, 2013 Junior National Championship,2015 University Games", tour: "2016 Star Sports Pro Kabaddi semi-finalist team (Puneri Paltan), 2011 U-19 School National Games (Gold), 2012 U-19 School National Games (Silver)", age: "21", type: "All rounder", state: "Maharashtra", jerseyNo: "99", image: "p28.jpg"))
 
-   players.append(Player(name: "Rahul Choudhary", achieve: "2011-12 U-19 School National Games, 2016 Departmental Nationals, 2013 Junior National Championship,2015 University Games", tour: "2016 Star Sports Pro Kabaddi semi-finalist team (Puneri Paltan), 2011 U-19 School National Games (Gold), 2012 U-19 School National Games (Silver)", age: "21", type: "All rounder", state: "Maharashtra", jerseyNo: "99", image: "p28.jpg"))
+   players.append(Player(name: "Nitin Rawal", achieve: "2011-12 U-19 School National Games, 2016 Departmental Nationals, 2013 Junior National Championship,2015 University Games", tour: "2016 Star Sports Pro Kabaddi semi-finalist team (Puneri Paltan), 2011 U-19 School National Games (Gold), 2012 U-19 School National Games (Silver)", age: "19", type: "Defender", state: "Haryana", jerseyNo: "14", image: "p28.jpg"))
         
           players.append(Player(name: "Dong Gyu Kim", achieve: "2011-12 U-19 School National Games, 2016 Departmental Nationals, 2013 Junior National Championship,2015 University Games", tour: "2016 Star Sports Pro Kabaddi semi-finalist team (Puneri Paltan), 2011 U-19 School National Games (Gold), 2012 U-19 School National Games (Silver)", age: "21", type: "All rounder", state: "Maharashtra", jerseyNo: "99", image: "p28.jpg"))
         
           players.append(Player(name: "Jae Min Lee", achieve: "2011-12 U-19 School National Games, 2016 Departmental Nationals, 2013 Junior National Championship,2015 University Games", tour: "2016 Star Sports Pro Kabaddi semi-finalist team (Puneri Paltan), 2011 U-19 School National Games (Gold), 2012 U-19 School National Games (Silver)", age: "21", type: "All rounder", state: "Maharashtra", jerseyNo: "99", image: "p28.jpg"))
-
+        
+        players.append(Player(name: "Nitin Rawal", achieve: "", tour: "", age: "19", type: "Defender", state: "Haryana", jerseyNo: "14", image: "p28.jpg"))
+       registerForPushNotifications(application: application)
         
         PushNotificationManager.push().delegate = self
         PushNotificationManager.push().handlePushReceived(launchOptions)
@@ -154,8 +157,78 @@ class AppDelegate: UIResponder, UIApplicationDelegate,PushNotificationDelegate {
             // Fallback on earlier versions
         }
         
+        registerForRemoteNotification()
         return true
+        
     }
+    
+    
+    
+    func registerForRemoteNotification() {
+        if #available(iOS 10.0, *) {
+            let center  = UNUserNotificationCenter.current()
+            center.delegate = self
+            center.requestAuthorization(options: [.sound, .alert, .badge]) { (granted, error) in
+                if error == nil{
+                    UIApplication.shared.registerForRemoteNotifications()
+                }
+            }
+        }
+        else {
+            UIApplication.shared.registerUserNotificationSettings(UIUserNotificationSettings(types: [.sound, .alert, .badge], categories: nil))
+            UIApplication.shared.registerForRemoteNotifications()
+        }
+    }
+    
+    
+    
+    @available(iOS 10.0, *)
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        print("User Info = ",notification.request.content.userInfo)
+        completionHandler([.alert, .badge, .sound])
+    }
+    
+    //Called to let your app know which action was selected by the user for a given notification.
+    @available(iOS 10.0, *)
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        print("User Info = ",response.notification.request.content.userInfo)
+        completionHandler()
+    }
+    
+//    @available(iOS 10.0, *)
+//    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+//        //Handle the notification
+//    }
+//    
+//    @available(iOS 10.0, *)
+//    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+//        //Handle the notification
+//    }
+    
+    func registerForPushNotifications(application: UIApplication) {
+        
+        if #available(iOS 10.0, *){
+            UNUserNotificationCenter.current().delegate = self
+            UNUserNotificationCenter.current().requestAuthorization(options: [.badge, .sound, .alert], completionHandler: {(granted, error) in
+                if (granted)
+                {
+                    UIApplication.shared.registerForRemoteNotifications()
+                }
+                else{
+                    //Do stuff if unsuccessful...
+                }
+            })
+        }
+            
+        else{ //If user is not on iOS 10 use the old methods we've been using
+            let notificationSettings = UIUserNotificationSettings(types: [.badge, .sound, .alert], categories: nil)
+            
+            application.registerUserNotificationSettings(notificationSettings)
+            
+        }
+        
+    }
+
     
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
         PushNotificationManager.push().handlePushRegistration(deviceToken)

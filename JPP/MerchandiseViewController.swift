@@ -19,6 +19,7 @@ class MerchandiseViewController: UIViewController, UITableViewDataSource, UITabl
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setNavigationBarItemText("MERCHANDISE")
+        loadingInit()
         self.view.addSubview(loaderGlo)
 //         let merchandiseView = Merchandise(frame: CGRect(x: 8, y: 16, width: self.view.frame.size.width - 16, height: 77))
 //        view.addSubview(merchandiseView)
@@ -75,7 +76,7 @@ class MerchandiseViewController: UIViewController, UITableViewDataSource, UITabl
        
         cell.productImage.hnk_setImageFromURL(rest.getImageSizeCache(self.merchandiseJSON["queryresult"][indexPath.row]["image"].stringValue))
         cell.productName.text = merchandiseJSON["queryresult"][indexPath.row]["name"].stringValue
-        cell.productPrice.text = merchandiseJSON["queryresult"][indexPath.row]["price"].stringValue
+        cell.productPrice.text = "₹ " + merchandiseJSON["queryresult"][indexPath.row]["price"].stringValue
         cell.buyNow.addTarget(self, action: #selector(MerchandiseViewController.productLink(_:)), for: .touchUpInside)
         cell.buyNow.tag =  indexPath.row
         

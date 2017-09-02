@@ -950,7 +950,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mobilesponsorsimg" translatesAutoresizingMaskIntoConstraints="NO" id="2OR-xu-tWZ">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loadingimages" translatesAutoresizingMaskIntoConstraints="NO" id="2OR-xu-tWZ">
                                 <rect key="frame" x="8" y="8" width="359" height="651"/>
                             </imageView>
                         </subviews>
@@ -1875,7 +1875,6 @@
         <image name="merchandise_back" width="1242" height="1939"/>
         <image name="merchandise_kit" width="1162" height="930"/>
         <image name="merchandise_text" width="823" height="151"/>
-        <image name="mobilesponsorsimg" width="1031" height="1638"/>
         <image name="pp" width="400" height="372"/>
         <image name="schedule_back" width="800" height="605"/>
         <image name="sponsors" width="800" height="256"/>

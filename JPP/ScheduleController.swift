@@ -384,6 +384,12 @@ class ScheduleController: UIViewController {
                         updates.EventTimeTop = dateFormatter.date(from: json[0]["starttimedate"].stringValue)!
                         updates.EventNameTop = self.schedule[0]["team1"].stringValue + " VS " +  self.schedule[0]["team2"].stringValue
                         
+                        if( self.schedule[0]["bookticket"].stringValue != ""){
+                            updates.bookTickets.isHidden = false
+                        }else{
+                            updates.bookTickets.isHidden = true
+                            
+                        }
                         updates.bookTickets.addTarget(self, action: #selector(ScheduleController.booktickets(_:)), for: .touchUpInside)
                         
                         if(self.schedule[0]["id"]).boolValue {
@@ -447,6 +453,12 @@ class ScheduleController: UIViewController {
                         let insideTable = matches(frame: CGRect(x: 8,y: CGFloat(topDistance),width: self.verticalLayout.frame.width-16,height: 100));
                         
                         insideTable.matchesTeams.text = self.schedule[i]["team1"].stringValue + " VS " + self.schedule[i]["team2"].stringValue
+                        if(self.schedule[i]["bookticket"].stringValue != ""){
+                           insideTable.bookTickets.isHidden = false
+                        }else{
+                            insideTable.bookTickets.isHidden = true
+                           
+                        }
                         insideTable.bookTickets.tag = i
                         insideTable.bookTickets.addTarget(self, action: #selector(ScheduleController.buyTickets(_:)), for: .touchUpInside)
                         

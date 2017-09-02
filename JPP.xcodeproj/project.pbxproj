@@ -99,6 +99,7 @@
 		84500D5B1F4860FB00F8402E /* Merchandise.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84500D5A1F4860FB00F8402E /* Merchandise.xib */; };
 		84500D5D1F48614800F8402E /* Merchandise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84500D5C1F48614800F8402E /* Merchandise.swift */; };
 		845F172D1F3CC47400CFC537 /* FacebookController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845F172C1F3CC47400CFC537 /* FacebookController.swift */; };
+		846799381F53F93500A37020 /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846799371F53F93500A37020 /* UserNotificationsUI.framework */; };
 		848A561A1F41D05800CCCE09 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 848A56181F41C4FD00CCCE09 /* UserNotifications.framework */; };
 		84CC3FF31F055964003F9643 /* kenyanbolditalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84CC3FF21F055964003F9643 /* kenyanbolditalic.ttf */; };
 		84CC3FF51F05596C003F9643 /* kenyanbold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84CC3FF41F05596C003F9643 /* kenyanbold.ttf */; };
@@ -236,6 +237,7 @@
 		84500D5A1F4860FB00F8402E /* Merchandise.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Merchandise.xib; sourceTree = "<group>"; };
 		84500D5C1F48614800F8402E /* Merchandise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Merchandise.swift; sourceTree = "<group>"; };
 		845F172C1F3CC47400CFC537 /* FacebookController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookController.swift; sourceTree = "<group>"; };
+		846799371F53F93500A37020 /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = SDKROOT; };
 		848A56181F41C4FD00CCCE09 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		84CC3FF21F055964003F9643 /* kenyanbolditalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = kenyanbolditalic.ttf; sourceTree = "<group>"; };
 		84CC3FF41F05596C003F9643 /* kenyanbold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = kenyanbold.ttf; sourceTree = "<group>"; };
@@ -279,6 +281,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				846799381F53F93500A37020 /* UserNotificationsUI.framework in Frameworks */,
 				848A561A1F41D05800CCCE09 /* UserNotifications.framework in Frameworks */,
 				363609AA1C5C759F00078DC7 /* SystemConfiguration.framework in Frameworks */,
 				363609A81C5C755B00078DC7 /* AVFoundation.framework in Frameworks */,
@@ -634,6 +637,7 @@
 		7283620D2DBE0A487EB4AD33 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				846799371F53F93500A37020 /* UserNotificationsUI.framework */,
 				848A56181F41C4FD00CCCE09 /* UserNotifications.framework */,
 				3636099A1C5C740800078DC7 /* Pushwoosh.framework */,
 				363609A91C5C759F00078DC7 /* SystemConfiguration.framework */,

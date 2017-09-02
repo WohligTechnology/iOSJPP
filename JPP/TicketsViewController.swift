@@ -15,6 +15,7 @@ class TicketsViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var ticketsTable: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadingInit()
         self.view.addSubview(loaderGlo)
         self.setNavigationBarItemText("TICKETS")
         rest.tickets({(json:JSON) -> () in

@@ -14,6 +14,8 @@ class SponsorsViewController: UIViewController {
     @IBOutlet weak var sponsorsImage: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadingInit()
+        self.view.addSubview(loaderGlo)
         self.setNavigationBarItem()
         rest.getSponsorImage({(json:JSON) -> () in
             DispatchQueue.main.sync(execute: {
@@ -25,7 +27,9 @@ class SponsorsViewController: UIViewController {
                     self.sponsorImage = json
                     self.sponsorsImage.hnk_setImageFromURL(rest.getImageSizeCache(self.sponsorImage["image"].stringValue))
                     print("demodemodemo",self.sponsorsImage.frame.size.height)
-                    
+                    DispatchQueue.main.async(execute: {
+                        loadingStop()
+                    });
                 }
             })
             

@@ -39,6 +39,7 @@ import UIKit
     @IBOutlet weak var button17: UIButton!
     @IBOutlet weak var button18: UIButton!
     @IBOutlet weak var button19: UIButton!
+    @IBOutlet weak var button20: UIButton!
     
     
     
@@ -61,6 +62,7 @@ import UIKit
     @IBOutlet weak var teamName17: UILabel!
     @IBOutlet weak var teamName18: UILabel!
     @IBOutlet weak var teamName19: UILabel!
+    @IBOutlet weak var teamName20: UILabel!
     
     
     
@@ -69,7 +71,7 @@ import UIKit
     var checkb1 = 0, checkb2 = 0, checkb3 = 0, checkb4 = 0,
     checkb5 = 0, checkb6 = 0, checkb7 = 0, checkb8 = 0,
     checkb9 = 0, checkb10 = 0, checkb11 = 0, checkb12 = 0,
-    checkb13 = 0, checkb14 = 0, checkb15 = 0, checkb16 = 0, checkb17 = 0, checkb18 = 0, checkb19 = 0
+    checkb13 = 0, checkb14 = 0, checkb15 = 0, checkb16 = 0, checkb17 = 0, checkb18 = 0, checkb19 = 0, checkb20 = 0
     
     var favouriteplayer = ""
     
@@ -122,6 +124,7 @@ import UIKit
         button17.backgroundColor = UIColor.white; checkb17 = 0
         button18.backgroundColor = UIColor.white; checkb18 = 0
         button19.backgroundColor = UIColor.white; checkb19 = 0
+//        button20.backgroundColor = UIColor.white; checkb20 = 0
         
     }
     
@@ -387,6 +390,18 @@ import UIKit
         }
 
     }
+    @IBAction func checkButton20(_ sender: Any) {
+//        if (checkb20 == 0) {
+//            button20.backgroundColor = borderColor
+//            favouriteplayer += players[19].name + ","
+//            print("checkbox: \(favouriteplayer)")
+//            checkb20 = 1
+//        } else {
+//            button20.backgroundColor = UIColor.white
+//            favouriteplayer = favouriteplayer.replacingOccurrences(of: players[19].name + ",", with: "")
+//            checkb20 = 0
+//        }
+    }
 //    @IBAction func checkbutton17(sender: AnyObject) {
 //        if (checkb17 == 0) {
 //            button17.backgroundColor = borderColor
@@ -444,6 +459,7 @@ import UIKit
         teamName17.text = players[16].name
         teamName18.text = players[17].name
         teamName19.text = players[18].name
+//        teamName20.text = players[19].name
         
         // BORDER
         firstName.layer.borderWidth = borderWidth
@@ -496,6 +512,8 @@ import UIKit
         button18.layer.borderColor = borderColor.cgColor
         button19.layer.borderWidth = borderWidth
         button19.layer.borderColor = borderColor.cgColor
+//        button20.layer.borderWidth = borderWidth
+//        button20.layer.borderColor = borderColor.cgColor
         
         // PADDING
         let firstPad = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: self.firstName.frame.height))

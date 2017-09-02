@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -31,6 +30,7 @@
                 <outlet property="button18" destination="Lcy-1v-tHN" id="TvN-Sl-wkJ"/>
                 <outlet property="button19" destination="mbB-hN-aTl" id="UoU-d6-1Gv"/>
                 <outlet property="button2" destination="uUL-JS-BX6" id="2VU-pV-cHn"/>
+                <outlet property="button20" destination="Nfn-F2-VOb" id="wlZ-9G-uNs"/>
                 <outlet property="button3" destination="dex-dW-STy" id="WgA-ND-pQa"/>
                 <outlet property="button4" destination="FFc-pp-KkD" id="UeL-Uz-E42"/>
                 <outlet property="button5" destination="BuM-S9-E1i" id="u1W-Rg-ofN"/>
@@ -49,6 +49,7 @@
                 <outlet property="teamName17" destination="yAG-Bc-T8z" id="BGL-H3-Qqt"/>
                 <outlet property="teamName18" destination="6V9-0z-Fpg" id="oWg-30-RdZ"/>
                 <outlet property="teamName19" destination="X2c-qp-6e3" id="Kdz-Qo-5ne"/>
+                <outlet property="teamName20" destination="WHP-E2-ACR" id="RLC-yR-nTg"/>
                 <outlet property="teamname1" destination="wnK-OV-Eje" id="Cl3-IO-bIf"/>
                 <outlet property="teamname10" destination="iZG-Yp-qLx" id="gLA-xg-Pov"/>
                 <outlet property="teamname11" destination="bJb-UJ-haK" id="SbH-AZ-uv8"/>
@@ -868,6 +869,9 @@
                                                             <exclude reference="hwy-r9-5Ko"/>
                                                         </mask>
                                                     </variation>
+                                                    <connections>
+                                                        <action selector="checkButton20:" destination="-1" eventType="touchUpInside" id="fk9-bI-jiz"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="WHP-E2-ACR">
                                                     <rect key="frame" x="35" y="0.0" width="140" height="25"/>
