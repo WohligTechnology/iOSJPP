@@ -63,8 +63,7 @@ class MatchUpdateController: UIViewController, UITableViewDelegate, UITableViewD
         tableView.tableFooterView = UIView()
         let cell = tableView.dequeueReusableCell(withIdentifier: "matchupdateCell", for: indexPath)
         cell.selectionStyle = UITableViewCellSelectionStyle.none
-        
-        if((matchupdateJSON[indexPath.row]["matchtime"].string) != nil) {
+               if((matchupdateJSON[indexPath.row]["matchtime"].string) != nil) {
             let matchupdateView = matchupdate(frame: CGRect(x: 0,y: 0,width: self.view.frame.width-16,height: 322));
 //            if indexPath.row == 0 {
 //                matchupdateView.matchTitle.text = "FINAL"

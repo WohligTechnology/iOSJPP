@@ -95,168 +95,6 @@ class ScheduleController: UIViewController {
         {
             print(json[0]);
             print("showSchedule\(json)")
-            
-//            DispatchQueue.main.async(execute: {
-//
-//                self.verticalLayout = VerticalFitLayout(width: self.view.frame.width);
-//                self.scrollView.insertSubview(self.verticalLayout, at: 0)
-//                var height2 = CGFloat(350.0);
-//                if(heightGlo-56 > 350)
-//                {
-//                    height2 = heightGlo-56-25;
-//                }
-//                
-//                
-//                
-//                let dateFormatter = DateFormatter()
-//                dateFormatter.dateFormat = "dd MMM yyyy, HH:mm"
-//                
-//                if(json[0]["level"].stringValue == "semifinal" )
-//                {
-//                    let updates = upcoming(frame: CGRect(x: 8,y: 8,width: self.verticalLayout.frame.width-16,height: height2))
-//                    self.verticalLayout.addSubview(updates)
-//                    
-//                    
-//                    //                updates.addToCalender.hidden = true
-//                    updates.team1Image.hnk_setImageFromURL(rest.getImageSizeCache(json[0]["appteamimage1"].stringValue))
-//                    updates.team2Image.hnk_setImageFromURL(rest.getImageSizeCache(json[0]["appteamimage2"].stringValue))
-////                    updates.matchTime.text = json[0]["starttimedate"].string
-////                    updates.matchVenue.text = json[0]["stadium"].string
-////                    
-////                    
-////                    updates.EventTimeTop = dateFormatter.date(from: json[0]["starttimedate"].string!)!
-////                    updates.EventNameTop = json[0]["team1"].string! + " VS " + json[0]["team2"].string!;
-//                }
-//                else if(json[0]["level"].stringValue == "final" )
-//                {
-//                    let updates = upcoming(frame: CGRect(x: 8,y: 8,width: self.verticalLayout.frame.width-16,height: height2))
-//                    self.verticalLayout.addSubview(updates)
-//                    
-//                    if(json[0]["id"]).boolValue {
-//                        self.verticalLayout.addSubview(updates)
-//                        
-//                        //                updates.addToCalender.hidden = true
-//                        updates.team1Image.hnk_setImageFromURL(rest.getImageSizeCache(json[0]["appteamimage1"].stringValue))
-//                        updates.team2Image.hnk_setImageFromURL(rest.getImageSizeCache(json[0]["appteamimage2"].stringValue))
-////                        updates.matchTime.text = json[0]["starttimedate"].string
-////                        updates.matchVenue.text = json[0]["stadium"].string
-////                        
-////                        updates.semiImage.image = UIImage(named: "finals")
-////                        
-////                        
-////                        updates.EventTimeTop = dateFormatter.date(from: json[0]["starttimedate"].string!)!
-////                        updates.EventNameTop = json[0]["team1"].string! + " VS " + json[0]["team2"].string!;
-//                    }
-//                }
-//                else {
-//                    let updates = upcoming(frame: CGRect(x: 8,y: 8,width: self.verticalLayout.frame.width-16,height: 300))
-//                    self.verticalLayout.addSubview(updates)
-//                    updates.team1Image.hnk_setImageFromURL(rest.getImageSizeCache(json[0]["appteamimage1"].stringValue))
-//                    updates.team2Image.hnk_setImageFromURL(rest.getImageSizeCache(json[0]["appteamimage2"].stringValue))
-//                    updates.matchStadium.text = json[0]["stadium"].stringValue
-//                    updates.matchDate.text = json[0]["starttimedate"].stringValue
-//                    let dateFormatter = DateFormatter()
-//                    dateFormatter.dateFormat = "dd MMM yyyy, HH:mm"
-//                    
-//                    updates.EventTimeTop = dateFormatter.date(from: json[0]["starttimedate"].stringValue)!
-//                    updates.EventNameTop = json[0]["team1"].stringValue + " VS " +  json[0]["team2"].stringValue
-//                   
-//                  
-//                    
-//                    if(json[0]["id"]).boolValue {
-//                        self.verticalLayout.addSubview(updates)
-//                        
-////                                       updates.addToCalender.isHidden = true
-//                        if(json[0]["team1id"]).boolValue {
-//                            updates.team1Image.hnk_setImageFromURL(rest.getImageSizeCache(json[0]["appteamimage1"].stringValue))
-//                        }
-//                        if(json[0]["team2id"]).boolValue {
-//                            updates.team2Image.hnk_setImageFromURL(rest.getImageSizeCache(json[0]["appteamimage2"].stringValue))
-//                        }
-////                        updates.matchTime.text = json[0]["starttimedate"].string
-//                        
-//                        if(json[0]["stadium"]).boolValue {
-////                            updates.matchVenue.text = json[0]["stadium"].string
-//                        }
-//                        
-//                        
-////                        updates.EventTimeTop = dateFormatter.date(from: json[0]["starttimedate"].string!)!
-//                        if((json[0]["team1"].string != nil) && (json[0]["team2"].string != nil)) {
-////                        updates.EventNameTop = json[0]["team1"].string! + " VS " + json[0]["team2"].string!;
-//                        }
-//                    }
-//                    
-//                   
-//                    
-//                }
-//                
-//                
-//                
-//                
-//
-//
-//               
-//        
-//                
-//                var whiteView:UIView!
-//                whiteView = UIView(frame:CGRect(x: 0,y: 8,width: self.verticalLayout.frame.width,height: 1000));
-//                whiteView.backgroundColor = UIColor.white
-//                if(json[0]["starttimedate"]).boolValue {
-//                    
-//                self.EventTimeTop = dateFormatter.date(from: json[0]["starttimedate"].string!)!
-//                    if((json[0]["team1"].string != nil) && (json[0]["team2"].string != nil)) {
-//                        self.EventNameTop = json[0]["team1"].string! + " VS " + json[0]["team2"].string!;
-//                    }
-//                    
-//                }
-//                
-//                let trap = trapezium(frame: CGRect(x: 8,y: 0,width: self.verticalLayout.frame.width-16,height: 34));
-//                self.resizeView(8);
-//                whiteView.addSubview(trap);
-//                trap.trapeziumTitle.text="OTHER MATCHES";
-//                
-////                self.verticalLayout.addSubview(whiteView);
-//                
-//                for i in 1..<json.count
-//                {
-//                    
-//                    let topDistance = self.topSpacing+self.spacingPink+((100+self.spacingPink)*(i-1));
-//                    let insideTable = matches(frame: CGRect(x: 8,y: CGFloat(topDistance),width: self.verticalLayout.frame.width-16,height: 100));
-//                   
-//                    insideTable.matchesTeams.text = json[i]["team1"].stringValue + " VS " + json[i]["team2"].stringValue
-//                    insideTable.bookURL = json[i]["bookticket"].stringValue
-//                    
-////                    if(json[i]["team1id"].string != "5")
-////                    {
-//  insideTable.buttonHolder.alpha = 0;
-////                        
-////                    }
-////                    else
-//                 //   {
-//                       // insideTable.addCalender2.alpha = 0;
-//                   // }
-//                    
-//                    insideTable.matchesDate.text = json[i]["starttimedate"].string
-//                    
-//                    
-//                    whiteView.frame.size.height = CGFloat(topDistance+100+8);
-//                    whiteView.addSubview(insideTable);
-//                    self.verticalLayout.addSubview(whiteView)
-//                }
-//                
-//               // let bookTic = bookTicket(frame:CGRectMake(8,8,self.verticalLayout.frame.width-16,44));
-//                
-//               // self.verticalLayout.addSubview(bookTic);
-//                
-//                self.resizeView(8);
-//                
-//               // bookTic.bookButton.addTarget(self, action: "BookButtonTap:", forControlEvents: UIControlEvents.TouchUpInside)
-//               
-//                
-//            })
-//            
-//           
-            
            
         }
        
@@ -381,6 +219,10 @@ class ScheduleController: UIViewController {
                         let dateFormatter = DateFormatter()
                         dateFormatter.dateFormat = "dd MMM yyyy, HH:mm"
                         
+                        
+                       
+
+                        
                         updates.EventTimeTop = dateFormatter.date(from: json[0]["starttimedate"].stringValue)!
                         updates.EventNameTop = self.schedule[0]["team1"].stringValue + " VS " +  self.schedule[0]["team2"].stringValue
                         
@@ -419,16 +261,9 @@ class ScheduleController: UIViewController {
                         
                     }
                     
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
                     var whiteView:UIView!
                     whiteView = UIView(frame:CGRect(x: 0,y: 8,width: self.verticalLayout.frame.width,height: 1000));
+                    
                     whiteView.backgroundColor = UIColor.white
                     if(self.schedule[0]["starttimedate"]).boolValue {
                         
@@ -451,7 +286,7 @@ class ScheduleController: UIViewController {
                         
                         let topDistance = self.topSpacing+self.spacingPink+((100+self.spacingPink)*(i-1));
                         let insideTable = matches(frame: CGRect(x: 8,y: CGFloat(topDistance),width: self.verticalLayout.frame.width-16,height: 100));
-                        
+                       
                         insideTable.matchesTeams.text = self.schedule[i]["team1"].stringValue + " VS " + self.schedule[i]["team2"].stringValue
                         if(self.schedule[i]["bookticket"].stringValue != ""){
                            insideTable.bookTickets.isHidden = false
@@ -479,10 +314,6 @@ class ScheduleController: UIViewController {
                         whiteView.addSubview(insideTable);
                         self.verticalLayout.addSubview(whiteView)
                     }
-                    
-                    // let bookTic = bookTicket(frame:CGRectMake(8,8,self.verticalLayout.frame.width-16,44));
-                    
-                    // self.verticalLayout.addSubview(bookTic);
                     
                     self.resizeView(8);
                     

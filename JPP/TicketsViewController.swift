@@ -52,6 +52,7 @@ class TicketsViewController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ticketsTableView", for: indexPath) as! TicketTableViewCell
         cell.ticketImage.hnk_setImageFromURL(rest.getImageSizeCache(self.tickets["queryresult"][indexPath.row]["image"].stringValue))
+        
         return cell
     }
 

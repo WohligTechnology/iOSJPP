@@ -496,34 +496,10 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                                     
                                 }
                             })
-
-                            
-                            
-//                            self.diffMonth = matchMonth! - month!
-//                            
-//                            self.diffDay == self.diffDay
-//                            
-//                            print("gochisee\(self.diffDay)")
-//                            self.diffHour = matchHour! - hour!
-//                            self.diffMin = matchMins! - minutes!
-                            
-                            
-//                            if(self.diffMin < 0) { self.diffHour = self.diffHour - 1;  self.diffMin = self.diffMin + 60 }
-//                            
-//                            if(self.diffHour < 0) { self.diffDay = self.diffDay - 1; self.diffHour = self.diffHour + 24 }
-//                            
-//                            if(self.diffDay < 0) { self.diffMonth = self.diffMonth - 1; self.diffDay = self.diffDay + (range?.count)! }
-                            
                             updates.remainingMonths.text = String(self.diffMonth)
-                            print(updates.remainingMonths.text)
-                            print("gochi\(self.diffDay)")
                             updates.remainingDays.text = String(self.diffDay)
-                            print(updates.remainingDays.text)
-                             
                             updates.remainingHours.text = String(self.diffHour)
-                            print(updates.remainingHours.text)
                             updates.remainingMins.text = String(self.diffMin)
-                            print(updates.remainingMins.text)
                         }
                     } else{
                         self.showScore(json)
@@ -742,28 +718,7 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                 }
 
                 
-                // SPONSERS SECTION
-                
-//                let sponserView = sponsorsView(frame: CGRect(x: 8, y: 16, width: self.view.frame.size.width - 16, height: 77))
-//                
-//                print("imagesize\(sponserView)")
-////                let sponserimage = UIImageView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width - 16, height: 140))
-////                sponserimage.image = UIImage(named: "sponsors")
-//                
-////                sponserView.addSubview(sponserimage)
-//                  sponserView.sponsorImage.hnk_setImageFromURL(rest.getImageSizeCache(self.HomeJSON["sponsorimage"]["image"].stringValue))
-//                sponserView.sponsorImage.autoresizingMask = UIViewAutoresizing.flexibleBottomMargin
-//                sponserView.sponsorImage.autoresizingMask = UIViewAutoresizing.flexibleHeight
-//                sponserView.sponsorImage.autoresizingMask = UIViewAutoresizing.flexibleRightMargin
-//                sponserView.sponsorImage.autoresizingMask = UIViewAutoresizing.flexibleLeftMargin
-//                sponserView.sponsorImage.autoresizingMask = UIViewAutoresizing.flexibleTopMargin
-//                sponserView.sponsorImage.autoresizingMask = UIViewAutoresizing.flexibleWidth
-//
-//                
-//                self.verticalLayout.addSubview(sponserView)
-//                
-//                self.resizeView(8);
-            })
+              })
             
             DispatchQueue.main.async(execute: {
                 loadingStop()
@@ -799,23 +754,10 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                 if json == 401 {
                     print("No Data Found")
                 }else{
-                    
-                    //                    thumbnail.frame = CGRect(x: 8,y: 8,width: self.verticalLayout.frame.width-16,height: 180);
-                    //                    thumbnail.layoutIfNeeded()
-                    //                    self.resizeView(8)
-                    //                                thumbnail.thumbImage.frame = CGRect(x: 8,y: 8,width: self.verticalLayout.frame.width-16,height: 380);
-                    
                     print(json)
                     self.getPicture = json
                     thumbnail.thumbImage.hnk_setImageFromURL(rest.getImageSizeCache(self.getPicture["image"].stringValue))
                     print("showshowshow\(self.getPicture)")
-                    
-                    
-                    
-                    //self.verticalLayout.addSubview(thumbnail);
-                    //                    print("i want this\(self.getPlayers)")
-                    //                    print("givecount\(self.getPlayers.count)")
-                    //                    self.playersCollection.reloadData()
                 }
             })
             
@@ -832,14 +774,11 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
         
         self.setNavigationBarItem()
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
-        //refreshControl.addSubview(loaderView)
         refreshControl.backgroundColor = lightBlueColor
         refreshControl.tintColor = PinkColor
         refreshControl.addTarget(self, action: #selector(HomeController.refresh(_:)), for: .valueChanged)
        
         scrollView.addSubview(refreshControl)
-       //      rest.getHome(homeLoaded)
-        
         loadingInit()
         home()
         callhome()

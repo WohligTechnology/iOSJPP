@@ -119,33 +119,13 @@ class PointTableController: UIViewController,UITableViewDelegate,UITableViewData
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
             return pointJson[0]["pointsTableA"].count
         }
-    
-//    func tableView(_ tableView: UITableView, sectionForSectionIndexTitle title: String, at index: Int) -> Int {
-//        return 2
-//    }
-    
-    
-//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//        let returnedView = UIView(frame: CGRect(x: 20, y: 100, width: view.frame.size.width, height: 100))
-//        returnedView.backgroundColor = .lightGray
-//        
-//        let label = UILabel(frame: CGRect(x: 10, y: 7, width: view.frame.size.width, height: 25))
-//        
-//        label.textColor = .black
-//        label.text = "Zone A"
-//        returnedView.addSubview(label)
-//        
-//        return returnedView
-        //    }
 
-    
-    
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
          if section == 0 {
-        var headerView = UIView()
+         var headerView = UIView()
           headerView = UIView(frame: CGRect(x: 8, y: 8, width: view.frame.size.width, height: 20))
         
-        let label = UILabel(frame: CGRect(x: 8, y: 8, width: view.frame.size.width, height: 20))
+         let label = UILabel(frame: CGRect(x: 8, y: 8, width: view.frame.size.width, height: 20))
          let fontHeader = UIFont(name: "Oswald-Regular", size: 20.0)
         label.font = fontHeader
         label.textColor = .white
@@ -157,7 +137,6 @@ class PointTableController: UIViewController,UITableViewDelegate,UITableViewData
          }else{
             var headerView = UIView()
             headerView = UIView(frame: CGRect(x: 8, y: 8, width: view.frame.size.width, height: 20))
-            
             let label = UILabel(frame: CGRect(x: 8, y: 8, width: view.frame.size.width, height: 20))
             let fontHeader = UIFont(name: "Oswald-Regular", size: 20.0)
             label.font = fontHeader
@@ -171,23 +150,23 @@ class PointTableController: UIViewController,UITableViewDelegate,UITableViewData
     }
 
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
-    }
-    
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 32.0
-    }
-    
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-       
-        if section == 0 {
-            return pointJson[0]["name"].stringValue
-        } else {
-            return pointJson[1]["name"].stringValue
+        func numberOfSections(in tableView: UITableView) -> Int {
+                return 2
         }
+    
+        func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+            return 32.0
+        }
+    
+        func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+       
+            if section == 0 {
+                return pointJson[0]["name"].stringValue
+            } else {
+                return pointJson[1]["name"].stringValue
+            }
         
-    }
+        }
     
     
     
@@ -248,8 +227,8 @@ class PointTableController: UIViewController,UITableViewDelegate,UITableViewData
                 }
                 cell.no.text = String((indexPath as NSIndexPath).row  + 1)
                 cell.played.text = pointJson[0]["pointsTableA"][indexPath.row]["played"].string
-                cell.lost.text = pointJson[0]["pointsTableA"][indexPath.row]["lost"].string
-                cell.wins.text = pointJson[0]["pointsTableA"][indexPath.row]["wins"].string
+                cell.lost.text = pointJson[0]["pointsTableA"][indexPath.row]["wins"].string
+                cell.wins.text = pointJson[0]["pointsTableA"][indexPath.row]["lost"].string
 //                cell.draw.text = pointJson[0]["pointsTableA"][indexPath.row]["draw"].string
                 cell.point.text = pointJson[0]["pointsTableA"][indexPath.row]["point"].string
 
@@ -300,8 +279,8 @@ class PointTableController: UIViewController,UITableViewDelegate,UITableViewData
                 }
                 cell.no.text = String((indexPath as NSIndexPath).row  + 1)
                 cell.played.text = pointJson[1]["pointsTableB"][indexPath.row]["played"].string
-                cell.lost.text = pointJson[1]["pointsTableB"][indexPath.row]["lost"].string
-                cell.wins.text = pointJson[1]["pointsTableB"][indexPath.row]["wins"].string
+                cell.lost.text = pointJson[1]["pointsTableB"][indexPath.row]["wins"].string
+                cell.wins.text = pointJson[1]["pointsTableB"][indexPath.row]["lost"].string
 //                cell.draw.text = pointJson[1]["pointsTableB"][indexPath.row]["draw"].string
                 cell.point.text = pointJson[1]["pointsTableB"][indexPath.row]["point"].string
                 

@@ -85,7 +85,7 @@ class GalleryInsideController: UIViewController,UICollectionViewDataSource,UICol
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "thumbnail", for: indexPath) as UICollectionViewCell
         //        cell.addSubview(thumbnailImage(frame: CGRectMake(8,8,cell.frame.width - 8,cell.frame.height - 8)));
-        
+//        cell.layer.transform = CATransform3DMakeScale(0.1,0.1,1)
         
         if((jsonData[indexPath.row]["name"].string) != nil) {
             let mediaBox = thumbnailImage(frame: CGRect(x: 8,y: 8,width: cell.frame.width-8,height: 230));

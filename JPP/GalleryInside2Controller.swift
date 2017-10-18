@@ -26,6 +26,7 @@ class GalleryInside2Controller: UIViewController {
         
         fullView.openImage.hnk_setImageFromURL(rest.getImageCache(galleryImage))
         
+        
     }
 
     override func didReceiveMemoryWarning() {

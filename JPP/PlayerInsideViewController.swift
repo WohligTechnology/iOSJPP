@@ -33,24 +33,11 @@ class PlayerInsideViewController: UIViewController {
 self.verticalLayout = VerticalLayout(width: self.view.frame.width);
         
       player = playersInside(frame: CGRect(x: 0, y: 20, width: view.frame.width, height:983))
-//        player = playersInside()
-//        frame: CGRect(x: 0, y: 0, width: playersScroll.frame.width, height:view.frame.maxY)
-//        playersScroll.addSubview(player)
-//        let point = CGPoint(x: 0, y: (self.playersScroll.contentSize.height - self.playersScroll.bounds.size.height))
-//        self.playersScroll.setContentOffset(point, animated: true)
-//        self.playersScroll.scrollRectToVisible(player.frame, animated: true)
-       self.verticalLayout.addSubview(player)
-        playersScroll.insertSubview(verticalLayout, at: 0)
-//       playersScroll.contentSize = CGSize(width: 0, height: 1200)
+      self.verticalLayout.addSubview(player)
+      playersScroll.insertSubview(verticalLayout, at: 0)
         
         let offset: CGFloat = player.descriptionTextView.bounds.size.height
          self.playersScroll.contentSize = CGSize(width: 0, height: self.player.frame.height + offset)
-        
-//        func resizeView(_ offset:CGFloat)
-//        {
-//            self.verticalLayout.layoutSubviews()
-//            self.playersScroll.contentSize = CGSize(width: self.verticalLayout.frame.width, height: self.verticalLayout.frame.height + offset)
-//        }
     
         // Do any additional setup after loading the view.
         
@@ -126,17 +113,8 @@ self.verticalLayout = VerticalLayout(width: self.view.frame.width);
                             self.player.descriptionTextView.isHidden = false
                         }
                         
-                        //        player.frame = CGRect(x: 0, y: 0, width: playersScroll.frame.width, height:())
                     }
-                    
-                    
-                    
-                    
 
-//                    self.getPlayers = json["queryresult"]
-//                    print("i want this\(self.getPlayers)")
-//                    print("givecount\(self.getPlayers.count)")
-//                    self.playersCollection.reloadData()
                 }
             })
             

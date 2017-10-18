@@ -104,6 +104,7 @@ class GalleryController: UIViewController,UITableViewDataSource,UITableViewDeleg
         tableView.tableFooterView = UIView()
         let cell = tableView.dequeueReusableCell(withIdentifier: "galCell", for: indexPath)
         cell.selectionStyle = UITableViewCellSelectionStyle.none
+        
         if(activeGal == 0 ) {
             if((photosJson[indexPath.row]["image"].string) != nil) {
                 var mediaBox = galleryAlbum(frame: CGRect(x: 8,y: 0,width: self.view.frame.width-16,height: 200))
@@ -114,6 +115,7 @@ class GalleryController: UIViewController,UITableViewDataSource,UITableViewDeleg
                 mediaBox.galleryTitle.text = photosJson[indexPath.row]["name"].stringValue
                 mediaBox.galleryBanner.hnk_setImageFromURL(rest.getImageCache(photosJson[indexPath.row]["image"].string!))
                 mediaBox.galleryTitleBackView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.70)
+                
                 cell.addSubview(mediaBox)
             }
         }
@@ -128,6 +130,7 @@ class GalleryController: UIViewController,UITableViewDataSource,UITableViewDeleg
                 let image = photosJson[indexPath.row]["url"].stringValue;
                 
                 mediaBox.galleryBanner.hnk_setImageFromURL(rest.getImageExternalCacheURL(rest.getYoutubeImage(image)) )
+                
                 cell.addSubview(mediaBox)
             }
         }

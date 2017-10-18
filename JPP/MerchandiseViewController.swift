@@ -80,6 +80,7 @@ class MerchandiseViewController: UIViewController, UITableViewDataSource, UITabl
         cell.buyNow.addTarget(self, action: #selector(MerchandiseViewController.productLink(_:)), for: .touchUpInside)
         cell.buyNow.tag =  indexPath.row
         
+               
         return cell
     }
     
@@ -91,6 +92,7 @@ class MerchandiseViewController: UIViewController, UITableViewDataSource, UITabl
         
         //        WebController.url = theUrl
         self.navigationController?.pushViewController(WebController, animated: true)
+        
 
     }
     

@@ -9,10 +9,36 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>JPPPush 2.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>9</integer>
+		</dict>
+		<key>JPPPush.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>JPPPushwoosh.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>36F9C15B1C55EDBF003D02AB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>842A45E71F5E6E3B006BCA11</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -7,70 +7,70 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		048BE8B1399E22885B758F58B5103AAF /* UIImage+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF79732EA26E724DBF7FDD46635E10BF /* UIImage+Haneke.swift */; };
-		08000DA6532FF25A7C4C542C9B5C34BB /* RAMBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33FB05237C5D2FD19AC4BD5502D5F9B /* RAMBadge.swift */; };
+		048BE8B1399E22885B758F58B5103AAF /* UIImage+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566B020EC1E4D2BB742A3B17D824C2E3 /* UIImage+Haneke.swift */; };
+		08000DA6532FF25A7C4C542C9B5C34BB /* RAMBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB7775827172E642DB0640A6BA1CDE0 /* RAMBadge.swift */; };
 		0CA8E380A91C9748D67E560DE35C5AC7 /* Pods-JPP-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 078D872C5D2444129F7AF2DFA8BDADC5 /* Pods-JPP-dummy.m */; };
-		0DA289E3CFC0496E8A393A78831458C6 /* Fetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A12D6EEF67EAB6C6475E875C3888243 /* Fetch.swift */; };
-		1226F3D3D62AE6BEFC398C42B806BC0B /* UIView+AnimationKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DA498D0FD4D0E61D25D9FB6D5A3C8E /* UIView+AnimationKit.swift */; };
-		19B22BC6AA8A81D2151F6589774A1711 /* DKChainableAnimationKit+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF180FBE6E2EB5D76C88D48B4B76512 /* DKChainableAnimationKit+Extra.swift */; };
-		1A6384B2A7441ACA160052A285F502A7 /* Upload.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA62B0AAD75FEF6BB46DD45116A1B0F /* Upload.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		233D0C74026D4F77CB562E90B2714777 /* DiskFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1978E099BB9AA926A17678B3A9493F9F /* DiskFetcher.swift */; };
-		24621C191221E47D0E087DCC25227243 /* SlideMenuControllerSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CFD56275A34F2B833D7694D9B8D9F629 /* SlideMenuControllerSwift-dummy.m */; };
-		2544ED8CDA44215947A755ACCFB9F5BD /* Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EA2D5ACF39C9D3869198320410693F /* Operation.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		25F558B3167CC7FAFCCC902B83ED0599 /* String+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82E7E444C59C3E50A3CCF0C9BB462C4 /* String+Haneke.swift */; };
-		2D93F149491F25BCC11EBF259DE1791D /* NSURLResponse+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59097CFC48962AA3F54C739CCB614FC /* NSURLResponse+Haneke.swift */; };
-		305D05A8BBBF3FC6C1A237B3C1989933 /* RAMAnimatedTabBarController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CB9620349CE34B0D7E5FD9D81A549513 /* RAMAnimatedTabBarController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		34BA8F11703FC6F1FC94812A2B451A2D /* HanekeSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F71A72E5972A64592472D7E742DE1B /* HanekeSwift-dummy.m */; };
-		368FBAAE5E624FDDB6F39D1ACB1DA144 /* UIImageView+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9EFEC509B8384A00266FEB99C1F3AE /* UIImageView+Haneke.swift */; };
-		424F2EE8F3FF0206A8C0455939698D41 /* Fetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910DD6FDAB394328337D72F986AFB715 /* Fetcher.swift */; };
-		44ACFD0543993523C7B2875814A25A65 /* DiskCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3ADCA7BB985C67434E6F875A82F708 /* DiskCache.swift */; };
-		45D941F68F765620760E8EC56F4C3904 /* NetworkFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD801C9FEE06A611A5420501B11E8D3 /* NetworkFetcher.swift */; };
-		4AF5E110E690F8C35B6970AC1173B4E3 /* DKChainableAnimationKit+Anchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF715C1DFB143022146901752A92067 /* DKChainableAnimationKit+Anchor.swift */; };
-		4DD86976825AD756366DA2BA4B7F3D99 /* DKChainableAnimationKit+Transform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CBB1B37609BF1B3460D36827656A88 /* DKChainableAnimationKit+Transform.swift */; };
-		516B284EC38BCC14EBF5A275790CFA9E /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB556AF8A823379C151A1E4D6C8C74DA /* Data.swift */; };
-		5296135F2122EF612BEA6633DDD7A204 /* RAMBounceAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E0FD42AED0F187BF7E89F2035AD890 /* RAMBounceAnimation.swift */; };
-		541A1FB8E651E9A9BF97B65C68B9CCC5 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3208FCA0C2C518D3DACEE40B2C32F9F /* Request.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		5946A4834D77660F3D8188ED70FDC603 /* NSHTTPURLResponse+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77BC4F27942B38BB061F2DE13A6BACA /* NSHTTPURLResponse+Haneke.swift */; };
-		61AA50AE5342DC23287112C2F629E232 /* RAMFrameItemAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471A1FF0451625AD01BD110DEEEBDF1C /* RAMFrameItemAnimation.swift */; };
+		0DA289E3CFC0496E8A393A78831458C6 /* Fetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8828EFF20413AB19BDA6B15641A904E /* Fetch.swift */; };
+		1226F3D3D62AE6BEFC398C42B806BC0B /* UIView+AnimationKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9319160874280898C05D1CD62175FCB6 /* UIView+AnimationKit.swift */; };
+		19B22BC6AA8A81D2151F6589774A1711 /* DKChainableAnimationKit+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAABA67961622E2AC2B868D2F09525DE /* DKChainableAnimationKit+Extra.swift */; };
+		1A6384B2A7441ACA160052A285F502A7 /* Upload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861EEED173E6A99B34562F3C628C9550 /* Upload.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		233D0C74026D4F77CB562E90B2714777 /* DiskFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3018F16D052CEEB6BABAEDD14458047 /* DiskFetcher.swift */; };
+		24621C191221E47D0E087DCC25227243 /* SlideMenuControllerSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E8406B506F03052F9E908E8EAAA7E0B /* SlideMenuControllerSwift-dummy.m */; };
+		2544ED8CDA44215947A755ACCFB9F5BD /* Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65734A73731088DEB6C4C6999941FB7C /* Operation.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		25F558B3167CC7FAFCCC902B83ED0599 /* String+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AEC5CC95E52665550A71FA9F23A463C /* String+Haneke.swift */; };
+		2D93F149491F25BCC11EBF259DE1791D /* NSURLResponse+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F7596EB985B0DE89E889CEF1F8A7BB /* NSURLResponse+Haneke.swift */; };
+		305D05A8BBBF3FC6C1A237B3C1989933 /* RAMAnimatedTabBarController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CB3E9EE1AEB7D60E1C0B3E1C4DFB7DF8 /* RAMAnimatedTabBarController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		34BA8F11703FC6F1FC94812A2B451A2D /* HanekeSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E389DF0230212502469E426EF14539C9 /* HanekeSwift-dummy.m */; };
+		368FBAAE5E624FDDB6F39D1ACB1DA144 /* UIImageView+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AF0BCEAB8A6BBCB9AB0A4DE0BCBEC4 /* UIImageView+Haneke.swift */; };
+		424F2EE8F3FF0206A8C0455939698D41 /* Fetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2492974F7B2734A561895625034C8E8 /* Fetcher.swift */; };
+		44ACFD0543993523C7B2875814A25A65 /* DiskCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C75C9F334B5F3B8937F3026F420AFE /* DiskCache.swift */; };
+		45D941F68F765620760E8EC56F4C3904 /* NetworkFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF898FD4D5F95712C16014611B7183A9 /* NetworkFetcher.swift */; };
+		4AF5E110E690F8C35B6970AC1173B4E3 /* DKChainableAnimationKit+Anchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C02D27B31F61FAA5EBB497F7179EFA /* DKChainableAnimationKit+Anchor.swift */; };
+		4DD86976825AD756366DA2BA4B7F3D99 /* DKChainableAnimationKit+Transform.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC91C2FACCACF1EA91FB196339741297 /* DKChainableAnimationKit+Transform.swift */; };
+		516B284EC38BCC14EBF5A275790CFA9E /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C840DC8FD74ED6DB5C46E60F4E0AE84 /* Data.swift */; };
+		5296135F2122EF612BEA6633DDD7A204 /* RAMBounceAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55056F725261771943EC1D884E95B5E /* RAMBounceAnimation.swift */; };
+		541A1FB8E651E9A9BF97B65C68B9CCC5 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AC7F1EF81B1447B5774C2B3227242B /* Request.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		5946A4834D77660F3D8188ED70FDC603 /* NSHTTPURLResponse+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB843D44B5971BB4FD12D9ABEC78987 /* NSHTTPURLResponse+Haneke.swift */; };
+		61AA50AE5342DC23287112C2F629E232 /* RAMFrameItemAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC620F6C617353EA33BE6F7EE20B7BE /* RAMFrameItemAnimation.swift */; };
 		62B15F23FF30858239C8E47C735687A4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		630B78C9D2D89FA4B460329A08258E57 /* DKChainableAnimationKit+Effects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F5A96192A0498D41F4494252AE4DD2 /* DKChainableAnimationKit+Effects.swift */; };
-		638F9ADB424C2B092D08EF15A94B9D36 /* RAMAnimatedTabBarController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 17DBE6BA2DD725C4AC892493D52F4995 /* RAMAnimatedTabBarController-dummy.m */; };
-		6C1ACB8A9E8FEFF5A698D3905952C154 /* RAMAnimatedTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226FCA753AA5080FE946928B44F3B434 /* RAMAnimatedTabBarController.swift */; };
-		6F41805C2984D3172CEBDCB232A9E205 /* CryptoSwiftMD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D602F46B194B188A70429EA1C48F0C6 /* CryptoSwiftMD5.swift */; };
-		734D2D7728F4FDB196AFBDA6FE131376 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8939F0152F8C6E396603C05AD314E3C2 /* Log.swift */; };
-		74527FDA4FFBA398846B98D9E2FDBE46 /* SwiftHTTP-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = ECBD8E2ABAB491F6E59C606C1C0204A1 /* SwiftHTTP-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7714E7142637C906F1D03C33CD860FD9 /* DKKeyFrameAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9F7C4680D664EA7CA1BFF4AE7FA9A9 /* DKKeyFrameAnimation.swift */; };
-		7E867974234ECCA3F0419879A37EF9A1 /* Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313725AF88EBAC0328D24C7B2BB5A1AD /* Haneke.swift */; };
-		806E40CFAA2C3DACD513FB120FCFBD82 /* DKChainableAnimationKit+Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380AEBA6EC51A9DCE6248C6EBECA985F /* DKChainableAnimationKit+Frame.swift */; };
-		8587EAA7CD60EA3344E6138D586CAF1D /* DKChainableAnimationKit+Bezier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B3104B380F240115ECE1AFEB28E926 /* DKChainableAnimationKit+Bezier.swift */; };
-		919CB25FEEC7FE3E175B8CDFDF63A546 /* DKChainableAnimationKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E555941CD999F252A5C83B22F8694D0A /* DKChainableAnimationKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		91FB2F5A6A815C0D04FF5CE8C7A5C222 /* SwiftHTTP-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E9A1D0B394D8C415ACDF2FEBAA0D2AF1 /* SwiftHTTP-dummy.m */; };
-		9D751AE797836951F9FD0A4E9E6AE344 /* CGSize+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472F828C2E4C0A70539F63B4DC70054E /* CGSize+Swift.swift */; };
-		9EE1403DA1A9925A16B1A582BF277900 /* SlideMenuControllerSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CFD6967767926194F00D3491EA141E6E /* SlideMenuControllerSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9F0ED20EDA02495C3CE53351168BDA34 /* UIView+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABABAB2BE7E166239386F9F4B9D7A007 /* UIView+Haneke.swift */; };
-		A257C7E3394A9813188DC886B978193F /* UIButton+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7784610373F2F4B6AE9A740DD2463C70 /* UIButton+Haneke.swift */; };
-		A5207B61C340A037DB0622275CD733FC /* DKKeyframeAnimationFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D33DF50627740C92ECF05B4A195702 /* DKKeyframeAnimationFunction.swift */; };
-		ACA69A6552DDAC894DAEE12AF054DBD6 /* DKChainableAnimationKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 39FBAF59384DB01E2DC74114BE012853 /* DKChainableAnimationKit-dummy.m */; };
-		B138456B71181C1A75BD0F6594145C08 /* DKChainableAnimationKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE4574236B04D080B43CEDF9A42457D /* DKChainableAnimationKit.swift */; };
-		B82A1DE4CDDF69EB6FA699D084E92F18 /* RAMRotationAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA24A29106BA8DEAE2609880B0B8C9A /* RAMRotationAnimation.swift */; };
+		630B78C9D2D89FA4B460329A08258E57 /* DKChainableAnimationKit+Effects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79971FDCDADDA6180339BF562F39A853 /* DKChainableAnimationKit+Effects.swift */; };
+		638F9ADB424C2B092D08EF15A94B9D36 /* RAMAnimatedTabBarController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FF19B0E40DA0560CDF598A67FB678F52 /* RAMAnimatedTabBarController-dummy.m */; };
+		6C1ACB8A9E8FEFF5A698D3905952C154 /* RAMAnimatedTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE8C055ECE55392DE0E7477AF502087 /* RAMAnimatedTabBarController.swift */; };
+		6F41805C2984D3172CEBDCB232A9E205 /* CryptoSwiftMD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3F08042CA0DDE0478E265DC32AF99B /* CryptoSwiftMD5.swift */; };
+		734D2D7728F4FDB196AFBDA6FE131376 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDC1F0D1E5715D109F3DDB0E304322A /* Log.swift */; };
+		74527FDA4FFBA398846B98D9E2FDBE46 /* SwiftHTTP-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 81EC3C783DDC6B66808801F78A4124B1 /* SwiftHTTP-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7714E7142637C906F1D03C33CD860FD9 /* DKKeyFrameAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50DF0091160C81572F647737233441B /* DKKeyFrameAnimation.swift */; };
+		7E867974234ECCA3F0419879A37EF9A1 /* Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203085C1B9ACAE01753B6905DD7ECD8F /* Haneke.swift */; };
+		806E40CFAA2C3DACD513FB120FCFBD82 /* DKChainableAnimationKit+Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C35C120580B006A4BFF6F6093734D9 /* DKChainableAnimationKit+Frame.swift */; };
+		8587EAA7CD60EA3344E6138D586CAF1D /* DKChainableAnimationKit+Bezier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344EE519A986F1CD10BCD4D44FB882AE /* DKChainableAnimationKit+Bezier.swift */; };
+		919CB25FEEC7FE3E175B8CDFDF63A546 /* DKChainableAnimationKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C552DA0BDFB14443C99676BD6C97EA53 /* DKChainableAnimationKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		91FB2F5A6A815C0D04FF5CE8C7A5C222 /* SwiftHTTP-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C44C5E486F512B946778C7B9D200D3F /* SwiftHTTP-dummy.m */; };
+		9D751AE797836951F9FD0A4E9E6AE344 /* CGSize+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCB36D8D2ABA1C333F751D14CEDAF38 /* CGSize+Swift.swift */; };
+		9EE1403DA1A9925A16B1A582BF277900 /* SlideMenuControllerSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 85631C2CBC91390DEFB6A30D09C470C8 /* SlideMenuControllerSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9F0ED20EDA02495C3CE53351168BDA34 /* UIView+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1508543822CA43ACA3157562FB554ED /* UIView+Haneke.swift */; };
+		A257C7E3394A9813188DC886B978193F /* UIButton+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4978D20E64CB1469C5AFE463F6F41600 /* UIButton+Haneke.swift */; };
+		A5207B61C340A037DB0622275CD733FC /* DKKeyframeAnimationFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DCB7DC4C08DB191C1E4B8D22465F88 /* DKKeyframeAnimationFunction.swift */; };
+		ACA69A6552DDAC894DAEE12AF054DBD6 /* DKChainableAnimationKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2420EE878B752F77F0D9EF8DF2956353 /* DKChainableAnimationKit-dummy.m */; };
+		B138456B71181C1A75BD0F6594145C08 /* DKChainableAnimationKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0470B65781D75CB0A5400189BA45B39 /* DKChainableAnimationKit.swift */; };
+		B82A1DE4CDDF69EB6FA699D084E92F18 /* RAMRotationAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F316CB62DF8ECE5CD1342E657031FEA /* RAMRotationAnimation.swift */; };
 		C3652986C43DB60EA4C9EE7367024497 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		C9EA5457D4BBA00C851671A9C9263F8E /* HTTPSecurity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E43FA3DB346D9E346E8C81F66A51305 /* HTTPSecurity.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		C9FDF6F209E90829A8E96B03077116BB /* NSFileManager+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFB75FF7BA90178B72AD3FE2FCF82B5 /* NSFileManager+Haneke.swift */; };
-		D12BDBF9D5EF9A76261E793629C0A889 /* RAMTransitionItemAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = D115D2FB75C6C9C46F0575B0A709CE4F /* RAMTransitionItemAnimations.swift */; };
-		D69358CA8016B626CB3FB9A5D3CAF200 /* SlideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF529DE9C1367F3EDB79511EA2493618 /* SlideMenuController.swift */; };
-		D734F5980CF4609635307AEE7ECB65B2 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E87A44251BA42FBC115370F673544F5 /* Cache.swift */; };
-		D883D7484A99815C90ADB00A23299557 /* RAMItemAnimationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38B0E0D2B4C4BD5167F8BA945DE6D09 /* RAMItemAnimationProtocol.swift */; };
+		C9EA5457D4BBA00C851671A9C9263F8E /* HTTPSecurity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059626BFEAA43DD7361AD4DEB54822A9 /* HTTPSecurity.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C9FDF6F209E90829A8E96B03077116BB /* NSFileManager+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF2365E8D645441B0940154341A3FE1 /* NSFileManager+Haneke.swift */; };
+		D12BDBF9D5EF9A76261E793629C0A889 /* RAMTransitionItemAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69931F3DF88F823C1B3CCBCF9844216 /* RAMTransitionItemAnimations.swift */; };
+		D69358CA8016B626CB3FB9A5D3CAF200 /* SlideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52810659A2C2D27C3BC4A3D7EBEA0460 /* SlideMenuController.swift */; };
+		D734F5980CF4609635307AEE7ECB65B2 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F7C7CC106DFE94205B17F2BB7332FF /* Cache.swift */; };
+		D883D7484A99815C90ADB00A23299557 /* RAMItemAnimationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8239F43E7FCDC7F0D62DB4F57433FAD2 /* RAMItemAnimationProtocol.swift */; };
 		DB3D98EE11A1983335D1128B9F4D7633 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		E13C09DA84F60D71B4A38BB284CDCBCC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		E5C0C14940C46A0C9438DFD13A2B90FA /* StatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CA7068F728C67C0E3876104B0444A6 /* StatusCode.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E5C0C14940C46A0C9438DFD13A2B90FA /* StatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD98ADCE03392CB84E793C46C3280B8F /* StatusCode.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		EAC47BB7AFEF34F9797A031154BFE74D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		EC95CD1D351168F35B365F4F086A3060 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		EE55C6A7377DC8059A245C2D0ECE2688 /* SlideMenuControllerSwift.h in Headers */ = {isa = PBXBuildFile; fileRef = 89EF2573CAF7D66FD61710E7A56903BE /* SlideMenuControllerSwift.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EE55C6A7377DC8059A245C2D0ECE2688 /* SlideMenuControllerSwift.h in Headers */ = {isa = PBXBuildFile; fileRef = D9E0E5149B90B164C2C18FC5B3D995DE /* SlideMenuControllerSwift.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F1009CE2A69148796D622F114E663E4C /* Pods-JPP-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 497BD8A1C379DE5D8F3A6CEA6F5914A3 /* Pods-JPP-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F211DBF02AD9CCDECA9BD1C3F58CD42E /* Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6053FD84ABCA7C8358737ADE3274201 /* Format.swift */; };
-		F51837C2A6E68EA6C376665AE999DADF /* RAMFumeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8959A7B965E9EF7E5464E4368E8D61AE /* RAMFumeAnimation.swift */; };
-		F751790C2D29DC8382A6446CA8E83D57 /* Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = E604E20DD924781662880BA4344271B3 /* Info.plist */; };
-		F9C156883B938B995522ECC76E4A65DD /* HanekeSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 02AB05E22021BA31CE04E4E3B67302F6 /* HanekeSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F211DBF02AD9CCDECA9BD1C3F58CD42E /* Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DAD39E1DBD7EA1E51A4F017AC3D8E6 /* Format.swift */; };
+		F51837C2A6E68EA6C376665AE999DADF /* RAMFumeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED00A5783FAD35BF9CA21A515FA53254 /* RAMFumeAnimation.swift */; };
+		F751790C2D29DC8382A6446CA8E83D57 /* Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = 98148050DC837ECF06F322B903D53D44 /* Info.plist */; };
+		F9C156883B938B995522ECC76E4A65DD /* HanekeSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E9535820325AC1A6CC4A3E8CB4FFFF31 /* HanekeSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,100 +112,101 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		002C93A5C7A930D77BA6D5BCFE264F20 /* SlideMenuControllerSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SlideMenuControllerSwift.xcconfig; sourceTree = "<group>"; };
-		02AB05E22021BA31CE04E4E3B67302F6 /* HanekeSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HanekeSwift-umbrella.h"; sourceTree = "<group>"; };
+		059626BFEAA43DD7361AD4DEB54822A9 /* HTTPSecurity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HTTPSecurity.swift; path = Source/HTTPSecurity.swift; sourceTree = "<group>"; };
 		078D872C5D2444129F7AF2DFA8BDADC5 /* Pods-JPP-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JPP-dummy.m"; sourceTree = "<group>"; };
 		097532B7E6BBFB748CC4298655F837D5 /* Pods-JPP-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JPP-frameworks.sh"; sourceTree = "<group>"; };
-		0C3ADCA7BB985C67434E6F875A82F708 /* DiskCache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DiskCache.swift; path = Haneke/DiskCache.swift; sourceTree = "<group>"; };
-		0D602F46B194B188A70429EA1C48F0C6 /* CryptoSwiftMD5.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CryptoSwiftMD5.swift; path = Haneke/CryptoSwiftMD5.swift; sourceTree = "<group>"; };
-		0E43FA3DB346D9E346E8C81F66A51305 /* HTTPSecurity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HTTPSecurity.swift; path = Source/HTTPSecurity.swift; sourceTree = "<group>"; };
-		14570F4CC0E7128F5156AE42D701CF52 /* SwiftHTTP.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftHTTP.xcconfig; sourceTree = "<group>"; };
-		17DBE6BA2DD725C4AC892493D52F4995 /* RAMAnimatedTabBarController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RAMAnimatedTabBarController-dummy.m"; sourceTree = "<group>"; };
-		1978E099BB9AA926A17678B3A9493F9F /* DiskFetcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DiskFetcher.swift; path = Haneke/DiskFetcher.swift; sourceTree = "<group>"; };
-		1A12D6EEF67EAB6C6475E875C3888243 /* Fetch.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Fetch.swift; path = Haneke/Fetch.swift; sourceTree = "<group>"; };
-		1B4D54B61E2D841F63F56CEDC591CFED /* RAMAnimatedTabBarController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = RAMAnimatedTabBarController.modulemap; sourceTree = "<group>"; };
-		226FCA753AA5080FE946928B44F3B434 /* RAMAnimatedTabBarController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RAMAnimatedTabBarController.swift; path = RAMAnimatedTabBarController/RAMAnimatedTabBarController.swift; sourceTree = "<group>"; };
-		23F71A72E5972A64592472D7E742DE1B /* HanekeSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HanekeSwift-dummy.m"; sourceTree = "<group>"; };
-		2897B9DC48B594BEC577F26EAD16FCF5 /* RAMAnimatedTabBarController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RAMAnimatedTabBarController-prefix.pch"; sourceTree = "<group>"; };
-		2B191AA610FC458850CF346568295AB5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		313725AF88EBAC0328D24C7B2BB5A1AD /* Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Haneke.swift; path = Haneke/Haneke.swift; sourceTree = "<group>"; };
-		320935E6D586AD84E8A4EBE78ABB77E5 /* HanekeSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = HanekeSwift.modulemap; sourceTree = "<group>"; };
+		0AA662045F49475B840BD39A45F65DF5 /* SlideMenuControllerSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SlideMenuControllerSwift.xcconfig; sourceTree = "<group>"; };
+		0E8406B506F03052F9E908E8EAAA7E0B /* SlideMenuControllerSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SlideMenuControllerSwift-dummy.m"; sourceTree = "<group>"; };
+		17F7C7CC106DFE94205B17F2BB7332FF /* Cache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Cache.swift; path = Haneke/Cache.swift; sourceTree = "<group>"; };
+		203085C1B9ACAE01753B6905DD7ECD8F /* Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Haneke.swift; path = Haneke/Haneke.swift; sourceTree = "<group>"; };
+		2420EE878B752F77F0D9EF8DF2956353 /* DKChainableAnimationKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DKChainableAnimationKit-dummy.m"; sourceTree = "<group>"; };
+		2C44C5E486F512B946778C7B9D200D3F /* SwiftHTTP-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftHTTP-dummy.m"; sourceTree = "<group>"; };
+		344EE519A986F1CD10BCD4D44FB882AE /* DKChainableAnimationKit+Bezier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DKChainableAnimationKit+Bezier.swift"; path = "DKChainableAnimationKit/Classes/DKChainableAnimationKit+Bezier.swift"; sourceTree = "<group>"; };
 		3768CBF049F7E4CA1F4C6C660C8724C0 /* Pods-JPP-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JPP-acknowledgements.markdown"; sourceTree = "<group>"; };
-		380AEBA6EC51A9DCE6248C6EBECA985F /* DKChainableAnimationKit+Frame.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DKChainableAnimationKit+Frame.swift"; path = "DKChainableAnimationKit/Classes/DKChainableAnimationKit+Frame.swift"; sourceTree = "<group>"; };
-		39B8F487A89AE27104CEB7EF568D5A55 /* HanekeSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HanekeSwift.xcconfig; sourceTree = "<group>"; };
-		39D33DF50627740C92ECF05B4A195702 /* DKKeyframeAnimationFunction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DKKeyframeAnimationFunction.swift; path = DKChainableAnimationKit/Classes/DKKeyframeAnimationFunction.swift; sourceTree = "<group>"; };
-		39FBAF59384DB01E2DC74114BE012853 /* DKChainableAnimationKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DKChainableAnimationKit-dummy.m"; sourceTree = "<group>"; };
 		3B7862246B898BC73B7B848F6DF1A8F8 /* DKChainableAnimationKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = DKChainableAnimationKit.framework; path = DKChainableAnimationKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3BEAFD70FC75309133CCF72306DCE1FC /* SwiftHTTP.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SwiftHTTP.modulemap; sourceTree = "<group>"; };
-		417394F53212576AC7F6718948040B92 /* DKChainableAnimationKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DKChainableAnimationKit.xcconfig; sourceTree = "<group>"; };
-		4683AD187B68FEA5F7CA939275C46CDE /* SwiftHTTP-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftHTTP-prefix.pch"; sourceTree = "<group>"; };
+		3BB7775827172E642DB0640A6BA1CDE0 /* RAMBadge.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RAMBadge.swift; path = RAMAnimatedTabBarController/RAMBadge/RAMBadge.swift; sourceTree = "<group>"; };
+		3C36E7AF2CD1F4DC2786122DD8EE7F9B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		42AC7F1EF81B1447B5774C2B3227242B /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
 		468A1CDCD5198AF7B64F0D51246DF600 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		471A1FF0451625AD01BD110DEEEBDF1C /* RAMFrameItemAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RAMFrameItemAnimation.swift; path = RAMAnimatedTabBarController/Animations/FrameAnimation/RAMFrameItemAnimation.swift; sourceTree = "<group>"; };
-		472F828C2E4C0A70539F63B4DC70054E /* CGSize+Swift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGSize+Swift.swift"; path = "Haneke/CGSize+Swift.swift"; sourceTree = "<group>"; };
+		48AF0BCEAB8A6BBCB9AB0A4DE0BCBEC4 /* UIImageView+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImageView+Haneke.swift"; path = "Haneke/UIImageView+Haneke.swift"; sourceTree = "<group>"; };
+		4978D20E64CB1469C5AFE463F6F41600 /* UIButton+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIButton+Haneke.swift"; path = "Haneke/UIButton+Haneke.swift"; sourceTree = "<group>"; };
 		497BD8A1C379DE5D8F3A6CEA6F5914A3 /* Pods-JPP-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JPP-umbrella.h"; sourceTree = "<group>"; };
-		49CA194E7E9BB90F8CF0D941560CCEFE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4CA3511C8443E39CEA60DCABBC4C442D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4DE4574236B04D080B43CEDF9A42457D /* DKChainableAnimationKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DKChainableAnimationKit.swift; path = DKChainableAnimationKit/Classes/DKChainableAnimationKit.swift; sourceTree = "<group>"; };
-		5344B04E138FEC0D548626E0391E5B84 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5804CDF402A5D172FE0B9D25679EC697 /* HanekeSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HanekeSwift-prefix.pch"; sourceTree = "<group>"; };
-		5E87A44251BA42FBC115370F673544F5 /* Cache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Cache.swift; path = Haneke/Cache.swift; sourceTree = "<group>"; };
+		4DC620F6C617353EA33BE6F7EE20B7BE /* RAMFrameItemAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RAMFrameItemAnimation.swift; path = RAMAnimatedTabBarController/Animations/FrameAnimation/RAMFrameItemAnimation.swift; sourceTree = "<group>"; };
+		4DF2365E8D645441B0940154341A3FE1 /* NSFileManager+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSFileManager+Haneke.swift"; path = "Haneke/NSFileManager+Haneke.swift"; sourceTree = "<group>"; };
+		4E2564886A3FA6434D97AE3A5695B3EF /* HanekeSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HanekeSwift-prefix.pch"; sourceTree = "<group>"; };
+		4F8C27F35B2B2360B00FA1FDB8432420 /* Pushwoosh.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pushwoosh.framework; path = Framework/Pushwoosh.framework; sourceTree = "<group>"; };
+		52810659A2C2D27C3BC4A3D7EBEA0460 /* SlideMenuController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SlideMenuController.swift; path = Source/SlideMenuController.swift; sourceTree = "<group>"; };
+		566B020EC1E4D2BB742A3B17D824C2E3 /* UIImage+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+Haneke.swift"; path = "Haneke/UIImage+Haneke.swift"; sourceTree = "<group>"; };
+		56C75C9F334B5F3B8937F3026F420AFE /* DiskCache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DiskCache.swift; path = Haneke/DiskCache.swift; sourceTree = "<group>"; };
+		58031402E1AC35907BA62F78CEFF59D6 /* DKChainableAnimationKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DKChainableAnimationKit.xcconfig; sourceTree = "<group>"; };
+		5C840DC8FD74ED6DB5C46E60F4E0AE84 /* Data.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Data.swift; path = Haneke/Data.swift; sourceTree = "<group>"; };
+		5CC36E94807784958A0EFEFA17E3BF6D /* DKChainableAnimationKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = DKChainableAnimationKit.modulemap; sourceTree = "<group>"; };
+		5EE8C055ECE55392DE0E7477AF502087 /* RAMAnimatedTabBarController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RAMAnimatedTabBarController.swift; path = RAMAnimatedTabBarController/RAMAnimatedTabBarController.swift; sourceTree = "<group>"; };
+		60C02D27B31F61FAA5EBB497F7179EFA /* DKChainableAnimationKit+Anchor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DKChainableAnimationKit+Anchor.swift"; path = "DKChainableAnimationKit/Classes/DKChainableAnimationKit+Anchor.swift"; sourceTree = "<group>"; };
+		65734A73731088DEB6C4C6999941FB7C /* Operation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Operation.swift; path = Source/Operation.swift; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		66CBB1B37609BF1B3460D36827656A88 /* DKChainableAnimationKit+Transform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DKChainableAnimationKit+Transform.swift"; path = "DKChainableAnimationKit/Classes/DKChainableAnimationKit+Transform.swift"; sourceTree = "<group>"; };
-		68BB7A2458D263CD75F68FC6DC564368 /* DKChainableAnimationKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = DKChainableAnimationKit.modulemap; sourceTree = "<group>"; };
 		696F5DCAB1F7E087F5B62418B460BDBD /* SlideMenuControllerSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SlideMenuControllerSwift.framework; path = SlideMenuControllerSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6DA24A29106BA8DEAE2609880B0B8C9A /* RAMRotationAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RAMRotationAnimation.swift; path = RAMAnimatedTabBarController/Animations/RotationAnimation/RAMRotationAnimation.swift; sourceTree = "<group>"; };
-		6E9F7C4680D664EA7CA1BFF4AE7FA9A9 /* DKKeyFrameAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DKKeyFrameAnimation.swift; path = DKChainableAnimationKit/Classes/DKKeyFrameAnimation.swift; sourceTree = "<group>"; };
-		71B3104B380F240115ECE1AFEB28E926 /* DKChainableAnimationKit+Bezier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DKChainableAnimationKit+Bezier.swift"; path = "DKChainableAnimationKit/Classes/DKChainableAnimationKit+Bezier.swift"; sourceTree = "<group>"; };
-		72CA7068F728C67C0E3876104B0444A6 /* StatusCode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StatusCode.swift; path = Source/StatusCode.swift; sourceTree = "<group>"; };
-		73F5A96192A0498D41F4494252AE4DD2 /* DKChainableAnimationKit+Effects.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DKChainableAnimationKit+Effects.swift"; path = "DKChainableAnimationKit/Classes/DKChainableAnimationKit+Effects.swift"; sourceTree = "<group>"; };
 		74393D740522ECD0B3ECFEC0E256DFEE /* Pods-JPP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JPP.debug.xcconfig"; sourceTree = "<group>"; };
-		7784610373F2F4B6AE9A740DD2463C70 /* UIButton+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIButton+Haneke.swift"; path = "Haneke/UIButton+Haneke.swift"; sourceTree = "<group>"; };
 		7802F48E6E39ABFEEB6C27DD6C2F5D13 /* RAMAnimatedTabBarController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = RAMAnimatedTabBarController.framework; path = RAMAnimatedTabBarController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7D9EFEC509B8384A00266FEB99C1F3AE /* UIImageView+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImageView+Haneke.swift"; path = "Haneke/UIImageView+Haneke.swift"; sourceTree = "<group>"; };
-		7FB6234D90C2A6E68CDC565ED6A1B0C2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8939F0152F8C6E396603C05AD314E3C2 /* Log.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Log.swift; path = Haneke/Log.swift; sourceTree = "<group>"; };
-		8959A7B965E9EF7E5464E4368E8D61AE /* RAMFumeAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RAMFumeAnimation.swift; path = RAMAnimatedTabBarController/Animations/FumeAnimation/RAMFumeAnimation.swift; sourceTree = "<group>"; };
-		89EF2573CAF7D66FD61710E7A56903BE /* SlideMenuControllerSwift.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SlideMenuControllerSwift.h; path = Source/SlideMenuControllerSwift.h; sourceTree = "<group>"; };
-		8AFB75FF7BA90178B72AD3FE2FCF82B5 /* NSFileManager+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSFileManager+Haneke.swift"; path = "Haneke/NSFileManager+Haneke.swift"; sourceTree = "<group>"; };
-		910DD6FDAB394328337D72F986AFB715 /* Fetcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Fetcher.swift; path = Haneke/Fetcher.swift; sourceTree = "<group>"; };
+		79971FDCDADDA6180339BF562F39A853 /* DKChainableAnimationKit+Effects.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DKChainableAnimationKit+Effects.swift"; path = "DKChainableAnimationKit/Classes/DKChainableAnimationKit+Effects.swift"; sourceTree = "<group>"; };
+		7AEC5CC95E52665550A71FA9F23A463C /* String+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Haneke.swift"; path = "Haneke/String+Haneke.swift"; sourceTree = "<group>"; };
+		7BDC1F0D1E5715D109F3DDB0E304322A /* Log.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Log.swift; path = Haneke/Log.swift; sourceTree = "<group>"; };
+		7CD91FF6F08319E112978C41D68237C8 /* SlideMenuControllerSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SlideMenuControllerSwift.modulemap; sourceTree = "<group>"; };
+		80E8C71200430FFCD3464AEAC3FC6550 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		81EC3C783DDC6B66808801F78A4124B1 /* SwiftHTTP-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftHTTP-umbrella.h"; sourceTree = "<group>"; };
+		8239F43E7FCDC7F0D62DB4F57433FAD2 /* RAMItemAnimationProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RAMItemAnimationProtocol.swift; path = RAMAnimatedTabBarController/RAMItemAnimationProtocol.swift; sourceTree = "<group>"; };
+		82DCB7DC4C08DB191C1E4B8D22465F88 /* DKKeyframeAnimationFunction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DKKeyframeAnimationFunction.swift; path = DKChainableAnimationKit/Classes/DKKeyframeAnimationFunction.swift; sourceTree = "<group>"; };
+		85631C2CBC91390DEFB6A30D09C470C8 /* SlideMenuControllerSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SlideMenuControllerSwift-umbrella.h"; sourceTree = "<group>"; };
+		861EEED173E6A99B34562F3C628C9550 /* Upload.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Upload.swift; path = Source/Upload.swift; sourceTree = "<group>"; };
+		88D361B4D7BF85974408BB0845280FB5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A3F08042CA0DDE0478E265DC32AF99B /* CryptoSwiftMD5.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CryptoSwiftMD5.swift; path = Haneke/CryptoSwiftMD5.swift; sourceTree = "<group>"; };
+		8B8816E781F5A6828D1E030E70C43D4F /* HanekeSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HanekeSwift.xcconfig; sourceTree = "<group>"; };
+		8BDFF11EB50067460B74A871B3392393 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9319160874280898C05D1CD62175FCB6 /* UIView+AnimationKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+AnimationKit.swift"; path = "DKChainableAnimationKit/Classes/UIView+AnimationKit.swift"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		98148050DC837ECF06F322B903D53D44 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = Source/Info.plist; sourceTree = "<group>"; };
 		98554584A83BA47DC8A3EFF33FD51F58 /* SwiftHTTP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftHTTP.framework; path = SwiftHTTP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A08EE3415088FDA2D6F81EDA257E898E /* SlideMenuControllerSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SlideMenuControllerSwift.modulemap; sourceTree = "<group>"; };
-		A1DA498D0FD4D0E61D25D9FB6D5A3C8E /* UIView+AnimationKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+AnimationKit.swift"; path = "DKChainableAnimationKit/Classes/UIView+AnimationKit.swift"; sourceTree = "<group>"; };
-		A5735E71E264C1BB6C33E22420486ADE /* RAMAnimatedTabBarController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RAMAnimatedTabBarController.xcconfig; sourceTree = "<group>"; };
-		AAE54739F08BCD202FC8B523B9BB181C /* DKChainableAnimationKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DKChainableAnimationKit-prefix.pch"; sourceTree = "<group>"; };
-		ABABAB2BE7E166239386F9F4B9D7A007 /* UIView+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Haneke.swift"; path = "Haneke/UIView+Haneke.swift"; sourceTree = "<group>"; };
-		ABF715C1DFB143022146901752A92067 /* DKChainableAnimationKit+Anchor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DKChainableAnimationKit+Anchor.swift"; path = "DKChainableAnimationKit/Classes/DKChainableAnimationKit+Anchor.swift"; sourceTree = "<group>"; };
+		9E2BAC214A05817FD839DF86617C5015 /* SlideMenuControllerSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SlideMenuControllerSwift-prefix.pch"; sourceTree = "<group>"; };
+		9F316CB62DF8ECE5CD1342E657031FEA /* RAMRotationAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RAMRotationAnimation.swift; path = RAMAnimatedTabBarController/Animations/RotationAnimation/RAMRotationAnimation.swift; sourceTree = "<group>"; };
+		A0715230AD022C63BAD6B0D472E20845 /* RAMAnimatedTabBarController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RAMAnimatedTabBarController-prefix.pch"; sourceTree = "<group>"; };
+		A159CC89703845C8CE023D9C2C1E4DC8 /* SwiftHTTP-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftHTTP-prefix.pch"; sourceTree = "<group>"; };
+		A50DF0091160C81572F647737233441B /* DKKeyFrameAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DKKeyFrameAnimation.swift; path = DKChainableAnimationKit/Classes/DKKeyFrameAnimation.swift; sourceTree = "<group>"; };
+		AD98ADCE03392CB84E793C46C3280B8F /* StatusCode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StatusCode.swift; path = Source/StatusCode.swift; sourceTree = "<group>"; };
 		ADFB92CEDDE651806CD9A27021C93C02 /* Haneke.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Haneke.framework; path = HanekeSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AF529DE9C1367F3EDB79511EA2493618 /* SlideMenuController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SlideMenuController.swift; path = Source/SlideMenuController.swift; sourceTree = "<group>"; };
 		B1138991027F68CC022586C4CF9B745B /* Pods-JPP-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JPP-resources.sh"; sourceTree = "<group>"; };
-		B33FB05237C5D2FD19AC4BD5502D5F9B /* RAMBadge.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RAMBadge.swift; path = RAMAnimatedTabBarController/RAMBadge/RAMBadge.swift; sourceTree = "<group>"; };
-		B6053FD84ABCA7C8358737ADE3274201 /* Format.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Format.swift; path = Haneke/Format.swift; sourceTree = "<group>"; };
-		B82E7E444C59C3E50A3CCF0C9BB462C4 /* String+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Haneke.swift"; path = "Haneke/String+Haneke.swift"; sourceTree = "<group>"; };
-		BF79732EA26E724DBF7FDD46635E10BF /* UIImage+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+Haneke.swift"; path = "Haneke/UIImage+Haneke.swift"; sourceTree = "<group>"; };
+		B2DAD39E1DBD7EA1E51A4F017AC3D8E6 /* Format.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Format.swift; path = Haneke/Format.swift; sourceTree = "<group>"; };
+		B4408C4D44BD3D9531DBBF7C9450331E /* RAMAnimatedTabBarController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RAMAnimatedTabBarController.xcconfig; sourceTree = "<group>"; };
+		B69931F3DF88F823C1B3CCBCF9844216 /* RAMTransitionItemAnimations.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RAMTransitionItemAnimations.swift; path = RAMAnimatedTabBarController/Animations/TransitionAniamtions/RAMTransitionItemAnimations.swift; sourceTree = "<group>"; };
+		BAB843D44B5971BB4FD12D9ABEC78987 /* NSHTTPURLResponse+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSHTTPURLResponse+Haneke.swift"; path = "Haneke/NSHTTPURLResponse+Haneke.swift"; sourceTree = "<group>"; };
+		BB9F06A11DFDCA9A426E4394FAEAD02C /* RAMAnimatedTabBarController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = RAMAnimatedTabBarController.modulemap; sourceTree = "<group>"; };
+		BDCB36D8D2ABA1C333F751D14CEDAF38 /* CGSize+Swift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGSize+Swift.swift"; path = "Haneke/CGSize+Swift.swift"; sourceTree = "<group>"; };
+		C1C35C120580B006A4BFF6F6093734D9 /* DKChainableAnimationKit+Frame.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DKChainableAnimationKit+Frame.swift"; path = "DKChainableAnimationKit/Classes/DKChainableAnimationKit+Frame.swift"; sourceTree = "<group>"; };
 		C21B518F2A60A5D5B061F457B7CE0FDF /* Pods-JPP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JPP.release.xcconfig"; sourceTree = "<group>"; };
-		C3208FCA0C2C518D3DACEE40B2C32F9F /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
+		C2492974F7B2734A561895625034C8E8 /* Fetcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Fetcher.swift; path = Haneke/Fetcher.swift; sourceTree = "<group>"; };
 		C32F44D0690C378080EC8C2E79AF24B0 /* Pods_JPP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_JPP.framework; path = "Pods-JPP.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C4EA2D5ACF39C9D3869198320410693F /* Operation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Operation.swift; path = Source/Operation.swift; sourceTree = "<group>"; };
-		C59097CFC48962AA3F54C739CCB614FC /* NSURLResponse+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSURLResponse+Haneke.swift"; path = "Haneke/NSURLResponse+Haneke.swift"; sourceTree = "<group>"; };
+		C552DA0BDFB14443C99676BD6C97EA53 /* DKChainableAnimationKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DKChainableAnimationKit-umbrella.h"; sourceTree = "<group>"; };
 		C75743C03034BEDEA5033133583AD764 /* Pods-JPP-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JPP-acknowledgements.plist"; sourceTree = "<group>"; };
-		CB9620349CE34B0D7E5FD9D81A549513 /* RAMAnimatedTabBarController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RAMAnimatedTabBarController-umbrella.h"; sourceTree = "<group>"; };
-		CFD56275A34F2B833D7694D9B8D9F629 /* SlideMenuControllerSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SlideMenuControllerSwift-dummy.m"; sourceTree = "<group>"; };
-		CFD6967767926194F00D3491EA141E6E /* SlideMenuControllerSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SlideMenuControllerSwift-umbrella.h"; sourceTree = "<group>"; };
-		D115D2FB75C6C9C46F0575B0A709CE4F /* RAMTransitionItemAnimations.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RAMTransitionItemAnimations.swift; path = RAMAnimatedTabBarController/Animations/TransitionAniamtions/RAMTransitionItemAnimations.swift; sourceTree = "<group>"; };
-		DAD801C9FEE06A611A5420501B11E8D3 /* NetworkFetcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkFetcher.swift; path = Haneke/NetworkFetcher.swift; sourceTree = "<group>"; };
-		DCF180FBE6E2EB5D76C88D48B4B76512 /* DKChainableAnimationKit+Extra.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DKChainableAnimationKit+Extra.swift"; path = "DKChainableAnimationKit/Classes/DKChainableAnimationKit+Extra.swift"; sourceTree = "<group>"; };
-		DFA62B0AAD75FEF6BB46DD45116A1B0F /* Upload.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Upload.swift; path = Source/Upload.swift; sourceTree = "<group>"; };
-		E555941CD999F252A5C83B22F8694D0A /* DKChainableAnimationKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DKChainableAnimationKit-umbrella.h"; sourceTree = "<group>"; };
-		E5E0FD42AED0F187BF7E89F2035AD890 /* RAMBounceAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RAMBounceAnimation.swift; path = RAMAnimatedTabBarController/Animations/BounceAnimation/RAMBounceAnimation.swift; sourceTree = "<group>"; };
-		E604E20DD924781662880BA4344271B3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = Source/Info.plist; sourceTree = "<group>"; };
-		E77BC4F27942B38BB061F2DE13A6BACA /* NSHTTPURLResponse+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSHTTPURLResponse+Haneke.swift"; path = "Haneke/NSHTTPURLResponse+Haneke.swift"; sourceTree = "<group>"; };
-		E9A1D0B394D8C415ACDF2FEBAA0D2AF1 /* SwiftHTTP-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftHTTP-dummy.m"; sourceTree = "<group>"; };
+		C9852A4A1727D18A1DBDB62289E65453 /* SwiftHTTP.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SwiftHTTP.modulemap; sourceTree = "<group>"; };
+		CB3E9EE1AEB7D60E1C0B3E1C4DFB7DF8 /* RAMAnimatedTabBarController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RAMAnimatedTabBarController-umbrella.h"; sourceTree = "<group>"; };
+		CC91C2FACCACF1EA91FB196339741297 /* DKChainableAnimationKit+Transform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DKChainableAnimationKit+Transform.swift"; path = "DKChainableAnimationKit/Classes/DKChainableAnimationKit+Transform.swift"; sourceTree = "<group>"; };
+		D3018F16D052CEEB6BABAEDD14458047 /* DiskFetcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DiskFetcher.swift; path = Haneke/DiskFetcher.swift; sourceTree = "<group>"; };
+		D6F46F8620854AC2F2241DD86FF76903 /* DKChainableAnimationKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DKChainableAnimationKit-prefix.pch"; sourceTree = "<group>"; };
+		D6F7596EB985B0DE89E889CEF1F8A7BB /* NSURLResponse+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSURLResponse+Haneke.swift"; path = "Haneke/NSURLResponse+Haneke.swift"; sourceTree = "<group>"; };
+		D9E0E5149B90B164C2C18FC5B3D995DE /* SlideMenuControllerSwift.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SlideMenuControllerSwift.h; path = Source/SlideMenuControllerSwift.h; sourceTree = "<group>"; };
+		DAABA67961622E2AC2B868D2F09525DE /* DKChainableAnimationKit+Extra.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DKChainableAnimationKit+Extra.swift"; path = "DKChainableAnimationKit/Classes/DKChainableAnimationKit+Extra.swift"; sourceTree = "<group>"; };
+		E0470B65781D75CB0A5400189BA45B39 /* DKChainableAnimationKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DKChainableAnimationKit.swift; path = DKChainableAnimationKit/Classes/DKChainableAnimationKit.swift; sourceTree = "<group>"; };
+		E389DF0230212502469E426EF14539C9 /* HanekeSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HanekeSwift-dummy.m"; sourceTree = "<group>"; };
+		E55056F725261771943EC1D884E95B5E /* RAMBounceAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RAMBounceAnimation.swift; path = RAMAnimatedTabBarController/Animations/BounceAnimation/RAMBounceAnimation.swift; sourceTree = "<group>"; };
+		E9535820325AC1A6CC4A3E8CB4FFFF31 /* HanekeSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HanekeSwift-umbrella.h"; sourceTree = "<group>"; };
 		EA3BBEC06399E6A093F92FD6515A7B94 /* Pods-JPP.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-JPP.modulemap"; sourceTree = "<group>"; };
-		ECBD8E2ABAB491F6E59C606C1C0204A1 /* SwiftHTTP-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftHTTP-umbrella.h"; sourceTree = "<group>"; };
-		F0A142C47E805B6970EFACEB943F4CF2 /* SlideMenuControllerSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SlideMenuControllerSwift-prefix.pch"; sourceTree = "<group>"; };
-		F38B0E0D2B4C4BD5167F8BA945DE6D09 /* RAMItemAnimationProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RAMItemAnimationProtocol.swift; path = RAMAnimatedTabBarController/RAMItemAnimationProtocol.swift; sourceTree = "<group>"; };
-		FB556AF8A823379C151A1E4D6C8C74DA /* Data.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Data.swift; path = Haneke/Data.swift; sourceTree = "<group>"; };
+		EA9A13E5536694AB9B79DCCCF6752818 /* SwiftHTTP.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftHTTP.xcconfig; sourceTree = "<group>"; };
+		ED00A5783FAD35BF9CA21A515FA53254 /* RAMFumeAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RAMFumeAnimation.swift; path = RAMAnimatedTabBarController/Animations/FumeAnimation/RAMFumeAnimation.swift; sourceTree = "<group>"; };
+		EF898FD4D5F95712C16014611B7183A9 /* NetworkFetcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkFetcher.swift; path = Haneke/NetworkFetcher.swift; sourceTree = "<group>"; };
+		F1508543822CA43ACA3157562FB554ED /* UIView+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Haneke.swift"; path = "Haneke/UIView+Haneke.swift"; sourceTree = "<group>"; };
+		F8828EFF20413AB19BDA6B15641A904E /* Fetch.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Fetch.swift; path = Haneke/Fetch.swift; sourceTree = "<group>"; };
+		FA67E55B685D6DBEE7D81F7FAB8D9C18 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDB8E6A9001C7AD5A23279A02C856460 /* HanekeSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = HanekeSwift.modulemap; sourceTree = "<group>"; };
+		FF19B0E40DA0560CDF598A67FB678F52 /* RAMAnimatedTabBarController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RAMAnimatedTabBarController-dummy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -278,46 +279,119 @@
 			path = "Target Support Files/Pods-JPP";
 			sourceTree = "<group>";
 		};
-		2A210CA188462093377096D99D62B84F /* Support Files */ = {
+		092BE4DF155D0EF2660E223E99E36062 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				5344B04E138FEC0D548626E0391E5B84 /* Info.plist */,
-				1B4D54B61E2D841F63F56CEDC591CFED /* RAMAnimatedTabBarController.modulemap */,
-				A5735E71E264C1BB6C33E22420486ADE /* RAMAnimatedTabBarController.xcconfig */,
-				17DBE6BA2DD725C4AC892493D52F4995 /* RAMAnimatedTabBarController-dummy.m */,
-				2897B9DC48B594BEC577F26EAD16FCF5 /* RAMAnimatedTabBarController-prefix.pch */,
-				CB9620349CE34B0D7E5FD9D81A549513 /* RAMAnimatedTabBarController-umbrella.h */,
+				FA67E55B685D6DBEE7D81F7FAB8D9C18 /* Info.plist */,
+				BB9F06A11DFDCA9A426E4394FAEAD02C /* RAMAnimatedTabBarController.modulemap */,
+				B4408C4D44BD3D9531DBBF7C9450331E /* RAMAnimatedTabBarController.xcconfig */,
+				FF19B0E40DA0560CDF598A67FB678F52 /* RAMAnimatedTabBarController-dummy.m */,
+				A0715230AD022C63BAD6B0D472E20845 /* RAMAnimatedTabBarController-prefix.pch */,
+				CB3E9EE1AEB7D60E1C0B3E1C4DFB7DF8 /* RAMAnimatedTabBarController-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/RAMAnimatedTabBarController";
 			sourceTree = "<group>";
 		};
-		39140A9867AC4628367B9F607EFF8EF1 /* SwiftHTTP */ = {
+		250D1C525E5A4152F9AF58B971B5543E /* SlideMenuControllerSwift */ = {
 			isa = PBXGroup;
 			children = (
-				0E43FA3DB346D9E346E8C81F66A51305 /* HTTPSecurity.swift */,
-				C4EA2D5ACF39C9D3869198320410693F /* Operation.swift */,
-				C3208FCA0C2C518D3DACEE40B2C32F9F /* Request.swift */,
-				72CA7068F728C67C0E3876104B0444A6 /* StatusCode.swift */,
-				DFA62B0AAD75FEF6BB46DD45116A1B0F /* Upload.swift */,
-				F234C278352E708C90B795C6B34EE78E /* Support Files */,
+				98148050DC837ECF06F322B903D53D44 /* Info.plist */,
+				52810659A2C2D27C3BC4A3D7EBEA0460 /* SlideMenuController.swift */,
+				D9E0E5149B90B164C2C18FC5B3D995DE /* SlideMenuControllerSwift.h */,
+				E820713C3428FC94AC0E00AD7602A5F3 /* Support Files */,
+			);
+			name = SlideMenuControllerSwift;
+			path = SlideMenuControllerSwift;
+			sourceTree = "<group>";
+		};
+		27D2C9F18A3A43B0036E26B37D36CAD2 /* HanekeSwift */ = {
+			isa = PBXGroup;
+			children = (
+				17F7C7CC106DFE94205B17F2BB7332FF /* Cache.swift */,
+				BDCB36D8D2ABA1C333F751D14CEDAF38 /* CGSize+Swift.swift */,
+				8A3F08042CA0DDE0478E265DC32AF99B /* CryptoSwiftMD5.swift */,
+				5C840DC8FD74ED6DB5C46E60F4E0AE84 /* Data.swift */,
+				56C75C9F334B5F3B8937F3026F420AFE /* DiskCache.swift */,
+				D3018F16D052CEEB6BABAEDD14458047 /* DiskFetcher.swift */,
+				F8828EFF20413AB19BDA6B15641A904E /* Fetch.swift */,
+				C2492974F7B2734A561895625034C8E8 /* Fetcher.swift */,
+				B2DAD39E1DBD7EA1E51A4F017AC3D8E6 /* Format.swift */,
+				203085C1B9ACAE01753B6905DD7ECD8F /* Haneke.swift */,
+				7BDC1F0D1E5715D109F3DDB0E304322A /* Log.swift */,
+				EF898FD4D5F95712C16014611B7183A9 /* NetworkFetcher.swift */,
+				4DF2365E8D645441B0940154341A3FE1 /* NSFileManager+Haneke.swift */,
+				BAB843D44B5971BB4FD12D9ABEC78987 /* NSHTTPURLResponse+Haneke.swift */,
+				D6F7596EB985B0DE89E889CEF1F8A7BB /* NSURLResponse+Haneke.swift */,
+				7AEC5CC95E52665550A71FA9F23A463C /* String+Haneke.swift */,
+				4978D20E64CB1469C5AFE463F6F41600 /* UIButton+Haneke.swift */,
+				566B020EC1E4D2BB742A3B17D824C2E3 /* UIImage+Haneke.swift */,
+				48AF0BCEAB8A6BBCB9AB0A4DE0BCBEC4 /* UIImageView+Haneke.swift */,
+				F1508543822CA43ACA3157562FB554ED /* UIView+Haneke.swift */,
+				C97442C93CEBD851E27A411516F3D744 /* Support Files */,
+			);
+			name = HanekeSwift;
+			path = HanekeSwift;
+			sourceTree = "<group>";
+		};
+		5015F5C9CB7C03F8864FAFDF2D27C80F /* DKChainableAnimationKit */ = {
+			isa = PBXGroup;
+			children = (
+				E0470B65781D75CB0A5400189BA45B39 /* DKChainableAnimationKit.swift */,
+				60C02D27B31F61FAA5EBB497F7179EFA /* DKChainableAnimationKit+Anchor.swift */,
+				344EE519A986F1CD10BCD4D44FB882AE /* DKChainableAnimationKit+Bezier.swift */,
+				79971FDCDADDA6180339BF562F39A853 /* DKChainableAnimationKit+Effects.swift */,
+				DAABA67961622E2AC2B868D2F09525DE /* DKChainableAnimationKit+Extra.swift */,
+				C1C35C120580B006A4BFF6F6093734D9 /* DKChainableAnimationKit+Frame.swift */,
+				CC91C2FACCACF1EA91FB196339741297 /* DKChainableAnimationKit+Transform.swift */,
+				A50DF0091160C81572F647737233441B /* DKKeyFrameAnimation.swift */,
+				82DCB7DC4C08DB191C1E4B8D22465F88 /* DKKeyframeAnimationFunction.swift */,
+				9319160874280898C05D1CD62175FCB6 /* UIView+AnimationKit.swift */,
+				550A0772E03A9F3C987E78DC1A161712 /* Support Files */,
+			);
+			name = DKChainableAnimationKit;
+			path = DKChainableAnimationKit;
+			sourceTree = "<group>";
+		};
+		550A0772E03A9F3C987E78DC1A161712 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				5CC36E94807784958A0EFEFA17E3BF6D /* DKChainableAnimationKit.modulemap */,
+				58031402E1AC35907BA62F78CEFF59D6 /* DKChainableAnimationKit.xcconfig */,
+				2420EE878B752F77F0D9EF8DF2956353 /* DKChainableAnimationKit-dummy.m */,
+				D6F46F8620854AC2F2241DD86FF76903 /* DKChainableAnimationKit-prefix.pch */,
+				C552DA0BDFB14443C99676BD6C97EA53 /* DKChainableAnimationKit-umbrella.h */,
+				3C36E7AF2CD1F4DC2786122DD8EE7F9B /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/DKChainableAnimationKit";
+			sourceTree = "<group>";
+		};
+		5DB8A215508880A30F8E92A47AB7C9A6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5015F5C9CB7C03F8864FAFDF2D27C80F /* DKChainableAnimationKit */,
+				27D2C9F18A3A43B0036E26B37D36CAD2 /* HanekeSwift */,
+				EB897A02B41D1DAA711C85EE0CFE20BA /* Pushwoosh */,
+				C6DF8F9834A42A60133410A5DA6078F8 /* RAMAnimatedTabBarController */,
+				250D1C525E5A4152F9AF58B971B5543E /* SlideMenuControllerSwift */,
+				66B0E211049687F7F12DD959496C2C1D /* SwiftHTTP */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		66B0E211049687F7F12DD959496C2C1D /* SwiftHTTP */ = {
+			isa = PBXGroup;
+			children = (
+				059626BFEAA43DD7361AD4DEB54822A9 /* HTTPSecurity.swift */,
+				65734A73731088DEB6C4C6999941FB7C /* Operation.swift */,
+				42AC7F1EF81B1447B5774C2B3227242B /* Request.swift */,
+				AD98ADCE03392CB84E793C46C3280B8F /* StatusCode.swift */,
+				861EEED173E6A99B34562F3C628C9550 /* Upload.swift */,
+				FF0CA770B81F745295D8D3696A73D33A /* Support Files */,
 			);
 			name = SwiftHTTP;
 			path = SwiftHTTP;
-			sourceTree = "<group>";
-		};
-		731ABB52D7A25C297A0F80090C3811F2 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				2B191AA610FC458850CF346568295AB5 /* Info.plist */,
-				A08EE3415088FDA2D6F81EDA257E898E /* SlideMenuControllerSwift.modulemap */,
-				002C93A5C7A930D77BA6D5BCFE264F20 /* SlideMenuControllerSwift.xcconfig */,
-				CFD56275A34F2B833D7694D9B8D9F629 /* SlideMenuControllerSwift-dummy.m */,
-				F0A142C47E805B6970EFACEB943F4CF2 /* SlideMenuControllerSwift-prefix.pch */,
-				CFD6967767926194F00D3491EA141E6E /* SlideMenuControllerSwift-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/SlideMenuControllerSwift";
 			sourceTree = "<group>";
 		};
 		75134352F4C8F859711E39E55D75A34B /* Targets Support Files */ = {
@@ -333,39 +407,10 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				8F9754FDE2B6D5125256385694753FC6 /* Pods */,
+				5DB8A215508880A30F8E92A47AB7C9A6 /* Pods */,
 				AFAD87750DDDE9F2D77DBD1B9D41D69C /* Products */,
 				75134352F4C8F859711E39E55D75A34B /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		86AF838000B4795864BA930FE0114CBA /* RAMAnimatedTabBarController */ = {
-			isa = PBXGroup;
-			children = (
-				226FCA753AA5080FE946928B44F3B434 /* RAMAnimatedTabBarController.swift */,
-				B33FB05237C5D2FD19AC4BD5502D5F9B /* RAMBadge.swift */,
-				E5E0FD42AED0F187BF7E89F2035AD890 /* RAMBounceAnimation.swift */,
-				471A1FF0451625AD01BD110DEEEBDF1C /* RAMFrameItemAnimation.swift */,
-				8959A7B965E9EF7E5464E4368E8D61AE /* RAMFumeAnimation.swift */,
-				F38B0E0D2B4C4BD5167F8BA945DE6D09 /* RAMItemAnimationProtocol.swift */,
-				6DA24A29106BA8DEAE2609880B0B8C9A /* RAMRotationAnimation.swift */,
-				D115D2FB75C6C9C46F0575B0A709CE4F /* RAMTransitionItemAnimations.swift */,
-				2A210CA188462093377096D99D62B84F /* Support Files */,
-			);
-			name = RAMAnimatedTabBarController;
-			path = RAMAnimatedTabBarController;
-			sourceTree = "<group>";
-		};
-		8F9754FDE2B6D5125256385694753FC6 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				C19627820F6AA5727C944D9933BAB12E /* DKChainableAnimationKit */,
-				B3A3F080DDFEA1DFFBB6FE7AAD93EF47 /* HanekeSwift */,
-				86AF838000B4795864BA930FE0114CBA /* RAMAnimatedTabBarController */,
-				E31D61640D36C3586F797571976CD419 /* SlideMenuControllerSwift */,
-				39140A9867AC4628367B9F607EFF8EF1 /* SwiftHTTP */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 		AFAD87750DDDE9F2D77DBD1B9D41D69C /* Products */ = {
@@ -381,33 +426,12 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B3A3F080DDFEA1DFFBB6FE7AAD93EF47 /* HanekeSwift */ = {
+		B1C122ED59F61351B6B3D0B36A89510C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5E87A44251BA42FBC115370F673544F5 /* Cache.swift */,
-				472F828C2E4C0A70539F63B4DC70054E /* CGSize+Swift.swift */,
-				0D602F46B194B188A70429EA1C48F0C6 /* CryptoSwiftMD5.swift */,
-				FB556AF8A823379C151A1E4D6C8C74DA /* Data.swift */,
-				0C3ADCA7BB985C67434E6F875A82F708 /* DiskCache.swift */,
-				1978E099BB9AA926A17678B3A9493F9F /* DiskFetcher.swift */,
-				1A12D6EEF67EAB6C6475E875C3888243 /* Fetch.swift */,
-				910DD6FDAB394328337D72F986AFB715 /* Fetcher.swift */,
-				B6053FD84ABCA7C8358737ADE3274201 /* Format.swift */,
-				313725AF88EBAC0328D24C7B2BB5A1AD /* Haneke.swift */,
-				8939F0152F8C6E396603C05AD314E3C2 /* Log.swift */,
-				DAD801C9FEE06A611A5420501B11E8D3 /* NetworkFetcher.swift */,
-				8AFB75FF7BA90178B72AD3FE2FCF82B5 /* NSFileManager+Haneke.swift */,
-				E77BC4F27942B38BB061F2DE13A6BACA /* NSHTTPURLResponse+Haneke.swift */,
-				C59097CFC48962AA3F54C739CCB614FC /* NSURLResponse+Haneke.swift */,
-				B82E7E444C59C3E50A3CCF0C9BB462C4 /* String+Haneke.swift */,
-				7784610373F2F4B6AE9A740DD2463C70 /* UIButton+Haneke.swift */,
-				BF79732EA26E724DBF7FDD46635E10BF /* UIImage+Haneke.swift */,
-				7D9EFEC509B8384A00266FEB99C1F3AE /* UIImageView+Haneke.swift */,
-				ABABAB2BE7E166239386F9F4B9D7A007 /* UIView+Haneke.swift */,
-				D17750B32BC7AA72422CFAF848D293CA /* Support Files */,
+				4F8C27F35B2B2360B00FA1FDB8432420 /* Pushwoosh.framework */,
 			);
-			name = HanekeSwift;
-			path = HanekeSwift;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -418,48 +442,32 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C11542557071E1C4EA5807C802746F8A /* Support Files */ = {
+		C6DF8F9834A42A60133410A5DA6078F8 /* RAMAnimatedTabBarController */ = {
 			isa = PBXGroup;
 			children = (
-				68BB7A2458D263CD75F68FC6DC564368 /* DKChainableAnimationKit.modulemap */,
-				417394F53212576AC7F6718948040B92 /* DKChainableAnimationKit.xcconfig */,
-				39FBAF59384DB01E2DC74114BE012853 /* DKChainableAnimationKit-dummy.m */,
-				AAE54739F08BCD202FC8B523B9BB181C /* DKChainableAnimationKit-prefix.pch */,
-				E555941CD999F252A5C83B22F8694D0A /* DKChainableAnimationKit-umbrella.h */,
-				7FB6234D90C2A6E68CDC565ED6A1B0C2 /* Info.plist */,
+				5EE8C055ECE55392DE0E7477AF502087 /* RAMAnimatedTabBarController.swift */,
+				3BB7775827172E642DB0640A6BA1CDE0 /* RAMBadge.swift */,
+				E55056F725261771943EC1D884E95B5E /* RAMBounceAnimation.swift */,
+				4DC620F6C617353EA33BE6F7EE20B7BE /* RAMFrameItemAnimation.swift */,
+				ED00A5783FAD35BF9CA21A515FA53254 /* RAMFumeAnimation.swift */,
+				8239F43E7FCDC7F0D62DB4F57433FAD2 /* RAMItemAnimationProtocol.swift */,
+				9F316CB62DF8ECE5CD1342E657031FEA /* RAMRotationAnimation.swift */,
+				B69931F3DF88F823C1B3CCBCF9844216 /* RAMTransitionItemAnimations.swift */,
+				092BE4DF155D0EF2660E223E99E36062 /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/DKChainableAnimationKit";
+			name = RAMAnimatedTabBarController;
+			path = RAMAnimatedTabBarController;
 			sourceTree = "<group>";
 		};
-		C19627820F6AA5727C944D9933BAB12E /* DKChainableAnimationKit */ = {
+		C97442C93CEBD851E27A411516F3D744 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				4DE4574236B04D080B43CEDF9A42457D /* DKChainableAnimationKit.swift */,
-				ABF715C1DFB143022146901752A92067 /* DKChainableAnimationKit+Anchor.swift */,
-				71B3104B380F240115ECE1AFEB28E926 /* DKChainableAnimationKit+Bezier.swift */,
-				73F5A96192A0498D41F4494252AE4DD2 /* DKChainableAnimationKit+Effects.swift */,
-				DCF180FBE6E2EB5D76C88D48B4B76512 /* DKChainableAnimationKit+Extra.swift */,
-				380AEBA6EC51A9DCE6248C6EBECA985F /* DKChainableAnimationKit+Frame.swift */,
-				66CBB1B37609BF1B3460D36827656A88 /* DKChainableAnimationKit+Transform.swift */,
-				6E9F7C4680D664EA7CA1BFF4AE7FA9A9 /* DKKeyFrameAnimation.swift */,
-				39D33DF50627740C92ECF05B4A195702 /* DKKeyframeAnimationFunction.swift */,
-				A1DA498D0FD4D0E61D25D9FB6D5A3C8E /* UIView+AnimationKit.swift */,
-				C11542557071E1C4EA5807C802746F8A /* Support Files */,
-			);
-			name = DKChainableAnimationKit;
-			path = DKChainableAnimationKit;
-			sourceTree = "<group>";
-		};
-		D17750B32BC7AA72422CFAF848D293CA /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				320935E6D586AD84E8A4EBE78ABB77E5 /* HanekeSwift.modulemap */,
-				39B8F487A89AE27104CEB7EF568D5A55 /* HanekeSwift.xcconfig */,
-				23F71A72E5972A64592472D7E742DE1B /* HanekeSwift-dummy.m */,
-				5804CDF402A5D172FE0B9D25679EC697 /* HanekeSwift-prefix.pch */,
-				02AB05E22021BA31CE04E4E3B67302F6 /* HanekeSwift-umbrella.h */,
-				4CA3511C8443E39CEA60DCABBC4C442D /* Info.plist */,
+				FDB8E6A9001C7AD5A23279A02C856460 /* HanekeSwift.modulemap */,
+				8B8816E781F5A6828D1E030E70C43D4F /* HanekeSwift.xcconfig */,
+				E389DF0230212502469E426EF14539C9 /* HanekeSwift-dummy.m */,
+				4E2564886A3FA6434D97AE3A5695B3EF /* HanekeSwift-prefix.pch */,
+				E9535820325AC1A6CC4A3E8CB4FFFF31 /* HanekeSwift-umbrella.h */,
+				80E8C71200430FFCD3464AEAC3FC6550 /* Info.plist */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/HanekeSwift";
@@ -473,27 +481,38 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		E31D61640D36C3586F797571976CD419 /* SlideMenuControllerSwift */ = {
+		E820713C3428FC94AC0E00AD7602A5F3 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				E604E20DD924781662880BA4344271B3 /* Info.plist */,
-				AF529DE9C1367F3EDB79511EA2493618 /* SlideMenuController.swift */,
-				89EF2573CAF7D66FD61710E7A56903BE /* SlideMenuControllerSwift.h */,
-				731ABB52D7A25C297A0F80090C3811F2 /* Support Files */,
+				8BDFF11EB50067460B74A871B3392393 /* Info.plist */,
+				7CD91FF6F08319E112978C41D68237C8 /* SlideMenuControllerSwift.modulemap */,
+				0AA662045F49475B840BD39A45F65DF5 /* SlideMenuControllerSwift.xcconfig */,
+				0E8406B506F03052F9E908E8EAAA7E0B /* SlideMenuControllerSwift-dummy.m */,
+				9E2BAC214A05817FD839DF86617C5015 /* SlideMenuControllerSwift-prefix.pch */,
+				85631C2CBC91390DEFB6A30D09C470C8 /* SlideMenuControllerSwift-umbrella.h */,
 			);
-			name = SlideMenuControllerSwift;
-			path = SlideMenuControllerSwift;
+			name = "Support Files";
+			path = "../Target Support Files/SlideMenuControllerSwift";
 			sourceTree = "<group>";
 		};
-		F234C278352E708C90B795C6B34EE78E /* Support Files */ = {
+		EB897A02B41D1DAA711C85EE0CFE20BA /* Pushwoosh */ = {
 			isa = PBXGroup;
 			children = (
-				49CA194E7E9BB90F8CF0D941560CCEFE /* Info.plist */,
-				3BEAFD70FC75309133CCF72306DCE1FC /* SwiftHTTP.modulemap */,
-				14570F4CC0E7128F5156AE42D701CF52 /* SwiftHTTP.xcconfig */,
-				E9A1D0B394D8C415ACDF2FEBAA0D2AF1 /* SwiftHTTP-dummy.m */,
-				4683AD187B68FEA5F7CA939275C46CDE /* SwiftHTTP-prefix.pch */,
-				ECBD8E2ABAB491F6E59C606C1C0204A1 /* SwiftHTTP-umbrella.h */,
+				B1C122ED59F61351B6B3D0B36A89510C /* Frameworks */,
+			);
+			name = Pushwoosh;
+			path = Pushwoosh;
+			sourceTree = "<group>";
+		};
+		FF0CA770B81F745295D8D3696A73D33A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				88D361B4D7BF85974408BB0845280FB5 /* Info.plist */,
+				C9852A4A1727D18A1DBDB62289E65453 /* SwiftHTTP.modulemap */,
+				EA9A13E5536694AB9B79DCCCF6752818 /* SwiftHTTP.xcconfig */,
+				2C44C5E486F512B946778C7B9D200D3F /* SwiftHTTP-dummy.m */,
+				A159CC89703845C8CE023D9C2C1E4DC8 /* SwiftHTTP-prefix.pch */,
+				81EC3C783DDC6B66808801F78A4124B1 /* SwiftHTTP-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/SwiftHTTP";
@@ -824,7 +843,7 @@
 /* Begin XCBuildConfiguration section */
 		2F4A7C1641D483F098A808D0D1635EE5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A5735E71E264C1BB6C33E22420486ADE /* RAMAnimatedTabBarController.xcconfig */;
+			baseConfigurationReference = B4408C4D44BD3D9531DBBF7C9450331E /* RAMAnimatedTabBarController.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -858,7 +877,7 @@
 		};
 		33E6D0AD96BBE7208313E34A8F4B5D0D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 002C93A5C7A930D77BA6D5BCFE264F20 /* SlideMenuControllerSwift.xcconfig */;
+			baseConfigurationReference = 0AA662045F49475B840BD39A45F65DF5 /* SlideMenuControllerSwift.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -940,7 +959,7 @@
 		};
 		79650E044E153FA436888461277CFCC2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 14570F4CC0E7128F5156AE42D701CF52 /* SwiftHTTP.xcconfig */;
+			baseConfigurationReference = EA9A13E5536694AB9B79DCCCF6752818 /* SwiftHTTP.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1013,7 +1032,7 @@
 		};
 		815A1497660DB0BDB8E6D16826EE78CE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 39B8F487A89AE27104CEB7EF568D5A55 /* HanekeSwift.xcconfig */;
+			baseConfigurationReference = 8B8816E781F5A6828D1E030E70C43D4F /* HanekeSwift.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1048,7 +1067,7 @@
 		};
 		906854A21C8CAB3000DF1691BABD444C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 417394F53212576AC7F6718948040B92 /* DKChainableAnimationKit.xcconfig */;
+			baseConfigurationReference = 58031402E1AC35907BA62F78CEFF59D6 /* DKChainableAnimationKit.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1083,7 +1102,7 @@
 		};
 		998560C96CD9C2C00633207DF630DC13 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 14570F4CC0E7128F5156AE42D701CF52 /* SwiftHTTP.xcconfig */;
+			baseConfigurationReference = EA9A13E5536694AB9B79DCCCF6752818 /* SwiftHTTP.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1118,7 +1137,7 @@
 		};
 		A149DBBF446189D9475166903077B381 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A5735E71E264C1BB6C33E22420486ADE /* RAMAnimatedTabBarController.xcconfig */;
+			baseConfigurationReference = B4408C4D44BD3D9531DBBF7C9450331E /* RAMAnimatedTabBarController.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1153,7 +1172,7 @@
 		};
 		AB577F70A7FF4AACDBBB3500F5BA218B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 39B8F487A89AE27104CEB7EF568D5A55 /* HanekeSwift.xcconfig */;
+			baseConfigurationReference = 8B8816E781F5A6828D1E030E70C43D4F /* HanekeSwift.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1231,7 +1250,7 @@
 		};
 		C59E05035E7F7E69C39270556F4170B7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 417394F53212576AC7F6718948040B92 /* DKChainableAnimationKit.xcconfig */;
+			baseConfigurationReference = 58031402E1AC35907BA62F78CEFF59D6 /* DKChainableAnimationKit.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1265,7 +1284,7 @@
 		};
 		F63A32790AB6998CEB06D9E9DB1FEA83 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 002C93A5C7A930D77BA6D5BCFE264F20 /* SlideMenuControllerSwift.xcconfig */;
+			baseConfigurationReference = 0AA662045F49475B840BD39A45F65DF5 /* SlideMenuControllerSwift.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";

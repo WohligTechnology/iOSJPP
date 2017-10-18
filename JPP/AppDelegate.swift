@@ -9,6 +9,7 @@
 import UIKit
 import EventKitUI
 import PushKit
+import Pushwoosh
 import UserNotifications
 import UserNotificationsUI
 let eventStore = EKEventStore()
@@ -77,7 +78,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,PushNotificationDelegate, 
     var window: UIWindow?
     
     internal func createMenuView() {
-        
+        UIApplication.shared.applicationIconBadgeNumber = 0
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         var nvc: UINavigationController!
         
@@ -136,7 +137,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,PushNotificationDelegate, 
         
         players.append(Player(name: "Nitin Rawal", achieve: "", tour: "", age: "19", type: "Defender", state: "Haryana", jerseyNo: "14", image: "p28.jpg"))
        registerForPushNotifications(application: application)
-        
+        UIApplication.shared.applicationIconBadgeNumber = 0
         PushNotificationManager.push().delegate = self
         PushNotificationManager.push().handlePushReceived(launchOptions)
         PushNotificationManager.push().sendAppOpen()
@@ -158,10 +159,42 @@ class AppDelegate: UIResponder, UIApplicationDelegate,PushNotificationDelegate, 
         }
         
         registerForRemoteNotification()
+        
+        PushNotificationManager.push().delegate = self
+        
+        // set default Pushwoosh delegate for iOS10 foreground push handling
+        if #available(iOS 10.0, *) {
+            UNUserNotificationCenter.current().delegate = PushNotificationManager.push().notificationCenterDelegate
+        }
+        
+        // track application open statistics
+        PushNotificationManager.push().sendAppOpen()
+        
+        // register for push notifications!
+        PushNotificationManager.push().registerForPushNotifications()
+        
         return true
         
     }
     
+    
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        PushNotificationManager.push().handlePushRegistration(deviceToken as Data!)
+    }
+    
+    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        PushNotificationManager.push().handlePushRegistrationFailure(error)
+    }
+    
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any],
+                     fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        PushNotificationManager.push().handlePushReceived(userInfo)
+        completionHandler(UIBackgroundFetchResult.noData)
+    }
+    
+    func onPushAccepted(_ pushManager: PushNotificationManager!, withNotification pushNotification: [AnyHashable : Any]!, onStart: Bool) {
+        print("Push notification accepted: \(pushNotification)")
+    }
     
     
     func registerForRemoteNotification() {
@@ -195,15 +228,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate,PushNotificationDelegate, 
         completionHandler()
     }
     
-//    @available(iOS 10.0, *)
-//    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-//        //Handle the notification
-//    }
-//    
-//    @available(iOS 10.0, *)
-//    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
-//        //Handle the notification
-//    }
     
     func registerForPushNotifications(application: UIApplication) {
         
@@ -230,22 +254,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate,PushNotificationDelegate, 
     }
 
     
-    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-        PushNotificationManager.push().handlePushRegistration(deviceToken)
-    }
-    
-    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
-        PushNotificationManager.push().handlePushRegistrationFailure(error)
-    }
     
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any]) {
         PushNotificationManager.push().handlePushReceived(userInfo)
         
     }
-    
-    func onPushAccepted(_ pushManager: PushNotificationManager!, withNotification pushNotification: [AnyHashable: Any]!, onStart: Bool) {
-        print("Push notification accepted: \(pushNotification)");
-    }
+
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
