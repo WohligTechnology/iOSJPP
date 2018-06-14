@@ -127,6 +127,8 @@
 		84DAD5981EEE9D8A001A4891 /* playersInside.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAD5971EEE9D8A001A4891 /* playersInside.swift */; };
 		84DAD59A1EEE9F28001A4891 /* PlayerInsideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAD5991EEE9F28001A4891 /* PlayerInsideViewController.swift */; };
 		84F2945F1EEE652F009D4295 /* playersInside.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84F2945E1EEE652F009D4295 /* playersInside.xib */; };
+		9BD2AA7C20D2FB5A00F3844C /* thumbnailImage1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BD2AA7B20D2FB5A00F3844C /* thumbnailImage1.xib */; };
+		9BD2AA7F20D2FBB500F3844C /* thumbnailImage1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD2AA7E20D2FBB500F3844C /* thumbnailImage1.swift */; };
 		C23892D81C58C6EE00CA4DC1 /* thumbnailImage.xib in Resources */ = {isa = PBXBuildFile; fileRef = C23892D71C58C6EE00CA4DC1 /* thumbnailImage.xib */; };
 		C23892DA1C58C92700CA4DC1 /* thumbnailImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23892D91C58C92700CA4DC1 /* thumbnailImage.swift */; };
 		C257ACEC1D128009002C94F6 /* BookTicketsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C257ACEB1D128009002C94F6 /* BookTicketsViewController.swift */; };
@@ -295,6 +297,8 @@
 		84DAD5991EEE9F28001A4891 /* PlayerInsideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerInsideViewController.swift; sourceTree = "<group>"; };
 		84F2945E1EEE652F009D4295 /* playersInside.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = playersInside.xib; sourceTree = "<group>"; };
 		87466C106F929A2F048F5460 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		9BD2AA7B20D2FB5A00F3844C /* thumbnailImage1.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = thumbnailImage1.xib; sourceTree = "<group>"; };
+		9BD2AA7E20D2FBB500F3844C /* thumbnailImage1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = thumbnailImage1.swift; sourceTree = "<group>"; };
 		C23892D71C58C6EE00CA4DC1 /* thumbnailImage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = thumbnailImage.xib; sourceTree = "<group>"; };
 		C23892D91C58C92700CA4DC1 /* thumbnailImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = thumbnailImage.swift; sourceTree = "<group>"; };
 		C257ACEB1D128009002C94F6 /* BookTicketsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookTicketsViewController.swift; sourceTree = "<group>"; };
@@ -491,6 +495,7 @@
 		36F9C1841C5616C6003D02AB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9BD2AA7D20D2FB8500F3844C /* thumbnailImage1 */,
 				84500D591F48605500F8402E /* Merchandise */,
 				8431967B1F31DBF800B8C469 /* zoneUI */,
 				843A0AF51EFBAE4000D0F5DC /* bgImage */,
@@ -793,6 +798,15 @@
 			name = playersinside;
 			sourceTree = "<group>";
 		};
+		9BD2AA7D20D2FB8500F3844C /* thumbnailImage1 */ = {
+			isa = PBXGroup;
+			children = (
+				9BD2AA7B20D2FB5A00F3844C /* thumbnailImage1.xib */,
+				9BD2AA7E20D2FBB500F3844C /* thumbnailImage1.swift */,
+			);
+			name = thumbnailImage1;
+			sourceTree = "<group>";
+		};
 		C23892D61C58C69200CA4DC1 /* thumbnailImage */ = {
 			isa = PBXGroup;
 			children = (
@@ -944,6 +958,7 @@
 				84CC40051F055999003F9643 /* voyagefantacad.ttf in Resources */,
 				84500D5B1F4860FB00F8402E /* Merchandise.xib in Resources */,
 				84CC3FFF1F055987003F9643 /* Oswald-Regular.ttf in Resources */,
+				9BD2AA7C20D2FB5A00F3844C /* thumbnailImage1.xib in Resources */,
 				363DE0E61D34CF3000906E51 /* sponsorsView.xib in Resources */,
 				36F2CE9B1C573A2300D0D2D6 /* media.xib in Resources */,
 				8403B8F81EEFC7E00024BF1A /* dreamwalker.ttf in Resources */,
@@ -1050,6 +1065,7 @@
 				C257ACEC1D128009002C94F6 /* BookTicketsViewController.swift in Sources */,
 				360231951DC39C7900B17C2F /* WorldCupController.swift in Sources */,
 				360A51011C579AAD001F7E40 /* playerInside.swift in Sources */,
+				9BD2AA7F20D2FBB500F3844C /* thumbnailImage1.swift in Sources */,
 				36F2CEA91C57712A00D0D2D6 /* NewsInsideController.swift in Sources */,
 				366F19D91C58F32700321669 /* BookTicketController.swift in Sources */,
 				36F2CEB51C57721800D0D2D6 /* PointTableController.swift in Sources */,

@@ -508,7 +508,7 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                 }
                 else{
                     self.home()
-                    let thumbnail = thumbnailImage(frame: CGRect.zero)
+                    let thumbnail = thumbnailImage1(frame: CGRect.zero)
                     thumbnail.frame = CGRect(x: 8,y: 8,width: self.verticalLayout.frame.width-16,height: 200);
                     
                     let homeApp = UITapGestureRecognizer(target: self, action: #selector(HomeController.homeApp(_:)))
@@ -520,7 +520,6 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
 //                    
 //                    thumbnail.thumbImage.hnk_setImageFromURL(rest.getImageSizeCache(self.getPicture["image"].stringValue))
 //                    print("showThumbnail\(thumbnail.thumbImage)")
-                     thumbnail.thumbImage.contentMode = .scaleAspectFit
                     self.verticalLayout.addSubview(thumbnail);
                     
                                        self.resizeView(8)
