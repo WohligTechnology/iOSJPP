@@ -40,85 +40,89 @@ self.verticalLayout = VerticalLayout(width: self.view.frame.width);
          self.playersScroll.contentSize = CGSize(width: 0, height: self.player.frame.height + offset)
     
         // Do any additional setup after loading the view.
-        
-        rest.getSinglePlayer(players, completion: {(json:JSON) -> () in
-            DispatchQueue.main.sync(execute: {
-                if json == 401 {
-                    print("No Data Found")
-                }else{
-                    
-                    print("hellojson\(json)")
-                    self.playersInsideJSON = json["data"]
-                   
-                    print("lagggyihyaar\(self.tournamentAchievement)")
-                    print("guessing\(self.playersInsideJSON)")
-                    self.player.playerName.text = self.playersInsideJSON["player"]["name"].stringValue
-                     print("nameplease\(self.player.playerName)")
-                    self.player.playerImage.hnk_setImageFromURL(rest.getImageCache(self.playersInsideJSON["player"]["bigimage"].string!))
-                    self.player.playerNumber.text = self.playersInsideJSON["player"]["jerseyno"].stringValue
-                    self.player.playerType.text = self.playersInsideJSON["player"]["type"].stringValue
-                    self.player.Nationality.text = self.playersInsideJSON["player"]["hnationality"].stringValue
-                    self.player.nativePlace.text = self.playersInsideJSON["player"]["nativeplacehindi"].stringValue
-                    self.player.dob.text = self.playersInsideJSON["player"]["dob"].stringValue
-                    self.player.playerHeight.text = self.playersInsideJSON["player"]["height"].stringValue
-                    self.player.playerWeight.text = self.playersInsideJSON["player"]["weight"].stringValue
-                    
-                    if self.playersInsideJSON["player"]["current"]["status"].stringValue == "2" {
-                        self.player.currentSeason.isHidden = true
-                    }else {
-                        self.player.currentSeason.isHidden = false
-                    }
-                    
-                    if self.playersInsideJSON["player"]["lastseason"]["status"].stringValue == "2" {
-                        self.player.lastSeason.isHidden = true
-                    }else {
-                        self.player.lastSeason.isHidden = false
-                    }
-                    
-                    if self.playersInsideJSON["player"]["career"]["status"].stringValue == "2" {
-                        self.player.playerCareer.isHidden = true
-                    }else {
-                        self.player.playerCareer.isHidden = false
-                    }
-            
-                    for i in 0..<self.playersInsideJSON["achievmant"].count{
-                        if self.playersInsideJSON["achievmant"][i]["name"].stringValue == "N/A" && self.playersInsideJSON["tournamentplayed"][i]["year"].stringValue == "N/A"{
-                            self.player.acheivements.isHidden = true
-                            self.player.descriptionTextView.isHidden = true
-                            self.tournamentAchievement.append("")
-                        }else{
-                            self.tournamentAchievement.append(self.playersInsideJSON["achievmant"][i]["name"].stringValue + "(" +  self.playersInsideJSON["achievmant"][i]["year"].stringValue + ")  ")
-                            self.player.acheivements.isHidden = false
-                            self.player.descriptionTextView.isHidden = false
-                            print("showme json \(String(describing: self.playersInsideJSON["achievmant"]["id"].string))")
-                           
+        if (players != nil){
+            rest.getSinglePlayer(players, completion: {(json:JSON) -> () in
+                DispatchQueue.main.sync(execute: {
+                    if json == 401 {
+                        print("No Data Found")
+                    }else{
+                        
+                        print("hellojson\(json)")
+                        self.playersInsideJSON = json["data"]
+                        
+                        print("lagggyihyaar\(self.tournamentAchievement)")
+                        print("guessing\(self.playersInsideJSON)")
+                        self.player.playerName.text = self.playersInsideJSON["player"]["name"].stringValue
+                        print("nameplease\(self.player.playerName)")
+                        self.player.playerImage.hnk_setImageFromURL(rest.getImageCache(self.playersInsideJSON["player"]["bigimage"].string!))
+                        self.player.playerNumber.text = self.playersInsideJSON["player"]["jerseyno"].stringValue
+                        self.player.playerType.text = self.playersInsideJSON["player"]["type"].stringValue
+                        self.player.Nationality.text = self.playersInsideJSON["player"]["hnationality"].stringValue
+                        self.player.nativePlace.text = self.playersInsideJSON["player"]["nativeplacehindi"].stringValue
+                        self.player.dob.text = self.playersInsideJSON["player"]["dob"].stringValue
+                        self.player.playerHeight.text = self.playersInsideJSON["player"]["height"].stringValue
+                        self.player.playerWeight.text = self.playersInsideJSON["player"]["weight"].stringValue
+                        
+                        if self.playersInsideJSON["player"]["current"]["status"].stringValue == "2" {
+                            self.player.currentSeason.isHidden = true
+                        }else {
+                            self.player.currentSeason.isHidden = false
+                        }
+                        
+                        if self.playersInsideJSON["player"]["lastseason"]["status"].stringValue == "2" {
+                            self.player.lastSeason.isHidden = true
+                        }else {
+                            self.player.lastSeason.isHidden = false
+                        }
+                        
+                        if self.playersInsideJSON["player"]["career"]["status"].stringValue == "2" {
+                            self.player.playerCareer.isHidden = true
+                        }else {
+                            self.player.playerCareer.isHidden = false
+                        }
+                        
+                        for i in 0..<self.playersInsideJSON["achievmant"].count{
+                            if self.playersInsideJSON["achievmant"][i]["name"].stringValue == "N/A" && self.playersInsideJSON["tournamentplayed"][i]["year"].stringValue == "N/A"{
+                                self.player.acheivements.isHidden = true
+                                self.player.descriptionTextView.isHidden = true
+                                self.tournamentAchievement.append("")
+                            }else{
+                                self.tournamentAchievement.append(self.playersInsideJSON["achievmant"][i]["name"].stringValue + "(" +  self.playersInsideJSON["achievmant"][i]["year"].stringValue + ")  ")
+                                self.player.acheivements.isHidden = false
+                                self.player.descriptionTextView.isHidden = false
+                                print("showme json \(String(describing: self.playersInsideJSON["achievmant"]["id"].string))")
+                                
+                                
+                                //        player.frame = CGRect(x: 0, y: 0, width: playersScroll.frame.width, height:())
+                            }
                             
-                            //        player.frame = CGRect(x: 0, y: 0, width: playersScroll.frame.width, height:())
+                        }
+                        
+                        
+                        
+                        for i in 0..<self.playersInsideJSON["tournamentplayed"].count{
+                            if self.playersInsideJSON["tournamentplayed"][i]["name"].stringValue == "N/A" && self.playersInsideJSON["tournamentplayed"][self.i]["year"].stringValue == "N/A"{
+                                self.acheiveTournament.append("")
+                                self.player.tournamentsPlayed.isHidden = true
+                                self.player.descriptionTextView.isHidden = true
+                            }else{
+                                print( "players inside json \(self.playersInsideJSON["tournamentplayed"]):::\(self.playersInsideJSON["tournamentplayed"][i]["name"].stringValue)")
+                                
+                                self.acheiveTournament.append(self.playersInsideJSON["tournamentplayed"][i]["name"].stringValue + "(" +  self.playersInsideJSON["tournamentplayed"][i]["year"].stringValue + ")  ")
+                                self.player.tournamentsPlayed.isHidden = false
+                                self.player.descriptionTextView.isHidden = false
+                            }
+                            
                         }
                         
                     }
-
-                    
-                    
-                    for i in 0..<self.playersInsideJSON["tournamentplayed"].count{
-                        if self.playersInsideJSON["tournamentplayed"][i]["name"].stringValue == "N/A" && self.playersInsideJSON["tournamentplayed"][self.i]["year"].stringValue == "N/A"{
-                            self.acheiveTournament.append("")
-                             self.player.tournamentsPlayed.isHidden = true
-                            self.player.descriptionTextView.isHidden = true
-                        }else{
-                            print( "players inside json \(self.playersInsideJSON["tournamentplayed"]):::\(self.playersInsideJSON["tournamentplayed"][i]["name"].stringValue)")
-
-                            self.acheiveTournament.append(self.playersInsideJSON["tournamentplayed"][i]["name"].stringValue + "(" +  self.playersInsideJSON["tournamentplayed"][i]["year"].stringValue + ")  ")
-                             self.player.tournamentsPlayed.isHidden = false
-                            self.player.descriptionTextView.isHidden = false
-                        }
-                        
-                    }
-
-                }
+                })
+                
             })
-            
-        })
+        }else{
+            print("Do nothing")
+        }
+        
         self.player.lastSeason.addTarget(self, action: #selector(self.lastSeason(_:)), for: .touchUpInside)
         self.player.playerCareer.addTarget(self, action: #selector(self.playerCareer(_:)), for: .touchUpInside)
         

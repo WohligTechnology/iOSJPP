@@ -58,7 +58,7 @@ class TicketsViewController: UIViewController, UITableViewDelegate, UITableViewD
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedCell:UITableViewCell = tableView.cellForRow(at: indexPath)!
-        selectedCell.contentView.backgroundColor = UIColor(colorLiteralRed: 123/255, green: 217/255, blue: 250/255, alpha: 1)
+        selectedCell.contentView.backgroundColor = UIColor(red: 123/255, green: 217/255, blue: 250/255, alpha: 1)
         let WebController =
                     self.storyboard?.instantiateViewController(withIdentifier: "WebController")
                         as! BookTicketController
