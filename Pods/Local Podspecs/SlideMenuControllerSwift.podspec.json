@@ -1,6 +1,6 @@
 {
   "name": "SlideMenuControllerSwift",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "summary": "iOS Slide View based on iQON, Feedly, Google+, Ameba iPhone app.",
   "homepage": "https://github.com/dekatotoro/SlideMenuControllerSwift",
   "license": {
@@ -12,12 +12,12 @@
   },
   "social_media_url": "https://twitter.com/dekatotoro",
   "platforms": {
-    "ios": "8.0"
+    "ios": "9.0"
   },
   "source": {
     "git": "https://github.com/dekatotoro/SlideMenuControllerSwift.git",
-    "tag": "3.0.0"
+    "tag": "4.0.0"
   },
-  "source_files": "Source/*",
+  "source_files": "Source/*.swift",
   "requires_arc": true
 }

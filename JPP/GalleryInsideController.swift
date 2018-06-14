@@ -33,7 +33,7 @@ class GalleryInsideController: UIViewController,UICollectionViewDataSource,UICol
             rest.getWallPaper(newsLoaded)
             self.setNavigationBarItemText("WALLPAPER")
         }
-        navigationItem.leftBarButtonItem?.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "Oswald-Light", size: 20)!], for: UIControlState())
+        navigationItem.leftBarButtonItem?.setTitleTextAttributes([kCTFontAttributeName as NSAttributedStringKey: UIFont(name: "Oswald-Light", size: 20)!], for: UIControlState())
         
         
         //        self.setNavigationBarItemText("GALLERY INSIDE")

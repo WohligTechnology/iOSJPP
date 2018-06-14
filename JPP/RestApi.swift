@@ -23,9 +23,8 @@ open class RestApi {
     
     open func getVideo( _ completion: @escaping ( (JSON) -> Void) )  {
         var json = JSON(1);
-        do {
-            let opt = try HTTP.GET(apiURL + "getAllVideoGallery")
-            opt.start { response in
+     HTTP.GET(apiURL + "getAllVideoGallery")
+             { response in
                 if let _ = response.error {
                     completion(json);
                 }
@@ -35,9 +34,7 @@ open class RestApi {
                     completion(json);
                 }
             }
-        } catch _ {
-            completion(json);
-        }
+       
     }
     
     open func getImage(_ urlStr:String) -> UIImage {
@@ -82,8 +79,8 @@ open class RestApi {
     open func getGallery( _ completion: @escaping ( (JSON) -> Void) )  {
         var json = JSON(1);
         do {
-            let opt = try HTTP.GET(apiURL + "getallgallery")
-            opt.start { response in
+             HTTP.GET(apiURL + "getallgallery")
+            { response in
                 if let _ = response.error {
                     completion(json);
                 }
@@ -93,16 +90,14 @@ open class RestApi {
                     completion(json);
                 }
             }
-        } catch _ {
-            completion(json);
-        }
+      
+    }
     }
     
     open func getNews( _ completion: @escaping ( (JSON) -> Void) )  {
         var json = JSON(1);
-        do {
-            let opt = try HTTP.GET(apiURL + "getallnews")
-            opt.start { response in
+         HTTP.GET(apiURL + "getallnews")
+             { response in
                 if let _ = response.error {
                     completion(json);
                 }
@@ -112,16 +107,13 @@ open class RestApi {
                     completion(json);
                 }
             }
-        } catch _ {
-            completion(json);
-        }
+       
     }
     
     open func getCongratulations( _ completion: @escaping ( (JSON) -> Void) )  {
         var json = JSON(1);
-        do {
-            let opt = try HTTP.GET(apiURL + "getcongratulation")
-            opt.start { response in
+        HTTP.GET(apiURL + "getcongratulation")
+            { response in
                 if let _ = response.error {
                     completion(json);
                 }
@@ -131,18 +123,15 @@ open class RestApi {
                     completion(json);
                 }
             }
-        } catch _ {
-            completion(json);
-        }
+       
     }
 
     
     open func getMatchUpdate( _ completion: @escaping ( (JSON) -> Void) )  {
         var json = JSON(1);
-        do {
-            let opt = try HTTP.GET(apiURL + "getscheduleforiosandroidseason4")
-            print("apicalltest")
-            opt.start { response in
+         HTTP.GET(apiURL + "getscheduleforiosandroidseason4")
+//            print("apicalltest")
+             { response in
                 if let _ = response.error {
                     completion(json);
                 }
@@ -152,16 +141,14 @@ open class RestApi {
                     completion(json)
                 }
             }
-        } catch _ {
-            completion(json)
-        }
+        
     }
     
     open func getPointTable( _ completion: @escaping ( (JSON) -> Void) )  {
         var json = JSON(1);
-        do {
-            let opt = try HTTP.GET(apiURL + "getallpoint")
-            opt.start { response in
+       
+            HTTP.GET(apiURL + "getallpoint")
+           { response in
                 if let _ = response.error {
                     completion(json);
                 }
@@ -171,16 +158,14 @@ open class RestApi {
                     completion(json);
                 }
             }
-        } catch _ {
-            completion(json);
-        }
+        
     }
     
     open func getSchedule( _ completion: @escaping ( (JSON) -> Void) )  {
         var json = JSON(1);
-        do {
-            let opt = try HTTP.GET(apiURL + "getScheduleAndroid")
-            opt.start { response in
+    
+            HTTP.GET(apiURL + "getScheduleAndroid")
+             { response in
                 if let _ = response.error {
                     completion(json);
                 }
@@ -190,18 +175,14 @@ open class RestApi {
                     completion(json);
                 }
             }
-        } catch _ {
-            completion(json);
-        }
+        
     }
     
 
     open func getWorldCup( _ completion: @escaping ( (JSON) -> Void) )  {
         var json = JSON(1);
-        do {
-            let opt = try HTTP.GET(apiURL + "getScheduleForIosAndroidWorldCup2016")
-             print("apicalltesthello")
-            opt.start { response in
+         HTTP.GET(apiURL + "getScheduleForIosAndroidWorldCup2016")
+            { response in
                 if let _ = response.error {
                     completion(json);
                 }
@@ -211,18 +192,15 @@ open class RestApi {
                     completion(json);
                 }
             }
-        } catch _ {
-            completion(json);
-        }
+        
     }
     
     open func sendFanCorner(_ firstname:String, lastname:String, mobile:String, email:String, city:String, favouriteplayer:String, completion: @escaping ( (JSON) -> Void) )  {
         var json = JSON(1);
         let params = ["firstname": firstname, "lastname": lastname, "mobile": mobile, "email": email, "city": city, "favouriteplayer": favouriteplayer]
         //print(params)
-        do {
-            let opt = try HTTP.POST(apiURL + "contactus", parameters: params, requestSerializer: JSONParameterSerializer())
-            opt.start { response in
+       HTTP.POST(apiURL + "contactus", parameters: params, requestSerializer: JSONParameterSerializer())
+            { response in
                 if let _ = response.error {
                     completion(json);
                 }
@@ -232,18 +210,15 @@ open class RestApi {
                     completion(json);
                 }
             }
-        } catch _ {
-            completion(json);
-        }
+       
     }
 
     
     func getHome(_ completion: @escaping ( (JSON) -> Void)) {
         
         var json = JSON(1);
-        do {
-            let opt = try HTTP.GET(apiURL + "getHomeContent")
-            opt.start { response in
+        HTTP.GET(apiURL + "getHomeContent")
+           { response in
                 if let _ = response.error {
                     completion(json);
                 }
@@ -253,17 +228,14 @@ open class RestApi {
                     completion(json);
                 }
             }
-        } catch _ {
-            completion(json);
-        }
+       
     }
     
     
     func getHomeMatch(_ completion: @escaping ( (JSON) -> Void)) {
         var json = JSON(1);
-        do {
-            let opt = try HTTP.GET(apiURL + "getLatestMatch")
-            opt.start { response in
+        HTTP.GET(apiURL + "getLatestMatch")
+            { response in
                 if let _ = response.error {
                     completion(json);
                 }
@@ -273,18 +245,16 @@ open class RestApi {
                     completion(json);
                 }
             }
-        } catch _ {
-            completion(json);
-        }
+       
     }
     
     func getGalleryById(_ id:String,completion: @escaping ( (JSON) -> Void)) {
         var json = JSON(1);
         
         let params = ["galleryid": id]
-        do {
-            let opt = try HTTP.GET(apiURL + "getGallerySlide", parameters: params)
-            opt.start { response in
+       
+             HTTP.GET(apiURL + "getGallerySlide", parameters: params)
+             { response in
                 if let _ = response.error {
                     completion(json);
                 }
@@ -294,19 +264,15 @@ open class RestApi {
                     completion(json);
                 }
             }
-        } catch _ {
-            completion(json);
-        }
-        
+       
     }
     
     func getWallPaper(_ completion: @escaping ( (JSON) -> Void)) {
         var json = JSON(1);
         
         let params = ["type": "1"]
-        do {
-            let opt = try HTTP.POST(apiURL + "getWallpaper", parameters: params)
-            opt.start { response in
+         HTTP.POST(apiURL + "getWallpaper", parameters: params)
+             { response in
                 if let _ = response.error {
                     completion(json);
                 }
@@ -316,9 +282,7 @@ open class RestApi {
                     completion(json);
                 }
             }
-        } catch _ {
-            completion(json);
-        }
+       
         
     }
     
@@ -327,9 +291,8 @@ open class RestApi {
         var json = JSON(1)
        
        let params = ["type": "1"]
-            do {
-                let opt = try HTTP.GET(apiURL + "getallplayers", parameters: params)
-                opt.start { response in
+             HTTP.GET(apiURL + "getallplayers", parameters: params)
+                { response in
                     
                     if let _ = response.error {
                         let nsError = response.error! as NSError
@@ -346,9 +309,7 @@ open class RestApi {
                         completion(json);
                     }
                 }
-            } catch _ {
-                completion(json);
-            }
+            
             
         }
     
@@ -358,9 +319,8 @@ open class RestApi {
         var json = JSON(1)
         
         let params = ["id": id]
-        do {
-            let opt = try HTTP.POST(apiURL + "getsingleplayer", parameters: params)
-            opt.start { response in
+        HTTP.POST(apiURL + "getsingleplayer", parameters: params)
+           { response in
                 
                 if let _ = response.error {
                     let nsError = response.error! as NSError
@@ -377,18 +337,15 @@ open class RestApi {
                     completion(json);
                 }
             }
-        } catch _ {
-            completion(json);
-        }
+        
         
     }
 
     func getallteam(_ completion: @escaping ( (JSON) -> Void)) {
         
         var json = JSON(1);
-        do {
-            let opt = try HTTP.GET(apiURL + "getallteam")
-            opt.start { response in
+        HTTP.GET(apiURL + "getallteam")
+             { response in
                 if let _ = response.error {
                     completion(json);
                 }
@@ -398,16 +355,13 @@ open class RestApi {
                     completion(json);
                 }
             }
-        } catch _ {
-            completion(json);
-        }
+        
     }
 
     open func getapphomeimage( _ completion: @escaping ( (JSON) -> Void) )  {
         var json = JSON(1);
-        do {
-            let opt = try HTTP.GET(apiURL + "getapphomeimage")
-            opt.start { response in
+         HTTP.GET(apiURL + "getapphomeimage")
+            { response in
                 if let _ = response.error {
                     completion(json);
                 }
@@ -417,16 +371,14 @@ open class RestApi {
                     completion(json);
                 }
             }
-        } catch _ {
-            completion(json);
-        }
+       
     }
 
     open func getSponsorImage( _ completion: @escaping ( (JSON) -> Void) )  {
         var json = JSON(1);
-        do {
-            let opt = try HTTP.GET(apiURL + "getsponsorimage")
-            opt.start { response in
+        
+             HTTP.GET(apiURL + "getsponsorimage")
+           { response in
                 if let _ = response.error {
                     completion(json);
                 }
@@ -436,17 +388,14 @@ open class RestApi {
                     completion(json);
                 }
             }
-        } catch _ {
-            completion(json);
-        }
+        
     }
 
     
     open func merchandise( _ completion: @escaping ( (JSON) -> Void) )  {
         var json = JSON(1);
-        do {
-            let opt = try HTTP.GET(apiURL + "getallmerchandize")
-            opt.start { response in
+         HTTP.GET(apiURL + "getallmerchandize")
+         { response in
                 if let _ = response.error {
                     completion(json);
                 }
@@ -456,17 +405,14 @@ open class RestApi {
                     completion(json);
                 }
             }
-        } catch _ {
-            completion(json);
-        }
+       
     }
 
     
     open func tickets( _ completion: @escaping ( (JSON) -> Void) )  {
         var json = JSON(1);
-        do {
-            let opt = try HTTP.GET(apiURL + "getAllTicket")
-            opt.start { response in
+         HTTP.GET(apiURL + "getAllTicket")
+            { response in
                 if let _ = response.error {
                     completion(json);
                 }
@@ -476,9 +422,7 @@ open class RestApi {
                     completion(json);
                 }
             }
-        } catch _ {
-            completion(json);
-        }
+        
     }
     
     

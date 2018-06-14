@@ -13,7 +13,7 @@ extension UIViewController {
     func setNavigationBarItem() {
         
         self.navigationController?.navigationBar.tintColor = UIColor.white
-        self.navigationController?.navigationBar.titleTextAttributes = [ NSForegroundColorAttributeName : UIColor(red: 1, green: 1, blue: 1, alpha: 0) ]
+        self.navigationController?.navigationBar.titleTextAttributes = [ kCTForegroundColorAttributeName : UIColor(red: 1, green: 1, blue: 1, alpha: 0) ] as [NSAttributedStringKey : Any]
         
         self.navigationController?.navigationBar.isTranslucent = false
         self.addLeftBarButtonWithImage(UIImage(named: "ic_menu_black_24dp")!)
@@ -43,7 +43,7 @@ extension UIViewController {
         self.navigationController?.setNavigationBarHidden(false, animated: true)
         
         self.navigationController?.navigationBar.tintColor = UIColor.white
-        self.navigationController?.navigationBar.titleTextAttributes = [ NSForegroundColorAttributeName : UIColor(red: 1, green: 1, blue: 1, alpha: 0) ]
+        self.navigationController?.navigationBar.titleTextAttributes = [ kCTForegroundColorAttributeName : UIColor(red: 1, green: 1, blue: 1, alpha: 0) ] as [NSAttributedStringKey : Any]
         
         self.navigationController?.navigationBar.isTranslucent = false
         
@@ -98,7 +98,7 @@ extension UIViewController {
         
         self.navigationController?.navigationBar.tintColor = UIColor.white
         let font = UIFont(name: "Oswald-Light", size: 18)
-        self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName : font!,NSForegroundColorAttributeName : UIColor(red: 1, green: 1, blue: 1, alpha: 1) ]
+        self.navigationController?.navigationBar.titleTextAttributes = [ kCTFontAttributeName : font!,NSAttributedStringKey.foregroundColor : UIColor(red: 1, green: 1, blue: 1, alpha: 1) ] as! [NSAttributedStringKey : Any]
         self.navigationController?.navigationBar.isTranslucent = false
         self.addLeftBarButtonWithImage(UIImage(named: "ic_menu_black_24dp")!)
         self.navigationController?.toolbar.barTintColor = BlueColor
