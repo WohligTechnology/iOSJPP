@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import DKChainableAnimationKit
 import EventKitUI
 
 var GHomeController:HomeController!;
@@ -91,14 +92,14 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     func jpptvTap(_ sender: UITapGestureRecognizer? = nil) {
-        let galleryController = storyboard!.instantiateViewController(withIdentifier:"matchupdate" ) as! MatchUpdateController
+        let galleryController = storyboard!.instantiateViewController(withIdentifier: "knowteam") as! KnowTeamController
         self.galleryController = UINavigationController(rootViewController: galleryController)
         self.slideMenuController()?.changeMainViewController(self.galleryController, close: true)
 //        galleryController.activeGal = 1
     }
     
     func homeApp(_ sender: UITapGestureRecognizer? = nil) {
-        let matchupdateController = storyboard!.instantiateViewController(withIdentifier: "knowteam") as! KnowTeamController
+        let matchupdateController = storyboard!.instantiateViewController(withIdentifier: "matchupdate") as! MatchUpdateController
         self.matchupdateController = UINavigationController(rootViewController: matchupdateController)
         self.slideMenuController()?.changeMainViewController(self.matchupdateController, close: true)
         //        galleryController.activeGal = 1
@@ -512,15 +513,14 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                     
                     let homeApp = UITapGestureRecognizer(target: self, action: #selector(HomeController.homeApp(_:)))
                     homeApp.delegate = self
-                   thumbnail.addGestureRecognizer(homeApp)
-               thumbnail.layoutIfNeeded()
-//
-//                    print("\n thumbImage : \(thumbnail.thumbImage)")
-//
-//                    thumbnail.thumbImage.hnk_setImageFromURL(rest.getImageSizeCache(self.getPicture["image"].stringValue))
-//                    print("showThumbnail\(thumbnail.thumbImage)")
+                    thumbnail.addGestureRecognizer(homeApp)
+                    thumbnail.layoutIfNeeded()
+
+                    print("\n thumbImage : \(thumbnail.thumbImage)")
+                    
+                    thumbnail.thumbImage.hnk_setImageFromURL(rest.getImageSizeCache(self.getPicture["image"].stringValue))
+                    print("showThumbnail\(thumbnail.thumbImage)")
                      thumbnail.thumbImage.contentMode = .scaleAspectFit
-                    thumbnail.thumbImage.clipsToBounds = true
                     self.verticalLayout.addSubview(thumbnail);
                     
                                        self.resizeView(8)
@@ -561,22 +561,7 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                 self.verticalLayout.addSubview(signupsection)
                 
                 // JPP TV SECTION
-             
                 let tvsection = jpptv(frame: CGRect(x: 8, y: 8, width: self.verticalLayout.frame.size.width - 16, height: 200))
-                rest.getapphomeimage({(json:JSON) -> () in
-                    DispatchQueue.main.sync(execute: {
-                        if json == 401 {
-                            print("No Data Found")
-                        }else{
-                            print(json)
-                            self.getPicture = json
-                            tvsection.season5Review.hnk_setImageFromURL(rest.getImageSizeCache(self.getPicture["image"].stringValue))
-                            print("showshowshow\(self.getPicture)")
-                        }
-                    })
-                    
-                })
-//                tvsection.season5Review.hnk_setImageFromURL(rest.getImageSizeCache(self.getPicture["image"].stringValue))
                 let tvtap = UITapGestureRecognizer(target: self, action: #selector(HomeController.jpptvTap(_:)))
                 tvtap.delegate = self
                 tvsection.addGestureRecognizer(tvtap)
@@ -764,19 +749,19 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
         
         
         let thumbnail = thumbnailImage(frame: CGRect.zero)
-//        rest.getapphomeimage({(json:JSON) -> () in
-//            DispatchQueue.main.sync(execute: {
-//                if json == 401 {
-//                    print("No Data Found")
-//                }else{
-//                    print(json)
-//                    self.getPicture = json
-//                    thumbnail.thumbImage.hnk_setImageFromURL(rest.getImageSizeCache(self.getPicture["image"].stringValue))
-//                    print("showshowshow\(self.getPicture)")
-//                }
-//            })
-//
-//        })
+        rest.getapphomeimage({(json:JSON) -> () in
+            DispatchQueue.main.sync(execute: {
+                if json == 401 {
+                    print("No Data Found")
+                }else{
+                    print(json)
+                    self.getPicture = json
+                    thumbnail.thumbImage.hnk_setImageFromURL(rest.getImageSizeCache(self.getPicture["image"].stringValue))
+                    print("showshowshow\(self.getPicture)")
+                }
+            })
+            
+        })
     }
 
     
@@ -787,7 +772,7 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
         checkCalendarAuthorizationStatus()
         GHomeController = self;
         
-        self.setNavigationBarItem1()
+        self.setNavigationBarItem()
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
         refreshControl.backgroundColor = lightBlueColor
         refreshControl.tintColor = PinkColor

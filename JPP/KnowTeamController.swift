@@ -78,37 +78,26 @@ class KnowTeamController: UIViewController,UICollectionViewDataSource,UICollecti
     
     func collectionView(_ collectionView: UICollectionView,
         didSelectItemAt indexPath: IndexPath) {
-        if(getPlayers[indexPath.row]["status"].stringValue == "1"){
-          playerIndex = getPlayers[indexPath.row]["id"].stringValue
-            self.performSegue(withIdentifier: "playerInside", sender: indexPath)
-
-        }
-//
-//
-//        print("showindex\(playerIndex)")
+            playerIndex = getPlayers[indexPath.row]["id"].stringValue
+       
+        print("showindex\(playerIndex)")
     }
     
     
     func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
-//        if(getPlayers[indexPath.row]["status"].stringValue == "1"){
-//            playerIndex = getPlayers[indexPath.row]["id"].stringValue
-//            self.performSegue(withIdentifier: "playerInside", sender: indexPath)
-//
-//        }
-////          print("showindex\(playerIndex)")
+       playerIndex = getPlayers[indexPath.row]["id"].stringValue
+         print("showindex\(playerIndex)")
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-            if segue.identifier == "playerInside"{
-                let controller = segue.destination as! PlayerInsideViewController
-                controller.players = playerIndex
-            }else{
-//                let controller = segue.destination as! PlayerInsideViewController
-//                controller.players = playerIndex
-            }
+        if segue.identifier == "playersInside"{
+            let controller = segue.destination as! PlayerInsideViewController
+            controller.players = playerIndex
+        }else{
+            let controller = segue.destination as! PlayerInsideViewController
+            controller.players = playerIndex
+        }
     }
-    
 
     
     override func didReceiveMemoryWarning() {
