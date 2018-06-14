@@ -40,7 +40,7 @@ self.verticalLayout = VerticalLayout(width: self.view.frame.width);
          self.playersScroll.contentSize = CGSize(width: 0, height: self.player.frame.height + offset)
     
         // Do any additional setup after loading the view.
-        
+        if (players != nil){
         rest.getSinglePlayer(players, completion: {(json:JSON) -> () in
             DispatchQueue.main.sync(execute: {
                 if json == 401 {
@@ -119,6 +119,7 @@ self.verticalLayout = VerticalLayout(width: self.view.frame.width);
             })
             
         })
+        }
         self.player.lastSeason.addTarget(self, action: #selector(self.lastSeason(_:)), for: .touchUpInside)
         self.player.playerCareer.addTarget(self, action: #selector(self.playerCareer(_:)), for: .touchUpInside)
         

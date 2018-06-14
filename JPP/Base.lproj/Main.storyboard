@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Segues with Peek and Pop" minToolsVersion="7.1"/>
@@ -388,12 +389,6 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </view>
                                         <size key="customSize" width="139" height="323"/>
-                                        <connections>
-                                            <segue destination="rG3-mK-sup" kind="show" id="7Mo-P3-nqO">
-                                                <segue key="commit" inheritsFrom="parent" id="sg5-WA-Mf3"/>
-                                                <segue key="preview" inheritsFrom="commit" id="DVc-xy-AMS"/>
-                                            </segue>
-                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
@@ -405,9 +400,6 @@
                                 <rect key="frame" x="137" y="264" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="rG3-mK-sup" kind="show" identifier="playerDetail" id="ftB-yf-jNf"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.76862746477127075" green="0.94117647409439087" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -420,11 +412,12 @@
                     </view>
                     <connections>
                         <outlet property="playersCollection" destination="jqH-Q2-Z5x" id="htT-nZ-ezg"/>
+                        <segue destination="rG3-mK-sup" kind="show" identifier="playerInside" id="swk-XV-IAP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vOW-v8-5aB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1450" y="403"/>
+            <point key="canvasLocation" x="1911" y="-605"/>
         </scene>
         <!--NEWS & MEDIA-->
         <scene sceneID="hh8-kl-69u">
@@ -1151,7 +1144,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HIv-Zd-NtY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1450" y="1126"/>
+            <point key="canvasLocation" x="1674" y="1309"/>
         </scene>
         <!--WALLPAPERS INSIDE-->
         <scene sceneID="kll-7x-guT">
@@ -1294,7 +1287,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="34Z-BH-5Lq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3938.4000000000001" y="1119.4902548725638"/>
+            <point key="canvasLocation" x="2690" y="-592"/>
         </scene>
         <!--Merchandise View Controller-->
         <scene sceneID="3np-Pk-lVH">
@@ -1356,22 +1349,22 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="loadingimages" translatesAutoresizingMaskIntoConstraints="NO" id="cwq-eh-JjM">
-                                                    <rect key="frame" x="8" y="8" width="327" height="369"/>
+                                                    <rect key="frame" x="15" y="11" width="313" height="363"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UOG-zC-D6g">
-                                                    <rect key="frame" x="172" y="385" width="0.0" height="0.0"/>
+                                                    <rect key="frame" x="172" y="382" width="0.0" height="0.0"/>
                                                     <fontDescription key="fontDescription" name="Oswald-Bold" family="Oswald" pointSize="21"/>
                                                     <color key="textColor" red="0.79607843140000001" green="0.12941176469999999" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nHQ-6k-End">
-                                                    <rect key="frame" x="171.5" y="393" width="0.0" height="0.0"/>
+                                                    <rect key="frame" x="171.5" y="390" width="0.0" height="0.0"/>
                                                     <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q8u-pI-kzh">
-                                                    <rect key="frame" x="122" y="401" width="100" height="30"/>
+                                                    <rect key="frame" x="122" y="398" width="100" height="30"/>
                                                     <color key="backgroundColor" red="0.039215686270000001" green="0.48627450979999998" blue="0.64313725489999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="100" id="Idt-po-YBs"/>
@@ -1481,7 +1474,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loadingimages" translatesAutoresizingMaskIntoConstraints="NO" id="DbP-l3-isx">
-                                                    <rect key="frame" x="0.0" y="0.0" width="343" height="308"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="343" height="305.5"/>
                                                     <color key="backgroundColor" red="0.4823529412" green="0.85098039219999999" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </imageView>
                                             </subviews>
@@ -1547,10 +1540,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView autoresizesSubviews="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="schedule_back" translatesAutoresizingMaskIntoConstraints="NO" id="Zxv-KI-v1a">
-                                                    <rect key="frame" x="8" y="4" width="304" height="262"/>
+                                                    <rect key="frame" x="15" y="7" width="290" height="256"/>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ivW-3Y-aLI">
-                                                    <rect key="frame" x="100" y="211" width="120" height="30"/>
+                                                    <rect key="frame" x="100" y="214" width="120" height="30"/>
                                                     <color key="backgroundColor" red="0.30196078430000001" green="0.79607843140000001" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="120" id="A0i-EV-FC6"/>
@@ -1565,19 +1558,19 @@
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30 JAN 2016, 20:00(IST)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ipX-xY-izs">
-                                                    <rect key="frame" x="23" y="182" width="274" height="21"/>
+                                                    <rect key="frame" x="30" y="185" width="260" height="21"/>
                                                     <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="14"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trapezium" translatesAutoresizingMaskIntoConstraints="NO" id="Z2b-Tc-FXG">
-                                                    <rect key="frame" x="8" y="4" width="304" height="30"/>
+                                                    <rect key="frame" x="15" y="7" width="290" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="Iut-uA-aHc"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MATCH - 00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PkG-Xa-WRq">
-                                                    <rect key="frame" x="10" y="4" width="304" height="30"/>
+                                                    <rect key="frame" x="17" y="7" width="290" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="ozk-fC-vXb"/>
                                                     </constraints>
@@ -1586,27 +1579,27 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pp" translatesAutoresizingMaskIntoConstraints="NO" id="ofa-Tt-gsh">
-                                                    <rect key="frame" x="197" y="38" width="115" height="115"/>
+                                                    <rect key="frame" x="190" y="41" width="115" height="115"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="115" id="3CA-XF-FAv"/>
                                                         <constraint firstAttribute="width" constant="115" id="BZP-Bc-oBp"/>
                                                     </constraints>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jpp" translatesAutoresizingMaskIntoConstraints="NO" id="z4u-zO-hE4">
-                                                    <rect key="frame" x="23" y="38" width="115" height="115"/>
+                                                    <rect key="frame" x="30" y="41" width="115" height="115"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="115" id="zXl-rR-CvF"/>
                                                         <constraint firstAttribute="width" constant="115" id="zdy-P9-nGj"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sawai Mansingh Stadium, Jaipur" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AsN-JG-hyj">
-                                                    <rect key="frame" x="23" y="161" width="274" height="21"/>
+                                                    <rect key="frame" x="30" y="164" width="260" height="21"/>
                                                     <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="14"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vs_pink" translatesAutoresizingMaskIntoConstraints="NO" id="cqX-7o-Sh1">
-                                                    <rect key="frame" x="30" y="42" width="267" height="92"/>
+                                                    <rect key="frame" x="30" y="45" width="267" height="92"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="92" id="9AR-ak-Jrq"/>
                                                     </constraints>
@@ -1655,7 +1648,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JsI-y0-EPN">
-                                                    <rect key="frame" x="8" y="8" width="304" height="137"/>
+                                                    <rect key="frame" x="15" y="11" width="290" height="131"/>
                                                     <color key="backgroundColor" red="0.72156862749999995" green="0.92941176469999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <state key="normal" image="merchan"/>
                                                     <connections>
@@ -1883,7 +1876,6 @@
         <image name="vs_pink" width="267" height="262"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ftB-yf-jNf"/>
         <segue reference="QFm-1H-djl"/>
         <segue reference="WTz-Cl-1DE"/>
     </inferredMetricsTieBreakers>

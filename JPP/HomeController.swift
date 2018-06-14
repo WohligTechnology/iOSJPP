@@ -92,14 +92,14 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     func jpptvTap(_ sender: UITapGestureRecognizer? = nil) {
-        let galleryController = storyboard!.instantiateViewController(withIdentifier: "knowteam") as! KnowTeamController
+        let galleryController = storyboard!.instantiateViewController(withIdentifier:"matchupdate" ) as! MatchUpdateController
         self.galleryController = UINavigationController(rootViewController: galleryController)
         self.slideMenuController()?.changeMainViewController(self.galleryController, close: true)
 //        galleryController.activeGal = 1
     }
     
     func homeApp(_ sender: UITapGestureRecognizer? = nil) {
-        let matchupdateController = storyboard!.instantiateViewController(withIdentifier: "matchupdate") as! MatchUpdateController
+        let matchupdateController = storyboard!.instantiateViewController(withIdentifier: "knowteam") as! KnowTeamController
         self.matchupdateController = UINavigationController(rootViewController: matchupdateController)
         self.slideMenuController()?.changeMainViewController(self.matchupdateController, close: true)
         //        galleryController.activeGal = 1
@@ -516,10 +516,10 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                     thumbnail.addGestureRecognizer(homeApp)
                     thumbnail.layoutIfNeeded()
 
-                    print("\n thumbImage : \(thumbnail.thumbImage)")
-                    
-                    thumbnail.thumbImage.hnk_setImageFromURL(rest.getImageSizeCache(self.getPicture["image"].stringValue))
-                    print("showThumbnail\(thumbnail.thumbImage)")
+//                    print("\n thumbImage : \(thumbnail.thumbImage)")
+//                    
+//                    thumbnail.thumbImage.hnk_setImageFromURL(rest.getImageSizeCache(self.getPicture["image"].stringValue))
+//                    print("showThumbnail\(thumbnail.thumbImage)")
                      thumbnail.thumbImage.contentMode = .scaleAspectFit
                     self.verticalLayout.addSubview(thumbnail);
                     
@@ -562,6 +562,19 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                 
                 // JPP TV SECTION
                 let tvsection = jpptv(frame: CGRect(x: 8, y: 8, width: self.verticalLayout.frame.size.width - 16, height: 200))
+                rest.getapphomeimage({(json:JSON) -> () in
+                    DispatchQueue.main.sync(execute: {
+                        if json == 401 {
+                            print("No Data Found")
+                        }else{
+                            print(json)
+                            self.getPicture = json
+                            tvsection.season5Review.hnk_setImageFromURL(rest.getImageSizeCache(self.getPicture["image"].stringValue))
+                            print("showshowshow\(self.getPicture)")
+                        }
+                    })
+                    
+                })
                 let tvtap = UITapGestureRecognizer(target: self, action: #selector(HomeController.jpptvTap(_:)))
                 tvtap.delegate = self
                 tvsection.addGestureRecognizer(tvtap)
@@ -748,20 +761,20 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
         })
         
         
-        let thumbnail = thumbnailImage(frame: CGRect.zero)
-        rest.getapphomeimage({(json:JSON) -> () in
-            DispatchQueue.main.sync(execute: {
-                if json == 401 {
-                    print("No Data Found")
-                }else{
-                    print(json)
-                    self.getPicture = json
-                    thumbnail.thumbImage.hnk_setImageFromURL(rest.getImageSizeCache(self.getPicture["image"].stringValue))
-                    print("showshowshow\(self.getPicture)")
-                }
-            })
-            
-        })
+//        let thumbnail = thumbnailImage(frame: CGRect.zero)
+//        rest.getapphomeimage({(json:JSON) -> () in
+//            DispatchQueue.main.sync(execute: {
+//                if json == 401 {
+//                    print("No Data Found")
+//                }else{
+//                    print(json)
+//                    self.getPicture = json
+//                    thumbnail.thumbImage.hnk_setImageFromURL(rest.getImageSizeCache(self.getPicture["image"].stringValue))
+//                    print("showshowshow\(self.getPicture)")
+//                }
+//            })
+//            
+//        })
     }
 
     
