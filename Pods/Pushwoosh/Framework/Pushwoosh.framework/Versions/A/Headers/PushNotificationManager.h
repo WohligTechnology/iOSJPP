@@ -12,7 +12,7 @@
 #import <UserNotifications/UserNotifications.h>
 #endif
 
-#define PUSHWOOSH_VERSION @"5.7.2"
+#define PUSHWOOSH_VERSION @"5.3.1"
 
 
 @class PushNotificationManager;
@@ -49,10 +49,12 @@ typedef void (^PushwooshErrorHandler)(NSError *error);
 /**
  Tells the delegate that the push manager has received a remote notification.
  
+ If this method is implemented `onPushAccepted:withNotification:` will not be called, internal message boxes will not be displayed.
+ 
  @param pushManager The push manager that received the remote notification.
  @param pushNotification A dictionary that contains information referring to the remote notification, potentially including a badge number for the application icon, an alert sound, an alert message to display to the user, a notification identifier, and custom data.
  The provider originates it as a JSON-defined dictionary that iOS converts to an NSDictionary object; the dictionary may contain only property-list objects plus NSNull.
-@param onStart If the application was not foreground when the push notification was received, the application will be opened with this parameter equal to `YES`, otherwise the parameter will be `NO`.
+ @param onStart If the application was not active when the push notification was received, the application will be launched with this parameter equal to `YES`, otherwise the parameter will be `NO`.
  */
 - (void)onPushReceived:(PushNotificationManager *)pushManager withNotification:(NSDictionary *)pushNotification onStart:(BOOL)onStart;
 
@@ -74,10 +76,10 @@ typedef void (^PushwooshErrorHandler)(NSError *error);
  }
  
  */
-- (void)onPushAccepted:(PushNotificationManager *)pushManager withNotification:(NSDictionary *)pushNotification DEPRECATED_ATTRIBUTE;
+- (void)onPushAccepted:(PushNotificationManager *)pushManager withNotification:(NSDictionary *)pushNotification;
 
 /**
- Tells the delegate that the user has pressed on the push notification banner.
+ Tells the delegate that the user has pressed OK on the push notification.
  
  @param pushManager The push manager that received the remote notification.
  @param pushNotification A dictionary that contains information about the remote notification, potentially including a badge number for the application icon, an alert sound, an alert message to display to the user, a notification identifier, and custom data.
@@ -92,7 +94,7 @@ typedef void (^PushwooshErrorHandler)(NSError *error);
  p = 1pb;
  }
  
- @param onStart If the application was not foreground when the push notification was received, the application will be opened with this parameter equal to `YES`, otherwise the parameter will be `NO`.
+ @param onStart If the application was not active when the push notification was received, the application will be launched with this parameter equal to `YES`, otherwise the parameter will be `NO`.
  */
 - (void)onPushAccepted:(PushNotificationManager *)pushManager withNotification:(NSDictionary *)pushNotification onStart:(BOOL)onStart;
 
@@ -160,7 +162,7 @@ typedef void (^PushwooshErrorHandler)(NSError *error);
 @end
 
 /**
- `PushNotificationManager` class offers access to the singleton-instance of the push manager responsible for registering the device with the APS servers, receiving and processing push notifications.
+ `PushNotificationManager` class offers access to the singletone-instance of the push manager responsible for registering the device with the APS servers, receiving and processing push notifications.
  */
 @interface PushNotificationManager : NSObject {
 }
@@ -181,14 +183,10 @@ typedef void (^PushwooshErrorHandler)(NSError *error);
  */
 @property (nonatomic, weak) NSObject<PushNotificationDelegate> *delegate;
 
-#if TARGET_OS_IPHONE
-
 /**
  Show push notifications alert when push notification is received while the app is running, default is `YES`
  */
 @property (nonatomic, assign) BOOL showPushnotificationAlert;
-
-#endif
 
 /**
  Returns push notification payload if the app was started in response to push notification or null otherwise
@@ -201,10 +199,6 @@ typedef void (^PushwooshErrorHandler)(NSError *error);
  Returns UNUserNotificationCenterDelegate that handles foreground push notifications on iOS10
  */
 @property (nonatomic, strong, readonly) id<UNUserNotificationCenterDelegate> notificationCenterDelegate;
-
-#else
-
-@property (nonatomic, strong, readonly) id<NSUserNotificationCenterDelegate> notificationCenterDelegate;
 
 #endif
 
@@ -229,24 +223,16 @@ typedef void (^PushwooshErrorHandler)(NSError *error);
 - (void)registerForPushNotifications;
 
 /**
- Unregisters from push notifications.
+ Unregisters from push notifications. You should call this method in rare circumstances only, such as when a new version of the app drops support for remote notifications. Users can temporarily prevent apps from receiving remote notifications through the Notifications section of the Settings app. Apps unregistered through this method can always re-register.
  */
-- (void)unregisterForPushNotificationsWithCompletion:(void (^)(NSError *error))completion;
+- (void)unregisterForPushNotifications;
 
-/**
- Deprecated. Use unregisterForPushNotificationsWithCompletion: method instead
- */
-- (void)unregisterForPushNotifications __attribute__((deprecated));
-
-/**
- Deprecated. Use initializeWithAppCode:appName: method instead
- */
-- (instancetype)initWithApplicationCode:(NSString *)appCode appName:(NSString *)appName __attribute__((deprecated));
+- (instancetype)initWithApplicationCode:(NSString *)appCode appName:(NSString *)appName;
 
 #if TARGET_OS_IPHONE
 
 /**
- Deprecated. Use initializeWithAppCode:appName: method instead
+ Deprecated. Use initWithApplicationCode:appName: method instead
  */
 - (id)initWithApplicationCode:(NSString *)appCode navController:(UIViewController *)navController appName:(NSString *)appName __attribute__((deprecated));
 
@@ -325,8 +311,6 @@ typedef void (^PushwooshErrorHandler)(NSError *error);
  */
 - (void)sendBadges:(NSInteger)badge;
 
-+ (NSString *)pushwooshVersion;
-
 #if TARGET_OS_IPHONE
 /**
  Sends in-app purchases to Pushwoosh. Use in paymentQueue:updatedTransactions: payment queue method (see example).
@@ -370,9 +354,10 @@ typedef void (^PushwooshErrorHandler)(NSError *error);
 - (void)handlePushRegistration:(NSData *)devToken;
 - (void)handlePushRegistrationString:(NSString *)deviceID;
 
+//internal
 - (void)handlePushRegistrationFailure:(NSError *)error;
 
-//if the push is received while the app is running.
+//if the push is received while the app is running. internal
 - (BOOL)handlePushReceived:(NSDictionary *)userInfo;
 
 /**

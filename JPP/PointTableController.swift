@@ -132,7 +132,7 @@ class PointTableController: UIViewController,UITableViewDelegate,UITableViewData
         label.text = pointJson[0]["name"].stringValue
         headerView.addSubview(label)
         
-        headerView.backgroundColor = UIColor(red: 78/255, green: 202/255, blue: 245/155, alpha: 1.0)
+        headerView.backgroundColor = UIColor(colorLiteralRed: 78/255, green: 202/255, blue: 245/155, alpha: 1.0)
         return headerView
          }else{
             var headerView = UIView()
@@ -144,7 +144,7 @@ class PointTableController: UIViewController,UITableViewDelegate,UITableViewData
             label.text = pointJson[1]["name"].stringValue
             headerView.addSubview(label)
             
-            headerView.backgroundColor = UIColor(red: 78/255, green: 202/255, blue: 245/155, alpha: 1.0)
+            headerView.backgroundColor = UIColor(colorLiteralRed: 78/255, green: 202/255, blue: 245/155, alpha: 1.0)
             return headerView
         }
     }

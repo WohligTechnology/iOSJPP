@@ -10,7 +10,6 @@ import UIKit
 
 @IBDesignable class jpptv: UIView {
     
-    @IBOutlet weak var season5Review: UIImageView!
     override init(frame: CGRect) {
         super.init(frame: frame)
         loadViewFromNib ()

@@ -55,7 +55,7 @@ open class DiskCache {
         })
     }
     
-    open func fetchData(key: String, failure fail: ((Error?) -> ())? = nil, success succeed: @escaping (Data) -> ()) {
+    @discardableResult open func fetchData(key: String, failure fail: ((Error?) -> ())? = nil, success succeed: @escaping (Data) -> ()) {
         cacheQueue.async {
             let path = self.path(forKey: key)
             do {
