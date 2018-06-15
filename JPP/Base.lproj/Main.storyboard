@@ -412,7 +412,7 @@
                     </view>
                     <connections>
                         <outlet property="playersCollection" destination="jqH-Q2-Z5x" id="htT-nZ-ezg"/>
-                        <segue destination="rG3-mK-sup" kind="show" identifier="playerInside" id="swk-XV-IAP"/>
+                        <segue destination="rG3-mK-sup" kind="show" identifier="playersInside" id="kjS-dU-mOl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vOW-v8-5aB" userLabel="First Responder" sceneMemberID="firstResponder"/>

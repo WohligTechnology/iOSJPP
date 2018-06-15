@@ -12,6 +12,7 @@ class PlayerInsideViewController: UIViewController {
 
     @IBOutlet weak var playersScroll: UIScrollView!
     var players: String!
+    var playersName: String!
 //    var playersInsideindex: String!
     var playersInsideJSON: JSON = []
     var tournamentAchievement: String = ""
@@ -24,10 +25,11 @@ class PlayerInsideViewController: UIViewController {
     var homeAcheivement = NSAttributedString()
     override func viewDidLoad() {
         super.viewDidLoad()
+        setNavigationBarItemText(playersName);
 //        playersInsideindex = "\(players)"
-        print("finalindex\(players)")
-        setNavigationBarItem1()
-        
+        print("finalindex\(playersName!)")
+       
+   
         
         
 self.verticalLayout = VerticalLayout(width: self.view.frame.width);
@@ -40,7 +42,7 @@ self.verticalLayout = VerticalLayout(width: self.view.frame.width);
          self.playersScroll.contentSize = CGSize(width: 0, height: self.player.frame.height + offset)
     
         // Do any additional setup after loading the view.
-        if (players != nil){
+        
         rest.getSinglePlayer(players, completion: {(json:JSON) -> () in
             DispatchQueue.main.sync(execute: {
                 if json == 401 {
@@ -54,7 +56,7 @@ self.verticalLayout = VerticalLayout(width: self.view.frame.width);
                     print("guessing\(self.playersInsideJSON)")
                     self.player.playerName.text = self.playersInsideJSON["player"]["name"].stringValue
                      print("nameplease\(self.player.playerName)")
-                    self.player.playerImage.hnk_setImageFromURL(rest.getImageCache(self.playersInsideJSON["player"]["bigimage"].string!))
+                    self.setNavigationBarItemText(self.playersInsideJSON["player"]["name"].stringValue); self.player.playerImage.hnk_setImageFromURL(rest.getImageCache(self.playersInsideJSON["player"]["bigimage"].string!))
                     self.player.playerNumber.text = self.playersInsideJSON["player"]["jerseyno"].stringValue
                     self.player.playerType.text = self.playersInsideJSON["player"]["type"].stringValue
                     self.player.Nationality.text = self.playersInsideJSON["player"]["hnationality"].stringValue
@@ -119,7 +121,7 @@ self.verticalLayout = VerticalLayout(width: self.view.frame.width);
             })
             
         })
-        }
+        
         self.player.lastSeason.addTarget(self, action: #selector(self.lastSeason(_:)), for: .touchUpInside)
         self.player.playerCareer.addTarget(self, action: #selector(self.playerCareer(_:)), for: .touchUpInside)
         
@@ -223,6 +225,7 @@ self.verticalLayout = VerticalLayout(width: self.view.frame.width);
 //         setNavigationBarItem()
         super.viewDidAppear(animated)
         player.frame = CGRect(x: 0, y: 0, width: playersScroll.frame.width, height: 667)
+             setNavigationBarItemText(playersName);
         print("")
     }
     

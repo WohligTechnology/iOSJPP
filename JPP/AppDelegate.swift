@@ -38,6 +38,7 @@ var newsDate = "";
 var newsContent = "";
 var GalleryInsideTitle = ""
 var playerIndex: String = ""
+var playerName: String = ""
 var isGalWal = 0;
 var scheduleType = "kabaddi"
 var players:[Player] = []

@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>JPP.ipa</key>
+	<array>
+		<dict>
+			<key>architectures</key>
+			<array>
+				<string>armv7</string>
+				<string>arm64</string>
+			</array>
+			<key>certificate</key>
+			<dict>
+				<key>SHA1</key>
+				<string>3DD80AE429F04DF3B32B375ABAB0B745A3500E39</string>
+				<key>dateExpires</key>
+				<string>18/07/18</string>
+				<key>type</key>
+				<string>iOS Development</string>
+			</dict>
+			<key>embeddedBinaries</key>
+			<array>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>armv7</string>
+						<string>arm64</string>
+					</array>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>3DD80AE429F04DF3B32B375ABAB0B745A3500E39</string>
+						<key>dateExpires</key>
+						<string>18/07/18</string>
+						<key>type</key>
+						<string>iOS Development</string>
+					</dict>
+					<key>name</key>
+					<string>DKChainableAnimationKit.framework</string>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>D9R47RBCNL</string>
+						<key>name</key>
+						<string>Juspreet Walia</string>
+					</dict>
+				</dict>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>armv7</string>
+						<string>arm64</string>
+					</array>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>3DD80AE429F04DF3B32B375ABAB0B745A3500E39</string>
+						<key>dateExpires</key>
+						<string>18/07/18</string>
+						<key>type</key>
+						<string>iOS Development</string>
+					</dict>
+					<key>name</key>
+					<string>Haneke.framework</string>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>D9R47RBCNL</string>
+						<key>name</key>
+						<string>Juspreet Walia</string>
+					</dict>
+				</dict>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>armv7</string>
+						<string>arm64</string>
+					</array>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>3DD80AE429F04DF3B32B375ABAB0B745A3500E39</string>
+						<key>dateExpires</key>
+						<string>18/07/18</string>
+						<key>type</key>
+						<string>iOS Development</string>
+					</dict>
+					<key>name</key>
+					<string>RAMAnimatedTabBarController.framework</string>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>D9R47RBCNL</string>
+						<key>name</key>
+						<string>Juspreet Walia</string>
+					</dict>
+				</dict>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>armv7</string>
+						<string>arm64</string>
+					</array>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>3DD80AE429F04DF3B32B375ABAB0B745A3500E39</string>
+						<key>dateExpires</key>
+						<string>18/07/18</string>
+						<key>type</key>
+						<string>iOS Development</string>
+					</dict>
+					<key>name</key>
+					<string>SlideMenuControllerSwift.framework</string>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>D9R47RBCNL</string>
+						<key>name</key>
+						<string>Juspreet Walia</string>
+					</dict>
+				</dict>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>armv7</string>
+						<string>arm64</string>
+					</array>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>3DD80AE429F04DF3B32B375ABAB0B745A3500E39</string>
+						<key>dateExpires</key>
+						<string>18/07/18</string>
+						<key>type</key>
+						<string>iOS Development</string>
+					</dict>
+					<key>name</key>
+					<string>SwiftHTTP.framework</string>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>D9R47RBCNL</string>
+						<key>name</key>
+						<string>Juspreet Walia</string>
+					</dict>
+				</dict>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>armv7</string>
+						<string>arm64</string>
+					</array>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>3DD80AE429F04DF3B32B375ABAB0B745A3500E39</string>
+						<key>dateExpires</key>
+						<string>18/07/18</string>
+						<key>type</key>
+						<string>iOS Development</string>
+					</dict>
+					<key>entitlements</key>
+					<dict>
+						<key>application-identifier</key>
+						<string>D9R47RBCNL.com.jaipurpinkpanthers.iphone.JPPPush</string>
+						<key>com.apple.developer.team-identifier</key>
+						<string>D9R47RBCNL</string>
+						<key>get-task-allow</key>
+						<true/>
+						<key>keychain-access-groups</key>
+						<array>
+							<string>D9R47RBCNL.com.jaipurpinkpanthers.iphone.JPPPush</string>
+						</array>
+					</dict>
+					<key>name</key>
+					<string>JPPPush.appex</string>
+					<key>profile</key>
+					<dict>
+						<key>UUID</key>
+						<string>575d9ef0-9ef6-4f8e-a636-646999203aea</string>
+						<key>name</key>
+						<string>iOS Team Provisioning Profile: *</string>
+					</dict>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>D9R47RBCNL</string>
+						<key>name</key>
+						<string>Juspreet Walia</string>
+					</dict>
+				</dict>
+			</array>
+			<key>entitlements</key>
+			<dict>
+				<key>application-identifier</key>
+				<string>D9R47RBCNL.com.jaipurpinkpanthers.iphone</string>
+				<key>aps-environment</key>
+				<string>development</string>
+				<key>com.apple.developer.team-identifier</key>
+				<string>D9R47RBCNL</string>
+				<key>get-task-allow</key>
+				<true/>
+			</dict>
+			<key>name</key>
+			<string>JPP.app</string>
+			<key>profile</key>
+			<dict>
+				<key>UUID</key>
+				<string>d7b3cd07-a374-448d-b708-ee7e20afe24f</string>
+				<key>name</key>
+				<string>iOS Team Provisioning Profile: com.jaipurpinkpanthers.iphone</string>
+			</dict>
+			<key>team</key>
+			<dict>
+				<key>id</key>
+				<string>D9R47RBCNL</string>
+				<key>name</key>
+				<string>Juspreet Walia</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

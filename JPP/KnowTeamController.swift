@@ -80,7 +80,9 @@ class KnowTeamController: UIViewController,UICollectionViewDataSource,UICollecti
         didSelectItemAt indexPath: IndexPath) {
         if(getPlayers[indexPath.row]["status"].stringValue == "1"){
             playerIndex = getPlayers[indexPath.row]["id"].stringValue
-            self.performSegue(withIdentifier: "playerInside", sender: indexPath)
+            playerName = getPlayers[indexPath.row]["name"].stringValue
+            self.performSegue(withIdentifier: "playersInside", sender: indexPath)
+            print("hello index \(playerName)")
             
         }
     }
@@ -96,6 +98,7 @@ class KnowTeamController: UIViewController,UICollectionViewDataSource,UICollecti
         if segue.identifier == "playersInside"{
             let controller = segue.destination as! PlayerInsideViewController
             controller.players = playerIndex
+            controller.playersName = playerName
         }else{
 //            let controller = segue.destination as! PlayerInsideViewController
 //            controller.players = playerIndex
