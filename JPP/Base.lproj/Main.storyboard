@@ -1,17 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Segues with Peek and Pop" minToolsVersion="7.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Oswald-Bold.ttf">
+            <string>Oswald-Bold</string>
+        </array>
+        <array key="Oswald-Light.ttf">
+            <string>Oswald-Light</string>
+        </array>
+        <array key="Oswald-Regular.ttf">
+            <string>Oswald-Regular</string>
+        </array>
         <array key="SFUIText.ttf">
             <string>.SFUIText</string>
         </array>
@@ -250,7 +259,7 @@
                                 <rect key="frame" x="137" y="174" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <segue destination="rBo-i2-X6q" kind="showDetail" identifier="galleryDetail" id="WVc-si-hbd"/>
+                                    <segue destination="rBo-i2-X6q" kind="showDetail" identifier="galleryDetail" action="showViewController:sender:" id="WVc-si-hbd"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZX-vC-ljM">
@@ -685,12 +694,12 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JAIPUR PINK PANTHER" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cda-JH-he4">
-                                                                    <rect key="frame" x="38" y="11" width="141.5" height="19"/>
+                                                                    <rect key="frame" x="38" y="11" width="103.5" height="19"/>
                                                                     <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="13"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="90" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c03-Ra-wUH">
-                                                                    <rect key="frame" x="310" y="13.5" width="25" height="16.5"/>
+                                                                    <rect key="frame" x="310" y="9" width="25" height="21"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="25" id="Q79-8J-lRY"/>
                                                                     </constraints>
@@ -706,7 +715,7 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="28" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Kh-Sk-CFo">
-                                                                    <rect key="frame" x="254" y="13.5" width="25" height="16.5"/>
+                                                                    <rect key="frame" x="254" y="9" width="25" height="21"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="25" id="7Mw-P1-SGO"/>
                                                                     </constraints>
@@ -714,7 +723,7 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X1b-Ne-eQ2">
-                                                                    <rect key="frame" x="282" y="13.5" width="25" height="16.5"/>
+                                                                    <rect key="frame" x="282" y="9" width="25" height="21"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="25" id="Zan-O9-YWO"/>
                                                                     </constraints>
@@ -1534,7 +1543,7 @@
                                                     <rect key="frame" x="15" y="7" width="290" height="256"/>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ivW-3Y-aLI">
-                                                    <rect key="frame" x="100" y="205" width="120" height="30"/>
+                                                    <rect key="frame" x="100" y="214" width="120" height="30"/>
                                                     <color key="backgroundColor" red="0.30196078430000001" green="0.79607843140000001" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="120" id="A0i-EV-FC6"/>
@@ -1549,7 +1558,7 @@
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30 JAN 2016, 20:00(IST)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ipX-xY-izs">
-                                                    <rect key="frame" x="30" y="180.5" width="260" height="16.5"/>
+                                                    <rect key="frame" x="30" y="185" width="260" height="21"/>
                                                     <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="14"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -1584,7 +1593,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sawai Mansingh Stadium, Jaipur" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AsN-JG-hyj">
-                                                    <rect key="frame" x="30" y="164" width="260" height="16.5"/>
+                                                    <rect key="frame" x="30" y="164" width="260" height="21"/>
                                                     <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="14"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>

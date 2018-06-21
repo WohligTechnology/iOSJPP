@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2C2B1953A91633859BF7AD238FF567A0"
-               BuildableName = "Haneke.framework"
-               BlueprintName = "HanekeSwift"
+               BlueprintIdentifier = "186526C95A6E6A368E316AEBD475C8CB"
+               BuildableName = "DKChainableAnimationKit.framework"
+               BlueprintName = "DKChainableAnimationKit"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2C2B1953A91633859BF7AD238FF567A0"
-            BuildableName = "Haneke.framework"
-            BlueprintName = "HanekeSwift"
+            BlueprintIdentifier = "186526C95A6E6A368E316AEBD475C8CB"
+            BuildableName = "DKChainableAnimationKit.framework"
+            BlueprintName = "DKChainableAnimationKit"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -63,9 +63,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2C2B1953A91633859BF7AD238FF567A0"
-            BuildableName = "Haneke.framework"
-            BlueprintName = "HanekeSwift"
+            BlueprintIdentifier = "186526C95A6E6A368E316AEBD475C8CB"
+            BuildableName = "DKChainableAnimationKit.framework"
+            BlueprintName = "DKChainableAnimationKit"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
