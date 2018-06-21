@@ -1,5 +1,4 @@
 PODS:
-  - DKChainableAnimationKit (2.0.0)
   - HanekeSwift (0.10.1)
   - Pushwoosh (5.3.1)
   - RAMAnimatedTabBarController (2.0.2)
@@ -7,12 +6,16 @@ PODS:
   - SwiftHTTP (2.0.2)
 
 DEPENDENCIES:
-  - DKChainableAnimationKit (~> 2.0.0)
   - HanekeSwift (from `https://github.com/Haneke/HanekeSwift.git`, branch `feature/swift-3`)
   - Pushwoosh
   - RAMAnimatedTabBarController (~> 2.0.2)
   - SlideMenuControllerSwift (from `https://github.com/dekatotoro/SlideMenuControllerSwift.git`, branch `master`)
   - SwiftHTTP (from `https://github.com/daltoniam/SwiftHTTP.git`, branch `master`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Pushwoosh
+    - RAMAnimatedTabBarController
 
 EXTERNAL SOURCES:
   HanekeSwift:
@@ -37,13 +40,12 @@ CHECKOUT OPTIONS:
     :git: https://github.com/daltoniam/SwiftHTTP.git
 
 SPEC CHECKSUMS:
-  DKChainableAnimationKit: b9e079381d6e059f8a1f969223d16e3970ec3545
   HanekeSwift: 4113367892828e7700d24a384027de6ebc79aad1
   Pushwoosh: 63ece3b160161aa7ce2926f864b2c5d7f0416615
   RAMAnimatedTabBarController: 8b4b7e41d1d6c76ebf6482233f4bc528231db437
   SlideMenuControllerSwift: 9c0a84f9a3fba51681debd7be77617094562ebcc
   SwiftHTTP: c04bfedac299c931fbf419f07b7d42024ff45fdd
 
-PODFILE CHECKSUM: af2e7faa915a02c2c834318334dcebf093069492
+PODFILE CHECKSUM: 9f9775ebe41a4243235c6fa427d30080575b5cad
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.5.3
