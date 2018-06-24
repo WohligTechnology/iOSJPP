@@ -508,7 +508,7 @@ class HomeController: UIViewController, UIGestureRecognizerDelegate {
                 else{
                     self.home()
                     let thumbnail = thumbnailImage1(frame: CGRect.zero)
-                    thumbnail.frame = CGRect(x: 8,y: 8,width: self.verticalLayout.frame.width-16,height: 200);
+                    thumbnail.frame = CGRect(x: 8,y: 8,width: self.verticalLayout.frame.width-16,height: 180);
                     
                     let homeApp = UITapGestureRecognizer(target: self, action: #selector(HomeController.homeApp(_:)))
                     homeApp.delegate = self
