@@ -15,11 +15,11 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>4.1</string>
+	<string>4.2</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>2</string>
+	<string>1</string>
 	<key>LSApplicationCategoryType</key>
 	<string></string>
 	<key>LSRequiresIPhoneOS</key>
@@ -30,9 +30,9 @@
 		<true/>
 	</dict>
 	<key>NSCalendarsUsageDescription</key>
-	<string>$(PRODUCT_NAME) calendar events</string>
+	<string>Allows to use calendar for setting reminder</string>
 	<key>NSRemindersUsageDescription</key>
-	<string>$(PRODUCT_NAME) reminders use.</string>
+	<string>Allow to set reminders in the calendar</string>
 	<key>Pushwoosh_APPID</key>
 	<string>D8FF5-9BCDF</string>
 	<key>Pushwoosh_APPNAME
