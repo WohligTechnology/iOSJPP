@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import DKChainableAnimationKit
 import EventKitUI
 
 var GHomeController:HomeController!;
