@@ -12,10 +12,15 @@ class GalleryInsideController: UIViewController,UICollectionViewDataSource,UICol
     
     
     override func viewDidAppear(_ animated: Bool) {
+        
+        self.view.addSubview(loaderGlo)
     }
     
     override func viewDidLoad() {
-
+        
+        loadingInit()
+        
+        self.view.addSubview(loaderGlo)
         super.viewDidLoad()
         if(isGalWal == 0)
         {
@@ -28,6 +33,7 @@ class GalleryInsideController: UIViewController,UICollectionViewDataSource,UICol
             rest.getWallPaper(newsLoaded)
             self.setNavigationBarItemText("WALLPAPER")
         }
+        navigationItem.leftBarButtonItem?.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "Oswald-Light", size: 20)!], for: UIControlState())
         
         
         //        self.setNavigationBarItemText("GALLERY INSIDE")
@@ -59,7 +65,7 @@ class GalleryInsideController: UIViewController,UICollectionViewDataSource,UICol
             
         }
         DispatchQueue.main.async(execute: {
-//            loadingStop()
+            loadingStop()
         });
     }
     
@@ -99,6 +105,8 @@ class GalleryInsideController: UIViewController,UICollectionViewDataSource,UICol
         didSelectItemAt indexPath: IndexPath) {
             
             galleryImage = jsonData[indexPath.row]["image"].string!
+            
+            
             performSegue(withIdentifier: "galleryImageDetail", sender: nil)
     }
     
