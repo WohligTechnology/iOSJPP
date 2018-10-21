@@ -115,6 +115,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,PushNotificationDelegate, 
         players.append(Player(name: "Selvamani K", achieve: "Achievements: 2015 International Friendly Games (participation), 2015 National Championship (gold), 2014 East Japan Championship (gold),  Part of Jaipur Pink Panthers team squad in Season 2, 2007 - world cup (bronze - Most valuable player), 2010 - asian games (bronze), 2007 - 2015 All japan tournament (gold)", tour: "", age: "30", type: "All Rounder", state: "Japan", jerseyNo: "19", image: "kazuhiro.jpg`"))
         
 <<<<<<< HEAD
+<<<<<<< HEAD
         players.append(Player(name: "Bajirao Hodge", achieve: "", tour: "2016 Pro Kabaddi League (Dabang Delhi K.C.)", age: "26", type: "Raider", state: "New Taipei City", jerseyNo: "9", image: "lo_chia.png"))
         players.append(Player(name: "Anand Patil", achieve: "2011-14 Senior National Championship, 2014-2015 Pro Kabaddi League(Puneri Paltan) , 2016 Pro Kabaddi League(Patna Pirates), 2016 Pro Kabaddi League (Jaipur Pink Panthers), 2010 All India University , 2010 National Games ", tour: "2016 Pro Kabaddi League(Gold), 2013  Senior National Championship(gold), 2011 Senior Nationals Campionship (Silver), 2010 All India University (Gold), 2010 National Games (Gold).", age: "24", type: "Raider", state: "Haryana", jerseyNo: "12", image: "p25.jpg"))
         //players.append(Player(name: "Masayuki Shimokawa", achieve: "2014-16 Pro Kabaddi League (U Mumba), 2015 Japan National Games", tour: "2016 Star Sports Pro Kabaddi Season 3 runners up (U Mumba), 2015 Star Sports Pro Kabaddi Champions (U Mumba), 2015 Japan National Games(Gold)", age: "27", type: "Raider", state: "Tokya", jerseyNo: "-", image: "p20.jpg"))
@@ -133,6 +134,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate,PushNotificationDelegate, 
 
    players.append(Player(name: "N. Shiva Ramakrishna", achieve: "2011-12 U-19 School National Games, 2016 Departmental Nationals, 2013 Junior National Championship,2015 University Games", tour: "2016 Star Sports Pro Kabaddi semi-finalist team (Puneri Paltan), 2011 U-19 School National Games (Gold), 2012 U-19 School National Games (Silver)", age: "19", type: "Defender", state: "Haryana", jerseyNo: "14", image: "p28.jpg"))
 =======
+=======
+>>>>>>> parent of 0355c61... changes for about, fan corner and image of the team
         players.append(Player(name: "Somvir Shekhar", achieve: "", tour: "2016 Pro Kabaddi League (Dabang Delhi K.C.)", age: "26", type: "Raider", state: "New Taipei City", jerseyNo: "9", image: "lo_chia.png"))
         players.append(Player(name: "Ajit Singh ", achieve: "2011-14 Senior National Championship, 2014-2015 Pro Kabaddi League(Puneri Paltan) , 2016 Pro Kabaddi League(Patna Pirates), 2016 Pro Kabaddi League (Jaipur Pink Panthers), 2010 All India University , 2010 National Games ", tour: "2016 Pro Kabaddi League(Gold), 2013  Senior National Championship(gold), 2011 Senior Nationals Campionship (Silver), 2010 All India University (Gold), 2010 National Games (Gold).", age: "24", type: "Raider", state: "Haryana", jerseyNo: "12", image: "p25.jpg"))
         //players.append(Player(name: "Masayuki Shimokawa", achieve: "2014-16 Pro Kabaddi League (U Mumba), 2015 Japan National Games", tour: "2016 Star Sports Pro Kabaddi Season 3 runners up (U Mumba), 2015 Star Sports Pro Kabaddi Champions (U Mumba), 2015 Japan National Games(Gold)", age: "27", type: "Raider", state: "Tokya", jerseyNo: "-", image: "p20.jpg"))
@@ -150,6 +153,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,PushNotificationDelegate, 
         players.append(Player(name: "Ravinder Kumar", achieve: "2011-12 U-19 School National Games, 2016 Departmental Nationals, 2013 Junior National Championship,2015 University Games", tour: "2016 Star Sports Pro Kabaddi semi-finalist team (Puneri Paltan), 2011 U-19 School National Games (Gold), 2012 U-19 School National Games (Silver)", age: "21", type: "All rounder", state: "Maharashtra", jerseyNo: "99", image: "p28.jpg"))
 
    players.append(Player(name: "Nitin Rawal", achieve: "2011-12 U-19 School National Games, 2016 Departmental Nationals, 2013 Junior National Championship,2015 University Games", tour: "2016 Star Sports Pro Kabaddi semi-finalist team (Puneri Paltan), 2011 U-19 School National Games (Gold), 2012 U-19 School National Games (Silver)", age: "19", type: "Defender", state: "Haryana", jerseyNo: "14", image: "p28.jpg"))
+<<<<<<< HEAD
         
           players.append(Player(name: "Dong Gyu Kim", achieve: "2011-12 U-19 School National Games, 2016 Departmental Nationals, 2013 Junior National Championship,2015 University Games", tour: "2016 Star Sports Pro Kabaddi semi-finalist team (Puneri Paltan), 2011 U-19 School National Games (Gold), 2012 U-19 School National Games (Silver)", age: "21", type: "All rounder", state: "Maharashtra", jerseyNo: "99", image: "p28.jpg"))
 >>>>>>> parent of 0355c61... changes for about, fan corner and image of the team
@@ -161,6 +165,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate,PushNotificationDelegate, 
         
         players.append(Player(name: " ", achieve: "", tour: "", age: "19", type: "Defender", state: "Haryana", jerseyNo: "14", image: "p28.jpg"))
 =======
+        players.append(Player(name: "Nitin Rawal", achieve: "", tour: "", age: "19", type: "Defender", state: "Haryana", jerseyNo: "14", image: "p28.jpg"))
+>>>>>>> parent of 0355c61... changes for about, fan corner and image of the team
+=======
+        
+          players.append(Player(name: "Dong Gyu Kim", achieve: "2011-12 U-19 School National Games, 2016 Departmental Nationals, 2013 Junior National Championship,2015 University Games", tour: "2016 Star Sports Pro Kabaddi semi-finalist team (Puneri Paltan), 2011 U-19 School National Games (Gold), 2012 U-19 School National Games (Silver)", age: "21", type: "All rounder", state: "Maharashtra", jerseyNo: "99", image: "p28.jpg"))
+        
+          players.append(Player(name: "Jae Min Lee", achieve: "2011-12 U-19 School National Games, 2016 Departmental Nationals, 2013 Junior National Championship,2015 University Games", tour: "2016 Star Sports Pro Kabaddi semi-finalist team (Puneri Paltan), 2011 U-19 School National Games (Gold), 2012 U-19 School National Games (Silver)", age: "21", type: "All rounder", state: "Maharashtra", jerseyNo: "99", image: "p28.jpg"))
+        
         players.append(Player(name: "Nitin Rawal", achieve: "", tour: "", age: "19", type: "Defender", state: "Haryana", jerseyNo: "14", image: "p28.jpg"))
 >>>>>>> parent of 0355c61... changes for about, fan corner and image of the team
        registerForPushNotifications(application: application)
